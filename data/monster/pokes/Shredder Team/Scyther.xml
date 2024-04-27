@@ -1,0 +1,38 @@
+<monster name="Scyther" nameDescription="a scyther" race="bug" race2="flying" experience="187" speed="225">
+    <level min="0" max="0" />
+    <health now="70" max="70" />
+    <status attack="110" defense="80" spAtk="55" spDef="80" />
+    <look type="366" corpse="0" />
+    <targetchange interval="10000" chance="0" />
+    <flags>
+        <flag summonable="1" />
+        <flag hostile="1" />
+        <flag attackable="1" />
+        <flag illusionable="1" />
+        <flag convinceable="1" />
+        <flag pushable="1" />
+        <flag canpushitems="0" />
+        <flag canpushcreatures="0" />
+        <flag targetdistance="1" />
+        <flag runonhealth="0" />
+        <flag canteleport="20" />
+    </flags>
+    <script>
+        <event name="MonsterHealthChange" />
+        <event name="CorpseLoot" />
+    </script>
+    <moves>
+        <!-- moves -->
+    </moves>
+    <attacks>
+
+    </attacks>
+    <defenses armor="0" defense="0">
+	</defenses>
+    <voices interval="5000" chance="10">
+        <voice sentence="SCYTHER!" />
+    </voices>
+    <loot>
+
+    </loot>
+</monster>

@@ -1,0 +1,53 @@
+<monster name="Venonat" nameDescription="a venonat" race="bug" race2="poison" experience="75" speed="165">
+    <level min="20" max="20" />
+    <health now="60" max="60" />
+    <status attack="55" defense="50" spAtk="40" spDef="75" />
+    <look type="403" corpse="11976" />
+    <targetchange interval="10000" chance="0" />
+    <flags>
+        <flag summonable="1" />
+        <flag hostile="1" />
+        <flag attackable="1" />
+        <flag illusionable="1" />
+        <flag convinceable="1" />
+        <flag pushable="1" />
+        <flag canpushitems="0" />
+        <flag canpushcreatures="0" />
+        <flag targetdistance="1" />
+        <flag runonhealth="0" />
+        <flag canteleport="24" />
+    </flags>
+    <script>
+        <event name="MonsterHealthChange" />
+        <event name="CorpseLoot" />
+    </script>
+    <moves>
+        <move name="Absorb" level="20" interval="9" range="1" isTarget="1" f="40" t="grass" />
+        <move name="Headbutt" level="20" interval="6" range="1" isTarget="1" f="50" t="normal" />
+        <move name="Super Sonic" level="20" interval="10" range="3" isTarget="1" f="0" t="normal" />
+        <move name="Psychic" level="20" interval="9" range="1" isTarget="0" f="90" t="psychic" />
+        <move name="Poison Fang" level="20" interval="7" range="1" isTarget="1" f="65" t="poison" />
+        <move name="Sleep Powder" level="35" interval="10" range="1" isTarget="0" f="0" t="grass" />
+        <move name="Poison Powder" level="35" interval="10" range="1" isTarget="0" f="0" t="poison" />
+        <move name="Stun Spore" level="20" interval="10" range="1" isTarget="0" f="0" t="grass" />
+    </moves>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
+        <attack name="Absorb" interval="2570" chance="31" range="1" />
+        <attack name="Psychic" interval="5484" chance="19" range="1" />
+        <attack name="Bug Bite" interval="2758" chance="30" range="1" />
+        <attack name="Poison Fang" interval="2852" chance="29" range="1" />
+        <attack name="Stun Spore" interval="5946" chance="28" range="4" />
+		<attack name="melee" interval="4805" chance="29" range="4" />
+		<attack name="Sleep Powder" interval="5805" chance="18" range="4" />
+        <attack name="Super Sonic" interval="3202" chance="19" range="3" />
+    </attacks>
+    <defenses armor="0" defense="0" />
+    <voices interval="5000" chance="10">
+        <voice sentence="VENONAT!" />
+    </voices>
+    <loot>
+        <item id="12171" chance="4000" />
+        <item id="12185" chance="4000" />
+    </loot>
+</monster>

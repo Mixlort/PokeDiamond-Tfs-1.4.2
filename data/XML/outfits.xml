@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<outfits>
+	<!-- Female outfits -->
+	<outfit type="0" looktype="136" name="Citizen" premium="no" unlocked="yes" enabled="yes" />
+	<outfit type="0" looktype="137" name="Hunter" premium="no" unlocked="yes" enabled="yes" />
+	<outfit type="0" looktype="138" name="Mage" premium="no" unlocked="yes" enabled="yes" />
+	<outfit type="0" looktype="139" name="Knight" premium="no" unlocked="yes" enabled="yes" />
+	<outfit type="0" looktype="140" name="Noblewoman" premium="yes" unlocked="yes" enabled="yes" />
+	<outfit type="0" looktype="141" name="Summoner" premium="yes" unlocked="yes" enabled="yes" />
+	<outfit type="0" looktype="142" name="Warrior" premium="yes" unlocked="yes" enabled="yes" />
+	<outfit type="0" looktype="147" name="Barbarian" premium="yes" unlocked="yes" enabled="yes" />
+	<outfit type="0" looktype="148" name="Druid" premium="yes" unlocked="yes" enabled="yes" />
+	<outfit type="0" looktype="149" name="Wizard" premium="yes" unlocked="yes" enabled="yes" />
+	<outfit type="0" looktype="150" name="Oriental" premium="yes" unlocked="yes" enabled="yes" />
+	<outfit type="0" looktype="155" name="Pirate" premium="yes" unlocked="no" enabled="yes" />
+	<outfit type="0" looktype="156" name="Assassin" premium="yes" unlocked="no" enabled="yes" />
+	<outfit type="0" looktype="157" name="Beggar" premium="yes" unlocked="no" enabled="yes" />
+	<outfit type="0" looktype="158" name="Shaman" premium="yes" unlocked="no" enabled="yes" />
+	<outfit type="0" looktype="252" name="Norsewoman" premium="yes" unlocked="no" enabled="yes" />
+	<outfit type="0" looktype="269" name="Nightmare" premium="yes" unlocked="no" enabled="yes" />
+	<outfit type="0" looktype="270" name="Jester" premium="yes" unlocked="no" enabled="yes" />
+	<outfit type="0" looktype="279" name="Brotherhood" premium="yes" unlocked="no" enabled="yes" />
+	<outfit type="0" looktype="288" name="Demon Hunter" premium="yes" unlocked="no" enabled="yes" />
+	<outfit type="0" looktype="324" name="Yalaharian" premium="yes" unlocked="no" enabled="yes" />
+	<outfit type="0" looktype="329" name="Newly Wed" premium="no" unlocked="no" enabled="yes" />
+	<outfit type="0" looktype="336" name="Warmaster" premium="yes" unlocked="no" enabled="yes" />
+	<outfit type="0" looktype="366" name="Wayfarer" premium="yes" unlocked="no" enabled="yes" />
+
+
+    <outfit type="0" looktype="3937" name="Outfit13x" premium="yes" unlocked="no" enabled="yes" />
+    <outfit type="0" looktype="3939" name="Outfit13xx" premium="yes" unlocked="no" enabled="yes" />
+    <outfit type="0" looktype="3941" name="Outfit13xxx" premium="yes" unlocked="no" enabled="yes" />
+    <outfit type="0" looktype="3943" name="Outfit13xxx" premium="yes" unlocked="no" enabled="yes" />
+
+	<!-- Male outfits -->
+	<outfit type="1" looktype="128" name="Citizen" premium="no" unlocked="yes" enabled="yes" />
+	<outfit type="1" looktype="129" name="Hunter" premium="no" unlocked="yes" enabled="yes" />
+	<outfit type="1" looktype="130" name="Mage" premium="no" unlocked="yes" enabled="yes" />
+	<outfit type="1" looktype="131" name="Knight" premium="no" unlocked="yes" enabled="yes" />
+	<outfit type="1" looktype="132" name="Nobleman" premium="yes" unlocked="yes" enabled="yes" />
+	<outfit type="1" looktype="133" name="Summoner" premium="yes" unlocked="yes" enabled="yes" />
+	<outfit type="1" looktype="134" name="Warrior" premium="yes" unlocked="yes" enabled="yes" />
+	<outfit type="1" looktype="143" name="Barbarian" premium="yes" unlocked="yes" enabled="yes" />
+	<outfit type="1" looktype="144" name="Druid" premium="yes" unlocked="yes" enabled="yes" />
+	<outfit type="1" looktype="145" name="Wizard" premium="yes" unlocked="yes" enabled="yes" />
+	<outfit type="1" looktype="146" name="Oriental" premium="yes" unlocked="yes" enabled="yes" />
+	<outfit type="1" looktype="151" name="Pirate" premium="yes" unlocked="no" enabled="yes" />
+	<outfit type="1" looktype="152" name="Assassin" premium="yes" unlocked="no" enabled="yes" />
+	<outfit type="1" looktype="153" name="Beggar" premium="yes" unlocked="no" enabled="yes" />
+	<outfit type="1" looktype="154" name="Shaman" premium="yes" unlocked="no" enabled="yes" />
+	<outfit type="1" looktype="251" name="Norseman" premium="yes" unlocked="no" enabled="yes" />
+	<outfit type="1" looktype="268" name="Nightmare" premium="yes" unlocked="no" enabled="yes" />
+	<outfit type="1" looktype="273" name="Jester" premium="yes" unlocked="no" enabled="yes" />
+	<outfit type="1" looktype="278" name="Brotherhood" premium="yes" unlocked="no" enabled="yes" />
+	<outfit type="1" looktype="289" name="Demon Hunter" premium="yes" unlocked="no" enabled="yes" />
+	<outfit type="1" looktype="325" name="Yalaharian" premium="yes" unlocked="no" enabled="yes" />
+	<outfit type="1" looktype="328" name="Newly Wed" premium="no" unlocked="no" enabled="yes" />
+	<outfit type="1" looktype="335" name="Warmaster" premium="yes" unlocked="no" enabled="yes" />
+	<outfit type="1" looktype="367" name="Wayfarer" premium="yes" unlocked="no" enabled="yes" />
+
+
+    <outfit type="1" looktype="3936" name="Outfit13x" premium="yes" unlocked="yes" enabled="yes" />
+    <outfit type="1" looktype="3938" name="Outfit13xx" premium="yes" unlocked="yes" enabled="yes" />
+    <outfit type="1" looktype="3940" name="Outfit13xxx" premium="yes" unlocked="yes" enabled="yes" />
+    <outfit type="1" looktype="3942" name="Outfit13xxxx" premium="yes" unlocked="yes" enabled="yes" />
+
+
+    <!-- Poke -->
+    <!-- Female outfits -->
+    <!--Unlocked outfits-->
+
+    <outfit type="0" looktype="1971" name="Pokemon Trainer" premium="no" unlocked="yes" enabled="yes" />
+    <outfit type="0" looktype="1980" name="Bug Catcher" premium="no" unlocked="yes" enabled="yes" />
+    <outfit type="0" looktype="2012" name="Elite Trainer" premium="yes" unlocked="yes" enabled="yes" />
+    <outfit type="0" looktype="1984" name="Hiker" premium="yes" unlocked="yes" enabled="yes" />
+    <outfit type="0" looktype="1978" name="Bird Keeper" premium="yes" unlocked="yes" enabled="yes" />
+    <outfit type="0" looktype="2006" name="Super Nerd" premium="yes" unlocked="yes" enabled="yes" />
+    <outfit type="0" looktype="1973" name="Beauty" premium="yes" unlocked="yes" enabled="yes" />
+
+    <!--Npc outfits-->
+    <outfit type="0" looktype="1961" name="Adventurer" premium="yes" unlocked="no" enabled="yes" />
+    <outfit type="0" looktype="1997" name="Jamaican" premium="yes" unlocked="no" enabled="yes" />
+    <outfit type="0" looktype="1995" name="Ninja" premium="yes" unlocked="no" enabled="yes" />
+    <outfit type="0" looktype="1983" name="Mercenary" premium="yes" unlocked="no" enabled="yes" />
+    <outfit type="0" looktype="1972" name="Rapper" premium="yes" unlocked="no" enabled="yes" />
+    <outfit type="0" looktype="1976" name="Atletic" premium="yes" unlocked="no" enabled="yes" />
+
+    <!--Quest outfits-->
+    <outfit type="0" looktype="2107" name="Rocket" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="0" looktype="2038" name="Police Officer" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="0" looktype="2331" name="Pokemaster" premium="yes" unlocked="no" enabled="yes" />
+    <outfit type="0" looktype="2022" name="Christmas" premium="yes" unlocked="yes" enabled="yes" />
+
+    <!--Clan outfits-->
+    <outfit type="0" looktype="2175" name="Volcanic" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="0" looktype="2177" name="Naturia" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="0" looktype="2174" name="Gardestrike" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="0" looktype="2173" name="Malefic" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="0" looktype="2176" name="Wingeon" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="0" looktype="2180" name="Raibolt" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="0" looktype="2178" name="Psycraft" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="0" looktype="2179" name="Orebound" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="0" looktype="2181" name="Seavell" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="0" looktype="2727" name="Ironhard" premium="no" unlocked="no" enabled="yes" />
+
+    <!--Halloween outfits-->
+    <outfit type="0" looktype="2674" name="Frankenstein" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="0" looktype="2335" name="Ectoplasm" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="0" looktype="2100" name="Sucubus" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="0" looktype="2101" name="Skeleton" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="0" looktype="2102" name="Witch" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="0" looktype="666" name="Death Bringer" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="0" looktype="430" name="Plague Doctor" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="0" looktype="759" name="Helloween" premium="no" unlocked="no" enabled="yes" />
+
+    <!-- Male outfits -->
+    <!--Halloween outfits-->
+    <outfit type="1" looktype="2673" name="Frankenstein" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="1" looktype="2335" name="Ectoplasm" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="1" looktype="2103" name="Dracula" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="1" looktype="2101" name="Skeleton" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="1" looktype="2102" name="Wizard" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="1" looktype="667" name="Death Bringer" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="1" looktype="431" name="Plague Doctor" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="1" looktype="760" name="Helloween" premium="no" unlocked="no" enabled="yes" />
+
+    <!--Unlocked outfits-->
+    <outfit type="1" looktype="3395" name="Pokemon Trainer" premium="no" unlocked="yes" enabled="yes" />
+    <outfit type="1" looktype="1979" name="Bug Catcher" premium="no" unlocked="yes" enabled="yes" />
+    <outfit type="1" looktype="2011" name="Elite Trainer" premium="yes" unlocked="yes" enabled="yes" />
+    <outfit type="1" looktype="1982" name="Hiker" premium="yes" unlocked="yes" enabled="yes" />
+    <outfit type="1" looktype="1977" name="Bird Keeper" premium="yes" unlocked="yes" enabled="yes" />
+    <outfit type="1" looktype="2005" name="Super Nerd" premium="yes" unlocked="yes" enabled="yes" />
+    <outfit type="1" looktype="1974" name="Gentleman" premium="yes" unlocked="yes" enabled="yes" />
+
+    <!--Npc outfits-->
+    <outfit type="1" looktype="1960" name="Adventurer" premium="yes" unlocked="no" enabled="yes" />
+    <outfit type="1" looktype="1996" name="Jamaican" premium="yes" unlocked="no" enabled="yes" />
+    <outfit type="1" looktype="1994" name="Kung Fu" premium="yes" unlocked="no" enabled="yes" />
+    <outfit type="1" looktype="1981" name="Mercenary" premium="yes" unlocked="no" enabled="yes" />
+    <outfit type="1" looktype="1993" name="Rapper" premium="yes" unlocked="no" enabled="yes" />
+    <outfit type="1" looktype="1975" name="Atletic" premium="yes" unlocked="no" enabled="yes" />
+
+    <!--Quest outfits-->
+    <outfit type="1" looktype="2106" name="Rocket" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="1" looktype="2037" name="Police Officer" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="1" looktype="2332" name="Pokemaster" premium="yes" unlocked="no" enabled="yes" />
+    <outfit type="1" looktype="2021" name="Christmas" premium="yes" unlocked="yes" enabled="yes" />
+
+    <!--Clan outfits-->
+    <outfit type="1" looktype="2117" name="Volcanic" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="1" looktype="2115" name="Naturia" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="1" looktype="2121" name="Gardestrike" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="1" looktype="2120" name="Malefic" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="1" looktype="2116" name="Wingeon" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="1" looktype="2113" name="Raibolt" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="1" looktype="2118" name="Psycraft" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="1" looktype="2119" name="Orebound" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="1" looktype="2114" name="Seavell" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="1" looktype="2747" name="Ironhard" premium="no" unlocked="no" enabled="yes" />
+
+    <!-- Shop Outfits -->
+
+    <outfit type="1" looktype="3795" name="Joker Outfit" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="0" looktype="3720" name="Harley Quinn" premium="no" unlocked="no" enabled="yes" />
+
+    <outfit type="1" looktype="3756" name="Blue Exorcist" premium="no" unlocked="no" enabled="yes" />
+
+    <outfit type="1" looktype="3781" name="Chef Jacquin" premium="no" unlocked="no" enabled="yes" />
+
+    <outfit type="1" looktype="3782" name="Debonair Jacquin" premium="no" unlocked="no" enabled="yes" />
+
+    <outfit type="1" looktype="3783" name="Gangster Jacquin" premium="no" unlocked="no" enabled="yes" />
+
+    <outfit type="1" looktype="3784" name="Tropical Jacquin" premium="no" unlocked="no" enabled="yes" />
+
+    <outfit type="1" looktype="3768" name="Tutankhamoak Costume" premium="no" unlocked="no" enabled="yes" />
+
+    <outfit type="1" looktype="3732" name="Jolteon Cosplay" premium="no" unlocked="no" enabled="yes" />
+
+    <outfit type="1" looktype="3499" name="Soda Cup" premium="no" unlocked="no" enabled="yes" />
+
+    <outfit type="1" looktype="3502" name="Tanjirou" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="0" looktype="3503" name="Nezuko" premium="no" unlocked="no" enabled="yes" />
+
+    <outfit type="0" looktype="3767" name="Cleopatra Costume" premium="no" unlocked="no" enabled="yes" />
+
+    <outfit type="0" looktype="3754" name="Fairy Princess" premium="no" unlocked="no" enabled="yes" />
+
+    <outfit type="0" looktype="3753" name="Cosplay de Ninetales" premium="no" unlocked="no" enabled="yes" />
+
+    <outfit type="0" looktype="3733" name="Glaceon Cosplay" premium="no" unlocked="no" enabled="yes" />
+
+    <outfit type="1" looktype="3762" name="Anubis Costume" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="0" looktype="3763" name="Isis Costume" premium="no" unlocked="no" enabled="yes" />
+
+    <outfit type="1" looktype="3713" name="The Chosen One" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="0" looktype="3714" name="The Chosen One" premium="no" unlocked="no" enabled="yes" />
+
+    <outfit type="1" looktype="3730" name="Artist" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="0" looktype="3731" name="Artist" premium="no" unlocked="no" enabled="yes" />
+
+    <outfit type="1" looktype="3517" name="Ghost" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="0" looktype="3518" name="Ghost" premium="no" unlocked="no" enabled="yes" />
+
+    <outfit type="1" looktype="3707" name="Survivor" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="0" looktype="3708" name="Survivor" premium="no" unlocked="no" enabled="yes" />
+
+    <outfit type="1" looktype="3484" name="Mc Donalds" premium="no" unlocked="no" enabled="yes" />
+
+    <outfit type="1" looktype="3485" name="Pizza" premium="no" unlocked="no" enabled="yes" />
+
+    <!-- Item -->
+    <outfit type="1" looktype="3793" name="Starter Trainer" premium="no" unlocked="no" enabled="yes" />
+    <outfit type="0" looktype="3788" name="Starter Trainer" premium="no" unlocked="no" enabled="yes" />
+</outfits>

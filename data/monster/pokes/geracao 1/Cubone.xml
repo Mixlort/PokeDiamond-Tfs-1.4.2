@@ -1,0 +1,48 @@
+<monster name="Cubone" nameDescription="a cubone" race="ground" race2="no race" experience="87" speed="155">
+    <level min="20" max="20" />
+    <health now="50" max="50" />
+    <status attack="50" defense="95" spAtk="40" spDef="50" />
+    <look type="475" corpse="11858" />
+    <targetchange interval="10000" chance="0" />
+    <flags>
+        <flag summonable="1" />
+        <flag hostile="1" />
+        <flag attackable="1" />
+        <flag illusionable="1" />
+        <flag convinceable="1" />
+        <flag pushable="1" />
+        <flag canpushitems="0" />
+        <flag canpushcreatures="0" />
+        <flag targetdistance="1" />
+        <flag runonhealth="0" />
+        <flag canteleport="23" />
+    </flags>
+    <script>
+        <event name="MonsterHealthChange" />
+        <event name="CorpseLoot" />
+    </script>
+    <moves>
+        <move name="Headbutt" level="1" interval="7" range="1" isTarget="1" f="50" t="normal" />
+        <move name="Slash" level="55" interval="7" range="1" isTarget="1" f="60" t="normal" />
+        <move name="Bone Club" level="15" interval="7" range="4" isTarget="1" f="70" t="ground" />
+        <move name="Bone Slash" level="27" interval="8" range="1" isTarget="0" f="75" t="ground" />
+        <move name="Rage" level="32" interval="9" range="1" isTarget="0" f="0" t="normal" />
+    </moves>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
+        <attack name="Headbutt" interval="2711" chance="30" range="1" />
+        <attack name="Bone Club" interval="2852" chance="29" range="3" />
+        <attack name="Bonemerang" interval="2946" chance="28" range="6" />
+        <attack name="Bone Slash" interval="2758" chance="30" range="3" />
+        <attack name="Rage" interval="3258" chance="30" range="6" />
+    </attacks>
+    <defenses armor="0" defense="0" />
+    <voices interval="5000" chance="10">
+        <voice sentence="CUBONE!" />
+    </voices>
+    <loot>
+        <item id="12208" chance="5000" countmax="15" />
+        <item id="12337" chance="10000" countmax="17" />
+        <item id="12177" chance="4000" />
+    </loot>
+</monster>

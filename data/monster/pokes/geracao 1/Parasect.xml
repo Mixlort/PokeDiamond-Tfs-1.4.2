@@ -1,0 +1,58 @@
+<monster name="Parasect" nameDescription="a parasect" race="bug" race2="grass" experience="128" speed="150">
+    <level min="50" max="50" />
+    <health now="60" max="60" />
+    <status attack="95" defense="80" spAtk="60" spDef="55" />
+    <look type="446" corpse="11936" />
+    <targetchange interval="10000" chance="0" />
+    <flags>
+        <flag summonable="1" />
+        <flag hostile="1" />
+        <flag attackable="1" />
+        <flag illusionable="1" />
+        <flag convinceable="1" />
+        <flag pushable="1" />
+        <flag canpushitems="0" />
+        <flag canpushcreatures="0" />
+        <flag targetdistance="1" />
+        <flag runonhealth="0" />
+        <flag canteleport="20" />
+    </flags>
+    <script>
+        <event name="MonsterHealthChange" />
+        <event name="CorpseLoot" />
+    </script>
+    <moves>
+        <move name="Absorb" level="50" interval="9" range="1" isTarget="1" f="40" t="grass" />
+        <move name="Scratch" level="50" interval="7" range="1" isTarget="1" f="40" t="normal" />
+        <move name="Poison Sting" level="50" interval="7" range="3" isTarget="1" f="40" t="poison" />
+        <move name="Slash" level="50" interval="8" range="1" isTarget="0" f="60" t="normal" />
+        <move name="Poison Bomb" level="50" interval="8" range="3" isTarget="1" f="70" t="poison" />
+        <move name="Stun Spore" level="50" interval="6" range="1" isTarget="0" f="0" t="normal" />
+        <move name="Poison Powder" level="50" interval="10" range="4" isTarget="0" f="0" t="poison" />
+        <move name="Sleep Powder" level="50" interval="10" range="1" isTarget="0" f="0" t="grass" />
+        <move name="Fury Cutter" level="50" interval="10" range="1" isTarget="0" f="65" t="bug" />
+        <move name="X-Scissor" level="70" interval="10" range="1" isTarget="0" f="65" t="bug" />
+    </moves>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
+        <attack name="Scratch" interval="2570" chance="31" range="1" />
+		<attack name="Poison Sting" interval="2805" chance="29" range="1" />
+        <attack name="Sleep Powder" interval="5164" chance="20" range="1" />
+        <attack name="Slash" interval="2805" chance="29" range="1" />
+        <attack name="Stun Spore" interval="4920" chance="20" range="6" />
+        <attack name="melee" interval="2946" chance="28" range="1" />
+		<attack name="Absorb" interval="2805" chance="29" range="1" />
+		<attack name="Poison Bomb" interval="2805" chance="23" range="4" />
+		<attack name="Fury Cutter" interval="3105" chance="25" range="4" />
+		<attack name="X-Scissor" interval="3805" chance="25" range="5" />
+    </attacks>
+    <defenses armor="0" defense="0">
+	</defenses>
+    <voices interval="5000" chance="10">
+        <voice sentence="PARASECT!" />
+    </voices>
+    <loot>
+        <item id="12171" chance="10000" />
+        <item id="11448" chance="100" />
+    </loot>
+</monster>

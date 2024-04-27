@@ -1,0 +1,47 @@
+<monster name="Exeggcute" nameDescription="a exeggcute" race="grass" race2="psychic" experience="98" speed="160">
+    <level min="10" max="10" />
+    <health now="60" max="60" />
+    <status attack="40" defense="80" spAtk="60" spDef="45" />
+    <look type="564" corpse="11873" />
+    <targetchange interval="10000" chance="0" />
+    <flags>
+        <flag summonable="1" />
+        <flag hostile="1" />
+        <flag attackable="1" />
+        <flag passive="1" />
+        <flag illusionable="1" />
+        <flag convinceable="1" />
+        <flag pushable="1" />
+        <flag canpushitems="0" />
+        <flag canpushcreatures="0" />
+        <flag targetdistance="1" />
+        <flag runonhealth="0" />
+        <flag canteleport="24" />
+    </flags>
+    <script>
+        <event name="MonsterHealthChange" />
+        <event name="CorpseLoot" />
+    </script>
+    <moves>
+        <move name="Hypnosis" level="5" interval="15" range="3" isTarget="1" f="0" t="psychic" />
+        <move name="Leech Seed" level="13" interval="18" range="3" isTarget="1" f="1" t="grass" />
+        <move name="Egg Bomb" level="17" interval="10" range="4" isTarget="1" f="70" t="normal" />
+        <move name="Confusion" level="15" interval="15" range="1" isTarget="0" f="50" t="psychic" />
+    </moves>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
+        <attack name="Hypnosis" interval="5202" chance="19" range="3" />
+        <attack name="Absorb" interval="2946" chance="28" range="3" />
+        <attack name="Confusion" interval="2852" chance="29" range="6" />
+        <attack name="Egg Bomb" interval="2993" chance="28" range="3" />
+    </attacks>
+    <defenses armor="0" defense="0" />
+    <voices interval="5000" chance="10">
+        <voice sentence="EXEGGCUTE!" />
+    </voices>
+    <loot>
+        <item id="12163" chance="10000" countmax="50" />
+        <item id="12155" chance="5000" />
+        <item id="12153" chance="3500" />
+    </loot>
+</monster>

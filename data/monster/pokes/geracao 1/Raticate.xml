@@ -1,0 +1,46 @@
+<monster name="Raticate" nameDescription="a raticate" race="normal" race2="no race" experience="116" speed="97">
+    <level min="25" max="30" />
+    <health now="55" max="55" />
+    <status attack="81" defense="60" spAtk="50" spDef="70" />
+    <look type="420" corpse="11952" />
+    <targetchange interval="10000" chance="0" />
+    <flags>
+        <flag summonable="1" />
+        <flag hostile="1" />
+        <flag attackable="1" />
+        <flag illusionable="1" />
+        <flag convinceable="1" />
+        <flag pushable="1" />
+        <flag canpushitems="0" />
+        <flag canpushcreatures="0" />
+        <flag targetdistance="1" />
+        <flag runonhealth="0" />
+        <flag canteleport="21" />
+    </flags>
+    <script>
+        <event name="MonsterHealthChange" />
+        <event name="CorpseLoot" />
+    </script>
+    <moves>
+        <move name="Quick Attack" level="25" interval="7" range="2" isTarget="1" f="40" t="normal" />
+        <move name="Scratch" level="1" interval="7" range="15" isTarget="1" f="40" t="normal" />
+        <move name="Bite" level="1" interval="6" range="15" isTarget="1" f="50" t="dark" />
+        <move name="Super Fang" level="25" interval="7" range="1" isTarget="1" f="65" t="normal" />
+    </moves>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
+        <attack name="Quick Attack" interval="2476" chance="31" range="2" />
+        <attack name="Scratch" interval="2664" chance="30" range="1" />
+        <attack name="Bite" interval="2852" chance="29" range="1" />
+        <attack name="Super Fang" interval="3040" chance="28" range="1" />
+    </attacks>
+    <defenses armor="0" defense="0" />
+    <voices interval="5000" chance="10">
+        <voice sentence="RATICATE!" />
+    </voices>
+    <loot>
+        <item id="11453" chance="100" />
+        <item id="12173" chance="4000" />
+        <item id="12174" chance="5000" countmax="5" />
+    </loot>
+</monster>

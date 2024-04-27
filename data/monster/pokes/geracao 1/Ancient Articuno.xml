@@ -1,0 +1,57 @@
+<monster name="Ancient Articuno" nameDescription="a Ancient articuno" race="ice" race2="flying" experience="215" speed="205">
+    <level min="150" max="250" />
+    <health now="1000" max="1000" />
+    <status attack="120" defense="800" spAtk="95" spDef="300" />
+    <look type="1896" corpse="11843" />
+    <targetchange interval="10000" chance="0" />
+    <flags>
+        <flag summonable="1" />
+        <flag hostile="1" />
+        <flag attackable="1" />
+        <flag illusionable="1" />
+        <flag convinceable="1" />
+        <flag pushable="1" />
+        <flag canpushitems="0" />
+        <flag canpushcreatures="0" />
+        <flag targetdistance="1" />
+        <flag runonhealth="0" />
+        <flag canteleport="15" />
+    </flags>
+    <script>
+        <event name="MonsterHealthChange" />
+        <event name="CorpseLoot" />
+    </script>
+    <moves>
+        <move name="Quick Attack" level="1" interval="10" range="2" isTarget="1" f="40" t="normal" />
+        <move name="Peck" level="90" interval="10" range="1" isTarget="1" f="40" t="flying" />
+        <move name="Pluck" level="90" interval="15" range="1" isTarget="1" f="60" t="flying" />
+        <move name="Wing Attack" level="90" interval="6" range="1" isTarget="0" f="75" t="flying" />
+        <move name="Air Slash" level="90" interval="12" range="1" isTarget="0" f="55" t="flying" />
+        <move name="Air Cutter" level="90" interval="7" range="1" isTarget="0" f="70" t="flying" />
+        <move name="Icy Wind" level="90" interval="6" range="1" isTarget="0" f="45" t="ice" />
+        <move name="Aurora Beam" level="90" interval="6" range="1" isTarget="0" f="70" t="ice" />
+        <move name="Ice Beam" level="90" interval="9" range="1" isTarget="0" f="95" t="ice" />
+        <move name="Powder Snow" level="90" interval="6" range="1" isTarget="0" f="95" t="ice" />
+        <move name="Twister" level="90" interval="7" range="1" isTarget="0" f="80" t="dragon" />
+        <move name="Blizzard" level="90" interval="8" range="1" isTarget="0" f="100" t="ice" />
+    </moves>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
+        <attack name="Quick Attack" interval="2899" chance="29" range="1" />
+        <attack name="Ice Shards" interval="3197" chance="21" range="4" />
+        <attack name="Ice Beam" interval="3510" chance="25" range="6" />
+        <attack name="Icy Wind" interval="3635" chance="16" range="6" />
+        <attack name="Aurora Beam" interval="3134" chance="27" range="6" />
+        <attack name="Wing Attack" interval="4128" chance="27" range="5" />
+        <attack name="Blizzard" interval="4403" chance="20" range="6" />
+    </attacks>
+    <defenses armor="0" defense="0" />
+    <voices interval="5000" chance="10">
+        <voice sentence="ARTICUNO!" />
+    </voices>
+    <loot>
+        <item id="12149" chance="7000" />  --Ice Feather
+        <item id="12201" chance="7000" />  --Ice Orb
+        <item id="11442" chance="100" />  --Water Stone
+    </loot>
+</monster>

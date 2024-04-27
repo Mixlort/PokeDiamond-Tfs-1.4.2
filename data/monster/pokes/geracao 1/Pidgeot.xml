@@ -1,0 +1,52 @@
+<monster name="Pidgeot" nameDescription="a pidgeot" race="normal" race2="flying" experience="112" speed="101">
+    <level min="75" max="80" />
+    <health now="83" max="83" />
+    <status attack="80" defense="75" spAtk="70" spDef="70" />
+    <look type="431" corpse="11938" />
+    <targetchange interval="10000" chance="0" />
+    <flags>
+        <flag summonable="1" />
+        <flag hostile="1" />
+        <flag attackable="1" />
+        <flag illusionable="1" />
+        <flag convinceable="1" />
+        <flag pushable="1" />
+        <flag canpushitems="0" />
+        <flag canpushcreatures="0" />
+        <flag targetdistance="1" />
+        <flag runonhealth="0" />
+        <flag canteleport="18" />
+    </flags>
+    <script>
+        <event name="MonsterHealthChange" />
+        <event name="CorpseLoot" />
+    </script>
+    <moves>
+        <move name="Quick Attack" level="65" interval="7" range="2" isTarget="1" f="40" t="normal" />
+        <move name="Sand Attack" level="1" interval="9" range="1" isTarget="0" f="0" t="ground" />
+        <move name="Whirlwind" level="65" interval="11" range="1" isTarget="0" f="80" t="flying" />
+        <move name="Drill Peck" level="65" interval="7" range="1" isTarget="1" f="35" t="flying" />
+        <move name="Wing Attack" level="65" interval="10" range="1" isTarget="0" f="75" t="flying" />
+        <move name="Tornado" level="69" interval="10" range="1" isTarget="0" f="100" t="flying" />
+        <move name="Windstorm" level="76" interval="10" range="1" isTarget="0" f="110" t="flying" /> 
+    </moves>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
+        <attack name="Quick Attack" interval="2617" chance="30" range="1" />
+        <attack name="Sand Attack" interval="2476" chance="31" range="3" />
+        <attack name="Whirlwind" interval="2758" chance="20" range="5" />
+        <attack name="Drill Peck" interval="2852" chance="25" range="1" />
+		<attack name="Wing Attack" interval="2852" chance="20" range="5" />
+		<attack name="Tornado" interval="4852" chance="20" range="4" />
+		<attack name="Strafe" interval="3952" chance="20" range="4" />
+    </attacks>
+    <defenses armor="0" defense="0" />
+    <voices interval="5000" chance="10">
+        <voice sentence="PIDGEOT!" />
+    </voices>
+    <loot>
+        <item id="12200" chance="4000" />
+        <item id="12172" chance="4000" />
+        <item id="11453" chance="100" />
+    </loot>
+</monster>
