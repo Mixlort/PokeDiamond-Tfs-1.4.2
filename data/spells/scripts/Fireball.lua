@@ -32,7 +32,7 @@ function onCastSpell(cid, var)
     ----Novo padrão by Mixlort---------------------------------------------------------------------
 
 	doSendDistanceShoot(getThingPosWithDebug(cid), getThingPosWithDebug(target), 3)
-	addEvent(doDanoWithProtect, 200, cid, FIREDAMAGE, getThingPosWithDebug(target), waba, min, max, 5)
+	addEvent(doDanoWithProtect, 200, cid:getId(), FIREDAMAGE, getThingPosWithDebug(target:getId()), waba, min, max, 5)
 
 return true
 end

@@ -1,15 +1,29 @@
 local posis = {   --[storage da city] = {pos da nurse na city},
-[897530] = {x = 1053, y = 1046, z = 7},   --saffron                   --alterado v1.9 TUDO!! \/
-[897531] = {x = 1060, y = 900, z = 7},    --cerulean
-[897532] = {x = 1204, y = 1042, z = 7},    --lavender
+[897530] = {x = 1054, y = 1050, z = 7},   --saffron                   --alterado v1.9 \/
+[897531] = {x = 1061, y = 899, z = 7},    --cerulean
+[897532] = {x = 1203, y = 1040, z = 7},    --lavender
 [897533] = {x = 1213, y = 1321, z = 7},    --fuchsia
-[897534] = {x = 862, y = 1094, z = 6},    --celadon
-[897535] = {x = 705, y = 1086, z = 7},    --viridian
-[897536] = {x = 1075, y = 1233, z = 7},    --vermilion
-[897537] = {x = 723, y = 847, z = 7},    --pewter
-[897538] = {x = 850, y = 1396, z = 7},    --cinnabar
+[897534] = {x = 860, y = 1094, z = 6},    --celadon
+[897535] = {x = 706, y = 1083, z = 7},    --viridian
+[897536] = {x = 1073, y = 1233, z = 7},    --vermilion
+[897537] = {x = 723, y = 844, z = 7},    --pewter
+[897538] = {x = 848, y = 1394, z = 7},    --cinnabar
 [897539] = {x = 1429, y = 1597, z = 6},    --snow
-[897540] = {x = 542, y = 675, z = 7},    --golden
+[897540] = {x = 258, y = 429, z = 7},    --golden
+
+[897541] = {x = 243, y = 1028, z = 7}, -- Hammlin
+[897542] = {x = 268, y = 1163, z = 7}, -- Shamouti
+[897543] = {x = 252, y = 1260, z = 6}, -- Ascordbia
+[897544] = {x = 2612, y = 985, z = 7}, -- Vip 1
+[897545] = {x = 2680, y = 675, z = 7}, -- Vip 2
+[897546] = {x = 2559, y = 444, z = 5}, -- Vip 3
+
+[897546] = {x = 2559, y = 444, z = 5}, -- Pallet
+[897546] = {x = 652, y = 1171, z = 7}, -- Coliseum
+
+[897546] = {x = 1163, y = 1450, z = 13}, -- Outland north
+[897546] = {x = 1509, y = 1290, z = 13}, -- outland west
+[897546] = {x = 1152, y = 1068, z = 13}, -- outland sul
 }
 
 function onThingMove(creature, thing, oldpos, oldstackpos)
@@ -47,41 +61,38 @@ end
 
 if((msgcontains(msg, 'hi') or msgcontains(msg, 'heal') or msgcontains(msg, 'help')) and (getDistanceToCreature(cid) <= 3)) then
 
+ 	if exhaustion.get(cid, 9211) then
+	selfSay('Por Favor espere um momento para eu por curar novamente seus Pokemons!')
+	return true
+   	end
+
 	if not getTileInfo(getThingPos(cid)).protection and nurseHealsOnlyInPZ then
-		selfSay("Please, get inside the pokémon center to heal your pokemons!")
+		selfSay("Por Favor, entre no Centro Pokemon para eu poder curar seus Pokemons!")
 	return true
 	end
 	
-	if getPlayerStorageValue(cid, 52480) >= 1 then
-	   selfSay("You can't do that while in a Duel!")   --alterado v1.6.1
+	--[[if getPlayerStorageValue(cid, 52480) >= 1 then
+	   selfSay("Não possu curar seus Pokemons enquanto você está em Duel!")   --alterado v1.6.1
     return true 
-    end
+    end]]
     
-    for e, f in pairs(posis) do
-        local pos = getThingPos(getNpcCid())
-        if isPosEqual(pos, f) then
-           if getPlayerStorageValue(cid, e) <= -1 then           --alterado v1.7
-              setPlayerStorageValue(cid, e, 1)
-           end
-        end
-    end 
 
-	exhaustion.set(cid, 9211, 5)
+	exhaustion.set(cid, 9211, 1)
 
 	doCreatureAddHealth(cid, getCreatureMaxHealth(cid)-getCreatureHealth(cid))
 	doCureStatus(cid, "all", true)
-	doSendMagicEffect(getThingPos(cid), 132)
+	doSendMagicEffect(getThingPos(cid), 103)
 
 	local mypb = getPlayerSlotItem(cid, 8)
 
-	if #getCreatureSummons(cid) >= 1 then
+	if #getPlayerPokemons(cid) >= 1 then
 
 		if not nurseHealsPokemonOut then
 			selfSay("Please, return your pokemon to his ball!")
 		return true
 		end
 
-		local s = getCreatureSummons(cid)[1]
+		local s = getPlayerPokemons(cid)[1]
 		doCreatureAddHealth(s, getCreatureMaxHealth(s))
 		doSendMagicEffect(getThingPos(s), 13)
 		doCureStatus(s, "all", false)
@@ -93,7 +104,7 @@ if((msgcontains(msg, 'hi') or msgcontains(msg, 'heal') or msgcontains(msg, 'help
 		end
 	else
 		if mypb.itemid ~= 0 and isPokeball(mypb.itemid) then  --alterado v1.3
-		    doItemSetAttribute(mypb.uid, "hp", 1)
+		    doItemSetAttribute(mypb.uid, "pokeHealth", 1)
 			if getItemAttribute(mypb.uid, "hunger") and getItemAttribute(mypb.uid, "hunger") > baseNurseryHunger then
 				doItemSetAttribute(mypb.uid, "hunger", baseNurseryHunger)
 			end
@@ -119,7 +130,7 @@ if((msgcontains(msg, 'hi') or msgcontains(msg, 'heal') or msgcontains(msg, 'help
     local balls = getPokeballsInContainer(bp.uid)
     if #balls >= 1 then
        for _, uid in ipairs(balls) do
-           doItemSetAttribute(uid, "hp", 1)
+           doItemSetAttribute(uid, "pokeHealth", 1)
            for c = 1, 15 do
                local str = "move"..c
                setCD(uid, str, 0)   
@@ -131,29 +142,24 @@ if((msgcontains(msg, 'hi') or msgcontains(msg, 'heal') or msgcontains(msg, 'help
               doItemSetAttribute(uid, "happy", baseNurseryHappiness)
            end
            local this = getThing(uid)
-           for a, b in pairs (pokeballs) do
+		   --this.itemid
+		  -- doTransformItem(uid, pokeballs["ultra"].on)
+          for a, b in pairs (pokeballs) do
 		       if isInArray(b.all, this.itemid) then
 	              doTransformItem(uid, b.on)
                end
            end
         end
     end
-	
-	local nwplayer = getCreatureName(cid)
-	
-    if getPlayerLanguage(cid) == 0 then
-    selfSay("TODOS os seus Pokémon estão prontos para batalhar "..nwplayer..".")
-	end
-	
-	if getPlayerLanguage(cid) == 1 then
-    selfSay("Todos sus pokémon estan listos para batallar "..nwplayer..".")
-	end
-	
-	if getPlayerLanguage(cid) == 2 then
-    selfSay("ALL your Pokémon are ready to battle "..nwplayer..".")
-	end
+    selfSay('Seus Pokemons foram curados, Boa Sorte em sua jornada!')
+
+if getPlayerSlotItem(getCreatureMaster(cid), 8).uid > 0 then
+
     if useKpdoDlls then  --alterado v1.7
        doUpdateMoves(cid)
     end
+
+end
+
 end
 end

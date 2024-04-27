@@ -340,9 +340,6 @@ function doReleaseSummon(cid, pos, effect, message, missile, healthMax)
         player:setStorageValue(storageGoback, -1)
 
         local summonM = player:getSummons()[1]
-        local creatureM = Creature(summonM)
-        creatureM:setSkull(10)
-
         if effect then
             summonM:getPosition():sendMagicEffect(effect)
         end

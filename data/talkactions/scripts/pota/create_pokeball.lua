@@ -22,7 +22,7 @@ function onSay(player, words, param)
 		boost = 0
 	end
 
-    player:addPokeToPlayer(name, boost, "normal")
+    addPokeToPlayer(player, name, boost, nil, "normal")
     player:getPosition():sendMagicEffect(CONST_ME_MAGIC_GREEN)
     return true
 end

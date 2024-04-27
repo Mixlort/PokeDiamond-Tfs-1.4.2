@@ -32,7 +32,7 @@ function onCastSpell(cid, var)
     ----Novo padrão by Mixlort---------------------------------------------------------------------
 
     doSendDistanceShoot(getThingPosWithDebug(cid), getThingPosWithDebug(target), 3)
-    doDanoInTargetWithDelay(cid, target, FIREDAMAGE, min, max, 15)  --alterado v1.7
+    doDanoInTargetWithDelay(cid:getId(), target:getId(), FIREDAMAGE, min, max, 15)  --alterado v1.7
 
 return true
 end

@@ -552,3 +552,52 @@ function getOutfitOtclient(outfit)
 		body    = tonumber(outfit.lookBody)   or 0,
 	}
 end
+
+
+function setPassiveSpells(poke)
+    if poke:getStorageStringValue(storages.STORAGE_PASSIVESPELL) ~= -1 then return true end
+    local name = poke:getName()
+    local monsterType = MonsterType(name)
+    local moves = monsterType:getMoveList()
+    local passivas = {}
+    local passiveChances = {}
+    if monsterType and moves then
+        for i = 1, #moves do
+            if moves[i].passive and moves[i].passive == "sim" then
+                table.insert(passivas, moves[i].name) -- Insere a passiva na lista
+                table.insert(passiveChances, moves[i].speed) -- Insere a passiva na lista
+            end
+        end
+        if #passivas > 0 then
+            poke:setStorageStringValue(storages.STORAGE_PASSIVESPELL, table.concat(passivas, ",")) -- Concatena as passivas separadas por vírgula
+            poke:setStorageStringValue(storages.STORAGE_PASSIVESPELL_CHANCE, table.concat(passiveChances, ",")) -- Concatena as passivas separadas por vírgula
+        end
+    end
+end
+
+function getPassiveRandomSpell(poke)
+    if poke:getStorageStringValue(storages.STORAGE_PASSIVESPELL) == -1 then return false end
+    local passivasSto = poke:getStorageStringValue(storages.STORAGE_PASSIVESPELL)
+    local passivas = string.explode(passivasSto, ",")
+    local random = math.random(1, #passivas)
+
+    local passivasChanceSto = poke:getStorageStringValue(storages.STORAGE_PASSIVESPELL_CHANCE)
+    local passivasChance = string.explode(passivasChanceSto, ",")
+    local randomChance = passivasChance[random]
+
+    if randomChance then
+        randomChance = tonumber(randomChance)
+        if math.random(1, 100) <= randomChance then
+	        doCreatureSay(poke, passivas[random], TALKTYPE_MONSTER)
+            if not poke then return true end
+            doCreatureCastSpell(poke, passivas[random])
+        end
+    end
+    
+    return true
+end
+
+function getPokemonLevel(cid)
+    if not isCreature(cid) then return 0 end 
+    return MonsterType(cid:getName()):getMaxlevel()
+end

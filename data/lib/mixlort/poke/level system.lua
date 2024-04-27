@@ -234,8 +234,8 @@ function adjustStatus(pk, item, health, vite, conditions)
 	if not isCreature(pk) then return true end
     if isNumber(pk) then pk = Creature(pk) end	
 
-    local gender = getItemAttribute(item, "gender") and getItemAttribute(item, "gender") or 0
-	addEvent(doCreatureSetSkullType, 10, pk:getId(), gender)
+    -- local gender = getItemAttribute(item, "gender") and getItemAttribute(item, "gender") or 0
+	-- addEvent(doCreatureSetSkullType, 10, pk:getId(), gender)
 
 	if isSummon(pk) and conditions then
 		local burn = getItemAttribute(item, "burn")   

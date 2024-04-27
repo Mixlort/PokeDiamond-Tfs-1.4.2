@@ -69,7 +69,7 @@ function onCastSpell(cid, var)
     ---------
     doSummonMonster(master, s[getCreatureName(cid)])
     local pk = getCreatureSummons(master)[1]
-    addEvent(setGender, 20, cid:getId(), gender)
+    -- addEvent(setGender, 20, cid:getId(), gender)
     setCreatureMaxHealth(pk, maxLife)
     doCreatureAddHealth(pk, life-maxLife)
     ---------
