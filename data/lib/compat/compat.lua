@@ -23,7 +23,7 @@ THING_TYPE_PLAYER = CREATURETYPE_PLAYER + 1
 THING_TYPE_MONSTER = CREATURETYPE_MONSTER + 1
 THING_TYPE_NPC = CREATURETYPE_NPC + 1
 
--- COMBAT_POISONDAMAGE = COMBAT_EARTHDAMAGE
+COMBAT_POISONDAMAGE = COMBAT_EARTHDAMAGE
 CONDITION_EXHAUST = CONDITION_EXHAUST_WEAPON
 TALKTYPE_ORANGE_1 = TALKTYPE_MONSTER_SAY
 TALKTYPE_ORANGE_2 = TALKTYPE_MONSTER_YELL
@@ -38,28 +38,6 @@ NORTHWEST = DIRECTION_NORTHWEST
 NORTHEAST = DIRECTION_NORTHEAST
 
 do
-    local function storageProxy(player)
-        return setmetatable({}, {
-            __index = function (self, key)
-                return player:getStorageValue(key)
-            end,
-            __newindex = function (self, key, value)
-                player:setStorageValue(key, value)
-            end
-        })
-    end
-
-    local function accountStorageProxy(player)
-        return setmetatable({}, {
-            __index = function (self, key)
-                return Game.getAccountStorageValue(player:getAccountId(), key)
-            end,
-            __newindex = function (self, key, value)
-                Game.setAccountStorageValue(player:getAccountId(), key, value)
-            end
-        })
-    end
-
 	local function CreatureIndex(self, key)
 		local methods = getmetatable(self)
 		if key == "uid" then
@@ -333,71 +311,8 @@ setCombatCondition = function(...)
 	Combat.addCondition(...)
 end
 
--- Mixlort
-
-function doSendPlayerExtendedOpcode(cid, opcode, buffer)
-	Player(cid):sendExtendedOpcode(opcode, buffer)
-end
-
-function getCreatureLookDir(...) return getCreatureLookDirection(...) end
-TALKTYPE_MONSTER = TALKTYPE_MONSTER_SAY
-
-function ehMonstro(cid) return isMonster(cid) end 
-
-function Item.setSpecialAttribute(self, attributeId, attribute) return self:setCustomAttribute(attributeId, attribute) end
-function Item.getSpecialAttribute(self, attributeId) return self:getCustomAttribute(attributeId) end
-
-function setItemAttribute(item, attributeId, attribute) 
-    if isNumber(item) then item = Item(item) end
-    if not item or not item:isItem() then return nil end -- mixlort se der ruim desativar
-    return item:setCustomAttribute(attributeId, attribute) 
-end
-function doItemSetAttribute(item, attributeId, attribute) 
-    if isNumber(item) then item = Item(item) end
-    if not item or not item:isItem() then return nil end -- mixlort se der ruim desativar
-    return item:setCustomAttribute(attributeId, attribute) 
-end
-function getItemAttribute(item, attributeId) 
-    if isNumber(item) then item = Item(item) end
-    if not item or not item:isItem() then return nil end -- mixlort se der ruim desativar
-    return item:getCustomAttribute(attributeId) 
-end
-function doItemGetAttribute(item, attributeId) 
-    if isNumber(item) then item = Item(item) end
-    if not item or not item:isItem() then return nil end -- mixlort se der ruim desativar
-    return item:getCustomAttribute(attributeId) 
-end
-
-function doItemEraseAttribute(item, att)
-	if isNumber(item) then item = Item(item) end
-    if not item or not item:isItem() then return nil end -- mixlort se der ruim desativar
-	return item:removeCustomAttribute(att)
-end
-
-docastspell = doCreatureCastSpell
-
--- function getPokemonLevel(cid) if isCreature(cid) then return cid:getLevel() end end
-
--- Mixlort
-
-function doTargetCombatHealth(cid, pid, element, min, max, eff) 
-	if isNumber(cid) then cid = Creature(cid) end
-	if eff and eff > 0 then eff = eff + 1 end
-	return doTargetCombat(cid, pid, element, min, max, eff) 
-end
-
-function doAreaCombatHealth(cid, element, pos, area, min, max, eff)
-	if cid and isNumber(cid) then cid = Creature(cid) end
-    if eff and eff > 0 then eff = eff + 1 end
-    return doAreaCombat(cid, element, pos, area, min, max, eff)
-end
-
--- function doAreaCombatHealth(...)
---     return doAreaCombat(...)
--- end
-
-function doAreaCombatHealthPlus(...) return doAreaCombat(...) end
-
+function doTargetCombatHealth(...) return doTargetCombat(...) end
+function doAreaCombatHealth(...) return doAreaCombat(...) end
 doCombatAreaHealth = doAreaCombatHealth
 function doTargetCombatMana(cid, target, min, max, effect) return doTargetCombat(cid, target, COMBAT_MANADRAIN, min, max, effect) end
 doCombatAreaMana = doTargetCombatMana
@@ -409,20 +324,18 @@ setConditionFormula = Condition.setFormula
 addDamageCondition = Condition.addDamage
 addOutfitCondition = Condition.setOutfit
 
-mayNotMove = doCreatureSetNoMove
-
 function doCombat(cid, combat, var) return combat:execute(cid, var) end
 
 function isCreature(cid) return Creature(cid) end
 function isPlayer(cid) return Player(cid) end
 function isMonster(cid) return Monster(cid) end
-function isSummon(cid) return Creature(cid):getMaster() ~= nil end
+function isSummon(cid) local c = Creature(cid) return c and c:getMaster() end
 function isNpc(cid) return Npc(cid) end
 function isItem(uid) return Item(uid) end
 function isContainer(uid) return Container(uid) end
 
 function getCreatureName(cid) local c = Creature(cid) return c and c:getName() or false end
-function getCreatureStorage(uid, key) local c = Creature(uid) return c and c:getStorageValue(key) or -1 end
+function getCreatureStorage(uid, key) local c = Creature(uid) return c and c:getStorageValue(key) or false end
 function getCreatureHealth(cid) local c = Creature(cid) return c and c:getHealth() or false end
 function getCreatureMaxHealth(cid) local c = Creature(cid) return c and c:getMaxHealth() or false end
 function getCreatureMana(cid) local c = Creature(cid) return c and c:getMana() or false end
@@ -440,8 +353,7 @@ function getCreatureTarget(cid)
 	local c = Creature(cid)
 	if c then
 		local target = c:getTarget()
-		return target or 0
-		-- return target and target:getId() or 0
+		return target and target:getId() or 0
 	end
 	return false
 end
@@ -450,7 +362,7 @@ function getCreatureMaster(cid)
 	local c = Creature(cid)
 	if c then
 		local master = c:getMaster()
-		return master
+		return master and master:getId() or c:getId()
 	end
 	return false
 end
@@ -470,7 +382,7 @@ end
 
 getCreaturePos = getCreaturePosition
 
--- function doCreatureAddHealth(cid, health) local c = Creature(cid) return c and c:addHealth(health) or false end
+function doCreatureAddHealth(cid, health) local c = Creature(cid) return c and c:addHealth(health) or false end
 function doCreatureAddMana(cid, mana) local c = Creature(cid) return c and c:addMana(mana) or false end
 function doRemoveCreature(cid) local c = Creature(cid) return c and c:remove() or false end
 function doCreatureSetStorage(uid, key, value) local c = Creature(uid) return c and c:setStorageValue(key, value) or false end
@@ -532,7 +444,7 @@ function getPlayerTown(cid) local p = Player(cid) return p and p:getTown():getId
 function getPlayerVocation(cid) local p = Player(cid) return p and p:getVocation():getId() or false end
 function getPlayerSoul(cid) local p = Player(cid) return p and p:getSoul() or false end
 function getPlayerSex(cid) local p = Player(cid) return p and p:getSex() or false end
-function getPlayerStorageValue(cid, key) local c = Creature(cid) return c and c:getStorageValue(key) or -1 end
+function getPlayerStorageValue(cid, key) local p = Player(cid) return p and p:getStorageValue(key) or false end
 function getPlayerBalance(cid) local p = Player(cid) return p and p:getBankBalance() or false end
 function getPlayerMoney(cid) local p = Player(cid) return p and p:getMoney() or false end
 function getPlayerGroupId(cid) local p = Player(cid) return p and p:getGroup():getId() or false end
@@ -604,27 +516,12 @@ function getPlayerGuildNick(cid) local p = Player(cid) return p and p:getGuildNi
 function getPlayerMasterPos(cid) local p = Player(cid) return p and p:getTown():getTemplePosition() or false end
 function getPlayerItemCount(cid, itemId, ...) local p = Player(cid) return p and p:getItemCount(itemId, ...) or false end
 function getPlayerWeapon(cid) local p = Player(cid) return p and p:getWeaponType() or false end
-function getPlayerSlotItem(player, slot)
-    if isNumber(player) then player = Creature(player) end
-    if not isPlayer(player) then return pushThing(nil) end
-
-    --mixlort
-    if slot == 8 then
-        if player:getUsingBall() then
-            return player:getUsingBall()
-        else
-            -- print("Erro func getPlayerSlotItem slot 8")
-            return pushThing(nil)
-        end
-    elseif slot == 7 then
-        -- print("Erro func getPlayerSlotItem slot 7")
-        return pushThing(nil)
-    end
-    --mixlort
-    if player == nil then
-        return pushThing(nil)
-    end
-    return pushThing(player:getSlotItem(slot))
+function getPlayerSlotItem(cid, slot)
+	local player = Player(cid)
+	if player == nil then
+		return pushThing(nil)
+	end
+	return pushThing(player:getSlotItem(slot))
 end
 function getPlayerItemById(cid, deepSearch, itemId, ...)
 	local player = Player(cid)
@@ -645,32 +542,6 @@ function getPlayerLearnedInstantSpell(cid, name) local p = Player(cid) return p 
 function isPlayerGhost(cid) local p = Player(cid) return p and p:isInGhostMode() or false end
 function isPlayerPzLocked(cid) local p = Player(cid) return p and p:isPzLocked() or false end
 function isPremium(cid) local p = Player(cid) return p and p:isPremium() or false end
-
-STORAGEVALUE_EMPTY = -1
-function Player:getStorageValue(key)
-    local v = Creature.getStorageValue(self, key)
-    return v or STORAGEVALUE_EMPTY
-end
-function Player:setStorageValue(key, value)
-	if value == STORAGEVALUE_EMPTY then
-		Creature.removeStorageValue(self, key)
-	else
-		Creature.setStorageValue(self, key, value)
-	end
-end
-
-function Player:getStorageStringValue(key)
-    local v = Creature.getStorageStringValue(self, key)
-    return v or STORAGEVALUE_EMPTY
-end
-function Player:setStorageStringValue(key, value)
-	if value == STORAGEVALUE_EMPTY then
-		Creature.setStorageStringValue(self, key, STORAGEVALUE_EMPTY)
-	else
-		Creature.setStorageStringValue(self, key, value)
-	end
-end
-
 function getPlayersByIPAddress(ip, mask)
 	if mask == nil then mask = 0xFFFFFFFF end
 	local masked = bit.band(ip, mask)
@@ -732,7 +603,7 @@ end
 getPlayerAccountBalance = getPlayerBalance
 getIpByName = getIPByPlayerName
 
-function setPlayerStorageValue(cid, key, value) local c = Creature(cid) return c and c:setStorageValue(key, value) or false end
+function setPlayerStorageValue(cid, key, value) local p = Player(cid) return p and p:setStorageValue(key, value) or false end
 function doPlayerSetNameDescription() debugPrint("Deprecated function, use Player:onLook event instead.") return true end
 function doPlayerSendChannelMessage(cid, author, message, SpeakClasses, channel) local p = Player(cid) return p and p:sendChannelMessage(author, message, SpeakClasses, channel) or false end
 function doPlayerSetMaxCapacity(cid, cap) local p = Player(cid) return p and p:setCapacity(cap) or false end
@@ -794,11 +665,7 @@ doPlayerSendTutorial = doSendTutorial
 function doAddMapMark(cid, pos, type, description) local p = Player(cid) return p and p:addMapMark(pos, type, description or "") or false end
 doPlayerAddMapMark = doAddMapMark
 function doPlayerSendTextMessage(cid, type, text, ...) local p = Player(cid) return p and p:sendTextMessage(type, text, ...) or false end
-
-function doSendAnimatedText(pos, text, color)
-    return Game.sendAnimatedText(pos, text, color)
-end
-
+function doSendAnimatedText() debugPrint("Deprecated function.") return true end
 function getPlayerAccountManager() debugPrint("Deprecated function.") return true end
 function doPlayerSetExperienceRate() debugPrint("Deprecated function, use Player:onGainExperience event instead.") return true end
 function doPlayerSetSkillLevel(cid, skillId, value, ...) local p = Player(cid) return p and p:addSkill(skillId, value, ...) end
@@ -940,7 +807,6 @@ function doSummonCreature(name, pos, ...)
 end
 doCreateMonster = doSummonCreature
 function doConvinceCreature(cid, target)
-    print("TesteConvinceCreature") -- colocar target aqui?
 	local creature = Creature(cid)
 	if creature == nil then
 		return false
@@ -1000,25 +866,8 @@ function doAddContainerItemEx(uid, virtualId)
 	return res
 end
 
-function doSendMagicEffect(pos, magicEffect, ...) 
-    if magicEffect and magicEffect >= 1 then
-        magicEffect = magicEffect + 1
-    end
-    if not pos then return true end
-    if magicEffect == 0 then return true end
-    return Position(pos):sendMagicEffect(magicEffect, ...) 
-end
-function doSendDistanceShoot(fromPos, toPos, distanceEffect, ...) 
-    if distanceEffect and distanceEffect >= 1 then
-        distanceEffect = distanceEffect + 1
-    end
-    if distanceEffect == 0 then return true end
-    return Position(fromPos):sendDistanceEffect(toPos, distanceEffect, ...) 
-end
-
-function doSendMagicEffectPlus(pos, magicEffect, ...) return Position(pos):sendMagicEffect(magicEffect, ...) end
-function doSendDistanceShootPlus(fromPos, toPos, distanceEffect, ...) return Position(fromPos):sendDistanceEffect(toPos, distanceEffect, ...) end
-
+function doSendMagicEffect(pos, magicEffect, ...) return Position(pos):sendMagicEffect(magicEffect, ...) end
+function doSendDistanceShoot(fromPos, toPos, distanceEffect, ...) return Position(fromPos):sendDistanceEffect(toPos, distanceEffect, ...) end
 function isSightClear(fromPos, toPos, floorCheck) return Position(fromPos):isSightClear(toPos, floorCheck) end
 
 function getPromotedVocation(vocationId)
@@ -1480,15 +1329,15 @@ end
 function doSetItemOutfit(cid, item, time) local c = Creature(cid) return c and c:setItemOutfit(item, time) end
 function doSetMonsterOutfit(cid, name, time) local c = Creature(cid) return c and c:setMonsterOutfit(name, time) end
 function doSetCreatureOutfit(cid, outfit, time)
-	if isNumber(cid) then cid = Creature(cid) end
-	if not cid then
+	local creature = Creature(cid)
+	if not creature then
 		return false
 	end
 
 	local condition = Condition(CONDITION_OUTFIT)
 	condition:setOutfit(outfit)
 	condition:setTicks(time)
-	cid:addCondition(condition)
+	creature:addCondition(condition)
 
 	return true
 end
@@ -1577,100 +1426,25 @@ function doSetCreatureLight(cid, lightLevel, lightColor, time)
 	return true
 end
 
-COMBAT_NONE = 0
-COMBAT_PHYSICALDAMAGE = 1
-PSYCHICDAMAGE = 2
-PSYDAMAGE = PSYCHICDAMAGE
-GRASSDAMAGE = 4
-FIREDAMAGE = 8
-COMBAT_UNDEFINEDDAMAGE = 16
-COMBAT_LIFEDRAIN = 32
-COMBAT_MANADRAIN = 64
-COMBAT_HEALING = 128
-WATERDAMAGE = 256
-ICEDAMAGE = 512
-NORMALDAMAGE = 1024
-GHOSTDAMAGE = 2048
-
-GROUNDDAMAGE = 3000
-ELECTRICDAMAGE = 3001
-ROCKDAMAGE = 3002
-FLYDAMAGE = 3003
-FLYINGDAMAGE = FLYDAMAGE
-BUGDAMAGE = 3004
-FIGHTINGDAMAGE = 3005
-FIGHTDAMAGE = FIGHTINGDAMAGE
-DRAGONDAMAGE = 3006
-POISONDAMAGE = 3007
-VENOMDAMAGE = POISONDAMAGE
-BURNEDDAMAGE = 3008
-POISONEDDAMAGE = 3009
-DARKDAMAGE = 3010
-STEELDAMAGE = 3011
-PHYSICALDAMAGE = 3020
-SLEEP_POWDERDAMAGE = 3021
-POISON_POWDERDAMAGE = 3022
-STUN_SPOREDAMAGE = 3023         
-MIRACLEDAMAGE = 3024        
-DARK_EYEDAMAGE = 3025       
-SEED_BOMBDAMAGE = 3026
-SACREDDAMAGE = 3027
-MUDBOMBDAMAGE = 3028 --alterado v1.8
-FLYSYSTEMDAMAGE = 3080
-
 function getExperienceForLevel(level) return Game.getExperienceForLevel(level) end
 
 do
-    local combats = {
-        [COMBAT_NONE] = 'none',
-        [COMBAT_PHYSICALDAMAGE] = 'physical',
-        [PSYCHICDAMAGE] = 'psychic',
-        [PSYDAMAGE] = 'psy',
-        [GRASSDAMAGE] = 'grass',
-        [FIREDAMAGE] = 'fire',
-        [COMBAT_UNDEFINEDDAMAGE] = 'undefined',
-        [COMBAT_LIFEDRAIN] = 'lifedrain',
-        [COMBAT_MANADRAIN] = 'manadrain',
-        [COMBAT_HEALING] = 'healing',
-        [WATERDAMAGE] = 'water',
-        [ICEDAMAGE] = 'ice',
-        [NORMALDAMAGE] = 'normal',
-        [GHOSTDAMAGE] = 'ghost',
-        [GROUNDDAMAGE] = 'ground',
-        [ELECTRICDAMAGE] = 'electric',
-        [ROCKDAMAGE] = 'rock',
-        [FLYDAMAGE] = 'fly',
-        [FLYINGDAMAGE] = 'flying',
-        [BUGDAMAGE] = 'bug',
-        [FIGHTINGDAMAGE] = 'fighting',
-        [FIGHTDAMAGE] = 'fight',
-        [DRAGONDAMAGE] = 'dragon',
-        [POISONDAMAGE] = 'poison',
-        [VENOMDAMAGE] = 'venom',
-        [BURNEDDAMAGE] = 'burned',
-        [POISONEDDAMAGE] = 'poisoned',
-        [DARKDAMAGE] = 'dark',
-        [STEELDAMAGE] = 'steel',
-        [PHYSICALDAMAGE] = 'physical',
-        [SLEEP_POWDERDAMAGE] = 'sleep_powder',
-        [POISON_POWDERDAMAGE] = 'poison_powder',
-        [STUN_SPOREDAMAGE] = 'stun_spore',
-        [MIRACLEDAMAGE] = 'miracle',
-        [DARK_EYEDAMAGE] = 'dark_eye',
-        [SEED_BOMBDAMAGE] = 'seed_bomb',
-        [SACREDDAMAGE] = 'sacred',
-        [MUDBOMBDAMAGE] = 'mudbomb',
-        [FLYSYSTEMDAMAGE] = 'flysystem'
-        -- [EARTHDAMAGE] = 'earth',
-        -- [DROWNDAMAGE] = 'drown',
-        -- [ENERGYDAMAGE] = 'energy',
-        -- [HOLYDAMAGE] = 'holy',
-        -- [DEATHDAMAGE] = 'death',
-        -- [FAIRYDAMAGE] = 'fairy',
-    }
+	local combats = {
+		[COMBAT_PHYSICALDAMAGE] = 'physical',
+		[COMBAT_ENERGYDAMAGE] = 'energy',
+		[COMBAT_EARTHDAMAGE] = 'earth',
+		[COMBAT_FIREDAMAGE] = 'fire',
+		[COMBAT_UNDEFINEDDAMAGE] = 'undefined',
+		[COMBAT_LIFEDRAIN] = 'lifedrain',
+		[COMBAT_MANADRAIN] = 'manadrain',
+		[COMBAT_HEALING] = 'healing',
+		[COMBAT_DROWNDAMAGE] = 'drown',
+		[COMBAT_ICEDAMAGE] = 'ice',
+		[COMBAT_HOLYDAMAGE] = 'holy',
+		[COMBAT_DEATHDAMAGE] = 'death'
+	}
 
 	function getCombatName(combat)
-        -- print(combat)
 		return combats[combat]
 	end
 end

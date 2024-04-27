@@ -1,5 +1,0 @@
-<npc name="Gael" script="task_system.lua" walkinterval="2000" floorchange="0">
-<look type="3598"/>
-    <parameters>
-    </parameters>
-</npc>

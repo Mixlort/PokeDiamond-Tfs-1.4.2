@@ -12,7 +12,6 @@ function onSay(player, words, param)
 	if monster then
 		monster:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 		position:sendMagicEffect(CONST_ME_MAGIC_RED)
-        addEvent(adjustWildPoke, 5, monster:getId())
 	else
 		player:sendCancelMessage("There is not enough room.")
 		position:sendMagicEffect(CONST_ME_POFF)

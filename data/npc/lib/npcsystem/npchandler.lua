@@ -78,10 +78,10 @@ if NpcHandler == nil then
 			-- These are the default replies of all npcs. They can/should be changed individually for each npc.
 			[MESSAGE_GREET] = "Greetings, |PLAYERNAME|.",
 			[MESSAGE_FAREWELL] = "Good bye, |PLAYERNAME|.",
-			[MESSAGE_BUY] = "Do you want to buy |ITEMCOUNT| |ITEMNAME| for |TOTALCOST| dollars?",
+			[MESSAGE_BUY] = "Do you want to buy |ITEMCOUNT| |ITEMNAME| for |TOTALCOST| gold coins?",
 			[MESSAGE_ONBUY] = "Here you are.",
 			[MESSAGE_BOUGHT] = "Bought |ITEMCOUNT|x |ITEMNAME| for |TOTALCOST| gold.",
-			[MESSAGE_SELL] = "Do you want to sell |ITEMCOUNT| |ITEMNAME| for |TOTALCOST| dollars?",
+			[MESSAGE_SELL] = "Do you want to sell |ITEMCOUNT| |ITEMNAME| for |TOTALCOST| gold coins?",
 			[MESSAGE_ONSELL] = "Here you are, |TOTALCOST| gold.",
 			[MESSAGE_SOLD] = "Sold |ITEMCOUNT|x |ITEMNAME| for |TOTALCOST| gold.",
 			[MESSAGE_MISSINGMONEY] = "You don't have enough money.",
@@ -159,14 +159,6 @@ if NpcHandler == nil then
 		end
 		return false
 	end
-
-    -- Function used to verify if npc has focus
-    function NpcHandler:hasFocus()
-        if #self.focuses >= 1 then
-            return true
-        end
-        return false
-    end
 
 	-- This function should be called on each onThink and makes sure the npc faces the player it is talking to.
 	--	Should also be called whenever a new player is focused.
@@ -525,10 +517,9 @@ if NpcHandler == nil then
 		if self:isInRange(cid) then
 			if not self:isFocused(cid) then
 				self:greet(cid)
-				return true
+				return
 			end
 		end
-        return false
 	end
 
 	-- Simply calls the underlying unGreet function.

@@ -17,9 +17,9 @@ function doNpcSellItem(cid, itemid, amount, subType, ignoreCap, inBackpacks, bac
 	if ItemType(itemid):isStackable() then
 		if inBackpacks then
 			stuff = Game.createItem(backpack, 1)
-			item = stuff:addItem(itemid, math.min(ItemType(itemid):getMaxCount(), amount))
+			item = stuff:addItem(itemid, math.min(100, amount))
 		else
-			stuff = Game.createItem(itemid, math.min(ItemType(itemid):getMaxCount(), amount))
+			stuff = Game.createItem(itemid, math.min(100, amount))
 		end
 		return Player(cid):addItemEx(stuff, ignoreCap) ~= RETURNVALUE_NOERROR and 0 or amount, 0
 	end
@@ -132,7 +132,5 @@ function getMoneyWeight(money)
 	gold = gold - crystal * 10000
 	local platinum = math.floor(gold / 100)
 	gold = gold - platinum * 100
-	return (ItemType(ITEM_TEN_THOUSAND_DOLLAR_NOTE):getWeight() * crystal) + (ItemType(ITEM_HUNDRED_DOLLAR_NOTE):getWeight() * platinum) + (ItemType(ITEM_DOLLAR_NOTE):getWeight() * gold)
+	return (ItemType(ITEM_CRYSTAL_COIN):getWeight() * crystal) + (ItemType(ITEM_PLATINUM_COIN):getWeight() * platinum) + (ItemType(ITEM_GOLD_COIN):getWeight() * gold)
 end
-
-getThis = getNpcId

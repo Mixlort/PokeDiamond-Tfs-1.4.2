@@ -592,7 +592,7 @@ function Player.removeAchievement(self, ach)
 	end
 
 	if self:hasAchievement(achievement.id) then
-		self:setStorageValue(PlayerStorageKeys.achievementsBase + achievement.id, nil)
+		self:setStorageValue(PlayerStorageKeys.achievementsBase + achievement.id, -1)
 	end
 	return true
 end

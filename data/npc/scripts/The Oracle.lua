@@ -73,7 +73,7 @@ local function creatureSayCallback(cid, type, msg)
 
 			local destination = destination[cid]
 			npcHandler:releaseFocus(cid)
-			player:teleportToPlus(destination)
+			player:teleportTo(destination)
 			player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 			destination:sendMagicEffect(CONST_ME_TELEPORT)
 		else

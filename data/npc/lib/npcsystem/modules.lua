@@ -60,7 +60,7 @@ if Modules == nil then
 	end
 
 	--Usage:
-		-- local node1 = keywordHandler:addKeyword({"promot"}, StdModule.say, {npcHandler = npcHandler, text = "I can promote you for 20000 dollars. Do you want me to promote you?"})
+		-- local node1 = keywordHandler:addKeyword({"promot"}, StdModule.say, {npcHandler = npcHandler, text = "I can promote you for 20000 gold coins. Do you want me to promote you?"})
 		-- node1:addChildKeyword({"yes"}, StdModule.promotePlayer, {npcHandler = npcHandler, cost = 20000, level = 20}, text = "Congratulations! You are now promoted.")
 		-- node1:addChildKeyword({"no"}, StdModule.say, {npcHandler = npcHandler, text = "Allright then. Come back when you are ready."}, reset = true)
 	function StdModule.promotePlayer(cid, message, keywords, parameters, node)
@@ -174,7 +174,7 @@ if Modules == nil then
 
 				local destination = Position(parameters.destination)
 				local position = player:getPosition()
-				player:teleportToPlus(destination)
+				player:teleportTo(destination)
 
 				position:sendMagicEffect(CONST_ME_TELEPORT)
 				destination:sendMagicEffect(CONST_ME_TELEPORT)
@@ -220,7 +220,8 @@ if Modules == nil then
 
 	-- Greeting callback function.
 	function FocusModule.onGreet(cid, message, keywords, parameters)
-        return parameters.module.npcHandler:onGreet(cid)
+		parameters.module.npcHandler:onGreet(cid)
+		return true
 	end
 
 	-- UnGreeting callback function.
@@ -420,7 +421,7 @@ if Modules == nil then
 		local destination = parameters.destination
 		local premium = parameters.premium
 
-		module.npcHandler:say("Do you want to travel to " .. keywords[1] .. " for " .. cost .. " dollars?", cid)
+		module.npcHandler:say("Do you want to travel to " .. keywords[1] .. " for " .. cost .. " gold coins?", cid)
 		return true
 	end
 
@@ -450,7 +451,7 @@ if Modules == nil then
 				npcHandler:releaseFocus(cid)
 
 				local position = player:getPosition()
-				player:teleportToPlus(destination)
+				player:teleportTo(destination)
 
 				position:sendMagicEffect(CONST_ME_TELEPORT)
 				destination:sendMagicEffect(CONST_ME_TELEPORT)
@@ -490,7 +491,7 @@ if Modules == nil then
 		if player:isPremium() or not parameters.premium then
 			if player:removeTotalMoney(cost) then
 				local position = player:getPosition()
-				player:teleportToPlus(destination)
+				player:teleportTo(destination)
 
 				position:sendMagicEffect(CONST_ME_TELEPORT)
 				destination:sendMagicEffect(CONST_ME_TELEPORT)
@@ -530,7 +531,7 @@ if Modules == nil then
 		yesNode = nil,
 		noNode = nil,
 		noText = "",
-		maxCount = configManager.getNumber(MAX_BUYORSELL_ITEMS),
+		maxCount = 100,
 		amount = 0
 	}
 
@@ -974,7 +975,7 @@ if Modules == nil then
 		local parseInfo = {
 			[TAG_PLAYERNAME] = player:getName(),
 			[TAG_ITEMCOUNT] = amount,
-			[TAG_TOTALCOST] = totalCost / 100.0,
+			[TAG_TOTALCOST] = totalCost,
 			[TAG_ITEMNAME] = shopItem.name
 		}
 
@@ -1036,7 +1037,7 @@ if Modules == nil then
 		local parseInfo = {
 			[TAG_PLAYERNAME] = player:getName(),
 			[TAG_ITEMCOUNT] = amount,
-			[TAG_TOTALCOST] = (amount * shopItem.sell) / 100.0,
+			[TAG_TOTALCOST] = amount * shopItem.sell,
 			[TAG_ITEMNAME] = shopItem.name
 		}
 
@@ -1105,7 +1106,7 @@ if Modules == nil then
 		local parseInfo = {
 			[TAG_PLAYERNAME] = player:getName(),
 			[TAG_ITEMCOUNT] = shop_amount[cid],
-			[TAG_TOTALCOST] = (shop_cost[cid] * shop_amount[cid]) / 100.0,
+			[TAG_TOTALCOST] = shop_cost[cid] * shop_amount[cid],
 			[TAG_ITEMNAME] = shop_rlname[cid]
 		}
 
@@ -1190,7 +1191,7 @@ if Modules == nil then
 		local parseInfo = {
 			[TAG_PLAYERNAME] = Player(cid):getName(),
 			[TAG_ITEMCOUNT] = shop_amount[cid],
-			[TAG_TOTALCOST] = (shop_cost[cid] * shop_amount[cid]) / 100.0,
+			[TAG_TOTALCOST] = shop_cost[cid] * shop_amount[cid],
 			[TAG_ITEMNAME] = shop_rlname[cid]
 		}
 
