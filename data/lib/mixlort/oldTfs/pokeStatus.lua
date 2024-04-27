@@ -1,1454 +1,1178 @@
-
 -- offense = offense que ganha por level
 -- level = level min pra usar o poke / offense base
 -- defense = defense por level
 -- agility = speed base dos pokes
 -- specialattack = special attack que ganha por level
--- exp = exp que d� a cada level que tem (somada a exp base, no xml do poke)                 
+-- exp = exp que dá a cada level que tem (somada a exp base, no xml do poke)                 
 -- vitality = vida que o poke ganha pra cada vitality que tem
 
-pokes = {          --alterado v1.8 \/\/ toda a tabela, recebeu um novo 'atributo', wildLvl...
+pokes = {           --alterado v1.8 \/\/ toda a tabela, recebeu um novo 'atributo', wildLvl... 
+["Mixlort"] = {offense = 1, defense = 1, specialattack = 1, vitality = 1, agility = 1, exp = 1, level = 1, wildLvl = 1, type = "no type", type2 = "no type"},
 
-["Bulbasaur"] = {offense = 4.9, defense = 4.9, specialattack = 6.5, vitality = 4.5, agility = 106, exp = 64, level = 1, wildLvl = 20, type = "grass", type2 = "poison"},
+["Mega Charizard Y"] = {offense = 25.2, defense = 23.4, specialattack = 32.7, vitality = 23.4, agility = 300, exp = 960, level = 80, wildLvl = 80, type = "fire", type2 = "flying"},
+["Mega Charizard X"] = {offense = 31.5, defense = 29.25, specialattack = 27.8, vitality = 23.4, agility = 300, exp = 960, level = 80, wildLvl = 80, type = "fire", type2 = "dragon"},
+["Mega Beedrill"] = {offense = 27, defense = 12, specialattack = 13.5, vitality = 13.5, agility = 300, exp = 712, level = 100, wildLvl = 100, type = "bug", type2 = "poison"},
+["Mega Blaziken"] = {offense = 36, defense = 21, specialattack = 33, vitality = 24, agility = 300, exp = 956, level = 80, wildLvl = 80, type = "fire", type2 = "fighting"},
+["Mega Houndoom"] = {offense = 27, defense = 15, specialattack = 33, vitality = 22.5, agility = 300, exp = 700, level = 100, wildLvl = 100, type = "dark", type2 = "fire"},
+["Mega Pidgeot"] = {offense = 24, defense = 22.5, specialattack = 21, vitality = 24.9, agility = 350, exp = 864, level = 100, wildLvl = 100, type = "flying", type2 = "normal"},
+["Mega Pinsir"] = {offense = 37.5, defense = 30, specialattack = 16.5, vitality = 13.5, agility = 300, exp = 700, level = 100, wildLvl = 100, type = "bug", type2 = "flying"},
+["Mega Sceptile"] = {offense = 25.5, defense = 13.5, specialattack = 31.5, vitality = 21, agility = 300, exp = 956, level = 100, wildLvl = 100, type = "grass", type2 = "dragon"},
+["Mega Scizor"] = {offense = 39, defense = 30, specialattack = 16.5, vitality = 21, agility = 310, exp = 700, level = 100, wildLvl = 100, type = "bug", type2 = "steel"},
+["Mega Swampert"] = {offense = 33, defense = 27, specialattack = 25.5, vitality = 30, agility = 300, exp = 964, level = 100, wildLvl = 100, type = "water", type2 = "ground"},
 
-["Ivysaur"] = {offense = 6.2, defense = 6.3, specialattack = 8, vitality = 6, agility = 123, exp = 141, level = 40, wildLvl = 40, type = "grass", type2 = "poison"},
+--["Mega Charizard X"] = {offense = 37.8, defense = 35.1, specialattack = 49.05, vitality = 35.1, agility = 300, exp = 240, level = 80, wildLvl = 80, type = "fire", type2 = "flying"},
 
-["Venusaur"] = {offense = 8.2, defense = 8.3, specialattack = 10, vitality = 8, agility = 145, exp = 208, level = 85, wildLvl = 85, type = "grass", type2 = "poison"},
+ 
+["Christmas Eevee"] = {offense = 11, defense = 10, specialattack = 9, vitality = 11, agility = 300, exp = 65, level = 20, wildLvl = 30, type = "normal", type2 = "no type"},
+["Christmas Snorlax"] = {offense = 22, defense = 13, specialattack = 13, vitality = 32, agility = 200, exp = 189, level = 100, wildLvl = 100, type = "normal", type2 = "no type"},
+["Christmas Meowth"] = {offense = 9, defense = 7, specialattack = 8, vitality = 8, agility = 300, exp = 58, level = 20, wildLvl = 30, type = "normal", type2 = "no type"},
+["Christmas Pikachu"] = {offense = 11, defense = 8, specialattack = 10, vitality = 7, agility = 300, exp = 112, level = 50, wildLvl = 50, type = "electric", type2 = "no type"},
 
-["Charmander"] = {offense = 5.2, defense = 4.3, specialattack = 6, vitality = 3.9, agility = 128, exp = 65, level = 1, wildLvl = 20, type = "fire", type2 = "no type"},
+["Christmas Shiny Vaporeon"] = {offense = 19.5, defense = 18, specialattack = 33, vitality = 39, agility = 300, exp = 184, level = 60, wildLvl = 70, type = "water", type2 = "no type"},
+["Christmas Shiny Jolteon"] = {offense = 19.5, defense = 18, specialattack = 33, vitality = 19.5, agility = 300, exp = 184, level = 60, wildLvl = 70, type = "electric", type2 = "no type"},
+["Christmas Shiny Flareon"] = {offense = 39, defense = 18, specialattack = 28.5, vitality = 19.5, agility = 300, exp = 184, level = 60, wildLvl = 70, type = "fire", type2 = "no type"},
+["Christmas Shiny Pinsir"] = {offense = 37.5, defense = 30, specialattack = 16.5, vitality = 19.5, agility = 300, exp = 175, level = 100, wildLvl = 60, type = "bug", type2 = "no type"},
+["Christmas Shiny Tauros"] = {offense = 30, defense = 28.5, specialattack = 12, vitality = 22.5, agility = 300, exp = 172, level = 50, wildLvl = 60, type = "normal", type2 = "no type"},
+["Christmas Shiny Raichu"] = {offense = 27, defense = 16.5, specialattack = 27, vitality = 16, agility = 350, exp = 218, level = 80, wildLvl = 90, type = "electric", type2 = "no type"},
+["Christmas Shiny Arcanine"] = {offense = 33, defense = 24, specialattack = 30, vitality = 27, agility = 350, exp = 194, level = 100, wildLvl = 100, type = "fire", type2 = "no type"},
+["Christmas Shiny Dragonair"] = {offense = 25.2, defense = 19.5, specialattack = 21, vitality = 18.3, agility = 300, exp = 147, level = 60, wildLvl = 70, type = "dragon", type2 = "no type"},
+["Christmas Shiny Fearow"] = {offense = 27, defense = 19.5, specialattack = 18.3, vitality = 19.5, agility = 300, exp = 155, level = 50, wildLvl = 60, type = "flying", type2 = "normal"},
+["Christmas Shiny Golem"] = {offense = 36, defense = 39, specialattack = 16.5, vitality = 24, agility = 300, exp = 223, level = 70, wildLvl = 80, type = "ground", type2 = "rock"},
+["Christmas Shiny Hitmontop"] = {offense = 28.5, defense = 28.5, specialattack = 10.5, vitality = 15, agility = 200, exp = 159, level = 60, wildLvl = 70, type = "fighting", type2 = "no type"},
+["Christmas Shiny Hypno"] = {offense = 21.9, defense = 21, specialattack = 21.9, vitality = 25.5, agility = 300, exp = 169, level = 50, wildLvl = 60, type = "psychic", type2 = "no type"},
+["Christmas Shiny Mr. Mime"] = {offense = 13.5, defense = 19.5, specialattack = 30, vitality = 12, agility = 300, exp = 161, level = 70, wildLvl = 70, type = "psychic", type2 = "no type"},
+["Christmas Shiny Nidoking"] = {offense = 30.6, defense = 23.1, specialattack = 25.5, vitality = 24.3, agility = 300, exp = 227, level = 70, wildLvl = 80, type = "poison", type2 = "ground"},
+["Christmas Shiny Rhydon"] = {offense = 39, defense = 36, specialattack = 13.5, vitality = 31.5, agility = 300, exp = 170, level = 80, wildLvl = 90, type = "ground", type2 = "rock"},
+["Christmas Shiny Tentacruel"] = {offense = 21, defense = 19.5, specialattack = 24, vitality = 24, agility = 300, exp = 180, level = 80, wildLvl = 90, type = "water", type2 = "poison"},
+["Christmas Shiny Vileplume"] = {offense = 24, defense = 25.5, specialattack = 33, vitality = 22.5, agility = 300, exp = 221, level = 50, wildLvl = 60, type = "grass", type2 = "poison"},
 
-["Charmeleon"] = {offense = 6.5, defense = 5.8, specialattack = 8.5, vitality = 5.8, agility = 145, exp = 142, level = 40, wildLvl = 40, type = "fire", type2 = "no type"},
+["Torrent"] = {offense = 20.26, defense = 20.3, specialattack = 20.3, vitality = 100.4, agility = 0, exp = 0, level = 500, wildLvl = 500, type = "psychic", type2 = "no type"},
+ 
+------------------------------------------------------------------Statos Pokemon Kanto------------------------------------------------------------------
+["Baby Bulbasaur"] = {offense = 3.27, defense = 3.27, specialattack = 3.34, vitality = 3, agility = 300, exp = 64, level = 10, wildLvl = 30, type = "grass", type2 = "poison"},
+["Baby Charmander"] = {offense = 3.47, defense = 2.87, specialattack = 4, vitality = 2.6, agility = 300, exp = 62, level = 10, wildLvl = 30, type = "fire", type2 = "no type"},
+["Baby Squirtle"] = {offense = 3.2, defense = 4.34, specialattack = 3.34, vitality = 2.94, agility = 300, exp = 66, level = 10, wildLvl = 30, type = "water", type2 = "no type"},
 
-["Charizard"] = {offense = 8.5, defense = 7.8, specialattack = 11, vitality = 7.8, agility = 167, exp = 209, level = 85, wildLvl = 85, type = "fire", type2 = "flying"},
 
-["Squirtle"] = {offense = 4.8, defense = 6.5, specialattack = 5, vitality = 4.4, agility = 104, exp = 66, level = 1, wildLvl = 20, type = "water", type2 = "no type"},
+["Bulbasaur"] = {offense = 4.9, defense = 4.9, specialattack = 6.5, vitality = 4.5, agility = 300, exp = 250, level = 20, wildLvl = 30, type = "grass", type2 = "poison"},
 
-["Wartortle"] = {offense = 6.3, defense = 8, specialattack = 6.5, vitality = 5.9, agility = 121, exp = 143, level = 40, wildLvl = 40, type = "water", type2 = "no type"},
+["Ivysaur"] = {offense = 6.2, defense = 6.3, specialattack = 8, vitality = 6, agility = 300, exp = 450, level = 40, wildLvl = 50, type = "grass", type2 = "poison"},
 
-["Blastoise"] = {offense = 8.3, defense = 10, specialattack = 8.5, vitality = 7.9, agility = 143, exp = 210, level = 85, wildLvl = 85, type = "water", type2 = "no type"},
+["Venusaur"] = {offense = 8.2, defense = 8.3, specialattack = 10, vitality = 8, agility = 300, exp = 1800, level = 80, wildLvl = 90, type = "grass", type2 = "poison"},
 
-["Blastoise XP VIP"] = {offense = 16, defense = 20, specialattack = 17, vitality = 15, agility = 300, exp = 21000, level = 50, wildLvl = 50, type = "water", type2 = "no type"},
+["Charmander"] = {offense = 5.2, defense = 4.3, specialattack = 6, vitality = 3.9, agility = 300, exp = 250, level = 20, wildLvl = 30, type = "fire", type2 = "no type"},
 
-["Blastoise XP FREE"] = {offense = 16, defense = 20, specialattack = 17, vitality = 15, agility = 300, exp = 10000, level = 50, wildLvl = 50, type = "water", type2 = "no type"},
+["Charmeleon"] = {offense = 6.4, defense = 5.8, specialattack = 8, vitality = 5.8, agility = 300, exp = 450, level = 40, wildLvl = 50, type = "fire", type2 = "no type"},
 
-["Caterpie"] = {offense = 3, defense = 3.5, specialattack = 2, vitality = 4.5, agility = 106, exp = 53, level = 5, wildLvl = 5, type = "bug", type2 = "no type"},
+["Charizard"] = {offense = 8.4, defense = 7.8, specialattack = 10.9, vitality = 7.8, agility = 300, exp = 1800, level = 85, wildLvl = 90, type = "fire", type2 = "flying"},
 
-["Metapod"] = {offense = 2, defense = 5.5, specialattack = 2.5, vitality = 5, agility = 90, exp = 72, level = 15, wildLvl = 15, type = "bug", type2 = "no type"},
+["Squirtle"] = {offense = 4.8, defense = 6.5, specialattack = 5, vitality = 4.4, agility = 300, exp = 250, level = 20, wildLvl = 30, type = "water", type2 = "no type"},
 
-["Butterfree"] = {offense = 4.5, defense = 5, specialattack = 8, vitality = 6, agility = 134, exp = 160, level = 30, wildLvl = 30, type = "bug", type2 = "flying"},
+["Wartortle"] = {offense = 6.3, defense = 8, specialattack = 6.5, vitality = 5.9, agility = 300, exp = 450, level = 40, wildLvl = 50, type = "water", type2 = "no type"},
 
-["Weedle"] = {offense = 3.5, defense = 3, specialattack = 2, vitality = 4, agility = 112, exp = 52, level = 5, wildLvl = 5, type = "bug", type2 = "poison"},
+["Blastoise"] = {offense = 8.3, defense = 10, specialattack = 8.5, vitality = 7.9, agility = 300, exp = 1800, level = 80, wildLvl = 90, type = "water", type2 = "no type"},
 
-["Kakuna"] = {offense = 2.5, defense = 5, specialattack = 2.5, vitality = 4.5, agility = 95, exp = 120, level = 15, wildLvl = 15, type = "bug", type2 = "poison"},
+["Caterpie"] = {offense = 3, defense = 3.5, specialattack = 2, vitality = 4.5, agility = 300, exp = 100, level = 7, wildLvl = 10, type = "bug", type2 = "no type"},
 
-["Beedrill"] = {offense = 8, defense = 4, specialattack = 4.5, vitality = 6.5, agility = 139, exp = 159, level = 30, wildLvl = 30, type = "bug", type2 = "poison"},
+["Metapod"] = {offense = 2, defense = 5.5, specialattack = 2.5, vitality = 5, agility = 300, exp = 120, level = 10, wildLvl = 20, type = "bug", type2 = "no type"},
 
-["Pidgey"] = {offense = 4.5, defense = 4, specialattack = 3.5, vitality = 4, agility = 118, exp = 55, level = 5, wildLvl = 5, type = "normal", type2 = "flying"},
+["Butterfree"] = {offense = 4.5, defense = 5, specialattack = 9, vitality = 6, agility = 300, exp = 255, level = 30, wildLvl = 40, type = "bug", type2 = "flying"},
 
-["Pidgeotto"] = {offense = 6, defense = 5.5, specialattack = 5, vitality = 6.3, agility = 145, exp = 113, level = 20, wildLvl = 20, type = "normal", type2 = "flying"},
+["Weedle"] = {offense = 3.5, defense = 3, specialattack = 2, vitality = 4, agility = 300, exp = 100, level = 7, wildLvl = 10, type = "bug", type2 = "poison"},
 
-["Pidgeot"] = {offense = 8, defense = 7.5, specialattack = 7, vitality = 8.3, agility = 210, exp = 172, level = 75, wildLvl = 75, type = "normal", type2 = "flying"},
+["Kakuna"] = {offense = 2.5, defense = 5, specialattack = 2.5, vitality = 4.5, agility = 300, exp = 130, level = 10, wildLvl = 20, type = "bug", type2 = "poison"},
 
-["Rattata"] = {offense = 5.6, defense = 3.5, specialattack = 2.5, vitality = 3, agility = 136, exp = 10, level = 5, wildLvl = 5, type = "normal", type2 = "no type"},
+["Beedrill"] = {offense = 9, defense = 4, specialattack = 4.5, vitality = 4.5, agility = 300, exp = 255, level = 30, wildLvl = 40, type = "bug", type2 = "poison"},
 
-["Raticate"] = {offense = 8.1, defense = 6, specialattack = 5, vitality = 5.5, agility = 163, exp = 116, level = 25, wildLvl = 25, type = "normal", type2 = "no type"},
+["Pidgey"] = {offense = 4.5, defense = 4, specialattack = 3.5, vitality = 4, agility = 300, exp = 100, level = 10, wildLvl = 10, type = "flying", type2 = "normal"},
 
-["Spearow"] = {offense = 6, defense = 3, specialattack = 3.1, vitality = 4, agility = 134, exp = 58, level = 10, wildLvl = 10, type = "normal", type2 = "flying"},
+["Pidgeotto"] = {offense = 6, defense = 5.5, specialattack = 5, vitality = 6.3, agility = 300, exp = 250, level = 20, wildLvl = 30, type = "flying", type2 = "normal"},
 
-["Fearow"] = {offense = 9, defense = 6.5, specialattack = 6.1, vitality = 6.5, agility = 167, exp = 162, level = 50, wildLvl = 50, type = "normal", type2 = "flying"},
+["Pidgeot"] = {offense = 8, defense = 7.5, specialattack = 7, vitality = 8.3, agility = 350, exp = 1100, level = 80, wildLvl = 90, type = "flying", type2 = "normal"},
 
-["Ekans"] = {offense = 6, defense = 4.4, specialattack = 4, vitality = 3.5, agility = 117, exp = 62, level = 15, wildLvl = 15, type = "poison", type2 = "no type"},
+["Rattata"] = {offense = 5.6, defense = 3.5, specialattack = 2.5, vitality = 3, agility = 300, exp = 35, level = 7, wildLvl = 10, type = "normal", type2 = "no type"},
 
-["Arbok"] = {offense = 8.5, defense = 6.9, specialattack = 6.5, vitality = 6, agility = 145, exp = 147, level = 35, wildLvl = 35, type = "poison", type2 = "no type"},
+["Raticate"] = {offense = 8.1, defense = 6, specialattack = 5, vitality = 5.5, agility = 300, exp = 250, level = 30, wildLvl = 40, type = "normal", type2 = "no type"},
 
-["Shiny Arbok"] = {offense = 16, defense = 12, specialattack = 12, vitality = 12, agility = 200, exp = 300, level = 70, wildLvl = 70, type = "poison", type2 = "no type"},
+["Spearow"] = {offense = 6, defense = 3, specialattack = 3.1, vitality = 4, agility = 300, exp = 100, level = 10, wildLvl = 20, type = "flying", type2 = "normal"},
 
-["Pikachu"] = {offense = 5.5, defense = 3, specialattack = 5, vitality = 3.5, agility = 156, exp = 82, level = 40, wildLvl = 40, type = "electric", type2 = "no type"},
+["Fearow"] = {offense = 9, defense = 6.5, specialattack = 6.1, vitality = 6.5, agility = 300, exp = 850, level = 50, wildLvl = 60, type = "flying", type2 = "normal"},
 
-["Raichu"] = {offense = 9, defense = 5.5, specialattack = 9, vitality = 6, agility = 167, exp = 122, level = 85, wildLvl = 85, type = "electric", type2 = "no type"},
+["Ekans"] = {offense = 6, defense = 4.4, specialattack = 4, vitality = 3.5, agility = 300, exp = 100, level = 10, wildLvl = 20, type = "poison", type2 = "no type"},
 
-["Sandshrew"] = {offense = 7.5, defense = 8.5, specialattack = 2, vitality = 5, agility = 101, exp = 93, level = 20, wildLvl = 20, type = "ground", type2 = "no type"},
+["Arbok"] = {offense = 8.5, defense = 6.9, specialattack = 6.5, vitality = 6, agility = 300, exp = 450, level = 40, wildLvl = 50, type = "poison", type2 = "no type"},
 
-["Sandslash"] = {offense = 10, defense = 11, specialattack = 4.5, vitality = 7.5, agility = 128, exp = 163, level = 65, wildLvl = 65, type = "ground", type2 = "no type"},
+["Pikachu"] = {offense = 5.5, defense = 4, specialattack = 5, vitality = 3.5, agility = 300, exp = 450, level = 20, wildLvl = 50, type = "electric", type2 = "no type"},
 
-["Nidoran Female"] = {offense = 4.7, defense = 5.2, specialattack = 4, vitality = 5.5, agility = 102, exp = 59, level = 10, wildLvl = 10, type = "poison", type2 = "no type"},
+["Baby Pikachu"] = {offense = 4.1, defense = 3, specialattack = 3.7, vitality = 2.6, agility = 300, exp = 225, level = 10, wildLvl = 50, type = "electric", type2 = "no type"},
 
-["Nidorina"] = {offense = 6.2, defense = 6.7, specialattack = 5.5, vitality = 7, agility = 118, exp = 59, level = 30, wildLvl = 30, type = "poison", type2 = "no type"},
+["Raichu"] = {offense = 9, defense = 5.5, specialattack = 9, vitality = 6, agility = 350, exp = 1500, level = 80, wildLvl = 90, type = "electric", type2 = "no type"},
 
-["Nidoqueen"] = {offense = 8.2, defense = 8.7, specialattack = 7.5, vitality = 9, agility = 140, exp = 194, level = 65, wildLvl = 65, type = "poison", type2 = "ground"},
+["Sandshrew"] = {offense = 7.5, defense = 8.5, specialattack = 2, vitality = 5, agility = 300, exp = 100, level = 20, wildLvl = 30, type = "ground", type2 = "no type"},
 
-["Nidoran Male"] = {offense = 5.7, defense = 4, specialattack = 4, vitality = 4.6, agility = 112, exp = 60, level = 10, wildLvl = 10, type = "poison", type2 = "no type"},
+["Sandslash"] = {offense = 10, defense = 11, specialattack = 4.5, vitality = 7.5, agility = 300, exp = 1100, level = 70, wildLvl = 80, type = "ground", type2 = "no type"},
 
-["Nidorino"] = {offense = 7.2, defense = 5.7, specialattack = 5.5, vitality = 6.1, agility = 128, exp = 118, level = 30, wildLvl = 30, type = "poison", type2 = "no type"},
+["Nidoran Female"] = {offense = 4.7, defense = 5.2, specialattack = 4, vitality = 5.5, agility = 300, exp = 100, level = 10, wildLvl = 20, type = "poison", type2 = "no type"},
 
-["Nidoking"] = {offense = 9.2, defense = 7.7, specialattack = 8.5, vitality = 8.1, agility = 150, exp = 195, level = 65, wildLvl = 65, type = "poison", type2 = "ground"},
+["Nidorina"] = {offense = 6.2, defense = 6.7, specialattack = 5.5, vitality = 7, agility = 300, exp = 250, level = 30, wildLvl = 40, type = "poison", type2 = "no type"},
 
-["Clefairy"] = {offense = 4.5, defense = 4.8, specialattack = 6, vitality = 7, agility = 95, exp = 68, level = 40, wildLvl = 40, type = "normal", type2 = "no type"},
+["Nidoqueen"] = {offense = 9.2, defense = 8.7, specialattack = 7.5, vitality = 9, agility = 300, exp = 650, level = 70, wildLvl = 80, type = "poison", type2 = "ground"},
 
-["Clefable"] = {offense = 7, defense = 7.3, specialattack = 8.5, vitality = 9.5, agility = 123, exp = 129, level = 65, wildLvl = 65, type = "normal", type2 = "no type"},
+["Nidoran Male"] = {offense = 5.7, defense = 4, specialattack = 4, vitality = 4.6, agility = 300, exp = 100, level = 10, wildLvl = 20, type = "poison", type2 = "no type"},
 
-["Vulpix"] = {offense = 4.1, defense = 4, specialattack = 5, vitality = 3.8, agility = 128, exp = 63, level = 15, wildLvl = 15, type = "fire", type2 = "no type"},
+["Nidorino"] = {offense = 7.2, defense = 5.7, specialattack = 5.5, vitality = 6.1, agility = 300, exp = 250, level = 30, wildLvl = 40, type = "poison", type2 = "no type"},
 
-["Ninetales"] = {offense = 7.6, defense = 7.5, specialattack = 8.1, vitality = 7.3, agility = 167, exp = 178, level = 70, wildLvl = 70, type = "fire", type2 = "no type"},
+["Nidoking"] = {offense = 10.2, defense = 7.7, specialattack = 8.5, vitality = 8.1, agility = 300, exp = 650, level = 70, wildLvl = 80, type = "poison", type2 = "ground"},
 
-["Ninetales Cells"] = {offense = 807.6, defense = 607.5, specialattack = 800.1, vitality = 700.3, agility = 867, exp = 178, level = 70, wildLvl = 70, type = "fire", type2 = "no type"},
+["Clefairy"] = {offense = 4.5, defense = 4.8, specialattack = 6, vitality = 7, agility = 300, exp = 400, level = 40, wildLvl = 50, type = "normal", type2 = "no type"},
 
-["Jigglypuff"] = {offense = 4.5, defense = 2, specialattack = 4.5, vitality = 11.5, agility = 79, exp = 76, level = 40, wildLvl = 40, type = "normal", type2 = "no type"},
+["Clefable"] = {offense = 7, defense = 7.3, specialattack = 9.5, vitality = 9.5, agility = 300, exp = 1500, level = 70, wildLvl = 80, type = "normal", type2 = "no type"},
 
-["Wigglytuff"] = {offense = 7, defense = 4.5, specialattack = 7.5, vitality = 14, agility = 106, exp = 109, level = 65, wildLvl = 65, type = "normal", type2 = "no type"},
+["Vulpix"] = {offense = 4.1, defense = 4, specialattack = 5, vitality = 3.8, agility = 300, exp = 100, level = 20, wildLvl = 30, type = "fire", type2 = "no type"},
 
-["Zubat"] = {offense = 4.5, defense = 3.5, specialattack = 3, vitality = 4, agility = 117, exp = 54, level = 10, wildLvl = 10, type = "poison", type2 = "flying"},
+["Ninetales"] = {offense = 7.6, defense = 7.5, specialattack = 8.1, vitality = 7.3, agility = 300, exp = 650, level = 80, wildLvl = 80, type = "fire", type2 = "no type"},
 
-["Golbat"] = {offense = 8, defense = 7, specialattack = 6.5, vitality = 7.5, agility = 156, exp = 171, level = 35, wildLvl = 35, type = "poison", type2 = "flying"},
+["Jigglypuff"] = {offense = 4.5, defense = 2, specialattack = 4.5, vitality = 11.5, agility = 300, exp = 600, level = 40, wildLvl = 50, type = "normal", type2 = "no type"},
 
-["Oddish"] = {offense = 5, defense = 5.5, specialattack = 7.5, vitality = 4.5, agility = 90, exp = 78, level = 5, wildLvl = 5, type = "grass", type2 = "poison"},
+["Wigglytuff"] = {offense = 7, defense = 4.5, specialattack = 8.5, vitality = 14, agility = 300, exp = 1100, level = 70, wildLvl = 80, type = "normal", type2 = "no type"},
 
-["Gloom"] = {offense = 6.5, defense = 7, specialattack = 8.5, vitality = 6, agility = 101, exp = 132, level = 25, wildLvl = 25, type = "grass", type2 = "poison"},
+["Zubat"] = {offense = 4.5, defense = 3.5, specialattack = 3, vitality = 4, agility = 300, exp = 80, level = 10, wildLvl = 20, type = "poison", type2 = "flying"},
 
-["Vileplume"] = {offense = 8, defense = 8.5, specialattack = 10, vitality = 7.5, agility = 112, exp = 184, level = 50, wildLvl = 50, type = "grass", type2 = "poison"},
+["Golbat"] = {offense = 8, defense = 7, specialattack = 6.5, vitality = 7.5, agility = 300, exp = 250, level = 40, wildLvl = 50, type = "poison", type2 = "flying"},
 
-["Paras"] = {offense = 7, defense = 5.5, specialattack = 4.5, vitality = 3.5, agility = 84, exp = 70, level = 5, wildLvl = 5, type = "bug", type2 = "grass"},
+-- -30% Mixlort 
+-- ["Oddish"] = {offense = 3.5, defense = 3.8, specialattack = 5.2, vitality = 3.1, agility = 300, exp = 64, level = 7, wildLvl = 10, type = "grass", type2 = "poison"},
 
-["Parasect"] = {offense = 9.5, defense = 8, specialattack = 6, vitality = 6, agility = 100, exp = 128, level = 50, wildLvl = 50, type = "bug", type2 = "grass"},
+-- ["Gloom"] = {offense = 4.5, defense = 4.9, specialattack = 5.9, vitality = 4.2, agility = 300, exp = 138, level = 30, wildLvl = 40, type = "grass", type2 = "poison"},
 
-["Venonat"] = {offense = 5.5, defense = 5, specialattack = 4, vitality = 6, agility = 106, exp = 75, level = 20, wildLvl = 20, type = "bug", type2 = "poison"},
+-- ["Vileplume"] = {offense = 5.6, defense = 5.9, specialattack = 7.7, vitality = 5.2, agility = 300, exp = 221, level = 50, wildLvl = 60, type = "grass", type2 = "poison"},
+-- -30% Mixlort 
 
-["Venomoth"] = {offense = 6.5, defense = 6, specialattack = 9, vitality = 6.5, agility = 156, exp = 138, level = 50, wildLvl = 50, type = "bug", type2 = "poison"},
+["Oddish"] = {offense = 5, defense = 5.5, specialattack = 7.5, vitality = 4.5, agility = 300, exp = 100, level = 7, wildLvl = 10, type = "grass", type2 = "poison"},
 
-["Diglett"] = {offense = 5.5, defense = 2.5, specialattack = 3.5, vitality = 1, agility = 110, exp = 81, level = 10, wildLvl = 10, type = "ground", type2 = "no type"},
+["Gloom"] = {offense = 6.5, defense = 7, specialattack = 8.5, vitality = 4.8, agility = 300, exp = 250, level = 30, wildLvl = 40, type = "grass", type2 = "poison"},
 
-["Dugtrio"] = {offense = 8, defense = 5, specialattack = 5, vitality = 3.5, agility = 150, exp = 153, level = 35, wildLvl = 35, type = "ground", type2 = "no type"},
+["Vileplume"] = {offense = 8, defense = 8.5, specialattack = 9, vitality = 7.5, agility = 300, exp = 750, level = 50, wildLvl = 60, type = "grass", type2 = "poison"},
 
-["Meowth"] = {offense = 4.5, defense = 3.5, specialattack = 4, vitality = 4, agility = 130, exp = 69, level = 15, wildLvl = 15, type = "normal", type2 = "no type"},
 
-["Persian"] = {offense = 7, defense = 6, specialattack = 6.5, vitality = 6.5, agility = 150, exp = 148, level = 30, wildLvl = 30, type = "normal", type2 = "no type"},
 
-["Psyduck"] = {offense = 5.2, defense = 4.8, specialattack = 6.5, vitality = 5, agility = 117, exp = 80, level = 20, wildLvl = 20, type = "water", type2 = "no type"},
+["Paras"] = {offense = 7, defense = 5.5, specialattack = 4.5, vitality = 3.5, agility = 300, exp = 40, level = 7, wildLvl = 10, type = "bug", type2 = "grass"},
 
-["Golduck"] = {offense = 8.2, defense = 7.8, specialattack = 9.5, vitality = 8, agility = 150, exp = 174, level = 55, wildLvl = 55, type = "water", type2 = "no type"},
+["Parasect"] = {offense = 9.5, defense = 8, specialattack = 6, vitality = 6, agility = 300, exp = 250, level = 50, wildLvl = 60, type = "bug", type2 = "grass"},
 
-["Mankey"] = {offense = 8, defense = 3.5, specialattack = 3.5, vitality = 4, agility = 134, exp = 74, level = 10, wildLvl = 10, type = "fighting", type2 = "no type"},
+["Venonat"] = {offense = 5.5, defense = 5, specialattack = 4, vitality = 6, agility = 300, exp = 100, level = 20, wildLvl = 30, type = "bug", type2 = "poison"},
 
-["Primeape"] = {offense = 10.5, defense = 6, specialattack = 6, vitality = 6.5, agility = 161, exp = 149, level = 50, wildLvl = 50, type = "fighting", type2 = "no type"},
+["Venomoth"] = {offense = 6.5, defense = 6, specialattack = 9, vitality = 7, agility = 300, exp = 450, level = 50, wildLvl = 60, type = "bug", type2 = "poison"},
 
-["Growlithe"] = {offense = 7, defense = 4.5, specialattack = 7, vitality = 5.5, agility = 130, exp = 91, level = 25, wildLvl = 25, type = "fire", type2 = "no type"},
+["Diglett"] = {offense = 55, defense = 2.5, specialattack = 3.5, vitality = 1, agility = 300, exp = 100, level = 10, wildLvl = 20, type = "ground", type2 = "no type"},
 
-["Arcanine"] = {offense = 11, defense = 8, specialattack = 10, vitality = 9, agility = 180, exp = 213, level = 80, wildLvl = 80, type = "fire", type2 = "no type"},
+["Dugtrio"] = {offense = 8, defense = 5, specialattack = 5, vitality = 3.5, agility = 300, exp = 450, level = 40, wildLvl = 50, type = "ground", type2 = "no type"},
 
-["Poliwag"] = {offense = 5, defense = 4, specialattack = 4, vitality = 4, agility = 100, exp = 77, level = 5, wildLvl = 5, type = "water", type2 = "no type"},
+["Meowth"] = {offense = 4.5, defense = 3.5, specialattack = 4, vitality = 4, agility = 300, exp = 100, level = 20, wildLvl = 30, type = "normal", type2 = "no type"},
 
-["Poliwhirl"] = {offense = 6.5, defense = 6.5, specialattack = 5, vitality = 6.5, agility = 120, exp = 131, level = 25, wildLvl = 25, type = "water", type2 = "no type"},
+["Persian"] = {offense = 7, defense = 6, specialattack = 6.5, vitality = 6.5, agility = 300, exp = 250, level = 50, wildLvl = 60, type = "normal", type2 = "no type"},
 
-["Poliwrath"] = {offense = 8.5, defense = 9.5, specialattack = 7, vitality = 9, agility = 147, exp = 185, level = 65, wildLvl = 65, type = "water", type2 = "fighting"},
+["Psyduck"] = {offense = 5.2, defense = 4.8, specialattack = 6.5, vitality = 5, agility = 300, exp = 100, level = 20, wildLvl = 30, type = "water", type2 = "no type"},
 
-["Abra"] = {offense = 2, defense = 1.5, specialattack = 10.5, vitality = 2.5, agility = 119, exp = 75, level = 15, wildLvl = 15, type = "psychic", type2 = "no type"},
+["Golduck"] = {offense = 8.2, defense = 7.8, specialattack = 9.5, vitality = 8, agility = 300, exp = 650, level = 70, wildLvl = 80, type = "water", type2 = "no type"},
 
-["Kadabra"] = {offense = 3.5, defense = 3, specialattack = 12, vitality = 4, agility = 125, exp = 145, level = 45, wildLvl = 45, type = "psychic", type2 = "no type"},
+["Mankey"] = {offense = 8, defense = 3.5, specialattack = 3.5, vitality = 4, agility = 300, exp = 100, level = 10, wildLvl = 20, type = "fight", type2 = "no type"},
 
-["Alakazam"] = {offense = 5.5, defense = 4.5, specialattack = 13.5, vitality = 5.5, agility = 140, exp = 186, level = 80, wildLvl = 80, type = "psychic", type2 = "no type"},
+["Primeape"] = {offense = 10.5, defense = 6, specialattack = 6, vitality = 6.5, agility = 300, exp = 450, level = 50, wildLvl = 60, type = "fight", type2 = "no type"},
 
-["Machop"] = {offense = 8, defense = 5, specialattack = 3.5, vitality = 7, agility = 95, exp = 75, level = 20, wildLvl = 20, type = "fighting", type2 = "no type"},
+["Growlithe"] = {offense = 7, defense = 4.5, specialattack = 7, vitality = 5.5, agility = 300, exp = 250, level = 30, wildLvl = 40, type = "fire", type2 = "no type"},
 
-["Machoke"] = {offense = 10, defense = 7, specialattack = 5, vitality = 8, agility = 106, exp = 146, level = 45, wildLvl = 45, type = "fighting", type2 = "no type"},
+["Arcanine"] = {offense = 11, defense = 8, specialattack = 10, vitality = 9, agility = 350, exp = 1100, level = 100, wildLvl = 100, type = "fire", type2 = "no type"},
 
-["Machamp"] = {offense = 12, defense = 8, specialattack = 6.5, vitality = 9, agility = 117, exp = 193, level = 70, wildLvl = 70, type = "fighting", type2 = "no type"},
+["Poliwag"] = {offense = 5, defense = 4, specialattack = 4, vitality = 4, agility = 300, exp = 150, level = 7, wildLvl = 10, type = "water", type2 = "no type"},
 
-["Bellsprout"] = {offense = 7.5, defense = 3.5, specialattack = 7, vitality = 5, agility = 100, exp = 84, level = 5, wildLvl = 5, type = "grass", type2 = "poison"},
+["Poliwhirl"] = {offense = 6.5, defense = 6.5, specialattack = 5, vitality = 6.5, agility = 300, exp = 250, level = 30, wildLvl = 40, type = "water", type2 = "no type"},
 
-["Weepinbell"] = {offense = 9, defense = 5, specialattack = 8.5, vitality = 6.5, agility = 110, exp = 151, level = 25, wildLvl = 25, type = "grass", type2 = "poison"},
+["Poliwrath"] = {offense = 9.5, defense = 9.5, specialattack = 7, vitality = 9, agility = 300, exp = 1100, level = 80, wildLvl = 80, type = "water", type2 = "fight"},
 
-["Victreebel"] = {offense = 10.5, defense = 6.5, specialattack = 10, vitality = 8, agility = 115, exp = 191, level = 50, wildLvl = 50, type = "grass", type2 = "poison"},
+["Abra"] = {offense = 2, defense = 1.5, specialattack = 10.5, vitality = 2.5, agility = 300, exp = 250, level = 10, wildLvl = 20, type = "psychic", type2 = "no type"},
 
-["Tentacool"] = {offense = 4, defense = 3.5, specialattack = 5, vitality = 4, agility = 129, exp = 105, level = 15, wildLvl = 15, type = "water", type2 = "poison"},
+["Kadabra"] = {offense = 3.5, defense = 3, specialattack = 12, vitality = 4, agility = 300, exp = 450, level = 40, wildLvl = 50, type = "psychic", type2 = "no type"},
 
-["Tentacruel"] = {offense = 7, defense = 6.5, specialattack = 8, vitality = 8, agility = 155, exp = 205, level = 75, wildLvl = 75, type = "water", type2 = "poison"},
+["Alakazam"] = {offense = 5, defense = 4.5, specialattack = 13.5, vitality = 5.5, agility = 300, exp = 1100, level = 80, wildLvl = 90, type = "psychic", type2 = "no type"},
 
-["Bad Tentacruel"] = {offense = 1007, defense = 1006.5, specialattack = 1008, vitality = 1008, agility = 1155, exp = 2000005, level = 175, wildLvl = 75, type = "water", type2 = "poison"},
+["Machop"] = {offense = 8, defense = 5, specialattack = 3.5, vitality = 7, agility = 300, exp = 100, level = 20, wildLvl = 30, type = "fight", type2 = "no type"},
 
-["Geodude"] = {offense = 8, defense = 10, specialattack = 3, vitality = 4, agility = 100, exp = 73, level = 15, wildLvl = 15, type = "rock", type2 = "ground"},
+["Machoke"] = {offense = 10, defense = 7, specialattack = 5, vitality = 8, agility = 300, exp = 450, level = 40, wildLvl = 50, type = "fight", type2 = "no type"},
 
-["Graveler"] = {offense = 9.5, defense = 11.5, specialattack = 4.5, vitality = 5.5, agility = 110, exp = 134, level = 40, wildLvl = 40, type = "rock", type2 = "ground"},
+["Machamp"] = {offense = 13, defense = 8, specialattack = 6.5, vitality = 9, agility = 300, exp = 1800, level = 80, wildLvl = 90, type = "fight", type2 = "no type"},
 
-["Golem"] = {offense = 11, defense = 13, specialattack = 5.5, vitality = 8, agility = 125, exp = 177, level = 70, wildLvl = 70, type = "rock", type2 = "ground"},
+["Bellsprout"] = {offense = 7.5, defense = 3.5, specialattack = 7, vitality = 5, agility = 300, exp = 100, level = 10, wildLvl = 10, type = "grass", type2 = "poison"},
 
-["Ponyta"] = {offense = 8.5, defense = 5.5, specialattack = 6.5, vitality = 5, agility = 150, exp = 152, level = 20, wildLvl = 20, type = "fire", type2 = "no type"},
+["Weepinbell"] = {offense = 9, defense = 5, specialattack = 8.5, vitality = 6.5, agility = 300, exp = 250, level = 30, wildLvl = 40, type = "grass", type2 = "poison"},
 
-["Rapidash"] = {offense = 10, defense = 7, specialattack = 8, vitality = 6.5, agility = 176, exp = 192, level = 50, wildLvl = 50, type = "fire", type2 = "no type"},
+["Victreebel"] = {offense = 10.5, defense = 6.5, specialattack = 10, vitality = 8, agility = 300, exp = 650, level = 70, wildLvl = 60, type = "grass", type2 = "poison"},
 
-["Slowpoke"] = {offense = 6.5, defense = 6.5, specialattack = 4, vitality = 9, agility = 76, exp = 99, level = 15, wildLvl = 15, type = "water", type2 = "psychic"},
+["Tentacool"] = {offense = 4, defense = 3.5, specialattack = 5, vitality = 4, agility = 300, exp = 350, level = 10, wildLvl = 20, type = "water", type2 = "poison"},
 
-["Slowbro"] = {offense = 7.5, defense = 11, specialattack = 10, vitality = 9.5, agility = 100, exp = 164, level = 45, wildLvl = 45, type = "water", type2 = "psychic"},
+["Tentacruel"] = {offense = 7, defense = 6.5, specialattack = 8, vitality = 8, agility = 300, exp = 1100, level = 80, wildLvl = 90, type = "water", type2 = "poison"},
 
-["Magnemite"] = {offense = 3.5, defense = 7, specialattack = 9.5, vitality = 2.5, agility = 106, exp = 89, level = 15, wildLvl = 15, type = "electric", type2 = "steel"},
+["Geodude"] = {offense = 8, defense = 10, specialattack = 3, vitality = 4, agility = 300, exp = 100, level = 10, wildLvl = 20, type = "ground", type2 = "rock"},
 
-["Magneton"] = {offense = 6, defense = 9.5, specialattack = 12, vitality = 5, agility = 134, exp = 161, level = 40, wildLvl = 40, type = "electric", type2 = "steel"},
+["Graveler"] = {offense = 9.5, defense = 11.5, specialattack = 4.5, vitality = 5.5, agility = 300, exp = 450, level = 40, wildLvl = 50, type = "ground", type2 = "rock"},
 
-["Farfetch'd"] = {offense = 6.5, defense = 5.5, specialattack = 5.8, vitality = 5.2, agility = 135, exp = 94, level = 40, wildLvl = 40, type = "normal", type2 = "flying"},
+["Golem"] = {offense = 12, defense = 13, specialattack = 5.5, vitality = 8, agility = 300, exp = 650, level = 70, wildLvl = 80, type = "ground", type2 = "rock"},
 
-["Doduo"] = {offense = 8.5, defense = 4.5, specialattack = 3.5, vitality = 3.5, agility = 134, exp = 96, level = 15, wildLvl = 15, type = "normal", type2 = "flying"},
+["Ponyta"] = {offense = 8.5, defense = 5.5, specialattack = 6.5, vitality = 5, agility = 300, exp = 100, level = 20, wildLvl = 30, type = "fire", type2 = "no type"},
 
-["Dodrio"] = {offense = 11, defense = 7, specialattack = 6, vitality = 6, agility = 167, exp = 158, level = 45, wildLvl = 45, type = "normal", type2 = "flying"},
+["Rapidash"] = {offense = 10, defense = 7, specialattack = 8, vitality = 6.5, agility = 300, exp = 650, level = 100, wildLvl = 80, type = "fire", type2 = "no type"},
 
-["Seel"] = {offense = 4.5, defense = 5.5, specialattack = 4.5, vitality = 6.5, agility = 106, exp = 100, level = 20, wildLvl = 20, type = "water", type2 = "no type"},
+["Slowpoke"] = {offense = 6.5, defense = 6.5, specialattack = 4, vitality = 9, agility = 300, exp = 100, level = 10, wildLvl = 20, type = "water", type2 = "psychic"},
 
-["Dewgong"] = {offense = 7, defense = 8, specialattack = 7, vitality = 9, agility = 134, exp = 176, level = 65, wildLvl = 65, type = "water", type2 = "ice"},
+["Slowbro"] = {offense = 7.5, defense = 11, specialattack = 10, vitality = 9.5, agility = 300, exp = 250, level = 50, wildLvl = 60, type = "water", type2 = "psychic"},
 
-["Grimer"] = {offense = 8, defense = 5, specialattack = 4, vitality = 8, agility = 84, exp = 90, level = 15, wildLvl = 15, type = "poison", type2 = "no type"},
+["Magnemite"] = {offense = 3.5, defense = 7, specialattack = 9.5, vitality = 2.5, agility = 300, exp = 100, level = 10, wildLvl = 20, type = "electric", type2 = "steel"},
 
-["Muk"] = {offense = 10.5, defense = 7.5, specialattack = 6.5, vitality = 10.5, agility = 112, exp = 157, level = 35, wildLvl = 35, type = "poison", type2 = "no type"},
+["Magneton"] = {offense = 6, defense = 9.5, specialattack = 12, vitality = 5, agility = 300, exp = 650, level = 80, wildLvl = 90, type = "electric", type2 = "steel"},
 
-["Shellder"] = {offense = 6.5, defense = 10, specialattack = 4.5, vitality = 3, agility = 101, exp = 97, level = 10, wildLvl = 10, type = "water", type2 = "no type"},
+["Farfetch'd"] = {offense = 6.5, defense = 5.5, specialattack = 5.8, vitality = 5.2, agility = 300, exp = 650, level = 45, wildLvl = 60, type = "flying", type2 = "normal"},
 
-["Cloyster"] = {offense = 9.5, defense = 18, specialattack = 8.5, vitality = 5, agility = 134, exp = 203, level = 60, wildLvl = 60, type = "water", type2 = "ice"},
+["Doduo"] = {offense = 8.5, defense = 4.5, specialattack = 3.5, vitality = 3.5, agility = 300, exp = 250, level = 10, wildLvl = 20, type = "flying", type2 = "normal"},
 
-["Gastly"] = {offense = 3.5, defense = 3, specialattack = 10, vitality = 3, agility = 125, exp = 95, level = 20, wildLvl = 20, type = "ghost", type2 = "poison"},
+["Dodrio"] = {offense = 11, defense = 7, specialattack = 6, vitality = 6, agility = 300, exp = 450, level = 50, wildLvl = 60, type = "flying", type2 = "normal"},
 
-["Haunter"] = {offense = 5, defense = 4.5, specialattack = 11.5, vitality = 4.5, agility = 135, exp = 126, level = 45, wildLvl = 45, type = "ghost", type2 = "poison"},
+["Seel"] = {offense = 4.5, defense = 5.5, specialattack = 4.5, vitality = 6.5, agility = 300, exp = 350, level = 20, wildLvl = 30, type = "water", type2 = "no type"},
 
-["Gengar"] = {offense = 26.5, defense = 26, specialattack = 23, vitality = 12, agility = 150, exp = 190, level = 80, wildLvl = 80, type = "ghost", type2 = "poison"},
+["Dewgong"] = {offense = 7, defense = 8, specialattack = 7, vitality = 9, agility = 300, exp = 900, level = 60, wildLvl = 80, type = "water", type2 = "ice"},
 
-["Onix"] = {offense = 24.5, defense = 26, specialattack = 23, vitality = 23.5, agility = 134, exp = 108, level = 50, wildLvl = 50, type = "rock", type2 = "ground"},
+["Grimer"] = {offense = 8, defense = 5, specialattack = 4, vitality = 8, agility = 300, exp = 100, level = 10, wildLvl = 20, type = "poison", type2 = "no type"},
 
-["Rhyperior"] = {offense = 80, defense = 50, specialattack = 50, vitality = 50.5, agility = 300, exp = 300, level = 100, wildLvl = 100, type = "rock", type2 = "ground"},
+["Muk"] = {offense = 10.5, defense = 7.5, specialattack = 6.5, vitality = 10.5, agility = 300, exp = 1100, level = 80, wildLvl = 90, type = "poison", type2 = "no type"},
 
-["Onix Cells"] = {offense = 904.5, defense = 826, specialattack = 723, vitality = 723.5, agility = 634, exp = 108, level = 50, wildLvl = 50, type = "rock", type2 = "ground"},
+["Shellder"] = {offense = 6.5, defense = 10, specialattack = 4.5, vitality = 3, agility = 300, exp = 250, level = 10, wildLvl = 20, type = "water", type2 = "no type"},
 
-["Drowzee"] = {offense = 4.8, defense = 4.5, specialattack = 4.3, vitality = 6, agility = 103, exp = 102, level = 25, wildLvl = 25, type = "psychic", type2 = "no type"},
+["Cloyster"] = {offense = 9.5, defense = 18, specialattack = 8.5, vitality = 5, agility = 300, exp = 900, level = 60, wildLvl = 70, type = "water", type2 = "ice"},
 
-["Hypno"] = {offense = 7.3, defense = 7, specialattack = 7.3, vitality = 8.5, agility = 130, exp = 165, level = 55, wildLvl = 55, type = "psychic", type2 = "no type"},
+["Gastly"] = {offense = 3.5, defense = 3, specialattack = 10, vitality = 3, agility = 300, exp = 250, level = 20, wildLvl = 30, type = "ghost", type2 = "poison"},
 
-["Krabby"] = {offense = 10.5, defense = 9, specialattack = 2.5, vitality = 3, agility = 112, exp = 115, level = 10, wildLvl = 10, type = "water", type2 = "no type"},
+["Haunter"] = {offense = 5, defense = 4.5, specialattack = 11.5, vitality = 4.5, agility = 300, exp = 450, level = 40, wildLvl = 50, type = "ghost", type2 = "poison"},
 
-["Kingler"] = {offense = 13, defense = 11.5, specialattack = 5, vitality = 5.5, agility = 139, exp = 206, level = 40, wildLvl = 40, type = "water", type2 = "no type"},
+["Gengar"] = {offense = 6.5, defense = 6, specialattack = 13.0, vitality = 6, agility = 300, exp = 1100, level = 80, wildLvl = 90, type = "ghost", type2 = "poison"},
 
-["Voltorb"] = {offense = 3, defense = 5, specialattack = 5.5, vitality = 4, agility = 106, exp = 103, level = 10, wildLvl = 10, type = "electric", type2 = "no type"},
+["Onix"] = {offense = 4.5, defense = 16, specialattack = 3, vitality = 3.5, agility = 300, exp = 750, level = 50, wildLvl = 60, type = "rock", type2 = "ground"},
 
-["Electrode"] = {offense = 5, defense = 7, specialattack = 8, vitality = 6, agility = 134, exp = 150, level = 35, wildLvl = 35, type = "electric", type2 = "no type"},
+["Drowzee"] = {offense = 4.8, defense = 4.5, specialattack = 4.3, vitality = 6, agility = 300, exp = 250, level = 30, wildLvl = 40, type = "psychic", type2 = "no type"},
 
-["Exeggcute"] = {offense = 4, defense = 8, specialattack = 6, vitality = 6, agility = 101, exp = 98, level = 10, wildLvl = 10, type = "grass", type2 = "psychic"},
+["Hypno"] = {offense = 7.3, defense = 7, specialattack = 7.3, vitality = 8.5, agility = 300, exp = 650, level = 50, wildLvl = 60, type = "psychic", type2 = "no type"},
 
-["Exeggutor"] = {offense = 9.5, defense = 8.5, specialattack = 12.5, vitality = 9.5, agility = 125, exp = 212, level = 80, wildLvl = 80, type = "grass", type2 = "psychic"},
+["Krabby"] = {offense = 10.5, defense = 9, specialattack = 2.5, vitality = 3, agility = 300, exp = 200, level = 10, wildLvl = 20, type = "water", type2 = "no type"},
 
-["Solgaleo"] = {offense = 1400, defense = 1100, specialattack = 1200, vitality = 1700, agility = 1000, exp = 14440, level = 1000, wildLvl = 250, type = "steel", type2 = "psychic"},
+["Kingler"] = {offense = 13, defense = 11.5, specialattack = 5, vitality = 5.5, agility = 300, exp = 450, level = 40, wildLvl = 50, type = "water", type2 = "no type"},
 
-["Shiny Solgaleo"] = {offense = 1900, defense = 2000, specialattack = 1700, vitality = 2000, agility = 1000, exp = 144430, level = 1000, wildLvl = 250, type = "steel", type2 = "psychic"},
+["Voltorb"] = {offense = 3, defense = 5, specialattack = 5.5, vitality = 4, agility = 300, exp = 100, level = 10, wildLvl = 20, type = "electric", type2 = "no type"},
 
-["Ultra Solgaleo"] = {offense = 2300, defense = 2400, specialattack = 2500, vitality = 2400, agility = 1200, exp = 134340, level = 1000, wildLvl = 250, type = "steel", type2 = "psychic"},
+["Electrode"] = {offense = 5, defense = 7, specialattack = 8, vitality = 6, agility = 300, exp = 450, level = 35, wildLvl = 50, type = "electric", type2 = "no type"},
 
-["Cubone"] = {offense = 5, defense = 9.5, specialattack = 4, vitality = 5, agility = 100, exp = 87, level = 20, wildLvl = 20, type = "ground", type2 = "no type"},
+["Exeggcute"] = {offense = 4, defense = 8, specialattack = 6, vitality = 6, agility = 300, exp = 100, level = 10, wildLvl = 20, type = "psychic", type2 = "grass"},
 
-["Marowak"] = {offense = 8, defense = 11, specialattack = 5, vitality = 6, agility = 150, exp = 124, level = 55, wildLvl = 55, type = "ground", type2 = "no type"},
+["Exeggutor"] = {offense = 9.5, defense = 8.5, specialattack = 12.5, vitality = 9.5, agility = 300, exp = 1100, level = 100, wildLvl = 90, type = "psychic", type2 = "grass"},
 
-["Hitmonlee"] = {offense = 9.3, defense = 5.3, specialattack = 3.5, vitality = 5, agility = 152, exp = 139, level = 60, wildLvl = 60, type = "fighting", type2 = "no type"},
+["Cubone"] = {offense = 5, defense = 9.5, specialattack = 4, vitality = 5, agility = 300, exp = 250, level = 20, wildLvl = 30, type = "ground", type2 = "no type"},
 
-["Hitmonchan"] = {offense = 8.3, defense = 7.9, specialattack = 3.5, vitality = 5, agility = 140, exp = 140, level = 60, wildLvl = 60, type = "fighting", type2 = "no type"},
+["Marowak"] = {offense = 6.4, defense = 11, specialattack = 4, vitality = 6, agility = 300, exp = 650, level = 50, wildLvl = 60, type = "ground", type2 = "no type"},
 
-["Lickitung"] = {offense = 5.5, defense = 7.5, specialattack = 6, vitality = 9, agility = 100, exp = 127, level = 55, wildLvl = 55, type = "normal", type2 = "no type"},
+["Hitmonlee"] = {offense = 12, defense = 5.3, specialattack = 3.5, vitality = 5, agility = 300, exp = 1300, level = 60, wildLvl = 70, type = "fight", type2 = "no type"},
 
-["Koffing"] = {offense = 6.5, defense = 9.5, specialattack = 6, vitality = 4, agility = 95, exp = 114, level = 15, wildLvl = 15, type = "poison", type2 = "no type"},
+["Hitmonchan"] = {offense = 10.5, defense = 7.9, specialattack = 3.5, vitality = 5, agility = 300, exp = 1300, level = 60, wildLvl = 70, type = "fight", type2 = "no type"},
 
-["Weezing"] = {offense = 9, defense = 12, specialattack = 8.5, vitality = 6.5, agility = 123, exp = 173, level = 35, wildLvl = 35, type = "poison", type2 = "no type"},
+["Lickitung"] = {offense = 5.5, defense = 7.5, specialattack = 6, vitality = 9, agility = 300, exp = 650, level = 60, wildLvl = 70, type = "normal", type2 = "no type"},
 
-["Rhyhorn"] = {offense = 8.5, defense = 9.5, specialattack = 3, vitality = 8, agility = 100, exp = 135, level = 30, wildLvl = 30, type = "ground", type2 = "rock"},
+["Koffing"] = {offense = 6.5, defense = 6.3, specialattack = 6, vitality = 4, agility = 300, exp = 100, level = 10, wildLvl = 20, type = "poison", type2 = "no type"},
 
-["Rhydon"] = {offense = 11, defense = 10, specialattack = 4.5, vitality = 10.5, agility = 127, exp = 204, level = 75, wildLvl = 75, type = "ground", type2 = "rock"},
+["Weezing"] = {offense = 9, defense = 12, specialattack = 8.5, vitality = 6.5, agility = 300, exp = 250, level = 50, wildLvl = 60, type = "poison", type2 = "no type"},
 
-["Chansey"] = {offense = 4, defense = 4, specialattack = 5, vitality = 20, agility = 112, exp = 255, level = 60, wildLvl = 60, type = "normal", type2 = "no type"},
+["Rhyhorn"] = {offense = 8.5, defense = 9.5, specialattack = 3, vitality = 8, agility = 300, exp = 250, level = 30, wildLvl = 40, type = "ground", type2 = "rock"},
 
-["Tangela"] = {offense = 5.5, defense = 11.5, specialattack = 10, vitality = 6.5, agility = 123, exp = 166, level = 50, wildLvl = 50, type = "grass", type2 = "no type"},
+["Rhydon"] = {offense = 13, defense = 12, specialattack = 4.5, vitality = 10.5, agility = 300, exp = 1100, level = 80, wildLvl = 90, type = "ground", type2 = "rock"},
 
-["Kangaskhan"] = {offense = 9.5, defense = 8, specialattack = 4, vitality = 10.5, agility = 140, exp = 175, level = 80, wildLvl = 80, type = "normal", type2 = "no type"},
+["Chansey"] = {offense = 5, defense = 5, specialattack = 3.5, vitality = 25, agility = 300, exp = 450, level = 60, wildLvl = 70, type = "normal", type2 = "no type"},
 
-["Horsea"] = {offense = 4, defense = 7, specialattack = 7, vitality = 3, agility = 115, exp = 83, level = 10, wildLvl = 10, type = "water", type2 = "no type"},
+["Tangela"] = {offense = 5.5, defense = 11.5, specialattack = 10, vitality = 6.5, agility = 300, exp = 650, level = 50, wildLvl = 60, type = "grass", type2 = "no type"},
 
-["Seadra"] = {offense = 6.5, defense = 9.5, specialattack = 9.5, vitality = 5.5, agility = 150, exp = 155, level = 45, wildLvl = 45, type = "water", type2 = "no type"},
+["Kangaskhan"] = {offense = 9.5, defense = 8, specialattack = 4, vitality = 10.5, agility = 300, exp = 1100, level = 80, wildLvl = 90, type = "normal", type2 = "no type"},
 
-["Goldeen"] = {offense = 6.7, defense = 6, specialattack = 3.5, vitality = 4.5, agility = 115, exp = 111, level = 10, wildLvl = 10, type = "water", type2 = "no type"},
+["Horsea"] = {offense = 4, defense = 7, specialattack = 7, vitality = 3, agility = 300, exp = 100, level = 10, wildLvl = 20, type = "water", type2 = "no type"},
 
-["Seaking"] = {offense = 9.2, defense = 6.5, specialattack = 6.5, vitality = 8, agility = 135, exp = 170, level = 35, wildLvl = 35, type = "water", type2 = "no type"},
+["Seadra"] = {offense = 6.5, defense = 9.5, specialattack = 9.5, vitality = 5.5, agility = 300, exp = 350, level = 40, wildLvl = 50, type = "water", type2 = "no type"},
 
-["Staryu"] = {offense = 4.5, defense = 5.5, specialattack = 7, vitality = 3, agility = 130, exp = 106, level = 15, wildLvl = 15, type = "water", type2 = "no type"},
+["Goldeen"] = {offense = 6.7, defense = 6, specialattack = 3.5, vitality = 4.5, agility = 300, exp = 150, level = 10, wildLvl = 20, type = "water", type2 = "no type"},
 
-["Starmie"] = {offense = 7.5, defense = 8.5, specialattack = 10, vitality = 6, agility = 150, exp = 207, level = 35, wildLvl = 35, type = "water", type2 = "psychic"},
+["Seaking"] = {offense = 9.2, defense = 6.5, specialattack = 6.5, vitality = 8, agility = 300, exp = 350, level = 40, wildLvl = 50, type = "water", type2 = "no type"},
 
-["Mr. Mime"] = {offense = 4.5, defense = 6.5, specialattack = 10, vitality = 5, agility = 140, exp = 136, level = 45, wildLvl = 45, type = "psychic", type2 = "no type"},
+["Staryu"] = {offense = 4.5, defense = 5.5, specialattack = 7, vitality = 3, agility = 300, exp = 250, level = 20, wildLvl = 30, type = "water", type2 = "no type"},
 
-["Scyther"] = {offense = 11, defense = 8, specialattack = 5.5, vitality = 7, agility = 170, exp = 187, level = 80, wildLvl = 80, type = "bug", type2 = "flying"},
+["Starmie"] = {offense = 7.5, defense = 8.5, specialattack = 10, vitality = 6, agility = 350, exp = 650, level = 80, wildLvl = 90, type = "water", type2 = "psychic"},
 
-["Jynx"] = {offense = 5, defense = 6.5, specialattack = 11.5, vitality = 6.5, agility = 150, exp = 137, level = 75, wildLvl = 75, type = "ice", type2 = "psychic"},
+["Mr. Mime"] = {offense = 4.5, defense = 6.5, specialattack = 10, vitality = 4, agility = 300, exp = 650, level = 70, wildLvl = 70, type = "psychic", type2 = "no type"},
 
-["Electabuzz"] = {offense = 8.3, defense = 5.7, specialattack = 9.5, vitality = 6.5, agility = 160, exp = 156, level = 80, wildLvl = 80, type = "electric", type2 = "no type"},
+["Scyther"] = {offense = 11, defense = 8, specialattack = 5.5, vitality = 7, agility = 350, exp = 1800, level = 100, wildLvl = 90, type = "bug", type2 = "flying"},
 
-["Magmar"] = {offense = 9.5, defense = 5.7, specialattack = 10, vitality = 6.5, agility = 159, exp = 167, level = 80, wildLvl = 80, type = "fire", type2 = "no type"},
+["Jynx"] = {offense = 5, defense = 3.5, specialattack = 11.5, vitality = 6.5, agility = 300, exp = 1100, level = 80, wildLvl = 90, type = "psychic", type2 = "ice"},
 
-["Pinsir"] = {offense = 12.5, defense = 10, specialattack = 5.5, vitality = 6.5, agility = 135, exp = 200, level = 45, wildLvl = 45, type = "bug", type2 = "no type"},
+["Electabuzz"] = {offense = 8.3, defense = 5.7, specialattack = 9.5, vitality = 6.5, agility = 300, exp = 1800, level = 100, wildLvl = 100, type = "electric", type2 = "no type"},
 
-["Tauros"] = {offense = 10, defense = 9.5, specialattack = 4, vitality = 7.5, agility = 155, exp = 211, level = 45, wildLvl = 45, type = "normal", type2 = "no type"},
+["Magmar"] = {offense = 9.5, defense = 5.7, specialattack = 10, vitality = 6.5, agility = 300, exp = 1800, level = 100, wildLvl = 100, type = "fire", type2 = "no type"},
 
-["Magikarp"] = {offense = 1, defense = 5.5, specialattack = 1.5, vitality = 2, agility = 110, exp = 20, level = 5, wildLvl = 5, type = "water", type2 = "no type"},
+["Pinsir"] = {offense = 12.5, defense = 10, specialattack = 5.5, vitality = 6.5, agility = 300, exp = 650, level = 100, wildLvl = 60, type = "bug", type2 = "no type"},
 
-["Gyarados"] = {offense = 12.5, defense = 7.9, specialattack = 6, vitality = 9.5, agility = 140, exp = 214, level = 85, wildLvl = 85, type = "water", type2 = "flying"},
+["Tauros"] = {offense = 10, defense = 9.5, specialattack = 4, vitality = 7.5, agility = 300, exp = 450, level = 50, wildLvl = 60, type = "normal", type2 = "no type"},
 
-["Lapras"] = {offense = 8.5, defense = 8, specialattack = 8.5, vitality = 13, agility = 120, exp = 219, level = 80, wildLvl = 80, type = "water", type2 = "ice"},
+["Magikarp"] = {offense = 1, defense = 5.5, specialattack = 1.5, vitality = 2, agility = 300, exp = 50, level = 7, wildLvl = 10, type = "water", type2 = "no type"},
 
-["Ditto"] = {offense = 60, defense = 60, specialattack = 60, vitality = 60, agility = 350, exp = 610, level = 40, wildLvl = 40, type = "normal", type2 = "no type"},
+["Gyarados"] = {offense = 12.5, defense = 7.9, specialattack = 6, vitality = 9.5, agility = 300, exp = 1800, level = 100, wildLvl = 100, type = "water", type2 = "flying"},
 
-["Shiny Ditto"] = {offense = 100, defense = 100, specialattack = 100, vitality = 100, agility = 350, exp = 610, level = 80, wildLvl = 80, type = "normal", type2 = "no type"},
+["Lapras"] = {offense = 8.5, defense = 8, specialattack = 8.5, vitality = 13, agility = 300, exp = 1100, level = 100, wildLvl = 90, type = "water", type2 = "ice"},
 
-["Eevee"] = {offense = 5.5, defense = 5, specialattack = 4.5, vitality = 5.5, agility = 117, exp = 92, level = 20, wildLvl = 20, type = "normal", type2 = "no type"},
+["Ditto"] = {offense = 4.8, defense = 4.8, specialattack = 4.8, vitality = 4.8, agility = 180, exp = 450, level = 10, wildLvl = 50, type = "normal", type2 = "no type"},
 
-["Vaporeon"] = {offense = 6.5, defense = 6, specialattack = 11, vitality = 13, agility = 128, exp = 196, level = 55, wildLvl = 55, type = "water", type2 = "no type"},
+["Eevee"] = {offense = 5.5, defense = 5, specialattack = 4.5, vitality = 5.5, agility = 300, exp = 450, level = 20, wildLvl = 30, type = "normal", type2 = "no type"},
 
-["Jolteon"] = {offense = 6.5, defense = 6, specialattack = 11, vitality = 6.5, agility = 145, exp = 197, level = 55, wildLvl = 55, type = "electric", type2 = "no type"},
+["Vaporeon"] = {offense = 6.5, defense = 6, specialattack = 11, vitality = 13, agility = 300, exp = 650, level = 60, wildLvl = 70, type = "water", type2 = "no type"},
 
-["Flareon"] = {offense = 13, defense = 6, specialattack = 9.5, vitality = 6.5, agility = 128, exp = 198, level = 55, wildLvl = 55, type = "fire", type2 = "no type"},
+["Jolteon"] = {offense = 6.5, defense = 6, specialattack = 11, vitality = 6.5, agility = 300, exp = 650, level = 60, wildLvl = 70, type = "electric", type2 = "no type"},
 
-["Porygon"] = {offense = 6, defense = 7, specialattack = 8.5, vitality = 6.5, agility = 115, exp = 130, level = 40, wildLvl = 40, type = "normal", type2 = "no type"},
+["Flareon"] = {offense = 13, defense = 6, specialattack = 9.5, vitality = 6.5, agility = 300, exp = 650, level = 60, wildLvl = 70, type = "fire", type2 = "no type"},
 
-["Omanyte"] = {offense = 4, defense = 10, specialattack = 9, vitality = 3.5, agility = 95, exp = 99, level = 20, wildLvl = 20, type = "rock", type2 = "water"},
+["Porygon"] = {offense = 6, defense = 7, specialattack = 8.5, vitality = 6.5, agility = 300, exp = 1100, level = 40, wildLvl = 50, type = "normal", type2 = "no type"},
 
-["Omastar"] = {offense = 6, defense = 12.5, specialattack = 11.5, vitality = 7, agility = 120, exp = 199, level = 80, wildLvl = 80, type = "rock", type2 = "water"},
+["Omanyte"] = {offense = 4, defense = 10, specialattack = 9, vitality = 3.5, agility = 300, exp = 100, level = 20, wildLvl = 30, type = "rock", type2 = "water"},
 
-["Kabuto"] = {offense = 8, defense = 9, specialattack = 5.5, vitality = 3, agility = 120, exp = 99, level = 20, wildLvl = 20, type = "rock", type2 = "water"},
+["Omastar"] = {offense = 6, defense = 12.5, specialattack = 11.5, vitality = 7, agility = 300, exp = 1100, level = 80, wildLvl = 90, type = "rock", type2 = "water"},
 
-["Kabutops"] = {offense = 11.5, defense = 10.5, specialattack = 6.5, vitality = 6, agility = 140, exp = 199, level = 80, wildLvl = 80, type = "rock", type2 = "water"},
+["Kabuto"] = {offense = 8, defense = 9, specialattack = 5.5, vitality = 3, agility = 300, exp = 100, level = 20, wildLvl = 30, type = "rock", type2 = "water"},
 
-["Aerodactyl"] = {offense = 10.5, defense = 6.5, specialattack = 6, vitality = 8, agility = 190, exp = 202, level = 100, wildLvl = 100, type = "rock", type2 = "Flying"},
+["Kabutops"] = {offense = 11.5, defense = 10.5, specialattack = 6.5, vitality = 6, agility = 300, exp = 1100, level = 80, wildLvl = 90, type = "rock", type2 = "water"},
 
-["Snorlax"] = {offense = 11, defense = 6.5, specialattack = 6.5, vitality = 7.604677, agility = 110, exp = 154, level = 85, wildLvl = 85, type = "normal", type2 = "no type"},
+["Aerodactyl"] = {offense = 10.5, defense = 9.7, specialattack = 9, vitality = 12, agility = 300, exp = 2500, level = 150, wildLvl = 600, type = "rock", type2 = "flying"},
+ 
+["Snorlax"] = {offense = 11, defense = 6.5, specialattack = 5.5, vitality = 16, agility = 200, exp = 1100, level = 100, wildLvl = 100, type = "normal", type2 = "no type"},
 
-["Articuno"] = {offense = 70, defense = 70, specialattack = 200, vitality = 250, agility = 500, exp = 215, level = 1, wildLvl = 300, type = "ice", type2 = "flying"},
+["Articuno"] = {offense = 8.5, defense = 10, specialattack = 9.5, vitality = 9, agility = 300, exp = 3000, level = 1000, wildLvl = 750, type = "ice", type2 = "no type"},
+  
+["Zapdos"] = {offense = 9, defense = 8.5, specialattack = 12.5, vitality = 9, agility = 300, exp = 3000, level = 1000, wildLvl = 750, type = "electric", type2 = "flying"},
 
-["Zapdos"] = {offense = 70, defense = 70, specialattack = 200, vitality = 259, agility = 501, exp = 216, level = 1, wildLvl = 300, type = "electric", type2 = "flying"},
+["Moltres"] = {offense = 10, defense = 9, specialattack = 12.5, vitality = 9, agility = 300, exp = 3000, level = 1000, wildLvl = 750, type = "fire", type2 = "flying"},
 
-["Moltres"] = {offense = 70, defense = 70, specialattack = 200, vitality = 260, agility = 500, exp = 217, level = 1, wildLvl = 300, type = "fire", type2 = "flying"},
+["Dratini"] = {offense = 6.4, defense = 4.5, specialattack = 5, vitality = 4.1, agility = 300, exp = 250, level = 20, wildLvl = 30, type = "dragon", type2 = "no type"},
 
-["Frozen Articuno"] = {offense = 80, defense = 80, specialattack = 80.5, vitality = 80, agility = 1200, exp = 500, level = 300, wildLvl = 150, type = "ice", type2 = "flying"},
+["Dragonair"] = {offense = 8.4, defense = 6.5, specialattack = 7, vitality = 6.1, agility = 300, exp = 650, level = 60, wildLvl = 70, type = "dragon", type2 = "no type"},
 
-["Thunder Zapdos"] = {offense = 80, defense = 80, specialattack = 80.5, vitality = 81, agility = 1200, exp = 500, level = 300, wildLvl = 150, type = "electric", type2 = "flying"},
+["Dragonite"] = {offense = 13.4, defense = 9.5, specialattack = 10, vitality = 9.1, agility = 300, exp = 1500, level = 100, wildLvl = 82, type = "dragon", type2 = "flying"},
 
-["Burned Moltres"] = {offense = 80, defense = 80, specialattack = 80.5, vitality = 80, agility = 1200, exp = 500, level = 300, wildLvl = 500, type = "fire", type2 = "flying"},
+["Mewtwo"] = {offense = 11, defense = 9, specialattack = 15.4, vitality = 10.6, agility = 300, exp = 3000, level = 150, wildLvl = 225, type = "psychic", type2 = "no type"},
 
-["Dratini"] = {offense = 6.5, defense = 4.5, specialattack = 5, vitality = 4.1, agility = 112, exp = 67, level = 20, wildLvl = 20, type = "dragon", type2 = "no type"},
+["Mew"] = {offense = 10, defense = 10, specialattack = 10, vitality = 10, agility = 300, exp = 3000, level = 150, wildLvl = 225, type = "psychic", type2 = "no type"},
 
-["Dragonair"] = {offense = 8.4, defense = 6.5, specialattack = 7, vitality = 6.1, agility = 134, exp = 144, level = 60, wildLvl = 60, type = "dragon", type2 = "no type"},
+---------------------modos---------------------------------------------------------------------------------------------------------------------------------------------
+["Giant Magikarp"] = {offense = 1.5, defense = 8.25, specialattack = 2.25, vitality = 3, agility = 400, exp = 1100, level = 40, wildLvl = 47, type = "water", type2 = "no type"},
 
-["Dragonite"] = {offense = 13.4, defense = 9.5, specialattack = 10, vitality = 9.1, agility = 165, exp = 218, level = 100, wildLvl = 100, type = "dragon", type2 = "flying"},
+------------------------------------------------------------------ Rank 5 ------------------------------------------------------------------
+["Seavell Blastoise"] = {offense = 16.6, defense = 20, specialattack = 19, vitality = 15.8, agility = 450, exp = 480, level = 350, wildLvl = 350, type = "water", type2 = "no type"},
 
-["Dragonite Cells"] = {offense = 513.4, defense = 309.5, specialattack = 410, vitality = 909.1, agility = 665, exp = 218, level = 100, wildLvl = 100, type = "dragon", type2 = "flying"},
+["Seavell Tentacruel"] = {offense = 14, defense = 13, specialattack = 16, vitality = 16, agility = 450, exp = 320, level = 350, wildLvl = 350, type = "water", type2 = "poison"},
 
-["Mewtwo"] = {offense = 310, defense = 90, specialattack = 300, vitality = 400, agility = 550, exp = 220, level = 20, wildLvl = 150, type = "psychic", type2 = "no type"},
+["Seavell Lapras"] = {offense = 17, defense = 16, specialattack = 17, vitality = 26, agility = 450, exp = 380, level = 350, wildLvl = 350, type = "water", type2 = "ice"},
 
-["Mystic Mewtwo"] = {offense = 1310, defense = 1900, specialattack = 1700, vitality = 1700, agility = 1550, exp = 12220, level = 1220, wildLvl = 150, type = "psychic", type2 = "no type"},
+["Seavell Jynx"] = {offense = 10, defense = 7, specialattack = 23, vitality = 13, agility = 450, exp = 320, level = 350, wildLvl = 350, type = "psychic", type2 = "ice"},
 
-["Shiny Mystic Mewtwo"] = {offense = 1710, defense = 2100, specialattack = 2100, vitality = 2000, agility = 1750, exp = 12220, level = 1220, wildLvl = 150, type = "psychic", type2 = "no type"},
+["Volcanic Charizard"] = {offense = 16.8, defense = 15.6, specialattack = 21.8, vitality = 15.6, agility = 450, exp = 480, level = 350, wildLvl = 350, type = "fire", type2 = "flying"},
 
-["Mew"] = {offense = 320, defense = 100, specialattack = 250, vitality = 310, agility = 550, exp = 64, level = 20, wildLvl = 150, type = "psychic", type2 = "no type"},
+["Volcanic Magmar"] = {offense = 19, defense = 11.4, specialattack = 20, vitality = 13, agility = 450, exp = 360, level = 350, wildLvl = 350, type = "fire", type2 = "no type"},
 
-["Mew Root"] = {offense = 200, defense = 200, specialattack = 200, vitality = 200, agility = 1000, exp = 640, level = 200, wildLvl = 400, type = "psychic", type2 = "no type"},
+["Volcanic Arcanine"] = {offense = 22, defense = 16, specialattack = 20, vitality = 18, agility = 525, exp = 400, level = 350, wildLvl = 350, type = "fire", type2 = "no type"},
 
-["Mew ULTRA"] = {offense = 10000, defense = 1000, specialattack = 10000, vitality = 10000, agility = 1000, exp = 7000, level = 200, wildLvl = 100, type = "psychic", type2 = "no type"},
+["Volcanic Typhlosion"] = {offense = 16.8, defense = 15.6, specialattack = 21.8, vitality = 15.6, agility = 300, exp = 480, level = 350, wildLvl = 350, type = "fire", type2 = "no type"},
 
-["Shiny Venusaur"] = {offense = 40.02, defense = 49.13, specialattack = 45, vitality = 45.8, agility = 133, exp = 228.8, level = 100, wildLvl = 100, type = "grass", type2 = "poison"},
+["Naturia Scyther"] = {offense = 22, defense = 16, specialattack = 11, vitality = 14, agility = 525, exp = 200, level = 350, wildLvl = 350, type = "bug", type2 = "flying"},
 
-["Shiny Charizard"] = {offense = 40.35, defense = 48.58, specialattack = 45.1, vitality = 46.58, agility = 133, exp = 229.9, level = 100, wildLvl = 100, type = "fire", type2 = "flying"},
+["Naturia Venusaur"] = {offense = 16.4, defense = 16.6, specialattack = 20, vitality = 16, agility = 450, exp = 480, level = 350, wildLvl = 350, type = "grass", type2 = "poison"},
 
-["Shiny Blastoise"] = {offense = 40.13, defense = 41, specialattack = 45.35, vitality = 49.69, agility = 133, exp = 231, level = 100, wildLvl = 100, type = "water", type2 = "no type"},
+["Malefic Misdreavus"] = {offense = 12, defense = 12, specialattack = 17, vitality = 12, agility = 300, exp = 180, level = 350, wildLvl = 350, type = "ghost", type2 = "no type"},
 
-["Shiny Butterfree"] = {offense = 20.95, defense = 5.5, specialattack = 15.8, vitality = 20.6, agility = 133, exp = 176, level = 60, wildLvl = 60, type = "bug", type2 = "flying"},
+["Malefic Umbreon"] = {offense = 13, defense = 22, specialattack = 12, vitality = 19, agility = 345, exp = 380, level = 350, wildLvl = 350, type = "dark", type2 = "no type"},
 
-["Shiny Beedrill"] = {offense = 15.8, defense = 4.4, specialattack = 15.95, vitality = 10.15, agility = 133, exp = 154.9, level = 60, wildLvl = 60, type = "bug", type2 = "poison"},
+["Malefic Gengar"] = {offense = 13, defense = 12, specialattack = 26, vitality = 12, agility = 450, exp = 460, level = 350, wildLvl = 350, type = "ghost", type2 = "poison"},
 
-["Shiny Pidgeot"] = {offense = 25.8, defense = 8.25, specialattack = 20.7, vitality = 15.13, agility = 163, exp = 189.2, level = 100, wildLvl = 100, type = "normal", type2 = "flying"},
+["Raibolt Raichu"] = {offense = 18, defense = 11, specialattack = 18, vitality = 12, agility = 525, exp = 440, level = 350, wildLvl = 350, type = "electric", type2 = "no type"},
 
-["Shiny Rattata"] = {offense = 9.16, defense = 3.85, specialattack = 6.75, vitality = 9.3, agility = 111, exp = 62.7, level = 10, wildLvl = 10, type = "normal", type2 = "no type"},
+["Psycraft Slowking"] = {offense = 15, defense = 16, specialattack = 20, vitality = 19, agility = 330, exp = 360, level = 350, wildLvl = 350, type = "water", type2 = "psychic"},
 
-["Shiny Raticate"] = {offense = 10.91, defense = 6.6, specialattack = 10.5, vitality = 12.05, agility = 122, exp = 127.6, level = 35, wildLvl = 35, type = "normal", type2 = "no type"},
+["Psycraft Alakazam"] = {offense = 10, defense = 9, specialattack = 27, vitality = 11, agility = 450, exp = 460, level = 350, wildLvl = 350, type = "psychic", type2 = "no type"},
 
-["Shiny Fearow"] = {offense = 15.9, defense = 7.15, specialattack = 20.71, vitality = 26.15, agility = 122, exp = 178.2, level = 100, wildLvl = 100, type = "normal", type2 = "flying"},
+["Orebound Aerodactyl"] = {offense = 21, defense = 13, specialattack = 12, vitality = 16, agility = 450, exp = 360, level = 350, wildLvl = 350, type = "rock", type2 = "flying"},
+ 
+["Orebound Golem"] = {offense = 24, defense = 26, specialattack = 11, vitality = 16, agility = 450, exp = 460, level = 350, wildLvl = 350, type = "ground", type2 = "rock"},
 
-["Shiny Raichu"] = {offense = 20.9, defense = 6.05, specialattack = 20.9, vitality = 26.6, agility = 133, exp = 134.2, level = 100, wildLvl = 100, type = "electric", type2 = "no type"},
+["Wingeon Dragonite"] = {offense = 26.8, defense = 19, specialattack = 20, vitality = 18.2, agility = 300, exp = 540, level = 350, wildLvl = 350, type = "dragon", type2 = "flying"},
 
-["Shiny Nidoking"] = {offense = 30.12, defense = 20.47, specialattack = 26.35, vitality = 30.91, agility = 133, exp = 214.5, level = 100, wildLvl = 100, type = "poison", type2 = "ground"},
+["Gardestriker Ursaring"] = {offense = 26, defense = 15, specialattack = 15, vitality = 18, agility = 300, exp = 360, level = 350, wildLvl = 350, type = "normal", type2 = "no type"},
 
-["Shiny Zubat"] = {offense = 6.95, defense = 3.85, specialattack = 7.3, vitality = 9.4, agility = 111, exp = 59.4, level = 10, wildLvl = 10, type = "poison", type2 = "flying"},
+["Raibolt Electabuzz"] = {offense = 16.6, defense = 11.4, specialattack = 19, vitality = 13, agility = 450, exp = 360, level = 350, wildLvl = 350, type = "electric", type2 = "no type"},
 
-["Shiny Golbat"] = {offense = 10.8, defense = 15.7, specialattack = 16.15, vitality = 15.25, agility = 122, exp = 188.1, level = 60, wildLvl = 60, type = "poison", type2 = "flying"},
+------------------------------------------------------------------ Rank 5 Shiny ------------------------------------------------------------------
+["Orebound Golden Rhydon"] = {offense = 39, defense = 36, specialattack = 13.5, vitality = 31.5, agility = 450, exp = 460, level = 400, wildLvl = 400, type = "ground", type2 = "rock"},
+  
+["Volcanic Shiny Arcanine"] = {offense = 33, defense = 24, specialattack = 30, vitality = 27, agility = 525, exp = 600, level = 400, wildLvl = 400, type = "fire", type2 = "no type"},
 
-["Shiny Oddish"] = {offense = 9.5, defense = 6.05, specialattack = 10.25, vitality = 10.95, agility = 111, exp = 85.8, level = 10, wildLvl = 10, type = "grass", type2 = "poison"},
+["Volcanic Shiny Charizard"] = {offense = 25.2, defense = 23.2, specialattack = 32.3, vitality = 23.1, agility = 720, exp = 150, level = 400, wildLvl = 400, type = "fire", type2 = "flying"},
 
-["Shiny Vileplume"] = {offense = 56.8, defense = 56.35, specialattack = 60, vitality = 50.25, agility = 133, exp = 202.4, level = 100, wildLvl = 100, type = "grass", type2 = "poison"},
+["Malefic Shiny Gengar"] = {offense = 19.5, defense = 18, specialattack = 39, vitality = 16, agility = 450, exp = 690, level = 400, wildLvl = 400, type = "ghost", type2 = "poison"},
 
-["Shiny Paras"] = {offense = 10.7, defense = 6.05, specialattack = 4.95, vitality = 3.85, agility = 111, exp = 77, level = 10, wildLvl = 10, type = "bug", type2 = "grass"},
+["Raibolt Shiny Electabuzz"] = {offense = 24.9, defense = 17.1, specialattack = 27, vitality = 19.5, agility = 450, exp = 540, level = 400, wildLvl = 400, type = "electric", type2 = "no type"},
 
-["Shiny Parasect"] = {offense = 10.45, defense = 8.8, specialattack = 6.6, vitality = 6.6, agility = 122, exp = 140.8, level = 60, wildLvl = 60, type = "bug", type2 = "grass"},
+["Raibolt Shiny Raichu"] = {offense = 27, defense = 16.5, specialattack = 27, vitality = 18, agility = 525, exp = 660, level = 400, wildLvl = 400, type = "electric", type2 = "no type"},
 
-["Shiny Venonat"] = {offense = 6.05, defense = 5.5, specialattack = 4.4, vitality = 6.6, agility = 111, exp = 82.5, level = 30, wildLvl = 30, type = "bug", type2 = "poison"},
+["Psycraft Shiny Alakazam"] = {offense = 15, defense = 13.5, specialattack = 40.5, vitality = 16.5, agility = 450, exp = 690, level = 400, wildLvl = 400, type = "psychic", type2 = "no type"},
 
-["Shiny Venomoth"] = {offense = 47.15, defense = 46.6, specialattack = 49.9, vitality = 47.15, agility = 600, exp = 151.8, level = 100, wildLvl = 100, type = "bug", type2 = "poison"},
+["Orebound Shiny Golem"] = {offense = 36, defense = 39, specialattack = 16.5, vitality = 25, agility = 450, exp = 690, level = 400, wildLvl = 400, type = "ground", type2 = "rock"},
 
-["Shiny Growlithe"] = {offense = 7.7, defense = 4.95, specialattack = 7.7, vitality = 6.05, agility = 111, exp = 100.1, level = 35, wildLvl = 35, type = "fire", type2 = "no type"},
+["Wingeon Shiny Dragonite"] = {offense = 40.2, defense = 28.5, specialattack = 30, vitality = 27.3, agility = 300, exp = 810, level = 400, wildLvl = 400, type = "dragon", type2 = "flying"},
 
-["Shiny Arcanine"] = {offense = 20.1, defense = 8.8, specialattack = 20, vitality = 26.9, agility = 182, exp = 234.3, level = 100, wildLvl = 100, type = "fire", type2 = "no type"},
+["Naturia Shiny Scyther"] = {offense = 33, defense = 24, specialattack = 16.5, vitality = 21, agility = 525, exp = 300, level = 400, wildLvl = 400, type = "bug", type2 = "flying"},
 
-["Shiny Abra"] = {offense = 30.2, defense = 15.65, specialattack = 16.55, vitality = 32.75, agility = 121, exp = 82.5, level = 80, wildLvl = 80, type = "psychic", type2 = "ghost"},
+["Naturia Shiny Venusaur"] = {offense = 24.6, defense = 24.9, specialattack = 30, vitality = 24, agility = 450, exp = 720, level = 400, wildLvl = 400, type = "grass", type2 = "poison"},
 
-["Shiny Alakazam"] = {offense = 32.05, defense = 20.95, specialattack = 19.85, vitality = 26.05, agility = 122, exp = 204.6, level = 100, wildLvl = 100, type = "psychic", type2 = "no type"},
+["Seavell Shiny Tentacruel"] = {offense = 21, defense = 19.5, specialattack = 24, vitality = 24, agility = 450, exp = 540, level = 400, wildLvl = 400, type = "water", type2 = "poison"},
 
-["Shiny Tentacool"] = {offense = 4.4, defense = 3.85, specialattack = 5.5, vitality = 4.4, agility = 111, exp = 115.5, level = 25, wildLvl = 25, type = "water", type2 = "poison"},
+["Seavell Shiny Blastoise"] = {offense = 24.9, defense = 30, specialattack = 28.5, vitality = 23.7, agility = 450, exp = 720, level = 400, wildLvl = 400, type = "water", type2 = "no type"},
 
-["Shiny Tentacruel"] = {offense = 20.7, defense = 15.15, specialattack = 19.8, vitality = 22.8, agility = 122, exp = 225.5, level = 100, wildLvl = 100, type = "water", type2 = "poison"},
+["Malefic Shiny Muk"] = {offense = 31.5, defense = 22.5, specialattack = 19.5, vitality = 31.5, agility = 450, exp = 540, level = 400, wildLvl = 400, type = "poison", type2 = "no type"},
 
-["Shiny Golem"] = {offense = 30.1, defense = 30.3, specialattack = 15.05, vitality = 33.8, agility = 133, exp = 194.7, level = 100, wildLvl = 100, type = "rock", type2 = "ground"},
+["Raibolt Shiny Jolteon"] = {offense = 19.5, defense = 18, specialattack = 33, vitality = 19.5, agility = 4500, exp = 570, level = 400, wildLvl = 400, type = "electric", type2 = "no type"},
 
-["Shiny Farfetch'd"] = {offense = 15.15, defense = 6.05, specialattack = 19.38, vitality = 20.72, agility = 175, exp = 103.4, level = 100, wildLvl = 100, type = "normal", type2 = "flying"},
+["Psycraft Shiny Hypno"] = {offense = 21.9, defense = 21, specialattack = 21.9, vitality = 25.5, agility = 450, exp = 510, level = 400, wildLvl = 400, type = "psychic", type2 = "no type"},
 
-["Shiny Grimer"] = {offense = 8.8, defense = 5.5, specialattack = 4.4, vitality = 8.8, agility = 111, exp = 99, level = 25, wildLvl = 25, type = "poison", type2 = "no type"},
+["Psycraft Shiny Abra"] = {offense = 6, defense = 4.5, specialattack = 31.5, vitality = 7.5, agility = 450, exp = 210, level = 400, wildLvl = 400, type = "psychic", type2 = "no type"},
 
-["Shiny Muk"] = {offense = 11.55, defense = 8.25, specialattack = 7.15, vitality = 11.55, agility = 122, exp = 172.7, level = 100, wildLvl = 100, type = "poison", type2 = "no type"},
+["Orebound Shiny Marowak"] = {offense = 24, defense = 33, specialattack = 15, vitality = 18, agility = 450, exp = 450, level = 400, wildLvl = 400, type = "ground", type2 = "no type"},
 
-["Shiny Gengar"] = {offense = 45.15, defense = 46.6, specialattack = 40.3, vitality = 23.6, agility = 800, exp = 209, level = 100, wildLvl = 100, type = "ghost", type2 = "poison"},
+["Wingeon Shiny Fearow"] = {offense = 27, defense = 19.5, specialattack = 18.3, vitality = 19.5, agility = 450, exp = 480, level = 400, wildLvl = 400, type = "flying", type2 = "normal"},
 
-["Shiny Onix"] = {offense = 53.95, defense = 55.6, specialattack = 50.3, vitality = 55.85, agility = 122, exp = 118.8, level = 100, wildLvl = 100, type = "rock", type2 = "ground"},
+["Wingeon Shiny Farfetch'd"] = {offense = 19.5, defense = 16.5, specialattack = 17.4, vitality = 15.6, agility = 450, exp = 420, level = 400, wildLvl = 400, type = "flying", type2 = "normal"},
 
-["Shiny Hypno"] = {offense = 30.03, defense = 15.7, specialattack = 19.03, vitality = 33.35, agility = 122, exp = 181.5, level = 100, wildLvl = 100, type = "psychic", type2 = "no type"},
+["Wingeon Shiny Pidgeot"] = {offense = 24, defense = 22.5, specialattack = 21, vitality = 24.9, agility = 525, exp = 660, level = 400, wildLvl = 400, type = "flying", type2 = "normal"},
 
-["Shiny Krabby"] = {offense = 11.55, defense = 9.9, specialattack = 2.75, vitality = 3.3, agility = 111, exp = 126.5, level = 15, wildLvl = 15, type = "water", type2 = "no type"},
+["Gardestriker Shiny Hitmontop"] = {offense = 28.5, defense = 28.5, specialattack = 10.5, vitality = 15, agility = 300, exp = 480, level = 400, wildLvl = 400, type = "fighting", type2 = "no type"},
 
-["Shiny Kingler"] = {offense = 14.3, defense = 12.65, specialattack = 5.5, vitality = 6.05, agility = 122, exp = 226.6, level = 50, wildLvl = 50, type = "water", type2 = "no type"},
+["Gardestriker Shiny Hitmonlee"] = {offense = 36, defense = 15.9, specialattack = 10.5, vitality = 15, agility = 450, exp = 480, level = 400, wildLvl = 400, type = "fight", type2 = "no type"},
 
-["Shiny Voltorb"] = {offense = 10.3, defense = 5.5, specialattack = 10.05, vitality = 15.4, agility = 111, exp = 113.3, level = 25, wildLvl = 25, type = "electric", type2 = "no type"},
+["Gardestriker Shiny Hitmonchan"] = {offense = 31.5, defense = 23.7, specialattack = 10.5, vitality = 15, agility = 450, exp = 480, level = 400, wildLvl = 400, type = "fight", type2 = "no type"},
 
-["Shiny Electrode"] = {offense = 15.5, defense = 15.7, specialattack = 19.8, vitality = 22.6, agility = 122, exp = 165, level = 80, wildLvl = 80, type = "electric", type2 = "no type"},
+["Gardestriker Shiny Snorlax"] = {offense = 33, defense = 19.5, specialattack = 19.5, vitality = 48, agility = 300, exp = 570, level = 400, wildLvl = 400, type = "normal", type2 = "no type"},
 
-["Shiny Cubone"] = {offense = 5.5, defense = 10.45, specialattack = 4.4, vitality = 5.5, agility = 111, exp = 95.7, level = 30, wildLvl = 30, type = "ground", type2 = "no type"},
+["Naturia Shiny Tangela"] = {offense = 16.5, defense = 34.5, specialattack = 30, vitality = 19.5, agility = 450, exp = 270, level = 400, wildLvl = 400, type = "grass", type2 = "no type"},
 
-["Shiny Marowak"] = {offense = 15.8, defense = 20.1, specialattack = 21.5, vitality = 22.6, agility = 122, exp = 136.4, level = 100, wildLvl = 100, type = "ground", type2 = "no type"},
+["Seavell Shiny Seadra"] = {offense = 19.5, defense = 28.5, specialattack = 28.5, vitality = 16.5, agility = 450, exp = 480, level = 400, wildLvl = 400, type = "water", type2 = "no type"},
 
-["Shiny Hitmonlee"] = {offense = 30.2, defense = 20.83, specialattack = 30.85, vitality = 33.5, agility = 159, exp = 1520, level = 100, wildLvl = 100, type = "fighting", type2 = "no type"},
 
-["Shiny Hitmonchan"] = {offense = 30.55, defense = 22.69, specialattack = 30.85, vitality = 35.5, agility = 133, exp = 1540, level = 100, wildLvl = 100, type = "fighting", type2 = "no type"},
+-------------------------------------------------------------Statos  Pokemon Shiny Kanto-------------------------------------------------------------
+--MIXLORT BALANCEAMENTO DE SHINYS AUTOMÁTICO
 
-["Shiny Tangela"] = {offense = 23.05, defense = 19.65, specialattack = 32.3, vitality = 33.15, agility = 141, exp = 182.6, level = 100, wildLvl = 100, type = "grass", type2 = "no type"},
+-- ["Shiny Venusaur"] = {offense = 2.3, defense = 10, specialattack = 11, vitality = 14, agility = 210, exp = 1800, level = 100, wildLvl = 250, type = "grass", type2 = "poison"},
 
-["Shiny Horsea"] = {offense = 4.4, defense = 7.7, specialattack = 7.7, vitality = 3.3, agility = 111, exp = 91.3, level = 15, wildLvl = 15, type = "water", type2 = "no type"},
+-- ["Shiny Charizard"] = {offense = 2.3, defense = 9, specialattack = 11, vitality = 14, agility = 210, exp = 1800, level = 100, wildLvl = 250, type = "fire", type2 = "flying"},
 
-["Shiny Seadra"] = {offense = 7.15, defense = 10.45, specialattack = 10.45, vitality = 6.05, agility = 122, exp = 170.5, level = 60, wildLvl = 60, type = "water", type2 = "no type"},
+-- ["Shiny Blastoise"] = {offense = 2.3, defense = 11, specialattack = 11, vitality = 14, agility = 210, exp = 1800, level = 100, wildLvl = 250, type = "water", type2 = "no type"},
 
-["Shiny Scyther"] = {offense = 42.1, defense = 42.8, specialattack = 43.05, vitality = 40.7, agility = 133, exp = 205.7, level = 100, wildLvl = 100, type = "bug", type2 = "flying"},
+-- ["Shiny Butterfree"] = {offense = 1.9, defense = 12, specialattack = 6, vitality = 12, agility = 200, exp = 1800, level = 60, wildLvl = 180, type = "bug", type2 = "flying"},
 
-["Shiny Jynx"] = {offense = 16.5, defense = 7, specialattack = 15.65, vitality = 20.15, agility = 133, exp = 150.7, level = 100, wildLvl = 100, type = "ice", type2 = "psychic"},
+-- ["Shiny Beedrill"] = {offense = 1.7, defense = 10, specialattack = 6, vitality = 9, agility = 210, exp = 255, level = 60, wildLvl = 180, type = "bug", type2 = "poison"},
 
-["Shiny Electabuzz"] = {offense = 15.13, defense = 6.27, specialattack = 20.45, vitality = 33.15, agility = 133, exp = 171.6, level = 100, wildLvl = 100, type = "electric", type2 = "no type"},
+-- ["Shiny Pidgeot"] = {offense = 2.1, defense = 10, specialattack = 11, vitality = 14, agility = 340, exp = 1100, level = 100, wildLvl = 250, type = "normal", type2 = "flying"},
 
-["Shiny Pinsir"] = {offense = 13.75, defense = 11, specialattack = 6.05, vitality = 7.15, agility = 133, exp = 220, level = 100, wildLvl = 100, type = "bug", type2 = "no type"},
+-- ["Shiny Rattata"] = {offense = 0.9, defense = 6, specialattack = 2.75, vitality = 3.3, agility = 190, exp = 35, level = 10, wildLvl = 40, type = "normal", type2 = "no type"},
 
-["Shiny Magikarp"] = {offense = 1.1, defense = 6.05, specialattack = 1.65, vitality = 2.2, agility = 111, exp = 22, level = 10, wildLvl = 10, type = "water", type2 = "no type"},
+-- ["Shiny Raticate"] = {offense = 1.8, defense = 9, specialattack = 6, vitality = 6.05, agility = 200, exp = 250, level = 60, wildLvl = 90, type = "normal", type2 = "no type"},
 
-["Shiny Gyarados"] = {offense = 50.75, defense = 50.69, specialattack = 50.6, vitality = 50.45, agility = 133, exp = 235.4, level = 120, wildLvl = 120, type = "water", type2 = "flying"},
+-- ["Shiny Fearow"] = {offense = 2.1, defense = 9, specialattack = 11, vitality = 13, agility = 240, exp = 850, level = 120, wildLvl = 250, type = "normal", type2 = "flying"},
+  
+-- ["Shiny Raichu"] = {offense = 2, defense = 9, specialattack = 11, vitality = 13, agility = 270, exp = 1500, level = 100, wildLvl = 250, type = "electric", type2 = "no type"},
 
-["Shiny Vaporeon"] = {offense = 20.15, defense = 30.6, specialattack = 33.1, vitality = 35.3, agility = 133, exp = 215.6, level = 100, wildLvl = 100, type = "water", type2 = "no type"},
+-- ["Shiny Nidoking"] = {offense = 2.1, defense = 12, specialattack = 11, vitality = 14, agility = 200, exp = 650, level = 100, wildLvl = 250, type = "poison", type2 = "ground"},
 
-["Shiny Jolteon"] = {offense = 21.15, defense = 20.6, specialattack = 23.1, vitality = 19.15, agility = 133, exp = 216.7, level = 100, wildLvl = 100, type = "electric", type2 = "no type"},
+-- ["Shiny Zubat"] = {offense = 0.9, defense = 8, specialattack = 4.3, vitality = 5.4, agility = 190, exp = 80, level = 20, wildLvl = 60, type = "poison", type2 = "flying"},
 
-["Shiny Flareon"] = {offense = 14.3, defense = 6.6, specialattack = 10.45, vitality = 7.15, agility = 133, exp = 217.8, level = 100, wildLvl = 100, type = "fire", type2 = "no type"},
+-- ["Shiny Golbat"] = {offense = 1.2, defense = 8, specialattack = 6, vitality = 10.25, agility = 230, exp = 250, level = 60, wildLvl = 180, type = "poison", type2 = "flying"},
 
-["Shiny Snorlax"] = {offense = 50.1, defense = 50.15, specialattack = 55.15, vitality = 50.6, agility = 133, exp = 169.4, level = 120, wildLvl = 120, type = "normal", type2 = "no type"},
+-- ["Shiny Oddish"] = {offense = 0.9, defense = 4, specialattack = 4.25, vitality = 4.95, agility = 180, exp = 100, level = 10, wildLvl = 60, type = "grass", type2 = "poison"},
 
-["Shiny Dratini"] = {offense = 7.15, defense = 4.95, specialattack = 5.5, vitality = 4.51, agility = 111, exp = 73.7, level = 25, wildLvl = 25, type = "dragon", type2 = "no type"},
+-- ["Shiny Vileplume"] = {offense = 2.1, defense = 10, specialattack = 11, vitality = 13.1, agility = 210, exp = 750, level = 120, wildLvl = 250, type = "grass", type2 = "poison"},
 
-["Shiny Dragonair"] = {offense = 9.24, defense = 7.15, specialattack = 7.7, vitality = 6.71, agility = 122, exp = 158.4, level = 100, wildLvl = 100, type = "dragon", type2 = "no type"},
+-- ["Shiny Paras"] = {offense = 0.9, defense = 8, specialattack = 4.95, vitality = 3.85, agility = 180, exp = 40, level = 10, wildLvl = 60, type = "bug", type2 = "grass"},
 
-["Shiny Dragonite"] = {offense = 45.74, defense = 45.45, specialattack = 40, vitality = 50.01, agility = 133, exp = 239.8, level = 120, wildLvl = 120, type = "dragon", type2 = "flying"},
+-- ["Shiny Parasect"] = {offense = 1.7, defense = 10, specialattack = 6, vitality = 13.6, agility = 200, exp = 250, level = 60, wildLvl = 180, type = "bug", type2 = "grass"},
+ 
+-- ["Shiny Venonat"] = {offense = 0.9, defense = 8, specialattack = 4.4, vitality = 8.6, agility = 190, exp = 100, level = 20, wildLvl = 60, type = "bug", type2 = "poison"},
 
-["Chikorita"] = {offense = 4.9, defense = 6.5, specialattack = 4.9, vitality = 4.5, agility = 106, exp = 64, level = 20, wildLvl = 20, type = "grass", type2 = "no type"},
+-- ["Shiny Venomoth"] = {offense = 2.2, defense = 11, specialattack = 11, vitality = 13.15, agility = 200, exp = 450, level = 100, wildLvl = 250, type = "bug", type2 = "poison"},
 
-["Bayleef"] = {offense = 6.2, defense = 8, specialattack = 6.3, vitality = 6, agility = 123, exp = 141, level = 40, wildLvl = 40, type = "grass", type2 = "no type"},
+-- ["Shiny Growlithe"] = {offense = 0.9, defense = 4.95, specialattack = 4.7, vitality = 8.05, agility = 200, exp = 250, level = 30, wildLvl = 90, type = "fire", type2 = "no type"},
 
-["Meganium"] = {offense = 8.2, defense = 10, specialattack = 8.3, vitality = 8, agility = 145, exp = 208, level = 85, wildLvl = 85, type = "grass", type2 = "no type"},
+-- ["Shiny Arcanine"] = {offense = 2.1, defense = 8.8, specialattack = 11, vitality = 14.7, agility = 450, exp = 1100, level = 100, wildLvl = 250, type = "fire", type2 = "no type"},
 
-["Cyndaquil"] = {offense = 5, defense = 4.3, specialattack = 6, vitality = 4, agility = 128, exp = 65, level = 20, wildLvl = 20, type = "fire", type2 = "no type"},
+-- ["Shiny Abra"] = {offense = 1.2, defense = 8, specialattack = 11, vitality = 13, agility = 130, exp = 250, level = 80, wildLvl = 200, type = "psychic", type2 = "ghost"},
 
-["Quilava"] = {offense = 6.4, defense = 5.8, specialattack = 8.5, vitality = 6, agility = 145, exp = 142, level = 40, wildLvl = 40, type = "fire", type2 = "no type"},
+-- ["Shiny Alakazam"] = {offense = 2.2, defense = 9, specialattack = 12, vitality = 13, agility = 125, exp = 1100, level = 100, wildLvl = 250, type = "psychic", type2 = "no type"},
 
-["Typhlosion"] = {offense = 8.4, defense = 7.8, specialattack = 11, vitality = 8, agility = 167, exp = 209, level = 85, wildLvl = 85, type = "fire", type2 = "no type"},
+-- ["Shiny Tentacool"] = {offense = 0.9, defense = 3.85, specialattack = 4.5, vitality = 5.4, agility = 180, exp = 350, level = 20, wildLvl = 60, type = "water", type2 = "poison"},
 
-["Totodile"] = {offense = 6.5, defense = 6.4, specialattack = 4.4, vitality = 5, agility = 104, exp = 66, level = 20, wildLvl = 20, type = "water", type2 = "no type"},
+-- ["Shiny Tentacruel"] = {offense = 1.9, defense = 9, specialattack = 11, vitality = 14.2, agility = 200, exp = 1100, level = 100, wildLvl = 250, type = "water", type2 = "poison"},
 
-["Croconaw"] = {offense = 8, defense = 8, specialattack = 5.9, vitality = 6.5, agility = 121, exp = 141, level = 40, wildLvl = 40, type = "water", type2 = "no type"},
+-- ["Shiny Golem"] = {offense = 1.9, defense = 14.3, specialattack = 11, vitality = 8.9, agility = 200, exp = 650, level = 100, wildLvl = 250, type = "rock", type2 = "ground"},
 
-["Feraligatr"] = {offense = 10.5, defense = 10, specialattack = 7.9, vitality = 8.5, agility = 143, exp = 142, level = 85, wildLvl = 85, type = "water", type2 = "no type"},
+-- ["Shiny Farfetch'd"] = {offense = 2.2, defense = 9, specialattack = 11, vitality = 13.5, agility = 310, exp = 650, level = 100, wildLvl = 250, type = "normal", type2 = "flying"},
 
-["Sentret"] = {offense = 4.6, defense = 3.4, specialattack = 3.5, vitality = 3.5, agility = 105, exp = 57, level = 15, wildLvl = 15, type = "normal", type2 = "no type"},
+-- ["Shiny Grimer"] = {offense = 0.9, defense = 5.5, specialattack = 4.4, vitality = 9.8, agility = 180, exp = 100, level = 20, wildLvl = 60, type = "poison", type2 = "no type"},
 
-["Furret"] = {offense = 7.6, defense = 6.4, specialattack = 4.5, vitality = 8.5, agility = 156, exp = 116, level = 35, wildLvl = 35, type = "normal", type2 = "no type"},
+-- ["Shiny Muk"] = {offense = 2.2, defense = 9.1, specialattack = 11, vitality = 15.2, agility = 200, exp = 1100, level = 100, wildLvl = 250, type = "poison", type2 = "no type"},
 
-["Hoothoot"] = {offense = 3, defense = 3, specialattack = 3.6, vitality = 6, agility = 112, exp = 58, level = 20, wildLvl = 20, type = "normal", type2 = "flying"},
+-- ["Shiny Gengar"] = {offense = 2.2, defense = 9.6, specialattack = 13.2, vitality = 12.9, agility = 200, exp = 1100, level = 100, wildLvl = 250, type = "ghost", type2 = "poison"},
 
-["Noctowl"] = {offense = 5, defense = 5, specialattack = 7.6, vitality = 10, agility = 134, exp = 162, level = 65, wildLvl = 65, type = "normal", type2 = "flying"},
+-- ["Shiny Onix"] = {offense = 2.2, defense = 8.6, specialattack = 11, vitality = 15.1, agility = 200, exp = 750, level = 100, wildLvl = 250, type = "rock", type2 = "ground"},
 
-["Ledyba"] = {offense = 2, defense = 3, specialattack = 4, vitality = 4, agility = 117, exp = 54, level = 15, wildLvl = 15, type = "bug", type2 = "flying"},
+-- ["Crystal Onix"] = {offense = 6.5, defense = 18, specialattack = 5, vitality = 6.5, agility = 300, exp = 750, level = 100, wildLvl = 60, type = "rock", type2 = "ice"},
 
-["Ledian"] = {offense = 3.5, defense = 5, specialattack = 5.5, vitality = 5.5, agility = 150, exp = 134, level = 35, wildLvl = 35, type = "bug", type2 = "flying"},
+-- ["Shiny Hypno"] = {offense = 2.2, defense = 8.7, specialattack = 11, vitality = 13.35, agility = 200, exp = 650, level = 100, wildLvl = 250, type = "psychic", type2 = "no type"},
 
-["Spinarak"] = {offense = 6, defense = 4, specialattack = 4, vitality = 4, agility = 100, exp = 54, level = 10, wildLvl = 10, type = "bug", type2 = "poison"},
+-- ["Shiny Krabby"] = {offense = 0.9, defense = 9.9, specialattack = 4.75, vitality = 3.3, agility = 180, exp = 200, level = 10, wildLvl = 60, type = "water", type2 = "no type"},
 
-["Ariados"] = {offense = 9, defense = 7, specialattack = 6, vitality = 7, agility = 120, exp = 134, level = 35, wildLvl = 35, type = "bug", type2 = "poison"},
+-- ["Shiny Kingler"] = {offense = 1.2, defense = 12.65, specialattack = 6.5, vitality = 10.05, agility = 200, exp = 450, level = 60, wildLvl = 180, type = "water", type2 = "no type"},
 
-["Crobat"] = {offense = 9, defense = 8, specialattack = 7, vitality = 8.5, agility = 170, exp = 204, level = 80, wildLvl = 80, type = "poison", type2 = "flying"},
+-- ["Shiny Voltorb"] = {offense = 0.9, defense = 5.5, specialattack = 4.05, vitality = 4.4, agility = 180, exp = 100, level = 10, wildLvl = 60, type = "electric", type2 = "no type"},
 
-["Chinchou"] = {offense = 3.8, defense = 3.8, specialattack = 5.6, vitality = 7.5, agility = 130, exp = 90, level = 15, wildLvl = 15, type = "water", type2 = "electric"},
+-- ["Shiny Electrode"] = {offense = 1.2, defense = 7.7, specialattack = 8.8, vitality = 12.6, agility = 190, exp = 450, level = 80, wildLvl = 180, type = "electric", type2 = "no type"},
 
-["Lanturn"] = {offense = 5.8, defense = 5.8, specialattack = 7.6, vitality = 12.5, agility = 145, exp = 156, level = 50, wildLvl = 50, type = "water", type2 = "electric"},
+-- ["Shiny Cubone"] = {offense = 0.9, defense = 8, specialattack = 4.4, vitality = 8.5, agility = 190, exp = 250, level = 20, wildLvl = 90, type = "ground", type2 = "no type"},
 
-["Pichu"] = {offense = 4, defense = 1.5, specialattack = 3.5, vitality = 2, agility = 123, exp = 42, level = 20, wildLvl = 20, type = "electric", type2 = "no type"},
+-- ["Shiny Marowak"] = {offense = 2.2, defense = 10, specialattack = 8.8, vitality = 15.6, agility = 200, exp = 650, level = 100, wildLvl = 250, type = "ground", type2 = "no type"},
 
-["Cleffa"] = {offense = 2.5, defense = 2.8, specialattack = 4.5, vitality = 5, agility = 95, exp = 37, level = 20, wildLvl = 20, type = "normal", type2 = "no type"},
+-- ["Shiny Hitmonlee"] = {offense = 2.2, defense = 8, specialattack = 11.85, vitality = 13.1, agility = 200, exp = 1300, level = 120, wildLvl = 250, type = "fighting", type2 = "no type"},
 
-["Igglybuff"] = {offense = 3, defense = 1.5, specialattack = 4, vitality = 9, agility = 95, exp = 39, level = 20, wildLvl = 20, type = "normal", type2 = "no type"},
+-- ["Shiny Hitmontop"] = {offense = 2.2, defense = 8, specialattack = 11.85, vitality = 13.1, agility = 200, exp = 1300, level = 120, wildLvl = 250, type = "fighting", type2 = "no type"},
 
-["Togepi"] = {offense = 2, defense = 6.5, specialattack = 4, vitality = 3.5, agility = 80, exp = 74, level = 5, wildLvl = 5, type = "normal", type2 = "no type"},
+-- ["Shiny Hitmonchan"] = {offense = 2.2, defense = 8, specialattack = 11.85, vitality = 13.1, agility = 200, exp = 1300, level = 120, wildLvl = 250, type = "fighting", type2 = "no type"},
 
-["Togetic"] = {offense = 4, defense = 8.5, specialattack = 8, vitality = 5.5, agility = 115, exp = 114, level = 60, wildLvl = 60, type = "normal", type2 = "flying"},
+-- ["Shiny Tangela"] = {offense = 2.2, defense = 10.1, specialattack = 11, vitality = 14, agility = 200, exp = 650, level = 100, wildLvl = 250, type = "grass", type2 = "no type"},
 
-["Natu"] = {offense = 5, defense = 4.5, specialattack = 7, vitality = 4, agility = 134, exp = 73, level = 25, wildLvl = 25, type = "psychic", type2 = "flying"},
+-- --mixlort parei aqui na tabela de xp da masterx
 
-["Xatu"] = {offense = 7.5, defense = 7, specialattack = 9.5, vitality = 6.5, agility = 161, exp = 171, level = 75, wildLvl = 75, type = "psychic", type2 = "flying"},
+-- ["Shiny Horsea"] = {offense = 0.9, defense = 7.7, specialattack = 4.5, vitality = 4.3, agility = 190, exp = 91.3, level = 10, wildLvl = 60, type = "water", type2 = "no type"},
 
-["Mareep"] = {offense = 4, defense = 4, specialattack = 6.5, vitality = 5.5, agility = 95, exp = 59, level = 20, wildLvl = 20, type = "electric", type2 = "no type"},
+-- ["Shiny Seadra"] = {offense = 1.9, defense = 7, specialattack = 7, vitality = 12, agility = 200, exp = 400, level = 60, wildLvl = 110, type = "water", type2 = "no type"},
 
-["Flaaffy"] = {offense = 5.5, defense = 5.5, specialattack = 8, vitality = 7, agility = 110, exp = 117, level = 40, wildLvl = 40, type = "electric", type2 = "no type"},
+-- ["Shiny Scyther"] = {offense = 2.2, defense = 13.8, specialattack = 14, vitality = 14, agility = 410, exp = 800, level = 100, wildLvl = 250, type = "bug", type2 = "flying"},
 
-["Ampharos"] = {offense = 7.5, defense = 7.5, specialattack = 11.5, vitality = 9, agility = 130, exp = 194, level = 85, wildLvl = 85, type = "electric", type2 = "no type"},
+-- ["Shiny Jynx"] = {offense = 2.2, defense = 10, specialattack = 11, vitality = 14.5, agility = 230, exp = 800, level = 100, wildLvl = 250, type = "ice", type2 = "psychic"},
 
-["Bellossom"] = {offense = 8, defense = 8.5, specialattack = 9, vitality = 7.5, agility = 112, exp = 184, level = 50, wildLvl = 50, type = "grass", type2 = "no type"},
+-- ["Shiny Electabuzz"] = {offense = 2.2, defense = 9, specialattack = 13, vitality = 14.5, agility = 210, exp = 800, level = 100, wildLvl = 250, type = "electric", type2 = "no type"},
 
-["Virizion"] = {offense = 508, defense = 402.5, specialattack = 409, vitality = 417.5, agility = 412, exp = 884, level = 50, wildLvl = 50, type = "grass", type2 = "no type"},
+-- ["Shiny Pinsir"] = {offense = 2.2, defense = 12, specialattack = 10, vitality = 16, agility = 210, exp = 220, level = 100, wildLvl = 250, type = "bug", type2 = "no type"},
 
-["Virizion Cells"] = {offense = 1008, defense = 1002.5, specialattack = 1009, vitality = 1007.5, agility = 912, exp = 884, level = 50, wildLvl = 50, type = "grass", type2 = "no type"},
+-- ["Shiny Magikarp"] = {offense = 0.9, defense = 6.05, specialattack = 3.65, vitality = 2.2, agility = 130, exp = 22, level = 30, wildLvl = 60, type = "water", type2 = "no type"},
 
-["Marill"] = {offense = 2, defense = 5, specialattack = 2, vitality = 7, agility = 101, exp = 58, level = 20, wildLvl = 20, type = "water", type2 = "no type"},
+-- ["Shiny Gyarados"] = {offense = 4, defense = 8, specialattack = 14, vitality = 15.45, agility = 210, exp = 2900, level = 120, wildLvl = 250, type = "water", type2 = "flying"},
 
-["Azumarill"] = {offense = 5, defense = 8, specialattack = 5, vitality = 10, agility = 120, exp = 153, level = 65, wildLvl = 65, type = "water", type2 = "no type"},
+-- ["Shiny Ditto"] = {offense = 0.9, defense = 5.28, specialattack = 5.28, vitality = 5.28, agility = 200, exp = 67.1, level = 8, wildLvl = 60, type = "normal", type2 = "no type"},
 
-["Sudowoodo"] = {offense = 10, defense = 11.5, specialattack = 3, vitality = 7, agility = 110, exp = 135, level = 80, wildLvl = 80, type = "rock", type2 = "no type"},
+-- ["Shiny Vaporeon"] = {offense = 1.9, defense = 9, specialattack = 11, vitality = 13.2, agility = 230, exp = 215.6, level = 100, wildLvl = 250, type = "water", type2 = "no type"},
 
-["Politoed"] = {offense = 7.5, defense = 7.5, specialattack = 9, vitality = 9, agility = 134, exp = 185, level = 65, wildLvl = 65, type = "water", type2 = "no type"},
+-- ["Shiny Jolteon"] = {offense = 1.9, defense = 9, specialattack = 11, vitality = 13.2, agility = 230, exp = 216.7, level = 100, wildLvl = 250, type = "electric", type2 = "no type"},
+ 
+-- ["Shiny Flareon"] = {offense = 1.9, defense = 9, specialattack = 11, vitality = 13.2, agility = 230, exp = 217.8, level = 100, wildLvl = 250, type = "fire", type2 = "no type"},
 
-["Hoppip"] = {offense = 3.5, defense = 4, specialattack = 3.5, vitality = 3.5, agility = 112, exp = 74, level = 5, wildLvl = 5, type = "grass", type2 = "flying"},
+-- ["Shiny Snorlax"] = {offense = 8.2, defense = 8, specialattack = 15, vitality = 19, agility = 240, exp = 6500, level = 150, wildLvl = 250, type = "normal", type2 = "no type"},
 
-["Skiploom"] = {offense = 4.5, defense = 5, specialattack = 4.5, vitality = 5.5, agility = 135, exp = 136, level = 25, wildLvl = 25, type = "grass", type2 = "flying"},
+-- ["Shiny Dratini"] = {offense = 1.2, defense = 8, specialattack = 4.5, vitality = 8, agility = 190, exp = 73.7, level = 40, wildLvl = 110, type = "dragon", type2 = "no type"},
 
-["Jumpluff"] = {offense = 5.5, defense = 7, specialattack = 5.5, vitality = 7.5, agility = 150, exp = 176, level = 50, wildLvl = 50, type = "grass", type2 = "flying"},
+-- ["Shiny Dragonair"] = {offense = 2.9, defense = 10, specialattack = 11, vitality = 14.2, agility = 200, exp = 2555, level = 90, wildLvl = 250, type = "dragon", type2 = "no type"},
 
-["Aipom"] = {offense = 7, defense = 5.5, specialattack = 4, vitality = 5.5, agility = 140, exp = 94, level = 40, wildLvl = 40, type = "normal", type2 = "no type"},
+-- ["Shiny Dragonite"] = {offense = 13.4, defense = 9.5, specialattack = 10, vitality = 9.1, agility = 300, exp = 270, level = 150, wildLvl = 300, type = "dragon", type2 = "flying"},
 
-["Sunkern"] = {offense = 3, defense = 3, specialattack = 3.5, vitality = 3, agility = 100, exp = 52, level = 5, wildLvl = 5, type = "grass", type2 = "no type"},
+-- ["Shiny Mr. Mime"] = {offense = 2.1, defense = 12, specialattack = 12, vitality = 13.2, agility = 200, exp = 2150, level = 100, wildLvl = 250, type = "psychic", type2 = "no type"},
 
-["Sunflora"] = {offense = 7.5, defense = 5.5, specialattack = 10.5, vitality = 7.5, agility = 100, exp = 146, level = 30, wildLvl = 30, type = "grass", type2 = "no type"},
+-- ["Shiny Ninetales"] = {offense = 5, defense = 8, specialattack = 11, vitality = 13.6, agility = 280, exp = 3000, level = 150, wildLvl = 300, type = "fire", type2 = "no type"},
 
-["Yanma"] = {offense = 6.5, defense = 4.5, specialattack = 7.5, vitality = 6.5, agility = 150, exp = 147, level = 50, wildLvl = 50, type = "bug", type2 = "flying"},
+-- ["Shiny Rhydon"] = {offense = 5, defense = 10, specialattack = 11, vitality = 16.2, agility = 210, exp = 3205, level = 150, wildLvl = 300, type = "ground", type2 = "rock"},
 
-["Wooper"] = {offense = 4.5, defense = 4.5, specialattack = 2.5, vitality = 5.5, agility = 95, exp = 52, level = 20, wildLvl = 20, type = "water", type2 = "ground"},
+-- ["Shiny Umbreon"] = {offense = 4, defense = 9, specialattack = 11, vitality = 14, agility = 280, exp = 2340, level = 150, wildLvl = 300, type = "dark", type2 = "no type"},
 
-["Quagsire"] = {offense = 8.5, defense = 8.5, specialattack = 6.5, vitality = 9.5, agility = 105, exp = 137, level = 65, wildLvl = 65, type = "water", type2 = "ground"},
+-- ["Shiny Espeon"] = {offense = 4, defense = 9, specialattack = 11, vitality = 13.2, agility = 270, exp = 2340, level = 150, wildLvl = 300, type = "psychic", type2 = "no type"},
 
-["Espeon"] = {offense = 6.5, defense = 6, specialattack = 13, vitality = 6.5, agility = 155, exp = 197, level = 55, wildLvl = 55, type = "psychic", type2 = "no type"},
+-- ["Shiny Magneton"] = {offense = 3, defense = 9, specialattack = 11, vitality = 14, agility = 200, exp = 2125, level = 150, wildLvl = 300, type = "electric", type2 = "steel"},
 
-["Umbreon"] = {offense = 6.5, defense = 11, specialattack = 6, vitality = 9.5, agility = 145, exp = 197, level = 55, wildLvl = 55, type = "dark", type2 = "no type"},
+-- ["Shiny Politoed"] = {offense = 4, defense = 8, specialattack = 11, vitality = 14.8, agility = 230, exp = 3185, level = 150, wildLvl = 300, type = "water", type2 = "no type"},
 
-["Murkrow"] = {offense = 8.5, defense = 4.2, specialattack = 8.5, vitality = 6, agility = 145, exp = 107, level = 55, wildLvl = 55, type = "dark", type2 = "flying"},
+-- ["Shiny Stantler"] = {offense = 1.9, defense = 9, specialattack = 11, vitality = 14.2, agility = 230, exp = 216.7, level = 100, wildLvl = 250, type = "normal", type2 = "no type"},
 
-["Slowking"] = {offense = 7.5, defense = 8, specialattack = 10, vitality = 9.5, agility = 125, exp = 164, level = 100, wildLvl = 100, type = "water", type2 = "psychic"},
+-- ["Shiny Dodrio"] = {offense = 4, defense = 9, specialattack = 11, vitality = 14, agility = 280, exp = 2340, level = 150, wildLvl = 300, type = "normal", type2 = "flying"},
 
-["Misdreavus"] = {offense = 6, defense = 6, specialattack = 8.5, vitality = 6, agility = 135, exp = 147, level = 80, wildLvl = 80, type = "ghost", type2 = "no type"},
+-- ["Shiny Ariados"] = {offense = 2.2, defense = 10, specialattack = 11, vitality = 13.6, agility = 200, exp = 136.4, level = 100, wildLvl = 300, type = "bug", type2 = "poison"},
 
-["Unown"] = {offense = 7.2, defense = 4.8, specialattack = 7.2, vitality = 4.8, agility = 110, exp = 61, level = 100, wildLvl = 100, type = "psychic", type2 = "no type"},
+-- ["Shiny Tauros"] = {offense = 2.1, defense = 12, specialattack = 11, vitality = 15.2, agility = 200, exp = 2150, level = 100, wildLvl = 250, type = "normal", type2 = "no type"},
 
-["Wobbuffet"] = {offense = 15.3, defense = 40.8, specialattack = 20.3, vitality = 26, agility = 130, exp = 177, level = 80, wildLvl = 80, type = "psychic", type2 = "no type"},
+-- ["Shiny Crobat"] = {offense = 2.9, defense = 10, specialattack = 11, vitality = 14.2, agility = 200, exp = 2555, level = 100, wildLvl = 250, type = "poison", type2 = "flying"},
 
-["Girafarig"] = {offense = 8, defense = 6.5, specialattack = 9, vitality = 7, agility = 150, exp = 149, level = 80, wildLvl = 80, type = "normal", type2 = "psychic"},
+-- ["Shiny Magmar"] = {offense = 2.1, defense = 11, specialattack = 11, vitality = 14.2, agility = 200, exp = 2150, level = 100, wildLvl = 250, type = "fire", type2 = "no type"},
 
-["Pineco"] = {offense = 6.5, defense = 9, specialattack = 3.5, vitality = 5, agility = 95, exp = 60, level = 15, wildLvl = 15, type = "bug", type2 = "no type"},
+-- ["Shiny Magmortar"] = {offense = 2.1, defense = 14, specialattack = 11, vitality = 18.2, agility = 200, exp = 2150, level = 150, wildLvl = 450, type = "fire", type2 = "no type"},
 
-["Forretress"] = {offense = 9, defense = 14, specialattack = 6, vitality = 7.5, agility = 110, exp = 118, level = 65, wildLvl = 65, type = "bug", type2 = "steel"},
+-- ["Shiny Electivire"] = {offense = 2.2, defense = 14, specialattack = 11, vitality = 18.5, agility = 210, exp = 800, level = 150, wildLvl = 450, type = "electric", type2 = "no type"},
 
-["Dunsparce"] = {offense = 7, defense = 7, specialattack = 6.5, vitality = 10, agility = 106, exp = 125, level = 30, wildLvl = 30, type = "normal", type2 = "no type"},
+-- ["Magmortar"] = {offense = 2.1, defense = 8, specialattack = 8, vitality = 11.2, agility = 200, exp = 2150, level = 100, wildLvl = 450, type = "fire", type2 = "no type"},
 
-["Gligar"] = {offense = 7.5, defense = 10.5, specialattack = 3.5, vitality = 6.5, agility = 135, exp = 108, level = 40, wildLvl = 40, type = "ground", type2 = "flying"},
+-- ["Electivire"] = {offense = 2.2, defense = 8, specialattack = 8, vitality = 11.5, agility = 210, exp = 800, level = 100, wildLvl = 450, type = "electric", type2 = "no type"},
 
-["Steelix"] = {offense = 18.5, defense = 20, specialattack = 15.5, vitality = 17.5, agility = 130, exp = 196, level = 100, wildLvl = 500, type = "steel", type2 = "ground"},
+-- ["Shiny Ampharos"] = {offense = 3, defense = 9, specialattack = 11, vitality = 14, agility = 200, exp = 2125, level = 100, wildLvl = 250, type = "electric", type2 = "steel"},
 
-["Metagross"] = {offense = 28.5, defense = 20, specialattack = 15.5, vitality = 17.5, agility = 130, exp = 196, level = 100, wildLvl = 500, type = "steel", type2 = "ground"},
+-- ["Shiny Feraligatr"] = {offense = 4, defense = 8, specialattack = 11, vitality = 14.8, agility = 230, exp = 3185, level = 100, wildLvl = 250, type = "water", type2 = "no type"},
+ 
+-- ["Shiny Giant Magikarp"] = {offense = 4, defense = 8, specialattack = 7, vitality = 12.8, agility = 230, exp = 3185, level = 100, wildLvl = 250, type = "water", type2 = "no type"},
 
-["Metagross Cells"] = {offense = 538.5, defense = 630, specialattack = 735.5, vitality = 637.5, agility = 730, exp = 6196, level = 100, wildLvl = 500, type = "steel", type2 = "ground"},
+-- ["Shiny Machamp"] = {offense = 5, defense = 10, specialattack = 11, vitality = 15.2, agility = 210, exp = 3205, level = 100, wildLvl = 250, type = "fighting", type2 = "no type"},
 
-["Steelix Cells"] = {offense = 708.5, defense = 800, specialattack = 635.5, vitality = 537.5, agility = 630, exp = 196, level = 100, wildLvl = 500, type = "steel", type2 = "ground"},
+-- ["Shiny Meganium"] = {offense = 5, defense = 8, specialattack = 11, vitality = 14.6, agility = 280, exp = 3000, level = 100, wildLvl = 520, type = "grass", type2 = "no type"},
 
-["Snubbull"] = {offense = 8, defense = 5, specialattack = 4, vitality = 6, agility = 100, exp = 63, level = 30, wildLvl = 30, type = "normal", type2 = "no type"},
+-- ["Shiny Larvitar"] = {offense = 1.2, defense = 8, specialattack = 5.5, vitality = 8, agility = 190, exp = 73.7, level = 40, wildLvl = 90, type = "ground", type2 = "rock"},
 
-["Granbull"] = {offense = 12, defense = 7.5, specialattack = 6, vitality = 9, agility = 110, exp = 178, level = 65, wildLvl = 65, type = "normal", type2 = "no type"},
+-- ["Shiny Pupitar"] = {offense = 2.9, defense = 10, specialattack = 11, vitality = 14.2, agility = 200, exp = 2555, level = 90, wildLvl = 250, type = "ground", type2 = "rock"},
 
-["Qwilfish"] = {offense = 9.5, defense = 8.5, specialattack = 5.5, vitality = 6.5, agility = 135, exp = 100, level = 55, wildLvl = 55, type = "water", type2 = "poison"},
+-- ["Shiny Typhlosion"] = {offense = 1.9, defense = 9, specialattack = 11, vitality = 14.2, agility = 230, exp = 217.8, level = 100, wildLvl = 250, type = "fire", type2 = "no type"},
 
-["Scizor"] = {offense = 33, defense = 30, specialattack = 35.5, vitality = 37, agility = 210, exp = 200, level = 100, wildLvl = 100, type = "bug", type2 = "steel"},
+-- ["Shiny Xatu"] = {offense = 4, defense = 9, specialattack = 11, vitality = 14.2, agility = 270, exp = 2340, level = 100, wildLvl = 250, type = "psychic", type2 = "flying"},
 
-["Shuckle"] = {offense = 4.3, defense = 23, specialattack = 4.3, vitality = 4.3, agility = 95, exp = 80, level = 30, wildLvl = 30, type = "bug", type2 = "rock"},
+-- ["Shiny Magcargo"] = {offense = 2.1, defense = 12, specialattack = 11, vitality = 14.2, agility = 200, exp = 2150, level = 100, wildLvl = 250, type = "fire", type2 = "rock"},
 
-["Heracross"] = {offense = 12.5, defense = 7.5, specialattack = 4, vitality = 8, agility = 135, exp = 200, level = 80, wildLvl = 80, type = "bug", type2 = "fighting"},
+-- ["Shiny Lanturn"] = {offense = 3, defense = 9, specialattack = 11, vitality = 14, agility = 200, exp = 2125, level = 100, wildLvl = 250, type = "water", type2 = "electric"},
 
-["Sneasel"] = {offense = 9.5, defense = 5.5, specialattack = 5.5, vitality = 5.5, agility = 160, exp = 132, level = 55, wildLvl = 55, type = "dark", type2 = "ice"},
+-- ["Shiny Sandslash"] = {offense = 2.1, defense = 13, specialattack = 11, vitality = 14.2, agility = 200, exp = 2150, level = 100, wildLvl = 250, type = "ground", type2 = "rock"},
 
-["Teddiursa"] = {offense = 8, defense = 5, specialattack = 5, vitality = 6, agility = 110, exp = 124, level = 20, wildLvl = 20, type = "normal", type2 = "no type"},
+-- ["Shiny Weezing"] = {offense = 3, defense = 10, specialattack = 11, vitality = 13, agility = 200, exp = 2125, level = 100, wildLvl = 250, type = "poison", type2 = "no type"},
 
-["Ursaring"] = {offense = 100, defense = 60, specialattack = 100, vitality = 200, agility = 110, exp = 20, level = 90, wildLvl = 600, type = "normal", type2 = "no type"},
+-- ["Shiny Mantine"] = {offense = 1.9, defense = 9, specialattack = 11, vitality = 15.1, agility = 200, exp = 200, level = 150, wildLvl = 450, type = "water", type2 = "flying"},
 
-["Slugma"] = {offense = 4, defense = 4, specialattack = 7, vitality = 4, agility = 95, exp = 38, level = 15, wildLvl = 15, type = "fire", type2 = "no type"},
+-----------------------------------------------------------Startos Pokemon Johto-----------------------------------------------------------
 
-["Magcargo"] = {offense = 5, defense = 12, specialattack = 8, vitality = 5, agility = 110, exp = 154, level = 60, wildLvl = 60, type = "fire", type2 = "rock"},
+["Chikorita"] = {offense = 4.9, defense = 6.5, specialattack = 4.9, vitality = 4.5 , agility = 200, exp = 64, level = 20, wildLvl = 30, type = "grass", type2 = "no type"},
 
-["Swinub"] = {offense = 5, defense = 4, specialattack = 3, vitality = 5, agility = 112, exp = 78, level = 15, wildLvl = 15, type = "ice", type2 = "ground"},
+["Bayleef"] = {offense = 6.2, defense = 8, specialattack = 6.3, vitality = 6, agility = 200, exp = 142, level = 40, wildLvl = 50, type = "grass", type2 = "no type"},
+                                        --10
+["Meganium"] = {offense = 8.2, defense = 10, specialattack = 8.3, vitality = 8, agility = 200, exp = 236, level = 85, wildLvl = 95, type = "grass", type2 = "no type"},
 
-["Piloswine"] = {offense = 10, defense = 8, specialattack = 6, vitality = 10, agility = 125, exp = 160, level = 80, wildLvl = 80, type = "ice", type2 = "ground"},
+["Cyndaquil"] = {offense = 5.2, defense = 4.3, specialattack = 6, vitality = 3.9, agility = 200, exp = 62, level = 20, wildLvl = 30, type = "fire", type2 = "no type"},
 
-["Corsola"] = {offense = 5.5, defense = 8.5, specialattack = 6.5, vitality = 5.5, agility = 95, exp = 113, level = 50, wildLvl = 50, type = "water", type2 = "rock"},
+["Quilava"] = {offense = 6.4, defense = 5.8, specialattack = 8, vitality = 5.8, agility = 200, exp = 142, level = 40, wildLvl = 50, type = "fire", type2 = "no type"},
 
-["Remoraid"] = {offense = 6.5, defense = 3.5, specialattack = 6.5, vitality = 3.5, agility = 120, exp = 78, level = 10, wildLvl = 10, type = "water", type2 = "no type"},
+["Typhlosion"] = {offense = 8.4, defense = 7.8, specialattack = 10.9, vitality = 7.8, agility = 200, exp = 240, level = 85, wildLvl = 95, type = "fire", type2 = "no type"},
 
-["Octillery"] = {offense = 10.5, defense = 7.5, specialattack = 10.5, vitality = 7.5, agility = 115, exp = 164, level = 70, wildLvl = 70, type = "water", type2 = "no type"},
+["Totodile"] = {offense = 6.5, defense = 6.5, specialattack = 4.4, vitality = 5, agility = 200, exp = 63, level = 20, wildLvl = 30, type = "water", type2 = "no type"},
 
-["Delibird"] = {offense = 5.5, defense = 4.5, specialattack = 6.5, vitality = 4.5, agility = 130, exp = 183, level = 40, wildLvl = 40, type = "ice", type2 = "flying"},
+["Croconaw"] = {offense = 8.0, defense = 8, specialattack = 5.9, vitality = 6.5, agility = 200, exp = 142, level = 40, wildLvl = 50, type = "water", type2 = "no type"},
 
-["Mantine"] = {offense = 4, defense = 7, specialattack = 8, vitality = 6.5, agility = 130, exp = 168, level = 80, wildLvl = 80, type = "water", type2 = "flying"},
+["Feraligatr"] = {offense = 10.5, defense = 10, specialattack = 7.9, vitality = 8.5, agility = 200, exp = 239, level = 85, wildLvl = 95, type = "water", type2 = "no type"},
 
-["Skarmory"] = {offense = 8, defense = 14, specialattack = 4, vitality = 6.5, agility = 169, exp = 168, level = 85, wildLvl = 85, type = "steel", type2 = "flying"},
+["Sentret"] = {offense = 4.6, defense = 3.4, specialattack = 3.5, vitality = 3.5, agility = 200, exp = 43, level = 15, wildLvl = 15, type = "normal", type2 = "no type"},
 
-["Houndour"] = {offense = 6, defense = 3, specialattack = 8, vitality = 4.5, agility = 128, exp = 114, level = 20, wildLvl = 20, type = "dark", type2 = "fire"},
+["Furret"] = {offense = 7.6, defense = 6.4, specialattack = 4.5, vitality = 8.5, agility = 200, exp = 145, level = 35, wildLvl = 45, type = "normal", type2 = "no type"},
 
-["Houndoom"] = {offense = 9, defense = 5, specialattack = 11, vitality = 7.5, agility = 161, exp = 204, level = 80, wildLvl = 80, type = "dark", type2 = "fire"},
+["Hoothoot"] = {offense = 3, defense = 3, specialattack = 3.6, vitality = 6, agility = 200, exp = 52, level = 20, wildLvl = 30, type = "normal", type2 = "flying"},
 
-["Kingdra"] = {offense = 9.5, defense = 9.5, specialattack = 9.5, vitality = 7.5, agility = 150, exp = 207, level = 90, wildLvl = 90, type = "water", type2 = "dragon"},
+["Noctowl"] = {offense = 5, defense = 5, specialattack = 7.6, vitality = 10, agility = 280, exp = 158, level = 65, wildLvl = 75, type = "normal", type2 = "flying"},
 
-["Phanpy"] = {offense = 6, defense = 6, specialattack = 4, vitality = 9, agility = 101, exp = 124, level = 20, wildLvl = 20, type = "ground", type2 = "no type"},
+["Ledyba"] = {offense = 2, defense = 3, specialattack = 4, vitality = 4, agility = 200, exp = 53, level = 15, wildLvl = 15, type = "bug", type2 = "flying"},
 
-["Donphan"] = {offense = 12, defense = 12, specialattack = 6, vitality = 9, agility = 112, exp = 189, level = 80, wildLvl = 80, type = "ground", type2 = "no type"},
+["Ledian"] = {offense = 3.5, defense = 5, specialattack = 5.5, vitality = 5.5, agility = 200, exp = 137, level = 35, wildLvl = 45, type = "bug", type2 = "flying"},
 
-["Porygon2"] = {offense = 8, defense = 9, specialattack = 10.5, vitality = 8.5, agility = 123, exp = 180, level = 75, wildLvl = 75, type = "normal", type2 = "no type"},
+["Spinarak"] = {offense = 6, defense = 4, specialattack = 4, vitality = 4, agility = 200, exp = 50, level = 10, wildLvl = 10, type = "bug", type2 = "poison"},
 
-["Stantler"] = {offense = 9.5, defense = 6.2, specialattack = 8.5, vitality = 7.3, agility = 145, exp = 165, level = 55, wildLvl = 55, type = "normal", type2 = "no type"},
+["Ariados"] = {offense = 9, defense = 7, specialattack = 6, vitality = 7, agility = 250, exp = 140, level = 40, wildLvl = 50, type = "bug", type2 = "poison"},
 
-["Smeargle"] = {offense = 2, defense = 3.5, specialattack = 2, vitality = 5.5, agility = 135, exp = 106, level = 80, wildLvl = 80, type = "normal", type2 = "no type"},
+["Crobat"] = {offense = 9, defense = 8, specialattack = 7, vitality = 8.5, agility = 300, exp = 241, level = 80, wildLvl = 90, type = "poison", type2 = "flying"},
 
-["Tyrogue"] = {offense = 3.5, defense = 3.5, specialattack = 3.5, vitality = 3.5, agility = 120, exp = 91, level = 30, wildLvl = 30, type = "fighting", type2 = "no type"},
+["Chinchou"] = {offense = 3.8, defense = 3.8, specialattack = 5.6, vitality = 7.5, agility = 190, exp = 66, level = 15, wildLvl = 15, type = "water", type2 = "electric"},
 
-["Hitmontop"] = {offense = 9, defense = 9.5, specialattack = 3.5, vitality = 5, agility = 135, exp = 138, level = 60, wildLvl = 60, type = "fighting", type2 = "no type"},
+["Lanturn"] = {offense = 5.8, defense = 5.8, specialattack = 7.6, vitality = 12.5, agility = 200, exp = 161, level = 50, wildLvl = 60, type = "water", type2 = "electric"},
 
-["Smoochum"] = {offense = 3, defense = 1.5, specialattack = 8.5, vitality = 4.5, agility = 128, exp = 87, level = 30, wildLvl = 30, type = "ice", type2 = "psychic"},
+["Pichu"] = {offense = 4, defense = 1.5, specialattack = 3.5, vitality = 2, agility = 200, exp = 41, level = 20, wildLvl = 30, type = "electric", type2 = "no type"},
 
-["Elekid"] = {offense = 6.3, defense = 3.7, specialattack = 6.5, vitality = 4.5, agility = 140, exp = 106, level = 30, wildLvl = 30, type = "electric", type2 = "no type"},
+["Cleffa"] = {offense = 2.5, defense = 2.8, specialattack = 4.5, vitality = 5, agility = 200, exp = 44, level = 20, wildLvl = 30, type = "normal", type2 = "no type"},
 
-["Magby"] = {offense = 7.5, defense = 3.7, specialattack = 7, vitality = 4.5, agility = 140, exp = 117, level = 30, wildLvl = 30, type = "fire", type2 = "no type"},
+["Igglybuff"] = {offense = 3, defense = 1.5, specialattack = 4, vitality = 9, agility = 200, exp = 42, level = 20, wildLvl = 30, type = "normal", type2 = "no type"},
 
-["Miltank"] = {offense = 8, defense = 10.5, specialattack = 7, vitality = 9.5, agility = 167, exp = 200, level = 80, wildLvl = 80, type = "normal", type2 = "no type"},
+["Togepi"] = {offense = 2, defense = 6.5, specialattack = 4, vitality = 3.5, agility = 200, exp = 49, level = 10, wildLvl = 5, type = "normal", type2 = "no type"},
 
-["Blissey"] = {offense = 1, defense = 1, specialattack = 7.5, vitality = 25.5, agility = 117, exp = 255, level = 100, wildLvl = 100, type = "normal", type2 = "no type"},
+["Togetic"] = {offense = 4, defense = 8.5, specialattack = 8, vitality = 5.5, agility = 230, exp = 142, level = 60, wildLvl = 70, type = "normal", type2 = "flying"},
 
-["Raikou"] = {offense = 60.5, defense = 60.5, specialattack = 200, vitality = 300, agility = 1500, exp = 216, level = 150, wildLvl = 500, type = "electric", type2 = "no type"},
+["Natu"] = {offense = 5, defense = 4.5, specialattack = 7, vitality = 4, agility = 250, exp = 64, level = 25, wildLvl = 35, type = "psychic", type2 = "flying"},
 
-["Entei"] = {offense = 60.5, defense = 60.5, specialattack = 350, vitality = 400, agility = 1000, exp = 217, level = 150, wildLvl = 500, type = "fire", type2 = "no type"},
+["Xatu"] = {offense = 7.5, defense = 7, specialattack = 9.5, vitality = 6.5, agility = 300, exp = 165, level = 80, wildLvl = 90, type = "psychic", type2 = "flying"},
 
-["Suicune"] = {offense = 60.5, defense = 60.5, specialattack = 150, vitality = 150, agility = 1340, exp = 218, level = 150, wildLvl = 500, type = "water", type2 = "no type"},
+["Mareep"] = {offense = 4, defense = 4, specialattack = 6.5, vitality = 5.5, agility = 200, exp = 56, level = 20, wildLvl = 30, type = "electric", type2 = "no type"},
 
-["Sea Suicune"] = {offense = 70, defense = 70, specialattack = 70, vitality = 70, agility = 180, exp = 218, level = 150, wildLvl = 500, type = "water", type2 = "no type"},
+["Flaaffy"] = {offense = 5.5, defense = 5.5, specialattack = 8, vitality = 7, agility = 200, exp = 128, level = 40, wildLvl = 50, type = "electric", type2 = "no type"},
 
-["Larvitar"] = {offense = 10, defense = 10, specialattack = 12, vitality = 10, agility = 110, exp = 67, level = 20, wildLvl = 20, type = "rock", type2 = "ground"},
+["Ampharos"] = {offense = 7.5, defense = 8.5, specialattack = 11.5, vitality = 9, agility = 200, exp = 230, level = 85, wildLvl = 95, type = "electric", type2 = "no type"},
 
-["Pupitar"] = {offense = 20, defense = 20, specialattack = 20, vitality = 20, agility = 120, exp = 144, level = 65, wildLvl = 65, type = "rock", type2 = "ground"},
+["Bellossom"] = {offense = 8, defense = 9.5, specialattack = 9, vitality = 7.5, agility = 200, exp = 221, level = 50, wildLvl = 60, type = "grass", type2 = "no type"},
 
-["Tyranitar"] = {offense = 60, defense = 60, specialattack = 60, vitality = 60, agility = 200, exp = 1000, level = 100, wildLvl = 500, type = "rock", type2 = "dark"},
+["Marill"] = {offense = 2, defense = 5, specialattack = 2, vitality = 7, agility = 200, exp = 88, level = 20, wildLvl = 30, type = "water", type2 = "no type"},
 
-["Black Tyranitar"] = {offense = 160, defense = 160, specialattack = 160, vitality = 160, agility = 200, exp = 1000, level = 100, wildLvl = 500, type = "rock", type2 = "dark"},
+["Azumarill"] ={offense = 5, defense = 8, specialattack = 6, vitality = 10, agility = 200, exp = 189, level = 65, wildLvl = 75, type = "water", type2 = "no type"},
 
-["Psycho Lugia"] = {offense = 170, defense = 170, specialattack = 175, vitality = 170.6, agility = 700, exp = 500, level = 200, wildLvl = 200, type = "psychic", type2 = "flying"},
+["Sudowoodo"] = {offense = 10, defense = 11.5, specialattack = 3, vitality = 7, agility = 200, exp = 144, level = 80, wildLvl = 90, type = "rock", type2 = "no type"},
+ 
+["Politoed"] = {offense = 7.5, defense = 7.5, specialattack = 9, vitality = 9, agility = 200, exp = 225, level = 65, wildLvl = 75, type = "water", type2 = "no type"},
 
-["Black Lugia"] = {offense = 870, defense = 870, specialattack = 775, vitality = 670.6, agility = 900, exp = 500, level = 200, wildLvl = 200, type = "psychic", type2 = "flying"},
+["Hoppip"] = {offense = 3.5, defense = 4, specialattack = 3.5, vitality = 3.5, agility = 180, exp = 50, level = 10, wildLvl = 5, type = "grass", type2 = "flying"},
 
-["Jungle Celebi"] = {offense = 75, defense = 75, specialattack = 75, vitality = 75, agility = 300, exp = 750, level = 200, wildLvl = 500, type = "psychic", type2 = "grass"},
+["Skiploom"] = {offense = 4.5, defense = 5, specialattack = 4.5, vitality = 5.5, agility = 200, exp = 119, level = 25, wildLvl = 35, type = "grass", type2 = "flying"},
 
-["Shiny Hitmontop"] = {offense = 20.2, defense = 15.83, specialattack = 20.85, vitality = 15.5, agility = 173, exp = 152.9, level = 100, wildLvl = 100, type = "fighting", type2 = "no type"},
- --alterado v1.9 \/
-["Shiny Mr. Mime"] = {offense = 29.5, defense = 40.5, specialattack = 30, vitality = 33, agility = 190, exp = 136, level = 80, wildLvl = 80, type = "psychic", type2 = "no type"},
+["Jumpluff"] = {offense = 5.5, defense = 7, specialattack = 5.5, vitality = 7.5, agility = 200, exp = 207, level = 50, wildLvl = 60, type = "grass", type2 = "flying"},
 
-["Shiny Rhydon"] = {offense = 33, defense = 10, specialattack = 29.5, vitality = 29.5, agility = 127, exp = 204, level = 75, wildLvl = 75, type = "ground", type2 = "rock"},
+["Aipom"] = {offense = 7, defense = 5.5, specialattack = 4, vitality = 5.5, agility = 200, exp = 72, level = 40, wildLvl = 50, type = "normal", type2 = "no type"},
 
-["Shiny Ninetales"] = {offense = 32.6, defense = 7.5, specialattack = 28.1, vitality = 33.3, agility = 167, exp = 178, level = 70, wildLvl = 70, type = "fire", type2 = "no type"},
+["Sunkern"] = {offense = 3, defense = 3, specialattack = 3, vitality = 3, agility = 160, exp = 36, level = 10, wildLvl = 5, type = "grass", type2 = "no type"},
 
-["Shiny Ariados"] = {offense = 9, defense = 7, specialattack = 6, vitality = 7, agility = 120, exp = 134, level = 35, wildLvl = 35, type = "bug", type2 = "poison"},
+["Sunflora"] = {offense = 7.5, defense = 5.5, specialattack = 10.5, vitality = 7.5, agility = 200, exp = 149, level = 30, wildLvl = 40, type = "grass", type2 = "no type"},
 
-["Shiny Magneton"] = {offense = 26, defense = 9.5, specialattack = 29, vitality = 35, agility = 134, exp = 161, level = 40, wildLvl = 40, type = "electric", type2 = "steel"},
+["Yanma"] = {offense = 6.5, defense = 4.5, specialattack = 7.5, vitality = 6.5, agility = 230, exp = 78, level = 50, wildLvl = 60, type = "bug", type2 = "flying"},
 
-["Shiny Espeon"] = {offense = 6.5, defense = 6, specialattack = 13, vitality = 6.5, agility = 155, exp = 197, level = 55, wildLvl = 55, type = "psychic", type2 = "no type"},
+["Wooper"] = {offense = 4.5, defense = 4.5, specialattack = 2.5, vitality = 5.5, agility = 200, exp = 42, level = 20, wildLvl = 30, type = "water", type2 = "ground"},
 
-["Shiny Politoed"] = {offense = 7.5, defense = 7.5, specialattack = 9, vitality = 9, agility = 134, exp = 185, level = 65, wildLvl = 65, type = "water", type2 = "no type"},
+["Quagsire"] = {offense = 8.5, defense = 8.5, specialattack = 6.5, vitality = 9.5, agility = 200, exp = 151, level = 65, wildLvl = 75, type = "water", type2 = "ground"},
 
-["Shiny Umbreon"] = {offense = 6.5, defense = 11, specialattack = 6, vitality = 9.5, agility = 145, exp = 197, level = 55, wildLvl = 55, type = "dark", type2 = "no type"},
+["Espeon"] = {offense = 6.5, defense = 6, specialattack = 13, vitality = 6.5, agility = 230, exp = 184, level = 55, wildLvl = 65, type = "psychic", type2 = "no type"},
 
-["Shiny Stantler"] = {offense = 9.5, defense = 6.2, specialattack = 8.5, vitality = 7.3, agility = 145, exp = 165, level = 55, wildLvl = 55, type = "normal", type2 = "no type"},
+["Umbreon"] = {offense = 6.5, defense = 11, specialattack = 6, vitality = 9.5, agility = 230, exp = 184, level = 55, wildLvl = 65, type = "dark", type2 = "no type"},
 
-["Shiny Dodrio"] = {offense = 11, defense = 7, specialattack = 6, vitality = 6, agility = 167, exp = 158, level = 45, wildLvl = 45, type = "normal", type2 = "flying"},
+["Murkrow"] = {offense = 8.5, defense = 4.2, specialattack = 8.5, vitality = 6, agility = 280, exp = 81, level = 55, wildLvl = 65, type = "dark", type2 = "flying"},
 
+["Slowking"] = {offense = 7.5, defense = 8, specialattack = 10, vitality = 9.5, agility = 220, exp = 172, level = 100, wildLvl = 110, type = "water", type2 = "psychic"},
 
-			---Novos Stats
+["Misdreavus"] = {offense = 6, defense = 6, specialattack = 8.5, vitality = 6, agility = 200, exp = 87, level = 80, wildLvl = 90, type = "ghost", type2 = "no type"},
 
-["Deoxys"] = {offense = 300, defense = 320, specialattack = 400, vitality = 400, agility = 3000, exp = 1000, level = 1, wildLvl = 300, type = "psychic", type2 = "electric"},
+["Unown"] = {offense = 7.2, defense = 4.8, specialattack = 7.2, vitality = 4.8, agility = 200, exp = 118, level = 100, wildLvl = 110, type = "psychic", type2 = "no type"},
 
-["Shiny Deoxys"] = {offense = 350, defense = 370, specialattack = 500, vitality = 470, agility = 3000, exp = 8200, level = 1, wildLvl = 350, type = "psychic", type2 = "electric"},
+["Wobbuffet"] = {offense = 3.3, defense = 5.8, specialattack = 3.3, vitality = 19, agility = 200, exp = 142, level = 80, wildLvl = 90, type = "psychic", type2 = "no type"},
 
-["Ultra Deoxys"] = {offense = 950, defense = 870, specialattack = 900, vitality = 870, agility = 3000, exp = 8200, level = 10, wildLvl = 350, type = "psychic", type2 = "electric"},
+["Girafarig"] = {offense = 8, defense = 6.5, specialattack = 9, vitality = 7, agility = 300, exp = 159, level = 80, wildLvl = 90, type = "normal", type2 = "psychic"},
 
-["Shiny Articuno"] = {offense = 130, defense = 120, specialattack = 300, vitality = 310, agility = 700, exp = 1000, level = 1, wildLvl = 200, type = "ice", type2 = "flying"},
+["Pineco"] = {offense = 6.5, defense = 9, specialattack = 3.5, vitality = 5, agility = 190, exp = 58, level = 15, wildLvl = 15, type = "bug", type2 = "no type"},
 
-["Shiny Moltres"] = {offense = 130, defense = 120, specialattack = 300, vitality = 310, agility = 700, exp = 1000, level = 1, wildLvl = 200, type = "fire", type2 = "flying"},
+["Forretress"] = {offense = 9, defense = 14, specialattack = 6, vitality = 7.5, agility = 200, exp = 163, level = 65, wildLvl = 75, type = "bug", type2 = "steel"},
 
-["Darkrai"] = {offense = 220, defense = 200, specialattack = 320, vitality = 300, agility = 500, exp = 209, level = 1, wildLvl = 200, type = "ghost", type2 = "poison"},
+["Dunsparce"] = {offense = 7, defense = 7, specialattack = 6.5, vitality = 10, agility = 180, exp = 145, level = 30, wildLvl = 40, type = "normal", type2 = "no type"},
 
-["Obscure Darkrai"] = {offense = 920, defense = 800, specialattack = 720, vitality = 500, agility = 800, exp = 20009, level = 1, wildLvl = 200, type = "ghost", type2 = "poison"},
+["Gligar"] = {offense = 7.5, defense = 10.5, specialattack = 3.5, vitality = 6.5, agility = 200, exp = 86, level = 40, wildLvl = 50, type = "ground", type2 = "flying"},
 
-["Obscure Darkrai MVP"] = {offense = 1000, defense = 1100, specialattack = 1000, vitality = 1500, agility = 1800, exp = 20009, level = 1, wildLvl = 200, type = "ghost", type2 = "poison"},
+["Steelix"] = {offense = 9.5, defense = 22, specialattack = 6, vitality = 8.3, agility = 220, exp = 179, level = 100, wildLvl = 110, type = "steel", type2 = "ground"},
 
-["Shiny Darkrai"] = {offense = 270, defense = 200, specialattack = 370, vitality = 350, agility = 500, exp = 209, level = 1, wildLvl = 200, type = "ghost", type2 = "dark"},
+["Snubbull"] = {offense = 8, defense = 5, specialattack = 4, vitality = 6, agility = 200, exp = 60, level = 30, wildLvl = 40, type = "normal", type2 = "no type"},
 
-["Kyogre"] = {offense = 230, defense = 260, specialattack = 330, vitality = 320, agility = 1500, exp = 640, level = 2, wildLvl = 200, type = "water", type2 = "ice"},
+["Granbull"] = {offense = 12, defense = 7.5, specialattack = 6, vitality = 9, agility = 200, exp = 158, level = 65, wildLvl = 75, type = "normal", type2 = "no type"},
 
-["Shiny Kyogre XP VIP"] = {offense = 330, defense = 360, specialattack = 330, vitality = 420, agility = 1500, exp = 67000, level = 2, wildLvl = 200, type = "water", type2 = "ice"},
+["Qwilfish"] = {offense = 9.5, defense = 7.5, specialattack = 5.5, vitality = 6.5, agility = 200, exp = 88, level = 55, wildLvl = 65, type = "water", type2 = "poison"},
+                                                                    
+["Scizor"] = {offense = 13, defense = 10, specialattack = 5.5, vitality = 7, agility = 310, exp = 175, level = 100, wildLvl = 110, type = "bug", type2 = "steel"},
 
-["Shiny Kyogre XP FREE"] = {offense = 330, defense = 360, specialattack = 330, vitality = 420, agility = 1500, exp = 23000, level = 2, wildLvl = 200, type = "water", type2 = "ice"},
+["Shuckle"] = {offense = 1, defense = 23, specialattack = 1, vitality = 2, agility = 200, exp = 177, level = 30, wildLvl = 40, type = "bug", type2 = "rock"},
 
-["Kyogre XP FREE"] = {offense = 200, defense = 200, specialattack = 200, vitality = 300, agility = 1500, exp = 10000, level = 2, wildLvl = 200, type = "water", type2 = "ice"},
+["Heracross"] = {offense = 12.5, defense = 7.5, specialattack = 4, vitality = 8, agility = 200, exp = 175, level = 80, wildLvl = 90, type = "bug", type2 = "fighting"},
 
-["Black Kyogre"] = {offense = 1000, defense = 1000, specialattack = 1600, vitality = 1500, agility = 2500, exp = 640, level = 120, wildLvl = 200, type = "water", type2 = "ice"},
+["Sneasel"] = {offense = 9.5, defense = 5.5, specialattack = 3.5, vitality = 5.5, agility = 270, exp = 86, level = 55, wildLvl = 65, type = "dark", type2 = "ice"},
 
-["Shiny Kyogre"] = {offense = 280, defense = 310, specialattack = 430, vitality = 470, agility = 1500, exp = 1000, level = 2, wildLvl = 200, type = "water", type2 = "ice"},
+["Teddiursa"] = {offense = 8, defense = 5, specialattack = 5, vitality = 6, agility = 200, exp = 66, level = 20, wildLvl = 30, type = "normal", type2 = "no type"},
 
-["Rayquaza"] = {offense = 230, defense = 310, specialattack = 330, vitality = 320, agility = 600, exp = 239.8, level = 3, wildLvl = 300, type = "dragon", type2 = "flying"},
+["Ursaring"] = {offense = 13, defense = 7.5, specialattack = 7.5, vitality = 9, agility = 200, exp = 175, level = 90, wildLvl = 100, type = "normal", type2 = "no type"},
 
-["Shiny Mewtwo"] = {offense = 360, defense = 140, specialattack = 460, vitality = 450, agility = 2000, exp = 1000, level = 2, wildLvl = 300, type = "psychic", type2 = "no type"},
+["Slugma"] = {offense = 4, defense = 4, specialattack = 7, vitality = 4, agility = 200, exp = 50, level = 15, wildLvl = 15, type = "fire", type2 = "no type"},
 
-["Shiny Mew"] = {offense = 370, defense = 150, specialattack = 400, vitality = 360, agility = 1200, exp = 1000, level = 2, wildLvl = 300, type = "psychic", type2 = "no type"},
+["Magcargo"] = {offense = 5, defense = 12, specialattack = 8, vitality = 5, agility = 200, exp = 151, level = 80, wildLvl = 90, type = "fire", type2 = "rock"},
 
-["Shiny Zekrom"] = {offense = 450, defense = 380, specialattack = 650, vitality = 500, agility = 1200, exp = 1000, level = 3, wildLvl = 350, type = "electric", type2 = "dragon"},
+["Swinub"] = {offense = 5, defense = 4, specialattack = 3, vitality = 5, agility = 180, exp = 50, level = 15, wildLvl = 15, type = "ice", type2 = "ground"},
 
-["Black Zekrom"] = {offense = 1050, defense = 1080, specialattack = 1050, vitality = 900, agility = 1100, exp = 1000, level = 3, wildLvl = 350, type = "electric", type2 = "dragon"},
+["Piloswine"] = {offense = 10, defense = 8, specialattack = 6, vitality = 10, agility = 200, exp = 158, level = 80, wildLvl = 90, type = "ice", type2 = "ground"},
 
-["Reshiram"] = {offense = 400, defense = 330, specialattack = 500, vitality = 350, agility = 3000, exp = 1000, level = 2, wildLvl = 300, type = "fire", type2 = "dragon"},
+["Corsola"] = {offense = 5.5, defense = 8.5, specialattack = 6.5, vitality = 5.5, agility = 200, exp = 144, level = 50, wildLvl = 60, type = "water", type2 = "rock"},
 
-["Zekrom"] = {offense = 400, defense = 330, specialattack = 570, vitality = 250, agility = 3000, exp = 1000, level = 2, wildLvl = 300, type = "electric", type2 = "dragon"},
+["Remoraid"] = {offense = 6.5, defense = 3.5, specialattack = 6.5, vitality = 3.5, agility = 200, exp = 60, level = 10, wildLvl = 10, type = "water", type2 = "no type"},
 
-["Under Zekrom"] = {offense = 500, defense = 530, specialattack = 570, vitality = 250, agility = 3000, exp = 1000, level = 2, wildLvl = 300, type = "electric", type2 = "dragon"},
+["Octillery"] = {offense = 10.5, defense = 7.5, specialattack = 10.5, vitality = 7.5, agility = 200, exp = 168, level = 70, wildLvl = 80, type = "water", type2 = "no type"},
 
-["Alpha Zekrom"] = {offense = 900, defense = 800, specialattack = 900, vitality = 710, agility = 3000, exp = 1000, level = 2, wildLvl = 300, type = "electric", type2 = "dragon"},
+["Delibird"] = {offense = 5.5, defense = 4.5, specialattack = 6.5, vitality = 4.5, agility = 200, exp = 116, level = 40, wildLvl = 50, type = "ice", type2 = "flying"},
 
-["Shiny Reshiram"] = {offense = 450, defense = 380, specialattack = 500, vitality = 300, agility = 3000, exp = 1000, level = 3, wildLvl = 350, type = "fire", type2 = "dragon"},
+["Mantine"] = {offense = 4, defense = 7, specialattack = 8, vitality = 6.5, agility = 200, exp = 170, level = 80, wildLvl = 90, type = "water", type2 = "flying"},
 
-["Azelf"] = {offense = 260, defense = 300, specialattack = 360, vitality = 340, agility = 2000, exp = 1000, level = 2, wildLvl = 500, type = "psychic", type2 = "no type"},
+["Skarmory"] = {offense = 8, defense = 14, specialattack = 4, vitality = 6.5, agility = 300, exp = 163, level = 85, wildLvl = 95, type = "steel", type2 = "flying"},
 
-["Uxie"] = {offense = 260, defense = 300, specialattack = 360, vitality = 340, agility = 2000, exp = 1000, level = 2, wildLvl = 500, type = "psychic", type2 = "no type"},
+["Houndour"] = {offense = 6, defense = 3, specialattack = 8, vitality = 4.5, agility = 270, exp = 66, level = 20, wildLvl = 30, type = "dark", type2 = "fire"},
 
-["Mesprit"] = {offense = 260, defense = 300, specialattack = 360, vitality = 340, agility = 2000, exp = 1000, level = 2, wildLvl = 500, type = "psychic", type2 = "no type"},
+["Houndoom"] = {offense = 9, defense = 5, specialattack = 11, vitality = 7.5, agility = 300, exp = 175, level = 80, wildLvl = 90, type = "dark", type2 = "fire"},
 
-["Groudon"] = {offense = 230, defense = 260, specialattack = 330, vitality = 320, agility = 500, exp = 640, level = 2, wildLvl = 200, type = "ground", type2 = "fire"},
+["Kingdra"] = {offense = 9.5, defense = 9.5, specialattack = 9.5, vitality = 7.5, agility = 210, exp = 243, level = 90, wildLvl = 100, type = "water", type2 = "dragon"},
 
-["Groudon XP VIP"] = {offense = 230, defense = 260, specialattack = 330, vitality = 320, agility = 500, exp = 84000, level = 2, wildLvl = 200, type = "ground", type2 = "fire"},
+["Phanpy"] = {offense = 6, defense = 6, specialattack = 4, vitality = 9, agility = 200, exp = 66, level = 20, wildLvl = 30, type = "ground", type2 = "no type"},
 
-["Groudon XP FREE"] = {offense = 230, defense = 260, specialattack = 330, vitality = 320, agility = 500, exp = 12000, level = 2, wildLvl = 200, type = "ground", type2 = "fire"},
+["Donphan"] = {offense = 12, defense = 12, specialattack = 6, vitality = 9, agility = 200, exp = 175, level = 80, wildLvl = 90, type = "ground", type2 = "no type"},
 
-["Black Groudon"] = {offense = 1400, defense = 1800, specialattack = 1500, vitality = 1600, agility = 2000, exp = 640, level = 120, wildLvl = 200, type = "ground", type2 = "fire"},
+["Porygon2"] = {offense = 8, defense = 9, specialattack = 10.5, vitality = 8.5, agility = 200, exp = 180, level = 75, wildLvl = 85, type = "normal", type2 = "no type"},
 
-["Terrakion"] = {offense = 1500, defense = 1200, specialattack = 1400, vitality = 1200, agility = 2000, exp = 640, level = 120, wildLvl = 200, type = "ground", type2 = "fire"},
+["Stantler"] = {offense = 9.5, defense = 6.2, specialattack = 8.5, vitality = 7.3, agility = 200, exp = 163, level = 55, wildLvl = 65, type = "normal", type2 = "no type"},
 
-["Shiny Groudon"] = {offense = 280, defense = 310, specialattack = 230, vitality = 170, agility = 700, exp = 640, level = 4, wildLvl = 400, type = "ground", type2 = "fire"},
+["Smeargle"] = {offense = 2, defense = 3.5, specialattack = 2, vitality = 5.5, agility = 310, exp = 88, level = 100, wildLvl = 110, type = "normal", type2 = "no type"},
 
-["Giratina"] = {offense = 400, defense = 430, specialattack = 500, vitality = 500, agility = 2000, exp = 209, level = 5, wildLvl = 500, type = "ghost", type2 = "dark"},
+["Tyrogue"] = {offense = 3.5, defense = 3.5, specialattack = 3.5, vitality = 3.5, agility = 200, exp = 42, level = 30, wildLvl = 40, type = "fighting", type2 = "no type"},
 
-["Shiny Giratina"] = {offense = 1000, defense = 930, specialattack = 1000, vitality = 1000, agility = 2000, exp = 209, level = 500, wildLvl = 500, type = "ghost", type2 = "dark"},
+["Hitmontop"] = {offense = 9.5, defense = 9.5, specialattack = 3.5, vitality = 5, agility = 200, exp = 159, level = 60, wildLvl = 70, type = "fighting", type2 = "no type"},
 
-["Giratina Star"] = {offense = 1400, defense = 1430, specialattack = 1500, vitality = 1500, agility = 2000, exp = 209, level = 500, wildLvl = 500, type = "ghost", type2 = "dark"},
+["Smoochum"] = {offense = 3, defense = 1.5, specialattack = 8.5, vitality = 4.5, agility = 200, exp = 61, level = 30, wildLvl = 40, type = "ice", type2 = "psychic"},
 
-["Jirachi"] = {offense = 1000, defense = 1000, specialattack = 1000, vitality = 1000, agility = 2000, exp = 2000, level = 1, wildLvl = 300, type = "psychic", type2 = "normal"},
+["Elekid"] = {offense = 6.3, defense = 3.7, specialattack = 6.5, vitality = 4.5, agility = 200, exp = 72, level = 30, wildLvl = 40, type = "electric", type2 = "no type"},
 
-["Mega Fallen Jirachi"] = {offense = 1100, defense = 1300, specialattack = 1100, vitality = 1100, agility = 2000, exp = 2000, level = 1, wildLvl = 300, type = "psychic", type2 = "normal"},
+["Magby"] = {offense = 7.5, defense = 3.7, specialattack = 7, vitality = 4.5, agility = 200, exp = 73, level = 30, wildLvl = 40, type = "fire", type2 = "no type"},
 
-["Halloween Jirachi"] = {offense = 1200, defense = 1000, specialattack = 1000, vitality = 1000, agility = 2000, exp = 2000, level = 1, wildLvl = 300, type = "psychic", type2 = "normal"},
+["Miltank"] = {offense = 8, defense = 10.5, specialattack = 4, vitality = 9.5, agility = 200, exp = 172, level = 80, wildLvl = 90, type = "normal", type2 = "no type"},
 
-["Fallen Jirachi"] = {offense = 1500, defense = 1500, specialattack = 1900, vitality = 1900, agility = 2000, exp = 2000, level = 120, wildLvl = 120, type = "psychic", type2 = "normal"},
+["Blissey"] = {offense = 1, defense = 1, specialattack = 7.5, vitality = 25.5, agility = 200, exp = 608, level = 100, wildLvl = 110, type = "normal", type2 = "no type"},
 
-["Fallen Jirachi Cells"] = {offense = 1700, defense = 1400, specialattack = 1900, vitality = 1970, agility = 2100, exp = 2000, level = 120, wildLvl = 120, type = "psychic", type2 = "normal"},
+["Raikou"] = {offense = 8.5, defense = 7.5, specialattack = 11.5, vitality = 9, agility = 300, exp = 261, level = 1000, wildLvl = 1000, type = "electric", type2 = "no type"},
 
-["Black Fallen Jirachi"] = {offense = 1700, defense = 1300, specialattack = 2000, vitality = 1950, agility = 2000, exp = 2000, level = 1200, wildLvl = 120, type = "psychic", type2 = "normal"},
+["Entei"] = {offense = 11.5, defense = 8.5, specialattack = 9, vitality = 11.5, agility = 300, exp = 261, level = 1000, wildLvl = 1000, type = "fire", type2 = "no type"},
 
-["Shiny Jirachi"] = {offense = 1400, defense = 1400, specialattack = 1400, vitality = 1700, agility = 2000, exp = 2000, level = 1, wildLvl = 100, type = "psychic", type2 = "normal"},
+["Suicune"] = {offense = 7.5, defense = 11.5, specialattack = 9, vitality = 10, agility = 300, exp = 261, level = 1000, wildLvl = 1000, type = "water", type2 = "no type"},
 
-["Dialga"] = {offense = 250, defense = 270, specialattack = 450, vitality = 460, agility = 700, exp = 6000, level = 3, wildLvl = 300, type = "steel", type2 = "dragon"},
+["Larvitar"] = {offense = 6.4, defense = 5, specialattack = 4.5, vitality = 5, agility = 200, exp = 60, level = 20, wildLvl = 30, type = "rock", type2 = "ground"},
 
-["Shiny Dialga"] = {offense = 300, defense = 320, specialattack = 500, vitality = 550, agility = 3000, exp = 6000, level = 2, wildLvl = 400, type = "steel", type2 = "dragon"},
+["Pupitar"] = {offense = 8.4, defense = 7, specialattack = 6.5, vitality = 7, agility = 200, exp = 144, level = 65, wildLvl = 75, type = "rock", type2 = "ground"},
 
-["Green Dialga"] = {offense = 450, defense = 450, specialattack = 750, vitality = 750, agility = 3000, exp = 6000, level = 2, wildLvl = 400, type = "steel", type2 = "dragon"},
+["Tyranitar"] = {offense = 13.4, defense = 11, specialattack = 9.5, vitality = 10, agility = 200, exp = 270, level = 100, wildLvl = 110, type = "rock", type2 = "dark"},
 
-["Regice"] = {offense = 200, defense = 150, specialattack = 400, vitality = 470, agility = 400, exp = 640, level = 2, wildLvl = 200, type = "ice", type2 = "no type"},
+["Lugia"] = {offense = 9, defense = 13, specialattack = 9, vitality = 10.6, agility = 300, exp = 306, level = 1000, wildLvl = 1000, type = "psychic", type2 = "flying"},
 
-["Ice Regice"] = {offense = 600, defense = 650, specialattack = 700, vitality = 570, agility = 400, exp = 640, level = 2, wildLvl = 300, type = "ice", type2 = "no type"},
+["Ho-oh"] = {offense = 13, defense = 9, specialattack = 11, vitality = 10.6, agility = 300, exp = 306, level = 1000, wildLvl = 1000, type = "fire", type2 = "flying"},
 
-["Regice XP VIP"] = {offense = 200, defense = 150, specialattack = 400, vitality = 470, agility = 400, exp = 64000, level = 2, wildLvl = 200, type = "ice", type2 = "no type"},
+["Celebi"] = {offense = 10, defense = 10, specialattack = 10, vitality = 10, agility = 300, exp = 270, level = 1000, wildLvl = 1000, type = "psychic", type2 = "grass"},
+ 
+ -----------------------------------------------------------Startos Pokemon Hoen-----------------------------------------------------------
+["Treecko"] = {offense = 4.5, defense = 3.5, specialattack = 6.5, vitality = 4, agility = 300, exp = 62, level = 20, wildLvl = 300, type = "grass", type2 = "no type"},
+["Grovyle"] = {offense = 6.5, defense = 4.5, specialattack = 8.5, vitality = 5, agility = 300, exp = 142, level = 40, wildLvl = 300, type = "grass", type2 = "no type"},
+["Sceptile"] = {offense = 8.5, defense = 6.5, specialattack = 10.5, vitality = 7, agility = 300, exp = 239, level = 80, wildLvl = 300, type = "grass", type2 = "no type"},
+["Torchic"] = {offense = 6, defense = 4, specialattack = 7, vitality = 4.5, agility = 300, exp = 62, level = 20, wildLvl = 300, type = "fire", type2 = "no type"},
+["Combusken"] = {offense = 8.5, defense = 6, specialattack = 8.5, vitality = 6, agility = 300, exp = 142, level = 40, wildLvl = 300, type = "fire", type2 = "fighting"},
+["Blaziken"] = {offense = 12, defense = 7, specialattack = 11, vitality = 8, agility = 300, exp = 239, level = 80, wildLvl = 300, type = "fire", type2 = "fighting"},
+["Mudkip"] = {offense = 7, defense = 5, specialattack = 5, vitality = 5, agility = 300, exp = 62, level = 20, wildLvl = 300, type = "water", type2 = "no type"},
+["Marshtomp"] = {offense = 8.5, defense = 7, specialattack = 6, vitality = 7, agility = 300, exp = 142, level = 40, wildLvl = 300, type = "water", type2 = "ground"},
+["Swampert"] = {offense = 11, defense = 9, specialattack = 8.5, vitality = 10, agility = 300, exp = 241, level = 80, wildLvl = 300, type = "water", type2 = "ground"},
+["Poochyena"] = {offense = 5.5, defense = 3.4, specialattack = 3, vitality = 3.5, agility = 300, exp = 56, level = 30, wildLvl = 300, type = "dark", type2 = "no type"},
+["Mightyena"] = {offense = 9, defense = 7, specialattack = 6, vitality = 7, agility = 300, exp = 147, level = 80, wildLvl = 300, type = "dark", type2 = "no type"},
+["Zigzagoon"] = {offense = 3, defense = 4.1, specialattack = 3, vitality = 3.8, agility = 300, exp = 56, level = 10, wildLvl = 300, type = "normal", type2 = "no type"},
+["Linoone"] = {offense = 7, defense = 6.1, specialattack = 5, vitality = 7.8, agility = 300, exp = 147, level = 40, wildLvl = 300, type = "normal", type2 = "no type"},
+["Wurmple"] = {offense = 4.5, defense = 3.5, specialattack = 2, vitality = 4.5, agility = 300, exp = 56, level = 10, wildLvl = 300, type = "bug", type2 = "no type"},
+["Silcoon"] = {offense = 3.5, defense = 5.5, specialattack = 2.5, vitality = 5, agility = 300, exp = 72, level = 10, wildLvl = 300, type = "bug", type2 = "no type"},
+["Beautifly"] = {offense = 7, defense = 5, specialattack = 10, vitality = 6, agility = 300, exp = 178, level = 50, wildLvl = 300, type = "bug", type2 = "flying"},
+["Cascoon"] = {offense = 3.5, defense = 5.5, specialattack = 2.5, vitality = 5, agility = 300, exp = 72, level = 10, wildLvl = 300, type = "bug", type2 = "no type"},
+["Dustox"] = {offense = 5, defense = 7, specialattack = 5, vitality = 6, agility = 300, exp = 73, level = 50, wildLvl = 300, type = "bug", type2 = "poison"},
+["Lotad"] = {offense = 3, defense = 3, specialattack = 4, vitality = 5, agility = 300, exp = 44, level = 20, wildLvl = 300, type = "water", type2 = "grass"},
+["Lombre"] = {offense = 5, defense = 5, specialattack = 6, vitality = 6, agility = 300, exp = 119, level = 50, wildLvl = 300, type = "water", type2 = "grass"},
+["Ludicolo"] = {offense = 7, defense = 7, specialattack = 9, vitality = 8, agility = 300, exp = 216, level = 100, wildLvl = 300, type = "water", type2 = "grass"},
+["Seedot"] = {offense = 4, defense = 5, specialattack = 3, vitality = 4, agility = 300, exp = 44, level = 10, wildLvl = 300, type = "grass", type2 = "no type"},
+["Nuzleaf"] = {offense = 7, defense = 4, specialattack = 6, vitality = 7, agility = 300, exp = 119, level = 30, wildLvl = 300, type = "grass", type2 = "dark"},
+["Shiftry"] = {offense = 10, defense = 6, specialattack = 9, vitality = 9, agility = 300, exp = 216, level = 80, wildLvl = 300, type = "grass", type2 = "dark"},
+["Taillow"] = {offense = 5.5, defense = 3, specialattack = 3, vitality = 4, agility = 300, exp = 54, level = 30, wildLvl = 300, type = "normal", type2 = "flying"},
+["Swellow"] = {offense = 8.5, defense = 6, specialattack = 5, vitality = 6, agility = 300, exp = 159, level = 80, wildLvl = 300, type = "normal", type2 = "flying"},
+["Wingull"] = {offense = 3, defense = 3, specialattack = 5.5, vitality = 4, agility = 300, exp = 54, level = 30, wildLvl = 300, type = "water", type2 = "flying"},
+["Pelipper"] = {offense = 5, defense = 10, specialattack = 8.5, vitality = 6, agility = 300, exp = 154, level = 80, wildLvl = 300, type = "water", type2 = "flying"},
+["Ralts"] = {offense = 2.5, defense = 2.5, specialattack = 4.5, vitality = 2.8, agility = 300, exp = 40, level = 30, wildLvl = 300, type = "psychic", type2 = "fairy"},
+["Kirlia"] = {offense = 3.5, defense = 3.5, specialattack = 6.5, vitality = 3.8, agility = 300, exp = 97, level = 60, wildLvl = 300, type = "psychic", type2 = "fairy"},
+["Gardevoir"] = {offense = 6.5, defense = 6.5, specialattack = 12.5, vitality = 6.8, agility = 300, exp = 233, level = 100, wildLvl = 300, type = "psychic", type2 = "fairy"},
+["Surskit"] = {offense = 3, defense = 3.2, specialattack = 5, vitality = 4, agility = 300, exp = 54, level = 20, wildLvl = 300, type = "bug", type2 = "water"},
+["Masquerain"] = {offense = 6, defense = 6.2, specialattack = 8, vitality = 7, agility = 300, exp = 159, level = 50, wildLvl = 300, type = "bug", type2 = "flying"},
+["Shroomish"] = {offense = 4, defense = 6, specialattack = 4, vitality = 6, agility = 300, exp = 59, level = 20, wildLvl = 300, type = "grass", type2 = "no type"},
+["Breloom"] = {offense = 13, defense = 8, specialattack = 6, vitality = 6, agility = 300, exp = 161, level = 80, wildLvl = 300, type = "grass", type2 = "fighting"},
+["Slakoth"] = {offense = 6, defense = 6, specialattack = 3.5, vitality = 6, agility = 300, exp = 56, level = 40, wildLvl = 300, type = "normal", type2 = "no type"},
+["Vigoroth"] = {offense = 8, defense = 8, specialattack = 5.5, vitality = 8, agility = 300, exp = 154, level = 70, wildLvl = 300, type = "normal", type2 = "no type"},
+["Slaking"] = {offense = 16, defense = 10, specialattack = 9.5, vitality = 15, agility = 300, exp = 252, level = 100, wildLvl = 300, type = "normal", type2 = "no type"},
+["Nincada"] = {offense = 4.5, defense = 9, specialattack = 3, vitality = 3.1, agility = 300, exp = 53, level = 10, wildLvl = 300, type = "bug", type2 = "ground"},
+["Ninjask"] = {offense = 9, defense = 4.5, specialattack = 5, vitality = 6.1, agility = 300, exp = 160, level = 80, wildLvl = 300, type = "bug", type2 = "flying"},
+["Shedinja"] = {offense = 9, defense = 4.5, specialattack = 3, vitality = 0.1, agility = 300, exp = 83, level = 60, wildLvl = 300, type = "bug", type2 = "ghost"},
+["Whismur"] = {offense = 5.1, defense = 2.3, specialattack = 5.1, vitality = 6.4, agility = 300, exp = 48, level = 20, wildLvl = 300, type = "normal", type2 = "no type"},
+["Loudred"] = {offense = 7.1, defense = 4.3, specialattack = 7.1, vitality = 8.4, agility = 300, exp = 126, level = 50, wildLvl = 300, type = "normal", type2 = "no type"},
+["Exploud"] = {offense = 9.1, defense = 6.3, specialattack = 9.1, vitality = 10.4, agility = 300, exp = 221, level = 80, wildLvl = 300, type = "normal", type2 = "no type"},
+["Makuhita"] = {offense = 6, defense = 3, specialattack = 2, vitality = 7.2, agility = 300, exp = 47, level = 40, wildLvl = 300, type = "fighting", type2 = "no type"},
+["Hariyama"] = {offense = 12, defense = 6, specialattack = 4, vitality = 14.4, agility = 300, exp = 166, level = 100, wildLvl = 300, type = "fighting", type2 = "no type"},
+["Azurill"] = {offense = 2, defense = 4, specialattack = 2, vitality = 5, agility = 300, exp = 38, level = 100, wildLvl = 300, type = "normal", type2 = "fairy"},
+["Nosepass"] = {offense = 4.5, defense = 13.5, specialattack = 4.5, vitality = 3, agility = 300, exp = 75, level = 40, wildLvl = 300, type = "rock", type2 = "no type"},
+["Skitty"] = {offense = 4.5, defense = 4.5, specialattack = 3.5, vitality = 5, agility = 300, exp = 52, level = 100, wildLvl = 300, type = "normal", type2 = "no type"},
+["Delcatty"] = {offense = 6.5, defense = 6.5, specialattack = 5.5, vitality = 7, agility = 300, exp = 140, level = 100, wildLvl = 300, type = "normal", type2 = "no type"},
+["Sableye"] = {offense = 7.5, defense = 7.5, specialattack = 6.5, vitality = 5, agility = 300, exp = 133, level = 60, wildLvl = 300, type = "dark", type2 = "ghost"},
+["Mawile"] = {offense = 8.5, defense = 8.5, specialattack = 5.5, vitality = 5, agility = 300, exp = 133, level = 80, wildLvl = 300, type = "steel", type2 = "fairy"},
+["Aron"] = {offense = 7, defense = 10, specialattack = 4, vitality = 5, agility = 300, exp = 66, level = 30, wildLvl = 300, type = "steel", type2 = "rock"},
+["Lairon"] = {offense = 9, defense = 14, specialattack = 5, vitality = 6, agility = 300, exp = 151, level = 60, wildLvl = 300, type = "steel", type2 = "rock"},
+["Aggron"] = {offense = 11, defense = 18, specialattack = 6, vitality = 7, agility = 300, exp = 239, level = 100, wildLvl = 300, type = "steel", type2 = "no type"},
+["Meditite"] = {offense = 4, defense = 5.5, specialattack = 4, vitality = 3, agility = 300, exp = 56, level = 30, wildLvl = 300, type = "fighting", type2 = "psychic"},
+["Medicham"] = {offense = 6, defense = 7.5, specialattack = 6, vitality = 6, agility = 300, exp = 144, level = 80, wildLvl = 300, type = "fighting", type2 = "psychic"},
+["Electrike"] = {offense = 4.5, defense = 4, specialattack = 6.5, vitality = 4, agility = 300, exp = 59, level = 30, wildLvl = 300, type = "electric", type2 = "no type"},
+["Manectric"] = {offense = 7.5, defense = 6, specialattack = 10.5, vitality = 7, agility = 300, exp = 166, level = 80, wildLvl = 300, type = "electric", type2 = "no type"},
+["Plusle"] = {offense = 5, defense = 4, specialattack = 8.5, vitality = 6, agility = 300, exp = 142, level = 30, wildLvl = 300, type = "electric", type2 = "no type"},
+["Minun"] = {offense = 4, defense = 5, specialattack = 7.5, vitality = 6, agility = 300, exp = 142, level = 30, wildLvl = 300, type = "electric", type2 = "no type"},
+["Volbeat"] = {offense = 7.3, defense = 5.5, specialattack = 4.7, vitality = 6.5, agility = 300, exp = 151, level = 100, wildLvl = 300, type = "bug", type2 = "no type"},
+["Illumise"] = {offense = 4.7, defense = 5.5, specialattack = 7.3, vitality = 6.5, agility = 300, exp = 151, level = 100, wildLvl = 300, type = "bug", type2 = "no type"},
+["Roselia"] = {offense = 6, defense = 4.5, specialattack = 10, vitality = 5, agility = 300, exp = 140, level = 70, wildLvl = 300, type = "grass", type2 = "poison"},
+["Gulpin"] = {offense = 4.3, defense = 5.3, specialattack = 4.3, vitality = 7, agility = 300, exp = 60, level = 100, wildLvl = 300, type = "poison", type2 = "no type"},
+["Swalot"] = {offense = 7.3, defense = 8.3, specialattack = 7.3, vitality = 10, agility = 300, exp = 163, level = 100, wildLvl = 300, type = "poison", type2 = "no type"},
+["Carvanha"] = {offense = 9, defense = 2, specialattack = 6.5, vitality = 4.5, agility = 300, exp = 61, level = 20, wildLvl = 300, type = "water", type2 = "dark"},
+["Sharpedo"] = {offense = 12, defense = 4, specialattack = 9.5, vitality = 7, agility = 300, exp = 161, level = 80, wildLvl = 300, type = "water", type2 = "dark"},
+["Wailmer"] = {offense = 7, defense = 3.5, specialattack = 7, vitality = 13, agility = 300, exp = 80, level = 100, wildLvl = 300, type = "water", type2 = "no type"},
+["Wailord"] = {offense = 9, defense = 4.5, specialattack = 9, vitality = 17, agility = 300, exp = 175, level = 100, wildLvl = 300, type = "water", type2 = "no type"},
+["Numel"] = {offense = 6, defense = 4, specialattack = 6.5, vitality = 6, agility = 300, exp = 61, level = 30, wildLvl = 300, type = "fire", type2 = "ground"},
+["Camerupt"] = {offense = 10, defense = 7, specialattack = 10.5, vitality = 7, agility = 300, exp = 161, level = 40, wildLvl = 300, type = "fire", type2 = "ground"},
+["Torkoal"] = {offense = 8.5, defense = 14, specialattack = 8.5, vitality = 7, agility = 300, exp = 165, level = 100, wildLvl = 300, type = "fire", type2 = "no type"},
+["Spoink"] = {offense = 2.5, defense = 3.5, specialattack = 7, vitality = 6, agility = 300, exp = 66, level = 30, wildLvl = 300, type = "psychic", type2 = "no type"},
+["Grumpig"] = {offense = 4.5, defense = 6.5, specialattack = 9, vitality = 8, agility = 300, exp = 165, level = 80, wildLvl = 300, type = "psychic", type2 = "no type"},
+["Spinda"] = {offense = 6, defense = 6, specialattack = 6, vitality = 6, agility = 300, exp = 126, level = 100, wildLvl = 300, type = "normal", type2 = "no type"},
+["Trapinch"] = {offense = 10, defense = 4.5, specialattack = 4.5, vitality = 4.5, agility = 300, exp = 58, level = 20, wildLvl = 300, type = "ground", type2 = "no type"},
+["Vibrava"] = {offense = 7, defense = 5, specialattack = 5, vitality = 5, agility = 300, exp = 119, level = 50, wildLvl = 300, type = "ground", type2 = "dragon"},
+["Flygon"] = {offense = 10, defense = 8, specialattack = 8, vitality = 8, agility = 300, exp = 234, level = 80, wildLvl = 300, type = "ground", type2 = "dragon"},
+["Cacnea"] = {offense = 8.5, defense = 4, specialattack = 8.5, vitality = 5, agility = 300, exp = 67, level = 100, wildLvl = 300, type = "grass", type2 = "no type"},
+["Cacturn"] = {offense = 11.5, defense = 6, specialattack = 11.5, vitality = 7, agility = 300, exp = 166, level = 100, wildLvl = 300, type = "grass", type2 = "dark"},
+["Swablu"] = {offense = 4, defense = 6, specialattack = 4, vitality = 4.5, agility = 300, exp = 62, level = 30, wildLvl = 300, type = "normal", type2 = "flying"},
+["Altaria"] = {offense = 7, defense = 9, specialattack = 7, vitality = 7.5, agility = 300, exp = 172, level = 80, wildLvl = 300, type = "dragon", type2 = "flying"},
+["Zangoose"] = {offense = 11.5, defense = 6, specialattack = 6, vitality = 7.3, agility = 300, exp = 160, level = 80, wildLvl = 300, type = "normal", type2 = "no type"},
+["Seviper"] = {offense = 10, defense = 6, specialattack = 10, vitality = 7.3, agility = 300, exp = 160, level = 80, wildLvl = 300, type = "poison", type2 = "no type"},
+["Lunatone"] = {offense = 5.5, defense = 6.5, specialattack = 9.5, vitality = 7, agility = 300, exp = 161, level = 60, wildLvl = 300, type = "rock", type2 = "psychic"},
+["Solrock"] = {offense = 9.5, defense = 8.5, specialattack = 5.5, vitality = 7, agility = 300, exp = 161, level = 60, wildLvl = 300, type = "rock", type2 = "psychic"},
+["Barboach"] = {offense = 4.8, defense = 4.3, specialattack = 4.6, vitality = 5, agility = 300, exp = 58, level = 40, wildLvl = 300, type = "water", type2 = "ground"},
+["Whiscash"] = {offense = 7.8, defense = 7.3, specialattack = 7.6, vitality = 11, agility = 300, exp = 164, level = 80, wildLvl = 300, type = "water", type2 = "ground"},
+["Corphish"] = {offense = 8, defense = 6.5, specialattack = 5, vitality = 4.3, agility = 300, exp = 62, level = 30, wildLvl = 300, type = "water", type2 = "no type"},
+["Crawdaunt"] = {offense = 12, defense = 8.5, specialattack = 9, vitality = 6.3, agility = 300, exp = 164, level = 80, wildLvl = 300, type = "water", type2 = "dark"},
+["Baltoy"] = {offense = 4, defense = 5.5, specialattack = 4, vitality = 4, agility = 300, exp = 60, level = 30, wildLvl = 300, type = "ground", type2 = "psychic"},
+["Claydol"] = {offense = 7, defense = 10.5, specialattack = 7, vitality = 6, agility = 300, exp = 175, level = 80, wildLvl = 300, type = "ground", type2 = "psychic"},
+["Lileep"] = {offense = 4.1, defense = 7.7, specialattack = 6.1, vitality = 6.6, agility = 300, exp = 71, level = 20, wildLvl = 300, type = "rock", type2 = "grass"},
+["Cradily"] = {offense = 8.1, defense = 9.7, specialattack = 8.1, vitality = 8.6, agility = 300, exp = 173, level = 100, wildLvl = 300, type = "rock", type2 = "grass"},
+["Anorith"] = {offense = 9.5, defense = 5, specialattack = 4, vitality = 4.5, agility = 300, exp = 71, level = 20, wildLvl = 300, type = "rock", type2 = "bug"},
+["Armaldo"] = {offense = 12.5, defense = 10, specialattack = 7, vitality = 7.5, agility = 300, exp = 173, level = 100, wildLvl = 300, type = "rock", type2 = "bug"},
+["Feebas"] = {offense = 1.5, defense = 2, specialattack = 1, vitality = 2, agility = 300, exp = 40, level = 10, wildLvl = 300, type = "water", type2 = "no type"},
+["Milotic"] = {offense = 6, defense = 79, specialattack = 10, vitality = 6, agility = 300, exp = 189, level = 100, wildLvl = 300, type = "water", type2 = "no type"},
+["Castform"] = {offense = 7, defense = 7, specialattack = 7, vitality = 4.4, agility = 300, exp = 147, level = 100, wildLvl = 300, type = "normal", type2 = "no type"},
+["Kecleon"] = {offense = 9, defense = 7, specialattack = 6, vitality = 6, agility = 300, exp = 154, level = 80, wildLvl = 300, type = "normal", type2 = "no type"},
+["Shuppet"] = {offense = 7.5, defense = 3.5, specialattack = 6.3, vitality = 4.4, agility = 300, exp = 59, level = 30, wildLvl = 300, type = "ghost", type2 = "no type"},
+["Banette"] = {offense = 11.5, defense = 6.5, specialattack = 8.3, vitality = 6.4, agility = 300, exp = 159, level = 80, wildLvl = 300, type = "ghost", type2 = "no type"},
+["Duskull"] = {offense = 4, defense = 9, specialattack = 3, vitality = 2, agility = 300, exp = 59, level = 40, wildLvl = 300, type = "ghost", type2 = "no type"},
+["Dusclops"] = {offense = 7, defense = 13, specialattack = 6, vitality = 4, agility = 300, exp = 159, level = 70, wildLvl = 300, type = "ghost", type2 = "no type"},
+["Tropius"] = {offense = 6.8, defense = 8.3, specialattack = 7.2, vitality = 9.9, agility = 300, exp = 161, level = 100, wildLvl = 300, type = "grass", type2 = "flying"},
+["Chimecho"] = {offense = 5, defense = 7, specialattack = 9.5, vitality = 6.5, agility = 300, exp = 159, level = 100, wildLvl = 300, type = "psychic", type2 = "no type"},
+["Absol"] = {offense = 13, defense = 6, specialattack = 7.5, vitality = 6.5, agility = 300, exp = 163, level = 100, wildLvl = 300, type = "dark", type2 = "no type"},
+["Wynaut"] = {offense = 2.3, defense = 4.8, specialattack = 2.3, vitality = 9.5, agility = 300, exp = 52, level = 70, wildLvl = 300, type = "psychic", type2 = "no type"},
+["Snorunt"] = {offense = 5, defense = 5, specialattack = 5, vitality = 5, agility = 300, exp = 60, level = 30, wildLvl = 300, type = "ice", type2 = "no type"},
+["Glalie"] = {offense = 8, defense = 8, specialattack = 8, vitality = 8, agility = 300, exp = 168, level = 80, wildLvl = 300, type = "ice", type2 = "no type"},
+["Spheal"] = {offense = 4, defense = 5, specialattack = 5.5, vitality = 7, agility = 300, exp = 58, level = 30, wildLvl = 300, type = "ice", type2 = "water"},
+["Sealeo"] = {offense = 6, defense = 7, specialattack = 7.5, vitality = 9, agility = 300, exp = 144, level = 60, wildLvl = 300, type = "ice", type2 = "water"},
+["Walrein"] = {offense = 8, defense = 9, specialattack = 9.5, vitality = 11, agility = 300, exp = 239, level = 100, wildLvl = 300, type = "ice", type2 = "water"},
+["Clamperl"] = {offense = 6.4, defense = 8.5, specialattack = 7.4, vitality = 3.5, agility = 300, exp = 69, level = 100, wildLvl = 300, type = "water", type2 = "no type"},
+["Huntail"] = {offense = 10.4, defense = 10.5, specialattack = 9.4, vitality = 5.5, agility = 300, exp = 170, level = 100, wildLvl = 300, type = "water", type2 = "no type"},
+["Gorebyss"] = {offense = 8.4, defense = 10.5, specialattack = 11.4, vitality = 5.5, agility = 300, exp = 170, level = 100, wildLvl = 300, type = "water", type2 = "no type"},
+["Relicanth"] = {offense = 9, defense = 13, specialattack = 4.5, vitality = 10, agility = 300, exp = 170, level = 100, wildLvl = 300, type = "water", type2 = "rock"},
+["Luvdisc"] = {offense = 3, defense = 5.5, specialattack = 4, vitality = 4.3, agility = 300, exp = 116, level = 100, wildLvl = 300, type = "water", type2 = "no type"},
+["Bagon"] = {offense = 7.5, defense = 6, specialattack = 4, vitality = 4.5, agility = 300, exp = 60, level = 40, wildLvl = 300, type = "dragon", type2 = "no type"},
+["Shelgon"] = {offense = 9.5, defense = 10, specialattack = 6, vitality = 6.5, agility = 300, exp = 40, level = 70, wildLvl = 300, type = "dragon", type2 = "no type"},
+["Salamence"] = {offense = 13.5, defense = 8, specialattack = 11, vitality = 9.5, agility = 300, exp = 270, level = 100, wildLvl = 300, type = "dragon", type2 = "flying"},
+["Beldum"] = {offense = 5.5, defense = 8, specialattack = 3.5, vitality = 4, agility = 300, exp = 60, level = 50, wildLvl = 300, type = "steel", type2 = "psychic"},
+["Metang"] = {offense = 7.5, defense = 10, specialattack = 5.5, vitality = 6, agility = 300, exp = 147, level = 80, wildLvl = 300, type = "steel", type2 = "psychic"},
+["Metagross"] = {offense = 13.5, defense = 13, specialattack = 9.5, vitality = 8, agility = 300, exp = 270, level = 100, wildLvl = 300, type = "steel", type2 = "psychic"},
+["Regirock"] = {offense = 10, defense = 20, specialattack = 5, vitality = 8, agility = 300, exp = 261, level = 1000, wildLvl = 300, type = "rock", type2 = "no type"},
+["Regice"] = {offense = 5, defense = 10, specialattack = 10, vitality = 8, agility = 300, exp = 261, level = 1000, wildLvl = 300, type = "ice", type2 = "no type"},
+["Registeel"] = {offense = 7.5, defense = 15, specialattack = 7.5, vitality = 8, agility = 300, exp = 261, level = 1000, wildLvl = 300, type = "steel", type2 = "no type"},
+["Latias"] = {offense = 8, defense = 9, specialattack = 11, vitality = 8, agility = 300, exp = 270, level = 1000, wildLvl = 300, type = "dragon", type2 = "psychic"},
+["Latios"] = {offense = 9, defense = 8, specialattack = 13, vitality = 8, agility = 300, exp = 270, level = 1000, wildLvl = 300, type = "dragon", type2 = "psychic"},
+["Kyogre"] = {offense = 10, defense = 9, specialattack = 15, vitality = 10, agility = 300, exp = 302, level = 1000, wildLvl = 300, type = "water", type2 = "no type"},
+["Groudon"] = {offense = 15, defense = 14, specialattack = 10, vitality = 10, agility = 300, exp = 302, level = 1000, wildLvl = 300, type = "ground", type2 = "fire"},
+["Rayquaza"] = {offense = 15, defense = 9, specialattack = 15, vitality = 10.5, agility = 300, exp = 306, level = 1000, wildLvl = 300, type = "dragon", type2 = "flying"},
+["Jirachi"] = {offense = 10, defense = 10, specialattack = 10, vitality = 10, agility = 300, exp = 270, level = 1000, wildLvl = 300, type = "steel", type2 = "psychic"},
+["Deoxys"] = {offense = 15, defense = 5, specialattack = 15, vitality = 5, agility = 300, exp = 270, level = 1000, wildLvl = 300, type = "psychic", type2 = "no type"},
 
-["Regice XP FREE"] = {offense = 200, defense = 150, specialattack = 400, vitality = 470, agility = 400, exp = 10000, level = 2, wildLvl = 200, type = "ice", type2 = "no type"},
+['Lucario'] = {offense = 3, defense = 7, specialattack = 8.5, life = 1800, vitality = 7.5, agility = 200, exp = 245, level = 60, wildLvl = 2, type = 'fighting', type2 = 'steel'},
+['Shiny Lucario'] = {offense = 3, defense = 11, specialattack = 8.5, life = 1800, vitality = 7.5, agility = 200, exp = 245, level = 60, wildLvl = 5, type = 'fighting', type2 = 'steel'},
+ 
+-- Venom Quests 
+["V.Shiny Muk"] = {offense = 5, defense = 10, specialattack = 9, vitality = 18, agility = 300, exp = 93, level = 100, wildLvl = 600, type = "poison", type2 = "no type"},
+["V.Shiny Grimer"] = {offense = 5.3, defense = 8, specialattack = 8, vitality = 17, agility = 300, exp = 42, level = 100, wildLvl = 500, type = "poison", type2 = "no type"},
 
-["Regirock XP FREE"] = {offense = 200, defense = 150, specialattack = 400, vitality = 370, agility = 400, exp = 10040, level = 2, wildLvl = 200, type = "rock", type2 = "no type"},
+-- <!-- Mixlort Balanceamento Novo -->
+["V.Koffing"] = {offense = 4.3, defense = 7, specialattack = 7, vitality = 15, agility = 300, exp = 42, level = 100, wildLvl = 400, type = "poison", type2 = "no type"},
+["V.Weezing"] = {offense = 6, defense = 7.5, specialattack = 7.5, vitality = 15, agility = 300, exp = 100, level = 100, wildLvl = 400, type = "poison", type2 = "no type"},
+["V.Arbok"] = {offense = 5.6, defense = 7.5, specialattack = 7.5, vitality = 15, agility = 300, exp = 100, level = 100, wildLvl = 400, type = "poison", type2 = "no type"},
+["V.Grimer"] = {offense = 5.3, defense = 7, specialattack = 7, vitality = 15, agility = 300, exp = 42, level = 100, wildLvl = 400, type = "poison", type2 = "no type"},
 
-["Regirock XP VIP"] = {offense = 200, defense = 150, specialattack = 400, vitality = 370, agility = 400, exp = 70640, level = 2, wildLvl = 200, type = "rock", type2 = "no type"},
+-- ["V.Koffing"] = {offense = 2.2, defense = 7, specialattack = 3.5, vitality =15, agility = 300, exp = 42, level = 100, wildLvl = 400, type = "poison", type2 = "no type"},
+-- ["V.Weezing"] = {offense = 3, defense = 7.5, specialattack = 3.7, vitality = 15, agility = 300, exp = 100, level = 100, wildLvl = 400, type = "poison", type2 = "no type"},
+-- ["V.Arbok"] = {offense = 2.8, defense = 7.5, specialattack = 3.7, vitality = 15, agility = 300, exp = 100, level = 100, wildLvl = 400, type = "poison", type2 = "no type"},
+-- ["V.Grimer"] = {offense = 2.6, defense = 7, specialattack = 3.5, vitality = 15, agility = 300, exp = 42, level = 100, wildLvl = 400, type = "poison", type2 = "no type"},
 
-["Regirock"] = {offense = 200, defense = 150, specialattack = 400, vitality = 370, agility = 400, exp = 64000, level = 2, wildLvl = 200, type = "rock", type2 = "no type"},
+-- Thrones Quest
+["T.Abra"] = {offense = 2, defense = 1.5, specialattack = 10.5, vitality = 2.5, agility = 300, exp = 62, level = 500, wildLvl = 500, type = "psychic", type2 = "no type"},
+["T.Kadabra"] = {offense = 3.5, defense = 3, specialattack = 12, vitality = 4, agility = 300, exp = 140, level = 500, wildLvl = 500, type = "psychic", type2 = "no type"},
+["T.Alakazam"] = {offense = 5, defense = 4.5, specialattack = 13.5, vitality = 5.5, agility = 300, exp = 225, level = 500, wildLvl = 500, type = "psychic", type2 = "no type"},
+["T.Hypno"] = {offense = 7.3, defense = 7, specialattack = 7.3, vitality = 8.5, agility = 300, exp = 169, level = 500, wildLvl = 500, type = "psychic", type2 = "no type"},
+["T.Arcanine"] = {offense = 11, defense = 8, specialattack = 10, vitality = 9, agility = 350, exp = 194, level = 500, wildLvl = 500, type = "fire", type2 = "no type"},
+["T.Ariados"] = {offense = 9, defense = 7, specialattack = 6, vitality = 7, agility = 250, exp = 140, level = 500, wildLvl = 500, type = "bug", type2 = "poison"},
+["T.Gastly"] = {offense = 3.5, defense = 3, specialattack = 10, vitality = 3, agility = 300, exp = 62, level = 500, wildLvl = 500, type = "ghost", type2 = "poison"},
+["T.Haunter"] = {offense = 5, defense = 4.5, specialattack = 11.5, vitality = 4.5, agility = 300, exp = 142, level = 500, wildLvl = 500, type = "ghost", type2 = "poison"},
+["T.Gengar"] = {offense = 6.5, defense = 6, specialattack = 13.0, vitality = 6, agility = 300, exp = 225, level = 500, wildLvl = 500, type = "ghost", type2 = "poison"},
+["T.Misdreavus"] = {offense = 6, defense = 6, specialattack = 8.5, vitality = 6, agility = 200, exp = 87, level = 500, wildLvl = 500, type = "ghost", type2 = "no type"},
+["T.Umbreon"] = {offense = 6.5, defense = 11, specialattack = 6, vitality = 9.5, agility = 230, exp = 184, level = 500, wildLvl = 500, type = "dark", type2 = "no type"},
+["T.Larvitar"] = {offense = 0.9, defense = 5, specialattack = 4.5, vitality = 5, agility = 200, exp = 67, level = 500, wildLvl = 500, type = "rock", type2 = "ground"},
+["T.Sudowoodo"] = {offense = 1.9, defense = 10, specialattack = 7.5, vitality = 8.8, agility = 200, exp = 500, level = 500, wildLvl = 500, type = "rock", type2 = "no type"},
+["T.Tyranitar"] = {offense = 2.1, defense = 10, specialattack = 7.5, vitality = 10.2, agility = 200, exp = 500, level = 500, wildLvl = 500, type = "rock", type2 = "dark"},
+["T.Rhydon"] = {offense = 8.6, defense = 8, specialattack = 6.5, vitality = 9, agility = 300, exp = 150, level = 500, wildLvl = 500, type = "ground", type2 = "rock"},
+["T.Rhyhorn"] = {offense = 5.6, defense = 6.3, specialattack = 2, vitality = 4.4, agility = 300, exp = 83, level = 500, wildLvl = 500, type = "ground", type2 = "rock"},
+["T.Marowak"] = {offense = 5.3, defense = 7.3, specialattack = 6.3, vitality = 7.5, agility = 300, exp = 100, level = 500, wildLvl = 500, type = "ground", type2 = "no type"},
+["T.Onix"] = {offense = 3, defense = 7.6, specialattack = 5, vitality = 6, agility = 300, exp = 107, level = 500, wildLvl = 500, type = "rock", type2 = "ground"},
+["T.Golem"] = {offense = 7.3, defense = 8.6, specialattack = 3.6, vitality = 8.4, agility = 300, exp = 150, level = 500, wildLvl = 500, type = "ground", type2 = "rock"},
+["T.Steelix"] = {offense = 2.1, defense = 10, specialattack = 7.5, vitality = 9.9, agility = 220, exp = 500, level = 500, wildLvl = 500, type = "steel", type2 = "ground"},
+["T.Houndoom"] = {offense = 1.9, defense = 6, specialattack = 7.5, vitality = 8.5, agility = 300, exp = 204, level = 500, wildLvl = 500, type = "dark", type2 = "fire"},
+["T.Typhlosion"] = {offense = 1.9, defense = 9, specialattack = 7.5, vitality = 10.9, agility = 200, exp = 210, level = 500, wildLvl = 500, type = "fire", type2 = "no type"},
+["T.Magcargo"] = {offense = 1.2, defense = 12, specialattack = 7.5, vitality = 5, agility = 200, exp = 154, level = 500, wildLvl = 500, type = "fire", type2 = "rock"},
+["T.Crobat"] = {offense = 1.9, defense = 8, specialattack = 7, vitality = 8.5, agility = 300, exp = 204, level = 500, wildLvl = 500, type = "poison", type2 = "flying"},
+["T.Meganium"] = {offense = 1.9, defense = 10, specialattack = 7.5, vitality = 10.5, agility = 200, exp = 210, level = 500, wildLvl = 500, type = "grass", type2 = "no type"},
+["T.Muk"] = {offense = 7, defense = 6.6, specialattack = 4.3, vitality = 8, agility = 300, exp = 150, level = 500, wildLvl = 500, type = "poison", type2 = "no type"},
+["T.Vileplume"] = {offense = 5.3, defense = 6, specialattack = 6.6, vitality = 7.7, agility = 300, exp = 100, level = 500, wildLvl = 500, type = "grass", type2 = "poison"},
 
-["Registeel"] = {offense = 200, defense = 150, specialattack = 400, vitality = 370, agility = 400, exp = 640, level = 2, wildLvl = 200, type = "rock", type2 = "steel"},
+------
 
-["Registeel XP VIP"] = {offense = 200, defense = 150, specialattack = 400, vitality = 370, agility = 400, exp = 64000, level = 2, wildLvl = 200, type = "rock", type2 = "steel"},
+["T.Shiny Marowak"] = {offense = 2.2, defense = 10, specialattack = 11, vitality = 15.6, agility = 200, exp = 136.4, level = 900, wildLvl = 900, type = "ground", type2 = "no type"},
+["T.Shiny Cubone"] = {offense = 0.9, defense = 8, specialattack = 4.4, vitality = 8.5, agility = 190, exp = 95.7, level = 900, wildLvl = 900, type = "ground", type2 = "no type"},
+["T.Shiny Onix"] = {offense = 2.2, defense = 8.6, specialattack = 11, vitality = 15.1, agility = 200, exp = 800, level = 900, wildLvl = 900, type = "rock", type2 = "ground"},
+["T.Shiny Golem"] = {offense = 1.9, defense = 14.3, specialattack = 11, vitality = 8.9, agility = 200, exp = 194.7, level = 900, wildLvl = 900, type = "rock", type2 = "ground"},
+["T.Shiny Typhlosion"] = {offense = 1.9, defense = 9, specialattack = 11, vitality = 14.2, agility = 230, exp = 217.8, level = 900, wildLvl = 900, type = "fire", type2 = "no type"},
+["T.Shiny Magmar"] = {offense = 2.1, defense = 11, specialattack = 11, vitality = 14.2, agility = 200, exp = 2150, level = 900, wildLvl = 900, type = "fire", type2 = "no type"},
+["T.Shiny Arcanine"] = {offense = 2.1, defense = 8.8, specialattack = 11, vitality = 14.7, agility = 450, exp = 900, level = 900, wildLvl = 900, type = "fire", type2 = "no type"},
+--["T.Shiny Charizard"] = {offense = 2.3, defense = 9, specialattack = 11, vitality = 14, agility = 210, exp = 1050, level = 900, wildLvl = 900, type = "fire", type2 = "flying"},
+["T.Shiny Charizard"] = {offense = 2.3, defense = 9, specialattack = 11, vitality = 14, agility = 210, exp = 1050, level = 900, wildLvl = 900, type = "fire", type2 = "flying"},
+["T.Magmar"] = {offense = 3.3, defense = 5.6, specialattack = 6.6, vitality = 9.2, agility = 300, exp = 150, level = 900, wildLvl = 900, type = "fire", type2 = "no type"},
+["T.Charizard"] = {offense = 5.6, defense = 5.6, specialattack = 5.26, vitality = 8.1, agility = 300, exp = 150, level = 900, wildLvl = 900, type = "fire", type2 = "flying"},
+["T.Charmeleon"] = {offense = 4.26, defense = 4.3, specialattack = 5.3, vitality = 6.2, agility = 300, exp = 100, level = 900, wildLvl = 900, type = "fire", type2 = "no type"},
+-------
+["T.Shiny Crobat"] = {offense = 2.9, defense = 10, specialattack = 11, vitality = 14.2, agility = 200, exp = 2555, level = 900, wildLvl = 900, type = "poison", type2 = "flying"},
+["T.Shiny Vileplume"] = {offense = 2.1, defense = 10, specialattack = 11, vitality = 13.1, agility = 210, exp = 1000, level = 900, wildLvl = 900, type = "grass", type2 = "poison"},
+["T.Shiny Meganium"] = {offense = 5, defense = 8, specialattack = 11, vitality = 14.6, agility = 280, exp = 3000, level = 900, wildLvl = 900, type = "grass", type2 = "no type"},
+--["T.Shiny Crobat"] = {offense = 2.9, defense = 10, specialattack = 11, vitality = 14.2, agility = 200, exp = 2555, level = 900, wildLvl = 900, type = "poison", type2 = "flying"},
+["T.Shiny Pinsir"] = {offense = 2.2, defense = 12, specialattack = 10, vitality = 16, agility = 210, exp = 220, level = 900, wildLvl = 900, type = "bug", type2 = "no type"},
+["T.Shiny Muk"] = {offense = 2.2, defense = 9.1, specialattack = 11, vitality = 15.2, agility = 200, exp = 172.7, level = 900, wildLvl = 900, type = "poison", type2 = "no type"},
+["T.Shiny Golbat"] = {offense = 1.2, defense = 8, specialattack = 6, vitality = 10.25, agility = 230, exp = 188.1, level = 900, wildLvl = 900, type = "poison", type2 = "flying"},
+["T.Shiny Pinsir"] = {offense = 2.2, defense = 12, specialattack = 10, vitality = 16, agility = 210, exp = 220, level = 900, wildLvl = 900, type = "bug", type2 = "no type"},
+["T.Shiny Umbreon"] = {offense = 6.5, defense = 11, specialattack = 6, vitality = 9.5, agility = 230, exp = 184, level = 900, wildLvl = 900, type = "dark", type2 = "no type"},
+["T.Shiny Xatu"] = {offense = 4, defense = 9, specialattack = 11, vitality = 14.2, agility = 270, exp = 2340, level = 900, wildLvl = 900, type = "psychic", type2 = "flying"},
+["T.Shiny Alakazam"] = {offense = 5, defense = 4.5, specialattack = 13.5, vitality = 5.5, agility = 300, exp = 225, level = 900, wildLvl = 900, type = "psychic", type2 = "no type"},
+["T.Shiny Mr. Mime"] = {offense = 4.5, defense = 6.5, specialattack = 10, vitality = 4, agility = 300, exp = 161, level = 900, wildLvl = 900, type = "psychic", type2 = "no type"},
+["T.Shiny Ariados"] = {offense = 9, defense = 7, specialattack = 6, vitality = 7, agility = 250, exp = 140, level = 900, wildLvl = 900, type = "bug", type2 = "poison"},
+["T.Shiny Gengar"] = {offense = 6.5, defense = 6, specialattack = 13.0, vitality = 6, agility = 300, exp = 225, level = 900, wildLvl = 900, type = "ghost", type2 = "poison"},
 
-["Registeel XP FREE"] = {offense = 200, defense = 150, specialattack = 400, vitality = 370, agility = 400, exp = 10000, level = 2, wildLvl = 200, type = "rock", type2 = "steel"},
+-------
+-- Castle Quest
+["C.Mantine"] = {offense = 1.9, defense = 7, specialattack = 7.5, vitality = 10.1, agility = 200, exp = 200, level = 80, wildLvl = 90, type = "water", type2 = "flying"},
+["C.Feraligatr"] = {offense = 1.9, defense = 10, specialattack = 7.5, vitality = 10.5, agility = 200, exp = 210, level = 85, wildLvl = 95, type = "water", type2 = "no type"},
+["C.Gyarados"] = {offense = 8.3, defense = 6.6, specialattack = 7.5, vitality = 10, agility = 300, exp = 150, level = 100, wildLvl = 100, type = "water", type2 = "flying"},
+["C.Tentacruel"] = {offense = 4.6, defense = 8, specialattack = 5.3, vitality = 8.4, agility = 300, exp = 150, level = 80, wildLvl = 90, type = "water", type2 = "poison"},
+["C.Blastoise"] = {offense = 5.53, defense = 7, specialattack = 5.6, vitality = 8.2, agility = 300, exp = 150, level = 80, wildLvl = 90, type = "water", type2 = "no type"},
+---
+["C.Charizard"] = {offense = 5.6, defense = 5.6, specialattack = 5.26, vitality = 8.1, agility = 300, exp = 150, level = 80, wildLvl = 90, type = "fire", type2 = "flying"},
+["C.Arcanine"] = {offense = 7.3, defense = 5.3, specialattack = 6.6, vitality = 8.8, agility = 350, exp = 150, level = 100, wildLvl = 100, type = "fire", type2 = "no type"},
+["C.Magmar"] = {offense = 3.3, defense = 5.6, specialattack = 6.6, vitality = 9.2, agility = 300, exp = 150, level = 100, wildLvl = 100, type = "fire", type2 = "no type"},
+["C.Rapidash"] = {offense = 6.6, defense = 5.3, specialattack = 5.3, vitality = 6.2, agility = 300, exp = 100, level = 100, wildLvl = 80, type = "fire", type2 = "no type"},
+["C.Typhlosion"] = {offense = 1.9, defense = 9, specialattack = 7.5, vitality = 10.9, agility = 200, exp = 210, level = 85, wildLvl = 95, type = "fire", type2 = "no type"},
+---
+["C.Steelix"] = {offense = 2.1, defense = 10, specialattack = 7.5, vitality = 9.9, agility = 220, exp = 500, level = 100, wildLvl = 110, type = "steel", type2 = "ground"},
+["C.Rhydon"] = {offense = 8.6, defense = 8, specialattack = 6.5, vitality = 9, agility = 300, exp = 150, level = 80, wildLvl = 90, type = "ground", type2 = "rock"},
+["C.Onix"] = {offense = 3, defense = 7.6, specialattack = 5, vitality = 6, agility = 300, exp = 107, level = 50, wildLvl = 60, type = "rock", type2 = "ground"},
+["C.Golem"] = {offense = 7.3, defense = 8.6, specialattack = 3.6, vitality = 8.4, agility = 300, exp = 150, level = 70, wildLvl = 80, type = "ground", type2 = "rock"},
+["C.Sudowoodo"] = {offense = 1.9, defense = 10, specialattack = 7.5, vitality = 8.8, agility = 200, exp = 500, level = 80, wildLvl = 90, type = "rock", type2 = "no type"},
+---
+["C.Ampharos"] = {offense = 1.9, defense = 7.5, specialattack = 7.5, vitality = 9, agility = 200, exp = 194, level = 85, wildLvl = 95, type = "electric", type2 = "no type"},
+["C.Raichu"] = {offense = 6, defense = 5.3, specialattack = 6, vitality = 8, agility = 350, exp = 150, level = 80, wildLvl = 90, type = "electric", type2 = "no type"},
+["C.Magneton"] = {offense = 4, defense = 6.3, specialattack = 8, vitality = 7.5, agility = 300, exp = 150, level = 80, wildLvl = 90, type = "electric", type2 = "steel"},
+["C.Electabuzz"] = {offense = 3.5, defense = 5.6, specialattack = 6.6, vitality = 8.7, agility = 300, exp = 150, level = 100, wildLvl = 100, type = "electric", type2 = "no type"},
+["C.Ampharos"] = {offense = 1.9, defense = 7.5, specialattack = 7.5, vitality = 9, agility = 200, exp = 194, level = 85, wildLvl = 95, type = "electric", type2 = "no type"},
 
-["Shiny Regice"] = {offense = 250, defense = 200, specialattack = 550, vitality = 420, agility = 1000, exp = 640, level = 2, wildLvl = 200, type = "ice", type2 = "no type"},
+-- First Quest -- 
+["F.Charizard"] = {offense = 5.6, defense = 5.6, specialattack = 5.26, vitality = 8.1, agility = 300, exp = 150, level = 80, wildLvl = 90, type = "fire", type2 = "flying"},
+["F.Blastoise"] = {offense = 5.53, defense = 7, specialattack = 5.6, vitality = 8.2, agility = 300, exp = 150, level = 80, wildLvl = 90, type = "water", type2 = "no type"},
+["F.Venusaur"] = {offense = 5.4, defense = 6.6, specialattack = 6.6, vitality = 8.4, agility = 300, exp = 150, level = 80, wildLvl = 90, type = "grass", type2 = "poison"},
 
-["Shiny Regirock"] = {offense = 250, defense = 200, specialattack = 550, vitality = 420, agility = 1000, exp = 640, level = 2, wildLvl = 200, type = "rock", type2 = "no type"},
+--StatusPokémonOutland
+["Elder Electabuzz"] = {offense = 24.9, defense = 17.1, specialattack = 28.5, vitality = 18.5, agility = 450, exp = 540, level = 300, wildLvl = 300, type = "electric", type2 = "no type"},
+["Elder Tyranitar"] = {offense = 40.2, defense = 33, specialattack = 28.5, vitality = 30, agility = 300, exp = 810, level = 300, wildLvl = 300, type = "rock", type2 = "dark"},
+["Elder Charizard"] = {offense = 25.2, defense = 23.4, specialattack = 32.7, vitality = 23.4, agility = 450, exp = 720, level = 300, wildLvl = 300, type = "fire", type2 = "flying"},
+["Undefeated Machamp"] = {offense = 39, defense = 24, specialattack = 19.5, vitality = 27, agility = 4500, exp = 690, level = 300, wildLvl = 300, type = "fight", type2 = "no type"},
+["Elder Arcanine"] = {offense = 33, defense = 24, specialattack = 30, vitality = 27, agility = 525, exp = 600, level = 300, wildLvl = 300, type = "fire", type2 = "no type"},
+["Elder Dragonite"] = {offense = 40.2, defense = 28.5, specialattack = 30, vitality = 27.3, agility = 450, exp = 810, level = 300, wildLvl = 300, type = "dragon", type2 = "flying"},
+["Master Alakazam"] = {offense = 15, defense = 13.5, specialattack = 40.5, vitality = 16.5, agility = 450, exp = 690, level = 300, wildLvl = 300, type = "psychic", type2 = "no type"},
+["Elder Pinsir"] = {offense = 37.5, defense = 30, specialattack = 16.5, vitality = 19.5, agility = 500, exp = 540, level = 300, wildLvl = 300, type = "bug", type2 = "no type"},
+["Elder Raichu"] = {offense = 27, defense = 16.5, specialattack = 27, vitality = 18, agility = 5250, exp = 660, level = 300, wildLvl = 300, type = "electric", type2 = "no type"},
+["Tribal Scyther"] = {offense = 33, defense = 24, specialattack = 16.5, vitality = 21, agility = 525, exp = 300, level = 300, wildLvl = 300, type = "bug", type2 = "flying"},
+["Elder Muk"] = {offense = 31.5, defense = 22.5, specialattack = 19.5, vitality = 31.5, agility = 450, exp = 540, level = 300, wildLvl = 300, type = "poison", type2 = "no type"},
+["Elder Gengar"] = {offense = 19.5, defense = 18, specialattack = 29.0, vitality = 18, agility = 450, exp = 690, level = 300, wildLvl = 300, type = "ghost", type2 = "poison"},
+["Elder Pidgeot"] = {offense = 24, defense = 22.5, specialattack = 21, vitality = 24.9, agility = 525, exp = 660, level = 300, wildLvl = 300, type = "flying", type2 = "normal"},
+["Elder Venusaur"] = {offense = 24.3, defense = 24.9, specialattack = 30, vitality = 24, agility = 450, exp = 720, level = 300, wildLvl = 300, type = "grass", type2 = "poison"},
+["Elder Jynx"] = {offense = 15, defense = 10.5, specialattack = 34.5, vitality = 19.5, agility = 450, exp = 480, level = 300, wildLvl = 300, type = "psychic", type2 = "ice"},
+["Elder Tangela"] = {offense = 16.5, defense = 34.5, specialattack = 30, vitality = 19.5, agility = 450, exp = 270, level = 300, wildLvl = 300, type = "grass", type2 = "no type"},
+["Elder Blastoise"] = {offense = 24.9, defense = 30, specialattack = 25.5, vitality = 23.7, agility = 450, exp = 720, level = 300, wildLvl = 300, type = "water", type2 = "no type"},
+["Elder Tentacruel"] = {offense = 21, defense = 19.5, specialattack = 24, vitality = 24, agility = 450, exp = 540, level = 300, wildLvl = 300, type = "water", type2 = "poison"},
+["Elder Marowak"] = {offense = 24, defense = 33, specialattack = 15, vitality = 18, agility = 450, exp = 450, level = 300, wildLvl = 300, type = "ground", type2 = "no type"},
+["Tribal Feraligatr"] = {offense = 31.5, defense = 30, specialattack = 23.7, vitality = 25.5, agility = 300, exp = 720, level = 300, wildLvl = 300, type = "water", type2 = "no type"},
+["Tribal Xatu"] = {offense = 22.5, defense = 21, specialattack = 28.5, vitality = 16.5, agility = 450, exp = 510, level = 300, wildLvl = 300, type = "psychic", type2 = "flying"},
 
-["Shiny Registeel"] = {offense = 250, defense = 200, specialattack = 550, vitality = 420, agility = 1000, exp = 640, level = 2, wildLvl = 200, type = "rock", type2 = "steel"},
-
-["Shiny Rayquaza"] = {offense = 280, defense = 210, specialattack = 580, vitality = 470, agility = 800, exp = 239.8, level = 3, wildLvl = 250, type = "dragon", type2 = "flying"},
-
-["Regigigas"] = {offense = 400, defense = 200, specialattack = 600, vitality = 600, agility = 700, exp = 640, level = 6, wildLvl = 200, type = "rock", type2 = "grass"},
-
-["Black Regigigas"] = {offense = 1100, defense = 1200, specialattack = 1300, vitality = 800, agility = 1200, exp = 640, level = 6, wildLvl = 200, type = "rock", type2 = "grass"},
-
-["Shiny Regigigas"] = {offense = 1000, defense = 1000, specialattack = 1300, vitality = 800, agility = 1500, exp = 640, level = 1, wildLvl = 700, type = "rock", type2 = "grass"},
-
-["Yveltal"] = {offense = 600, defense = 600, specialattack = 900, vitality = 900, agility = 600, exp = 640, level = 1, wildLvl = 200, type = "dark", type2 = "flying"},
-
-["Lugia"] = {offense = 340, defense = 500, specialattack = 640, vitality = 610, agility = 900, exp = 500, level = 2, wildLvl = 100, type = "psychic", type2 = "flying"},
-
-["Lugia XP VIP"] = {offense = 340, defense = 500, specialattack = 640, vitality = 610, agility = 900, exp = 50000, level = 2, wildLvl = 100, type = "psychic", type2 = "flying"},
-
-["Majestic Lugia"] = {offense = 1100, defense = 1200, specialattack = 1400, vitality = 1300, agility = 1800, exp = 500, level = 2200, wildLvl = 700, type = "psychic", type2 = "flying"},
-
-["Ho-oh"] = {offense = 340, defense = 500, specialattack = 540, vitality = 510, agility = 900, exp = 500, level = 2, wildLvl = 200, type = "fire", type2 = "flying"},
-
-["Celebi"] = {offense = 340, defense = 200, specialattack = 440, vitality = 310, agility = 900, exp = 500, level = 2, wildLvl = 200, type = "psychic", type2 = "grass"},
-
-["Celebi XP FREE"] = {offense = 340, defense = 200, specialattack = 440, vitality = 310, agility = 900, exp = 25000, level = 2, wildLvl = 200, type = "psychic", type2 = "grass"},
-
-["Shiny Celebi"] = {offense = 400, defense = 330, specialattack = 500, vitality = 470, agility = 1200, exp = 500, level = 2, wildLvl = 100, type = "psychic", type2 = "grass"},
-
-["Generator"] = {offense = 400, defense = 300, specialattack = 400, vitality = 500, agility = 0, exp = 640, level = 6, wildLvl = 400, type = "dark", type2 = "flying"},
-
-["Regice MVP"] = {offense = 600, defense = 900, specialattack = 200, vitality = 400, agility = 1500, exp = 640, level = 2, wildLvl = 500, type = "ice", type2 = "no type"},
-
-["Regirock MVP"] = {offense = 600, defense = 900, specialattack = 200, vitality = 400, agility = 1500, exp = 640, level = 2, wildLvl = 500, type = "rock", type2 = "no type"},
-
-["Registeel MVP"] = {offense = 600, defense = 900, specialattack = 200, vitality = 400, agility = 1500, exp = 640, level = 2, wildLvl = 500, type = "rock", type2 = "steel"},
-
-["Azelf MVP"] = {offense = 400, defense = 800, specialattack = 400, vitality = 300, agility = 1000, exp = 1000, level = 2, wildLvl = 500, type = "psychic", type2 = "no type"},
-
-["Deoxys MVP"] = {offense = 500.5, defense = 200, specialattack = 800, vitality = 600, agility = 1800, exp = 500, level = 3, wildLvl = 700, type = "psychic", type2 = "electric"},
-
-["Reuniclus"] = {offense = 600, defense = 400, specialattack = 800, vitality = 350, agility = 1200, exp = 640, level = 60, wildLvl = 500, type = "psychic", type2 = "grass"},
-
-["Shiny Reuniclus"] = {offense = 920, defense = 900, specialattack = 880, vitality = 1000, agility = 1000, exp = 150000, level = 6000, wildLvl = 200, type = "poison", type2 = "grass"},
-
-["Heatran"] = {offense = 500, defense = 300, specialattack = 600, vitality = 300, agility = 500, exp = 16200, level = 1, wildLvl = 800, type = "ground", type2 = "fire"},
-
-["Black Heatran"] = {offense = 900, defense = 1000, specialattack = 1000, vitality = 900, agility = 800, exp = 16200, level = 100, wildLvl = 800, type = "ground", type2 = "fire"},
-
-["Arch Heatran"] = {offense = 1300, defense = 1300, specialattack = 1900, vitality = 1900, agility = 1500, exp = 1220, level = 120, wildLvl = 400, type = "ground", type2 = "fire"},
-
-["Shiny Heatran"] = {offense = 500, defense = 350, specialattack = 950, vitality = 550, agility = 1300, exp = 640, level = 2, wildLvl = 900, type = "ground", type2 = "fire"},
-
-["Black Articuno"] = {offense = 300, defense = 630, specialattack = 200, vitality = 180, agility = 2000, exp = 10000, level = 300, wildLvl = 300, type = "ice", type2 = "flying"},
-
-["Reshiram MVP"] = {offense = 700, defense = 1030, specialattack = 830, vitality = 630, agility = 1000, exp = 1000, level = 2, wildLvl = 300, type = "fire", type2 = "dragon"},
-
-["Zekrom MVP"] = {offense = 700, defense = 1030, specialattack = 830, vitality = 630, agility = 1000, exp = 1000, level = 2, wildLvl = 300, type = "electric", type2 = "dragon"},
-
-["Gerador I"] = {offense = 0, defense = 1100, specialattack = 1000, vitality = 1100, agility = 0, exp = 640, level = 6, wildLvl = 100, type = "normal", type2 = "no type"},
-
-["Gerador II"] = {offense = 0, defense = 1250, specialattack = 1000, vitality = 1300, agility = 0, exp = 640, level = 6, wildLvl = 100, type = "normal", type2 = "no type"},
-
-["Gerador III"] = {offense = 0, defense = 1500, specialattack = 1000, vitality = 1600, agility = 0, exp = 640, level = 600, wildLvl = 100, type = "normal", type2 = "no type"},
-
-["Gerador IV"] = {offense = 0, defense = 1770, specialattack = 1000, vitality = 2000, agility = 0, exp = 640, level = 600, wildLvl = 100, type = "normal", type2 = "no type"},
-
-["Giratina MVP"] = {offense = 500, defense = 800, specialattack = 400, vitality = 450, agility = 500, exp = 209, level = 500, wildLvl = 200, type = "ghost", type2 = "dark"},
-
-["Rayquaza MVP"] = {offense = 300, defense = 400, specialattack = 200, vitality = 350, agility = 1000, exp = 10000, level = 300, wildLvl = 500, type = "dragon", type2 = "flying"},
-
-["Gerador"] = {offense = 0, defense = 2000, specialattack = 1000, vitality = 1500, agility = 0, exp = 640, level = 600, wildLvl = 100, type = "normal", type2 = "no type"},
-
-["Heatran MVP"] = {offense = 10000, defense = 10000, specialattack = 10000, vitality = 10000, agility = 3000, exp = 15000, level = 5000, wildLvl = 200, type = "ground", type2 = "fire"},
-
-["Shiny Heatran MVP"] = {offense = 800, defense = 1000, specialattack = 800, vitality = 800, agility = 750, exp = 640, level = 250, wildLvl = 200, type = "ground", type2 = "fire"},
-
-["Heatran MVP NV2"] = {offense = 700, defense = 900, specialattack = 600, vitality = 750, agility = 700, exp = 640, level = 250, wildLvl = 200, type = "ground", type2 = "fire"},
-
-["Primal Dialga"] = {offense = 500, defense = 400, specialattack = 500, vitality = 400, agility = 700, exp = 6000, level = 320, wildLvl = 200, type = "steel", type2 = "dragon"},
-
-["Articuno MVP"] = {offense = 400, defense = 500, specialattack = 800, vitality = 260, agility = 700, exp = 100000, level = 200, wildLvl = 200, type = "ice", type2 = "flying"},
-
-["Shiny Lugia"] = {offense = 550, defense = 600, specialattack = 750, vitality = 500, agility = 3000, exp = 220, level = 220, wildLvl = 500, type = "psychic", type2 = "flying"},
-
-["Victini"] = {offense = 800, defense = 800, specialattack = 900, vitality = 900, agility = 2000, exp = 1000, level = 10, wildLvl = 600, type = "psychic", type2 = "fire"},
-
-["Shiny Victini"] = {offense = 1000, defense = 900, specialattack = 900, vitality = 970, agility = 2000, exp = 1000, level = 10, wildLvl = 600, type = "psychic", type2 = "fire"},
-
-["Victini Star"] = {offense = 1200, defense = 1000, specialattack = 1100, vitality = 1100, agility = 2000, exp = 1000, level = 10, wildLvl = 600, type = "psychic", type2 = "fire"},
-
-["Shiny Kyurem"] = {offense = 690, defense = 700, specialattack = 750, vitality = 400, agility = 1700, exp = 1000, level = 200, wildLvl = 600, type = "ice", type2 = "dragon"},
-
-["Kyurem"] = {offense = 490, defense = 600, specialattack = 650, vitality = 350, agility = 1700, exp = 1000, level = 200, wildLvl = 600, type = "ice", type2 = "dragon"},
-
-["Iluminus Kyurem"] = {offense = 2000, defense = 2100, specialattack = 1300, vitality = 1500, agility = 1500, exp = 10000, level = 1000, wildLvl = 700, type = "ice", type2 = "no type"},
-
-["Majestic Blissey"] = {offense = 700, defense = 500, specialattack = 600, vitality = 750, agility = 800, exp = 21800, level = 2000, wildLvl = 600, type = "normal", type2 = "no type"},
-
-["White Kyurem"] = {offense = 700, defense = 600, specialattack = 780, vitality = 500, agility = 1700, exp = 1000, level = 200, wildLvl = 600, type = "ice", type2 = "dragon"},
-
-["Black Kyurem"] = {offense = 600, defense = 700, specialattack = 800, vitality = 700, agility = 1700, exp = 1000, level = 200, wildLvl = 600, type = "ice", type2 = "dragon"},
-
-["Genesect"] = {offense = 770, defense = 700, specialattack = 870, vitality = 400, agility = 900, exp = 1000, level = 200, wildLvl = 800, type = "bug", type2 = "no type"},
-
-["Shiny Genesect"] = {offense = 870, defense = 770, specialattack = 970, vitality = 500, agility = 900, exp = 1000, level = 200, wildLvl = 800, type = "bug", type2 = "no type"},
-
-["Genesect Star"] = {offense = 1300, defense = 1300, specialattack = 1900, vitality = 1900, agility = 1900, exp = 1000, level = 120, wildLvl = 400, type = "bug", type2 = "no type"},
-
-["Red"] = {offense = 2000, defense = 2000, specialattack = 2500, vitality = 6000, agility = 3000, exp = 1000, level = 30000, wildLvl = 500, type = "bug", type2 = "no type"},
-
-["Genesect MVP"] = {offense = 500, defense = 700, specialattack = 900, vitality = 600, agility = 700, exp = 1000, level = 20000, wildLvl = 500, type = "bug", type2 = "no type"},
-
-["Shiny Genesect MVP"] = {offense = 800, defense = 900, specialattack = 910, vitality = 740, agility = 700, exp = 10000, level = 200, wildLvl = 500, type = "bug", type2 = "no type"},
-
-["Cresselia"] = {offense = 750, defense = 500, specialattack = 800, vitality = 700, agility = 700, exp = 1000, level = 200, wildLvl = 600, type = "dark", type2 = "psychic"},
-
-["Shiny Cresselia"] = {offense = 950, defense = 800, specialattack = 1000, vitality = 800, agility = 750, exp = 1000, level = 200, wildLvl = 600, type = "dark", type2 = "psychic"},
-
-["PRO Kyogre"] = {offense = 900, defense = 1000, specialattack = 900, vitality = 500, agility = 3000, exp = 640, level = 250, wildLvl = 100, type = "water", type2 = "ice"},
-
-["Under Entei"] = {offense = 300, defense = 500, specialattack = 300, vitality = 350, agility = 3000, exp = 1000, exp = 3000, level = 500, wildLvl = 300, type = "fire", type2 = "no type"},
-
-["Under Reshiram"] = {offense = 300, defense = 500, specialattack = 300, vitality = 350, agility = 3000, exp = 1000, level = 250, wildLvl = 500, type = "fire", type2 = "dragon"},
-
-["Palkia"] = {offense = 350, defense = 430, specialattack = 550, vitality = 430, agility = 2000, exp = 6000, level = 320, wildLvl = 500, type = "water", type2 = "dragon"},
-
-["Lugia MVP"] = {offense = 800, defense = 700, specialattack = 600, vitality = 900, agility = 500, exp = 50000, level = 2000, wildLvl = 500, type = "psychic", type2 = "flying"},
-
-["Groudon MVP"] = {offense = 800, defense = 700, specialattack = 700, vitality = 900, agility = 500, exp = 10000, level = 250, wildLvl = 500, type = "ground", type2 = "fire"},
-
-["Black Day Articuno"] = {offense = 700, defense = 700, specialattack = 700, vitality = 900, agility = 500, exp = 10000, level = 250, wildLvl = 500, type = "ice", type2 = "flying"},
-
-["Riolu"] = {offense = 400, defense = 300, specialattack = 400, vitality = 220, agility = 700, exp = 30000, level = 100, wildLvl = 100, type = "dark", type2 = "fighting"},
-
-["Lucario"] = {offense = 560, defense = 560, specialattack = 460, vitality = 370, agility = 1000, exp = 30000, level = 150, wildLvl = 400, type = "dark", type2 = "fighting"},
-
-["Shiny Lucario"] = {offense = 760, defense = 570, specialattack = 480, vitality = 390, agility = 1000, exp = 30000, level = 150, wildLvl = 400, type = "dark", type2 = "fighting"},
-
-["Magmortar"] = {offense = 300, defense = 330, specialattack = 300, vitality = 230, agility = 1000, exp = 1000, level = 250, wildLvl = 300, type = "fire", type2 = "no type"},
-
-["Electivire"] = {offense = 300, defense = 330, specialattack = 300, vitality = 230, agility = 1000, exp = 1000, level = 250, wildLvl = 300, type = "electric", type2 = "no type"},
-
-["Shiny Magmortar"] = {offense = 400, defense = 400, specialattack = 400, vitality = 280, agility = 1000, exp = 10000, level = 4000, wildLvl = 300, type = "fire", type2 = "no type"},
-
-["Zombie"] = {offense = 1000, defense = 1500, specialattack = 2000, vitality = 4200, agility = 1000, exp = 20000, level = 200, wildLvl = 500, type = "fire", type2 = "flying"},
-
-["Zombie Nv1"] = {offense = 1500, defense = 2500, specialattack = 2500, vitality = 4200, agility = 1000, exp = 30000, level = 200, wildLvl = 200, type = "fire", type2 = "flying"},
-
-["Zombie Nv2"] = {offense = 2000, defense = 3000, specialattack = 2700, vitality = 4200, agility = 1000, exp = 40000, level = 200, wildLvl = 200, type = "fire", type2 = "flying"},
-
-["Shiny Electivire"] = {offense = 400, defense = 390, specialattack = 400, vitality = 280, agility = 800, exp = 10000, level = 100, wildLvl = 300, type = "electric", type2 = "no type"},
-
-["Zekrom Nv1"] = {offense = 300, defense = 500, specialattack = 1200, vitality = 400, agility = 700, exp = 100000, level = 200, wildLvl = 200, type = "fire", type2 = "flying"},
-
-["Zekrom Nv2"] = {offense = 4000, defense = 4000, specialattack = 4000, vitality = 500, agility = 700, exp = 200, level = 200, wildLvl = 200, type = "fire", type2 = "flying"},
-
-["Reshiram Nv1"] = {offense = 300, defense = 500, specialattack = 1200, vitality = 400, agility = 700, exp = 100000, level = 200, wildLvl = 200, type = "fire", type2 = "flying"},
-
-["Reshiram Nv2"] = {offense = 3200, defense = 3700, specialattack = 3300, vitality = 500, agility = 700, exp = 2000, level = 200, wildLvl = 200, type = "fire", type2 = "flying"},
-
-["Moltres MVP"] = {offense = 300, defense = 300, specialattack = 300, vitality = 1500, agility = 700, exp = 100000, level = 200, wildLvl = 200, type = "fire", type2 = "flying"},
-
-["Black Articuno MVP"] = {offense = 500, defense = 500, specialattack = 500, vitality = 1600, agility = 700, exp = 1000, level = 200, wildLvl = 200, type = "fire", type2 = "flying"},
-
-["Zapdos MVP"] = {offense = 7000, defense = 7000, specialattack = 7000, vitality = 7000, agility = 7000, exp = 1000, level = 150, wildLvl = 200, type = "electric", type2 = "flying"},
-
-["BD Mewtwo"] = {offense = 1200, defense = 1000, specialattack = 1500, vitality = 2700, agility = 3000, exp = 1000, level = 10000, wildLvl = 200, type = "psychic", type2 = "no type"},
-
-["Diamond Mewtwo"] = {offense = 1000, defense = 1000, specialattack = 1500, vitality = 2300, agility = 3000, exp = 1000, level = 10000, wildLvl = 200, type = "psychic", type2 = "no type"},
-
-["Phione"] = {offense = 400, defense = 300, specialattack = 500, vitality = 580, agility = 1000, exp = 6000, level = 300, wildLvl = 500, type = "water", type2 = "no type"},
-
-["Manaphy"] = {offense = 600, defense = 500, specialattack = 750, vitality = 520, agility = 3000, exp = 6000, level = 300, wildLvl = 500, type = "water", type2 = "ice"},
-
-["Mega Gyarados"] = {offense = 1000, defense = 1000, specialattack = 1000, vitality = 700, agility = 1000, exp = 10000, level = 1, wildLvl = 600, type = "water", type2 = "ice"},
-
-["Shiny Raikou"] = {offense = 500, defense = 460, specialattack = 500, vitality = 480, agility = 3000, exp = 6000, level = 300, wildLvl = 300, type = "electric", type2 = "no type"},
-
-["Shiny Zekrom MVP"] = {offense = 800, defense = 800, specialattack = 800, vitality = 800, agility = 1000, exp = 6000000, level = 300, wildLvl = 300, type = "electric", type2 = "dragon"},
-
-["Shiny Tyranitar"] = {offense = 300, defense = 390, specialattack = 300, vitality = 380, agility = 700, exp = 2100, level = 300, wildLvl = 500, type = "rock", type2 = "dark"},
-
-["Tropius"] = {offense = 400, defense = 390, specialattack = 390, vitality = 200, agility = 800, exp = 12000, level = 200, wildLvl = 500, type = "grass", type2 = "ground"},
-
-["Celebi MVP"] = {offense = 600, defense = 500, specialattack = 600, vitality = 900, agility = 300, exp = 500, level = 200, wildLvl = 500, type = "psychic", type2 = "grass"},
-
-["Deoxys Nv 2"] = {offense = 300, defense = 400, specialattack = 300, vitality = 350, agility = 600, exp = 1000, level = 100, wildLvl = 500, type = "psychic", type2 = "dark"},
-
-["Shiny Darkrai MVP"] = {offense = 1000, defense = 500, specialattack = 600, vitality = 600, agility = 300, exp = 5000, level = 200, wildLvl = 500, type = "dark", type2 = "ghost"},
-
------Novos
-
-["Arceus"] = {offense = 2100, defense = 2100, specialattack = 2500, vitality = 2000, agility = 2000, exp = 1000, level = 120, wildLvl = 120, type = "Alpha", type2 = "no type"},
-
-["Zygarde"] = {offense = 1300, defense = 1300, specialattack = 1300, vitality = 1300, agility = 1500, exp = 1000, level = 120, wildLvl = 600, type = "grass", type2 = "dragon"},
-
-["Zygarde Cells"] = {offense = 1600, defense = 1900, specialattack = 1600, vitality = 1900, agility = 1700, exp = 1000, level = 120, wildLvl = 600, type = "grass", type2 = "dragon"},
-
-["Black Zygarde"] = {offense = 2000, defense = 2000, specialattack = 2300, vitality = 1900, agility = 1900, exp = 1000, level = 1200, wildLvl = 600, type = "grass", type2 = "dragon"},
-
-["Shiny Zygarde"] = {offense = 1800, defense = 1800, specialattack = 1800, vitality = 1800, agility = 1800, exp = 1000, level = 120, wildLvl = 600, type = "grass", type2 = "dragon"},
-
-["Furious Arceus"] = {offense = 2200, defense = 2200, specialattack = 2100, vitality = 2100, agility = 1000, exp = 1000, level = 1000, wildLvl = 250, type = "Alpha", type2 = "psychic"},
-
-["Dark Arceus"] = {offense = 2000, defense = 2000, specialattack = 2000, vitality = 2000, agility = 1000, exp = 1000, level = 1000, wildLvl = 250, type = "Alpha", type2 = "psychic"},
-
-["Shiny Arceus"] = {offense = 2300, defense = 2400, specialattack = 2177, vitality = 2170, agility = 1700, exp = 1000, level = 1000, wildLvl = 300, type = "Alpha", type2 = "psychic"},
-
-["Black Arceus"] = {offense = 2300, defense = 2600, specialattack = 2600, vitality = 2100, agility = 2000, exp = 1000, level = 1000, wildLvl = 400, type = "Alpha", type2 = "psychic"},
-
-["King Arceus"] = {offense = 2500, defense = 2500, specialattack = 2700, vitality = 2200, agility = 2100, exp = 1000, level = 1000, wildLvl = 700, type = "Alpha", type2 = "psychic"},
-
-["Shiny King Arceus"] = {offense = 2700, defense = 2550, specialattack = 2800, vitality = 2500, agility = 2200, exp = 1000, level = 1000, wildLvl = 700, type = "Alpha", type2 = "psychic"},
-
-["King Dark Arceus"] = {offense = 2500, defense = 2600, specialattack = 2500, vitality = 2200, agility = 2100, exp = 1000, level = 1000, wildLvl = 700, type = "Alpha", type2 = "psychic"},
-
-["Meloetta"] = {offense = 1200, defense = 1200, specialattack = 1800, vitality = 1800, agility = 1300, exp = 12200, level = 520, wildLvl = 400, type = "normal", type2 = "psychic"},
-
-["Halloween Meloetta"] = {offense = 1000, defense = 1000, specialattack = 1200, vitality = 1200, agility = 1200, exp = 12200, level = 520, wildLvl = 400, type = "normal", type2 = "psychic"},
-
-["Shiny Meloetta"] = {offense = 1800, defense = 1900, specialattack = 2000, vitality = 1900, agility = 1600, exp = 12200, level = 520, wildLvl = 400, type = "normal", type2 = "psychic"},
-
-["Meloetta Star"] = {offense = 2200, defense = 2000, specialattack = 2100, vitality = 2000, agility = 1700, exp = 12200, level = 520, wildLvl = 400, type = "normal", type2 = "psychic"},
-
------Fishing
-
-["Fishing Articuno"] = {offense = 250, defense = 150, specialattack = 250, vitality = 400, agility = 1000, exp = 1500, level = 200, wildLvl = 300, type = "ice", type2 = "flying"},
-
-["Fishing Kyogre"] = {offense = 300, defense = 250, specialattack = 300, vitality = 400, agility = 1500, exp = 2500, level = 300, wildLvl = 200, type = "water", type2 = "ice"},
-
-["Fishing Phione"] = {offense = 400, defense = 250, specialattack = 400, vitality = 400, agility = 1500, exp = 3000, level = 350, wildLvl = 500, type = "water", type2 = "no type"},
-
-["Fishing Manaphy"] = {offense = 800, defense = 350, specialattack = 750, vitality = 400, agility = 1500, exp = 4000, level = 400, wildLvl = 500, type = "water", type2 = "ice"},
-
------Megas
-["Shadow Xerneas"] = {offense = 1000, defense = 1300, specialattack = 1000, vitality = 1100, agility = 1100, exp = 1000, level = 120, wildLvl = 600, type = "electric", type2 = "fire"},
-
-["Black Xerneas"] = {offense = 1300, defense = 1200, specialattack = 1700, vitality = 1300, agility = 1200, exp = 1000, level = 120, wildLvl = 600, type = "electric", type2 = "fire"},
-
-["Xerneas"] = {offense = 1200, defense = 1200, specialattack = 1200, vitality = 1200, agility = 1200, exp = 1000, level = 120, wildLvl = 600, type = "electric", type2 = "fire"},
-
-["Mega Xerneas"] = {offense = 1700, defense = 1800, specialattack = 1500, vitality = 1500, agility = 1400, exp = 1000, level = 900, wildLvl = 600, type = "electric", type2 = "fire"},
-
-["Xerneas MVP"] = {offense = 2500, defense = 2500, specialattack = 2400, vitality = 100, agility = 3000, exp = 1000, level = 10000, wildLvl = 600, type = "electric", type2 = "fire"},
-
-["Hydreigon"] = {offense = 700, defense = 800, specialattack = 700, vitality = 600, agility = 900, exp = 10000, level = 100, wildLvl = 600, type = "dragon", type2 = "fire"},
-
-["Shiny Hydreigon"] = {offense = 1000, defense = 1100, specialattack = 800, vitality = 800, agility = 900, exp = 10000, level = 100, wildLvl = 600, type = "dragon", type2 = "fire"},
-
-["Hydreigon MVP"] = {offense = 1200, defense = 1200, specialattack = 1000, vitality = 1600, agility = 1900, exp = 10000, level = 100000, wildLvl = 600, type = "electric", type2 = "fire"},
-
-["Shiny Hydreigon MVP"] = {offense = 1400, defense = 1400, specialattack = 1200, vitality = 1600, agility = 900, exp = 10000, level = 100000, wildLvl = 600, type = "electric", type2 = "fire"},
-
-["Mega Mewtwo"] = {offense =  1200, defense = 1200, specialattack = 1200, vitality = 1500, agility = 1000, exp = 1000, level = 120, wildLvl = 600, type = "psychic", type2 = "no type"},
-
-["Mega Pidgeot"] = {offense = 200, defense = 200, specialattack = 200, vitality = 900, agility = 700, exp = 1000, level = 120, wildLvl = 600, type = "psychic", type2 = "no type"},
-
-["Hoopa Unbound"] = {offense = 1200, defense = 1200, specialattack = 1200, vitality = 1200, agility = 1000, exp = 1000, level = 120, wildLvl = 600, type = "psychic", type2 = "no type"},
-
-["Hoopa Unbound Star"] = {offense = 1700, defense = 1500, specialattack = 1400, vitality = 1300, agility = 1000, exp = 1000, level = 120, wildLvl = 600, type = "psychic", type2 = "no type"},
-
-["Black Hoopa Unbound"] = {offense = 1500, defense = 1500, specialattack = 1300, vitality = 1300, agility = 1000, exp = 1000, level = 1200, wildLvl = 600, type = "psychic", type2 = "no type"},
-
-["Hoopa"] = {offense = 500, defense = 800, specialattack = 700, vitality = 700, agility = 500, exp = 1000, level = 50, wildLvl = 600, type = "psychic", type2 = "no type"},
-
-["Shiny Hoopa Unbound"] = {offense = 1600, defense = 1600, specialattack = 1700, vitality = 1600, agility = 1000, exp = 1000, level = 120, wildLvl = 600, type = "psychic", type2 = "no type"},
-
-["Mega Swampert"] = {offense = 300, defense = 200, specialattack = 300, vitality = 300, agility = 1000, exp = 1000, level = 120, wildLvl = 600, type = "psychic", type2 = "no type"},
-
-["Mega Banette"] = {offense = 350, defense = 250, specialattack = 350, vitality = 450, agility = 1000, exp = 1000, level = 120, wildLvl = 600, type = "psychic", type2 = "no type"},
-
-["Mega Mawile"] = {offense = 450, defense = 450, specialattack = 450, vitality = 350, agility = 1000, exp = 1000, level = 120, wildLvl = 600, type = "psychic", type2 = "no type"},
-
-["Mega Absol"] = {offense = 300, defense = 500, specialattack = 400, vitality = 400, agility = 1000, exp = 1000, level = 120, wildLvl = 600, type = "psychic", type2 = "no type"},
-
-["Mega Aggron"] = {offense = 300, defense = 400, specialattack = 300, vitality = 300, agility = 1000, exp = 1000, level = 120, wildLvl = 600, type = "psychic", type2 = "no type"},
-
-["Aggron"] = {offense = 90, defense = 90, specialattack = 90, vitality = 90, agility = 100, exp = 100, level = 12, wildLvl = 600, type = "psychic", type2 = "no type"},
-
-["Mega Blaziken"] = {offense = 300, defense = 300, specialattack = 300, vitality = 300, agility = 1000, exp = 1000, level = 120, wildLvl = 600, type = "psychic", type2 = "no type"},
-
-["Mega Gardevoir"] = {offense = 300, defense = 300, specialattack = 300, vitality = 300, agility = 1000, exp = 1000, level = 120, wildLvl = 600, type = "psychic", type2 = "no type"},
-
-["Mega Sceptile"] = {offense = 300, defense = 300, specialattack = 300, vitality = 300, agility = 1000, exp = 1000, level = 120, wildLvl = 600, type = "psychic", type2 = "no type"},
-
-["Mega Manectric"] = {offense = 950, defense = 950, specialattack = 950, vitality = 950, agility = 1000, exp = 1000, level = 120, wildLvl = 600, type = "psychic", type2 = "no type"},
-
-["Mega Sharpedo"] = {offense = 300, defense = 300, specialattack = 300, vitality = 300, agility = 1000, exp = 1000, level = 120, wildLvl = 600, type = "psychic", type2 = "no type"},
-
-["Mega Glalie"] = {offense = 300, defense = 300, specialattack = 300, vitality = 300, agility = 1000, exp = 1000, level = 120, wildLvl = 600, type = "psychic", type2 = "no type"},
-
-["Mega Kangaskhan"] = {offense = 300, defense = 300, specialattack = 300, vitality = 300, agility = 1000, exp = 1000, level = 120, wildLvl = 600, type = "psychic", type2 = "no type"},
-
-["Mega Aerodactyl"] = {offense = 300, defense = 300, specialattack = 300, vitality = 300, agility = 1000, exp = 1000, level = 120, wildLvl = 600, type = "psychic", type2 = "no type"},
-
-["Mega Pidgeot"] = {offense = 300, defense = 300, specialattack = 300, vitality = 300, agility = 1000, exp = 1000, level = 120, wildLvl = 600, type = "psychic", type2 = "no type"},
-
-["Mega Alakazam"] = {offense = 450, defense = 450, specialattack = 200, vitality = 400, agility = 1000, exp = 220000, level = 100, wildLvl = 600, type = "psychic", type2 = "no type"},
-
-["Mega Tyranitar"] = {offense = 450, defense = 460, specialattack = 360, vitality = 430, agility = 1000, exp = 21008, level = 1000, wildLvl = 200, type = "rock", type2 = "dark"},
-
-["Mega Ampharos"] = {offense = 300, defense = 400, specialattack = 300, vitality = 300, agility = 1000, exp = 1000, level = 120, wildLvl = 600, type = "psychic", type2 = "no type"},
-
-["Mega Blastoise"] = {offense = 400, defense = 400, specialattack = 400, vitality = 400, agility = 1000, exp = 1000, level = 120, wildLvl = 600, type = "water", type2 = "no type"},
-
-["Mega Lucario"] = {offense = 300, defense = 300, specialattack = 400, vitality = 400, agility = 1000, exp = 1000, level = 120, wildLvl = 600, type = "fighting", type2 = "dark"},
-
-["Mega Charizard"] = {offense = 300, defense = 300, specialattack = 300, vitality = 300, agility = 1000, exp = 1000, level = 120, wildLvl = 600, type = "fire", type2 = "dragon"},
-
-["Mega Charizard Y"] = {offense = 300, defense = 300, specialattack = 300, vitality = 300, agility = 1000, exp = 1000, level = 120, wildLvl = 600, type = "fire", type2 = "dragon"},
-
-["Mega Gengar"] = {offense = 700, defense = 700, specialattack = 700, vitality = 700, agility = 1000, exp = 1000, level = 120, wildLvl = 600, type = "ghost", type2 = "dark"},
-  ---Evento-By Oloster--
-["Creeper"] = {offense = 1500, defense = 1500, specialattack = 1800, vitality = 2700, agility = 1000, exp = 5000, level = 30000, wildLvl = 600, type = "fire", type2 = "flying"},
-
-			----Highs
-
-["Shiny Charizard ULTRA"] = {offense = 1000, defense = 700, specialattack = 300, vitality = 350, agility = 450, exp = 5000, level = 100, wildLvl = 500, type = "fire", type2 = "flying"},
-
-["High Venusaur"] = {offense = 600, defense = 500, specialattack = 600, vitality = 100, agility = 500, exp = 208, level = 85, wildLvl = 500, type = "grass", type2 = "poison"},
-
-["High Blastoise"] = {offense = 600, defense = 500, specialattack = 600, vitality = 100, agility = 500, exp = 210, level = 85, wildLvl = 500, type = "water", type2 = "no type"},
-
-["High Arcanine"] = {offense = 600, defense = 500, specialattack = 600, vitality = 100, agility = 500, exp = 500, level = 80, wildLvl = 500, type = "fire", type2 = "no type"},
-
-["High Magmar"] = {offense = 600, defense = 500, specialattack = 600, vitality = 100, agility = 500, exp = 167, level = 80, wildLvl = 500, type = "fire", type2 = "no type"},
-
-["High Alakazam"] = {offense = 150, defense = 200, specialattack = 50, vitality = 500, agility = 500, exp = 186, level = 80, wildLvl = 100, type = "psychic", type2 = "no type"},
-
-                       ---- Powers
-
-["Power Charizard"] = {offense = 500, defense = 500, specialattack = 1800, vitality = 70, agility = 1000, exp = 5000, level = 30000, wildLvl = 600, type = "fire", type2 = "flying"},
-
-["Power Alakazam"] = {offense = 500, defense = 500, specialattack = 1800, vitality = 70, agility = 1000, exp = 5000, level = 30000, wildLvl = 600, type = "fire", type2 = "flying"},
-
-["Shiny Power Alakazam"] = {offense = 800, defense = 800, specialattack = 2500, vitality = 200, agility = 1600, exp = 5000, level = 5000, wildLvl = 900, type = "fire", type2 = "flying"},
-
-["Shiny Power Charizard"] = {offense = 800, defense = 800, specialattack = 2500, vitality = 200, agility = 1600, exp = 5000, level = 5000, wildLvl = 900, type = "fire", type2 = "flying"},
-
-["Power Blastoise"] = {offense = 500, defense = 500, specialattack = 1800, vitality = 70, agility = 1000, exp = 5000, level = 30000, wildLvl = 600, type = "fire", type2 = "flying"},
-
-["Shiny Power Blastoise"] = {offense = 800, defense = 800, specialattack = 2500, vitality = 200, agility = 1600, exp = 5000, level = 5000, wildLvl = 900, type = "fire", type2 = "flying"},
-
-["Power Venusaur"] = {offense = 500, defense = 500, specialattack = 1800, vitality = 70, agility = 1000, exp = 5000, level = 30000, wildLvl = 600, type = "fire", type2 = "flying"},
-
-["Shiny Power Venusaur"] = {offense = 800, defense = 800, specialattack = 2500, vitality = 200, agility = 1600, exp = 5000, level = 5000, wildLvl = 900, type = "fire", type2 = "flying"},
-
-["Power Raichu"] = {offense = 500, defense = 500, specialattack = 1800, vitality = 70, agility = 1000, exp = 5000, level = 30000, wildLvl = 600, type = "fire", type2 = "flying"},
-
-["Shiny Power Raichu"] = {offense = 800, defense = 800, specialattack = 2500, vitality = 200, agility = 1600, exp = 5000, level = 5000, wildLvl = 900, type = "fire", type2 = "flying"},
-
-["Power Arcanine"] = {offense = 500, defense = 500, specialattack = 1800, vitality = 70, agility = 1000, exp = 5000, level = 30000, wildLvl = 600, type = "fire", type2 = "flying"},
-
-["Shiny Power Arcanine"] = {offense = 800, defense = 800, specialattack = 2500, vitality = 200, agility = 1600, exp = 5000, level = 5000, wildLvl = 900, type = "fire", type2 = "flying"},
-
-["Power Jynx"] = {offense = 500, defense = 500, specialattack = 1800, vitality = 70, agility = 1000, exp = 5000, level = 30000, wildLvl = 600, type = "fire", type2 = "flying"},
-
-["Shiny Power Jynx"] = {offense = 800, defense = 800, specialattack = 2500, vitality = 200, agility = 1600, exp = 5000, level = 5000, wildLvl = 900, type = "fire", type2 = "flying"},
-
-["Latios"] = {offense = 700, defense = 1500, specialattack = 1600, vitality = 1000, agility = 1000, exp = 10000, level = 500, wildLvl = 100, type = "dark", type2 = "rock"},
-
-["Latios Cells"] = {offense = 900, defense = 1500, specialattack = 1800, vitality = 1300, agility = 1300, exp = 10000, level = 500, wildLvl = 100, type = "dark", type2 = "rock"},
-
-["Black Latios"] = {offense = 1700, defense = 1800, specialattack = 1900, vitality = 1100, agility = 1100, exp = 10000, level = 500, wildLvl = 100, type = "dark", type2 = "rock"},
-
-["Latios Underwater"] = {offense = 1770, defense = 2000, specialattack = 1800, vitality = 1200, agility = 1000, exp = 10000, level = 1500, wildLvl = 100, type = "dark", type2 = "rock"},
-
-["Latios Flamethrower"] = {offense = 1800, defense = 2100, specialattack = 1700, vitality = 1300, agility = 1000, exp = 10000, level = 1500, wildLvl = 100, type = "dark", type2 = "rock"},
-
-["Latios Darkwooder"] = {offense = 1900, defense = 2000, specialattack = 1700, vitality = 1500, agility = 1200, exp = 10000, level = 1500, wildLvl = 100, type = "dark", type2 = "rock"},
-
-["Latios Leaf Green"] = {offense = 1770, defense = 1900, specialattack = 1900, vitality = 1200, agility = 1300, exp = 10000, level = 1500, wildLvl = 100, type = "dark", type2 = "rock"},
-
-["Shiny Mega Latios"] = {offense = 1000, defense = 1500, specialattack = 1200, vitality = 1600, agility = 1200, exp = 10000, level = 1500, wildLvl = 100, type = "dark", type2 = "rock"},
-					  
-["Latias"] = {offense = 800, defense = 1600, specialattack = 1500, vitality = 1100, agility = 1000, exp = 10000, level = 500, wildLvl = 100, type = "dark", type2 = "rock"},
-
-["Shiny Mega Latias"] = {offense = 2300, defense = 1000, specialattack = 1200, vitality = 1000, agility = 1000, exp = 10000, level = 500, wildLvl = 200, type = "dark", type2 = "rock"},
-
-["Volcanion"] = {offense = 1300, defense = 1200, specialattack = 700, vitality = 1250, agility = 1000, exp = 0, level = 1000, wildLvl = 250, type = "fire", type2 = "water"},
-
-["Shiny Volcanion"] = {offense = 1500, defense = 1600, specialattack = 1000, vitality = 1300, agility = 1000, exp = 0, level = 1000, wildLvl = 250, type = "fire", type2 = "water"},
-
------Bads--Golden- By Olostr-
-["Bad Scyther"] = {offense = 820, defense = 630, specialattack = 700, vitality = 800, agility = 1000, exp = 0, level = 1000, wildLvl = 250, type = "fire", type2 = "water"},
-
-["Bad Blastoise"] = {offense = 800, defense = 600, specialattack = 1200, vitality = 700, agility = 1000, exp = 0, level = 100, wildLvl = 250, type = "fire", type2 = "water"},
-
-["Bad Gengar"] = {offense = 800, defense = 600, specialattack = 1400, vitality = 900, agility = 1000, exp = 0, level = 100, wildLvl = 250, type = "fire", type2 = "water"},
-
-["Bad Electivire"] = {offense = 800, defense = 600, specialattack = 1200, vitality = 800, agility = 1000, exp = 0, level = 100, wildLvl = 250, type = "fire", type2 = "water"},
-
-["Bad Kyogre"] = {offense = 800, defense = 600, specialattack = 1300, vitality = 900, agility = 1000, exp = 0, level = 100, wildLvl = 250, type = "fire", type2 = "water"},
-
-["Bad Regeneration"] = {offense = 900, defense = 300, specialattack = 1200, vitality = 1200, agility = 1000, exp = 0, level = 100, wildLvl = 250, type = "fire", type2 = "water"},
-
-["Green Charizard"] = {offense = 700, defense = 400, specialattack = 800, vitality = 700, agility = 1000, exp = 0, level = 100, wildLvl = 250, type = "fire", type2 = "water"},
-
-["Green Gengar"] = {offense = 800, defense = 400, specialattack = 800, vitality = 800, agility = 1000, exp = 0, level = 100, wildLvl = 250, type = "fire", type2 = "water"},
-
-["Green Onix"] = {offense = 880, defense = 600, specialattack = 800, vitality = 600, agility = 1000, exp = 0, level = 100, wildLvl = 250, type = "fire", type2 = "water"},
-
-["Green Electivire"] = {offense = 800, defense = 400, specialattack = 800, vitality = 600, agility = 1000, exp = 0, level = 100, wildLvl = 250, type = "fire", type2 = "water"},
-
-["Golden Tyranitar"] = {offense = 800, defense = 400, specialattack = 800, vitality = 600, agility = 1000, exp = 0, level = 100, wildLvl = 250, type = "fire", type2 = "water"},
-
-["Golden Entei"] = {offense = 820, defense = 400, specialattack = 800, vitality = 700, agility = 1000, exp = 0, level = 100, wildLvl = 250, type = "fire", type2 = "water"},
-
-["Golden Suicune"] = {offense = 800, defense = 500, specialattack = 800, vitality = 800, agility = 1000, exp = 0, level = 100, wildLvl = 250, type = "fire", type2 = "water"},
-
-["Golden Raikou"] = {offense = 800, defense = 500, specialattack = 800, vitality = 600, agility = 1000, exp = 0, level = 100, wildLvl = 250, type = "fire", type2 = "water"},
-
-----Pokes-Shadows----
-
-["Shadow Jirachi"] = {offense = 1000, defense = 800, specialattack = 900, vitality = 1500, agility = 1000, exp = 0, level = 1000, wildLvl = 300, type = "dark", type2 = "psychic"},
-
-["Shadow Alakazam"] = {offense = 600, defense = 300, specialattack = 450, vitality = 800, agility = 1000, exp = 220000, level = 900, wildLvl = 200, type = "psychic", type2 = "no type"},
-
-["Shadow Charizard"] = {offense = 400, defense = 250, specialattack = 390, vitality = 650, agility = 1000, exp = 20900, level = 800, wildLvl = 200, type = "fire", type2 = "flying"},
-
-["Shadow Giratina"] = {offense = 400, defense = 250, specialattack = 390, vitality = 850, agility = 1000, exp = 21800, level = 3000, wildLvl = 200, type = "dark", type2 = "psychic"},
-
-["Shadow Palkia"] = {offense = 400, defense = 250, specialattack = 390, vitality = 850, agility = 1000, exp = 22000, level = 2000, wildLvl = 200, type = "psychic", type2 = "no type"},
-
-["Shadow Salamence"] = {offense = 300, defense = 200, specialattack = 350, vitality = 600, agility = 1000, exp = 21800, level = 1000, wildLvl = 100, type = "dragon", type2 = "flying"},
-
-["Shadow Slowking"] = {offense = 400, defense = 900, specialattack = 400, vitality = 700, agility = 1000, exp = 16400, level = 1000, wildLvl = 350, type = "water", type2 = "psychic"},
-
-["Shadow Tyranitar"] = {offense = 240, defense = 400, specialattack = 360, vitality = 400, agility = 1000, exp = 21008, level = 2000, wildLvl = 200, type = "rock", type2 = "dark"},
-
-["Shadow Victini"] = {offense = 400, defense = 400, specialattack = 480, vitality = 600, agility = 1000, exp = 1500, level = 1500, wildLvl = 210, type = "fire", type2 = "no type"},
-
-["Shadow Yveltal"] = {offense = 400, defense = 400, specialattack = 430, vitality = 600, agility = 1000, exp = 22000, level = 1500, wildLvl = 150, type = "fire", type2 = "no type"},
-
----Novos By Oloster---
-
-["Shaymin"] = {offense = 350, defense = 300, specialattack = 440, vitality = 690, agility = 1000, exp = 15000, level = 1000, wildLvl = 150, type = "poison", type2 = "grass"},
-
-["Tornadus"] = {offense = 330, defense = 120, specialattack = 230, vitality = 200, agility = 700, exp = 15000, level = 100, wildLvl = 150, type = "poison", type2 = "grass"},
-
-["Thundurus"] = {offense = 320, defense = 130, specialattack = 220, vitality = 220, agility = 500, exp = 15000, level = 100, wildLvl = 150, type = "poison", type2 = "grass"},
-
-["Landorus"] = {offense = 370, defense = 120, specialattack = 210, vitality = 210, agility = 600, exp = 15000, level = 100, wildLvl = 150, type = "poison", type2 = "grass"},
-
-["Kami Landorus"] = {offense = 1150, defense = 1200, specialattack = 1000, vitality = 1000, agility = 1000, exp = 1000, level = 1000, wildLvl = 600, type = "psychic", type2 = "no type"},
-
-["Kami Thundurus"] = {offense = 1300, defense = 1300, specialattack = 1000, vitality = 1200, agility = 1000, exp = 1000, level = 1000, wildLvl = 600, type = "psychic", type2 = "no type"},
-
-["Kami Tornadus"] = {offense = 1200, defense = 1200, specialattack = 1100, vitality = 1100, agility = 1000, exp = 1000, level = 1000, wildLvl = 600, type = "psychic", type2 = "no type"},
-
-["Ancient Kabutops"] = {offense = 150, defense = 100, specialattack = 100, vitality = 250, agility = 1000, exp = 92199, level = 100, wildLvl = 300, type = "rock", type2 = "water"},
-
-["Ancient Arcanine"] = {offense = 100, defense = 100, specialattack = 100, vitality = 100, agility = 500, exp = 640, level = 100, wildLvl = 300, type = "fire", type2 = "no type"},
-
-["Ancient Blastoise"] = {offense = 110, defense = 110, specialattack = 110, vitality = 110, agility = 600, exp = 700, level = 100, wildLvl = 300, type = "water", type2 = "no type"},
-
-["Ancient Slowking"] = {offense = 130, defense = 280, specialattack = 229, vitality = 225, agility = 600, exp = 8000, level = 100, wildLvl = 300, type = "electric", type2 = "no type"},
-
-["Ancient Aerodactyl"] = {offense = 450, defense = 299, specialattack = 145, vitality = 130, agility = 100, exp = 2002, level = 100, wildLvl = 200, type = "rock", type2 = "Flying"},
-
------Guardiao---
-
-["Guardiao Aggron"] = {offense = 800, defense = 700, specialattack = 900, vitality = 750, agility = 450, exp = 5000, level = 100, wildLvl = 700, type = "fire", type2 = "flying"},
-
-["Guardiao Aggron X"] = {offense = 800, defense = 700, specialattack = 900, vitality = 700, agility = 450, exp = 5000, level = 100, wildLvl = 700, type = "fire", type2 = "flying"},
-
-["Guardiao Charizard X"] = {offense = 800, defense = 700, specialattack = 900, vitality = 700, agility = 450, exp = 5000, level = 100, wildLvl = 700, type = "fire", type2 = "flying"},
-
-["Guardiao Charizard"] = {offense = 800, defense = 700, specialattack = 900, vitality = 700, agility = 450, exp = 5000, level = 100, wildLvl = 700, type = "fire", type2 = "flying"},
-
-["Guardiao Ursaring"] = {offense = 800, defense = 700, specialattack = 900, vitality = 700, agility = 450, exp = 5000, level = 100, wildLvl = 700, type = "fire", type2 = "flying"},
-
-["Guardiao Ursaring X"] = {offense = 800, defense = 700, specialattack = 900, vitality = 700, agility = 450, exp = 5000, level = 100, wildLvl = 700, type = "fire", type2 = "flying"},
-
-["Guardiao Salamence"] = {offense = 800, defense = 700, specialattack = 900, vitality = 700, agility = 450, exp = 5000, level = 100, wildLvl = 700, type = "fire", type2 = "flying"},
-
-["Guardiao Salamence X"] = {offense = 800, defense = 700, specialattack = 900, vitality = 700, agility = 450, exp = 5000, level = 100, wildLvl = 700, type = "fire", type2 = "flying"},
-
-["Guardiao Hypno"] = {offense = 800, defense = 700, specialattack = 900, vitality = 700, agility = 450, exp = 5000, level = 100, wildLvl = 700, type = "fire", type2 = "flying"},
-
-["Guardiao Feraligatr"] = {offense = 800, defense = 700, specialattack = 900, vitality = 700, agility = 450, exp = 5000, level = 100, wildLvl = 700, type = "fire", type2 = "flying"},
-
-["Guardiao Gengar"] = {offense = 800, defense = 700, specialattack = 900, vitality = 700, agility = 450, exp = 5000, level = 100, wildLvl = 700, type = "fire", type2 = "flying"},
-
-["Guardiao Typhlosion"] = {offense = 800, defense = 700, specialattack = 900, vitality = 700, agility = 450, exp = 5000, level = 100, wildLvl = 700, type = "fire", type2 = "flying"},
-
-["Guardiao Snorlax"] = {offense = 800, defense = 700, specialattack = 900, vitality = 700, agility = 450, exp = 5000, level = 100, wildLvl = 700, type = "fire", type2 = "flying"},
-
-["Guardiao Tangrowth"] = {offense = 800, defense = 700, specialattack = 900, vitality = 700, agility = 450, exp = 5000, level = 100, wildLvl = 700, type = "fire", type2 = "flying"},
-
-["Guardiao Tyranitar"] = {offense = 800, defense = 700, specialattack = 900, vitality = 700, agility = 450, exp = 5000, level = 100, wildLvl = 700, type = "fire", type2 = "flying"},
-
-["Guardiao Electivire"] = {offense = 800, defense = 700, specialattack = 900, vitality = 700, agility = 450, exp = 5000, level = 100, wildLvl = 700, type = "fire", type2 = "flying"},
-
-["Guardiao Feraligath"] = {offense = 800, defense = 700, specialattack = 900, vitality = 700, agility = 450, exp = 5000, level = 100, wildLvl = 700, type = "fire", type2 = "flying"},
-
-["Guardiao Blastoise"] = {offense = 800, defense = 700, specialattack = 900, vitality = 700, agility = 450, exp = 5000, level = 100, wildLvl = 700, type = "fire", type2 = "flying"},
-
-["PXM PRO"] = {offense = 1900, defense = 2700, specialattack = 4300, vitality = 3000, agility = 1450, exp = 15000, level = 100, wildLvl = 700, type = "fire", type2 = "flying"},
-
-                                   ---------By Oloster Nv1--------
-								   
-["Alakazam Nv1"] = {offense = 100, defense = 70, specialattack = 50, vitality = 50, agility = 50, exp = 1000, level = 10, wildLvl = 70, type = "fire", type2 = "flying"},
-
-["Lapras Nv1"] = {offense = 980, defense = 970, specialattack = 1240, vitality = 560, agility = 950, exp = 1000, level = 50, wildLvl = 800, type = "fire", type2 = "flying"},
-
-["Rhydon Nv1"] = {offense = 90, defense = 70, specialattack = 50, vitality = 50, agility = 50, exp = 1000, level = 10, wildLvl = 70, type = "fire", type2 = "flying"},
-
-["Vileplume Nv1"] = {offense = 900, defense = 770, specialattack = 750, vitality = 640, agility = 250, exp = 1000, level = 50, wildLvl = 890, type = "fire", type2 = "flying"},
-
-["Dragonair Nv1"] = {offense = 80, defense = 70, specialattack = 30, vitality = 52, agility = 50, exp = 1000, level = 10, wildLvl = 70, type = "fire", type2 = "flying"},
-
-["Togekiss Nv1"] = {offense = 180, defense = 70, specialattack = 30, vitality = 53, agility = 50, exp = 1000, level = 10, wildLvl = 70, type = "fire", type2 = "flying"},
-
-["Magmortar Nv1"] = {offense = 120, defense = 70, specialattack = 30, vitality = 51, agility = 50, exp = 1000, level = 10, wildLvl = 70, type = "fire", type2 = "flying"},
-
-["Rhyperior Nv1"] = {offense = 190, defense = 70, specialattack = 30, vitality = 55, agility = 50, exp = 1000, level = 10, wildLvl = 70, type = "fire", type2 = "flying"},
-
-["Tangrowth Nv1"] = {offense = 180, defense = 70, specialattack = 30, vitality = 56, agility = 50, exp = 1000, level = 10, wildLvl = 70, type = "fire", type2 = "flying"},
-
-["Poliwrath Nv1"] = {offense = 1280, defense = 970, specialattack = 930, vitality = 653, agility = 50, exp = 1000, level = 50, wildLvl = 870, type = "fire", type2 = "flying"},
-
-["Blastoise Nv1"] = {offense = 180, defense = 70, specialattack = 30, vitality = 53, agility = 50, exp = 1000, level = 10, wildLvl = 70, type = "fire", type2 = "flying"},
-
-["Charizard Nv1"] = {offense = 180, defense = 70, specialattack = 30, vitality = 54, agility = 50, exp = 1000, level = 10, wildLvl = 70, type = "fire", type2 = "flying"},
-
-["Steelix Nv1"] = {offense = 120, defense = 70, specialattack = 30, vitality = 55, agility = 50, exp = 1000, level = 10, wildLvl = 70, type = "fire", type2 = "flying"},
-
-["Magmar Nv1"] = {offense = 100, defense = 70, specialattack = 30, vitality = 52, agility = 50, exp = 1000, level = 10, wildLvl = 70, type = "fire", type2 = "flying"},
-
-["Tyranitar Nv1"] = {offense = 80, defense = 70, specialattack = 30, vitality = 53, agility = 50, exp = 1000, level = 10, wildLvl = 70, type = "fire", type2 = "flying"},
-
-["Tangela Nv1"] = {offense = 100, defense = 70, specialattack = 30, vitality = 51, agility = 50, exp = 1000, level = 10, wildLvl = 70, type = "fire", type2 = "flying"},
-
-["Snorlax Nv1"] = {offense = 120, defense = 70, specialattack = 30, vitality = 52, agility = 50, exp = 1000, level = 10, wildLvl = 70, type = "fire", type2 = "flying"},
-
-["Scyther Nv1"] = {offense = 130, defense = 70, specialattack = 30, vitality = 53, agility = 50, exp = 1000, level = 10, wildLvl = 70, type = "fire", type2 = "flying"},
-
-["Golem Nv1"] = {offense = 120, defense = 70, specialattack = 30, vitality = 40, agility = 50, exp = 1000, level = 10, wildLvl = 70, type = "fire", type2 = "flying"},
-
-["Slowking Nv1"] = {offense = 140, defense = 70, specialattack = 30, vitality = 50, agility = 50, exp = 1000, level = 10, wildLvl = 70, type = "fire", type2 = "flying"},
-
-["Raikou Nv1"] = {offense = 140, defense = 70, specialattack = 30, vitality = 50, agility = 50, exp = 2500, level = 40, wildLvl = 90, type = "fire", type2 = "flying"},
-
-["Electivire Nv1"] = {offense = 200, defense = 80, specialattack = 80, vitality = 70, agility = 50, exp = 3000, level = 40, wildLvl = 120, type = "fire", type2 = "flying"},
-
-["Haunter Nv1"] = {offense = 100, defense = 90, specialattack = 50, vitality = 70, agility = 50, exp = 2400, level = 30, wildLvl = 90, type = "fire", type2 = "flying"},
-
-["Gengar Nv1"] = {offense = 270, defense = 90, specialattack = 70, vitality = 70, agility = 50, exp = 2000, level = 50, wildLvl = 100, type = "fire", type2 = "flying"},
-
-["Venusaur Nv2"] = {offense = 970, defense = 970, specialattack = 1200, vitality = 670, agility = 250, exp = 9000, level = 50, wildLvl = 900, type = "fire", type2 = "flying"},
-
-["Venusaur Nv3"] = {offense = 970, defense = 1000, specialattack = 1300, vitality = 700, agility = 250, exp = 9000, level = 50, wildLvl = 1200, type = "fire", type2 = "flying"},
-
-["Venusaur MVP"] = {offense = 970, defense = 1000, specialattack = 1300, vitality = 1700, agility = 250, exp = 9000, level = 50, wildLvl = 1200, type = "fire", type2 = "flying"},
-
-["Absol Nv2"] = {offense = 970, defense = 930, specialattack = 900, vitality = 670, agility = 750, exp = 9000, level = 50, wildLvl = 900, type = "fire", type2 = "flying"},
-
-["Lucario Nv2"] = {offense = 970, defense = 120, specialattack = 770, vitality = 870, agility = 250, exp = 9000, level = 50, wildLvl = 900, type = "fire", type2 = "flying"},
-
-["Palkia Nv2"] = {offense = 970, defense = 210, specialattack = 870, vitality = 870, agility = 350, exp = 9000, level = 50, wildLvl = 900, type = "fire", type2 = "flying"},
-
-["Zapdos Nv2"] = {offense = 970, defense = 920, specialattack = 970, vitality = 870, agility = 350, exp = 9000, level = 50, wildLvl = 900, type = "fire", type2 = "flying"},
-
-["Blastoise Nv2"] = {offense = 970, defense = 450, specialattack = 870, vitality = 870, agility = 350, exp = 9000, level = 50, wildLvl = 900, type = "fire", type2 = "flying"},
-
-["Steelix Nv2"] = {offense = 970, defense = 430, specialattack = 970, vitality = 970, agility = 450, exp = 9000, level = 50, wildLvl = 900, type = "fire", type2 = "flying"},
-
-["Alakazam Nv2"] = {offense = 970, defense = 970, specialattack = 970, vitality = 870, agility = 350, exp = 9000, level = 50, wildLvl = 900, type = "fire", type2 = "flying"},
-
-["Slowking Nv2"] = {offense = 970, defense = 980, specialattack = 870, vitality = 900, agility = 350, exp = 9000, level = 50, wildLvl = 900, type = "fire", type2 = "flying"},
-
-["Nidoking Nv3"] = {offense = 1200, defense = 980, specialattack = 870, vitality = 1030, agility = 800, exp = 9000, level = 400, wildLvl = 1200, type = "fire", type2 = "flying"},
-
-["Nidoking Nv4"] = {offense = 1200, defense = 980, specialattack = 1370, vitality = 1250, agility = 800, exp = 9000, level = 400, wildLvl = 1300, type = "fire", type2 = "flying"},
-
-["Fearow Nv3"] = {offense = 1200, defense = 980, specialattack = 870, vitality = 990, agility = 800, exp = 9000, level = 400, wildLvl = 1200, type = "fire", type2 = "flying"},
-
-["Gardevoir Nv3"] = {offense = 1200, defense = 980, specialattack = 870, vitality = 950, agility = 800, exp = 9000, level = 400, wildLvl = 1200, type = "fire", type2 = "flying"},
-
-["Golem Nv3"] = {offense = 1200, defense = 980, specialattack = 870, vitality = 860, agility = 800, exp = 9000, level = 400, wildLvl = 1100, type = "fire", type2 = "flying"},
-
-["Charmander Nv3"] = {offense = 1200, defense = 680, specialattack = 870, vitality = 580, agility = 800, exp = 9000, level = 400, wildLvl = 1200, type = "fire", type2 = "flying"},
-
-["Muk Nv3"] = {offense = 1200, defense = 980, specialattack = 1370, vitality = 970, agility = 800, exp = 9000, level = 400, wildLvl = 1200, type = "fire", type2 = "flying"},
-
-["Geodude Nv3"] = {offense = 1200, defense = 980, specialattack = 1270, vitality = 470, agility = 800, exp = 9000, level = 400, wildLvl = 200, type = "fire", type2 = "flying"},
-
-["Gallade Nv3"] = {offense = 1200, defense = 980, specialattack = 1270, vitality = 770, agility = 800, exp = 9000, level = 400, wildLvl = 900, type = "fire", type2 = "flying"},
-
-["Blastoise Nv3"] = {offense = 1200, defense = 980, specialattack = 1270, vitality = 570, agility = 800, exp = 9000, level = 400, wildLvl = 1200, type = "fire", type2 = "flying"},
-
-["Togekiss Nv3"] = {offense = 1200, defense = 980, specialattack = 1270, vitality = 970, agility = 800, exp = 9000, level = 400, wildLvl = 1300, type = "fire", type2 = "flying"},
-
-["Victreebel Nv3"] = {offense = 1200, defense = 980, specialattack = 1270, vitality = 970, agility = 800, exp = 9000, level = 400, wildLvl = 1400, type = "fire", type2 = "flying"},
-
-["Ultra Zombie"] = {offense = 1200, defense = 1980, specialattack = 1370, vitality = 2770, agility = 800, exp = 9000, level = 500, wildLvl = 1400, type = "fire", type2 = "flying"},
-
-["Rocket Machine"] = {offense = 1500, defense = 1280, specialattack = 1370, vitality = 3770, agility = 950, exp = 19000, level = 1500, wildLvl = 1700, type = "fire", type2 = "flying"},
-
--- Legendary
-["Legendary Genesect"] = {offense = 2310, defense = 2100, specialattack = 2610, vitality = 1200, agility = 900, exp = 1000, level = 200, wildLvl = 800, type = "bug", type2 = "no type"},
-
-["Legendary Darkrai"] = {offense = 2760, defense = 2400, specialattack = 2160, vitality = 1500, agility = 800, exp = 20009, level = 1, wildLvl = 200, type = "ghost", type2 = "poison"},
-
-["Legendary Dialga"] = {offense = 750, defense = 810, specialattack = 1350, vitality = 1380, agility = 700, exp = 6000, level = 3, wildLvl = 300, type = "steel", type2 = "dragon"},
-
-["Legendary Entei"] = {offense = 181.5, defense = 181.5, specialattack = 1050, vitality = 1200, agility = 1000, exp = 217, level = 150, wildLvl = 500, type = "fire", type2 = "no type"},
-
-["Legendary Raikou"] = {offense = 181.5, defense = 181.5, specialattack = 600, vitality = 900, agility = 1500, exp = 216, level = 150, wildLvl = 500, type = "electric", type2 = "no type"},
-
-["Legendary Suicune"] = {offense = 181.5, defense = 181.5, specialattack = 450, vitality = 450, agility = 1340, exp = 218, level = 150, wildLvl = 500, type = "water", type2 = "no type"},
-
-["Legendary Latias"] = {offense = 2400, defense = 4800, specialattack = 4500, vitality = 3300, agility = 1000, exp = 10000, level = 500, wildLvl = 100, type = "dark", type2 = "rock"},
-
-["Legendary Latios"] = {offense = 2100, defense = 4500, specialattack = 4800, vitality = 3000, agility = 1000, exp = 10000, level = 500, wildLvl = 100, type = "dark", type2 = "rock"},
-
-["Legendary Regigigas"] = {offense = 1200, defense = 600, specialattack = 1800, vitality = 1800, agility = 700, exp = 640, level = 6, wildLvl = 200, type = "rock", type2 = "grass"},
-
-["Legendary Xerneas"] = {offense = 3600, defense = 3600, specialattack = 3600, vitality = 3600, agility = 1200, exp = 1000, level = 120, wildLvl = 600, type = "electric", type2 = "fire"},
-
-["Legendary Zygarde"] = {offense = 3900, defense = 3900, specialattack = 3900, vitality = 3900, agility = 1500, exp = 1000, level = 120, wildLvl = 600, type = "grass", type2 = "dragon"},
-
-["Legendary Heatran"] = {offense = 1500, defense = 900, specialattack = 1800, vitality = 900, agility = 500, exp = 16200, level = 1, wildLvl = 800, type = "ground", type2 = "fire"},
-
-["Legendary Articuno"] = {offense = 210, defense = 210, specialattack = 600, vitality = 750, agility = 500, exp = 215, level = 1, wildLvl = 300, type = "ice", type2 = "flying"},
-
-["Legendary Moltres"] = {offense = 210, defense = 210, specialattack = 600, vitality = 780, agility = 500, exp = 217, level = 1, wildLvl = 300, type = "fire", type2 = "flying"},
-
-["Legendary Zapdos"] = {offense = 210, defense = 210, specialattack = 600, vitality = 777, agility = 501, exp = 216, level = 1, wildLvl = 300, type = "electric", type2 = "flying"},
-
-["Legendary Mewtwo"] = {offense = 930, defense = 270, specialattack = 900, vitality = 1200, agility = 550, exp = 220, level = 20, wildLvl = 150, type = "psychic", type2 = "no type"},
-
-["Legendary Mew"] = {offense = 960, defense = 300, specialattack = 750, vitality = 910, agility = 550, exp = 64, level = 20, wildLvl = 150, type = "psychic", type2 = "no type"},
+------------
+["Magnet Electabuzz"] = {offense = 16.6, defense = 11.4, specialattack = 19, vitality = 13, agility = 450, exp = 7200, level = 250, wildLvl = 250, type = "electric", type2 = "no type"},
+["Hard Golem"] = {offense = 24, defense = 26, specialattack = 11, vitality = 16, agility = 450, exp = 2600, level = 250, wildLvl = 250, type = "ground", type2 = "rock"},
+["Brute Rhydon"] = {offense = 26, defense = 24, specialattack = 9, vitality = 21, agility = 450, exp = 4400, level = 250, wildLvl = 250, type = "ground", type2 = "rock"},
+["Iron Steelix"] = {offense = 17, defense = 40, specialattack = 11, vitality = 15, agility = 330, exp = 5600, level = 250, wildLvl = 250, type = "steel", type2 = "ground"},
+["Brave Charizard"] = {offense = 16.8, defense = 15.6, specialattack = 21.8, vitality = 15.6, agility = 450, exp = 7200, level = 250, wildLvl = 250, type = "fire", type2 = "flying"},
+["Lava Magmar"] = {offense = 19, defense = 11.4, specialattack = 20, vitality = 13, agility = 450, exp = 7200, level = 250, wildLvl = 250, type = "fire", type2 = "no type"},
+["Enraged Typhlosion"] = {offense = 16.8, defense = 15.6, specialattack = 21.8, vitality = 15.6, agility = 300, exp = 8000, level = 250, wildLvl = 250, type = "fire", type2 = "no type"},
+["Capoeira Hitmontop"] = {offense = 19, defense = 19, specialattack = 7, vitality = 10, agility = 300, exp = 5200, level = 250, wildLvl = 250, type = "fighting", type2 = "no type"},
+["Boxer Hitmonchan"] = {offense = 21, defense = 15.8, specialattack = 10, vitality = 10, agility = 350, exp = 5200, level = 250, wildLvl = 250, type = "fight", type2 = "no type"},
+["Taekwondo Hitmonlee"] = {offense = 24, defense = 10.6, specialattack = 10, vitality = 10, agility = 450, exp = 5200, level = 250, wildLvl = 250, type = "fight", type2 = "no type"},
+["Dragon Machamp"] = {offense = 26, defense = 16, specialattack = 13, vitality = 18, agility = 450, exp = 7200, level = 250, wildLvl = 250, type = "fight", type2 = "no type"},
+["Wardog Arcanine"] = {offense = 22, defense = 16, specialattack = 20, vitality = 18, agility = 525, exp = 4400, level = 250, wildLvl = 250, type = "fire", type2 = "no type"},
+["Furious Mantine"] = {offense = 8, defense = 14, specialattack = 16, vitality = 13, agility = 300, exp = 5200, level = 250, wildLvl = 250, type = "water", type2 = "flying"},
+["War Gyarados"] = {offense = 25, defense = 15.8, specialattack = 12, vitality = 19, agility = 450, exp = 7200, level = 250, wildLvl = 250, type = "water", type2 = "flying"},
+["Brave Blastoise"] = {offense = 16.6, defense = 20, specialattack = 17, vitality = 15.8, agility = 450, exp = 7200, level = 250, wildLvl = 250, type = "water", type2 = "no type"},
+["Brave Venusaur"] = {offense = 16.4, defense = 16.6, specialattack = 20, vitality = 16, agility = 450, exp = 7200, level = 250, wildLvl = 250, type = "grass", type2 = "poison"},
+["Ancient Meganium"] = {offense = 16.4, defense = 20, specialattack = 16.6, vitality = 16, agility = 300, exp = 8000, level = 250, wildLvl = 250, type = "grass", type2 = "no type"},
+["Charged Raichu"] = {offense = 18, defense = 11, specialattack = 18, vitality = 12, agility = 525, exp = 6000, level = 250, wildLvl = 250, type = "electric", type2 = "no type"},
+["Enigmatic Girafarig"] = {offense = 16, defense = 13, specialattack = 18, vitality = 14, agility = 450, exp = 3400, level = 250, wildLvl = 250, type = "normal", type2 = "psychic"},
+["Ancient Alakazam"] = {offense = 10, defense = 9, specialattack = 27, vitality = 11, agility = 450, exp = 4400, level = 250, wildLvl = 250, type = "psychic", type2 = "no type"},
+["Furious Ampharos"] = {offense = 15, defense = 17, specialattack = 23, vitality = 18, agility = 300, exp = 3600, level = 250, wildLvl = 250, type = "electric", type2 = "no type"},
+["Furious Scyther"] = {offense = 22, defense = 16, specialattack = 11, vitality = 14, agility = 525, exp = 7200, level = 250, wildLvl = 250, type = "bug", type2 = "flying"},
+["War Heracross"] = {offense = 25, defense = 15, specialattack = 8, vitality = 16, agility = 300, exp = 7200, level = 250, wildLvl = 250, type = "bug", type2 = "fighting"},
+["Metal Scizor"] = {offense = 26, defense = 20, specialattack = 11, vitality = 14, agility = 455, exp = 5800, level = 250, wildLvl = 250, type = "bug", type2 = "steel"},
+["Brave Nidoking"] = {offense = 20.4, defense = 15.4, specialattack = 17, vitality = 16.2, agility = 450, exp = 2600, level = 250, wildLvl = 250, type = "poison", type2 = "ground"},
+["Brave Nidoqueen"] = {offense = 18.4, defense = 17.4, specialattack = 15, vitality = 18, agility = 450, exp = 2600, level = 250, wildLvl = 250, type = "poison", type2 = "ground"},
+["Dark Crobat"] = {offense = 18, defense = 16, specialattack = 14, vitality = 17, agility = 450, exp = 6000, level = 250, wildLvl = 250, type = "poison", type2 = "flying"},
+["Trickmaster Gengar"] = {offense = 13, defense = 12, specialattack = 26, vitality = 12, agility = 450, exp = 4400, level = 250, wildLvl = 250, type = "ghost", type2 = "poison"},
+["Banshee Misdreavus"] = {offense = 12, defense = 12, specialattack = 17, vitality = 12, agility = 300, exp = 5200, level = 250, wildLvl = 250, type = "ghost", type2 = "no type"},
+["Hungry Snorlax"] = {offense = 22, defense = 13, specialattack = 13, vitality = 32, agility = 300, exp = 4400, level = 250, wildLvl = 250, type = "normal", type2 = "no type"},
+["Brute Ursaring"] = {offense = 26, defense = 15, specialattack = 15, vitality = 18, agility = 300, exp = 5600, level = 250, wildLvl = 250, type = "normal", type2 = "no type"},
+["War Granbull"] = {offense = 24, defense = 15, specialattack = 12, vitality = 18, agility = 300, exp = 3400, level = 250, wildLvl = 250, type = "normal", type2 = "no type"},
+["Singer Wigglytuff"] = {offense = 14, defense = 9, specialattack = 17, vitality = 28, agility = 450, exp = 4400, level = 250, wildLvl = 250, type = "normal", type2 = "no type"},
+["Aviator Pidgeot"] = {offense = 16, defense = 15, specialattack = 14, vitality = 16.6, agility = 525, exp = 4400, level = 250, wildLvl = 250, type = "flying", type2 = "normal"},
+["Metal Skarmory"] = {offense = 16, defense = 28, specialattack = 8, vitality = 13, agility = 450, exp = 5600, level = 250, wildLvl = 250, type = "steel", type2 = "flying"},
+["Brave Noctowl"] = {offense = 10, defense = 10, specialattack = 15.2, vitality = 20, agility = 420, exp = 4800, level = 250, wildLvl = 250, type = "normal", type2 = "flying"},
+["Ancient Dragonite"] = {offense = 26.8, defense = 19, specialattack = 20, vitality = 18.2, agility = 450, exp = 6000, level = 250, wildLvl = 250, type = "dragon", type2 = "flying"},
+["Milch-Miltank"] = {offense = 16, defense = 21, specialattack = 8, vitality = 19, agility = 300, exp = 5600, level = 250, wildLvl = 250, type = "normal", type2 = "no type"},
+["Ancient Kingdra"] = {offense = 19, defense = 19, specialattack = 19, vitality = 15, agility = 305, exp = 5200, level = 250, wildLvl = 250, type = "water", type2 = "dragon"},
+["Psy Jynx"] = {offense = 10, defense = 7, specialattack = 23, vitality = 13, agility = 400, exp = 4400, level = 250, wildLvl = 250, type = "psychic", type2 = "ice"},
+["Evil Cloyster"] = {offense = 19, defense = 36, specialattack = 17, vitality = 10, agility = 400, exp = 3600, level = 250, wildLvl = 250, type = "water", type2 = "ice"},
+["Freezing Dewgong"] = {offense = 14, defense = 16, specialattack = 14, vitality = 18, agility = 450, exp = 3600, level = 250, wildLvl = 250, type = "water", type2 = "ice"},
+["Furious Sandslash"] = {offense = 20, defense = 22, specialattack = 9, vitality = 15, agility = 450, exp = 4400, level = 250, wildLvl = 250, type = "ground", type2 = "no type"},
+["Roll Donphan"] = {offense = 24, defense = 24, specialattack = 12, vitality = 18, agility = 300, exp = 3000, level = 250, wildLvl = 250, type = "ground", type2 = "no type"},
+["Bone Marowak"] = {offense = 16, defense = 22, specialattack = 10, vitality = 12, agility = 450, exp = 2600, level = 250, wildLvl = 250, type = "ground", type2 = "no type"},
+["Octopus Octillery"] = {offense = 21, defense = 15, specialattack = 21, vitality = 15, agility = 300, exp = 1000, level = 250, wildLvl = 250, type = "water", type2 = "no type"},
+["Moon Clefable"] = {offense = 14, defense = 14.6, specialattack = 19, vitality = 19, agility = 450, exp = 6000, level = 250, wildLvl = 250, type = "normal", type2 = "no type"},
+["Heavy Piloswine"] = {offense = 20, defense = 16, specialattack = 12, vitality = 20, agility = 300, exp = 5200, level = 250, wildLvl = 250, type = "ice", type2 = "ground"},
 
 }
