@@ -1,0 +1,45 @@
+<monster name="Meowth" nameDescription="a meowth" race="normal" race2="no race" experience="69" speed="210">
+    <level min="15" max="15" />
+    <health now="40" max="40" />
+    <status attack="45" defense="35" spAtk="40" spDef="65" />
+    <look type="456" corpse="11917" />
+    <targetchange interval="10000" chance="0" />
+    <flags>
+        <flag summonable="1" />
+        <flag hostile="1" />
+        <flag attackable="1" />
+        <flag illusionable="1" />
+        <flag convinceable="1" />
+        <flag pushable="1" />
+        <flag canpushitems="0" />
+        <flag canpushcreatures="0" />
+        <flag targetdistance="1" />
+        <flag runonhealth="0" />
+        <flag canteleport="23" />
+    </flags>
+    <script>
+        <event name="MonsterHealthChange" />
+        <event name="CorpseLoot" />
+    </script>
+    <moves>
+        <move name="Slash" level="15" interval="7" range="1" isTarget="1" f="60" t="normal" />
+        <move name="Scratch" level="15" interval="5" range="1" isTarget="1" f="40" t="normal" />
+        <move name="Bite" level="15" interval="8" range="1" isTarget="1" f="50" t="dark" />
+        <move name="Pay Day" level="20" interval="9" range="4" isTarget="1" f="50" t="normal" />
+    </moves>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
+        <attack name="Slash" interval="2711" chance="30" range="1" />
+        <attack name="Scratch" interval="2617" chance="30" range="1" />
+        <attack name="Bite" interval="2758" chance="30" range="1" />
+        <attack name="Pay Day" interval="2899" chance="29" range="3" />
+    </attacks>
+    <defenses armor="0" defense="0" />
+    <voices interval="5000" chance="10">
+        <voice sentence="MEOWTH!" />
+    </voices>
+    <loot>
+        <item id="12187" chance="4000" />
+        <item id="12186" chance="2000" />
+    </loot>
+</monster>

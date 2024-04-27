@@ -1,0 +1,55 @@
+<monster name="Dugtrio" nameDescription="a dugtrio" race="ground" race2="no race" experience="153" speed="240">
+    <level min="35" max="35" />
+    <health now="35" max="35" />
+    <status attack="80" defense="50" spAtk="50" spDef="40" />
+    <look type="434" corpse="11868" />
+    <targetchange interval="10000" chance="0" />
+    <flags>
+        <flag summonable="1" />
+        <flag hostile="1" />
+        <flag attackable="1" />
+        <flag illusionable="1" />
+        <flag convinceable="1" />
+        <flag pushable="1" />
+        <flag canpushitems="0" />
+        <flag canpushcreatures="0" />
+        <flag targetdistance="1" />
+        <flag runonhealth="0" />
+        <flag canteleport="19" />
+    </flags>
+    <script>
+        <event name="MonsterHealthChange" />
+        <event name="CorpseLoot" />
+    </script>
+    <moves>
+        <move name="Sand Attack" level="35" interval="8" range="1" isTarget="0" f="0" t="ground" />
+        <move name="Slash" level="35" interval="7" range="1" isTarget="1" f="60" t="normal" />
+        <move name="Mud Shot" level="35" interval="9" range="3" isTarget="1" f="40" t="ground" />
+        <move name="Mud Slap" level="35" interval="7" range="3" isTarget="1" f="50" t="ground" />
+        <move name="Earthshock" level="35" interval="9" range="1" isTarget="0" f="75" t="ground" />
+        <move name="Shockwave" level="40" interval="9" range="1" isTarget="0" f="90" t="ground" />
+        <move name="Earthquake" level="40" interval="10" range="1" isTarget="0" f="2" t="ground" />
+        <move name="Rage" level="45" interval="10" range="1" isTarget="0" f="0" t="normal" />
+    </moves>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
+        <attack name="Sand Attack" interval="2711" chance="30" range="6" />
+		<attack name="Slash" interval="2505" chance="29" range="1" />
+        <attack name="Mud Shot" interval="2805" chance="29" range="3" />
+        <attack name="Mud Slap" interval="2805" chance="22" range="3" />
+        <attack name="Earthshock" interval="3087" chance="28" range="6" />
+		<attack name="Shockwave" interval="3287" chance="28" range="6" />
+		<attack name="Earthquake" interval="5087" chance="21" range="6" />
+		<attack name="rage" interval="3487" chance="28" range="6" />
+    </attacks>
+    <defenses armor="0" defense="0">
+    </defenses>
+    <voices interval="5000" chance="10">
+        <voice sentence="DUGTRIO!" />
+    </voices>
+    <loot>
+        <item id="12337" chance="10000" countmax="50" />
+        <item id="12177" chance="4000" />
+        <item id="11451" chance="100" />
+    </loot>
+</monster>

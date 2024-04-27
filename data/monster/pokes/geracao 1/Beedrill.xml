@@ -1,0 +1,48 @@
+<monster name="Beedrill" nameDescription="a beedrill" race="bug" race2="poison" experience="159" speed="195">
+    <level min="30" max="30" />
+    <health now="65" max="65" />
+    <status attack="90" defense="40" spAtk="45" spDef="80" />
+    <look type="396" corpse="11844" />
+    <targetchange interval="10000" chance="0" />
+    <flags>
+        <flag summonable="1" />
+        <flag hostile="1" />
+        <flag attackable="1" />
+        <flag illusionable="1" />
+        <flag convinceable="1" />
+        <flag pushable="1" />
+        <flag canpushitems="0" />
+        <flag canpushcreatures="0" />
+        <flag targetdistance="1" />
+        <flag runonhealth="0" />
+        <flag canteleport="21" />
+    </flags>
+    <script>
+        <event name="MonsterHealthChange" />
+        <event name="CorpseLoot" />
+    </script>
+    <moves>
+        <move name="String Shot" level="25" interval="9" range="3" isTarget="1" f="0" t="bug" />
+        <move name="String Shot" level="1" interval="9" range="3" isTarget="1" f="0" t="bug" />
+        <move name="Pin Missile" level="1" interval="6" range="1" isTarget="0" f="80" t="bug" />
+        <move name="Pin Missile" level="30" interval="10" range="1" isTarget="0" f="80" t="bug" />
+        <move name="Rage" level="25" interval="7" range="1" isTarget="0" f="0" t="normal" />
+        <move name="Strafe" level="33" interval="10" range="1" isTarget="0" f="0" t="normal" />
+    </moves>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
+        <attack name="String Shot" interval="2664" chance="30" range="3" />
+        <attack name="Poison Sting" interval="2570" chance="31" range="1" />
+        <attack name="Fury Cutter" interval="2852" chance="29" range="4" />
+        <attack name="Pin Missile" interval="2946" chance="28" range="4" />
+        <attack name="Rage" interval="2946" chance="28" range="4" />
+		<attack name="Strafe" interval="2946" chance="28" range="4" />
+    </attacks>
+    <defenses armor="0" defense="0" />
+    <voices interval="5000" chance="10">
+        <voice sentence="BEEDRILL!" />
+    </voices>
+    <loot>
+        <item id="12171" chance="10000" countmax="1" />
+    </loot>
+</monster>

@@ -22,9 +22,9 @@ function Player.feed(self, food)
 end
 
 function Player.getClosestFreePosition(self, position, extended)
-	if self:getGroup():getAccess() and self:getAccountType() >= ACCOUNT_TYPE_GOD then
-		return position
-	end
+	-- if self:getGroup():getAccess() and self:getAccountType() >= ACCOUNT_TYPE_GOD then
+	-- 	return position
+	-- end
 	return Creature.getClosestFreePosition(self, position, extended)
 end
 
@@ -172,7 +172,7 @@ function Player.canCarryMoney(self, amount)
 	local inventorySlots = 0
 
 	-- Add crystal coins to totalWeight and inventorySlots
-	local type_crystal = ItemType(ITEM_CRYSTAL_COIN)
+	local type_crystal = ItemType(ITEM_TEN_THOUSAND_DOLLAR_NOTE)
 	local crystalCoins = math.floor(amount / 10000)
 	if crystalCoins > 0 then
 		amount = amount - (crystalCoins * 10000)
@@ -185,7 +185,7 @@ function Player.canCarryMoney(self, amount)
 	end
 
 	-- Add platinum coins to totalWeight and inventorySlots
-	local type_platinum = ItemType(ITEM_PLATINUM_COIN)
+	local type_platinum = ItemType(ITEM_HUNDRED_DOLLAR_NOTE)
 	local platinumCoins = math.floor(amount / 100)
 	if platinumCoins > 0 then
 		amount = amount - (platinumCoins * 100)
@@ -197,8 +197,8 @@ function Player.canCarryMoney(self, amount)
 		end
 	end
 
-	-- Add gold coins to totalWeight and inventorySlots
-	local type_gold = ItemType(ITEM_GOLD_COIN)
+	-- Add dollars to totalWeight and inventorySlots
+	local type_gold = ItemType(ITEM_DOLLAR_NOTE)
 	if amount > 0 then
 		while amount > 0 do
 			local count = math.min(100, amount)

@@ -1,0 +1,49 @@
+<monster name="Shiny Chansey" nameDescription="a Shiny chansey" race="normal" race2="no race" experience="500" speed="211">
+    <level min="1" max="150" />
+    <health now="120" max="120" />
+    <status attack="10" defense="10" spAtk="60" spDef="250" />
+    <look type="2057" corpse="13076" />
+    <targetchange interval="10000" chance="0" />
+    <flags>
+        <flag summonable="1" />
+        <flag hostile="1" />
+        <flag attackable="1" />
+        <flag passive="1" />
+        <flag illusionable="1" />
+        <flag convinceable="1" />
+        <flag pushable="1" />
+        <flag canpushitems="0" />
+        <flag canpushcreatures="0" />
+        <flag targetdistance="1" />
+        <flag runonhealth="0" />
+        <flag canteleport="19" />
+    </flags>
+    <script>
+        <event name="MonsterHealthChange" />
+        <event name="CorpseLoot" />
+    </script>
+    <moves>
+        <move name="Doubleslap" level="1" interval="7" range="1" isTarget="1" f="75" t="normal" />
+        <move name="Dazzling Gleam" level="1" interval="9" range="1" isTarget="0" f="75" t="normal" />
+        <move name="Great Love" level="1" interval="10" range="5" isTarget="1" f="35" t="normal" />
+        <move name="Healarea" level="1" interval="10" range="1" isTarget="0" f="80" t="normal" />
+        <move name="Impulse Vitality" level="18" interval="20" range="1" isTarget="0" f="0" t="normal" />
+    </moves>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
+        <attack name="Doubleslap" interval="2617" chance="30" range="1" />
+        <attack name="Egg Bomb" interval="2899" chance="29" range="4" />
+        <attack name="Body Slam" interval="2946" chance="28" range="1" />
+        <attack name="Great Love" interval="4134" chance="27" range="1" />
+        <attack name="Selfheal" interval="5120" chance="20" range="6" />
+        <attack name="Healarea" interval="5120" chance="20" range="6" />
+    </attacks>
+    <defenses armor="0" defense="0" />
+    <voices interval="5000" chance="10">
+        <voice sentence="CHANSEY!" />
+    </voices>
+    <loot>
+        <item id="12179" chance="4000" />
+        <item id="11453" chance="100" />
+    </loot>
+</monster>

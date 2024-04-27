@@ -7,3 +7,6 @@ dofile('data/lib/compat/compat.lua')
 -- Debugging helper function for Lua developers
 dofile('data/lib/debugging/dump.lua')
 dofile('data/lib/debugging/lua_version.lua')
+
+-- Mixlort
+dofile('data/lib/mixlort/mixlort.lua')

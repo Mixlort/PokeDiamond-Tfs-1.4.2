@@ -1,7 +1,7 @@
 local rewards = { -- chanceMin, chanceMax, itemID, count
 	{1, 36}, -- nothing
-	{37, 46, 2148, 80}, -- gold coin
-	{47, 55, 2148, 50}, -- gold coin
+	{37, 46, 2148, 80}, -- dollar
+	{47, 55, 2148, 50}, -- dollar
 	{56, 64, 2671, 5}, -- ham
 	{65, 73, 2789, 5}, -- brown mushroom
 	{74, 81, 7620}, -- mana potion

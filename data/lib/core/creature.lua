@@ -1,3 +1,33 @@
+-- function Creature.getClosestFreePosition(self, position, maxRadius, mustBeReachable)
+--         maxRadius = maxRadius or 1
+
+--         -- backward compatability (extended)
+--         if maxRadius == true then
+--                 maxRadius = 2
+--         end
+
+--         local checkPosition = Position(position)
+--         for radius = 0, maxRadius do
+--                 checkPosition.x = checkPosition.x - math.min(1, radius)
+--                 checkPosition.y = checkPosition.y + math.min(1, radius)
+
+--                 local total = math.max(1, radius * 8)
+--                 for i = 1, total do
+--                         if radius > 0 then
+--                                 local direction = math.floor((i - 1) / (radius * 2))
+--                                 checkPosition:getNextPosition(direction)
+--                         end
+
+--                         local tile = Tile(checkPosition)
+--                         if tile:getCreatureCount() == 0 and not tile:hasProperty(CONST_PROP_IMMOVABLEBLOCKSOLID) and
+--                                 (not mustBeReachable or self:getPathTo(checkPosition)) then
+--                                 return checkPosition
+--                         end
+--                 end
+--         end
+--         return Position()
+-- end
+
 function Creature.getClosestFreePosition(self, position, maxRadius, mustBeReachable)
 	maxRadius = maxRadius or 1
 
@@ -19,10 +49,10 @@ function Creature.getClosestFreePosition(self, position, maxRadius, mustBeReacha
 			end
 
 			local tile = Tile(checkPosition)
-			if tile and tile:getCreatureCount() == 0 and not tile:hasProperty(CONST_PROP_IMMOVABLEBLOCKSOLID) and
-				(not mustBeReachable or self:getPathTo(checkPosition)) then
-				return checkPosition
-			end
+            if tile and tile:getCreatureCount() == 0 and tile:getGround() and tile:getGround():getId() ~= flyFloor and not tile:hasProperty(CONST_PROP_IMMOVABLEBLOCKSOLID) and not tile:hasProperty(CONST_PROP_BLOCKPATH) and not tile:getHouse() and not tile:hasFlag(TILESTATE_PROTECTIONZONE) and not tile:hasFlag(TILESTATE_FLOORCHANGE) and
+                (not mustBeReachable or self:getPathTo(checkPosition)) then --pota
+                return checkPosition
+            end
 		end
 	end
 	return Position()
@@ -100,12 +130,22 @@ function Creature:addSummon(monster)
 		return false
 	end
 
-	summon:setTarget(nil)
-	summon:setFollowCreature(nil)
+	summon:setMaster(self)
+
+    if self:getTarget() then
+        local targetPlayer = self:getTarget()
+        summon:setTarget(targetPlayer)
+        summon:setFollowCreature(targetPlayer)
+    else
+	    summon:setTarget(nil)
+	    summon:setFollowCreature(nil)
+    end
+
 	summon:setDropLoot(false)
 	summon:setSkillLoss(false)
-	summon:setMaster(self)
-	summon:getPosition():notifySummonAppear(summon)
+    if self:isPlayer() then
+        summon:getPosition():notifySummonAppear(summon)
+    end
 
 	return true
 end
@@ -173,4 +213,8 @@ function Creature:canAccessPz()
 		return false
 	end
 	return true
+end
+
+function Creature.removeStorageValue(self, key)
+	return self:setStorageValue(key, nil)
 end

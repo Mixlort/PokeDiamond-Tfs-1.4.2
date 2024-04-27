@@ -1,0 +1,61 @@
+<monster name="Vileplume" nameDescription="a vileplume" race="grass" race2="poison" experience="184" speed="170">
+    <level min="50" max="60" />
+    <health now="75" max="75" />
+    <status attack="80" defense="85" spAtk="110" spDef="55" />
+    <look type="437" corpse="11979" />
+    <targetchange interval="10000" chance="0" />
+    <flags>
+        <flag summonable="1" />
+        <flag hostile="1" />
+        <flag attackable="1" />
+        <flag passive="1" />
+        <flag illusionable="1" />
+        <flag convinceable="1" />
+        <flag pushable="1" />
+        <flag canpushitems="0" />
+        <flag canpushcreatures="0" />
+        <flag targetdistance="1" />
+        <flag runonhealth="0" />
+        <flag canteleport="18" />
+    </flags>
+    <script>
+        <event name="MonsterHealthChange" />
+        <event name="CorpseLoot" />
+    </script>
+    <moves>
+        <move name="Absorb" level="1" interval="10" range="1" isTarget="1" f="40" t="grass" />
+        <move name="Leech Seed" level="7" interval="7" range="3" isTarget="1" f="1" t="grass" />
+        <move name="Acid" level="20" interval="8" range="4" isTarget="1" f="45" t="poison" />
+        <move name="Poison Bomb" level="50" interval="23" range="3" isTarget="1" f="70" t="poison" />
+        <move name="Poison Gas" level="50" interval="8" range="1" isTarget="0" f="69" t="poison" />
+        <move name="Petal Dance" level="50" interval="13" range="1" isTarget="0" f="54" t="grass" />
+        <move name="Solar Beam" level="52" interval="10" range="1" isTarget="0" f="76" t="grass" />
+        <move name="Sleep Powder" level="50" interval="10" range="1" isTarget="0" f="0" t="grass" />
+        <move name="Stun Spore" level="50" interval="10" range="1" isTarget="0" f="0" t="grass" />
+    </moves>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
+        <attack name="Absorb" interval="3040" chance="28" range="1" />
+        <attack name="Acid" interval="2758" chance="30" range="3" />
+        <attack name="Absorb" interval="3040" chance="28" range="3" />
+        <attack name="Poison Bomb" interval="2899" chance="29" range="3" />
+        <attack name="Poison Gas" interval="3369" chance="26" range="6" />
+        <attack name="Solar Beam" interval="4463" chance="18" range="4" />
+        <attack name="Petal Dance" interval="3322" chance="26" range="6" />
+        <attack name="Sleep Powder" interval="5625" chance="18" range="6" />
+        <attack name="melee" interval="5625" chance="18" range="6" />
+        <attack name="Stun Spore" interval="5625" chance="18" range="6" />
+    </attacks>
+    <defenses armor="0" defense="0">
+	</defenses>
+    <voices interval="5000" chance="10">
+        <voice sentence="VILEPLUME!" />
+    </voices>
+    <loot>
+        <item id="12163" chance="10000" countmax="5" />
+        <item id="12155" chance="5000" />
+        <item id="12153" chance="4000" />
+        <item id="11441" chance="100" />
+        <item id="11443" chance="100" />
+    </loot>
+</monster>

@@ -1,0 +1,59 @@
+<monster name="Tentacruel" nameDescription="a tentacruel" race="water" race2="poison" experience="101" speed="220">
+    <level min="75" max="75" />
+    <health now="80" max="80" />
+    <status attack="70" defense="65" spAtk="80" spDef="120" />
+    <look type="459" corpse="11973" />
+    <targetchange interval="10000" chance="0" />
+    <flags>
+        <flag summonable="1" />
+        <flag hostile="1" />
+        <flag attackable="1" />
+        <flag illusionable="1" />
+        <flag convinceable="1" />
+        <flag pushable="1" />
+        <flag canpushitems="0" />
+        <flag canpushcreatures="0" />
+        <flag targetdistance="1" />
+        <flag runonhealth="0" />
+        <flag canteleport="17" />
+    </flags>
+    <script>
+        <event name="MonsterHealthChange" />
+        <event name="CorpseLoot" />
+    </script>
+    <moves>
+        <move name="Aqua Tail" level="50" interval="9" range="1" isTarget="1" f="50" t="water" />
+        <move name="Bubbles" level="50" interval="8" range="4" isTarget="1" f="40" t="water" />
+        <move name="Poison Sting" level="50" interval="8" range="2" isTarget="1" f="40" t="poison" />
+        <move name="Waterball" level="75" interval="7" range="4" isTarget="1" f="65" t="water" />
+        <move name="Mud Shot" level="75" interval="8" range="3" isTarget="1" f="40" t="ground" />
+        <move name="Super Sonic" level="75" interval="10" range="3" isTarget="1" f="0" t="normal" />
+        <move name="Poison Bomb" level="75" interval="11" range="3" isTarget="1" f="70" t="poison" />
+        <move name="Psy Wave" level="80" interval="10" range="1" isTarget="0" f="75" t="psychic" />
+        <move name="Psy Pulse" level="83" interval="10" range="4" isTarget="1" f="35" t="psychic" />
+    </moves>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
+        <attack name="Acid" interval="2664" chance="30" range="4" />
+        <attack name="Waterball" interval="2852" chance="29" range="4" />
+        <attack name="Poison Sting" interval="2711" chance="30" range="1" />
+        <attack name="Mud Shot" interval="2758" chance="30" range="3" />
+        <attack name="Super Sonic" interval="4920" chance="20" range="3" />
+        <attack name="Psy Pulse" interval="2946" chance="28" range="3" />
+        <attack name="Poison Bomb" interval="2946" chance="28" range="3" />
+        <attack name="Bubbles" interval="2993" chance="28" range="4" />
+        <attack name="Psywave" interval="2604" chance="24" range="5" />
+        <attack name="Hydropump" interval="4356" chance="20" range="6" />
+    </attacks>
+    <defenses armor="0" defense="0" />
+    <voices interval="5000" chance="10">
+        <voice sentence="TENTACRUEL!" />
+    </voices>
+    <loot>
+        <item id="12161" chance="4000" countmax="50" />
+        <item id="12170" chance="4000" />
+        <item id="11442" chance="100" />
+        <item id="12188" chance="3000" />
+        <item id="11443" chance="100" />
+    </loot>
+</monster>

@@ -86,4 +86,17 @@ function onDeath(player, corpse, killer, mostDamageKiller, lastHitUnjustified, m
 			end
 		end
 	end
+
+    if player:isOnDive() then
+        player:setStorageValue(storageDive, -1)
+    end
+
+    if player:isOnSurf() then
+        player:setStorageValue(storageSurf, -1)
+    end
+
+	local playerHealth = player:getHealth()
+	local playerMaxHealth = player:getMaxHealth()
+	player:addHealth(playerMaxHealth - playerHealth)
+
 end

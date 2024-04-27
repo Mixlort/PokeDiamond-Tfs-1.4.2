@@ -472,49 +472,19 @@ do
 			end
 		end
 
-		local wieldInfo = it:getWieldInfo()
-		if wieldInfo ~= 0 then
-			ss:append('\nIt can only be wielded properly by ')
-
-			if bit.band(wieldInfo, WIELDINFO_PREMIUM) ~= 0 then
-				ss:append('premium ')
-			end
-
-			local vocStr = it:getVocationString()
-			if vocStr ~= '' then
-				ss:append(vocStr)
-			else
-				ss:append('players')
-			end
-
-			if bit.band(wieldInfo, WIELDINFO_LEVEL) ~= 0 then
-				ss:append(' of level %d or higher', it:getMinReqLevel())
-			end
-
-			if bit.band(wieldInfo, WIELDINFO_MAGLV) ~= 0 then
-				if bit.band(wieldInfo, WIELDINFO_LEVEL) ~= 0 then
-					ss:append(' and')
-				else
-					ss:append(' of')
-				end
-				ss:append(' magic level %d or higher', it:getMinReqMagicLevel())
-			end
-			ss:append('.')
-		end
-
-		if lookDistance <= 1 then
-			local weight = obj:getWeight()
-			local count = item and item:getCount() or 1
-			if weight ~= 0 and it:isPickupable() then
-				ss:append('\n')
-				if it:isStackable() and count > 1 and it:hasShowCount() then
-					ss:append('They weigh ')
-				else
-					ss:append('It weighs ')
-				end
-				ss:append('%.2f oz.', weight / 100)
-			end
-		end
+		-- if lookDistance <= 1 then
+		-- 	local weight = obj:getWeight()
+		-- 	local count = item and item:getCount() or 1
+		-- 	if weight ~= 0 and it:isPickupable() then
+		-- 		ss:append('\n')
+		-- 		if it:isStackable() and count > 1 and it:hasShowCount() then
+		-- 			ss:append('They weigh ')
+		-- 		else
+		-- 			ss:append('It weighs ')
+		-- 		end
+		-- 		ss:append('%.2f oz.', weight / 100)
+		-- 	end
+		-- end
 
 		local desc = it:getDescription()
 		if item then

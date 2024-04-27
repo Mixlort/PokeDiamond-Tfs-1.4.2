@@ -8,6 +8,7 @@ function onStepIn(creature, item, position, fromPosition)
 		creature:addCondition(condition)
 		creature:addAchievementProgress("Deep Sea Diver", 1000000)
 	end
+    creature:sendExtendedOpcode(133, "map_heat")
 	return true
 end
 
@@ -15,5 +16,6 @@ function onStepOut(creature, item, position, fromPosition)
 	if creature:isPlayer() then
 		creature:removeCondition(CONDITION_DROWN)
 	end
+    creature:sendExtendedOpcode(133, "map_default")
 	return true
 end

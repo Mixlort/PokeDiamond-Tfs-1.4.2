@@ -1,14 +1,24 @@
-local waterIds = {493, 4608, 4609, 4610, 4611, 4612, 4613, 4614, 4615, 4616, 4617, 4618, 4619, 4620, 4621, 4622, 4623, 4624, 4625, 7236, 10499, 15401, 15402}
-local lootTrash = {2234, 2238, 2376, 2509, 2667}
-local lootCommon = {2152, 2167, 2168, 2669, 7588, 7589}
-local lootRare = {2143, 2146, 2149, 7158, 7159}
-local lootVeryRare = {7632, 7633, 10220}
-local useWorms = true
+local useWorms = false
+local maxSkill = 100
 
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	local targetId = target.itemid
-	if not table.contains(waterIds, targetId) then
+	if not isInArray(waterIds, target.itemid) then
 		return false
+	end
+
+    local tile = player:getTile()
+    if player:getSummon() then 
+	    tile = player:getSummon():getTile()
+    end
+
+	if tile:getHouse() or tile:hasFlag(TILESTATE_PROTECTIONZONE) then
+		player:sendCancelMessage("Sorry, not possible. Your summon must be outside a protection zone.")
+		return true 
+	end
+
+	if targetId == 493 or targetId == 15402 then
+		return true
 	end
 
 	if targetId == 10499 then
@@ -19,64 +29,74 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		end
 
 		toPosition:sendMagicEffect(CONST_ME_WATERSPLASH)
-		target:transform(targetId + 1)
-		target:decay()
-
-		local rareChance = math.random(1, 100)
-		if rareChance == 1 then
-			player:addItem(lootVeryRare[math.random(#lootVeryRare)], 1)
-		elseif rareChance <= 3 then
-			player:addItem(lootRare[math.random(#lootRare)], 1)
-		elseif rareChance <= 10 then
-			player:addItem(lootCommon[math.random(#lootCommon)], 1)
-		else
-			player:addItem(lootTrash[math.random(#lootTrash)], 1)
-		end
-		return true
+		target:remove()
 	end
 
 	if targetId ~= 7236 then
 		toPosition:sendMagicEffect(CONST_ME_LOSEENERGY)
 	end
 
-	if targetId == 493 or targetId == 15402 then
-		return true
-	end
+    if math.random(1, 100) <= 50 then
+        if player:getEffectiveSkillLevel(SKILL_FISHING) < maxSkill then
+            player:addSkillTries(SKILL_FISHING, 1)
+        end
+    end
 
-	player:addSkillTries(SKILL_FISHING, 1)
-	if math.random(1, 100) <= math.min(math.max(10 + (player:getEffectiveSkillLevel(SKILL_FISHING) - 10) * 0.597, 10), 50) then
-		if useWorms and not player:removeItem(3976, 1) then
+	local monsterTrash = {"Magikarp"}
+	local monsterVeryCommon = {"Magikarp", "Horsea", "Poliwag"}
+	local monsterCommon = {"Magikarp", "Horsea", "Goldeen", "Tentacool", "Krabby", "Poliwag"}
+	local monsterMildRare = {"Magikarp", "Horsea", "Goldeen", "Tentacool", "Krabby", "Poliwag", "Staryu", "Psyduck"}
+	local monsterRare = {"Magikarp", "Horsea", "Goldeen", "Tentacool", "Krabby", "Poliwag", "Staryu", "Psyduck","Seadra", "Seaking", "Kingler"}
+	local monsterVeryRare = {"Magikarp", "Horsea", "Goldeen", "Tentacool", "Krabby", "Poliwag", "Staryu","Psyduck", "Seadra", "Seaking", "Kingler", "Poliwhirl", "Starmie"}
+	local monsterUltraRare = {"Magikarp", "Horsea", "Goldeen", "Tentacool", "Krabby", "Poliwag", "Staryu", "Psyduck", "Seadra", "Seaking", "Kingler", "Poliwhirl", "Starmie", "Golduck", "Tentacruel"}
+	local monsterUltraRareTwo = {"Magikarp", "Horsea", "Goldeen", "Tentacool", "Krabby", "Poliwag", "Staryu", "Psyduck", "Seadra", "Seaking", "Kingler", "Poliwhirl", "Starmie", "Golduck", "Tentacruel", "Kingdra", "Gyarados"}
+        
+	if math.random(1, 160) <= math.min(math.max(10 + (player:getEffectiveSkillLevel(SKILL_FISHING) - 10) * 0.597, 10), 50) then
+		if useWorms and not player:removeItem("worm", 1) then
 			return true
 		end
+
+		local name = "Magikarp"
+
+		if player:getSkillLevel(SKILL_FISHING) < 14 then
+			name = monsterTrash[math.random(#monsterTrash)]
+		elseif player:getSkillLevel(SKILL_FISHING) >= 14 and player:getSkillLevel(SKILL_FISHING) < 20 then
+			name = monsterVeryCommon[math.random(#monsterVeryCommon)]
+		elseif player:getSkillLevel(SKILL_FISHING) >= 20 and player:getSkillLevel(SKILL_FISHING) < 30 then
+			name = monsterCommon[math.random(#monsterCommon)]
+		elseif player:getSkillLevel(SKILL_FISHING) >= 30 and player:getSkillLevel(SKILL_FISHING) < 45 then
+			name = monsterMildRare[math.random(#monsterMildRare)]
+		elseif player:getSkillLevel(SKILL_FISHING) >= 45 and player:getSkillLevel(SKILL_FISHING) < 60 then
+			name = monsterRare[math.random(#monsterRare)]
+		elseif player:getSkillLevel(SKILL_FISHING) >= 60 and player:getSkillLevel(SKILL_FISHING) < 75 then
+			name = monsterVeryRare[math.random(#monsterVeryRare)]
+		elseif player:getSkillLevel(SKILL_FISHING) >= 75 and player:getSkillLevel(SKILL_FISHING) < 100 then
+			name = monsterUltraRare[math.random(#monsterUltraRare)]
+        elseif player:getSkillLevel(SKILL_FISHING) >= 100 then
+			name = monsterUltraRareTwo[math.random(#monsterUltraRareTwo)]
+		end
+
+		local monsterType = MonsterType(name)
+		if math.random(1, 1000) <= SHINY_CHANCE then
+			if monsterType:hasShiny() > 0 then
+				name = "Shiny " .. name
+				local shinyMonsterType = MonsterType(name)
+				if not shinyMonsterType then
+					print("WARNING! " .. name .. " not found for respawn.")
+					return false
+				end
+			end
+		end
+
+		Game.createMonster(name, player:getClosestFreePosition(player:getPosition()))
 
 		if targetId == 15401 then
 			target:transform(targetId + 1)
 			target:decay()
-
-			if math.random(1, 100) >= 97 then
-				player:addItem(15405, 1)
-				player:addAchievement("Desert Fisher")
-				return true
-			end
 		elseif targetId == 7236 then
 			target:transform(targetId + 1)
 			target:decay()
-			player:addAchievementProgress("Exquisite Taste", 250)
-
-			local rareChance = math.random(1, 100)
-			if rareChance == 1 then
-				player:addItem(7158, 1)
-				return true
-			elseif rareChance <= 4 then
-				player:addItem(2669, 1)
-				return true
-			elseif rareChance <= 10 then
-				player:addItem(7159, 1)
-				return true
-			end
 		end
-		player:addAchievementProgress("Here, Fishy Fishy!", 1000)
-		player:addItem(2667, 1)
 	end
 	return true
 end

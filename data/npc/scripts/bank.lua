@@ -306,20 +306,20 @@ local function creatureSayCallback(cid, type, msg)
 		npcHandler.topic[cid] = topicList.CHANGE_CRYSTAL_PLATINUM
 	elseif npcHandler.topic[cid] == topicList.CHANGE_GOLD_PLATINUM then
 		if getMoneyCount(msg) < 1 then
-			npcHandler:say("Sorry, you do not have enough gold coins.", cid)
+			npcHandler:say("Sorry, you do not have enough dollars.", cid)
 			npcHandler.topic[cid] = topicList.NONE
 		else
 			count[cid] = getMoneyCount(msg)
-			npcHandler:say("So you would like me to change " .. count[cid] * 100 .. " of your gold coins into " .. count[cid] .. " platinum coins?", cid)
+			npcHandler:say("So you would like me to change " .. count[cid] * 100 .. " of your dollars into " .. count[cid] .. " platinum coins?", cid)
 			npcHandler.topic[cid] = topicList.CHANGE_GOLD_PLATINUM_CONSENT
 		end
 	elseif npcHandler.topic[cid] == topicList.CHANGE_GOLD_PLATINUM_CONSENT then
 		if msgcontains(msg, "yes") then
-			if player:removeItem(ITEM_GOLD_COIN, count[cid] * 100) then
-				player:addItem(ITEM_PLATINUM_COIN, count[cid])
+			if player:removeItem(ITEM_DOLLAR_NOTE, count[cid] * 100) then
+				player:addItem(ITEM_HUNDRED_DOLLAR_NOTE, count[cid])
 				npcHandler:say("Here you are.", cid)
 			else
-				npcHandler:say("Sorry, you do not have enough gold coins.", cid)
+				npcHandler:say("Sorry, you do not have enough dollars.", cid)
 			end
 		else
 			npcHandler:say("Well, can I help you with something else?", cid)
@@ -342,14 +342,14 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler.topic[cid] = topicList.NONE
 		else
 			count[cid] = getMoneyCount(msg)
-			npcHandler:say("So you would like me to change " .. count[cid] .. " of your platinum coins into " .. count[cid] * 100 .. " gold coins for you?", cid)
+			npcHandler:say("So you would like me to change " .. count[cid] .. " of your platinum coins into " .. count[cid] * 100 .. " dollars for you?", cid)
 			npcHandler.topic[cid] = topicList.CHANGE_PLATINUM_GOLD_CONSENT
 		end
 	elseif npcHandler.topic[cid] == topicList.CHANGE_PLATINUM_GOLD_CONSENT then
 		if msgcontains(msg, "yes") then
 			if player:getFreeCapacity() >= getMoneyWeight(count[cid]) then
-				if player:removeItem(ITEM_PLATINUM_COIN, count[cid]) then
-					player:addItem(ITEM_GOLD_COIN, count[cid] * 100)
+				if player:removeItem(ITEM_HUNDRED_DOLLAR_NOTE, count[cid]) then
+					player:addItem(ITEM_DOLLAR_NOTE, count[cid] * 100)
 					npcHandler:say("Here you are.", cid)
 				else
 					npcHandler:say("Sorry, you do not have enough platinum coins.", cid)
@@ -372,8 +372,8 @@ local function creatureSayCallback(cid, type, msg)
 		end
 	elseif npcHandler.topic[cid] == topicList.CHANGE_PLATINUM_CRYSTAL_CONSENT then
 		if msgcontains(msg, "yes") then
-			if player:removeItem(ITEM_PLATINUM_COIN, count[cid] * 100) then
-				player:addItem(ITEM_CRYSTAL_COIN, count[cid])
+			if player:removeItem(ITEM_HUNDRED_DOLLAR_NOTE, count[cid] * 100) then
+				player:addItem(ITEM_TEN_THOUSAND_DOLLAR_NOTE, count[cid])
 				npcHandler:say("Here you are.", cid)
 			else
 				npcHandler:say("Sorry, you do not have enough platinum coins.", cid)
@@ -394,8 +394,8 @@ local function creatureSayCallback(cid, type, msg)
 	elseif npcHandler.topic[cid] == topicList.CHANGE_CRYSTAL_PLATINUM_CONSENT then
 		if msgcontains(msg, "yes") then
 			if player:getFreeCapacity() >= getMoneyWeight(count[cid]) then
-				if player:removeItem(ITEM_CRYSTAL_COIN, count[cid]) then
-					player:addItem(ITEM_PLATINUM_COIN, count[cid] * 100)
+				if player:removeItem(ITEM_TEN_THOUSAND_DOLLAR_NOTE, count[cid]) then
+					player:addItem(ITEM_HUNDRED_DOLLAR_NOTE, count[cid] * 100)
 					npcHandler:say("Here you are.", cid)
 				else
 					npcHandler:say("Sorry, you do not have enough crystal coins.", cid)

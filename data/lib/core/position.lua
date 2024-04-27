@@ -35,7 +35,8 @@ function Position:moveUpstairs()
 				direction = DIRECTION_WEST
 			end
 
-			local position = self + Position.directionOffset[direction]
+            local position = Position(self)
+            position:getNextPosition(direction)
 			toTile = Tile(position)
 			if toTile and toTile:isWalkable() then
 				swap(self, position)
@@ -75,7 +76,7 @@ function Position:notifySummonAppear(summon)
 	local spectators = Game.getSpectators(self)
 	for _, spectator in ipairs(spectators) do
 		if spectator:isMonster() and spectator ~= summon then
-			spectator:addTarget(summon)
+    		spectator:addTarget(summon) --mixlort
 		end
 	end
 end

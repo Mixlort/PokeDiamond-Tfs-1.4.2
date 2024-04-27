@@ -1,0 +1,49 @@
+<monster name="Shiny Horsea" nameDescription="a Shiny horsea" race="water" race2="no race" experience="83" speed="180">
+  <level min="0" max="0" />
+    <health now="30" max="30" />
+    <status attack="40" defense="70" spAtk="70" spDef="25" />
+    <look type="1310" corpse="12536" />
+  <targetchange interval="10000" chance="0" />
+<flags>
+ <flag summonable="1" />
+ <flag attackable="1" />
+ <flag hostile="1" />
+ <flag illusionable="1" />
+ <flag convinceable="1" />
+ <flag pushable="1" />
+ <flag canpushitems="0" />
+ <flag canpushcreatures="0" />
+ <flag targetdistance="1" />
+ 
+ <flag runonhealth="0" />
+ <flag canteleport="24" />
+</flags>
+    <script>
+        <event name="MonsterHealthChange" />
+        <event name="CorpseLoot" />
+    </script>
+    <moves>
+        <!-- moves -->
+    </moves>
+
+<attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
+        <attack name="Bubbles" interval="2570" chance="31" range="3" />
+        <attack name="Mud Shot" interval="2664" chance="30" range="3" />
+        <attack name="Bubblebeam" interval="2758" chance="30" range="3" />
+        <attack name="Water Gun" interval="2899" chance="29" range="6" />
+        <attack name="Waterball" interval="2852" chance="29" range="3" />
+</attacks>
+
+
+<defenses armor="0" defense="0">
+</defenses>
+
+ <voices interval="5000" chance="10">
+ <voice sentence="HORSEA!" />
+ </voices>
+
+  <loot>
+  </loot>
+
+</monster>
