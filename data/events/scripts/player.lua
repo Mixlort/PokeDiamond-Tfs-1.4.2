@@ -6,11 +6,10 @@ function Player:onBrowseField(position)
 end
 
 function Player:onLook(thing, position, distance)
+    -- print("onLook")
 	local description = ""
-    if hasEventCallback(EVENT_CALLBACK_ONLOOK) then
-        description = EventCallback(EVENT_CALLBACK_ONLOOK, self, thing, position, distance, description)
-    end
-    if not thing:isItem() and isSummon(thing) then
+    description = EventCallback(EVENT_CALLBACK_ONLOOK, self, thing, position, distance, description)
+    if not thing:isItem() and isCreature(thing) and isSummon(thing) then
         local master = thing:getMaster()
         if master:isPlayer() then
             local item = master:getUsingBall()
@@ -19,37 +18,12 @@ function Player:onLook(thing, position, distance)
             if pokeName ~= nil then            
                 description = string.format("%s\nIt belongs to %s. Boost: +%s. Health: %s. Vitality: %s. Attack: %s. Defense %s. Magic Attack: %s. Magic Defense: %s. Armor: %s. Speed: %s.", description, master:getName(), pokeBoost, getStatus(thing).life, getStatus(thing).vit, getStatus(thing).atk, getStatus(thing).def, getStatus(thing).spAtk, getStatus(thing).spDef, getStatus(thing).def, getStatus(thing).speed)
                 description = string.format("%s\nUniqueId: %s", description, item:getBallUniqueId())
-                -- description = string.format("%s\nOffense: %s", description, getOffense(thing.uid))
-                -- description = string.format("%s\nDefense: %s", description, getDefense(thing.uid))
-                -- description = string.format("%s\ngetSpecialDefense: %s", description, getSpecialDefense(thing.uid))
-                -- description = string.format("%s\ngetVitality: %s", description, getVitality(thing.uid))
-                -- description = string.format("%s\ngetSpecialAttack: %s", description, getSpecialAttack(thing.uid))
             end
         end
     end
-    if thing:isPlayer() and thing ~= self then
-        if thing:getAccountType() == ACCOUNT_TYPE_TUTOR then
-            if thing:getSex() == PLAYERSEX_MALE then
-                description = string.format("%s He is a Tutor.", description)
-            else
-                description = string.format("%s She is a Tutor.", description)
-            end
-        end
-    end
-    if thing:isPlayer() and thing == self then
-        if thing:getAccountType() == ACCOUNT_TYPE_TUTOR then
-            description = string.format("%s You are a Tutor.", description)
-        end
-    end
-
-    if thing:isCreature() then
-        if thing:isPlayer() then
-            local client = thing:getClient()
-            description = string.format("%s\nIP: %s PING: %i FPS: %i.", description, Game.convertIpToString(thing:getIp()), client.ping, client.fps)
-        end
-    end
-
-	self:sendTextMessage(MESSAGE_INFO_DESCR, description)
+	if description ~= "" then
+		self:sendTextMessage(MESSAGE_INFO_DESCR, description)
+	end
 end
 
 function Player:onLookInBattleList(creature, distance)
@@ -75,17 +49,27 @@ function Player:onLookInTrade(partner, item, distance)
     end
 
     if item:isPokeball() then
-        local pokeName = item:getPokeName()
+        local pokeName = item:getPokeName() or "Unknown"
         local pokeBoost = item:getPokeBoost() or 0
-        local pokeLove = item:getSpecialAttribute("pokeLove") or 0
-        local pokeHealth = item:getPokeHealth()
+        local pokeHealth = item:getPokeHealth() or 0
         local healthStr = ""
         if pokeHealth <= 0 then
             healthStr = "It is fainted."
         end
-        if pokeName ~= nil and healthStr ~= nil then           
-            description = string.format("%s\nIt contains a %s. Boost: +%s. Love: +%s. %s", description, pokeName, pokeBoost, pokeLove, healthStr)
+        if pokeName ~= nil and healthStr ~= nil then    
+            description = string.format("%s\nIt contains a %s. Boost: +%s. %s", description, pokeName, pokeBoost, healthStr)
             description = string.format("%s\nUniqueId: %s", description, item:getBallUniqueId())
+
+            local heldx = getItemAttribute(item.uid, "heldx")
+            local heldy = getItemAttribute(item.uid, "heldy")
+            if heldx and heldy then
+                table.insert(description, "\nHolding: "..(xhelds[heldx].name).." and "..(yhelds[heldy].name)..". ")
+            elseif heldx then
+                table.insert(description, "\nHolding: "..(xhelds[heldx].name)..". ")
+            elseif heldy then
+                table.insert(description, "\nHolding: "..(yhelds[heldy].name)..". ")
+            end
+
         end
     end
 	self:sendTextMessage(MESSAGE_INFO_DESCR, description)
@@ -125,7 +109,22 @@ function Player:onMoveItem(item, count, fromPosition, toPosition, fromCylinder, 
         elseif item:isContainer() and item:getUniqueItems() then
             return RETURNVALUE_NOTPOSSIBLE -- criar RETURNVALUE_NOTMOVEUNIQUEITEM
         end
-    end  
+    end
+
+    -- limit pokeballs
+    if not self:inPlayerBagOrDepot(fromPosition) and self:inPlayerBagOrDepot(toPosition) then
+        if item:isPokeball() and self:getMana() >= 6 then 
+            return RETURNVALUE_NOTPOSSIBLE
+        elseif item:isContainer() then
+            local pokesInContainer = item:getPokeballCount()
+            local newMana = self:getMana() + pokesInContainer
+            if pokesInContainer > 0 then
+                if newMana > 6 then
+                    return RETURNVALUE_NOTPOSSIBLE
+                end
+            end
+        end
+    end
 
     -- Do not let the player move the boss corpse.
     if item:getAttribute(ITEM_ATTRIBUTE_CORPSEOWNER) == 2^31 - 1 then
@@ -166,11 +165,6 @@ function Player:onMoveItem(item, count, fromPosition, toPosition, fromCylinder, 
         if not putPortrait then
             print("WARNING! Problem on remove portrait player events " .. pokeName .. " player " .. self:getName())
         end 
-    end
-
-    if self:isDuelingWithNpc() and item:isPokeball() and toPosition.x == 65535 and fromPosition.x ~= 65535 then
-        self:sendCancelMessage("Sorry, not possible while in duel.")
-        return RETURNVALUE_NOTPOSSIBLE
     end
 
     if item:isPokeball() then
@@ -230,12 +224,6 @@ function Player:onMoveItem(item, count, fromPosition, toPosition, fromCylinder, 
 	return RETURNVALUE_NOERROR
 end
 
--- function Player:onItemMoved(item, count, fromPosition, toPosition, fromCylinder, toCylinder)
---     -- if item:isPokeball() or item:isContainer() then
---     --     self:refreshPokemonBar({}, {})
---     -- end
--- end
-
 function Player:onItemMoved(item, count, fromPosition, toPosition, fromCylinder, toCylinder)
 	if hasEventCallback(EVENT_CALLBACK_ONITEMMOVED) then
 		EventCallback(EVENT_CALLBACK_ONITEMMOVED, self, item, count, fromPosition, toPosition, fromCylinder, toCylinder)
@@ -260,43 +248,12 @@ function Player:onItemMoved(item, count, fromPosition, toPosition, fromCylinder,
         end
     end  
 
-    -- local containerIgual, containerFrom
-    -- local slotBp = getPlayerSlotItem(self, 3).uid
-    -- local containerBp = getContainerBackpack(slotBp)
-    -- if fromPosition.x == CONTAINER_POSITION then
-    --     containerFrom = self:getContainerById(fromPosition.y - 64) -- mixlort remover?
-    --     if Tile(toPosition) then 
-    --         if item:isPokeball() then
-    --             self:pokeBarRemoveOnePoke(item) -- remove
-    --         elseif item:isContainer() then
-    --             for i, ball in pairs(item:getPokeballs()) do
-    --                 self:pokeBarRemoveOnePoke(ball) -- remove
-    --             end
-    --         end
-    --     end
-    -- end
-    -- if toPosition.x == CONTAINER_POSITION then
-    --     local containerTo = self:getContainerById(toPosition.y - 64)
-    --     if not containerTo then return true end
-    --     if containerFrom and containerFrom.uid == containerTo.uid then containerIgual = true end
-    --     if not containerIgual then
-    --         if item:isPokeball() then
-    --             if slotBp == containerTo.uid or table.find(containerBp, containerTo.uid) then
-    --                 self:pokeBarUpdatePoke(item) -- add
-    --             else
-    --                 self:pokeBarRemoveOnePoke(item) -- remove
-    --             end
-    --         elseif item:isContainer() then
-    --             for i, ball in pairs(item:getPokeballs()) do
-    --                 if slotBp == containerTo.uid or table.find(containerBp, containerTo.uid) then
-    --                     self:pokeBarUpdatePoke(ball) -- add
-    --                 else
-    --                     self:pokeBarRemoveOnePoke(ball) -- remove
-    --                 end
-    --             end
-    --         end
-    --     end
-    -- end
+    -- limit pokeballs
+    local ballCount = self:getPokeballCount() or 0
+    local playerMana = self:getMana() or 0
+    if ballCount > 0 then
+        self:addMana(ballCount - playerMana)
+    end
 end
 
 function Player:onMoveCreature(creature, fromPosition, toPosition)
@@ -334,10 +291,6 @@ function Player:onTurn(direction)
 end
 
 function Player:onTradeRequest(target, item)
-    if self:isDuelingWithNpc() and item:isPokeball() then
-        self:sendCancelMessage("Sorry, not possible while in duel.")
-        return false
-    end
     if item:isPokeball() then
         if item:isBeingUsed() then
             self:sendCancelMessage("Sorry, not possible while using pokeball.")
@@ -360,18 +313,41 @@ function Player:onTradeRequest(target, item)
         self:sendCancelMessage("Desculpe, você não pode trocar um item único.")
         return false
     end
-	if hasEventCallback(EVENT_CALLBACK_ONTRADEREQUEST) then
+
+    if hasEventCallback(EVENT_CALLBACK_ONTRADEREQUEST) then
 		return EventCallback(EVENT_CALLBACK_ONTRADEREQUEST, self, target, item)
 	end
 	return true
 end
 
 function Player:onTradeAccept(target, item, targetItem)
+    -- limit pokeballs
+    if item:isPokeball() and target:getMana() >= 6 then 
+        return false
+    elseif item:isContainer() then
+        local pokesInContainer = item:getPokeballCount()
+        local newMana = target:getMana() + pokesInContainer
+        if pokesInContainer > 0 then
+            if newMana > 6 then
+                return false
+            end
+        end
+    end
+    if targetItem:isPokeball() and self:getMana() >= 6 then 
+        return false
+    elseif targetItem:isContainer() then
+        local pokesInContainer = targetItem:getPokeballCount()
+        local newMana = self:getMana() + pokesInContainer
+        if pokesInContainer > 0 then
+            if newMana > 6 then
+                return false
+            end
+        end
+    end
+
 	if hasEventCallback(EVENT_CALLBACK_ONTRADEACCEPT) then
 		return EventCallback(EVENT_CALLBACK_ONTRADEACCEPT, self, target, item, targetItem)
 	end
-    -- self:refreshPokemonBar({}, {})
-    -- target:refreshPokemonBar({}, {})
 	return true
 end
 
@@ -379,9 +355,38 @@ function Player:onTradeCompleted(target, item, targetItem, isSuccess)
 	if hasEventCallback(EVENT_CALLBACK_ONTRADECOMPLETED) then
 		EventCallback(EVENT_CALLBACK_ONTRADECOMPLETED, self, target, item, targetItem, isSuccess)
 	end
-    if item:isPokeball() then
-        player:pokeBarRemoveOnePoke(item) -- remove
-        target:pokeBarUpdatePoke(item) -- add
+    
+    if isSuccess then
+        if item:isPokeball() then
+            self:pokeBarRemoveOnePoke(item) -- remove
+            target:pokeBarUpdatePoke(item) -- add
+        elseif item:isContainer() then
+            for i, ball in pairs(item:getPokeballs()) do
+                self:pokeBarRemoveOnePoke(ball) -- remove
+                target:pokeBarUpdatePoke(ball) -- add
+            end
+        end
+        if targetItem:isPokeball() then
+            target:pokeBarRemoveOnePoke(targetItem) -- remove
+            self:pokeBarUpdatePoke(targetItem) -- add
+        elseif targetItem:isContainer() then
+            for i, ball in pairs(targetItem:getPokeballs()) do
+                target:pokeBarRemoveOnePoke(ball) -- remove
+                self:pokeBarUpdatePoke(ball) -- add
+            end
+        end
+
+        -- count balls
+        local sballCount = self:getPokeballCount() or 0
+        local splayerMana = self:getMana() or 0
+        if sballCount > 0 then
+            self:addMana(sballCount - splayerMana)
+        end
+        local tballCount = target:getPokeballCount() or 0
+        local tplayerMana = target:getMana() or 0
+        if tballCount > 0 then
+            target:addMana(tballCount - tplayerMana)
+        end
     end
 end
 
@@ -422,14 +427,14 @@ end
 
 function Player:onGainExperience(source, exp, rawExp)
     local bonusExp = 1 -- bonus de algum evento
-    local multiplierExp = 0.1 --(0.25) -- how many times more exp than players a monster will get
+    local multiplierExp = 1 --(0.25) -- how many times more exp than players a monster will get
     if not source then return exp end
 
 	-- Apply experience stage multiplier
-    local expWildBruto = exp
-    exp = exp * Game.getExperienceStage(self:getLevel())
+    exp = getStatus(source).exp -- exp * Game.getExperienceStage(self:getLevel())
     exp = exp * multiplierExp
     exp = exp * bonusExp
+    exp = exp * playerExperienceRate
 
 	-- Stamina modifier
 	if configManager.getBoolean(configKeys.STAMINA_SYSTEM) then
@@ -448,9 +453,7 @@ function Player:onGainExperience(source, exp, rawExp)
 	end
 
    -- Update questlog
-    if exp + self:getExperience() >= getNeededExp(self:getLevel() + 1) then
-        self:updateQuestLog()
-    end
+    self:updateQuestLog()
 
     if self:isPremium() then
         exp = exp * 1.05

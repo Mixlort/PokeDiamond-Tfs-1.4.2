@@ -409,7 +409,7 @@ setConditionFormula = Condition.setFormula
 addDamageCondition = Condition.addDamage
 addOutfitCondition = Condition.setOutfit
 
-mayNotMove = doCreatureSetNoMove
+doCreatureSetNoMove = doCreatureSetNoMove
 
 function doCombat(cid, combat, var) return combat:execute(cid, var) end
 
@@ -474,6 +474,7 @@ getCreaturePos = getCreaturePosition
 function doCreatureAddMana(cid, mana) local c = Creature(cid) return c and c:addMana(mana) or false end
 function doRemoveCreature(cid) local c = Creature(cid) return c and c:remove() or false end
 function doCreatureSetStorage(uid, key, value) local c = Creature(uid) return c and c:setStorageValue(key, value) or false end
+function doPlayerSetStorageValue(uid, key, value) local c = Creature(uid) return c and c:setStorageValue(key, value) or false end -- if value = str then return setstorageStringValue
 function doCreatureSetLookDir(cid, direction) local c = Creature(cid) return c and c:setDirection(direction) or false end
 function doCreatureSetSkullType(cid, skull) local c = Creature(cid) return c and c:setSkull(skull) or false end
 function setCreatureMaxHealth(cid, health) local c = Creature(cid) return c and c:setMaxHealth(health) or false end
@@ -533,6 +534,7 @@ function getPlayerVocation(cid) local p = Player(cid) return p and p:getVocation
 function getPlayerSoul(cid) local p = Player(cid) return p and p:getSoul() or false end
 function getPlayerSex(cid) local p = Player(cid) return p and p:getSex() or false end
 function getPlayerStorageValue(cid, key) local c = Creature(cid) return c and c:getStorageValue(key) or -1 end
+function getPlayerStorageStringValue(cid, key) local p = Player(cid) return p and p:getStorageStringValue(key) or -1 end
 function getPlayerBalance(cid) local p = Player(cid) return p and p:getBankBalance() or false end
 function getPlayerMoney(cid) local p = Player(cid) return p and p:getMoney() or false end
 function getPlayerGroupId(cid) local p = Player(cid) return p and p:getGroup():getId() or false end
@@ -733,6 +735,7 @@ getPlayerAccountBalance = getPlayerBalance
 getIpByName = getIPByPlayerName
 
 function setPlayerStorageValue(cid, key, value) local c = Creature(cid) return c and c:setStorageValue(key, value) or false end
+function setPlayerStorageStringValue(cid, key, value) local p = Player(cid) return p and p:setStorageStringValue(key, value) or false end
 function doPlayerSetNameDescription() debugPrint("Deprecated function, use Player:onLook event instead.") return true end
 function doPlayerSendChannelMessage(cid, author, message, SpeakClasses, channel) local p = Player(cid) return p and p:sendChannelMessage(author, message, SpeakClasses, channel) or false end
 function doPlayerSetMaxCapacity(cid, cap) local p = Player(cid) return p and p:setCapacity(cap) or false end
@@ -1258,14 +1261,17 @@ function queryTileAddThing(thing, position, ...) local t = Tile(position) return
 function doTeleportThing(uid, dest, pushMovement)
 	if type(uid) == "userdata" then
 		if uid:isCreature() then
+            doSendMagicEffect(dest, CONST_ME_TELEPORT)
 			return uid:teleportTo(dest, pushMovement or false)
 		else
+            doSendMagicEffect(dest, CONST_ME_TELEPORT)
 			return uid:moveTo(dest)
 		end
 	else
 		if uid >= 0x10000000 then
 			local creature = Creature(uid)
 			if creature then
+                doSendMagicEffect(dest, CONST_ME_TELEPORT)
 				return creature:teleportTo(dest, pushMovement or false)
 			end
 		else

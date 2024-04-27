@@ -49,26 +49,35 @@ local roardirections = {
 [EAST] = {WEST}}
 
 function doSendSleepEffect(cid)
-    if isNumber(cid) then cid = Creature(cid) end
 	if not isCreature(cid) or not isSleeping(cid) then return true end
+    if isNumber(cid) then cid = Creature(cid) end
 	doSendMagicEffect(getThingPos(cid), 32)
 	addEvent(doSendSleepEffect, 1500, cid:getId())
 end
 
 local outFurys = {
-["Shiny Charizard"] = {outFury = 1073},  
-["Shiny Blastoise"] = {outFury = 1074},    
+    ["Shiny Charizard"] = {outFury = 1073},  
+    ["Shiny Blastoise"] = {outFury = 1074},    
+    ["Deoxys"] = {outFury = 1787},
+    ["Shiny Deoxys"] = {outFury = 1800},
+    ["Giratina"] = {outFury = 1830},
 }
-
+    
 local outImune = {
-["Camouflage"] = 1445,
-["Acid Armor"] = 1453,
-["Iron Defense"] = 1401,
-["Minimize"] = 1455,
-["Future Sight"] = 1446,
+    ["Camouflage"] = 1445,
+    ["Acid Armor"] = 1453,
+    ["Iron Defense"] = 1401,
+    ["Minimize"] = 1455,
+    ["Future Sight"] = 1446,
+    ["DeoxysDefense"] = 1789,
+    ["DeoxysDefense2"] = 1802,
+    ["DeoxysSpeed2"] = 1804,
+    ["DeoxysSpeed"] = 1791,
+    ["WhiteForme"] = 1871,
 }
             
 local function transBack(cid)
+    if not isCreature(cid) then return true end
     if isNumber(cid) then cid = Creature(cid) end
 if isCreature(cid) then
    if getPlayerStorageValue(cid, 974848) >= 1 then
@@ -81,15 +90,45 @@ end
 function doCondition2(ret)
 --
 function doMiss2(cid, cd, eff, check, spell)
+    local stg = conds["Miss"]
+    if not isCreature(cid) then return true end  --is creature?
     if isNumber(cid) then cid = Creature(cid) end
-local stg = conds["Miss"]
+        if getPlayerStorageValue(cid, 21100) >= 1 and getPlayerStorageValue(cid, stg) <= -1 then return true end --alterado v1.6  reflect
+        if not canDoMiss(cid, spell) then return true end
+        if getPlayerStorageValue(cid, stg) >= 1 and cd ~= -1 then 
+           setPlayerStorageValue(cid, stg, cd)    --allterado v1.8
+           return true 
+        end  
+    
+        if not check and getPlayerStorageValue(cid, stg) >= 1 then
+           setPlayerStorageValue(cid, stg, getPlayerStorageValue(cid, stg) + cd - 1)
+        else
+           setPlayerStorageValue(cid, stg, getPlayerStorageValue(cid, stg) + cd)
+        end
+               
+        local a = getPlayerStorageValue(cid, stg)
+               
+        if isSummon(cid) and getPlayerStorageValue(cid, 212123) <= 0 then
+           local item = getPlayerSlotItem(getCreatureMaster(cid), 8)
+           doItemSetAttribute(item.uid, "miss", a)
+           doItemSetAttribute(item.uid, "missEff", eff)
+           doItemSetAttribute(item.uid, "missSpell", spell)
+        end
+        
+        if a <= -1 then 
+        setPlayerStorageValue(cid, stg, -1)
+        return true 
+        end
+       
+        doSendMagicEffect(getThingPos(cid), eff)
+        addEvent(doMiss2, 1000, cid:getId(), -1, eff, a, spell)   
 end 
 
 function doSilence2(cid, cd, eff, check)
+    if not isCreature(cid) then return true end
+    if isPlayer(cid) then return true end
     if isNumber(cid) then cid = Creature(cid) end
    local stg = conds["Silence"]
-   if not isCreature(cid) then return true end
-   if isPlayer(cid) then return true end
 
    if getPlayerStorageValue(cid, stg) >= 1 and cd ~= -1 then 
       setPlayerStorageValue(cid, stg, cd)
@@ -104,10 +143,12 @@ function doSilence2(cid, cd, eff, check)
 
    local a = getPlayerStorageValue(cid, stg)
 
-   local item = getCreatureMaster(cid):getUsingBall()
-   if not item then return true end
-   doItemSetAttribute(item.uid, "silence", a)
-   doItemSetAttribute(item.uid, "silenceEff", eff)
+   if isSummon(cid) and getPlayerStorageValue(cid, 212123) <= 0 then
+        local item = getCreatureMaster(cid):getUsingBall()
+        if not item then return true end
+        doItemSetAttribute(item.uid, "silence", a)
+        doItemSetAttribute(item.uid, "silenceEff", eff)
+   end
 
    if a <= -1 then 
       setPlayerStorageValue(cid, stg, -1)
@@ -119,15 +160,50 @@ function doSilence2(cid, cd, eff, check)
 end       
 
 function doSlow2(cid, cd, eff, check, first)
+    local stg = conds["Slow"]
+    if not isCreature(cid) then return true end  --is creature?
     if isNumber(cid) then cid = Creature(cid) end
-local stg = conds["Slow"]
+    if getPlayerStorageValue(cid, stg) >= 1 and cd ~= -1 then 
+        setPlayerStorageValue(cid, stg, cd)    --allterado v1.8
+        return true 
+    end
+
+    if not check and getPlayerStorageValue(cid, stg) >= 1 then
+        setPlayerStorageValue(cid, stg, getPlayerStorageValue(cid, stg) + cd - 1)
+    else
+        setPlayerStorageValue(cid, stg, getPlayerStorageValue(cid, stg) + cd)
+    end
+            
+    local a = getPlayerStorageValue(cid, stg)
+            
+    if isSummon(cid) and getPlayerStorageValue(cid, 212123) <= 0 then
+        local item = getPlayerSlotItem(getCreatureMaster(cid), 8)
+        doItemSetAttribute(item.uid, "slow", a)
+        doItemSetAttribute(item.uid, "slowEff", eff)
+    end
+    
+    if a <= -1 then 
+    doRemoveCondition(cid, CONDITION_PARALYZE)
+    if not isSleeping(cid) and not isParalyze(cid) then
+        addEvent(doRegainSpeed, 50, cid:getId())     --alterado
+    end
+    setPlayerStorageValue(cid, stg, -1)
+    return true 
+    end
+    
+    if first then
+        doAddCondition(cid, paralizeArea2) 
+    end  
+        
+    doSendMagicEffect(getThingPos(cid), eff)
+    addEvent(doSlow2, 1000, cid:getId(), -1, eff, a)   
 end    
 
 function doConfusion2(cid, cd, check)
+    if not isCreature(cid) then return true end  --is creature?
+    if isPlayer(cid) then return true end  --is creature?	
     if isNumber(cid) then cid = Creature(cid) end
 local stg = conds["Confusion"]
-    if not isCreature(cid) then return true end  --is creature?
-   if isPlayer(cid) then return true end  --is creature?	
     if getPlayerStorageValue(cid, stg) >= 1 and cd ~= -1 then 
        setPlayerStorageValue(cid, stg, cd)    --allterado v2.8
        return true 
@@ -141,10 +217,12 @@ local stg = conds["Confusion"]
            
     local a = getPlayerStorageValue(cid, stg)
            
-    local item = getCreatureMaster(cid):getUsingBall()
-    if not item then return true end
-    doItemSetAttribute(item.uid, "confuse", a)
-	
+    if isSummon(cid) and getPlayerStorageValue(cid, 212123) <= 0 then
+        local item = getCreatureMaster(cid):getUsingBall()
+        if not item then return true end
+        doItemSetAttribute(item.uid, "confuse", a)
+	end
+
     if a <= -1 then 
     if getCreatureCondition(cid, CONDITION_PARALYZE) == true then
        doRemoveCondition(cid, CONDITION_PARALYZE)
@@ -176,10 +254,10 @@ local stg = conds["Confusion"]
 end           
 
 function doBurn2(cid, cd, check, damage)
+    if not isCreature(cid) then return true end  --is creature?
+    if isPlayer(cid) then return true end  --is creature?	
     if isNumber(cid) then cid = Creature(cid) end
 local stg = conds["Burn"]
-    if not isCreature(cid) then return true end  --is creature?
-   if isPlayer(cid) then return true end  --is creature?	
     if getPlayerStorageValue(cid, stg) >= 1 and cd ~= -1 then 
        setPlayerStorageValue(cid, stg, cd)    --allterado v2.8
        return true 
@@ -190,14 +268,16 @@ local stg = conds["Burn"]
     else
        setPlayerStorageValue(cid, stg, getPlayerStorageValue(cid, stg) + cd)
     end
-           
+
     local a = getPlayerStorageValue(cid, stg)
-    if not getCreatureMaster(cid) then return true end
-    local item = getCreatureMaster(cid):getUsingBall()
-    if not item then return true end
-    doItemSetAttribute(item.uid, "burn", a)
-    doItemSetAttribute(item.uid, "burndmg", damage)
-	
+           
+    if isSummon(cid) and getPlayerStorageValue(cid, 212123) <= 0 then
+        local item = getCreatureMaster(cid):getUsingBall()
+        if not item then return true end
+        doItemSetAttribute(item.uid, "burn", a)
+        doItemSetAttribute(item.uid, "burndmg", damage)
+    end
+
     if a <= -1 then 
     setPlayerStorageValue(cid, stg, -1)
     return true 
@@ -208,10 +288,10 @@ local stg = conds["Burn"]
 end 
 
 function doPoison2(cid, cd, check, damage)
+    if not isCreature(cid) then return true end  --is creature?
+    if isPlayer(cid) then return true end  --is creature?	
     if isNumber(cid) then cid = Creature(cid) end
 local stg = conds["Poison"]
-    if not isCreature(cid) then return true end  --is creature?
-   if isPlayer(cid) then return true end  --is creature?	
     ----------
     if isSummon(cid) or ehMonstro(cid) and pokes[getCreatureName(cid)] then --alterado v2.6
        local type = pokes[getCreatureName(cid)].type
@@ -233,21 +313,19 @@ local stg = conds["Poison"]
     end
            
     local a = getPlayerStorageValue(cid, stg)
-           
-    local item = getCreatureMaster(cid):getUsingBall()
-    if not item then return true end
-    doItemSetAttribute(item.uid, "poison", a)
-    doItemSetAttribute(item.uid, "poisondmg", damage)
-	
+
+    if isSummon(cid) and getPlayerStorageValue(cid, 212123) <= 0 then
+        local item = getCreatureMaster(cid):getUsingBall()
+        if not item then return true end
+        doItemSetAttribute(item.uid, "poison", a)
+        doItemSetAttribute(item.uid, "poisondmg", damage)
+    end
+
     if a <= -1 or getCreatureHealth(cid) == 1 then 
     setPlayerStorageValue(cid, stg, -1)
     return true 
     end
    
-	if damage == nil then
-	damage = 2000
-	end
-
     local dano = getCreatureHealth(cid)-damage <= 0 and getCreatureHealth(cid)-1 or damage 
     doCreatureAddHealth(cid, -dano, 8, COLOR_GRASS)  
     
@@ -255,10 +333,10 @@ local stg = conds["Poison"]
 end       
 
 function doFear2(cid, cd, check, skill)
+    if not isCreature(cid) then return true end  --is creature?
+    if isPlayer(cid) then return true end  --is creature?	
     if isNumber(cid) then cid = Creature(cid) end
 local stg = conds["Fear"]
-    if not isCreature(cid) then return true end  --is creature?
-   if isPlayer(cid) then return true end  --is creature?	
     if getPlayerStorageValue(cid, stg) >= 1 and cd ~= -1 then 
        setPlayerStorageValue(cid, stg, cd)    --allterado v2.8
        return true 
@@ -272,11 +350,13 @@ local stg = conds["Fear"]
            
     local a = getPlayerStorageValue(cid, stg)
            
-    local item = getCreatureMaster(cid):getUsingBall()
-    if not item then return true end
-    doItemSetAttribute(item.uid, "fear", a)
-    doItemSetAttribute(item.uid, "fearSkill", skill)
-	
+    if isSummon(cid) and getPlayerStorageValue(cid, 212123) <= 0 then
+        local item = getCreatureMaster(cid):getUsingBall()
+        if not item then return true end
+        doItemSetAttribute(item.uid, "fear", a)
+        doItemSetAttribute(item.uid, "fearSkill", skill)
+	end
+
     if a <= -1 then 
     if getCreatureCondition(cid, CONDITION_PARALYZE) == true then
        doRemoveCondition(cid, CONDITION_PARALYZE)
@@ -315,30 +395,15 @@ local stg = conds["Fear"]
 end      
 
 function doStun2(cid, cd, eff, check, spell)
-    if isNumber(cid) then cid = Creature(cid) end
 local stg = conds["Stun"]
-end 
-
-function doParalyze2(cid, cd, eff, check, first)
+if not isCreature(cid) then return true end  --is creature?
+if not canDoMiss(cid, spell) then return true end
     if isNumber(cid) then cid = Creature(cid) end
-local stg = conds["Paralyze"]
-end       
+    if getPlayerStorageValue(cid, stg) >= 1 and cd ~= -1 then 
+       setPlayerStorageValue(cid, stg, cd)    --allterado v1.8
+       return true 
+    end
 
-function doSleep2(cid, cd, check, first)      
-    if isNumber(cid) then cid = Creature(cid) end  
-local stg = conds["Sleep"]
-   if not isCreature(cid) then return true end  --is creature?
-   if isPlayer(cid) then return true end  --is creature?
-   cid = Creature(cid)
-   if getPlayerStorageValue(cid, stg) >= 1 and cd ~= -1 then 
-      setPlayerStorageValue(cid, stg, cd)    --allterado v2.8
-      return true 
-   end
-    
-    if not isSleeping(cid) then
-		addEvent(doSendSleepEffect, 500, cid:getId())
-	end
-	
     if not check and getPlayerStorageValue(cid, stg) >= 1 then
        setPlayerStorageValue(cid, stg, getPlayerStorageValue(cid, stg) + cd - 1)
     else
@@ -346,99 +411,196 @@ local stg = conds["Sleep"]
     end
            
     local a = getPlayerStorageValue(cid, stg)
-          
-    local item = getCreatureMaster(cid):getUsingBall()
-    if not item then return true end
-    doItemSetAttribute(item.uid, "sleep", a)
+           
+    if isSummon(cid) and getPlayerStorageValue(cid, 212123) <= 0 then
+       local item = getPlayerSlotItem(getCreatureMaster(cid), 8)
+       doItemSetAttribute(item.uid, "stun", a)
+       doItemSetAttribute(item.uid, "stunEff", eff)
+       doItemSetAttribute(item.uid, "stunSpell", spell)
+    end
 	
+    if a <= -1 then
+    doRemoveCondition(cid, CONDITION_PARALYZE)
+    if not isSleeping(cid) and not isParalyze(cid) then
+       addEvent(doRegainSpeed, 50, cid:getId())   --alterado 
+    end
+    setPlayerStorageValue(cid, stg, -1)
+    return true 
+    end
+    
+    if getCreatureCondition(cid, CONDITION_PARALYZE) == false then
+       doAddCondition(cid, paralizeArea2)
+    end    
+    doSendMagicEffect(getThingPos(cid), eff)
+    addEvent(doStun2, 1000, cid:getId(), -1, eff, a, spell)   
+end 
+
+function doParalyze2(cid, cd, eff, check, first)
+local stg = conds["Paralyze"]
+if not isCreature(cid) then return true end  --is creature?
+if isNumber(cid) then cid = Creature(cid) end
+    if getPlayerStorageValue(cid, stg) >= 1 and cd ~= -1 then 
+        setPlayerStorageValue(cid, stg, cd)    --allterado v1.8
+        return true 
+    end
+
+    if not check and getPlayerStorageValue(cid, stg) >= 1 then
+        setPlayerStorageValue(cid, stg, getPlayerStorageValue(cid, stg) + cd - 1)
+    else
+        setPlayerStorageValue(cid, stg, getPlayerStorageValue(cid, stg) + cd)
+    end
+            
+    local a = getPlayerStorageValue(cid, stg)
+            
+    if isSummon(cid) and getPlayerStorageValue(cid, 212123) <= 0 then
+        local item = getPlayerSlotItem(getCreatureMaster(cid), 8)
+        doItemSetAttribute(item.uid, "paralyze", a)
+        doItemSetAttribute(item.uid, "paralyzeEff", eff)
+    end
+    
+    if a <= -1 then 
+    if isPlayer(cid) then
+        if not isSleeping(cid) then   --alterado
+            doCreatureSetNoMove(cid, false)
+        end
+    else
+        if getCreatureCondition(cid, CONDITION_PARALYZE) == true then
+            doRemoveCondition(cid, CONDITION_PARALYZE)
+            addEvent(doAddCondition, 10, cid:getId(), paralizeArea2)            
+        end
+        if not isSleeping(cid) then
+            doRegainSpeed(cid)          --alterado
+        end
+    end   
+    setPlayerStorageValue(cid, stg, -1)
+    return true 
+    end
+    
+    if isPlayer(cid) then
+        doCreatureSetNoMove(cid, true)
+    else                        --alterado v1.6
+        doChangeSpeed(cid, -2000)
+    end 
+    doSendMagicEffect(getThingPos(cid), eff)
+    addEvent(doParalyze2, 1000, cid:getId(), -1, eff, a, false)   
+end       
+    
+function doSleep2(cid, cd, check, first)        
+local stg = conds["Sleep"]
+if not isCreature(cid) then return true end  --is creature?
+if isNumber(cid) then cid = Creature(cid) end
+    if getPlayerStorageValue(cid, stg) >= 1 and cd ~= -1 then 
+        setPlayerStorageValue(cid, stg, cd)    --allterado v1.8
+        return true 
+    end
+
+    if not isSleeping(cid) then
+        addEvent(doSendSleepEffect, 500, cid:getId())
+    end
+    
+    if not check and getPlayerStorageValue(cid, stg) >= 1 then
+        setPlayerStorageValue(cid, stg, getPlayerStorageValue(cid, stg) + cd - 1)
+    else
+        setPlayerStorageValue(cid, stg, getPlayerStorageValue(cid, stg) + cd)
+    end
+            
+    local a = getPlayerStorageValue(cid, stg)
+            
+    if isSummon(cid) and getPlayerStorageValue(cid, 212123) <= 0 then
+        local item = getPlayerSlotItem(getCreatureMaster(cid), 8)
+        doItemSetAttribute(item.uid, "sleep", a)
+    end
+    
     if a <= -1 then 
     if not isPlayer(cid) then
-	   local dittoStg = getPlayerStorageValue(cid, 1010) 
-       if getCreatureName(cid) == "Ditto" and isSummon(cid) and tostring(dittoStg) and dittoStg ~= "Ditto" then
-	      doSetCreatureOutfit(cid, {lookType = getItemAttribute(getCreatureMaster(cid):getUsingBall().uid, "transOutfit")}, -1)
-       else
-	      doRemoveCondition(cid, CONDITION_OUTFIT)
-	   end
-	   if getPlayerStorageValue(cid, 625877) ~= -1 then 
-	      doSetCreatureOutfit(cid, {lookType = getPlayerStorageValue(cid, 625877)}, -1)   --alterado v2.6
-       end 
+        local dittoStg = getPlayerStorageValue(cid, 1010) 
+        if getCreatureName(cid) == "Ditto" and isSummon(cid) and tostring(dittoStg) and dittoStg ~= "Ditto" then
+            doSetCreatureOutfit(cid, {lookType = getItemAttribute(getPlayerSlotItem(getCreatureMaster(cid), 8).uid, "transOutfit")}, -1)
+        else
+            doRemoveCondition(cid, CONDITION_OUTFIT)
+        end
+        if getPlayerStorageValue(cid, 625877) ~= -1 then 
+            doSetCreatureOutfit(cid, {lookType = getPlayerStorageValue(cid, 625877)}, -1)   --alterado v1.6
+        end 
     end
     if isPlayer(cid) then
-       if not isParalyze(cid) then
-          mayNotMove(cid, false)   --alterado
-       end
+        if not isParalyze(cid) then
+            doCreatureSetNoMove(cid, false)   --alterado
+        end
     else
-       if getCreatureCondition(cid, CONDITION_PARALYZE) == true then
-          doRemoveCondition(cid, CONDITION_PARALYZE)
-          addEvent(doAddCondition, 10, cid:getId(), paralizeArea2)            
-       end
-       if not isParalyze(cid) then
-          doRegainSpeed(cid)   --alterado
-       end
-	end
+        if getCreatureCondition(cid, CONDITION_PARALYZE) == true then
+            doRemoveCondition(cid, CONDITION_PARALYZE)
+            addEvent(doAddCondition, 10, cid:getId(), paralizeArea2)            
+        end
+        if not isParalyze(cid) then
+            doRegainSpeed(cid)   --alterado
+        end
+    end
     setPlayerStorageValue(cid, stg, -1)
     return true 
     end
     
     if first then 
-       if getCreatureName(cid) == "Ursaring" and getCreatureCondition(cid, CONDITION_OUTFIT) == true then
-             
-       elseif not isPlayer(cid) then
-          if isInArray({604, 605, 1015, 1016, 1183, 1184}, getCreatureOutfit(cid).lookType) then
-             Info = 0                                                                            --alterado v2.6
-          else
-             Info = getCreatureOutfit(cid).lookType              
-          end                
-          local look = getCreatureOutfit(cid) 
-          ---------
-          local dittoStg = getPlayerStorageValue(cid, 1010) 
-          if getCreatureName(cid) == "Ditto" and isSummon(cid) and tostring(dittoStg) and dittoStg ~= "Ditto" then
-             if InfoDitto ~= 0 and look.lookType ~= 0 then             
-             end   
-          else
-             if getCreatureName(cid) == "Shiny Golem" and getCreatureOutfit(cid).lookType == 1403 then                                                                                     
-             elseif Info ~= 0 and look.lookType ~= 0 then
-             end
-          end
-       end
+        if getCreatureName(cid) == "Ursaring" and getCreatureCondition(cid, CONDITION_OUTFIT) == true then
+                
+        elseif not isPlayer(cid) then
+            if isInArray({604, 605, 1015, 1016, 1183, 1184}, getCreatureOutfit(cid).lookType) then
+                Info = 0                                                                            --alterado v1.6
+            else
+                Info = MonsterType(getCreatureName(cid)):getOutfit().lookType                
+            end                
+            local look = getCreatureOutfit(cid) 
+            ---------
+            local dittoStg = getPlayerStorageValue(cid, 1010) 
+            if getCreatureName(cid) == "Ditto" and isSummon(cid) and tostring(dittoStg) and dittoStg ~= "Ditto" then
+                local InfoDitto = MonsterType(tostring(dittoStg)):getCorpseId()
+                if InfoDitto ~= 0 and look.lookType ~= 0 then             
+                doSetCreatureOutfit(cid, {lookType = 0, lookTypeEx = MonsterType(tostring(dittoStg)):getCorpseId()}, -1)
+                end   
+            else
+                if getCreatureName(cid) == "Shiny Golem" and getCreatureOutfit(cid).lookType == 1403 then
+                doRemoveCondition(cid, CONDITION_OUTFIT)                                                                                                  
+                elseif Info ~= 0 and look.lookType ~= 0 then
+                doSetCreatureOutfit(cid, {lookType = 0, lookTypeEx = MonsterType(getCreatureName(cid)):getCorpseId()}, -1)
+                end
+            end
+        end
     end
-                                      --alterado v2.6
+                                        --alterado v1.6
     if isPlayer(cid) then
-       mayNotMove(cid, true)
+        doCreatureSetNoMove(cid, true)
     else
-       doChangeSpeed(cid, -getCreatureSpeed(cid))
+        doChangeSpeed(cid, -getCreatureSpeed(cid))
     end
     addEvent(doSleep2, 1000, cid:getId(), -1, a, false)
 end   
-
+    
 function doLeech2(cid, attacker, cd, check, damage)
-    if isNumber(cid) then cid = Creature(cid) end
-    if isNumber(attacker) then attacker = Creature(attacker) end
 local stg = conds["Leech"]
-    if not isCreature(cid) then return true end  --is creature?
-   if isPlayer(cid) then return true end  --is creature?	
-   cid = Creature(cid)
+if not isCreature(cid) then return true end  --is creature?
+if not isCreature(attacker) then return true end  --is creature?
+if isNumber(cid) then cid = Creature(cid) end
+if isNumber(attacker) then attacker = Creature(attacker) end
     if attacker ~= 0 and not isCreature(attacker) then return true end  --is creature?
     if getPlayerStorageValue(cid, stg) >= 1 and cd ~= -1 then 
-       setPlayerStorageValue(cid, stg, cd)    --allterado v2.8
-       return true 
+        setPlayerStorageValue(cid, stg, cd)    --allterado v1.8
+        return true 
     end
     
     if not check and getPlayerStorageValue(cid, stg) >= 1 then
-       setPlayerStorageValue(cid, stg, getPlayerStorageValue(cid, stg) + cd - 1)
+        setPlayerStorageValue(cid, stg, getPlayerStorageValue(cid, stg) + cd - 1)
     else
-       setPlayerStorageValue(cid, stg, getPlayerStorageValue(cid, stg) + cd)
+        setPlayerStorageValue(cid, stg, getPlayerStorageValue(cid, stg) + cd)
     end
-           
+            
     local a = getPlayerStorageValue(cid, stg)
-           
-      print(cid:getName())
-      print(getCreatureMaster(cid):getName())
-    local item = getCreatureMaster(cid):getUsingBall()
-    if not item then return true end
-    doItemSetAttribute(item.uid, "leech", a)
-    doItemSetAttribute(item.uid, "leechdmg", damage)
-	
+            
+    if isSummon(cid) and getPlayerStorageValue(cid, 212123) <= 0 then
+        local item = getPlayerSlotItem(getCreatureMaster(cid), 8)
+        doItemSetAttribute(item.uid, "leech", a)
+        doItemSetAttribute(item.uid, "leechdmg", damage)
+    end
+    
     if a <= -1 then 
     setPlayerStorageValue(cid, stg, -1)
     return true 
@@ -452,17 +614,17 @@ local stg = conds["Leech"]
     ------
     local newlife = life - getCreatureHealth(cid)
     if newlife >= 1 and attacker ~= 0 then
-       doSendMagicEffect(getThingPos(attacker), 14)
-       doCreatureAddHealth(attacker, newlife)
-       doSendAnimatedText(getThingPos(attacker), "+"..newlife.."", 32)
+        doSendMagicEffect(getThingPos(attacker), 14)
+        doCreatureAddHealth(attacker, newlife)
+        doSendAnimatedText(getThingPos(attacker), "+"..newlife.."", 32)
     end 
     addEvent(doLeech2, 2000, cid:getId(), attacker:getId(), -1, a, damage)   
 end 
 
 function doBuff2(cid, cd, eff, check, buff, first, attr)
-    if isNumber(cid) then cid = Creature(cid) end
     if not isCreature(cid) then return true end  --is creature?
-   if isPlayer(cid) then return true end  --is creature?	
+    if isPlayer(cid) then return true end  --is creature?	
+    if isNumber(cid) then cid = Creature(cid) end
    cid = Creature(cid)
 ---------------------
 local atributo = attr and attr or ""
@@ -549,8 +711,8 @@ local stg = conds[atributo]
        doRaiseStatus(cid, 1.5, 0, 0, a)    --atk melee    --alterado v2.6
        setPlayerStorageValue(cid, 374896, 1)  --velo atk 
        addEvent(setPlayerStorageValue, a*1000, cid:getId(), 465987, -1)                                              
-    elseif isInArray({"Future Sight", "Camouflage", "Acid Armor", "Iron Defense", "Minimize"}, buff) then
-       doSetCreatureOutfit(cid, {lookType = outImune[buff]}, -1)
+    elseif isInArray({"Future Sight", "Camouflage", "Acid Armor", "Iron Defense", "Minimize", "DeoxysDefense", "DeoxysDefense2", "DeoxysSpeed2", "DeoxysSpeed"}, buff) then
+        doSetCreatureOutfit(cid, {lookType = outImune[buff]}, -1)
        setPlayerStorageValue(cid, 9658783, 1)  
        setPlayerStorageValue(cid, 625877, outImune[buff]) --alterado v2.6                             
     elseif buff == "Bug Fighter" then
@@ -610,12 +772,22 @@ if item ~= 0 then
 end
 end 
 --------------------------------
-function doCureStatus(cid, type, playerballs)    --alterado v2.9 \/
-    if isNumber(cid) then cid = Creature(cid) end
+function doCureStatus(cid, type, playerballs)    --alterado v1.9 \/
 	if not isCreature(cid) then return true end
+    if isNumber(cid) then cid = Creature(cid) end
 	if playerballs and isPlayer(cid) then
 		local bp = getPlayerSlotItem(cid, CONST_SLOT_BACKPACK)
-   	local balls = getPokeballsInContainer(bp.uid)
+		local mb = getPlayerSlotItem(cid, 8)
+		local balls = getPokeballsInContainer(bp.uid)
+		if isPokeball(mb.itemid) then
+			if not type or type == "all" then
+				for b = 1, #injuries2 do
+				    doItemSetAttribute(mb.uid, ""..injuries2[b].n.."", -1)
+				end
+			else
+				doItemSetAttribute(mb.uid, ""..type.."", -1)
+			end
+		end
 		if #balls >= 1 then
 		   for _, uid in ipairs(balls) do
 		       if not type or type == "all" then
@@ -642,6 +814,7 @@ function doCureStatus(cid, type, playerballs)    --alterado v2.9 \/
 end 
 ---------------------------------
 function isWithCondition(cid)
+    if not isCreature(cid) then return true end
     if isNumber(cid) then cid = Creature(cid) end
 for i = 1, #injuries2 do 
    if getPlayerStorageValue(cid, injuries2[i].m) >= 1 then
@@ -662,50 +835,50 @@ function doCureBallStatus(item, type)
 end
 ---------------------------------
 function isBurning(cid)
-if isNumber(cid) then cid = Creature(cid) end
 	if not isCreature(cid) then return false end
+if isNumber(cid) then cid = Creature(cid) end
 	if getPlayerStorageValue(cid, conds["Burn"]) >= 0 then return true end
 return false
 end
 
 function isPoisoned(cid)
-if isNumber(cid) then cid = Creature(cid) end
 	if not isCreature(cid) then return false end
+if isNumber(cid) then cid = Creature(cid) end
 	if getPlayerStorageValue(cid, conds["Poison"]) >= 0 then return true end
 return false
 end
 
 function isSilence(cid)
-if isNumber(cid) then cid = Creature(cid) end
     if not isCreature(cid) then return false end
+if isNumber(cid) then cid = Creature(cid) end
     if getPlayerStorageValue(cid, conds["Silence"]) >= 0 then return true end
 return false
 end
 
 function isParalyze(cid)  
-if isNumber(cid) then cid = Creature(cid) end    
     if not isCreature(cid) then return false end
+if isNumber(cid) then cid = Creature(cid) end    
     if getPlayerStorageValue(cid, conds["Paralyze"]) >= 0 then return true end
 return false
 end
     
 function isSleeping(cid)
-if isNumber(cid) then cid = Creature(cid) end
     if not isCreature(cid) then return false end
+if isNumber(cid) then cid = Creature(cid) end
     if getPlayerStorageValue(cid, conds["Sleep"]) >= 0 then return true end
 return false
 end
 
 function isWithFear(cid)
-if isNumber(cid) then cid = Creature(cid) end
     if not isCreature(cid) then return false end
+if isNumber(cid) then cid = Creature(cid) end
     if getPlayerStorageValue(cid, conds["Fear"]) >= 0 then return true end
 return false
 end 
 -----------------------------------
 function doMoveInArea2(cid, eff, area, element, min, max, spell, ret)
+    if not isCreature(cid) then return true end
 if isNumber(cid) then cid = Creature(cid) end
-if not isCreature(cid) then return true end
    
    local pos = getPosfromArea(cid, area)  --alterado v2.8
    setPlayerStorageValue(cid, 21101, -1) --alterado v2.6
@@ -774,6 +947,8 @@ end
 end
 -------------------------------------------
 function doMoveDano2(cid, pid, element, min, max, ret, spell)
+    if not isCreature(cid) then return true end
+    if not isCreature(pid) then return true end
 if isNumber(cid) then cid = Creature(cid) end
 if isNumber(pid) then pid = Creature(pid) end
 if isCreature(pid) and isCreature(cid) and cid ~= pid then
@@ -806,14 +981,6 @@ if isCreature(pid) and isCreature(cid) and cid ~= pid then
                ret.check = getPlayerStorageValue(pid, conds[ret.cond])
                doCondition2(ret)
             end
-	    if spell == "Earthquake" then
-		if getCreatureName(pid) == "Shiny Tropius" then
-		return true
-		end
-		if getCreatureName(pid) == "Tropius" then
-		return true
-		end
-	    end
             if spell == "Selfdestruct" then
                if getPlayerStorageValue(pid, 9658783) <= 0 then
                   doSendAnimatedText(getThingPosWithDebug(pid), "-"..max.."", COLOR_NORMAL)
@@ -860,8 +1027,8 @@ end
 end
 --------------------------------------------------------------------------------
 function sendEffWithProtect(cid, pos, eff)  --Manda algum magic effect com proteçoes 
+    if not isCreature(cid) then return true end
 if isNumber(cid) then cid = Creature(cid) end
-if not isCreature(cid) then return true end
 if isSleeping(cid) and getPlayerStorageValue(cid, 3644587) >= 1 then return true end
 if isWithFear(cid) and getPlayerStorageValue(cid, 3644587) >= 1 then return true end
 local checkpos = pos
@@ -877,6 +1044,8 @@ end
 end
 ---------------------------------------------------------------------------------
 function getThingPosWithDebug(what)
+    if not isCreature(what) then return true end
+    if isNumber(what) then what = Creature(what) end
 	if not isCreature(what) or getCreatureHealth(what) <= 0 then
 	return {x = 1, y = 1, z = 10}
 	end
@@ -884,14 +1053,16 @@ return getThingPos(what)
 end
 ---------------------------------------------------------------------------------
 function doDanoWithProtect(cid, element, pos, area, min, max, eff)  --Da dano com proteçoes
+    if not isCreature(cid) then return true end
 if isNumber(cid) then cid = Creature(cid) end
-if not isCreature(cid) then return true end
 if isSleeping(cid) and getPlayerStorageValue(cid, 3644587) >= 1 then return true end
 if isWithFear(cid) and getPlayerStorageValue(cid, 3644587) >= 1 then return true end
    doAreaCombatHealth(cid, element, pos, area, -(math.abs(min)), -(math.abs(max)), eff)
 end
 ---------------------------------------------------------------------------------
 function doDanoWithProtectWithDelay(cid, target, element, min, max, eff, area)
+    if not isCreature(cid) then return true end
+    if not isCreature(target) then return true end
 if isNumber(cid) then cid = Creature(cid) end
 if isNumber(target) then target = Creature(target) end
 const_distance_delay = 56
@@ -900,22 +1071,23 @@ if isSleeping(cid) and getPlayerStorageValue(cid, 3644587) >= 1 then return true
 if isWithFear(cid) and getPlayerStorageValue(cid, 3644587) >= 1 then return true end
    if target ~= 0 and isCreature(target) and not area then
       delay = getDistanceBetween(getThingPosWithDebug(cid), getThingPosWithDebug(target)) * const_distance_delay
-      addEvent(doDanoWithProtect, delay, cid:getId(), element, getThingPosWithDebug(target), 0, min, max, eff)
+      addEvent(doDanoWithProtect, delay, cid:getId(), element, getThingPosWithDebug(target:getId()), 0, min, max, eff)
       return true
    end
-addEvent(doDanoWithProtect, 200, cid:getId(), element, getThingPosWithDebug(target), area, min, max, eff)
+addEvent(doDanoWithProtect, 200, cid:getId(), element, getThingPosWithDebug(target:getId()), area, min, max, eff)
 end   
 --------------------------------------------------------------------------------
 function sendDistanceShootWithProtect(cid, frompos, topos, eff)    --Manda um efeito de distancia com proteçoes
+    if not isCreature(cid) then return true end
 if isNumber(cid) then cid = Creature(cid) end
-if not isCreature(cid) then return true end
 if isSleeping(cid) and getPlayerStorageValue(cid, 3644587) >= 1 then return true end
 if isWithFear(cid) and getPlayerStorageValue(cid, 3644587) >= 1 then return true end
    doSendDistanceShoot(frompos, topos, eff)
 end
 ---------------------------------------------------------------------------------
 function sendMoveBack(cid, pos, eff, min, max)     --Manda o Atk do farfetchd de volta...
-if isNumber(cid) then cid = Creature(cid) end
+    if not isCreature(cid) then return true end
+    if isNumber(cid) then cid = Creature(cid) end
 local m = #pos+1
 for i = 1, #pos do
     if not isCreature(cid) then return true end
@@ -930,8 +1102,8 @@ end
 end  
 ---------------------------------------------------------------------------------
 function upEffect(cid, effDis)
+    if not isCreature(cid) then return true end
 if isNumber(cid) then cid = Creature(cid) end
-if not isCreature(cid) then return true end
 if isSleeping(cid) and getPlayerStorageValue(cid, 3644587) >= 1 then return true end
 if isWithFear(cid) and getPlayerStorageValue(cid, 3644587) >= 1 then return true end
 pos = getThingPos(cid)
@@ -942,7 +1114,9 @@ doSendDistanceShoot(getThingPos(cid), frompos, effDis)
 end
 ---------------------------------------------------------------------------------
 function fall(cid, master, element, effDis, effArea)   --Function pra jogar efeitos pra cima e cair depois... tpw falling rocks e blizzard
-if isNumber(cid) then cid = Creature(cid) end
+    if not isCreature(cid) then return true end
+    if not isCreature(master) then return true end
+    if isNumber(cid) then cid = Creature(cid) end
 if isNumber(master) then master = Creature(master) end
     if isCreature(cid) then
 if isWithFear(cid) and getPlayerStorageValue(cid, 3644587) >= 1 then return true end
@@ -965,19 +1139,30 @@ end
 end
 ---------------------------------------------------------------------------------
 function canDoMiss(cid, nameAtk)     
+    if not isCreature(cid) then return true end
 if isNumber(cid) then cid = Creature(cid) end                                       --alterado v2.5
-local atkTerra = {} --alterado v2.7
-local atkElectric = {}  --alterado v2.7
+local atkTerra = {"Sand Attack", "Mud Shot", "Mud Bomb", "Stomp", "Crusher Stomp", "Mud Slap", "Sand Tomb"} --alterado v1.7
+local atkElectric = {"Electric Storm", "Thunder Wave", "Thunder", "Electricity", "Wild Charge"}  --alterado v1.7
 if not isCreature(cid) then return false end
-if isCreature(cid) then return false end
 if isPlayer(cid) then return true end
 if not pokes[getCreatureName(cid)] then return true end
-return false
+
+if isInArray(atkTerra, nameAtk) then
+   if (pokes[getCreatureName(cid)].type == "flying") or (pokes[getCreatureName(cid)].type2 == "flying") or isInArray(specialabilities["levitate"], getCreatureName(cid))  then
+      return false      
+   end
+elseif isInArray(atkElectric, nameAtk) then
+   if (pokes[getCreatureName(cid)].type == "ground") or (pokes[getCreatureName(cid)].type2 == "ground") then
+      return false      
+   end
+end
+
+return true
 end
 ---------------------------------------------------------------------------------
 function doMoveInAreaMulti(cid, effDis, effMagic, areaEff, areaDano, element, min, max, ret) --alterado v1.7
-    if isNumber(cid) then cid = Creature(cid) end
     if not isCreature(cid) then return true end 
+    if isNumber(cid) then cid = Creature(cid) end
 
     local pos = getPosfromArea(cid, areaEff)
     if pos == "true" then
@@ -1022,6 +1207,8 @@ function doMoveInAreaMulti(cid, effDis, effMagic, areaEff, areaDano, element, mi
 end 
 ---------------------------------------------------------------------------------------
 function doDoubleHit(cid, pid, valor, races)           --alterado v2.6
+    if not isCreature(cid) then return true end
+    if not isCreature(pid) then return true end
     if isNumber(cid) then cid = Creature(cid) end
     if isNumber(pid) then pid = Creature(pid) end
 if isCreature(cid) and isCreature(pid) then
@@ -1042,9 +1229,9 @@ end
 end
 ----------------------------------------------------------------------------------------
 function doDanoInTarget(cid, target, combat, min, max, eff)   --alterado v2.7
+    if not isCreature(cid) or not isCreature(target) then return true end
 if isNumber(cid) then cid = Creature(cid) end
 if isNumber(target) then target = Creature(target) end
-if not isCreature(cid) or not isCreature(target) then return true end
 if isSleeping(cid) and getPlayerStorageValue(cid, 3644587) >= 1 then return true end
 if isWithFear(cid) and getPlayerStorageValue(cid, 3644587) >= 1 then return true end
    doTargetCombatHealth(cid, target, combat, -math.abs(min), -math.abs(max), eff)
@@ -1052,9 +1239,9 @@ end
 -----------------------------------------------------------------------------------------
 function doDanoInTargetWithDelay(cid, target, combat, min, max, eff)     --alterado v2.7
 const_distance_delay = 56
+if not isCreature(cid) or not isCreature(target) then return true end
 if isNumber(cid) then cid = Creature(cid) end
 if isNumber(target) then target = Creature(target) end
-if not isCreature(cid) or not isCreature(target) then return true end
 if isSleeping(cid) and getPlayerStorageValue(cid, 3644587) >= 1 then return true end
 if isWithFear(cid) and getPlayerStorageValue(cid, 3644587) >= 1 then return true end
    local delay = getDistanceBetween(getThingPosWithDebug(cid), getThingPosWithDebug(target)) * const_distance_delay

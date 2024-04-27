@@ -1,4 +1,4 @@
-staffAcess = {"Mixlord"} 
+
 
 staminaMinutesMaximo = 56 -- 150%
 staminaMinutesPadrao = 54  -- 100%
@@ -6,33 +6,13 @@ staminaMinutes1 = 15 -- 50%
 staminaMinutes2 = 5 -- 15%
 staminaMinutes3 = 2 -- 0%
 
-function isGod(cid)
-  if isPlayer(cid) then 
-    if getPlayerGroupId(cid) >= 6 then
-      return true 
-    end
-    return false
-  end
-end
-
 function Player.teleportToPlus(self, position) 
-    self:sendExtendedOpcode(133, "fade")
-    addEvent(function()
-        if self:getId() and Creature(self:getId()) then
+    -- self:sendExtendedOpcode(133, "fade")
+    -- addEvent(function()
+        -- if self:getId() and Creature(self:getId()) then
             self:teleportTo(position)
-        end
-    end, 450)
-end
-
-function selectTargetSpell(creature)
-    local target = creature:getTarget()
-    if target then
-        return target
-    else
-        if creature:getMaster() and creature:getMaster():getTarget() then
-            return creature:getMaster():getTarget()
-        end
-    end
+        -- end
+    -- end, 450)
 end
 
 function isShinyName(name)
@@ -49,13 +29,6 @@ function retireShinyName(str)
     end
     return str
 end  
-
-function isRiderOrFlyOrSurf(cid)
-  if getPlayerStorageValue(cid, orderTalks["surf"].storage) == 1 or getPlayerStorageValue(cid, orderTalks["ride"].storage) == 1 or getPlayerStorageValue(cid, orderTalks["fly"].storage) == 1 then
-    return true 
-  end
-  return false
-end
 
 function transformBallItem(item, id, ballKey)
     if item and isNumber(item) then item = Item(item) end
@@ -108,20 +81,6 @@ function onUseRevive(player, item, fromPosition, target)
     local summonMaxHealth = target:getPokeMaxHealth()
 	local summonName = target:getPokeName()
 
-	if player:isDuelingWithNpc() then
-		player:sendCancelMessage("Sorry, not possible while in duels.")
-		player:getPosition():sendMagicEffect(CONST_ME_POFF)
-		return true
-	end
-
-	if player:isOnLeague() then
-		if not player:canUseReviveOnLeague() then
-			player:sendCancelMessage("Sorry, you can not use revive anymore.")
-			player:getPosition():sendMagicEffect(CONST_ME_POFF)
-			return true
-		end
-	end
-
     for c = 1, 15 do
         local str = "move"..c
         setCD(target.uid, str, 0)
@@ -157,8 +116,11 @@ end
 
 function getHealthPercent(ball)
     if not ball then return nil end
-    local healthNow = math.floor(ball:getPokeHealth()) * 100
-    local healthMax = math.floor(ball:getPokeMaxHealth())
+    local now = ball:getPokeHealth() or 1
+    local max = ball:getPokeMaxHealth() or 100
+    local healthNow = math.floor(now) * 100
+    local healthMax = math.floor(max)
+
     return math.floor(healthNow / healthMax)
 end
 
@@ -238,9 +200,10 @@ function onUsePokemon(player, item)
 
             if player:canReleaseSummon(item) then
                 if player:getSummons()[1] then player:setStorageValue(storageGoback, -1) return true end
+                local playerId = player:getId()
                 addEvent(function()
-                    if player:getId() and isPlayer(player:getId()) then
-                        doReleaseSummon(player:getId(), getPlayerPosition(player:getId()), balls[ballKey].effectRelease, true, balls[ballKey].missile)
+                    if isOnline(playerId) then
+                        doReleaseSummon(playerId, getPlayerPosition(playerId), balls[ballKey].effectRelease, true, balls[ballKey].missile)
                     end
                 end, 600)
             end
@@ -266,9 +229,10 @@ function onUsePokemon(player, item)
 
         if player:canReleaseSummon(item) then
             if player:getSummons()[1] then player:setStorageValue(storageGoback, -1) return true end
+            local playerId = player:getId()
             addEvent(function()
-                if player:getId() and isPlayer(player:getId()) then
-                    doReleaseSummon(player:getId(), getPlayerPosition(player:getId()), balls[ballKey].effectRelease, true, balls[ballKey].missile)
+                if isOnline(playerId) then
+                    doReleaseSummon(playerId, getPlayerPosition(playerId), balls[ballKey].effectRelease, true, balls[ballKey].missile)
                 end
             end, 250)
         end
@@ -307,14 +271,8 @@ function Item.getPokeName(item)
     return attribute
 end
 
--- function Item.getPokeLevel(item)
---     local attribute = item:getSpecialAttribute("pokeLevel")
---     if not attribute then return false end
---     return attribute
--- end
-
 function Item.getPokeBoost(item)
-    local attribute = item:getSpecialAttribute("pokeBoost") or 0
+    local attribute = item:getSpecialAttribute("boost") or 0
     if not attribute then return false end
     return attribute
 end
@@ -331,12 +289,14 @@ function Item.getPokeMaxHealth(item)
     return attribute
 end
 
-function Player.addPokeToPlayer(player, name, boost, ballKey, dp, unique)
+function addPokeToPlayer(player, name, boost, none, ballKey, dp, unique)
     local player = Player(player)
     if not player then return false end
     local name, monsterType, boost = firstToUpper(name), MonsterType(name), boost or 0
     if not monsterType then return false end
-    if (player:getPokeballCount() > LIMIT_POKES - 1) and not player:getGroup():getAccess() then dp = true end 
+    if (player:getPokeballCount() >= 6) and not player:getGroup():getAccess() then dp = true end 
+    local playerMana = player:getMana() or 0
+    if playerMana >= 6 and not player:getGroup():getAccess() then dp = true end
     local addBall
     if dp then
         local depot = player:getInbox()
@@ -351,39 +311,43 @@ function Player.addPokeToPlayer(player, name, boost, ballKey, dp, unique)
     end
     if not addBall then
         if dp then -- try send to CP because BP is full
-            addEvent(doPlayerSendTextMessage, "", player, MESSAGE_STATUS_WARNING, "Pokemon lost. Your CP is full!")
+            addEvent(doPlayerSendTextMessage, 3000, player:getId(), MESSAGE_STATUS_WARNING, "Pokemon lost. Your CP is full!")
         else
             local depot = player:getInbox()
             addBall = depot:addItem(balls[ballKey].usedOn, 1, INDEX_WHEREEVER, FLAG_NOLIMIT)
-            addEvent(doPlayerSendTextMessage, "", player, MESSAGE_EVENT_ADVANCE, "Since you are at maximum capacity, your ball was sent to CP.")
+            addEvent(doPlayerSendTextMessage, 3000, player:getId(), MESSAGE_EVENT_ADVANCE, "Since you are at maximum capacity, your ball was sent to CP.")
             dp = true
         end
     end
     if addBall then
-        local gender = gender or 0
-        local genders = {
-            ["male"] = 4,
-            ["female"] = 3,
-            ["indefinido"] = 1,
-            ["genderless"] = 1,
-            [1] = 4,
-            [0] = 3,
-            [4] = 4,
-            [3] = 3,
-        }
-        local GENDER = (gender and genders[gender]) and genders[gender] or getRandomGenderByName(pokemon)
+        -- local gender = gender or 0
+        -- local genders = {
+        --     ["male"] = 4,
+        --     ["female"] = 3,
+        --     ["indefinido"] = 1,
+        --     ["genderless"] = 1,
+        --     [1] = 4,
+        --     [0] = 3,
+        --     [4] = 4,
+        --     [3] = 3,
+        -- }
+        -- local GENDER = (gender and genders[gender]) and genders[gender] or getRandomGenderByName(pokemon)
         local happy = 250
         local maxHealth = getStatusS(name, boost, player:getLevel()).life
         addBall:setSpecialAttribute("pokeName", name)
-        addBall:setSpecialAttribute("pokeBoost", boost)
+        addBall:setSpecialAttribute("boost", boost)
         addBall:setSpecialAttribute("pokeHealth", maxHealth)
         addBall:setSpecialAttribute("pokeMaxHealth", maxHealth)
         addBall:setSpecialAttribute("happy", happy)
-        addBall:setSpecialAttribute("gender", GENDER)
+        -- addBall:setSpecialAttribute("gender", GENDER)
         transformBallItem(addBall, STATUS_BALL_NORMAL)
         player:setStorageValue(storageGoback, -1)
         if not dp then
             player:pokeBarUpdatePoke(addBall)
+            -- limit pokeballs
+            local ballCount = player:getPokeballCount() or 0
+            local playerMana = player:getMana() or 0
+            player:addMana(ballCount - playerMana)
         end
         return true
     else
@@ -410,6 +374,22 @@ function Player.addUniqueItem(player, itemId, count)
         doPlayerSendTextMessage(player, MESSAGE_STATUS_CONSOLE_BLUE, "Você não tem espaço, o item foi enviado para o DP.")
     end
     return item
+end
+
+function Container.getItemCount(self, itemId)
+    local size = self:getSize()
+    local counti = 0
+    for i = 0, size - 1 do
+        local item = self:getItem(i)
+        if item:getId() == itemId then
+            counti = counti + 1
+        elseif item:isContainer() then
+            if item:getItemCount() then
+                counti = counti + item:getItemCount()
+            end
+        end
+    end
+    return counti
 end
 
 function Item.isUniqueItem(item)
@@ -596,225 +576,12 @@ end
 
 function Monster.getLevel(poke)
     local name = poke:getName()
-    local monsterType = MonsterType(name)
     if monsterType then
-        return monsterType:getMaxlevel()
+        return pokes[name].level
     else
         print("Error: Monster.getLevel(poke) - poke not found: "..poke:getName())
         return 0
     end
-end
-
-function setPassiveSpells(poke)
-    if poke:getStorageStringValue(storages.STORAGE_PASSIVESPELL) ~= -1 then return true end
-    local name = poke:getName()
-    local monsterType = MonsterType(name)
-    local moves = monsterType:getMoveList()
-    local passivas = {}
-    local passiveChances = {}
-    if monsterType and moves then
-        for i = 1, #moves do
-            if moves[i].passive and moves[i].passive == "sim" then
-                table.insert(passivas, moves[i].name) -- Insere a passiva na lista
-                table.insert(passiveChances, moves[i].speed) -- Insere a passiva na lista
-            end
-        end
-        if #passivas > 0 then
-            poke:setStorageStringValue(storages.STORAGE_PASSIVESPELL, table.concat(passivas, ",")) -- Concatena as passivas separadas por vírgula
-            poke:setStorageStringValue(storages.STORAGE_PASSIVESPELL_CHANCE, table.concat(passiveChances, ",")) -- Concatena as passivas separadas por vírgula
-        end
-    end
-end
-
-function getPassiveRandomSpell(poke)
-    if poke:getStorageStringValue(storages.STORAGE_PASSIVESPELL) == -1 then return false end
-    local passivasSto = poke:getStorageStringValue(storages.STORAGE_PASSIVESPELL)
-    local passivas = string.explode(passivasSto, ",")
-    local random = math.random(1, #passivas)
-
-    local passivasChanceSto = poke:getStorageStringValue(storages.STORAGE_PASSIVESPELL_CHANCE)
-    local passivasChance = string.explode(passivasChanceSto, ",")
-    local randomChance = passivasChance[random]
-
-    if randomChance then
-        randomChance = tonumber(randomChance)
-        if math.random(1, 100) <= randomChance then
-	        doCreatureSay(poke, passivas[random], TALKTYPE_MONSTER)
-            if not poke then return true end
-            doCreatureCastSpell(poke, passivas[random])
-        end
-    end
-    
-    return true
-end
-
-function getPokemonLevel(cid)
-    if not isCreature(cid) then return 0 end 
-    return MonsterType(cid:getName()):getMaxlevel()
-end
-
-function Player.setSurfing(self, bool)
-    if bool and bool == 1 then
-        self:setStorageValue(storageSurf, 1)
-    else
-        self:setStorageValue(storageSurf, -1)
-    end
-end
-
-function Player.isSurfing(self)
-    return self:getStorageValue(storageSurf) == 1
-end
-
-function Player.setRiding(self, bool)
-    if bool and bool == 1 then
-        self:setStorageValue(storageRide, 1)
-    else
-        self:setStorageValue(storageRide, -1)
-    end
-end
-
-function Player.isRiding(self)
-    return self:getStorageValue(storageRide) == 1
-end
-
-function Player.setFlying(self, bool)
-    if bool and bool == 1 then
-        self:setStorageValue(storageFly, 1)
-    else
-        self:setStorageValue(storageFly, -1)
-    end
-end
-
-function Player.isFlying(self)
-    return self:getStorageValue(storageFly) == 1
-end
-
-function Item.setAbilityCd(self, ability, time)
-    if not self:isItem() then return false end
-    self:setSpecialAttribute(ability, ((time * 60) + os.time()))
-    return true
-end
-
-function Item.getAbilityCd(self, ability)
-    if not self:isItem() then return false end
-    local atribute = self:getSpecialAttribute(ability)
-    if atribute and atribute - os.time() > 0 then 
-        return atribute - os.time()
-    else
-        return 0
-    end
-end
-
-function Player.addAbility(player, ball, ability, teleportPos)
-    if not player or not player:isPlayer() then return false end
-    if not ball or not ball:isItem() then return false end
-    local pokeName = ball:getPokeName()
-    local monsterType = MonsterType(pokeName)
-    local outfit, speed
-    if ability == "surf" then
-        if teleportPos then player:teleportTo(teleportPos) end
-        local tileUnder = Tile(player:getPosition())
-        local groundUnder = tileUnder:getGround()
-        if not isInArray(waterIds, groundUnder:getId()) then
-            player:setSurfing()
-            player:teleportTo(player:getTown():getTemplePosition())
-            player:changeSpeed(player:getBaseSpeed()-player:getSpeed())
-            transformBallItem(ball, STATUS_BALL_NORMAL)
-            player:setStorageValue(storageGoback, -1)
-            return true
-        end
-        player:setSurfing(1)
-        speed = 300 + surfs[pokeName].speed * 3
-        outfit = monsterType:isSurfable()
-    elseif ability == "ride" then
-        player:setRiding(1)
-        speed = rides[pokeName][2] * 1.5
-        outfit = monsterType:isRideable()
-    elseif ability == "fly" then
-        player:setFlying(1)
-        speed = flys[pokeName][2] * 1.5
-        outfit = monsterType:isFlyable()
-    end
-    if not outfit then return false end
-    if not speed then print("poke sem speed no surf:"..pokeName) return false end
-    transformBallItem(ball, STATUS_BALL_USE)
-    player:setStorageValue(storageGoback, 1)
-    speed = speed + 20
-    player:changeSpeed(speed)
-    doSetCreatureOutfit(player, {lookType=outfit}, -1)
-    if player:getSummon() then
-        player:getSummon():remove()
-    end
-    return true
-end
-
-function Player.removeAbility(player, ball, ability, toPosition, target)
-    if not player or not player:isPlayer() then return false end
-    if not ball or not ball:isItem() then return false end
-    local toPosition = toPosition or player:getPosition()
-    local ballName = ball:getPokeName()
-    local newPos = toPosition
-    if ability == "surf" then
-        if getDistanceBetween(player:getPosition(), toPosition) > 1 then
-            player:sendCancelMessage("You're too far to stop surfing.")
-            return true
-        end	
-        if target then
-            newPos = {x=toPosition.x-surfItems[target:getId()].x, y=toPosition.y-surfItems[target:getId()].y, z=toPosition.z}
-            if getTileThingByPos(newPos) == 0 or getTileInfo(newPos).house then
-                player:sendCancelMessage("You can't go there.")
-                return true
-            end
-            player:teleportTo(newPos)
-        end
-        player:setSurfing()
-        player:say(ballName..", i'm tired of surfing!", TALKTYPE_ORANGE_1)
-    elseif ability == "ride" then
-        player:setRiding()
-        player:say(ballName..", i'm tired of riding!", TALKTYPE_ORANGE_1)
-    elseif ability == "fly" then
-        local pos = player:getPosition()
-        local tileUnder = Tile({x=pos.x, y=pos.y, z=pos.z, stackpos=0})
-        local groundUnder = tileUnder:getGround()
-        if not tileUnder or not groundUnder then return false end
-        if isInArray(blockedTiles, groundUnder:getId()) then
-            player:sendCancelMessage("You can't get off your pokemon here.")
-            return true
-        end
-        player:setFlying()
-        player:say(ballName..", i'm tired of flying!", TALKTYPE_ORANGE_1)
-    end
-    player:removeCondition(CONDITION_OUTFIT)
-    player:changeSpeed(player:getBaseSpeed()-player:getSpeed())
-    doReleaseSummon(player:getId(), player:getPosition(), false, false)
-    return true
-end
-
-function getPokePrice(name, boost)
-    boost = boost or 0
-
-    local monsterType = MonsterType(name)
-    local chanceMedia = monsterType:getMedia() * mixTableBalls[monsterType:getBallType()].rate
-    if isShinyName(name) then 
-        if chanceMedia <= 10 then
-            chanceMedia = chanceMedia*20
-        elseif chanceMedia < 50 then
-            chanceMedia = chanceMedia*15
-        else
-            chanceMedia = chanceMedia * 2
-        end
-        chanceMedia = chanceMedia / 2
-    end
-    local rawPrice = math.ceil(chanceMedia * 0.5)
-    if rawPrice <= 1 then 
-        rawPrice = 1
-    else
-        rawPrice = rawPrice / mixTableBalls[monsterType:getBallType()].rate
-        rawPrice = rawPrice * mixTableBalls[monsterType:getBallType()].price
-    end
-    
-    local price = rawPrice + (boost*1000)
-    return price
 end
 
 function Player.inPlayerBagOrDepot(self, position, depot) 
@@ -823,7 +590,7 @@ function Player.inPlayerBagOrDepot(self, position, depot)
         if not container then return true end
         local playerBag = getPlayerSlotItem(self, 3).uid
         local containerBp = getContainerBackpack(playerBag)
-        if depot and container:getName() == "depot chest" or container:getName() == "locker" then
+        if depot and container:getName() == "depot chest" or depot and container:getName() == "locker" then
             return true
         end
         if playerBag == container.uid or containerBp and table.find(containerBp, container.uid) then
@@ -831,4 +598,218 @@ function Player.inPlayerBagOrDepot(self, position, depot)
         end
     end
     return false
+end
+
+function doBroadcastMessageMegaphone(text, class)
+    if not text then return true end
+	local class = class or MESSAGE_STATUS_CONSOLE_RED
+	if(type(class) == 'string') then
+		local className = MESSAGE_TYPES[class]
+		if(className == nil) then
+			return false
+		end
+
+		class = className
+	-- elseif(class < MESSAGE_FIRST or class > MESSAGE_LAST) then
+	-- 	return false
+	end
+
+	local players = getPlayersOnline()
+	for _, pid in ipairs(players) do
+		doPlayerSendTextMessage(pid, class, text)		
+		doSendPlayerExtendedOpcode(pid, 90, text)
+	end
+
+	print("> Broadcasted message: \"" .. text .. "\".")
+	return true
+end
+
+function doBroadcastMessageXp(text, class)
+    if not text then return true end
+	local class = class or MESSAGE_STATUS_CONSOLE_RED
+	if(type(class) == 'string') then
+		local className = MESSAGE_TYPES[class]
+		if(className == nil) then
+			return false
+		end
+
+		class = className
+	-- elseif(class < MESSAGE_FIRST or class > MESSAGE_LAST) then
+		-- return false
+	end
+
+	local players = getPlayersOnline()
+	for _, pid in ipairs(players) do
+		doPlayerSendTextMessage(pid, class, text)			
+		doSendPlayerExtendedOpcode(pid, 91, text)
+	end
+
+	print("> Broadcasted message: \"" .. text .. "\".")
+	return true
+end
+
+function doBroadcastMessageMewtwo(text, class)
+    if not text then return true end
+	local class = class or MESSAGE_STATUS_CONSOLE_RED
+	if(type(class) == 'string') then
+		local className = MESSAGE_TYPES[class]
+		if(className == nil) then
+			return false
+		end
+
+		class = className
+	-- elseif(class < MESSAGE_FIRST or class > MESSAGE_LAST) then
+		-- return false
+	end
+
+	local players = getPlayersOnline()
+	for _, pid in ipairs(players) do
+		doPlayerSendTextMessage(pid, class, text)			
+		doSendPlayerExtendedOpcode(pid, 92, text)
+	end
+
+	print("> Broadcasted message: \"" .. text .. "\".")
+	return true
+end
+
+function doBroadcastMessageWorld(text, class)
+    if not text then return true end
+	local class = class or MESSAGE_STATUS_CONSOLE_RED
+	if(type(class) == 'string') then
+		local className = MESSAGE_TYPES[class]
+		if(className == nil) then
+			return false
+		end
+
+		class = className
+	-- elseif(class < MESSAGE_FIRST or class > MESSAGE_LAST) then
+		-- return false
+	end
+
+	local players = getPlayersOnline()
+	for _, pid in ipairs(players) do
+		doPlayerSendTextMessage(pid, class, text)			
+		doSendPlayerExtendedOpcode(pid, 93, text)
+	end
+
+	print("> Broadcasted message: \"" .. text .. "\".")
+	return true
+end
+
+function doBroadcastMessageDeltaball(text, class)
+    if not text then return true end
+	local class = class or MESSAGE_STATUS_CONSOLE_RED
+	if(type(class) == 'string') then
+		local className = MESSAGE_TYPES[class]
+		if(className == nil) then
+			return false
+		end
+
+		class = className
+	-- elseif(class < MESSAGE_FIRST or class > MESSAGE_LAST) then
+		-- return false
+	end
+
+	local players = getPlayersOnline()
+	for _, pid in ipairs(players) do
+		doPlayerSendTextMessage(pid, class, text)			
+		doSendPlayerExtendedOpcode(pid, 94, text)
+	end
+
+	print("> Broadcasted message: \"" .. text .. "\".")
+	return true
+end
+
+function doBroadcastMessageFacebook(text, class)
+	local class = class or MESSAGE_STATUS_CONSOLE_RED
+	if(type(class) == 'string') then
+		local className = MESSAGE_TYPES[class]
+		if(className == nil) then
+			return false
+		end
+
+		class = className
+	-- elseif(class < MESSAGE_FIRST or class > MESSAGE_LAST) then
+		-- return false
+	end
+
+	local players = getPlayersOnline()
+	for _, pid in ipairs(players) do
+		doPlayerSendTextMessage(pid, class, text)			
+		doSendPlayerExtendedOpcode(pid, 95, text)
+	end
+
+	print("> Broadcasted message: \"" .. text .. "\".")
+	return true
+end
+
+function doBroadcastMessageMs(text, class)
+    if not text then return true end
+	local class = class or MESSAGE_STATUS_CONSOLE_RED
+	if(type(class) == 'string') then
+		local className = MESSAGE_TYPES[class]
+		if(className == nil) then
+			return false
+		end
+
+		class = className
+	-- elseif(class < MESSAGE_FIRST or class > MESSAGE_LAST) then
+		-- return false
+	end
+
+	local players = getPlayersOnline()
+	for _, pid in ipairs(players) do
+		doPlayerSendTextMessage(pid, class, text)			
+		doSendPlayerExtendedOpcode(pid, 96, text)
+	end
+
+	print("> Broadcasted message: \"" .. text .. "\".")
+	return true
+end
+
+function getPlayersOnline()
+    -- if Game.getPlayerCount() == 0 then
+    --     return {}
+    -- end
+    local players = {}
+    for _, player in ipairs(Game.getPlayers()) do
+        -- if player:getAccountType() <= 1 then
+        -- if getPlayerGroupId(player) <= 2 then
+            table.insert(players, player)
+        -- end
+        -- end
+    end
+    return players
+end
+
+function canExecuteSpeeds(player)
+	if player:getStorageValue(storageRide) == 1 then
+		player:sendCancelMessage("Sorry, not possible while on ride.")
+		return false
+	end
+	if player:getStorageValue(storageFly) == 1 then
+		player:sendCancelMessage("Sorry, not possible while on fly.")
+		return false
+	end
+	if player:getStorageValue(storageSurf) > 0 then
+		player:sendCancelMessage("Sorry, not possible while on surf.")
+		return false
+	end
+	if player:getStorageValue(storageDive) > 0 then
+		player:sendCancelMessage("Sorry, not possible while on dive.")
+		return false
+	end
+	if player:getStorageValue(storageEvent) > 0 then
+		player:sendCancelMessage("Sorry, not possible while on event.")
+		return false
+	end
+    return true
+end
+
+function isOnline(player)
+    if isCreature(player) and Creature(player) then
+        return true
+    else
+        return false
+    end
 end

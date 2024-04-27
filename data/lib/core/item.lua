@@ -265,74 +265,7 @@ do
 			ss:append(it:getNameDescription(subType, addArticle or true))
 		end
 
-		if it:isRune() then
-			local rune = Spell(it:getId())
-			if rune then
-				if rune:runeLevel() and rune:runeLevel() > 0 or rune:runeMagicLevel() and rune:runeMagicLevel() > 0 then
-					local tmpVocMap = rune:vocation()
-					local vocMap = {}
-					for k, vocName in ipairs(tmpVocMap) do
-						local vocation = Vocation(vocName)
-						if vocation and vocation:getPromotion() then
-							vocMap[#vocMap + 1] = vocName
-						end
-					end
-
-					ss:append('. %s can only be used by', it:isStackable() and subType > 1 and 'They' or 'It')
-
-					-- Only show base vocations in description; promotions should be a given
-					if #vocMap == 0 then
-						ss:append(' players')
-					else
-						for i = 1, #vocMap - 1 do
-							local vocName = vocMap[i]
-							local vocation = Vocation(vocName)
-							ss:append(' %ss', vocName:lower())
-							if i + 1 == #vocMap then
-								ss:append(' and')
-							else
-								ss:append(',')
-							end
-						end
-						local vocName = vocMap[#vocMap]
-						ss:append(' %ss', vocName:lower())
-					end
-
-					ss:append(' with')
-
-					if rune:runeLevel() > 0 then
-						ss:append(' level %d', rune:runeLevel())
-					end
-
-					if rune:runeMagicLevel() > 0 then
-						if rune:runeLevel() > 0 then
-							ss:append(' and ')
-						end
-						ss:append('magic level %d', rune:runeMagicLevel())
-					end
-
-					ss:append(' or higher')
-				end
-
-				if not begin then
-					ss:append(')')
-				end
-			end
-		elseif it:getWeaponType() ~= WEAPON_NONE then
-			begin = addGenerics(item, it, abilities, ss, begin)
-			if not begin then
-				ss:append(')')
-			end
-		elseif obj:getArmor() ~= 0 or it:hasShowAttributes() then
-			if obj:getArmor() ~= 0 then
-				ss:append(' (Arm:%d', obj:getArmor())
-				begin = false
-			end
-			begin = addGenerics(item, it, abilities, ss, begin)
-			if not begin then
-				ss:append(')')
-			end
-		elseif it:isContainer() or item and item:isContainer() then
+		if it:isContainer() or item and item:isContainer() then
 			local volume = 0
 
 			if not item or not item:hasAttribute(ITEM_ATTRIBUTE_UNIQUEID) then
@@ -419,72 +352,6 @@ do
 				end
 			end
 		end
-
-		if it:hasShowCharges() then
-			ss:append(' that has %d charge%s left', subType, subType ~= -1 and 's' or '')
-		end
-
-		-- show duration
-		if it:hasShowDuration() then
-			if item and item:hasAttribute(ITEM_ATTRIBUTE_DURATION) then
-				local duration = item:getDuration() / 1000
-				if duration > 0 then
-					ss:append(' that will expire in ')
-
-					if duration >= 86400 then
-						local days = math.floor(duration / 86400)
-						local hours = math.floor((duration % 86400) / 3600)
-						ss:append('%d day%s', days, days ~= 1 and 's' or '')
-						if hours > 0 then
-							ss:append(' and %d hour%s', hours, hours ~= 1 and 's' or '')
-						end
-					elseif duration >= 3600 then
-						local hours = math.floor(duration / 3600)
-						local minutes = math.floor((duration % 3600) / 60)
-						ss:append('%d hour%s', hours, hours ~= 1 and 's' or '')
-						if minutes > 0 then
-							ss:append(' and %d minute%s', minutes, minutes ~= 1 and 's' or '')
-						end
-					elseif duration >= 60 then
-						local minutes = math.floor(duration / 60)
-						local seconds = duration % 60
-						ss:append('%d minute%s', minutes, minutes ~= 1 and 's' or '')
-						if seconds > 0 then
-							ss:append(' and %d second%s', seconds, seconds ~= 1 and 's' or '')
-						end
-					else
-						ss:append('%d second%s', duration, duration ~= 1 and 's' or '')
-					end
-				end
-			else
-				ss:append(' that is brand-new')
-			end
-		end
-
-		if not it:hasAllowDistRead() or (it:getId() >= 7369 and it:getId() <= 7371) then
-			ss:append('.')
-		else
-			if not text and item then
-				text = item:getText()
-			end
-			if not text or text == '' then
-				ss:append('.')
-			end
-		end
-
-		-- if lookDistance <= 1 then
-		-- 	local weight = obj:getWeight()
-		-- 	local count = item and item:getCount() or 1
-		-- 	if weight ~= 0 and it:isPickupable() then
-		-- 		ss:append('\n')
-		-- 		if it:isStackable() and count > 1 and it:hasShowCount() then
-		-- 			ss:append('They weigh ')
-		-- 		else
-		-- 			ss:append('It weighs ')
-		-- 		end
-		-- 		ss:append('%.2f oz.', weight / 100)
-		-- 	end
-		-- end
 
 		local desc = it:getDescription()
 		if item then
