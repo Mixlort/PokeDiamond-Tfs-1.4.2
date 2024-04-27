@@ -4,8 +4,6 @@ function onLogout(player)
 		nextUseStaminaTime[playerId] = nil
 	end
 
-    -- player:setStorageValue(storageLogoutSpeed, player:getSpeed())
-
     if hasSummons(player) then
         doRemoveSummon(playerId)
         local ball = player:getUsingBall()

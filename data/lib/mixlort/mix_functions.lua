@@ -514,42 +514,6 @@ function Player.getBall(self)
     return pokeballs
 end
 
-typeTableByRaceName = {
-    ["normal"] = {color = 129},
-    ["fire"] = {color = 192}, -- color 144
-    ["fighting"] = {color = 127}, 
-    ["water"] = {color = 29},
-    ["flying"] = {color = 137}, -- 172
-    ["grass"] = {color = 26},
-    ["poison"] = {color = 103}, 
-    ["electric"] = {color = 210},
-    ["ground"] = {color = 121},
-    ["psychic"] = {color = 125},
-    ["rock"] = {color = 127},
-    ["ice"] = {color = 71},
-    ["bug"] = {color = 132}, -- 30 trocado por 132
-    ["dragon"] = {color = 175},
-    ["ghost"] = {color = 77},
-    ["dark"] = {color = 53},
-    ["steel"] = {color = 172},
-} 
-
-
-function damageColorByRace(combat, name)
-    local monsterType = MonsterType(name)
-    -- local race = monsterType:getRace()
-    local raceName = monsterType:getRaceName()
-    if typeTable[combat] and typeTable[combat].color then
-        return typeTable[combat].color
-    -- elseif typeTable[race] and typeTable[race].color then
-    --     return typeTable[race].color
-    elseif typeTableByRaceName[raceName] and typeTableByRaceName[raceName].color then
-        return typeTableByRaceName[raceName].color
-    else
-        return 0
-    end
-end
-
 function doCreatureAddHealth(cid, health, effect, color) 
     local c = Creature(cid) 
     if not c then return true end
@@ -566,12 +530,6 @@ function doCreatureAddHealth(cid, health, effect, color)
         doSendAnimatedText(c:getPosition(), math.floor(health), color) 
     end
     return c and c:addHealth(health) or false 
-end
-
-function Player.addBossesClient(player)
-    local BOSS_HEALTH_OPCODE = 67
-    local bosses = {"Boss Golem", "Boss Kingler", "Boss Machamp", "Boss Parasect", "Boss Poliwhirl", "Boss Seadra", "Boss Venomoth", "Boss Vileplume"}
-    player:sendExtendedOpcode(BOSS_HEALTH_OPCODE, json.encode({data = bosses}))
 end
 
 function Monster.getLevel(poke)
@@ -598,188 +556,6 @@ function Player.inPlayerBagOrDepot(self, position, depot)
         end
     end
     return false
-end
-
-function doBroadcastMessageMegaphone(text, class)
-    if not text then return true end
-	local class = class or MESSAGE_STATUS_CONSOLE_RED
-	if(type(class) == 'string') then
-		local className = MESSAGE_TYPES[class]
-		if(className == nil) then
-			return false
-		end
-
-		class = className
-	-- elseif(class < MESSAGE_FIRST or class > MESSAGE_LAST) then
-	-- 	return false
-	end
-
-	local players = getPlayersOnline()
-	for _, pid in ipairs(players) do
-		doPlayerSendTextMessage(pid, class, text)		
-		doSendPlayerExtendedOpcode(pid, 90, text)
-	end
-
-	print("> Broadcasted message: \"" .. text .. "\".")
-	return true
-end
-
-function doBroadcastMessageXp(text, class)
-    if not text then return true end
-	local class = class or MESSAGE_STATUS_CONSOLE_RED
-	if(type(class) == 'string') then
-		local className = MESSAGE_TYPES[class]
-		if(className == nil) then
-			return false
-		end
-
-		class = className
-	-- elseif(class < MESSAGE_FIRST or class > MESSAGE_LAST) then
-		-- return false
-	end
-
-	local players = getPlayersOnline()
-	for _, pid in ipairs(players) do
-		doPlayerSendTextMessage(pid, class, text)			
-		doSendPlayerExtendedOpcode(pid, 91, text)
-	end
-
-	print("> Broadcasted message: \"" .. text .. "\".")
-	return true
-end
-
-function doBroadcastMessageMewtwo(text, class)
-    if not text then return true end
-	local class = class or MESSAGE_STATUS_CONSOLE_RED
-	if(type(class) == 'string') then
-		local className = MESSAGE_TYPES[class]
-		if(className == nil) then
-			return false
-		end
-
-		class = className
-	-- elseif(class < MESSAGE_FIRST or class > MESSAGE_LAST) then
-		-- return false
-	end
-
-	local players = getPlayersOnline()
-	for _, pid in ipairs(players) do
-		doPlayerSendTextMessage(pid, class, text)			
-		doSendPlayerExtendedOpcode(pid, 92, text)
-	end
-
-	print("> Broadcasted message: \"" .. text .. "\".")
-	return true
-end
-
-function doBroadcastMessageWorld(text, class)
-    if not text then return true end
-	local class = class or MESSAGE_STATUS_CONSOLE_RED
-	if(type(class) == 'string') then
-		local className = MESSAGE_TYPES[class]
-		if(className == nil) then
-			return false
-		end
-
-		class = className
-	-- elseif(class < MESSAGE_FIRST or class > MESSAGE_LAST) then
-		-- return false
-	end
-
-	local players = getPlayersOnline()
-	for _, pid in ipairs(players) do
-		doPlayerSendTextMessage(pid, class, text)			
-		doSendPlayerExtendedOpcode(pid, 93, text)
-	end
-
-	print("> Broadcasted message: \"" .. text .. "\".")
-	return true
-end
-
-function doBroadcastMessageDeltaball(text, class)
-    if not text then return true end
-	local class = class or MESSAGE_STATUS_CONSOLE_RED
-	if(type(class) == 'string') then
-		local className = MESSAGE_TYPES[class]
-		if(className == nil) then
-			return false
-		end
-
-		class = className
-	-- elseif(class < MESSAGE_FIRST or class > MESSAGE_LAST) then
-		-- return false
-	end
-
-	local players = getPlayersOnline()
-	for _, pid in ipairs(players) do
-		doPlayerSendTextMessage(pid, class, text)			
-		doSendPlayerExtendedOpcode(pid, 94, text)
-	end
-
-	print("> Broadcasted message: \"" .. text .. "\".")
-	return true
-end
-
-function doBroadcastMessageFacebook(text, class)
-	local class = class or MESSAGE_STATUS_CONSOLE_RED
-	if(type(class) == 'string') then
-		local className = MESSAGE_TYPES[class]
-		if(className == nil) then
-			return false
-		end
-
-		class = className
-	-- elseif(class < MESSAGE_FIRST or class > MESSAGE_LAST) then
-		-- return false
-	end
-
-	local players = getPlayersOnline()
-	for _, pid in ipairs(players) do
-		doPlayerSendTextMessage(pid, class, text)			
-		doSendPlayerExtendedOpcode(pid, 95, text)
-	end
-
-	print("> Broadcasted message: \"" .. text .. "\".")
-	return true
-end
-
-function doBroadcastMessageMs(text, class)
-    if not text then return true end
-	local class = class or MESSAGE_STATUS_CONSOLE_RED
-	if(type(class) == 'string') then
-		local className = MESSAGE_TYPES[class]
-		if(className == nil) then
-			return false
-		end
-
-		class = className
-	-- elseif(class < MESSAGE_FIRST or class > MESSAGE_LAST) then
-		-- return false
-	end
-
-	local players = getPlayersOnline()
-	for _, pid in ipairs(players) do
-		doPlayerSendTextMessage(pid, class, text)			
-		doSendPlayerExtendedOpcode(pid, 96, text)
-	end
-
-	print("> Broadcasted message: \"" .. text .. "\".")
-	return true
-end
-
-function getPlayersOnline()
-    -- if Game.getPlayerCount() == 0 then
-    --     return {}
-    -- end
-    local players = {}
-    for _, player in ipairs(Game.getPlayers()) do
-        -- if player:getAccountType() <= 1 then
-        -- if getPlayerGroupId(player) <= 2 then
-            table.insert(players, player)
-        -- end
-        -- end
-    end
-    return players
 end
 
 function canExecuteSpeeds(player)
@@ -812,4 +588,16 @@ function isOnline(player)
     else
         return false
     end
+end
+
+function getOutfitOtclient(outfit)
+	return {
+		type    = tonumber(outfit.lookType)   or 0,
+		feet    = tonumber(outfit.lookFeet)   or 0,
+		addons  = tonumber(outfit.lookAddons) or 0,
+		legs    = tonumber(outfit.lookLegs)   or 0,
+		auxType = tonumber(outfit.lookTypeEx) or 0,
+		head    = tonumber(outfit.lookHead)   or 0,
+		body    = tonumber(outfit.lookBody)   or 0,
+	}
 end

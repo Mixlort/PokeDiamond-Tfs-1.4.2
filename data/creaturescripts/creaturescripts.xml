@@ -17,6 +17,5 @@
     <event type="login" name="OfflineTraining" script="offlinetraining.lua" />
 	<event type="login" name="RegenerateStamina" script="regeneratestamina.lua" />
 	<event type="death" name="PlayerDeath" script="playerdeath.lua" />
-	<event type="extendedopcode" name="ExtendedOpcode" script="extendedopcode.lua" />
 
 </creaturescripts>

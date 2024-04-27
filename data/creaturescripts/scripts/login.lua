@@ -101,10 +101,6 @@ function onLogin(player)
     --     print("WARNING! Player " .. player:getName() .. " left league.")
     -- end
 
-    -- if not monstersTable then
-    --     buildDex()
-    -- end
-
     -- Announces
     player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Bem vindo ao Pokemon MS!")
 

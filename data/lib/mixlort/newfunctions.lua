@@ -10,34 +10,13 @@ local areaflytwo = {
     {1, 1, 1}
 }
 
-maxBoost = 50
-summonMaxLevel = 200 -- maximum level of pokes
-maxVitamins = 10
-shinyChance = 2.5 -- 0.5%
 flyFloor = 15616
-moveWords = {"m1", "m2", "m3", "m4", "m5", "m6", "m7", "m8", "m9", "m10", "m11", "m12"}
-legendaryIndex = {144, 145, 146, 150, 151, 243, 244, 245, 249, 250, 251, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386}
 arenaLastPlayerId = 0
-
-damageMultiplierMoves = {areawaves = 2.75, singletargetweak = 2.0, singletarget = 3.5, singletargetstrong = 4.0, areatarget = 3.0, frontlinear = 5.0, frontarea = 4.0, passive = 3.0, ultimate = 6.0}
-summonLevelDamageBuff = 0.007 -- buff due to summon's level
-playerLevelDamageBuff = 0.001 -- buff due to player's level
-summonBoostDamageBuff = 0.008 -- buff due to summon's boost
-summonLoveDamageBuff = 0.0001 -- buff due to summon's love
-vitaminStatusBuff = 1.2
-hunterDamageBuff = 1.1
-blockerHealthBuff = 1.25
-catcherCatchBuff = 1.1
-explorerExperienceBuff = 1.15
-healerHealBuff = 2.0
 
 -- mixlort
 storageGoback = 14620
 
 storageDelay = 1000
-storageDelayBag = 1001
-baseStorageDex = 67000
-baseStorageMove = 45000
 
 storageRide = 5000
 storageFly = 5001
@@ -61,56 +40,10 @@ storageDuelNpcStatus = 5017
 storageTeleportTc = 5018
 storageEvolutionAncient = 5019
 storageArenaPvpEvent = 5020
-storageLogoutSpeed = 5021
-
--- Mixlort
-storageEffectWalk = 1802
--- Task Cath Mixlort
-storageCatchQuestRoberto = 1820
-
-storageCatchQuest = 91000
-storageCatchQuestDay = 91001
-storageCatchQuestNumber = 91002
-storageCatchQuestStartCatch = 91003
-storageCatchQuestTime = 91004
-storageCatchQuestDifficulty = 91005
-
-storageLeague = 91006
-storageLeagueDone = 91007
-storageLeagueTime = 91008
-storageLeaguePotion = 91009
-storageLeagueRevive = 910010
-
-storageVictoryRoadTime = 91011
-
-storageRedRequestPre = 91012
-
-storageCatchQuestPoke = 91013
-
-storageItemQuest = 91014
-storageItemQuestDay = 91015
-storageItemQuestNumber = 91016
-storageItemQuestItem = 91017
-storageItemQuestTime = 91018
-storageItemQuestDifficulty = 91019
 
 slotItems = {1988} -- 26820
 badgesPortraits = {12267, 12266, 12264, 12265, 12263, 12262, 12261, 12260}
 badgeContainer = 1988
-
-waterIds = {493, 4608, 4609, 4610, 4611, 4612, 4613, 4614, 4615, 4616, 4617, 4618, 4619, 4620, 4621, 4622, 4623, 4624, 4625, 7236, 10499, 15401, 15402, 4820, 4821, 4822, 4823, 4824, 4825, 4664, 4665, 4666}
-
-function buildDex()
-    -- monstersTable = {}
-    -- local monstersName = getMonstersName()
-    -- for i = 1, #monstersName do
-    --  local monsterNumber = MonsterType(monstersName[i]):dexEntry()
-    --  if monsterNumber > 0 then
-    --      monstersTable[monsterNumber] = monstersName[i]
-    --  end
-    -- end
-    -- print("WARNING! Pokedex successfully built.")
-end
 
 function Creature.isPokemon(self)
     local master = self:getMaster()
@@ -420,9 +353,6 @@ function doReleaseSummon(cid, pos, effect, message, missile, healthMax)
         end
 
         monster:setDirection(ball:getSpecialAttribute("pokeLookDir") or DIRECTION_SOUTH)
-        if summonBoost >= maxBoost then
-            doStartAurea(monster)
-        end
         adjustStatus(summonM, ball, true, true, true)
 
         local statusSummon = getStatus(monster)

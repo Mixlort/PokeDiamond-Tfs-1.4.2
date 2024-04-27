@@ -139,7 +139,7 @@ function adjustWildPoke(cid, optionalLevel)
 	cid:changeSpeed(-cid:getSpeed() + getStatus(cid).speed)
 end 
 
---funções inúteis ou desativadas
+--funÃ§Ãµes inÃºteis ou desativadas
 -- local function volta(cid, init)
 -- function getPokemonXMLOutfit(name) 
 -- function doEvolutionOutfit(cid, oldout, outfit)
@@ -409,7 +409,7 @@ end
 --     local isShiny = isShinyName(name)
 
 --     --Balancemanto Shinys
---     local mediaCatchSh = 3 -- quantas vezes a média de captura dos shinys vai ser maior que a do normal
+--     local mediaCatchSh = 3 -- quantas vezes a mÃ©dia de captura dos shinys vai ser maior que a do normal
 
 --     if isShiny then
 --     	catchTab = pokeChance[normalName]
@@ -436,7 +436,7 @@ end
 --     local isShiny = isShinyName(name)
 
 --     --Balancemanto Shinys
---     local rateExpSh = 3 -- quanto de xp a mais que os shinys vão dar
+--     local rateExpSh = 3 -- quanto de xp a mais que os shinys vÃ£o dar
 -- 	local multiplyLevelUseSh = 2 -- level do normal vezes esse valor para usar pokes shinys
 -- 	local multiplyShSummon = 1.6 -- quantas vezes o shiny summon vai ser mais forte que o normal (em todos os status)
 -- 	local multiplyShWild = 2.5 -- quantas vezes o shiny selvagem vai ser mais forte que o normal (em todos os status)
