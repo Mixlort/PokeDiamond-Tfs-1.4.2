@@ -1,5 +1,0 @@
-<npc name="Irineu" script="task_system.lua" walkinterval="2000" floorchange="0">
-<look type="3403"/>
-    <parameters>
-    </parameters>
-</npc>

@@ -35,9 +35,13 @@ function mixlortBaseSpell(cid, var, mina, maxa)
     name = doCorrectString((name))
 
     local table = math.random(1,35)
-    if getTableMove(cid, spell) and getTableMove(cid, spell).f then
+    if not cid then return true end
+    if not spell then return true end
+    table = getTableMove(cid, spell) or nil
+    if table and table ~= "" and table ~= nil and table.f then
         table = getTableMove(cid, spell)
     else
+        table = {f = 10, t = ""}
         print("Magia: " .. spell .. " erro: " .. cid:getName() .. "")
     end
 
@@ -70,7 +74,7 @@ function mixlortBaseSpell(cid, var, mina, maxa)
         min = math.abs(mina)
         max = math.abs(maxa)
     elseif not isPlayer(cid) then
-        if table ~= "" then
+        if table ~= "" and table ~= nil and table.f then
             min = getSpecialAttack(cid)
             max = min + (isSummon(cid) and getMasterLevel(cid) or getMasterLevel(cid))
             if spell == "Selfdestruct" then
@@ -227,4 +231,13 @@ function isWalkableMix(position)
     end
 
     return true
+end
+
+function pokeHaveReflect(cid)
+    if not isCreature(cid) then return false end
+    local table = getTableMove(cid, "Reflect")
+    if table and table.name then     --alterado v1.6
+        return true 
+    end
+    return false
 end

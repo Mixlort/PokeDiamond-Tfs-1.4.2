@@ -6,15 +6,6 @@ staminaMinutes1 = 15 -- 50%
 staminaMinutes2 = 5 -- 15%
 staminaMinutes3 = 2 -- 0%
 
-function Player.teleportToPlus(self, position) 
-    -- self:sendExtendedOpcode(133, "fade")
-    -- addEvent(function()
-        -- if self:getId() and Creature(self:getId()) then
-            self:teleportTo(position)
-        -- end
-    -- end, 450)
-end
-
 function isShinyName(name)
     return tostring(name) and string.find(doCorrectString(name), "Shiny") --alterado v1.9
 end
@@ -68,11 +59,6 @@ function onUseRevive(player, item, fromPosition, target)
 		return true
 	end
 
-    -- if hasSummons(player) and (player:getUsingBall():getUniqueId() == target:getUniqueId()) then
-    --     player:sendCancelMessage("Sorry, not possible.")
-    --     return true
-    -- end   
-
     if hasSummons(player) then
         player:sendCancelMessage("Você não pode usar revive com pokemons pra fora.")
         return true
@@ -100,18 +86,6 @@ function onUseRevive(player, item, fromPosition, target)
 	item:remove(1)
 
     return true
-end
-
-function revivePokemonByNumber(cid, pokeNumber)
-    if not cid:getId() or (cid:getItemCount(27645) < 1) then return false end
-    local revive = Player(cid):getItemById(27645, true)
-    for i, poke in pairs(cid:getPokeballs()) do
-        if i == pokeNumber then
-            onUseRevive(cid, revive, nil, poke)
-            return true
-        end
-    end
-    return false
 end
 
 function getHealthPercent(ball)
@@ -207,11 +181,6 @@ function onUsePokemon(player, item)
                     end
                 end, 600)
             end
-        -- else
-        --     if item:getSpecialAttribute("isBeingUsed") == 1 then --corrects the bug of players using balls that were not holding
-        --         transformBallItem(item, STATUS_BALL_NORMAL)
-        --         player:setStorageValue(storageGoback, -1)
-        --     end
         end
         return true
     end
@@ -236,11 +205,6 @@ function onUsePokemon(player, item)
                 end
             end, 250)
         end
-    -- else
-    --     if item:getSpecialAttribute("isBeingUsed") == 1 then --corrects the bug of players using balls that were not holding
-    --         transformBallItem(item, STATUS_BALL_DEATH)
-    --         player:setStorageValue(storageGoback, -1)
-    --     end
     end
 	return true
 end
@@ -320,18 +284,6 @@ function addPokeToPlayer(player, name, boost, none, ballKey, dp, unique)
         end
     end
     if addBall then
-        -- local gender = gender or 0
-        -- local genders = {
-        --     ["male"] = 4,
-        --     ["female"] = 3,
-        --     ["indefinido"] = 1,
-        --     ["genderless"] = 1,
-        --     [1] = 4,
-        --     [0] = 3,
-        --     [4] = 4,
-        --     [3] = 3,
-        -- }
-        -- local GENDER = (gender and genders[gender]) and genders[gender] or getRandomGenderByName(pokemon)
         local happy = 250
         local maxHealth = getStatusS(name, boost, player:getLevel()).life
         addBall:setSpecialAttribute("pokeName", name)
@@ -339,7 +291,6 @@ function addPokeToPlayer(player, name, boost, none, ballKey, dp, unique)
         addBall:setSpecialAttribute("pokeHealth", maxHealth)
         addBall:setSpecialAttribute("pokeMaxHealth", maxHealth)
         addBall:setSpecialAttribute("happy", happy)
-        -- addBall:setSpecialAttribute("gender", GENDER)
         transformBallItem(addBall, STATUS_BALL_NORMAL)
         player:setStorageValue(storageGoback, -1)
         if not dp then

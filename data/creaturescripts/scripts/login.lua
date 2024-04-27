@@ -30,8 +30,6 @@ function onLogin(player)
 	player:registerEvent("PlayerDeath")
 	player:registerEvent("DropLoot")
     player:registerEvent("MonsterHealthChange")
-    player:registerEvent("tasksystem")
-    player:registerEvent("ShinyCharm")
     player:registerEvent("movePlayer")
     player:registerEvent("ExtendedOpcode")
     player:registerEvent("Shop")
@@ -39,67 +37,6 @@ function onLogin(player)
 
     -- Update questlog
     player:updateQuestLog()
-
-    -- Refresh Pokemon Bar
-    -- player:refreshPokemonBar({}, {})
-
-    if player:isOnSurf() then -- Check surf        
-        if not player:addAbility(player:getUsingBall(), "surf") then
-            print("WARNING! Player " .. player:getName() .. " summonName not found onLogin for surf!")
-            player:setSurfing()
-            player:teleportTo(player:getTown():getTemplePosition())
-        end   
-    elseif player:isOnRide() then -- Check ride
-        if not player:addAbility(player:getUsingBall(), "ride") then
-            print("WARNING! Player " .. player:getName() .. " summonName not found onLogin for ride!")
-            player:setRiding()
-            player:teleportTo(player:getTown():getTemplePosition())
-        end   
-    elseif player:isOnFly() then -- Check fly
-        if not player:addAbility(player:getUsingBall(), "fly") then
-            print("WARNING! Player " .. player:getName() .. " summonName not found onLogin for fly!")
-            player:setFlying()
-            player:teleportTo(player:getTown():getTemplePosition())
-        end   
-    elseif player:isOnDive() then -- Check dive
-        -- player:setStorageValue(storageDive, -1)
-        doChangeOutfit(player:getId(), {lookType = 267})
-        player:changeSpeed(player:getBaseSpeed()-player:getSpeed())
-        player:setStorageValue(storageGoback, -1)
-        if player:getUsingBall() then
-            transformBallItem(player:getUsingBall(), STATUS_BALL_NORMAL)
-        end
-    else
-        player:setStorageValue(storageDive, -1)
-        player:setStorageValue(storageGoback, -1)
-        if player:getUsingBall() then
-            transformBallItem(player:getUsingBall(), STATUS_BALL_NORMAL)
-        end
-    end
-
-    -- Check evo
-    if player:getStorageValue(storageEvolving) == 1 then
-        player:setStorageValue(storageEvolving, -1)
-        print("WARNING! Player " .. player:getName() .. " got problems while evolving summon.")
-    end
-
-    -- Check events
-    if player:isOnEvent() then
-        player:setStorageValue(storageEvent, -1)
-        print("WARNING! Player " .. player:getName() .. " left event.")
-    end
-
-    -- Check duel
-    -- if player:isDuelingWithNpc() then
-    --     player:unsetDuelWithNpc()
-    -- end
-
-    -- Check league
-    -- if player:isOnLeague() then
-    --     player:setOutLeague()
-    --     player:teleportToPlus(player:getTown():getTemplePosition())
-    --     print("WARNING! Player " .. player:getName() .. " left league.")
-    -- end
 
     -- Announces
     player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Bem vindo ao Pokemon MS!")
@@ -113,12 +50,6 @@ function onLogin(player)
         doPlayerSendNotification(player, "[Shiny Charm]: "..convertTime(player:getStorageValue(4125) - os.time()).." restantes.", {itemId = 39872})
         player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "[Shiny Charm]: "..convertTime(player:getStorageValue(4125) - os.time()).." restantes.")
     end
-
-    -- player:addBossesClient()
-
-	if player:isPremium() then
-		player:setSkull(5)
-	end
 
     if player:getHealth() <= 40 then
         local maxHealth = player:getMaxHealth() - player:getHealth()

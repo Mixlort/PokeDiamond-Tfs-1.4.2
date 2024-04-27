@@ -147,7 +147,7 @@ function onUseRope(player, item, fromPosition, target, toPosition, isHotkey)
 			return true
 		end
 
-		player:teleportToPlus(toPosition, false)
+		player:teleportTo(toPosition, false)
 		return true
 	end
 

@@ -70,7 +70,7 @@ function onSay(player, words, param)
 	end
 
 	player:say(summonName .. ", bring me to " .. town:getName() .. "!", TALKTYPE_SAY)
-	player:teleportToPlus(town:getTemplePosition())
+	player:teleportTo(town:getTemplePosition())
 	player:setStorageValue(storageDelayTeleport, os.time())
 	return false
 end

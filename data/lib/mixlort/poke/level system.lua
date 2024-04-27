@@ -139,11 +139,6 @@ function adjustWildPoke(cid, optionalLevel)
 	cid:changeSpeed(-cid:getSpeed() + getStatus(cid).speed)
 end 
 
---funções inúteis ou desativadas
--- local function volta(cid, init)
--- function getPokemonXMLOutfit(name) 
--- function doEvolutionOutfit(cid, oldout, outfit)
-
 function getOffense(cid)
 	if not isCreature(cid) then return 0 end
     return math.floor(getStatus(cid).atk)
@@ -234,11 +229,6 @@ function sendFinishEvolutionEffect(cid, alternate)
 	end
 end
 
--- function doPokemonUpdate(name, owner, position)
--- function doEvolvePokemon(cid, item2, theevo, stone1, stone2)
--- function doMathDecimal(number, casas)
--- function doAdjustWithDelay(cid, pk, health, vit, status)
-
 function adjustStatus(pk, item, health, vite, conditions)
 
 	if not isCreature(pk) then return true end
@@ -322,10 +312,6 @@ function adjustStatus(pk, item, health, vite, conditions)
         end
                
 	end
-	                                                                      --alterado v1.9
-    -- if getItemAttribute(item, "boost") and getItemAttribute(item, "boost") >= 50 and getItemAttribute(item, "aura") then
-    --    sendAuraEffect(pk, auraSyst[getItemAttribute(item, "aura")])        
-    -- end
     
     if getPlayerStorageValue(getCreatureMaster(pk), 6598754) >= 1 then
         setPlayerStorageValue(pk, 6598754, 1)                               
@@ -339,21 +325,6 @@ function adjustStatus(pk, item, health, vite, conditions)
 
 	return true
 end
-
--- function getOffense(cid)
--- function getDefense(cid)
--- function getSpeed(cid)
--- function getVitality(cid)
--- function getSpecialAttack(cid)
--- function getHappiness(cid)
--- function getPokemonLevel(cid, dex)
--- function getPokeLevel(cid, dex)
--- function getPokemonLevelByName(name)
-
--- function getSpecialDefense(cid) --?? mixlort
--- 	if not isCreature(cid) then return 0 end
---     return getSpecialAttack(cid) * 0.4 + getDefense(cid) * 0.8 -- 0.4, 0.7 
--- end
 
 function getMasterLevel(poke)
     if not isSummon(poke) then return 0 end
@@ -391,75 +362,3 @@ end
 function getPokemonName(cid)
 return getCreatureName(cid)
 end
-
--- function getWildPokemonExp(cid, name)
--- 	if not name then
--- 		name = getCreatureName(cid)
---  end
---     if not mixlortStatus(name) then return 0 end
---     local wildXp = mixlortStatus(name).statusExp
---     return wildXp
--- end
-
--- function mixlortCatch(name)
--- 	if not name then print("ErroMixlortCatch") return end
--- 	-- if not pokes[name] then print("ErroMixlortCatch2: "..name) return end
--- 	if not pokeChance[name] then print("ErroMixlortCatch3: "..name) return end
---     local normalName = retireShinyName(name)
---     local isShiny = isShinyName(name)
-
---     --Balancemanto Shinys
---     local mediaCatchSh = 3 -- quantas vezes a média de captura dos shinys vai ser maior que a do normal
-
---     if isShiny then
---     	catchTab = pokeChance[normalName]
---     	catchSto = catchTab.storage + 2000
---     	catchMedia = catchTab.media * mediaCatchSh
---     else
--- 	    catchTab = pokeChance[name]
---     	catchSto = catchTab.storage
---     	catchMedia = catchTab.media
---     end
-
---     local status = {}
---     status.catchTab = catchTab
---     status.catchSto = catchSto
---     status.catchMedia = catchMedia
-
---     return status
--- end
-
--- function mixlortStatus(name)
--- 	if not name then print("ErroMixlortStatus") return end
--- 	-- if not pokes[name] then print("ErroMixlortStatus2: "..name) return end
---     local normalName = retireShinyName(name)
---     local isShiny = isShinyName(name)
-
---     --Balancemanto Shinys
---     local rateExpSh = 3 -- quanto de xp a mais que os shinys vão dar
--- 	local multiplyLevelUseSh = 2 -- level do normal vezes esse valor para usar pokes shinys
--- 	local multiplyShSummon = 1.6 -- quantas vezes o shiny summon vai ser mais forte que o normal (em todos os status)
--- 	local multiplyShWild = 2.5 -- quantas vezes o shiny selvagem vai ser mais forte que o normal (em todos os status)
-
---     if isShiny then
---     	local tabPokes = MonsterType(normalName)
---     	statusExp = tabPokes:getExperience() * rateExpSh
---     	levelUse = tabPokes:getMaxlevel() * multiplyLevelUseSh
---     	multiplySummon = multiplyShSummon
---     	multiplyWild = multiplyShWild
---     else
---     	local tabPokes = MonsterType(name)
--- 	    statusExp = tabPokes:getExperience()
---     	levelUse = tabPokes:getMaxlevel()
---     	multiplySummon = 1
---     	multiplyWild = 1
---     end
-
---     local status = {}
---     status.statusExp = statusExp
---     status.levelUse = levelUse
---     status.multiplySummon = multiplySummon
---     status.multiplyWild = multiplyWild
-
---     return status
--- end

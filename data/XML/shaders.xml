@@ -1,14 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <shaders>
-    <shader id="1" name="line" premium="no" />
-    <shader id="2" name="outfit_red_outline" premium="no" />
-    <shader id="3" name="outfit_3line" premium="no" />
-    <shader id="4" name="outfit_brazil" premium="no" />
-    <shader id="5" name="outfit_circle" premium="no" />
-    <shader id="6" name="outfit_gold" premium="no" />
-    <shader id="7" name="outfit_line" premium="no" />
-    <shader id="8" name="outfit_stars" premium="no" />
-    <shader id="9" name="outfit_rgb_outline" premium="no" />
-    <shader id="11" name="outfit_outline_blue" premium="no" />
-    <shader id="12" name="outfit_rainbow" premium="no" />
 </shaders>

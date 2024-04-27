@@ -4,7 +4,6 @@
     <event type="move" name="movePlayer" script="mixlort/movePlayer.lua" />
     <event type="extendedopcode" name="Shop" script="mixlort/shop.lua"/>
     <event type="healthchange" name="MonsterHealthChange" script="mixlort/statsChange.lua" />
-    <event type="advance" name="levelUpEffect" script="mixlort/levelUp.lua" />
     
     <event type="preparedeath" name="PrepareDeathArena" script="playerdeath_arena.lua" />
     <event type="preparedeath" name="PrepareDeathArenaPvp" script="playerdeath_arenapvp.lua" />

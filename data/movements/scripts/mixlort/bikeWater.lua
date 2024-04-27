@@ -43,14 +43,9 @@ function onEquip(cid, item, slot)
 	local delta = player:getSpeed() * bonusSpeed
 	if player:getSex() == PLAYERSEX_MALE then outfit = outfitMale else outfit = outfitFemale end
 	doChangeOutfit(player:getId(), {lookType = outfit})
-	-- player:addCondition(condition)
 	player:setStorageValue(storageBike, 1)
 	player:changeSpeed(delta)
-
-	-- Game.sendAnimatedText(player:getPosition(), "Boot On", TEXTCOLOR_RED)
     player:getPosition():sendMagicEffect(1022)
-    player:effectOnWalk(1022)
-
 	return true
 end
 
@@ -93,11 +88,6 @@ function onDeEquip(cid, item, slot)
 	player:changeSpeed(player:getBaseSpeed()-player:getSpeed())
 	player:setStorageValue(storageBike, -1)
     player:setStorageValue(estr, os.time()+2)
-
-	-- Game.sendAnimatedText(player:getPosition(), "Boot Off", TEXTCOLOR_RED)
-
     player:getPosition():sendMagicEffect(1022)
-    player:effectOnWalk(-1)
-
 	return true
 end

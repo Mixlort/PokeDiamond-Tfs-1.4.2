@@ -13,6 +13,6 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		return true
 	end
 
-	player:teleportToPlus(newPosition, false)
+	player:teleportTo(newPosition, false)
 	return true
 end

@@ -25,7 +25,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 
 		for i, targetPlayer in ipairs(players) do
 			Position(playerPosition[i]):sendMagicEffect(CONST_ME_POFF)
-			targetplayer:teleportToPlus(newPosition[i], false)
+			targetplayer:teleportTo(newPosition[i], false)
 			targetPlayer:getPosition():sendMagicEffect(CONST_ME_ENERGYAREA)
 		end
 		item:transform(1946)

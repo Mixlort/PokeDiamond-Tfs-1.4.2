@@ -45,11 +45,7 @@ function onEquip(cid, item, slot)
 	doChangeOutfit(player:getId(), {lookType = outfit})
 	player:setStorageValue(storageBike, 1)
 	player:changeSpeed(delta)
-
-	-- Game.sendAnimatedText(player:getPosition(), "Boot On", TEXTCOLOR_RED)
     player:getPosition():sendMagicEffect(3)
-    -- player:effectOnWalk(3)
-
 	return true
 end
 
@@ -92,11 +88,6 @@ function onDeEquip(cid, item, slot)
 	player:changeSpeed(player:getBaseSpeed()-player:getSpeed())
 	player:setStorageValue(storageBike, -1)
     player:setStorageValue(estr, os.time()+2)
-
-	-- Game.sendAnimatedText(player:getPosition(), "Boot Off", TEXTCOLOR_RED)
-
     player:getPosition():sendMagicEffect(3)
-    -- player:effectOnWalk(-1)
-
 	return true
 end
