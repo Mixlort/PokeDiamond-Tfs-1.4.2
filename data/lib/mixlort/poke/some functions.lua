@@ -985,3 +985,34 @@ end
 return false
 end
 
+PokemonStageVeryHappy = 215
+PokemonStageHappy = 160
+PokemonStageOK = 110
+PokemonStageSad = 50
+PokemonStageMad = 0
+
+happinessRate = {
+    [5] = {rate = 1.5, effect = 183, n = PokemonStageVeryHappy},
+    [4] = {rate = 1.2, effect = 170, n = PokemonStageHappy},
+    [3] = {rate = 1.0, effect = 182, n = PokemonStageOK},
+    [2] = {rate = 0.7, effect = 169, n = PokemonStageSad},
+    [1] = {rate = 0.4, effect = 168, n = PokemonStageMad}
+ }
+
+function getHappinessRate(cid)
+	if not isCreature(cid) then return 1 end
+	local a = getPlayerStorageValue(cid, 1008)
+		if a == -1 then return 1 end
+	if a >= PokemonStageVeryHappy then
+		return happinessRate[5].rate
+	elseif a >= PokemonStageHappy then
+		return happinessRate[4].rate
+	elseif a >= PokemonStageOK then
+		return happinessRate[3].rate
+	elseif a >= PokemonStageSad then
+		return happinessRate[2].rate
+	else
+		return happinessRate[1].rate
+	end
+return 1
+end

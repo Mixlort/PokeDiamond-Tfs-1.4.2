@@ -77,7 +77,7 @@ function onCastSpell(cid, var)
 	        ret.first = true
 	        ret.cond = "Slow"
 	     
-	        doMoveDano2(cid, target, FIGHTINGDAMAGE, 0, 0, ret, spell)
+	        doMoveDano2(cid:getId(), target:getId(), FIGHTINGDAMAGE, 0, 0, ret, spell)
 	        setPlayerStorageValue(cid, 98654, 1)
 	     end  
 	end

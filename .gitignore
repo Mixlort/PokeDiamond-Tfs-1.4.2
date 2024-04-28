@@ -186,3 +186,7 @@ pip-log.txt
 *.bak
 CMakeLists.txt
 tfs
+/data/world
+/data/world2
+/data/world5
+/data/worldTest

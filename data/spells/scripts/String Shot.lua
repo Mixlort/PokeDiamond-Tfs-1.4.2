@@ -40,7 +40,7 @@ function onCastSpell(cid, var)
    ret.check = getPlayerStorageValue(target, conds["Stun"])
    ret.spell = spell
    
-   addEvent(doMoveDano2, 100, cid:getId(), target, BUGDAMAGE, 0, 0, ret, spell)
+   addEvent(doMoveDano2, 100, cid:getId(), target:getId(), BUGDAMAGE, 0, 0, ret, spell)
 
 return true
 end

@@ -48,7 +48,7 @@ function onCastSpell(cid, var)
 	for i = 1, 4 do
 	    addEvent(doSendMagicEffect, 400, t[i][1][2], t[i][1][1])
 	end
-	addEvent(doDanoWithProtect, 400, cid:getId(), FLYINGDAMAGE, getThingPosWithDebug(cid), bombWee2, -min, -max, 0)
+	addEvent(doDanoWithProtect, 400, cid:getId(), FLYINGDAMAGE, getThingPosWithDebug(cid:getId()), bombWee2, -min, -max, 0)
 
 return true
 end

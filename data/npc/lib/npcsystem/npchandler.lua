@@ -631,7 +631,10 @@ if NpcHandler == nil then
 
 		stopEvent(self.eventSay[focus])
 		self.eventSay[focus] = addEvent(function(npcId, message, focusId)
-			local npc = Npc(npcId)
+            if not isOnline(npcId) then return true end
+            if not isOnline(focusId) then return true end
+			if not isNpc(npcId) then return true end
+            local npc = Npc(npcId)
 			if npc == nil then
 				return
 			end

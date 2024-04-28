@@ -75,7 +75,8 @@ maxMarketOffersAtATimePerPlayer = 100
 mysqlHost = "127.0.0.1"
 mysqlUser = "root"
 mysqlPass = ""
-mysqlDatabase = "pokeruby"
+-- mysqlPass = "mixlort"
+mysqlDatabase = "pokediamond"
 mysqlPort = 3306
 mysqlSock = ""
 

@@ -68,8 +68,9 @@ function getStatusS(name, boost, masterLevel, gender)
 end
 
 function getStatusSummon(poke)
-	if isNumber(poke) then poke = Creature(poke) end
 	if not poke then return false end
+    if not isOnline(poke) then return false end
+	if isNumber(poke) then poke = Creature(poke) end
 	local name = poke:getName()
 	local boost = poke:getBoost()
 	local masterLevel = poke:getMaster():getLevel()
@@ -87,7 +88,10 @@ function getStatusSummon(poke)
 end
 
 function getStatus(poke)
+    if not isCreature(poke) then return false end
+    if not isOnline(poke) then return false end
 	if isNumber(poke) then poke = Creature(poke) end
+    if not pokes[poke:getName()] then print("[Erro] Pokemon sem status: "..poke:getName()) return false end
     if isSummon(poke) then
         local status = getStatusSummon(poke)    
 		return status
@@ -131,8 +135,10 @@ function bonusSpawnPos(poke)
 end
 
 function adjustWildPoke(cid, optionalLevel)
+    if not isCreature(cid) then return false end
+    if not isOnline(cid) then return false end
 	if isNumber(cid) then cid = Creature(cid) end
-    if not getStatus(cid) then return true end
+    if not getStatus(cid) then print("[Erro] Pokemon sem status: "..getCreatureName(cid)) return false end
     if isSummon(cid) then return true end
     setCreatureMaxHealth(cid, getStatus(cid).life)
 	doCreatureAddHealth(cid, getCreatureMaxHealth(cid))
@@ -184,7 +190,7 @@ function doSendEvolutionEffect(cid, pos, evolution, turn, ssj, evolve, f, h)
 		sendSSJEffect(evo)
 	end
 	doEvolutionOutfit(cid, f, h)
-	addEvent(doSendEvolutionEffect, math.pow(1900, turn/20), cid, getThingPos(cid), evolution, turn - 1, turn == 19, turn == 2, f, h)
+	addEvent(doSendEvolutionEffect, math.pow(1900, turn/20), cid:getId(), getThingPos(cid:getId()), evolution, turn - 1, turn == 19, turn == 2, f, h)
 end
 
 function sendSSJEffect(cid)
@@ -194,7 +200,7 @@ function sendSSJEffect(cid)
 	pos2.x = pos2.x + math.random(-1, 1)
 	pos2.y = pos2.y - math.random(1, 2)
 	doSendDistanceShoot(pos1, pos2, 37)
-	addEvent(sendSSJEffect, 45, cid)
+	addEvent(sendSSJEffect, 45, cid:getId())
 end
 
 function sendFinishEvolutionEffect(cid, alternate)
@@ -232,6 +238,7 @@ end
 function adjustStatus(pk, item, health, vite, conditions)
 
 	if not isCreature(pk) then return true end
+    if not isOnline(pk) then return true end
     if isNumber(pk) then pk = Creature(pk) end	
 
     -- local gender = getItemAttribute(item, "gender") and getItemAttribute(item, "gender") or 0
@@ -240,25 +247,25 @@ function adjustStatus(pk, item, health, vite, conditions)
 	if isSummon(pk) and conditions then
 		local burn = getItemAttribute(item, "burn")   
 		if burn and burn >= 0 then
-		   local ret = {id = pk, cd = burn, check = false, damage = getItemAttribute(item, "burndmg"), cond = "Burn"}
+		   local ret = {id = pk:getId(), cd = burn, check = false, damage = getItemAttribute(item, "burndmg"), cond = "Burn"}
 		   addEvent(doCondition2, 3500, ret)
 		end
 
 		local poison = getItemAttribute(item, "poison")
 		if poison and poison >= 0 then
-		   local ret = {id = pk, cd = poison, check = false, damage = getItemAttribute(item, "poisondmg"), cond = "Poison"}
+		   local ret = {id = pk:getId(), cd = poison, check = false, damage = getItemAttribute(item, "poisondmg"), cond = "Poison"}
 		   addEvent(doCondition2, 1500, ret)
 		end
 
         local confuse = getItemAttribute(item, "confuse")
 		if confuse and confuse >= 0 then
-		   local ret = {id = pk, cd = confuse, check = false, cond = "Confusion"}
+		   local ret = {id = pk:getId(), cd = confuse, check = false, cond = "Confusion"}
 		   addEvent(doCondition2, 1200, ret)                                                
 		end
 
         local sleep = getItemAttribute(item, "sleep")
 		if sleep and sleep >= 0 then
-		   local ret = {id = pk, cd = sleep, check = false, first = true, cond = "Sleep"}
+		   local ret = {id = pk:getId(), cd = sleep, check = false, first = true, cond = "Sleep"}
 		   doCondition2(ret)
 		end
 		
@@ -268,44 +275,44 @@ function adjustStatus(pk, item, health, vite, conditions)
         
         local fear = getItemAttribute(item, "fear")
         if fear and fear >= 0 then
-           local ret = {id = pk, cd = fear, check = false, skill = getItemAttribute(item, "fearSkill"), cond = "Fear"}
+           local ret = {id = pk:getId(), cd = fear, check = false, skill = getItemAttribute(item, "fearSkill"), cond = "Fear"}
            doCondition2(ret)
         end
         
         local silence = getItemAttribute(item, "silence")
         if silence and silence >= 0 then      
-           local ret = {id = pk, cd = silence, eff = getItemAttribute(item, "silenceEff"), check = false, cond = "Silence"}
+           local ret = {id = pk:getId(), cd = silence, eff = getItemAttribute(item, "silenceEff"), check = false, cond = "Silence"}
            doCondition2(ret)
         end                                     
         
         local stun = getItemAttribute(item, "stun")
         if stun and stun >= 0 then
-           local ret = {id = pk, cd = stun, eff = getItemAttribute(item, "stunEff"), check = false, spell = getItemAttribute(item, "stunSpell"), cond = "Stun"}
+           local ret = {id = pk:getId(), cd = stun, eff = getItemAttribute(item, "stunEff"), check = false, spell = getItemAttribute(item, "stunSpell"), cond = "Stun"}
            doCondition2(ret)
         end 
                                                        
         local paralyze = getItemAttribute(item, "paralyze")
         if paralyze and paralyze >= 0 then
-           local ret = {id = pk, cd = paralyze, eff = getItemAttribute(item, "paralyzeEff"), check = false, first = true, cond = "Paralyze"}
+           local ret = {id = pk:getId(), cd = paralyze, eff = getItemAttribute(item, "paralyzeEff"), check = false, first = true, cond = "Paralyze"}
            doCondition2(ret)
         end  
                                                      
         local slow = getItemAttribute(item, "slow")
         if slow and slow >= 0 then
-           local ret = {id = pk, cd = slow, eff = getItemAttribute(item, "slowEff"), check = false, first = true, cond = "Slow"}
+           local ret = {id = pk:getId(), cd = slow, eff = getItemAttribute(item, "slowEff"), check = false, first = true, cond = "Slow"}
            doCondition2(ret)
         end                                              
         
         local leech = getItemAttribute(item, "leech")
         if leech and leech >= 0 then
-           local ret = {id = pk, cd = leech, attacker = 0, check = false, damage = getItemAttribute(item, "leechdmg"), cond = "Leech"}
+           local ret = {id = pk:getId(), cd = leech, attacker = 0, check = false, damage = getItemAttribute(item, "leechdmg"), cond = "Leech"}
            doCondition2(ret)
         end                               
         
         for i = 1, 3 do
             local buff = getItemAttribute(item, "Buff"..i)
             if buff and buff >= 0 then
-               local ret = {id = pk, cd = buff, eff = getItemAttribute(item, "Buff"..i.."eff"), check = false, 
+               local ret = {id = pk:getId(), cd = buff, eff = getItemAttribute(item, "Buff"..i.."eff"), check = false, 
                buff = getItemAttribute(item, "Buff"..i.."skill"), first = true, attr = "Buff"..i}
                doCondition2(ret)
             end

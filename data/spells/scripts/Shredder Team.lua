@@ -48,7 +48,7 @@ if team[name] then
 
    pk[1] = cid:getId()
    doSendMagicEffect(getThingPos(pk[1]), 211)
-   addEvent(doTeleportThing, math.random(0, 5), pk[1]:getId(), getClosestFreeTile(pk[1], pos), false)
+   addEvent(doTeleportThing, math.random(0, 5), pk[1]:getId(), getClosestFreeTile(pk[1]:getId(), pos), false)
    
    for i = 2, num do
        pk[i] = doSummonCreature(team[name], pos)

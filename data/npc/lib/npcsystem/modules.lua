@@ -174,7 +174,7 @@ if Modules == nil then
 
 				local destination = Position(parameters.destination)
 				local position = player:getPosition()
-				player:teleportTo(destination)
+				player:teleportToPlus(destination)
 
 				position:sendMagicEffect(CONST_ME_TELEPORT)
 				destination:sendMagicEffect(CONST_ME_TELEPORT)
@@ -450,7 +450,7 @@ if Modules == nil then
 				npcHandler:releaseFocus(cid)
 
 				local position = player:getPosition()
-				player:teleportTo(destination)
+				player:teleportToPlus(destination)
 
 				position:sendMagicEffect(CONST_ME_TELEPORT)
 				destination:sendMagicEffect(CONST_ME_TELEPORT)
@@ -490,7 +490,7 @@ if Modules == nil then
 		if player:isPremium() or not parameters.premium then
 			if player:removeTotalMoney(cost) then
 				local position = player:getPosition()
-				player:teleportTo(destination)
+				player:teleportToPlus(destination)
 
 				position:sendMagicEffect(CONST_ME_TELEPORT)
 				destination:sendMagicEffect(CONST_ME_TELEPORT)

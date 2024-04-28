@@ -66,7 +66,7 @@ end
 function doCreatureSayWithDelay(cid, text, type, delay, e, pcid)
 	if Player(pcid):isPlayer() then
 		e.done = false
-		e.event = addEvent(func, delay < 1 and 1000 or delay, cid, text, type, e, pcid)
+		e.event = addEvent(func, delay < 1 and 1000 or delay, cid:getId(), text, type, e, pcid:getId())
 	end
 end
 
@@ -135,4 +135,24 @@ function getMoneyWeight(money)
 	return (ItemType(ITEM_TEN_THOUSAND_DOLLAR_NOTE):getWeight() * crystal) + (ItemType(ITEM_HUNDRED_DOLLAR_NOTE):getWeight() * platinum) + (ItemType(ITEM_DOLLAR_NOTE):getWeight() * gold)
 end
 
-getThis = getNpcId
+function doDirectPos(n, p)
+
+	local dir = getDirectionTo(n, p)
+
+	if dir <= 3 then return dir end
+
+	local x = math.abs(n.x - p.x)
+	local y = math.abs(n.y - p.y)
+
+	if dir == SOUTHWEST then
+		if x > y then return WEST else return SOUTH end
+	elseif dir == SOUTHEAST then
+		if x > y then return EAST else return SOUTH end
+	elseif dir == NORTHWEST then
+		if x > y then return WEST else return NORTH end
+	elseif dir == NORTHEAST then
+		if x > y then return EAST else return NORTH end
+	end
+
+return dir
+end

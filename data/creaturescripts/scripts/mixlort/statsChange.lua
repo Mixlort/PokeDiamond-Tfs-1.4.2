@@ -241,14 +241,14 @@ function onHealthChange(cid, attacker, value, combat)
         end
 
         if combats[damageCombat] then
-            doSendAnimatedText(getThingPos(cid), valor, combats[damageCombat].cor)
+            doSendAnimatedText(getThingPos(cid), value, combats[damageCombat].cor)
         end
 
         if #getCreatureSummons(attacker) >= 1 and not isInArray({POISONEDDAMAGE, BURNEDDAMAGE}, combat) then
             doPlayerSendTextMessage(attacker, MESSAGE_STATUS_DEFAULT, "Your "..getPokeName(getCreatureSummons(attacker)[1]).." dealt "..valor.." damage to "..cid:getName()..".")
         end
 
-        return valor, combat
+        return value, combat
     end
     --------------------------------------------------
     if isPlayer(cid) and #getCreatureSummons(cid) >= 1 then
@@ -303,6 +303,26 @@ function onHealthChange(cid, attacker, value, combat)
                     doItemSetAttribute(item.uid, "pokeHealth", 0)
                 end
             end
+        end
+
+        if getPlayerStorageValue(cid, 22545) == 1 then
+            if getGlobalStorageValue(22550) == 1 then
+                doPlayerSendTextMessage(cid, 20, "You are the last survivor of the golden arena! Take your reward!")
+                doPlayerAddItem(cid, 2152, getPlayerStorageValue(cid, 22551)*2)  
+                setPlayerStorageValue(cid, 22545, -1)
+                doTeleportThing(cid, getClosestFreeTile(cid, getClosestFreeTile(cid, posBackGolden)), false)  
+                doCreatureAddHealth(cid, getCreatureMaxHealth(cid)-getCreatureHealth(cid))
+                setPlayerRecordWaves(cid)     
+                endGoldenArena()
+                return false --alterado v1.8           
+            else
+                setGlobalStorageValue(22550, getGlobalStorageValue(22550)-1)
+                setPlayerStorageValue(cid, 22545, -1)
+                doTeleportThing(cid, getClosestFreeTile(cid, posBackGolden), false)    
+                doCreatureAddHealth(cid, getCreatureMaxHealth(cid)-getCreatureHealth(cid))
+                setPlayerRecordWaves(cid)     
+                return value, combat
+            end 
         end
 
         if getPlayerStorageValue(cid, 98796) >= 1 then
@@ -456,7 +476,7 @@ function onHealthChange(cid, attacker, value, combat)
         -----------------------------------------------------------------------
         ---------------------- FEAR / ROAR ------------------------------------
         if getPlayerStorageValue(attacker, conds["Fear"]) >= 1 then         
-            return valor, combat
+            return value, combat
         end
     --------------------------------------------------------------------------
 

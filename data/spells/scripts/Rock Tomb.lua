@@ -44,7 +44,7 @@ function onCastSpell(cid, var)
 	    local pos = getThingPosWithDebug(target)
 	    local ry = math.abs(frompos.y - pos.y)
 	    doSendDistanceShoot(frompos, pos, 39)
-	    addEvent(doMoveDano2, ry * 11, cid:getId(), target, ROCKDAMAGE, min, max, ret, spell)
+	    addEvent(doMoveDano2, ry * 11, cid:getId(), target:getId(), ROCKDAMAGE, min, max, ret, spell)
 	    addEvent(sendEffWithProtect, ry*11, cid:getId(), pos, 157)
     end
 

@@ -123,7 +123,7 @@ function mixlortBaseSpell(cid, var, mina, maxa)
     if getPlayerStorageValue(cid, 999457) >= 1 and table ~= "" and table.f ~= 0 then    --alterado v1.6
         psyDmg = MIRACLEDAMAGE                                                              
         ghostDmg = DARK_EYEDAMAGE
-        addEvent(setPlayerStorageValue, 50, cid, 999457, -1)
+        addEvent(setPlayerStorageValue, 50, cid:getId(), 999457, -1)
     end
     --------------------REFLECT---------------------------
     setPlayerStorageValue(cid, 21100, -1)                --alterado v1.6
