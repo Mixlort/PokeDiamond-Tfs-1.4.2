@@ -44,8 +44,8 @@
 <voice sentence="Mamoswine!" />
   </voices>
   <loot>
-	<item id="12163" countmax="22" chance="45000" /> -- seeds
-	<item id="11453" countmax="1" chance="3300" /> -- heart stone
+	<item id="12163" countmax="22" chance="45000" /> 
+	<item id="11453" countmax="1" chance="3300" /> 
 	<item id="2145" countmax="1" chance="500" />
   </loot>
 </monster>

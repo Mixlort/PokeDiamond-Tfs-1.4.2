@@ -27,7 +27,7 @@
         <move name="Dazzling Gleam" level="60" interval="9" range="1" isTarget="0" f="80" t="normal" />
         <move name="Great Love" level="60" interval="10" range="1" isTarget="0" f="50" t="normal" />
         <move name="Healarea" level="60" interval="10" range="1" isTarget="0" f="0" t="normal" />	
-        <move name="Impulse Vitality" level="18" interval="20" range="1" isTarget="0" f="0" t="normal" />
+        <move name="Vitality Impulse" level="18" interval="20" range="1" isTarget="0" f="0" t="normal" />
     </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />

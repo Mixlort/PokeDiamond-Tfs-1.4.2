@@ -3,6 +3,169 @@
     <!-- Mixlort -->
     <action itemid="11826;11827;11828;11829;11830;11831;11832;11833;11834;11835;11836;11837" script="poke/summon.lua"/>
 
+    <!-- New -->
+    <action actionid = "63218" script="poke/gold/CTFMax.lua"/>
+	<action itemid="13249;13251;13253;13252;13264;13296;13297;13298;13301;13327;13326;13380;13390;13391;13392;13393;13394;13395;13407;13408;13409;13410;13426" script="poke/gold/addon.lua"/> 
+	<action fromid="13089" toid="13115" script="poke/gold/addon.lua"/> 
+	<action itemid="12577" script="poke/gold/Sex Doll.lua"/>
+	<action itemid="2345" script="poke/gold/premium.lua"/>
+	<action itemid="2183" script="poke/gold/addonbox.lua"/> 
+	<action itemid="13389" script="poke/gold/halloween box.lua"/> 
+	<action actionid="7782" script="poke/gold/quests/bau_halloween.lua"/>
+	<action actionid="7783" script="poke/gold/quests/PortaHalloween.lua"/>
+	<action itemid="13117" script="poke/gold/santaclaus.lua"/>
+	<action actionid="5436" script="poke/gold/teste.lua"/>
+	<!-- <action actionid="6616" script="poke/gold/Agatha/Agatha_Colar.lua"/>
+	<action actionid="3544" script="poke/gold/Agatha/Agatha_Door.lua"/>
+	<action actionid="6655" script="poke/gold/Agatha/Agatha_Enigma.lua"/> -->
+    <action itemid="7722" script="poke/gold/house.lua"/>
+	<!-- <action actionid="6657" script="poke/gold/Agatha/Agatha_Espelho_Lab.lua"/>
+	<action actionid="6658" script="poke/gold/Agatha/Agatha_Espelho_Out.lua"/>
+	<action actionid="6660" script="poke/gold/Agatha/Agatha_Estante.lua"/>
+	<action actionid="6661" script="poke/gold/Agatha/Agatha_Hammer.lua"/>
+	<action actionid="6617-6653" script="poke/gold/Agatha/Agatha_Items.lua"/>
+	<action actionid="6654" script="poke/gold/Agatha/Agatha_Receita.lua"/>
+	<action actionid="6659" script="poke/gold/Agatha/Agatha_Receita[2].lua"/> -->
+	<action itemid="12594" script="poke/gold/Squirtle Bottle.lua"/>
+	<action fromid="11790" toid="11803" script="poke/gold/other/doors.lua"/>
+	<action itemid="12774" script="poke/gold/bike.lua"/>
+	<action itemid="12937" script="poke/gold/bikeleaf.lua"/>
+	<action itemid="12935" script="poke/gold/bikethunder.lua"/>
+	<action itemid="12936" script="poke/gold/bikewater.lua"/>
+	<action itemid="12938" script="poke/gold/bikefire.lua"/>
+	<action itemid="12939" script="poke/gold/bikebox.lua"/>
+	<action itemid="4645;4646;4647;4644;4653;4648" script="poke/gold/surf.lua"/>
+	<action itemid="13088" script="poke/gold/sh stone.lua"/>
+	<action actionid="32698" script="poke/gold/bau_Pewter.lua"/>
+	<action actionid="22420;22421;22422" script="poke/gold/rewardcoins.lua"/>
+	<action actionid="65535" script="poke/gold/Quadro_Golden.lua"/>
+	<action actionid="55356" script="poke/gold/Quadro_Golden_Rank.lua"/>
+	<action itemid="6527" script="poke/gold/Meowth Coin.lua"/>
+	<action itemid="2580" script="poke/gold/tools/fishing.lua" allowfaruse="1"/>
+	<action itemid="10223" script="poke/gold/tools/fishing.lua" allowfaruse="1"/>
+	<action itemid="12343;12345;12346;12347;12348" script="poke/gold/potion.lua" allowfaruse="1" blockwalls="1"/>
+	<action itemid="12349" script="poke/gold/medicine.lua" allowfaruse="1" blockwalls="1"/>
+    <action itemid="12618" script="poke/gold/Boost Stone.lua" allowfaruse="1"/>
+	<action itemid="1740" script="poke/gold/starter.lua"/>
+	<action itemid="11638;11639;11640;11641" script="poke/gold/box.lua"/>
+	<action itemid="13247" script="poke/gold/dittobox.lua"/>
+	<action itemid="2382" script="poke/gold/pokedex.lua" allowfaruse="1" blockwalls="1"/>
+	<action itemid="7385" script="poke/gold/pokeinfo.lua"/>
+	<action itemid="3896;3897;3867;3868" script="poke/gold/roupas.lua"/>
+	<!-- <action itemid="11826-11837;11737-11748;10975-10977;12621-12623" script="poke/gold/goback.lua"/> -->
+	<action itemid="2391;2392;2393;2394;12617;13248" script="poke/gold/catch.lua" allowfaruse="1"/>
+	<action itemid="11421" script="poke/gold/slotmachine.lua"/>
+	<action itemid="11416;11417;11418;11395;11396;11397;11398;11401;11402;11403;11404" script="poke/gold/television.lua"/>
+	<action itemid="12330" script="poke/gold/camera.lua"/>
+	<action itemid="11462-11469" script="poke/gold/computer.lua"/>
+	<action fromid="12352" toid="12357" script="poke/gold/boost.lua"/>
+	<action itemid="2550" script="poke/gold/order.lua" allowfaruse="1" blockwalls="0"/>
+	<action fromid="11441" toid="11454" script="poke/gold/evolution.lua" allowfaruse="1"/>
+	<action fromid="12401" toid="12414" script="poke/gold/evolution.lua" allowfaruse="1"/>
+	<action itemid="12232;12242;12244;12417;12419;12418;13229;12245;13381" script="poke/gold/evolution.lua" allowfaruse="1"/>
+	<action uniqueid="36667,36668;36669" script="poke/gold/quests/Triplequest.lua"/>
+	<action actionid="7776" script="poke/gold/quests/bau1.lua"/>
+	<action actionid="7777" script="poke/gold/quests/bau2.lua"/>
+	<action actionid="7778" script="poke/gold/quests/bau3.lua"/>
+	<action actionid="7779" script="poke/gold/quests/bau4.lua"/>
+	<action actionid="7780" script="poke/gold/quests/bau5.lua"/>
+	<action actionid="7781" script="poke/gold/quests/bau6.lua"/>
+    <action actionid="7785" script="poke/gold/quests/recompensa.lua"/>
+	<action itemid="13245" script="poke/gold/robowater.lua"/>
+	<action itemid="13246" script="poke/gold/robodark.lua"/>
+	<action uniqueid="46547" script="poke/gold/torneiojt.lua"/>
+	<action uniqueid="46545" script="poke/gold/torneio.lua"/>
+	<action itemid="9663" script="poke/gold/vip.lua"/>
+	<action itemid="10503" script="poke/gold/vip1.lua"/>
+	<action uniqueid="46546" script="poke/gold/torneio150.lua"/>
+	<!-- Quests  -->
+	<action actionid="5800" script="poke/gold/quests/Punch.lua"/>
+	<action actionid="5801" script="poke/gold/quests/Darkness.lua"/>
+	<action actionid="5802" script="poke/gold/quests/Earth.lua"/>
+	<action actionid="5803" script="poke/gold/quests/Rock.lua"/>
+	<action actionid="5804" script="poke/gold/quests/Venom.lua"/>
+	<action actionid="5805" script="poke/gold/quests/bice.lua"/>
+	<action actionid="5806" script="poke/gold/quests/bhell.lua"/>
+	<action actionid="5807" script="poke/gold/quests/bfree.lua"/>
+	<action actionid="5809" script="poke/gold/quests/leaft.lua"/>
+	<action actionid="5810" script="poke/gold/quests/watert.lua"/>
+	<action actionid="5811" script="poke/gold/quests/firet.lua"/>
+	<action actionid="6831" script="poke/gold/quests/Hds.lua"/>
+	<action actionid="5808" script="poke/gold/quests/Rayquaza.lua"/>
+	<action actionid="5815" script="poke/gold/quests/Feebas.lua"/>
+	<action itemid="2090" script="poke/gold/quests/Rayquazaporta.lua"/>
+	<action actionid="1221" script="poke/gold/quests/Rayquazaporta2.lua"/>
+	<action actionid="1222" script="poke/gold/quests/FarolQuest.lua"/>
+	<action actionid="1223" script="poke/gold/quests/FarolBau.lua"/>
+	<action actionid="1224" script="poke/gold/quests/PesadeloPorta.lua"/>
+	<action actionid="1225" script="poke/gold/quests/Pesadelo1.lua"/>
+	<action actionid="45550" script="poke/gold/quests/Pesadelo2.lua"/>
+	<action actionid="1226" script="poke/gold/quests/Halloween.lua"/>
+	<action actionid="1227" script="poke/gold/quests/QuestMysterious.lua"/>
+	<action actionid="1228" script="poke/gold/quests/PortaMysterious.lua"/>
+	<action actionid="1229" script="poke/gold/quests/Burnedporta.lua"/>
+	<action actionid="564" script="poke/gold/quests/burnedepoke.lua"/>
+	<action actionid="565" script="poke/gold/quests/burnedepokes.lua"/>
+	<action actionid="3333" script="poke/gold/portaex.lua"/>
+	<action actionid="3335" script="poke/gold/quests/PortaPesadelos.lua"/>
+	<action actionid="3336" script="poke/gold/quests/Specialist.lua"/>
+	<action actionid="3337" script="poke/gold/quests/Entradaspecialist.lua"/>
+	<action actionid="3338" script="poke/gold/quests/esquiador.lua"/>
+	<action actionid="3339" script="poke/gold/quests/Policial jenny.lua"/>
+	<action actionid="3342" script="poke/gold/quests/Crystal.lua"/>
+	<action actionid="3343" script="poke/gold/quests/Lugia.lua"/>
+	<action actionid="3344" script="poke/gold/quests/blackstone.lua"/>
+	<action actionid="3345" script="poke/gold/quests/ancient.lua"/>
+	<action actionid="3346" script="poke/gold/quests/PortaConquest.lua"/>
+	<action actionid="3347" script="poke/gold/quests/Conquest.lua"/>
+	<action actionid="3348" script="poke/gold/passagem/fushcia.lua"/>
+	<action actionid="3349" script="poke/gold/quests/ball.lua"/>
+	<action actionid="3350" script="poke/gold/quests/Passagem2.lua"/>
+	<action actionid="3351" script="poke/gold/quests/Celebi.lua"/>
+	<action actionid="3352" script="poke/gold/quests/Passagem3.lua"/>
+	<action actionid="3353" script="poke/gold/quests/Specialist 2.lua"/>
+	<action actionid="3354" script="poke/gold/quests/Specialist 3.lua"/>
+	<action actionid="3355" script="poke/gold/quests/Shedinja.lua"/>
+	<action actionid="3356" script="poke/gold/quests/Shedinjaporta.lua"/>
+	<action actionid="3357" script="poke/gold/quests/PortaPremiojenny.lua"/>
+	<action actionid="3358" script="poke/gold/quests/Dragon.lua"/>
+	<action actionid="3359" script="poke/gold/quests/ritual.lua"/>
+	<action actionid="3360" script="poke/gold/quests/conquestEntrada2.lua"/>
+	<action actionid="3361" script="poke/gold/quests/portal.lua"/>
+	<action actionid="3362" script="poke/gold/quests/remembrance.lua"/>
+	<action actionid="3363" script="poke/gold/quests/Portacasamento.lua"/>
+	<action actionid="3364" script="poke/gold/quests/Portacasamento2.lua"/>
+	<action actionid="3365" script="poke/gold/quests/EntradaFossil.lua"/>
+	<action actionid="3366" script="poke/gold/passagem/cinnabar.lua"/>
+	<action actionid="3367" script="poke/gold/passagem/pewter.lua"/>
+	<action actionid="3368" script="poke/gold/portas/escada.lua"/>
+	<action actionid="3369" script="poke/gold/quests/unown.lua"/>
+	<action actionid="3372" script="poke/gold/quests/Tyrogre.lua"/>
+	<action actionid="3370" script="poke/gold/passagem/fuch.lua"/>
+	<action actionid="3371" script="poke/gold/passagem/pew.lua"/>
+	<action actionid="3373" script="poke/gold/items/Dragon.lua"/>
+	<action actionid="3374" script="poke/gold/items/imam.lua"/>
+	<action actionid="3375" script="poke/gold/quests/Specialist 4.lua"/>
+	<action actionid="3376" script="poke/gold/quests/Jogador.lua"/>
+	<action actionid="3377" script="poke/gold/quests/Jogador2.lua"/>
+	<action actionid="3378" script="poke/gold/passagem/Porta jogador.lua"/>
+	<action actionid="3379" script="poke/gold/quests/Fossil 1.lua"/>
+	<action actionid="3380" script="poke/gold/quests/Fossil 2.lua"/>
+	<action actionid="3381" script="poke/gold/quests/Natal.lua"/>
+	<action uniqueid="7810" script="poke/gold/quests/porygon.lua"/>
+	<action actionid="7811" script="poke/gold/quests/milenar.lua" />
+	<action actionid="7812" script="poke/gold/quests/Super.lua"/>
+	<!-- eventos -->
+	<action actionid="12000" script="poke/gold/portas/anel.lua"/>
+	<action actionid="12003" script="poke/gold/portas/togekiss.lua"/>
+	<action actionid="12004" script="poke/gold/portas/metagross.lua"/>
+	<action itemid="2086" script="poke/gold/portas/unown1.lua"/>
+	<action actionid="12001" script="poke/gold/portas/unown2.lua"/>
+	<action actionid="12002" script="poke/gold/portas/jenny.lua"/>
+	<action actionid="12012" script="poke/gold/portas/Super.lua"/>
+	<action actionid="55555" script="poke/gold/porta150.lua"/>
+
+
     <!-- OLD -->
     <!-- Verificar -->
     <action fromid="1353" toid="1355" script="quests/quests.lua" />
@@ -22,7 +185,7 @@
 	<action itemid="2416" script="tools/crowbar.lua" />
 	<action itemid="2420" script="tools/machete.lua" />
 	<action itemid="2442" script="tools/machete.lua" />
-	<action itemid="2550" script="tools/scythe.lua" />
+	<!-- <action itemid="2550" script="tools/scythe.lua" /> -->
 	<action itemid="2553" script="tools/pick.lua" />
 	<action itemid="2566" script="tools/kitchen_knife.lua" />
 	<!-- <action itemid="2580" script="tools/fishing.lua" allowfaruse="1" /> -->
@@ -46,7 +209,7 @@
 	<action fromid="5812" toid="5813" script="other/decayto.lua" />
 	<action itemid="7183" script="other/decayto.lua" />
 	<action itemid="10719" script="other/decayto.lua" />
-	<action itemid="11401" script="other/decayto.lua" />
+	<!-- <action itemid="11401" script="other/decayto.lua" /> -->
 
 	<!-- Food -->
 	<action itemid="2362" script="other/food.lua" />
@@ -75,8 +238,8 @@
 	<action itemid="11246" script="other/food.lua" />
 	<action itemid="11370" script="other/food.lua" />
 	<action itemid="11429" script="other/food.lua" />
-	<action fromid="12415" toid="12418" script="other/food.lua" />
-	<action fromid="12637" toid="12639" script="other/food.lua" />
+	<!-- <action fromid="12415" toid="12418" script="other/food.lua" /> -->
+	<!-- <action fromid="12637" toid="12639" script="other/food.lua" /> -->
 
 	<!-- Music -->
 	<action fromid="2070" toid="2085" script="other/music.lua" />
@@ -141,7 +304,7 @@
     <action itemid="2160" script="other/change_gold.lua" />
 	<action itemid="2161" script="other/change_gold.lua" />
 	<action itemid="3956" script="other/change_gold.lua" />
-	<action fromid="2376" toid="2404" script="other/destroy.lua" />
+	<!-- <action fromid="2376" toid="2404" script="other/destroy.lua" /> -->
 	<action fromid="2406" toid="2415" script="other/destroy.lua" />
 	<action fromid="2417" toid="2419" script="other/destroy.lua" />
 	<action fromid="2421" toid="2441" script="other/destroy.lua" />

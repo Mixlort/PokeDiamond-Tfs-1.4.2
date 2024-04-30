@@ -41,6 +41,8 @@ function onCastSpell(cid, var)
 		ret.cond = "Silence"
 
 	local function doFall(cid)
+        if not isOnline(cid) then return true end
+        if isNumber(cid) then cid = Creature(cid) end   
 		for rocks = 1, 42 do --62
 		    addEvent(fall, rocks*35, cid:getId(), master:getId(), WATERDAMAGE, 52, 1)
 		end

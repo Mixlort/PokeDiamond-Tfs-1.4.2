@@ -29,7 +29,7 @@
         <move name="Fireball" level="100" interval="10" range="4" isTarget="1" f="75" t="fire" />
         <move name="Raging Blast" level="110" interval="7" range="1" isTarget="0" f="100" t="fire" />
         <move name="Fire Blast" level="110" interval="11" range="1" isTarget="0" f="120" t="fire" />
-        <move name="Dragon Rage" level="100" interval="10" range="1" isTarget="0" f="90" t="dragon" />
+        <!-- <move name="Dragon Rage" level="100" interval="10" range="1" isTarget="0" f="90" t="dragon" /> -->
         <move name="Hyper Beam" level="100" interval="10" range="1" isTarget="0" f="100" t="normal" />
         <move name="Magma Storm" level="130" interval="19" range="1" isTarget="0" f="95" t="fire" />
     </moves>
@@ -41,7 +41,7 @@
         <move name="Fireball" level="100" interval="10" range="4" isTarget="1" f="75" t="fire" />
         <move name="Raging Blast" level="110" interval="7" range="1" isTarget="0" f="100" t="fire" />
         <move name="Fire Blast" level="110" interval="11" range="1" isTarget="0" f="120" t="fire" />
-        <move name="Dragon Rage" level="100" interval="10" range="1" isTarget="0" f="90" t="dragon" />
+        <!-- <move name="Dragon Rage" level="100" interval="10" range="1" isTarget="0" f="90" t="dragon" /> -->
         <move name="Hyper Beam" level="100" interval="10" range="1" isTarget="0" f="100" t="normal" />
         <move name="Magma Storm" level="130" interval="19" range="1" isTarget="0" f="95" t="fire" />
     </attacks>

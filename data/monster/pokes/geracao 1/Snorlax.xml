@@ -25,7 +25,7 @@
     <moves>
         <move name="Scratch" level="85" interval="7" range="1" isTarget="1" f="40" t="normal" />
         <move name="Bite" level="85" interval="8" range="1" isTarget="1" f="50" t="dark" />
-        <move name="Snore" level="85" interval="11" range="1" isTarget="1" f="75" t="normal" /> -- SNORE
+        <!-- <move name="Snore" level="85" interval="11" range="1" isTarget="1" f="75" t="normal" /> -->
         <move name="Stomp" level="85" interval="8" range="1" isTarget="0" f="90" t="ground" />
         <move name="Earthshock" level="85" interval="8" range="1" isTarget="0" f="75" t="ground" />
         <move name="Body Slam" level="89" interval="10" range="1" isTarget="1" f="80" t="normal" />

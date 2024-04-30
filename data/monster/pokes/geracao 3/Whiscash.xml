@@ -45,8 +45,8 @@
 <voice sentence="Whiscash!" />
   </voices>
   <loot>
-	<item id="12161" countmax="100" chance="100000" /> -- water gem
-	<item id="12170" countmax="4" chance="50000" /> -- water pendant
+	<item id="12161" countmax="100" chance="100000" /> 
+	<item id="12170" countmax="4" chance="50000" /> 
 			<item id="12779" chance="50" countmax="50" />
 		<item id="12778" chance="25" countmax="50" />
 		<item id="12785" chance="5" countmax="50" />

@@ -43,8 +43,8 @@
 <voice sentence="HERACROSS!" />
   </voices>
   <loot>
-	<item id="12196" countmax="1" chance="11000" /> -- stone orb
-	<item id="12337" countmax="45" chance="62000" /> -- small stone
-	<item id="11446" countmax="1" chance="1500" /> -- punch stone
+	<item id="12196" countmax="1" chance="11000" /> 
+	<item id="12337" countmax="45" chance="62000" />
+	<item id="11446" countmax="1" chance="1500" /> 
   </loot>
 </monster>

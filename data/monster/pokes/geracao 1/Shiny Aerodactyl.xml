@@ -25,10 +25,10 @@
         <move name="Rock Throw" level="1" interval="7" range="3" isTarget="1" f="55" t="rock" />
         <move name="Sand Attack" level="1" interval="8" range="1" isTarget="0" f="0" t="ground" />
         <move name="Hyper Beam" level="0" interval="10" range="1" isTarget="0" f="100" t="normal" />
-        <move name="Wind Rage" level="1" interval="7" range="1" isTarget="1" f="75" t="flying" /> -- WIND RAGE
+        <move name="Wind Rage" level="1" interval="7" range="1" isTarget="1" f="75" t="flying" /> 
         <move name="Ancient Power" level="1" interval="8" range="1" isTarget="0" f="100" t="rock" />
         <move name="Rock Slide" level="1" interval="10" range="3" isTarget="1" f="35" t="rock" />
-        <move name="Aero Crash" level="1" interval="10" range="1" isTarget="0" f="110" t="flying" /> -- AERO CRASH
+        <move name="Aero Crash" level="1" interval="10" range="1" isTarget="0" f="110" t="flying" />
         <move name="Wing Attack" level="1" interval="10" range="1" isTarget="0" f="75" t="flying" />
         <move name="Dragon Dance" level="1" interval="12" range="1" isTarget="0" f="90" t="dragon" />
         <move name="Rock Tomb" level="1" interval="15" range="4" isTarget="1" f="85" t="rock" />  

@@ -10,7 +10,7 @@ local areaflytwo = {
     {1, 1, 1}
 }
 
-flyFloor = 15616
+flyFloor = 14104
 arenaLastPlayerId = 0
 
 -- mixlort
@@ -44,6 +44,8 @@ storageArenaPvpEvent = 5020
 slotItems = {1988} -- 26820
 badgesPortraits = {12267, 12266, 12264, 12265, 12263, 12262, 12261, 12260}
 badgeContainer = 1988
+
+waterIds = {493, 4608, 4609, 4610, 4611, 4612, 4613, 4614, 4615, 4616, 4617, 4618, 4619, 4620, 4621, 4622, 4623, 4624, 4625, 7236, 10499, 15401, 15402, 4820, 4821, 4822, 4823, 4824, 4825, 4664, 4665, 4666}
 
 function Creature.isPokemon(self)
     local master = self:getMaster()

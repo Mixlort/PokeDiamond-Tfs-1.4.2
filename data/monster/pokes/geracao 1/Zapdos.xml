@@ -59,10 +59,10 @@
  </voices>
 
   <loot>
-        <item id="12164" chance="50000" countmax="90" />  --Screw
-        <item id="12176" chance="10000" />  --Electric Box
-        <item id="12150" chance="7000" />  --Thunder Feather
-        <item id="11444" chance="100" />  --Thunder Stone
+        <item id="12164" chance="50000" countmax="90" /> 
+        <item id="12176" chance="10000" /> 
+        <item id="12150" chance="7000" /> 
+        <item id="11444" chance="100" /> 
   </loot>
 
 </monster>

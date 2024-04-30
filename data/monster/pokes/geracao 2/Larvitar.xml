@@ -40,7 +40,7 @@
 <voice sentence="LARVITAR!" />
   </voices>
   <loot>
-	<item id="12196" countmax="1" chance="11000" /> -- stone orb
-	<item id="12337" countmax="15" chance="62000" /> -- small stone
+	<item id="12196" countmax="1" chance="11000" /> 
+	<item id="12337" countmax="15" chance="62000" /> 
   </loot>
 </monster>

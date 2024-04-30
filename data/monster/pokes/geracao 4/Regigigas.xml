@@ -1,4 +1,4 @@
-<monster name="Regigigas" nameDescription="an regigigas" race="normal" race2="leaf" experience="250" speed="170">
+<monster name="Regigigas" nameDescription="an regigigas" race="normal" race2="grass" experience="250" speed="170">
   <level min="0" max="0" />
     <health now="11000" max="11000" />
     <status attack="500" defense="1000" spAtk="400" spDef="1100" />

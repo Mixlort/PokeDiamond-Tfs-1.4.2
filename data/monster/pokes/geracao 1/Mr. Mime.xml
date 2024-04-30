@@ -29,7 +29,7 @@
         <move name="Psylusion" level="60" interval="10" range="1" isTarget="0" f="70" t="psychic" />
         <move name="Reflect" level="60" interval="7" range="1" isTarget="0" f="0" t="psychic" />
         <move name="Psybeam" level="42" interval="10" range="1" isTarget="0" f="75" t="psychic" />
-        <move name="Psy Wave" level="70" interval="10" range="1" isTarget="0" f="75" t="psychic" />
+        <!-- <move name="Psy Wave" level="70" interval="10" range="1" isTarget="0" f="75" t="psychic" /> -->
     </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />

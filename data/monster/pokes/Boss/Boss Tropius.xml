@@ -1,4 +1,4 @@
-<monster name="Boss Tropius" nameDescription="a Boss tropius" race="grass" race2="nil" experience="4510" speed="160">
+<monster name="Boss Tropius" nameDescription="a Boss tropius" race="grass" race2="no race" experience="4510" speed="160">
   <health now="400" max="400" />
       <level min="0" max="0" />
     <status attack="0" defense="0" spAtk="0" spDef="0" />

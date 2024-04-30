@@ -27,7 +27,7 @@
         <move name="Thunder Wave" level="1" interval="6" range="1" isTarget="0" f="20" t="electric" />
         <move name="Wing Attack" level="1" interval="5" range="1" isTarget="0" f="20" t="dragon" />
         <move name="Dragon Pulse" level="1" interval="6" range="1" isTarget="1" f="20" t="dragon" />
-        <move name="Electrical Burning" level="1" interval="6" range="1" isTarget="60" f="80" t="fire" /> -- ELECTRICAL BURNING
+        <move name="Electrical Burning" level="1" interval="6" range="1" isTarget="60" f="80" t="fire" /> 
         <move name="Dragon Breath" level="1" interval="6" range="1" isTarget="0" f="50" t="dragon" />
         <move name="Dragon Dance" level="1" interval="6" range="1" isTarget="0" f="50" t="dragon" />
         <move name="Hyper Beam" level="1" interval="6" range="1" isTarget="0" f="50" t="normal" />

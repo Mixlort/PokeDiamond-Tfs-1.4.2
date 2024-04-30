@@ -33,7 +33,7 @@ function onCastSpell(cid, var)
 
 	local eff = getSubName(cid, target) == "Shiny Onix" and 179 or 127 --alterado v1.6.1              
 
-	doAreaCombatHealth(cid, GROUNDDAMAGE, getThingPosWithDebug(cid), splash, -min, -max, 255)
+	doAreaCombatHealth(cid, GROUNDDAMAGE, getThingPosWithDebug(cid), splash, -min, -max)
 
 	local sps = getThingPosWithDebug(cid)
 	sps.x = sps.x+1

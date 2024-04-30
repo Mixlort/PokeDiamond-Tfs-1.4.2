@@ -1,4 +1,4 @@
-<monster name="Gastrodon" nameDescription="a Gastrodon" race="water" race2="nil" experience="620" speed="124">
+<monster name="Gastrodon" nameDescription="a Gastrodon" race="water" race2="no race" experience="620" speed="124">
     <health now="1300" max="1300" />
     <level min="0" max="0" />
     <status attack="0" defense="0" spAtk="0" spDef="0" />

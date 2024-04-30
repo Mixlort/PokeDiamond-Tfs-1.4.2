@@ -44,7 +44,7 @@
         <item id="12164" chance="5000" countmax="50" />
         <item id="12176" chance="4000" countmax="5" />
         <item id="12198" chance="3000" />
-        <item id="13164" chance="3000" />
+        <!-- <item id="13164" chance="3000" /> -->
         <item id="11444" chance="100" />
     </loot>
 </monster>

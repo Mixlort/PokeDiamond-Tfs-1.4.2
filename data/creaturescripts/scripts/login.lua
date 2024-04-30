@@ -38,6 +38,40 @@ function onLogin(player)
     -- Update questlog
     player:updateQuestLog()
 
+    if player:isOnSurf() then -- Check surf        
+        if not player:addAbility(player:getUsingBall(), "surf") then
+            print("WARNING! Player " .. player:getName() .. " summonName not found onLogin for surf!")
+            player:setSurfing()
+            player:teleportTo(player:getTown():getTemplePosition())
+        end   
+    elseif player:isOnRide() then -- Check ride
+        if not player:addAbility(player:getUsingBall(), "ride") then
+            print("WARNING! Player " .. player:getName() .. " summonName not found onLogin for ride!")
+            player:setRiding()
+            player:teleportTo(player:getTown():getTemplePosition())
+        end   
+    elseif player:isOnFly() then -- Check fly
+        if not player:addAbility(player:getUsingBall(), "fly") then
+            print("WARNING! Player " .. player:getName() .. " summonName not found onLogin for fly!")
+            player:setFlying()
+            player:teleportTo(player:getTown():getTemplePosition())
+        end   
+    elseif player:isOnDive() then -- Check dive
+        -- player:setStorageValue(storageDive, -1)
+        doChangeOutfit(player:getId(), {lookType = 267})
+        player:changeSpeed(player:getBaseSpeed()-player:getSpeed())
+        player:setStorageValue(storageGoback, -1)
+        if player:getUsingBall() then
+            transformBallItem(player:getUsingBall(), STATUS_BALL_NORMAL)
+        end
+    else
+        player:setStorageValue(storageDive, -1)
+        player:setStorageValue(storageGoback, -1)
+        if player:getUsingBall() then
+            transformBallItem(player:getUsingBall(), STATUS_BALL_NORMAL)
+        end
+    end
+
     -- Announces
     player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Bem vindo ao Pokemon MS!")
 
@@ -51,15 +85,17 @@ function onLogin(player)
         player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "[Shiny Charm]: "..convertTime(player:getStorageValue(4125) - os.time()).." restantes.")
     end
 
-    if player:getHealth() <= 40 then
-        local maxHealth = player:getMaxHealth() - player:getHealth()
-        if maxHealth < 1 then
-            maxHealth = player:getMaxHealth()
-        end
-        player:addHealth(maxHealth)
+    if player:getHealth() == 40 then
+        local healthNew = player:getMaxHealth() - 40
+        player:addHealth(healthNew)
     end
 
-    doUpdateMoves(player)
+    -- limit pokeballs
+    player:setMaxMana(6)
+    local ballCount = player:getPokeballCount() or 0
+    local playerMana = player:getMana() or 0
+    player:addMana(ballCount - playerMana)    
+
     player:updatePokebar()
 	return true
 end

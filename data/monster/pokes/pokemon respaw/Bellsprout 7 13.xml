@@ -1,4 +1,4 @@
-<monster name="Bellsprout" nameDescription="a bellsprout" race="grass" race2="nil" experience="124" speed="117">
+<monster name="Bellsprout" nameDescription="a bellsprout" race="grass" race2="no race" experience="124" speed="117">
   <health now="400" max="400" />
       <level min="0" max="0" />
     <status attack="0" defense="0" spAtk="0" spDef="0" />

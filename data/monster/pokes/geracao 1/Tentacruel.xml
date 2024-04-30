@@ -29,7 +29,7 @@
         <move name="Mud Shot" level="75" interval="8" range="3" isTarget="1" f="40" t="ground" />
         <move name="Super Sonic" level="75" interval="10" range="3" isTarget="1" f="0" t="normal" />
         <move name="Poison Bomb" level="75" interval="11" range="3" isTarget="1" f="70" t="poison" />
-        <move name="Psy Wave" level="80" interval="10" range="1" isTarget="0" f="75" t="psychic" />
+        <!-- <move name="Psy Wave" level="80" interval="10" range="1" isTarget="0" f="75" t="psychic" /> -->
         <move name="Psy Pulse" level="83" interval="10" range="4" isTarget="1" f="35" t="psychic" />
     </moves>
     <attacks>

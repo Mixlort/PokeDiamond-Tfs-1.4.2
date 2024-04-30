@@ -89,7 +89,7 @@ function onSay(cid, words, param, channel)
 		return false
 	end      
 
-	if isCreature(getCreatureTarget(cid)) and isInArray(specialabilities["Evasion"], getCreatureName(getCreatureTarget(cid))) then 
+	if isCreature(getCreatureTarget(cid)) and isInArray(specialabilities["evasion"], getCreatureName(getCreatureTarget(cid))) then 
    		local target = getCreatureTarget(cid)                                                                                       
    		if math.random(1, 100) <= passivesChances["Evasion"][getCreatureName(target)] then 
         	if isCreature(getMasterTarget(target)) then   --alterado v1.6                                                                   

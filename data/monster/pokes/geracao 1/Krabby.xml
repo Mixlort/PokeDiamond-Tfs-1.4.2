@@ -24,7 +24,7 @@
     <moves>
         <move name="Bubbles" level="20" interval="8" range="4" isTarget="1" f="40" t="water" />
         <move name="Mud Shot" level="20" interval="7" range="3" isTarget="1" f="40" t="ground" />
-        <move name="Bubble Beam" level="20" interval="7" range="3" isTarget="1" f="40" t="water" />
+        <!-- <move name="Bubble Beam" level="20" interval="7" range="3" isTarget="1" f="40" t="water" /> -->
         <move name="Crabhammer" level="15" interval="6" range="1" isTarget="1" f="60" t="normal" />
         <move name="Harden" level="13" interval="8" range="1" isTarget="0" f="0" t="normal" />
     </moves>

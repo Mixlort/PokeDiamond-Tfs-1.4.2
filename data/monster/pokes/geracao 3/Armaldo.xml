@@ -44,8 +44,8 @@
 <voice sentence="Armaldo!" />
   </voices>
   <loot>
-	<item id="12196" countmax="1" chance="1100" /> -- stone orb
-	<item id="12337" countmax="45" chance="6200" /> -- small stone
+	<item id="12196" countmax="1" chance="1100" /> 
+	<item id="12337" countmax="45" chance="6200" /> 
 			<item id="12779" chance="50" countmax="50" />
 		<item id="12778" chance="25" countmax="50" />
 		<item id="12785" chance="5" countmax="50" />

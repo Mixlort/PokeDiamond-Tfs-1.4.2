@@ -1,4 +1,4 @@
-<monster name="Zangoose" nameDescription="a zangoose" race="normal" race2="nil" experience="332" speed="152">
+<monster name="Zangoose" nameDescription="a zangoose" race="normal" race2="no race" experience="332" speed="152">
     <health now="1000" max="1000" />
       <level min="0" max="0" />
     <status attack="0" defense="0" spAtk="0" spDef="0" />

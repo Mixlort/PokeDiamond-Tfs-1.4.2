@@ -31,7 +31,7 @@
         <move name="Icy Wind" level="90" interval="6" range="1" isTarget="0" f="45" t="ice" />
         <move name="Aurora Beam" level="90" interval="6" range="1" isTarget="0" f="70" t="ice" />
         <move name="Ice Beam" level="90" interval="9" range="1" isTarget="0" f="95" t="ice" />
-        <move name="Powder Snow" level="90" interval="6" range="1" isTarget="0" f="95" t="ice" />
+        <!-- <move name="Powder Snow" level="90" interval="6" range="1" isTarget="0" f="95" t="ice" /> -->
         <move name="Twister" level="90" interval="7" range="1" isTarget="0" f="80" t="dragon" />
         <move name="Blizzard" level="90" interval="8" range="1" isTarget="0" f="100" t="ice" />
     </moves>
@@ -50,8 +50,8 @@
         <voice sentence="ARTICUNO!" />
     </voices>
     <loot>
-        <item id="12149" chance="7000" />  --Ice Feather
-        <item id="12201" chance="7000" />  --Ice Orb
-        <item id="11442" chance="100" />  --Water Stone
+        <item id="12149" chance="7000" />
+        <item id="12201" chance="7000" />
+        <item id="11442" chance="100" /> 
     </loot>
 </monster>

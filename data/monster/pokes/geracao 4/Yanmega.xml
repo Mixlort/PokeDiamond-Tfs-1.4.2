@@ -3,7 +3,7 @@
     <health now="86" max="86" />
     <status attack="76" defense="86" spAtk="116" spDef="86" />
     <look type="1586" corpse="271" />
-	<targetchange interval="10000" chance="271" />
+	<targetchange interval="10000" chance="0" />
   <flags>
     <flag summonable="1" />
     <flag attackable="1" />

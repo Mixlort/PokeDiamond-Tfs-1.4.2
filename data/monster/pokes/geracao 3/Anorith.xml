@@ -41,8 +41,8 @@
 <voice sentence="Anorith!" />
   </voices>
   <loot>
-	<item id="12165" countmax="48" chance="80000" /> -- bottle of poison
-	<item id="8309" countmax="1" chance="32000" /> -- nail
+	<item id="12165" countmax="48" chance="80000" /> 
+	<item id="8309" countmax="1" chance="32000" />
 		<item id="12779" chance="100" countmax="50" />
 		<item id="12778" chance="50" countmax="50" />
 		<item id="12785" chance="10" countmax="50" />

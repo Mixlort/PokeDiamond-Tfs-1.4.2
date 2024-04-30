@@ -1,4 +1,4 @@
-<monster name="Phione" nameDescription="a Phione" race="undead" race2="nil" experience="25000" speed="260">
+<monster name="Phione" nameDescription="a Phione" race="undead" race2="no race" experience="25000" speed="260">
   <health now="40000000" max="40000000" />
       <level min="0" max="0" />
     <status attack="0" defense="0" spAtk="0" spDef="0" />

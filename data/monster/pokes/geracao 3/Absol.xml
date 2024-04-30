@@ -45,7 +45,7 @@
 <voice sentence="Absol!" />
   </voices>
   <loot>
-	<item id="12194" countmax="1" chance="32500" />-- future orb
+	<item id="12194" countmax="1" chance="32500" />
 			<item id="12779" chance="50" countmax="50" />
 		<item id="12778" chance="25" countmax="50" />
 		<item id="12785" chance="5" countmax="50" />

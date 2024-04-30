@@ -1016,3 +1016,46 @@ function getHappinessRate(cid)
 	end
 return 1
 end
+
+function getRecorderPlayer(pos, cid)
+	local ret = 0
+	if cid and isPosEqual(getThingPos(cid), pos) then   --alterado v1.9
+	   return cid
+	end
+	local s = {}
+	s.x = pos.x
+	s.y = pos.y
+	s.z = pos.z
+		for a = 0, 255 do
+			s.stackpos = a
+			local b = getTileThingByPos(s).uid
+			if b > 1 and isPlayer(b) and getCreatureOutfit(b).lookType ~= 814 then
+				ret = b
+			end
+		end
+return ret
+end
+
+function getRecorderCreature(pos, cid)
+	local ret = 0
+	if cid and isPosEqual(getThingPos(cid), pos) then   --alterado v1.9
+	   return cid
+	end
+	local s = {}
+	s.x = pos.x
+	s.y = pos.y
+	s.z = pos.z
+		for a = 0, 255 do
+			s.stackpos = a
+			local b = getTileThingByPos(s).uid
+			if b > 1 and isCreature(b) and getCreatureOutfit(b).lookType ~= 814 then
+				ret = b
+			end
+		end
+return ret
+end
+
+function isWater(id)
+return tonumber(id) and id >= 4820 and id <= 4825 --alterado v1.9
+end
+

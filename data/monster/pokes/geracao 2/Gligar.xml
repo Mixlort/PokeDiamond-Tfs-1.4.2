@@ -43,8 +43,8 @@
 <voice sentence="GLIGAR!" />
   </voices>
   <loot>
-	<item id="12177" countmax="1" chance="25000" /> -- sandbag
-	<item id="12337" countmax="15" chance="62000" /> -- small stone
+	<item id="12177" countmax="1" chance="25000" /> 
+	<item id="12337" countmax="15" chance="62000" />
   </loot>
 
 </monster>

@@ -40,6 +40,6 @@
 <voice sentence="SWINUB!" />
   </voices>
   <loot>
-	<item id="12163" countmax="22" chance="45000" /> -- seeds
+	<item id="12163" countmax="22" chance="45000" /> 
   </loot>
 </monster>

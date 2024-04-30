@@ -22,9 +22,9 @@
         <event name="CorpseLoot" />
     </script>
     <moves>
-        <move name="Mean Look" level="75" interval="8" range="3" isTarget="1" f="0" t="normal" /> -- MEAN LOOK
+        <move name="Mean Look" level="75" interval="8" range="3" isTarget="1" f="0" t="normal" /> 
         <move name="Doubleslap" level="75" interval="6" range="1" isTarget="1" f="25" t="normal" />
-        <move name="Psy Wave" level="75" interval="10" range="1" isTarget="0" f="75" t="psychic" />
+        <!-- <move name="Psy Wave" level="75" interval="10" range="1" isTarget="0" f="75" t="psychic" /> -->
         <move name="Ice Punch" level="75" interval="10" range="1" isTarget="1" f="75" t="ice" />
         <move name="Icy Wind" level="75" interval="11" range="1" isTarget="0" f="45" t="ice" />
         <move name="Ice Beam" level="75" interval="10" range="1" isTarget="0" f="95" t="ice" />

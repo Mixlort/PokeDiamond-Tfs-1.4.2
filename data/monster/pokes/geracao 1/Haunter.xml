@@ -28,7 +28,7 @@
         <move name="Shadow Storm" level="60" interval="14" range="1" isTarget="0" f="95" t="ghost" />
         <move name="Hypnosis" level="86" interval="11" range="3" isTarget="1" f="0" t="psychic" />
         <move name="Dream Eater" level="50" interval="10" range="3" isTarget="1" f="80" t="ghost" />
-        <move name="Shadow Sneak" level="80" interval="8" range="3" isTarget="1" f="40" t="ghost" />
+        <!-- <move name="Shadow Sneak" level="80" interval="8" range="3" isTarget="1" f="40" t="ghost" /> -->
         <move name="Fear" level="45" interval="10" range="1" isTarget="0" f="0" t="ghost" />
         <move name="Hypnosis" level="45" interval="11" range="3" isTarget="1" f="0" t="psychic" />
     </moves>

@@ -49,6 +49,6 @@
     <loot>
         <item id="12161" chance="4000" countmax="19" />
         <item id="12203" chance="4000" />
-        <item id="11454" chance="100" />
+        <!-- <item id="11454" chance="100" /> -->
     </loot>
 </monster>

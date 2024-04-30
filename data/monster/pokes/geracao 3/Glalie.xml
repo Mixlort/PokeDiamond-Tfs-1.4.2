@@ -42,6 +42,6 @@
 <voice sentence="Glalie!" />
   </voices>
   <loot>
-	<item id="12201" chance="4000" countmax="22" /> -- ice orb
+	<item id="12201" chance="4000" countmax="22" /> 
   </loot>
 </monster>

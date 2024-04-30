@@ -29,7 +29,7 @@
         <move name="Fireball" level="85" interval="10" range="4" isTarget="1" f="75" t="fire" />
         <move name="Raging Blast" level="85" interval="10" range="1" isTarget="0" f="100" t="fire" />
         <move name="Fire Blast" level="86" interval="10" range="1" isTarget="0" f="115" t="fire" />
-        <move name="Dragon Rage" level="90" interval="10" range="1" isTarget="0" f="75" t="dragon" />
+        <!-- <move name="Dragon Rage" level="90" interval="10" range="1" isTarget="0" f="75" t="dragon" /> -->
         <move name="Magma Storm" level="95" interval="10" range="1" isTarget="0" f="95" t="fire" />
         <move name="Punch Flames" level="60" interval="10" range="1" isTarget="0" f="105" t="fighting" />
     </moves>

@@ -25,3 +25,7 @@ dofile('data/lib/mixlort/poke/pokeStatus.lua')
 dofile('data/lib/mixlort/poke/newStatusSyst.lua')
 dofile('data/lib/mixlort/poke/areas.lua')
 dofile('data/lib/mixlort/poke/config.lua')
+
+dofile('data/lib/mixlort/poke/new/catch system.lua')
+dofile('data/lib/mixlort/poke/new/order.lua')
+dofile('data/lib/mixlort/poke/new/pokedex system.lua')

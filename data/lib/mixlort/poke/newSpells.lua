@@ -48,7 +48,7 @@ function mixlortBaseSpell(cid, var, mina, maxa)
     local min = 0
     local max = 0
 
-    if ehMonstro(cid) and isCreature(getMasterTarget(cid)) and isInArray(specialabilities["Evasion"], getCreatureName(getMasterTarget(cid))) then 
+    if ehMonstro(cid) and isCreature(getMasterTarget(cid)) and isInArray(specialabilities["evasion"], getCreatureName(getMasterTarget(cid))) then 
     local target = getMasterTarget(cid)
     if math.random(1, 100) <= passivesChances["Evasion"][getCreatureName(target)] then                                                                                      
         if isCreature(getMasterTarget(target)) then  --alterado v1.6 

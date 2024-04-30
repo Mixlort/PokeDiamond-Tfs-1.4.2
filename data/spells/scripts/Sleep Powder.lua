@@ -38,7 +38,7 @@ function onCastSpell(cid, var)
 		ret.first = true
 		ret.cond = "Sleep"
 		
-	doMoveInArea2(cid, 0, confusion, NORMALDAMAGE, 0, 0, spell, ret)
+	doMoveInArea2(cid, 27, confusion, NORMALDAMAGE, 0, 0, spell, ret)
 
 return true
 end

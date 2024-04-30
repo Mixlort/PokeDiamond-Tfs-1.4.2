@@ -27,7 +27,7 @@
         <move name="Sweet Kiss" level="1" interval="7" range="3" isTarget="1" f="55" t="normal" />
         <move name="Moonblast" level="1" interval="7" range="1" isTarget="1" f="95" t="normal" />
         <move name="Selfheal" level="28" interval="10" range="1" isTarget="0" f="0" t="normal" />
-        <move name="Multi Slap" level="22" interval="8" range="1" isTarget="0" f="35" t="normal" />
+        <!-- <move name="Multi Slap" level="22" interval="8" range="1" isTarget="0" f="35" t="normal" /> -->
         <move name="Calm Mind" level="30" interval="10" range="1" isTarget="0" f="0" t="normal" />
     </moves>
     <attacks>

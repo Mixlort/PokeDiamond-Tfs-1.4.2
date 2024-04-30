@@ -369,3 +369,20 @@ end
 function getPokemonName(cid)
 return getCreatureName(cid)
 end
+
+function doMathDecimal(number, casas)
+
+	if math.floor(number) == number then return number end
+
+	local c = casas and casas + 1 or 3
+
+	for a = 0, 10 do
+		if math.floor(number) < math.pow(10, a) then
+			local str = string.sub(""..number.."", 1, a + c)
+			return tonumber(str)	
+		end
+	end
+
+return number
+end
+

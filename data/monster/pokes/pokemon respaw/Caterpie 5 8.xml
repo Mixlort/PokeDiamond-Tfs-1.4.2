@@ -1,4 +1,4 @@
-<monster name="Caterpie" nameDescription="a caterpie" race="bug" race2="nil" experience="36" speed="108">
+<monster name="Caterpie" nameDescription="a caterpie" race="bug" race2="no race" experience="36" speed="108">
   <health now="200" max="200" />
       <level min="0" max="0" />
     <status attack="0" defense="0" spAtk="0" spDef="0" />

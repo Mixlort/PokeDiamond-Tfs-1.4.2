@@ -1,4 +1,4 @@
-<monster name="Pinsir" nameDescription="a pinsir" race="bug" race2="nil" experience="200" speed="205">
+<monster name="Pinsir" nameDescription="a pinsir" race="bug" race2="no race" experience="200" speed="205">
     <level min="45" max="45" />
     <health now="65" max="65" />
     <status attack="125" defense="100" spAtk="55" spDef="70" />

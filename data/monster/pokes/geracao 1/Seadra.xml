@@ -26,9 +26,9 @@
         <move name="Water Pulse" level="6" interval="8" range="1" isTarget="0" f="70" t="water" />
         <move name="Quick Attack" level="45" interval="7" range="2" isTarget="1" f="40" t="normal" />
         <move name="Bubbles" level="45" interval="8" range="4" isTarget="1" f="40" t="water" />
-        <move name="Bubble Beam" level="45" interval="8" range="3" isTarget="1" f="40" t="water" />
+        <!-- <move name="Bubble Beam" level="45" interval="8" range="3" isTarget="1" f="40" t="water" /> -->
         <move name="Water Gun" level="45" interval="10" range="1" isTarget="0" f="55" t="water" />
-        <move name="Waterball" level="52" interval="10" range="4" isTarget="1" f="60" t="water" /> -- WATER OATH
+        <move name="Waterball" level="52" interval="10" range="4" isTarget="1" f="60" t="water" /> 
         <move name="Hydro Cannon" level="55" interval="10" range="1" isTarget="0" f="95" t="water" />
     </moves>
     <attacks>

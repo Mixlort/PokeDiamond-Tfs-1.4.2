@@ -24,10 +24,10 @@
     <moves>
         <move name="Quick Attack" level="80" interval="7" range="2" isTarget="1" f="40" t="normal" />
         <move name="Spark" level="80" interval="6" range="4" isTarget="1" f="50" t="electric" />
-        <move name="Thunder Bolt" level="80" interval="10" range="4" isTarget="1" f="33" t="electric" /> -- ELECTRO BALL
-        <move name="Thunder Wave" level="38" interval="6" range="1" isTarget="0" f="70" t="electric" /> -- THUNDER CLASH
+        <move name="Thunder Bolt" level="80" interval="10" range="4" isTarget="1" f="33" t="electric" /> 
+        <move name="Thunder Wave" level="38" interval="6" range="1" isTarget="0" f="70" t="electric" /> 
         <move name="Zap Cannon" level="80" interval="11" range="1" isTarget="0" f="80" t="electric" />
-        <move name="Thunder" level="80" interval="10" range="1" isTarget="0" f="100" t="electric" /> -- FALLING THUNDERS
+        <move name="Thunder" level="80" interval="10" range="1" isTarget="0" f="100" t="electric" /> 
         <move name="Electric Storm" level="80" interval="15" range="1" isTarget="0" f="105" t="electric" />
     </moves>
     <attacks>

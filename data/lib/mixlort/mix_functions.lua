@@ -262,15 +262,21 @@ function addPokeToPlayer(player, name, boost, none, ballKey, dp, unique)
     local playerMana = player:getMana() or 0
     if playerMana >= 6 and not player:getGroup():getAccess() then dp = true end
     local addBall
+    local ballId
+    if isNumber(ballKey) then
+        ballId = ballKey
+    else
+        ballId = balls[ballKey].usedOn
+    end
     if dp then
         local depot = player:getInbox()
-        addBall = depot:addItem(balls[ballKey].usedOn, 1, INDEX_WHEREEVER, FLAG_NOLIMIT)
+        addBall = depot:addItem(ballId, 1, INDEX_WHEREEVER, FLAG_NOLIMIT)
         doPlayerSendTextMessage(player, MESSAGE_STATUS_CONSOLE_BLUE, "Você já está carregando a capacidade máxima, a ball foi enviada para o DP.")
     else
         if unique then 
-            addBall = player:addUniqueItem(balls[ballKey].usedOn, 1, false)
+            addBall = player:addUniqueItem(ballId, 1, false)
         else
-            addBall = player:addItem(balls[ballKey].usedOn, 1, false)
+            addBall = player:addItem(ballId, 1, false)
         end
     end
     if not addBall then
@@ -278,19 +284,20 @@ function addPokeToPlayer(player, name, boost, none, ballKey, dp, unique)
             addEvent(doPlayerSendTextMessage, 3000, player:getId(), MESSAGE_STATUS_WARNING, "Pokemon lost. Your CP is full!")
         else
             local depot = player:getInbox()
-            addBall = depot:addItem(balls[ballKey].usedOn, 1, INDEX_WHEREEVER, FLAG_NOLIMIT)
+            addBall = depot:addItem(ballId, 1, INDEX_WHEREEVER, FLAG_NOLIMIT)
             addEvent(doPlayerSendTextMessage, 3000, player:getId(), MESSAGE_EVENT_ADVANCE, "Since you are at maximum capacity, your ball was sent to CP.")
             dp = true
         end
     end
     if addBall then
-        local happy = 250
         local maxHealth = getStatusS(name, boost, player:getLevel()).life
         addBall:setSpecialAttribute("pokeName", name)
         addBall:setSpecialAttribute("boost", boost)
         addBall:setSpecialAttribute("pokeHealth", maxHealth)
         addBall:setSpecialAttribute("pokeMaxHealth", maxHealth)
-        addBall:setSpecialAttribute("happy", happy)
+		if name == "Hitmonchan" or name == "Shiny Hitmonchan" then    
+            addBall:setSpecialAttribute("hands", 0)
+		end
         transformBallItem(addBall, STATUS_BALL_NORMAL)
         player:setStorageValue(storageGoback, -1)
         if not dp then
@@ -599,5 +606,7 @@ end
 
 function getPokemonLevel(cid)
     if not isCreature(cid) then return 0 end 
+    if not isOnline(cid) then return true end
+    if isNumber(cid) then cid = Creature(cid) end
     return MonsterType(cid:getName()):getMaxlevel()
 end

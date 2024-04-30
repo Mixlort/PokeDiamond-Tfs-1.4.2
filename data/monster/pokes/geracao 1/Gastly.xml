@@ -26,7 +26,7 @@
         <move name="Shadow Ball" level="20" interval="7" range="4" isTarget="1" f="60" t="ghost" />
         <move name="Night Shade" level="20" interval="15" range="1" isTarget="0" f="80" t="ghost" />
         <move name="Night Shade" level="24" interval="7" range="1" isTarget="0" f="80" t="ghost" />
-        <move name="Shadow Sneak" level="80" interval="8" range="3" isTarget="1" f="40" t="ghost" />
+        <!-- <move name="Shadow Sneak" level="80" interval="8" range="3" isTarget="1" f="40" t="ghost" /> -->
         <move name="Fear" level="30" interval="10" range="1" isTarget="0" f="0" t="ghost" />
     </moves>
     <attacks>

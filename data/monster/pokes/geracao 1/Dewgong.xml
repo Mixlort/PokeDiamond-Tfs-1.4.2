@@ -50,6 +50,6 @@
     <loot>
         <item id="12201" chance="4000" />
         <item id="12202" chance="4000" />
-        <item id="11454" chance="100" />
+        <!-- <item id="11454" chance="100" /> -->
     </loot>
 </monster>

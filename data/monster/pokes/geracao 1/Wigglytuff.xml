@@ -26,7 +26,7 @@
         <move name="Lovely Kiss" level="12" interval="6" range="3" isTarget="1" f="0" t="normal" />
         <move name="Sing" level="14" interval="22" range="1" isTarget="0" f="0" t="normal" />
         <move name="Hyper Voice" level="18" interval="15" range="1" isTarget="0" f="65" t="normal" />
-        <move name="Impulse Vitality" level="18" interval="20" range="1" isTarget="0" f="0" t="normal" />
+        <move name="Vitality Impulse" level="18" interval="20" range="1" isTarget="0" f="0" t="normal" />
         <move name="Healarea" level="17" interval="100" range="1" isTarget="0" f="0" t="normal" />
         <move name="Focus" level="20" interval="8" range="1" isTarget="0" f="0" t="normal" />
         <move name="Metronome" level="28" interval="8" range="1" isTarget="0" f="0" t="normal" />

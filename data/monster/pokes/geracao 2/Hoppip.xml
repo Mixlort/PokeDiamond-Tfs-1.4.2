@@ -42,7 +42,7 @@
 <voice sentence="HOPPIP!" />
   </voices>
   <loot>
-	<item id="12163" countmax="25" chance="45000" /> -- seeds
-	<item id="11441" countmax="1" chance="80" /> -- leaf stone
+	<item id="12163" countmax="25" chance="45000" /> 
+	<item id="11441" countmax="1" chance="80" /> 
   </loot>
 </monster>

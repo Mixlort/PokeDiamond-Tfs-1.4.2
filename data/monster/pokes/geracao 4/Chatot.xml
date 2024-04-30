@@ -38,6 +38,6 @@
 	<voice sentence="Chatot" />
   </voices>
   <loot>
-	<item id="12194" countmax="1" chance="32500" />-- future orb
+	<item id="12194" countmax="1" chance="32500" />
   </loot>
 </monster>

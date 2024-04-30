@@ -43,8 +43,8 @@
 <voice sentence="Froslass!" />
   </voices>
   <loot>
-	<item id="12201" countmax="22" chance="45000" /> -- ice orb
-	<item id="11454" countmax="1" chance="1" /> -- ice stone
+	<item id="12201" countmax="22" chance="45000" /> 
+	<!-- <item id="11454" countmax="1" chance="1" /> ice stone -->
 			<item id="12779" chance="50" countmax="50" />
 		<item id="12778" chance="25" countmax="50" />
 		<item id="12785" chance="5" countmax="50" />

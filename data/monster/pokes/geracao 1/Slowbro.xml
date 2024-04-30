@@ -29,7 +29,7 @@
         <move name="Waterball" level="45" interval="7" range="4" isTarget="1" f="65" t="water" />
         <move name="Water Gun" level="45" interval="7" range="1" isTarget="0" f="55" t="water" />
         <move name="Confusion" level="45" interval="10" range="1" isTarget="0" f="50" t="psychic" />
-        <move name="Psy Wave" level="45" interval="10" range="1" isTarget="0" f="75" t="psychic" />
+        <!-- <move name="Psy Wave" level="45" interval="10" range="1" isTarget="0" f="75" t="psychic" /> -->
         <move name="Psychic" level="55" interval="10" range="1" isTarget="0" f="90" t="psychic" />
     </moves>
     <attacks>

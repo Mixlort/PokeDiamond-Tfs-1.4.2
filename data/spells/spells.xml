@@ -313,5 +313,11 @@
 	<instant name="Damange Stom" words="spell316" lvl="100" mana="0" needlearn="0" script="Damange Stom.lua"></instant>
 	<instant name="Univers loon" words="spell317" lvl="100" mana="0" needlearn="0" script="Univers loon.lua"></instant>
 	<instant name="Meteor Fire" words="spell318" lvl="100" mana="0" needlearn="0" script="Meteor Fire.lua"></instant>
+
+	<instant name="Punch Flames" words="spell319" lvl="100" mana="0" needlearn="0" script="Punch Flames.lua"></instant>
+	<instant name="Sweet Kiss" words="spell320" lvl="100" mana="0" needlearn="0" script="Sweet Kiss.lua"></instant>
+	<instant name="Wish" words="spell321" lvl="100" mana="0" needlearn="0" script="Wish.lua"></instant>
+	<instant name="Vitality Impulse" words="spell322" lvl="100" mana="0" needlearn="0" script="Vitality Impulse.lua"></instant>
+	<instant name="Ice Falling" words="spell323" lvl="100" mana="0" needlearn="0" script="Ice Falling.lua"></instant>
 	
 </spells>

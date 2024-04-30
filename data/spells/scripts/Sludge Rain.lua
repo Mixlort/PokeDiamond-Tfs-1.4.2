@@ -40,6 +40,8 @@ function onCastSpell(cid, var)
 		ret.spell = spell
 
 	local function doFall(cid)
+        if not isOnline(cid) then return true end
+        if isNumber(cid) then cid = Creature(cid) end   
 		for rocks = 1, 42 do
 		    addEvent(fall, rocks*35, cid:getId(), master:getId(), POISONDAMAGE, 6, 116)
 		end

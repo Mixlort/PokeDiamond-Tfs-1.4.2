@@ -407,7 +407,7 @@ function onHealthChange(cid, attacker, value, combat)
         end
     if combat == COMBAT_PHYSICALDAMAGE then
         if isGhostPokemon(cid) then               
-            if not isInArray(specialabilities["Foresight"], getCreatureName(attacker)) then  --passiva Foresight!!
+            if not isInArray(specialabilities["foresight"], getCreatureName(attacker)) then  --passiva Foresight!!
                 doSendMagicEffect(getThingPos(cid), 3)     
                 return false
             end
@@ -455,7 +455,7 @@ function onHealthChange(cid, attacker, value, combat)
             valor = math.random(5, 10) --alterado v1.9
         end
         
-        if isInArray(specialabilities["Counter"], getCreatureName(cid)) then
+        if isInArray(specialabilities["counter"], getCreatureName(cid)) then
             if math.random(1, 100) <= 10 then
                 doCreatureAddHealth(attacker, -valor, 3, 180)    
                 valor = 0
@@ -481,7 +481,7 @@ function onHealthChange(cid, attacker, value, combat)
     --------------------------------------------------------------------------
 
     if damageCombat == GROUNDDAMAGE then
-    if isInArray(specialabilities["Levitate"], getCreatureName(cid)) then
+    if isInArray(specialabilities["levitate"], getCreatureName(cid)) then
         valor = 0                      
     end
     end

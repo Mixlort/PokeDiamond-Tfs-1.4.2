@@ -24,7 +24,7 @@
     <moves>
         <move name="Scratch" level="1" interval="7" range="1" isTarget="1" f="40" t="normal" />
         <move name="Ember" level="1" interval="14" range="4" isTarget="1" f="42" t="fire" />
-        <move name="Flamethrower" level="1" interval="8" range="1" isTarget="0" f="80" t="fire" /> -- Teste
+        <move name="Flamethrower" level="1" interval="8" range="1" isTarget="0" f="80" t="fire" />
         <move name="Fireball" level="24" interval="7" range="4" isTarget="1" f="75" t="fire" />
         <move name="Fire Fang" level="24" interval="7" range="1" isTarget="1" f="65" t="fire" />
         <move name="Fire Blast" level="40" interval="8" range="1" isTarget="0" f="115" t="fire" />

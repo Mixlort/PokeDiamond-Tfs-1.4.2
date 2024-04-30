@@ -23,7 +23,7 @@
     </script>
     <moves>
         <move name="Scratch" level="20" interval="7" range="1" isTarget="1" f="40" t="normal" />
-        <move name="Ember" level="1" interval="14" range="4" isTarget="1" f="42" t="fire" /> -- Teste
+        <move name="Ember" level="1" interval="14" range="4" isTarget="1" f="42" t="fire" /> 
         <move name="Flamethrower" level="1" interval="8" range="1" isTarget="0" f="80" t="fire" />
         <move name="Fireball" level="40" interval="8" range="4" isTarget="1" f="75" t="fire" />
         <move name="Fire Fang" level="40" interval="7" range="1" isTarget="1" f="65" t="fire" />

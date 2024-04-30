@@ -41,7 +41,7 @@
   </voices>
   <loot>
 	<item id="12171" countmax="10" chance="500" />
-	<item id="11443" countmax="1" chance="260" /> -- venom stone
-      <item id="11451" countmax="1" chance="300" /> -- earth stone
+	<item id="11443" countmax="1" chance="260" /> 
+      <item id="11451" countmax="1" chance="300" /> 
   </loot>
 </monster>

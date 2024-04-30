@@ -1,4 +1,4 @@
-<monster name="Boss Gengar" nameDescription="a Boss gengar" race="ghost" race2="nil" experience="3000" speed="227">
+<monster name="Boss Gengar" nameDescription="a Boss gengar" race="ghost" race2="no race" experience="3000" speed="227">
     <health now="1300" max="1300" />
     <level min="0" max="0" />
     <status attack="0" defense="0" spAtk="0" spDef="0" />

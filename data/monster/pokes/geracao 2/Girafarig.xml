@@ -42,7 +42,7 @@
 <voice sentence="GIRAFARIG!" />
   </voices>
   <loot>
-	<item id="12194" countmax="1" chance="55500" /> -- future orb
-	<item id="11452" countmax="1" chance="1200" /> -- enigma stone
+	<item id="12194" countmax="1" chance="55500" /> 
+	<item id="11452" countmax="1" chance="1200" /> 
   </loot>
 </monster>
