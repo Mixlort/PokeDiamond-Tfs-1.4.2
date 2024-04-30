@@ -1396,7 +1396,7 @@ class LuaScriptInterface
 
 		static int luaMonsterTypeGetElementList(lua_State* L);
 
-        static int luaMonsterTypeGetMoveList(lua_State* L); //pota
+        // static int luaMonsterTypeGetMoveList(lua_State* L); //pota
 
 		static int luaMonsterTypeAddElement(lua_State* L);
 
@@ -1424,16 +1424,16 @@ class LuaScriptInterface
 		
         static int luaMonsterTypeRace(lua_State* L);
         static int luaMonsterTypeRace2(lua_State* L); //pota
-        static int luaMonsterTypeMinLevel(lua_State* L); //pota
-        static int luaMonsterTypeMaxLevel(lua_State* L); //pota
+        // static int luaMonsterTypeMinLevel(lua_State* L); //pota
+        // static int luaMonsterTypeMaxLevel(lua_State* L); //pota
 
-        static int luaMonsterTypeAtk(lua_State* L); //mixlort
-        static int luaMonsterTypeDef(lua_State* L); //mixlort
-        static int luaMonsterTypeSpAtk(lua_State* L); //mixlort
-        static int luaMonsterTypeSpDef(lua_State* L); //mixlort
-        static int luaMonsterTypeMedia(lua_State* L); //mixlort
-        static int luaMonsterTypeBallType(lua_State* L); //mixlort
-        static int luaMonsterTypeMinBallType(lua_State* L); //mixlort
+        // static int luaMonsterTypeAtk(lua_State* L); //mixlort
+        // static int luaMonsterTypeDef(lua_State* L); //mixlort
+        // static int luaMonsterTypeSpAtk(lua_State* L); //mixlort
+        // static int luaMonsterTypeSpDef(lua_State* L); //mixlort
+        // static int luaMonsterTypeMedia(lua_State* L); //mixlort
+        // static int luaMonsterTypeBallType(lua_State* L); //mixlort
+        // static int luaMonsterTypeMinBallType(lua_State* L); //mixlort
 
 		static int luaMonsterTypeCorpseId(lua_State* L);
 		static int luaMonsterTypeManaCost(lua_State* L);

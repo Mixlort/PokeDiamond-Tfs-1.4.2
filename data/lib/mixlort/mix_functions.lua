@@ -604,9 +604,16 @@ function getPassiveRandomSpell(poke)
     return true
 end
 
-function getPokemonLevel(cid)
+function getPokemonLevel(cid, dex)
     if not isCreature(cid) then return 0 end 
-    if not isOnline(cid) then return true end
-    if isNumber(cid) then cid = Creature(cid) end
-    return MonsterType(cid:getName()):getMaxlevel()
+    if not dex then                      --alterado v1.9
+        if ehMonstro(cid) then 
+            return pokes[getCreatureName(cid)].wildLvl             
+        end
+    end
+    return pokes[getCreatureName(cid)].level
+end
+    
+function getPokemonLevelByName(name)
+    return pokes[name] and pokes[name].level or 0  --alterado v1.9
 end

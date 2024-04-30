@@ -1040,60 +1040,60 @@ MonsterType* Monsters::loadMonster(const std::string& file, const std::string& m
 		}
 	}
 
-    if ((node = monsterNode.child("level"))) { //pota
-        if ((attr = node.attribute("min"))) {
-            mType->info.minLevel = pugi::cast<uint16_t>(attr.value());
-        } else {
-            std::cout << "[Error - Monsters::loadMonster] Missing level min. " << file << std::endl;
-        }
+    // if ((node = monsterNode.child("level"))) { //pota
+    //     if ((attr = node.attribute("min"))) {
+    //         mType->info.minLevel = pugi::cast<uint16_t>(attr.value());
+    //     } else {
+    //         std::cout << "[Error - Monsters::loadMonster] Missing level min. " << file << std::endl;
+    //     }
 
-        if ((attr = node.attribute("max"))) {
-            mType->info.maxLevel = pugi::cast<uint16_t>(attr.value());
-        } else {
-            std::cout << "[Error - Monsters::loadMonster] Missing level max. " << file << std::endl;
-        }
-    }
+    //     if ((attr = node.attribute("max"))) {
+    //         mType->info.maxLevel = pugi::cast<uint16_t>(attr.value());
+    //     } else {
+    //         std::cout << "[Error - Monsters::loadMonster] Missing level max. " << file << std::endl;
+    //     }
+    // }
 
-    if ((node = monsterNode.child("status"))) { //pota
-        if ((attr = node.attribute("attack"))) {
-            mType->info.atk = pugi::cast<uint16_t>(attr.value());
-        } else {
-            std::cout << "[Error - Monsters::loadMonster] Missing atk. " << file << std::endl;
-        }
-        if ((attr = node.attribute("defense"))) {
-            mType->info.def = pugi::cast<uint16_t>(attr.value());
-        } else {
-            std::cout << "[Error - Monsters::loadMonster] Missing def. " << file << std::endl;
-        }
-        if ((attr = node.attribute("spAtk"))) {
-            mType->info.spAtk = pugi::cast<uint16_t>(attr.value());
-        } else {
-            std::cout << "[Error - Monsters::loadMonster] Missing spAtk. " << file << std::endl;
-        }
-        if ((attr = node.attribute("spDef"))) {
-            mType->info.spDef = pugi::cast<uint16_t>(attr.value());
-        } else {
-            std::cout << "[Error - Monsters::loadMonster] Missing spDef. " << file << std::endl;
-        }
-    }  
+    // if ((node = monsterNode.child("status"))) { //pota
+    //     if ((attr = node.attribute("attack"))) {
+    //         mType->info.atk = pugi::cast<uint16_t>(attr.value());
+    //     } else {
+    //         std::cout << "[Error - Monsters::loadMonster] Missing atk. " << file << std::endl;
+    //     }
+    //     if ((attr = node.attribute("defense"))) {
+    //         mType->info.def = pugi::cast<uint16_t>(attr.value());
+    //     } else {
+    //         std::cout << "[Error - Monsters::loadMonster] Missing def. " << file << std::endl;
+    //     }
+    //     if ((attr = node.attribute("spAtk"))) {
+    //         mType->info.spAtk = pugi::cast<uint16_t>(attr.value());
+    //     } else {
+    //         std::cout << "[Error - Monsters::loadMonster] Missing spAtk. " << file << std::endl;
+    //     }
+    //     if ((attr = node.attribute("spDef"))) {
+    //         mType->info.spDef = pugi::cast<uint16_t>(attr.value());
+    //     } else {
+    //         std::cout << "[Error - Monsters::loadMonster] Missing spDef. " << file << std::endl;
+    //     }
+    // }  
 
-    if ((node = monsterNode.child("catch"))) { //pota
-        if ((attr = node.attribute("media"))) {
-            mType->info.media = pugi::cast<uint16_t>(attr.value());
-        } else {
-            std::cout << "[Error - Monsters::loadMonster] Missing media. " << file << std::endl;
-        }
-        if ((attr = node.attribute("ballType"))) {
-            mType->info.ballType = attr.as_string();
-        } else {
-            std::cout << "[Error - Monsters::loadMonster] Missing ballType. " << file << std::endl;
-        }
-        if ((attr = node.attribute("minBallType"))) {
-            mType->info.minBallType = attr.as_string();
-        } else {
-            std::cout << "[Error - Monsters::loadMonster] Missing minBallType. " << file << std::endl;
-        }        
-    }  
+    // if ((node = monsterNode.child("catch"))) { //pota
+    //     if ((attr = node.attribute("media"))) {
+    //         mType->info.media = pugi::cast<uint16_t>(attr.value());
+    //     } else {
+    //         std::cout << "[Error - Monsters::loadMonster] Missing media. " << file << std::endl;
+    //     }
+    //     if ((attr = node.attribute("ballType"))) {
+    //         mType->info.ballType = attr.as_string();
+    //     } else {
+    //         std::cout << "[Error - Monsters::loadMonster] Missing ballType. " << file << std::endl;
+    //     }
+    //     if ((attr = node.attribute("minBallType"))) {
+    //         mType->info.minBallType = attr.as_string();
+    //     } else {
+    //         std::cout << "[Error - Monsters::loadMonster] Missing minBallType. " << file << std::endl;
+    //     }        
+    // }  
 
 	if ((node = monsterNode.child("flags"))) {
 		for (auto flagNode : node.children()) {
@@ -1268,16 +1268,16 @@ MonsterType* Monsters::loadMonster(const std::string& file, const std::string& m
 		}
 	}
 
-    if ((node = monsterNode.child("moves"))) { //pota
-        for (auto attackNode : node.children()) {
-            spellBlock_t sb;
-            if (deserializeSpell(attackNode, sb, monsterName)) {
-                mType->info.moves.emplace_back(std::move(sb));
-            } else {
-                std::cout << "[Warning - Monsters::loadMonster] Cant load move spell. " << file << std::endl;
-            }
-        }
-    }
+    // if ((node = monsterNode.child("moves"))) { //pota
+    //     for (auto attackNode : node.children()) {
+    //         spellBlock_t sb;
+    //         if (deserializeSpell(attackNode, sb, monsterName)) {
+    //             mType->info.moves.emplace_back(std::move(sb));
+    //         } else {
+    //             std::cout << "[Warning - Monsters::loadMonster] Cant load move spell. " << file << std::endl;
+    //         }
+    //     }
+    // }
 
     if ((node = monsterNode.child("evolutions"))) { //pota
         for (auto evolutionNode : node.children()) {
@@ -1808,7 +1808,7 @@ MonsterType* Monsters::loadMonster(const std::string& file, const std::string& m
 	mType->info.voiceVector.shrink_to_fit();
 	mType->info.scripts.shrink_to_fit();
     
-    mType->info.moves.shrink_to_fit(); //pota
+    // mType->info.moves.shrink_to_fit(); //pota
     mType->info.evolutions.shrink_to_fit(); //pota
 
 	return mType;

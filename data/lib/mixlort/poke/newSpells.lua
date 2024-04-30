@@ -145,36 +145,28 @@ function mixlortBaseSpell(cid, var, mina, maxa)
     -- end
 end
 
-function getTableMove(cid, spell)               --alterado v1.6
+function getTableMove(cid, move)               --alterado v1.6
     local backup = {f = 0, t = ""}
     if getThingName(cid) == "Ditto" and pokes[getPlayerStorageValue(cid, 1010)] and getPlayerStorageValue(cid, 1010) ~= "Ditto" then
-        name = getPlayerStorageValue(cid, 1010)
+       name = getPlayerStorageValue(cid, 1010)
     else
-        name = getThingName(cid) 
+       name = getThingName(cid)
     end
-    
-    if not isCreature(cid) or name == "" or not spell then 
-        return backup
-    end
-
-    local monsterType = MonsterType(name)
-    local x = monsterType:getMoveList()
-    if not x then 
-        return ""
-    end   
-    
+    if not isCreature(cid) or name == "" or not move then return backup end
+    local x = movestable[name]
+    if not x then return backup end   
+    local z = {x.move1, x.move2, x.move3, x.move4, x.move5, x.move6, x.move7, x.move8, x.move9, x.move10, x.move11, x.move12, x.passive1, x.passive2, x.passive3}
     if getPlayerStorageValue(cid, 21103) ~= -1 then
-        local sto = getPlayerStorageValue(cid, 21103) 
-        setPlayerStorageValue(cid, 21103, -1) 
-        return {f = sto, t = ""} 
+       local sto = getPlayerStorageValue(cid, 21103) 
+       setPlayerStorageValue(cid, 21103, -1) 
+       return {f = sto, t = ""} 
     end
-
-    for i = 1, #x do
-        if x[i].name == spell and x[i].f and x[i].t then
-            return x[i]
-        end
+    for j = 1, 15 do
+      if z[j] and z[j].name == move then
+         return z[j]
+      end
     end
-    return movesinfo[spell]
+    return movesinfo[move]
 end
 
 function getMasterTarget(cid)

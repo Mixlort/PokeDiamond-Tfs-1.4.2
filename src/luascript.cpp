@@ -2925,7 +2925,7 @@ void LuaScriptInterface::registerFunctions()
 
 	registerMethod("MonsterType", "getElementList", LuaScriptInterface::luaMonsterTypeGetElementList);
 
-    registerMethod("MonsterType", "getMoveList", LuaScriptInterface::luaMonsterTypeGetMoveList); //pota
+    // registerMethod("MonsterType", "getMoveList", LuaScriptInterface::luaMonsterTypeGetMoveList); //pota
 
 	registerMethod("MonsterType", "addElement", LuaScriptInterface::luaMonsterTypeAddElement);
 
@@ -2957,17 +2957,17 @@ void LuaScriptInterface::registerFunctions()
 
 	registerMethod("MonsterType", "race", LuaScriptInterface::luaMonsterTypeRace);
     registerMethod("MonsterType", "race2", LuaScriptInterface::luaMonsterTypeRace2); //pota
-    registerMethod("MonsterType", "minlevel", LuaScriptInterface::luaMonsterTypeMinLevel); //pota
-    registerMethod("MonsterType", "maxlevel", LuaScriptInterface::luaMonsterTypeMaxLevel); //pota
+    // registerMethod("MonsterType", "minlevel", LuaScriptInterface::luaMonsterTypeMinLevel); //pota
+    // registerMethod("MonsterType", "maxlevel", LuaScriptInterface::luaMonsterTypeMaxLevel); //pota
 
     //mixlort
-    registerMethod("MonsterType", "atk", LuaScriptInterface::luaMonsterTypeAtk);
-    registerMethod("MonsterType", "def", LuaScriptInterface::luaMonsterTypeDef);
-    registerMethod("MonsterType", "spAtk", LuaScriptInterface::luaMonsterTypeSpAtk);
-    registerMethod("MonsterType", "spDef", LuaScriptInterface::luaMonsterTypeSpDef);
-    registerMethod("MonsterType", "media", LuaScriptInterface::luaMonsterTypeMedia);
-    registerMethod("MonsterType", "ballType", LuaScriptInterface::luaMonsterTypeBallType);
-    registerMethod("MonsterType", "minBallType", LuaScriptInterface::luaMonsterTypeMinBallType);
+    // registerMethod("MonsterType", "atk", LuaScriptInterface::luaMonsterTypeAtk);
+    // registerMethod("MonsterType", "def", LuaScriptInterface::luaMonsterTypeDef);
+    // registerMethod("MonsterType", "spAtk", LuaScriptInterface::luaMonsterTypeSpAtk);
+    // registerMethod("MonsterType", "spDef", LuaScriptInterface::luaMonsterTypeSpDef);
+    // registerMethod("MonsterType", "media", LuaScriptInterface::luaMonsterTypeMedia);
+    // registerMethod("MonsterType", "ballType", LuaScriptInterface::luaMonsterTypeBallType);
+    // registerMethod("MonsterType", "minBallType", LuaScriptInterface::luaMonsterTypeMinBallType);
 
 	registerMethod("MonsterType", "corpseId", LuaScriptInterface::luaMonsterTypeCorpseId);
 	registerMethod("MonsterType", "manaCost", LuaScriptInterface::luaMonsterTypeManaCost);
@@ -14368,48 +14368,48 @@ int LuaScriptInterface::luaMonsterTypeGetAttackList(lua_State* L)
 	return 1;
 }
 
-int LuaScriptInterface::luaMonsterTypeGetMoveList(lua_State* L) //pota
-{
-    // monsterType:getMoveList()
-    MonsterType* monsterType = getUserdata<MonsterType>(L, 1);
-    if (!monsterType) {
-        lua_pushnil(L);
-        return 1;
-    }
+// int LuaScriptInterface::luaMonsterTypeGetMoveList(lua_State* L) //pota
+// {
+//     // monsterType:getMoveList()
+//     MonsterType* monsterType = getUserdata<MonsterType>(L, 1);
+//     if (!monsterType) {
+//         lua_pushnil(L);
+//         return 1;
+//     }
 
-    lua_createtable(L, monsterType->info.moves.size(), 0);
+//     lua_createtable(L, monsterType->info.moves.size(), 0);
 
-    int index = 0;
-    for (const auto& spellBlock : monsterType->info.moves) {
-        lua_createtable(L, 0, 14);
+//     int index = 0;
+//     for (const auto& spellBlock : monsterType->info.moves) {
+//         lua_createtable(L, 0, 14);
 
-        setField(L, "chance", spellBlock.chance);
-        setField(L, "isCombatSpell", spellBlock.combatSpell ? 1 : 0);
-        setField(L, "isMelee", spellBlock.isMelee ? 1 : 0);
-        setField(L, "minCombatValue", spellBlock.minCombatValue);
-        setField(L, "maxCombatValue", spellBlock.maxCombatValue);
+//         setField(L, "chance", spellBlock.chance);
+//         setField(L, "isCombatSpell", spellBlock.combatSpell ? 1 : 0);
+//         setField(L, "isMelee", spellBlock.isMelee ? 1 : 0);
+//         setField(L, "minCombatValue", spellBlock.minCombatValue);
+//         setField(L, "maxCombatValue", spellBlock.maxCombatValue);
 
-		// { ["isMelee"] = 0,["maxCombatValue"] = 0,["chance"] = 100,["spell"] = userdata: 0x2be2f4a8,
-		// ["isTarget"] = 0,["speed"] = 20,["range"] = 1,["name"] = Flamethrower,["isCombatSpell"] = 0,["minCombatValue"] = 0,}
-        // level, f, t
+// 		// { ["isMelee"] = 0,["maxCombatValue"] = 0,["chance"] = 100,["spell"] = userdata: 0x2be2f4a8,
+// 		// ["isTarget"] = 0,["speed"] = 20,["range"] = 1,["name"] = Flamethrower,["isCombatSpell"] = 0,["minCombatValue"] = 0,}
+//         // level, f, t
         
-        setField(L, "name", spellBlock.name); //pota
-        setField(L, "level", spellBlock.level);
-        setField(L, "speed", spellBlock.speed);
-        setField(L, "range", spellBlock.range);
-        setField(L, "isTarget", spellBlock.isTarget ? 1 : 0);
-        setField(L, "level", spellBlock.level);
-        setField(L, "f", spellBlock.f);
-        setField(L, "t", spellBlock.t);
-        setField(L, "passive", spellBlock.passive);
+//         setField(L, "name", spellBlock.name); //pota
+//         setField(L, "level", spellBlock.level);
+//         setField(L, "speed", spellBlock.speed);
+//         setField(L, "range", spellBlock.range);
+//         setField(L, "isTarget", spellBlock.isTarget ? 1 : 0);
+//         setField(L, "level", spellBlock.level);
+//         setField(L, "f", spellBlock.f);
+//         setField(L, "t", spellBlock.t);
+//         setField(L, "passive", spellBlock.passive);
 
-        pushUserdata<CombatSpell>(L, static_cast<CombatSpell*>(spellBlock.spell));
-        lua_setfield(L, -2, "spell");
+//         pushUserdata<CombatSpell>(L, static_cast<CombatSpell*>(spellBlock.spell));
+//         lua_setfield(L, -2, "spell");
 
-        lua_rawseti(L, -2, ++index);
-    }
-    return 1;
-}
+//         lua_rawseti(L, -2, ++index);
+//     }
+//     return 1;
+// }
 
 int LuaScriptInterface::luaMonsterTypeAddAttack(lua_State* L)
 {
@@ -14619,113 +14619,113 @@ int LuaScriptInterface::luaMonsterTypeRace2(lua_State* L) //pota
     return 1;
 }
 
-int LuaScriptInterface::luaMonsterTypeMinLevel(lua_State* L) //pota
-{
-    // monsterType:getMinLevel()
-    MonsterType* monsterType = getUserdata<MonsterType>(L, 1);
-    if (monsterType) {
-        lua_pushnumber(L, monsterType->info.minLevel);
-    } else {
-        lua_pushnil(L);
-    }
-    return 1;
-}
+// int LuaScriptInterface::luaMonsterTypeMinLevel(lua_State* L) //pota
+// {
+//     // monsterType:getMinLevel()
+//     MonsterType* monsterType = getUserdata<MonsterType>(L, 1);
+//     if (monsterType) {
+//         lua_pushnumber(L, monsterType->info.minLevel);
+//     } else {
+//         lua_pushnil(L);
+//     }
+//     return 1;
+// }
 
-int LuaScriptInterface::luaMonsterTypeMaxLevel(lua_State* L) //pota
-{
-    // monsterType:getMaxLevel()
-    MonsterType* monsterType = getUserdata<MonsterType>(L, 1);
-    if (monsterType) {
-        lua_pushnumber(L, monsterType->info.maxLevel);
-    } else {
-        lua_pushnil(L);
-    }
-    return 1;
-}
+// int LuaScriptInterface::luaMonsterTypeMaxLevel(lua_State* L) //pota
+// {
+//     // monsterType:getMaxLevel()
+//     MonsterType* monsterType = getUserdata<MonsterType>(L, 1);
+//     if (monsterType) {
+//         lua_pushnumber(L, monsterType->info.maxLevel);
+//     } else {
+//         lua_pushnil(L);
+//     }
+//     return 1;
+// }
 
-int LuaScriptInterface::luaMonsterTypeAtk(lua_State* L)
-{
-    // monsterType:getAtk()
-    MonsterType* monsterType = getUserdata<MonsterType>(L, 1);
-    if (monsterType) {
-        lua_pushnumber(L, monsterType->info.atk);
-    } else {
-        lua_pushnil(L);
-    }
-    return 1;
-}
+// int LuaScriptInterface::luaMonsterTypeAtk(lua_State* L)
+// {
+//     // monsterType:getAtk()
+//     MonsterType* monsterType = getUserdata<MonsterType>(L, 1);
+//     if (monsterType) {
+//         lua_pushnumber(L, monsterType->info.atk);
+//     } else {
+//         lua_pushnil(L);
+//     }
+//     return 1;
+// }
 
-int LuaScriptInterface::luaMonsterTypeDef(lua_State* L)
-{
-    // monsterType:getDef()
-    MonsterType* monsterType = getUserdata<MonsterType>(L, 1);
-    if (monsterType) {
-        lua_pushnumber(L, monsterType->info.def);
-    } else {
-        lua_pushnil(L);
-    }
-    return 1;
-}
+// int LuaScriptInterface::luaMonsterTypeDef(lua_State* L)
+// {
+//     // monsterType:getDef()
+//     MonsterType* monsterType = getUserdata<MonsterType>(L, 1);
+//     if (monsterType) {
+//         lua_pushnumber(L, monsterType->info.def);
+//     } else {
+//         lua_pushnil(L);
+//     }
+//     return 1;
+// }
 
-int LuaScriptInterface::luaMonsterTypeSpAtk(lua_State* L)
-{
-    // monsterType:getSpAtk()
-    MonsterType* monsterType = getUserdata<MonsterType>(L, 1);
-    if (monsterType) {
-        lua_pushnumber(L, monsterType->info.spAtk);
-    } else {
-        lua_pushnil(L);
-    }
-    return 1;
-}
+// int LuaScriptInterface::luaMonsterTypeSpAtk(lua_State* L)
+// {
+//     // monsterType:getSpAtk()
+//     MonsterType* monsterType = getUserdata<MonsterType>(L, 1);
+//     if (monsterType) {
+//         lua_pushnumber(L, monsterType->info.spAtk);
+//     } else {
+//         lua_pushnil(L);
+//     }
+//     return 1;
+// }
 
-int LuaScriptInterface::luaMonsterTypeSpDef(lua_State* L)
-{
-    // monsterType:getSpDef()
-    MonsterType* monsterType = getUserdata<MonsterType>(L, 1);
-    if (monsterType) {
-        lua_pushnumber(L, monsterType->info.spDef);
-    } else {
-        lua_pushnil(L);
-    }
-    return 1;
-}
+// int LuaScriptInterface::luaMonsterTypeSpDef(lua_State* L)
+// {
+//     // monsterType:getSpDef()
+//     MonsterType* monsterType = getUserdata<MonsterType>(L, 1);
+//     if (monsterType) {
+//         lua_pushnumber(L, monsterType->info.spDef);
+//     } else {
+//         lua_pushnil(L);
+//     }
+//     return 1;
+// }
 
-int LuaScriptInterface::luaMonsterTypeMedia(lua_State* L)
-{
-    // monsterType:getMedia()
-    MonsterType* monsterType = getUserdata<MonsterType>(L, 1);
-    if (monsterType) {
-        lua_pushnumber(L, monsterType->info.media);
-    } else {
-        lua_pushnil(L);
-    }
-    return 1;
-}
+// int LuaScriptInterface::luaMonsterTypeMedia(lua_State* L)
+// {
+//     // monsterType:getMedia()
+//     MonsterType* monsterType = getUserdata<MonsterType>(L, 1);
+//     if (monsterType) {
+//         lua_pushnumber(L, monsterType->info.media);
+//     } else {
+//         lua_pushnil(L);
+//     }
+//     return 1;
+// }
 
-int LuaScriptInterface::luaMonsterTypeBallType(lua_State* L)
-{
-    // monsterType:getBallType()
-    MonsterType* monsterType = getUserdata<MonsterType>(L, 1);
-    if (monsterType) {
-        pushString(L, monsterType->info.ballType);
-    } else {
-        lua_pushnil(L);
-    }
-    return 1;
-}
+// int LuaScriptInterface::luaMonsterTypeBallType(lua_State* L)
+// {
+//     // monsterType:getBallType()
+//     MonsterType* monsterType = getUserdata<MonsterType>(L, 1);
+//     if (monsterType) {
+//         pushString(L, monsterType->info.ballType);
+//     } else {
+//         lua_pushnil(L);
+//     }
+//     return 1;
+// }
 
-int LuaScriptInterface::luaMonsterTypeMinBallType(lua_State* L)
-{
-    // monsterType:getMinBallType()
-    MonsterType* monsterType = getUserdata<MonsterType>(L, 1);
-    if (monsterType) {
-        pushString(L, monsterType->info.minBallType);
-    } else {
-        lua_pushnil(L);
-    }
-    return 1;
-}
+// int LuaScriptInterface::luaMonsterTypeMinBallType(lua_State* L)
+// {
+//     // monsterType:getMinBallType()
+//     MonsterType* monsterType = getUserdata<MonsterType>(L, 1);
+//     if (monsterType) {
+//         pushString(L, monsterType->info.minBallType);
+//     } else {
+//         lua_pushnil(L);
+//     }
+//     return 1;
+// }
 
 int LuaScriptInterface::luaMonsterTypeAddLoot(lua_State* L)
 {

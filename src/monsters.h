@@ -116,7 +116,7 @@ class MonsterType
 		std::vector<spellBlock_t> defenseSpells;
 		std::vector<summonBlock_t> summons;
 
-        std::vector<spellBlock_t> moves; //pota
+        // std::vector<spellBlock_t> moves; //pota
         std::vector<evolutionBlock_t> evolutions; //pota
 
 		Skulls_t skull = SKULL_NONE;
@@ -153,16 +153,16 @@ class MonsterType
 		int32_t changeTargetChance = 0;
 		int32_t defense = 0;
 		int32_t armor = 0;
-        uint16_t minLevel = 0; //pota
-        uint16_t maxLevel = 0; //pota
+        // uint16_t minLevel = 0; //pota
+        // uint16_t maxLevel = 0; //pota
 
-        uint16_t atk = 0; //mixlort
-        uint16_t def = 0; //mixlort
-        uint16_t spAtk = 0; //mixlort
-        uint16_t spDef = 0; //mixlort
-        uint16_t media = 0; //mixlort
-        std::string ballType = "ultra"; //mixlort
-        std::string minBallType = "normal"; //mixlort
+        // uint16_t atk = 0; //mixlort
+        // uint16_t def = 0; //mixlort
+        // uint16_t spAtk = 0; //mixlort
+        // uint16_t spDef = 0; //mixlort
+        // uint16_t media = 0; //mixlort
+        // std::string ballType = "ultra"; //mixlort
+        // std::string minBallType = "normal"; //mixlort
 
 		bool canPushItems = false;
 		bool canPushCreatures = false;

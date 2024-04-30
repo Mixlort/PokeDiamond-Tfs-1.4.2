@@ -1,23 +1,24 @@
 function getStatusW(name)
     local isShiny = isShinyName(name)
     local newStats = MonsterType(name)
-    local level = newStats:getMaxlevel() or 1
+    local pokes = pokes[name]
+    local level = pokes.wildLvl
   	local status = {}
-	local pokeAtk = (newStats:getAtk()/10)
-	status.atk = pokeAtk * level * 0.5
-	local pokeDef = (newStats:getDef()/10)
+	local pokeAtk = pokes.offense
+	status.atk = pokeAtk * level * 4
+	local pokeDef = pokes.defense
 	status.def = pokeDef
-	local pokeSpeed = newStats:getBaseSpeed()
+	local pokeSpeed = pokes.agility
 	status.speed = pokeSpeed + 200
-	local pokeVit = (newStats:getMaxHealth()/10)
+	local pokeVit = pokes.vitality
 	status.vit = (pokeVit * level) / 2
     local pokeLife = math.floor(status.vit)
     status.life = pokeLife * HPperVITwild
-	local pokeSpAtk = (newStats:getSpAtk()/10)
+	local pokeSpAtk = pokes.specialattack
 	status.spAtk = pokeSpAtk * level * 7
-	local pokeSpDef = (newStats:getSpDef()/10)
+	local pokeSpDef = pokes.specialdefense
 	status.spDef = pokeSpDef
-	local pokeExp = newStats:getExperience()
+	local pokeExp = pokes.exp
 	status.exp = pokeExp * baseExpRate + pokeVit * pokemonExpPerLevelRate
     status.exp = (status.exp * generalExpRate / 2) * 10
     return status
@@ -29,39 +30,37 @@ function getStatusWild(poke)
 	local name = poke:getName()
     if not getStatusW(name) then return false end
     local status = {}
-    status.atk = math.floor(getStatusW(name).atk * bonusSpawnPos(poke).atk or 1)
-    status.def = math.floor(getStatusW(name).def * bonusSpawnPos(poke).def or 1)
+    status.atk = math.floor(getStatusW(name).atk * bonusSpawnPos(poke).atk) or 1
+    status.def = math.floor(getStatusW(name).def * bonusSpawnPos(poke).def) or 1
     status.speed = getStatusW(name).speed or 1
-    status.vit = math.floor(getStatusW(name).vit * bonusSpawnPos(poke).vit or 1)
-    status.life = math.floor(getStatusW(name).life * bonusSpawnPos(poke).life or 1)
-    status.spAtk = math.floor(getStatusW(name).spAtk * bonusSpawnPos(poke).spAtk or 1)
-    status.spDef = math.floor(getStatusW(name).spDef * bonusSpawnPos(poke).spDef or 1)
+    status.vit = math.floor(getStatusW(name).vit * bonusSpawnPos(poke).vit) or 1
+    status.life = math.floor(getStatusW(name).life * bonusSpawnPos(poke).life) or 1
+    status.spAtk = math.floor(getStatusW(name).spAtk * bonusSpawnPos(poke).spAtk) or 1
+    status.spDef = math.floor(getStatusW(name).spDef * bonusSpawnPos(poke).spDef) or 1
     status.exp = getStatusW(name).exp * bonusSpawnPos(poke).exp or 1
     return status
 end
 
-function getStatusS(name, boost, masterLevel, gender)
+function getStatusS(name, boost, masterLevel)
     boost = boost or 0
-    gender = gender or 0
     local newStats = MonsterType(name)
+    local pokes = pokes[name]
   	local status = {}
-	local pokeAtk = (newStats:getAtk()/10)
+	local pokeAtk = pokes.offense
 	status.atk = pokeAtk * (masterLevel + boost)
-    if gender == SEX_MALE then status.atk = status.atk + 20 end
-	local pokeDef = (newStats:getDef()/10)
+	local pokeDef = pokes.defense
 	status.def = pokeDef 
-	local pokeSpeed = newStats:getBaseSpeed()
+	local pokeSpeed = pokes.agility
 	status.speed = pokeSpeed + 160
-	local pokeVit = (newStats:getMaxHealth()/10)
+	local pokeVit = pokes.vitality
 	status.vit = pokeVit * 75 + (50 * boost)
     local pokeLife = math.floor(status.vit)
     status.life = pokeLife * HPperVITsummon
-    if gender == SEX_FEMALE then status.vit = status.vit + 90 end
-	local pokeSpAtk = (newStats:getSpAtk()/10)
+	local pokeSpAtk = pokes.specialattack
 	status.spAtk = pokeSpAtk * (masterLevel + boost ) * 9
-	local pokeSpDef = (newStats:getSpDef()/10)
+	local pokeSpDef = pokes.specialdefense
 	status.spDef = pokeSpDef + (2 * boost)
-	local pokeExp = newStats:getExperience()
+	local pokeExp = pokes.exp
 	status.exp = pokeExp * baseExpRate + pokeVit * pokemonExpPerLevelRate
     status.exp = (status.exp * generalExpRate / 2) * 10
     return status
@@ -72,17 +71,24 @@ function getStatusSummon(poke)
     if not isOnline(poke) then return false end
 	if isNumber(poke) then poke = Creature(poke) end
 	local name = poke:getName()
-	local boost = poke:getBoost()
+	local boost = 0
+    if poke:getMaster() then
+        local master = poke:getMaster()
+        if master:getUsingBall() then
+            local ball = master:getUsingBall()
+            boost = getItemAttribute(ball.uid, "boost") or 0
+        end
+    end
 	local masterLevel = poke:getMaster():getLevel()
     local status = {}
     if not getStatusS(name, boost, masterLevel) then return 1 end
-    status.atk = math.floor(getStatusS(name, boost, masterLevel).atk or 0)
-    status.def = math.floor(getStatusS(name, boost, masterLevel).def or 0)
+    status.atk = math.floor(getStatusS(name, boost, masterLevel).atk) or 0
+    status.def = math.floor(getStatusS(name, boost, masterLevel).def) or 0
     status.speed = getStatusS(name, boost, masterLevel).speed or 0
-    status.vit = math.floor(getStatusS(name, boost, masterLevel).vit or 0)
-    status.life = math.floor(getStatusS(name, boost, masterLevel).life or 0)
-    status.spAtk = math.floor(getStatusS(name, boost, masterLevel).spAtk or 0)
-    status.spDef = math.floor(getStatusS(name, boost, masterLevel).spDef or 0)
+    status.vit = math.floor(getStatusS(name, boost, masterLevel).vit) or 0
+    status.life = math.floor(getStatusS(name, boost, masterLevel).life) or 0
+    status.spAtk = math.floor(getStatusS(name, boost, masterLevel).spAtk) or 0
+    status.spDef = math.floor(getStatusS(name, boost, masterLevel).spDef) or 0
     status.exp = getStatusS(name, boost, masterLevel).exp or 0
     return status
 end
