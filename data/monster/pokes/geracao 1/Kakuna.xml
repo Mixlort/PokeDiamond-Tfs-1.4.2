@@ -1,7 +1,5 @@
 <monster name="Kakuna" nameDescription="a kakuna" race="bug" race2="poison" experience="120" speed="155">
-    <level min="15" max="15" />
     <health now="45" max="45" />
-    <status attack="25" defense="50" spAtk="25" spDef="25" />
     <look type="411" corpse="11901" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,12 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="String Shot" level="15" interval="9" range="3" isTarget="1" f="0" t="bug" />
-        <move name="String Shot" level="1" interval="9" range="3" isTarget="1" f="0" t="bug" />
-        <move name="Bug Bite" level="1" interval="6" range="10" isTarget="1" f="45" t="bug" />
-        <move name="Bug Bite" level="15" interval="5" range="10" isTarget="1" f="45" t="bug" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="String Shot" interval="2570" chance="31" range="3" />

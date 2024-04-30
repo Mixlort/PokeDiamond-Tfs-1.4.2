@@ -1,7 +1,5 @@
 <monster name="Quilava" nameDescription="a quilava" race="fire" race2="no race" experience="142" speed="145">
-    <level min="40" max="40" />
     <health now="58" max="58" />
-    <status attack="64" defense="58" spAtk="80" spDef="65" />
     <look type="674" corpse="4426" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Scratch" interval="2570" chance="31" range="1" />

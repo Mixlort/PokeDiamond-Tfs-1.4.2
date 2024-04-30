@@ -1,7 +1,5 @@
 <monster name="Slaking" nameDescription="an Slaking" race="normal" race2="no race" experience="189" speed="220">
-  <level min="90" max="100" />
     <health now="150" max="150" />
-    <status attack="160" defense="100" spAtk="95" spDef="65" />
     <look type="1706" corpse="12713" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 	  <attack name="melee" interval="2000" chance="100" range="1" min="-177" max="-219" />
         <attack name="Doubleslap" interval="2852" chance="29" range="1" />

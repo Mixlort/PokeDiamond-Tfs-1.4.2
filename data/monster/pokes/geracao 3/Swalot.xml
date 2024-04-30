@@ -1,7 +1,5 @@
 <monster name="Swalot" nameDescription="a Swalot" race="poison" race2="no race" experience="172.7" speed="175">
-  <level min="65" max="65" />
     <health now="100" max="100" />
-    <status attack="73" defense="83" spAtk="73" spDef="83" />
     <look type="1717" corpse="623" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100">  </attack>

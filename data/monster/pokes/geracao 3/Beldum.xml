@@ -1,7 +1,5 @@
 <monster name="Beldum" nameDescription="a beldum" race="steel" race2="psychic" experience="100" speed="150">
-  <level min="25" max="25" />
     <health now="40" max="40" />
-    <status attack="55" defense="80" spAtk="35" spDef="60" />
     <look type="1778" corpse="12744" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 	  <attack name="melee" interval="2000" chance="100" range="1" min="-162" max="-221" />
         <attack name="Iron Tail" interval="5625" chance="18" range="3" />

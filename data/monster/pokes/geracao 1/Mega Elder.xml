@@ -1,7 +1,5 @@
 <monster name="Mega Elder" nameDescription="a Mega Elder" race="fire" race2="flying" experience="209" speed="220">
-  <level min="120" max="90" />
-    <health now="70" max="70" />
-    <status attack="70" defense="70" spAtk="70" spDef="90" />
+  <health now="70" max="70" />
     <look type="1889" corpse="" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,19 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Dragon Claw" level="95" interval="12" range="1" isTarget="1" f="60" t="dragon" />
-        <move name="Ember" level="100" interval="10" range="8" isTarget="1" f="40" t="fire" />
-        <move name="Flamethrower" level="100" interval="16" range="1" isTarget="0" f="80" t="fire" />
-        <move name="Fireball" level="100" interval="6" range="4" isTarget="1" f="75" t="fire" />
-        <move name="Fire Fang" level="100" interval="16" range="1" isTarget="1" f="65" t="fire" />
-        <move name="Raging Blast" level="110" interval="28" range="1" isTarget="0" f="100" t="fire" />
-        <move name="Fire Blast" level="100" interval="54" range="1" isTarget="0" f="120" t="fire" />
-        <move name="Wing Attack" level="100" interval="28" range="1" isTarget="0" f="75" t="flying" />
-        <move name="Magma Storm" level="100" interval="81" range="1" isTarget="0" f="95" t="fire" />
-        <move name="Scary Face" level="110" interval="7" range="1" isTarget="0" f="0" t="ghost" />
-        <move name="Ancient Fury" level="64" interval="32" range="1" isTarget="0" f="0" t="normal" />
-    </moves>
 
 <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />

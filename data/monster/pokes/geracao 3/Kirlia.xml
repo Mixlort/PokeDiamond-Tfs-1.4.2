@@ -1,7 +1,5 @@
 <monster name="Kirlia" nameDescription="a Kirlia" race="psychic" race2="no race" experience="159.5" speed="170">
-  <level min="45" max="45" />
     <health now="38" max="38" />
-    <status attack="35" defense="35" spAtk="65" spDef="60" />
     <look type="1675" corpse="12696" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="physical" interval="2000" chance="100" range="5" min="-50" max="-100">

@@ -1,7 +1,5 @@
 <monster name="Persian" nameDescription="a persian" race="normal" race2="no race" experience="148" speed="235">
-    <level min="30" max="30" />
     <health now="65" max="65" />
-    <status attack="70" defense="60" spAtk="65" spDef="50" />
     <look type="354" corpse="11937" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,14 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Slash" level="6" interval="10" range="1" isTarget="1" f="60" t="normal" />
-        <move name="Scratch" level="8" interval="10" range="1" isTarget="1" f="40" t="normal" />
-        <move name="Bite" level="11" interval="15" range="1" isTarget="1" f="50" t="dark" />
-        <move name="Pay Day" level="15" interval="15" range="4" isTarget="1" f="50" t="normal" />
-        <move name="Fury Cutter" level="21" interval="6" range="1" isTarget="0" f="65" t="bug" />
-        <move name="Fear" level="24" interval="6" range="1" isTarget="0" f="0" t="ghost" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Slash" interval="2711" chance="30" range="1" />

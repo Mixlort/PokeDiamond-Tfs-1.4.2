@@ -1,7 +1,5 @@
 <monster name="Bastiodon" nameDescription="a Bastiodon" race="rock" race2="steel" experience="59" speed="150">
-    <level min="0" max="0" />
     <health now="60" max="60" />
-    <status attack="52" defense="168" spAtk="47" spDef="138" />
     <look type="1599" corpse="179" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Rock Throw" interval="2664" chance="30" range="4" />

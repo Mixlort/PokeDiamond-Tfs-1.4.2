@@ -1,7 +1,5 @@
 <monster name="Shiny Aron" nameDescription="a Shiny Aron" race="steel" race2="rock" experience="146" speed="210">
-  <level min="1" max="150" />
     <health now="90" max="90" />
-    <status attack="120" defense="190" spAtk="80" spDef="100" />
     <look type="1853" corpse="2807" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100">  </attack>

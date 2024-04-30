@@ -1,7 +1,5 @@
 <monster name="Wailord" nameDescription="a wailord" race="water" race2="no race" experience="231" speed="180">
-  <level min="90" max="100" />
     <health now="170" max="170" />
-    <status attack="90" defense="45" spAtk="90" spDef="45" />
     <look type="1847" corpse="587" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100">  </attack>

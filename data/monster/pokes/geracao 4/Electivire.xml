@@ -1,7 +1,5 @@
 <monster name="Electivire" nameDescription="a Electivire" race="electric" race2="no race" experience="156" speed="215">
-    <level min="0" max="0" />
     <health now="75" max="75" />
-    <status attack="123" defense="67" spAtk="95" spDef="40" />
     <look type="1539" corpse="133" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Quick Attack" interval="2617" chance="30" range="2" />

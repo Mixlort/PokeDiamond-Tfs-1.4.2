@@ -1,7 +1,5 @@
 <monster name="Smeargle" nameDescription="a smeagle" race="normal" race2="no race" experience="106" speed="135">
-    <level min="80" max="80" />
     <health now="55" max="55" />
-    <status attack="20" defense="35" spAtk="20" spDef="45" />
     <look type="942" corpse="4437" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
  <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Headbutt" interval="2758" chance="30" range="1" />

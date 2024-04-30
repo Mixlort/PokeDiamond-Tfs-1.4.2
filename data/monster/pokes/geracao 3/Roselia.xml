@@ -1,7 +1,5 @@
 <monster name="Roselia" nameDescription="a Roselia" race="grass" race2="poison" experience="92.4" speed="105">
-  <level min="45" max="45" />
     <health now="50" max="50" />
-    <status attack="60" defense="45" spAtk="100" spDef="80" />
     <look type="1771" corpse="590" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -23,9 +21,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100">  </attack>

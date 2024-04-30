@@ -1,7 +1,5 @@
 <monster name="Cleffa" nameDescription="a cleffa" race="normal" race2="no race" experience="37" speed="95">
-  <level min="20" max="20" />
     <health now="5.5" max="5.5" />
-    <status attack="2.5" defense="2.8" spAtk="4.5" spDef="" />
     <look type="885" corpse="3277" />
 	<targetchange interval="10000" chance="0" />
     <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Doubleslap" interval="2617" chance="30" range="1" />

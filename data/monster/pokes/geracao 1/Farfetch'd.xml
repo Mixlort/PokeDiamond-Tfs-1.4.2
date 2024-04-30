@@ -1,7 +1,5 @@
 <monster name="Farfetch'd" nameDescription="a farfetch'd" race="normal" race2="flying" experience="94" speed="180">
-    <level min="40" max="40" />
     <health now="52" max="52" />
-    <status attack="65" defense="55" spAtk="58" spDef="62" />
     <look type="408" corpse="11875" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -22,14 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Sand Attack" level="10" interval="8" range="1" isTarget="0" f="0" t="ground" />
-        <move name="Drill Peck" level="10" interval="5" range="1" isTarget="1" f="35" t="flying" />
-        <move name="Slash" level="10" interval="8" range="1" isTarget="1" f="60" t="normal" />
-        <move name="Stickmerang" level="44" interval="5" range="4" isTarget="1" f="55" t="flying" />
-        <move name="Drill Peck" level="25" interval="8" range="1" isTarget="1" f="35" t="flying" />
-        <move name="Wing Attack" level="46" interval="10" range="1" isTarget="0" f="75" t="flying" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Sand Attack" interval="2664" chance="30" range="4" />

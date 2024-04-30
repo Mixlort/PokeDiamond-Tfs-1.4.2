@@ -1,7 +1,5 @@
 <monster name="Magnezone" nameDescription="a Magnezone" race="electric" race2="steel" experience="134.2" speed="180">
-  <level min="100" max="110" />
     <health now="70" max="70" />
-    <status attack="140" defense="200" spAtk="190" spDef="145" />
     <look type="1624" corpse="4297" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
     <attacks>
         <attack name="physical" interval="2000" chance="100" range="5" min="-50" max="-100">

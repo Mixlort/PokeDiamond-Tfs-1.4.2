@@ -1,7 +1,5 @@
 <monster name="Octillery" nameDescription="an octillery" race="water" race2="no race" experience="164" speed="115">
-    <level min="70" max="70" />
     <health now="75" max="75" />
-    <status attack="105" defense="75" spAtk="105" spDef="35" />
     <look type="931" corpse="3582" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Headbutt" interval="2476" chance="31" range="1" />

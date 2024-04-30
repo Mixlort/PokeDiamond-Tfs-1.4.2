@@ -1,7 +1,5 @@
 <monster name="Rocket Machine" nameDescription="a Rocket Machine" race="grass" race2="no race" experience="700" speed="212">
-    <level min="0" max="0" />
     <health now="7000" max="7000" />
-    <status attack="300" defense="1000" spAtk="350" spDef="1050" />
     <look type="2102" corpse="13383" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Lick" interval="2570" chance="31" range="1" />

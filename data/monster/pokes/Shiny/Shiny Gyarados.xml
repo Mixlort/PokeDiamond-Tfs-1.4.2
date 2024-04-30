@@ -1,7 +1,5 @@
 <monster name="Shiny Gyarados" nameDescription="a Shiny gyarados" race="water" race2="flying" experience="214" speed="201">
-  <level min="0" max="0" />
     <health now="95" max="95" />
-    <status attack="125" defense="79" spAtk="60" spDef="100" />
     <look type="1324" corpse="12550" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />

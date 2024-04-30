@@ -1,7 +1,5 @@
 <monster name="Illumise" nameDescription="a Illumise" race="bug" race2="no race" experience="54" speed="105">
-    <level min="30" max="30" />
     <health now="65" max="65" />
-    <status attack="47" defense="75" spAtk="73" spDef="75" />
     <look type="1713" corpse="12728" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Quick Attack" interval="2476" chance="31" range="2" />

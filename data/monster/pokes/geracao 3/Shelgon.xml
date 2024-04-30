@@ -1,7 +1,5 @@
 <monster name="Shelgon" nameDescription="a Shelgon" race="dragon" race2="no race" experience="158.4" speed="170">
-  <level min="55" max="78" />
     <health now="65" max="65" />
-    <status attack="95" defense="100" spAtk="60" spDef="55" />
     <look type="1630" corpse="602" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />

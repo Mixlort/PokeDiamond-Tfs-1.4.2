@@ -1,7 +1,5 @@
 <monster name="Yanma" nameDescription="an yanma" race="bug" race2="flying" experience="147" speed="150">
-  <level min="0" max="0" />
     <health now="65" max="65" />
-    <status attack="65" defense="45" spAtk="75" spDef="45" />
     <look type="921" corpse="0" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 
     </attacks>

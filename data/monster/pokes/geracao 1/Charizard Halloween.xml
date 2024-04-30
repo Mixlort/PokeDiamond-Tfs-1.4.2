@@ -1,7 +1,5 @@
 <monster name="Charizard Halloween" nameDescription="a charizard Halloween" race="fire" race2="dark" experience="900" speed="170">
-    <level min="1" max="200" />
     <health now="700" max="700" />
-    <status attack="160" defense="600" spAtk="218" spDef="600" />
     <look type="2110" corpse="12565" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,18 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Scratch" level="100" interval="10" range="1" isTarget="1" f="40" t="normal" />
-        <move name="Ember" level="100" interval="10" range="8" isTarget="1" f="40" t="fire" />
-        <move name="Flamethrower" level="100" interval="10" range="1" isTarget="0" f="80" t="fire" />
-        <move name="Stomp" level="100" interval="10" range="1" isTarget="0" f="50" t="normal" />
-        <move name="Fireball" level="100" interval="10" range="4" isTarget="1" f="75" t="fire" />
-        <move name="Raging Blast" level="110" interval="7" range="1" isTarget="0" f="100" t="fire" />
-        <move name="Fire Blast" level="110" interval="11" range="1" isTarget="0" f="120" t="fire" />
-        <!-- <move name="Dragon Rage" level="100" interval="10" range="1" isTarget="0" f="90" t="dragon" /> -->
-        <move name="Hyper Beam" level="100" interval="10" range="1" isTarget="0" f="100" t="normal" />
-        <move name="Magma Storm" level="130" interval="19" range="1" isTarget="0" f="95" t="fire" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Dragon Claw" interval="2570" chance="31" range="1" />

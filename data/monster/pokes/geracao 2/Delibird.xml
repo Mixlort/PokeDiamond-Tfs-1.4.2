@@ -1,7 +1,5 @@
 <monster name="Delibird" nameDescription="a delibird" race="ice" race2="flying" experience="183" speed="130">
-  <level min="40" max="40" />
     <health now="45" max="45" />
-    <status attack="55" defense="45" spAtk="65" spDef="75" />
     <look type="937" corpse="3282" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 		<attack name="melee" interval="2000" chance="100" range="1" min="-51" max="-83" />
 		<attack name="Quick Attack" interval="2852" chance="29" range="1" />

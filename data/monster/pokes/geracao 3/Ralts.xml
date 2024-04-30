@@ -1,7 +1,5 @@
 <monster name="Ralts" nameDescription="a Ralts" race="psychic" race2="no race" experience="82.5" speed="160">
-  <level min="15" max="15" />
     <health now="28" max="28" />
-    <status attack="25" defense="25" spAtk="45" spDef="40" />
     <look type="1692" corpse="12695" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="physical" interval="2000" chance="100" range="4" min="-50" max="-100">

@@ -1,7 +1,5 @@
 <monster name="Spearow" nameDescription="a spearow" race="normal" race2="flying" experience="58" speed="70">
-    <level min="10" max="10" />
     <health now="40" max="40" />
-    <status attack="60" defense="30" spAtk="31" spDef="31" />
     <look type="378" corpse="11966" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,13 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Quick Attack" level="10" interval="7" range="2" isTarget="1" f="40" t="normal" />
-        <move name="Gust" level="10" interval="8" range="1" isTarget="0" f="65" t="flying" />
-        <move name="Sand Attack" level="10" interval="8" range="1" isTarget="0" f="0" t="ground" />
-        <move name="Peck" level="10" interval="7" range="1" isTarget="1" f="40" t="flying" />
-        <move name="Rage" level="10" interval="7" range="1" isTarget="0" f="0" t="normal" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Quick Attack" interval="2617" chance="30" range="1" />

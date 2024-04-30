@@ -1,7 +1,5 @@
 <monster name="Vibrava" nameDescription="a Vibrava" race="ground" race2="dragon" experience="158.4" speed="190">
-  <level min="50" max="58" />
     <health now="50" max="50" />
-    <status attack="70" defense="50" spAtk="50" spDef="50" />
     <look type="1720" corpse="12726" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />

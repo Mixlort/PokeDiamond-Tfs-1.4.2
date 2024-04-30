@@ -1,7 +1,5 @@
 <monster name="Boss Gengar" nameDescription="a Boss gengar" race="ghost" race2="no race" experience="3000" speed="227">
     <health now="1300" max="1300" />
-    <level min="0" max="0" />
-    <status attack="0" defense="0" spAtk="0" spDef="0" />
     <look type="595" corpse="11879" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Lick" interval="2570" chance="31" range="1" />

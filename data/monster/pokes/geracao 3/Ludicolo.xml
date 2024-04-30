@@ -1,7 +1,5 @@
 <monster name="Ludicolo" nameDescription="a Ludicolo" race="water" race2="grass" experience="208" speed="190">
-    <level min="75" max="80" />
     <health now="80" max="80" />
-    <status attack="70" defense="70" spAtk="90" spDef="70" />
     <look type="1752" corpse="12683" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Body Slam" interval="2852" chance="29" range="1" />

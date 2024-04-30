@@ -1,7 +1,5 @@
 <monster name="Metang" nameDescription="a metang" race="steel" race2="psychic" experience="196" speed="170">
-  <level min="65" max="79" />
     <health now="60" max="60" />
-    <status attack="75" defense="100" spAtk="55" spDef="80" />
     <look type="1686" corpse="12760" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 	  <attack name="melee" interval="2000" chance="100" range="1" min="-162" max="-221" />
         <attack name="Iron Tail" interval="5625" chance="18" range="3" />

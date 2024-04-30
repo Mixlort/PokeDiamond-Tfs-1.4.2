@@ -1,7 +1,5 @@
 <monster name="Shiny Claydol" nameDescription="a Shiny Claydol" race="ground" race2="psychic" experience="204.6" speed="195">
-  <level min="70" max="78" />
     <health now="190" max="190" />
-    <status attack="70" defense="105" spAtk="70" spDef="120" />
     <look type="2167" corpse="12753" />
   <targetchange interval="0" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />

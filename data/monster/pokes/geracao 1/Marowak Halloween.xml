@@ -1,7 +1,5 @@
 <monster name="Marowak Halloween" nameDescription="a marowak Halloween" race="ground" race2="dark" experience="209" speed="170">
-    <level min="1" max="200" />
     <health now="700" max="700" />
-    <status attack="160" defense="600" spAtk="218" spDef="600" />
     <look type="2108" corpse="0" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,16 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Headbutt" level="55" interval="7" range="1" isTarget="1" f="50" t="normal" />
-        <move name="Slash" level="55" interval="7" range="1" isTarget="1" f="60" t="normal" />
-        <move name="Bone Club" level="55" interval="10" range="4" isTarget="1" f="70" t="ground" />
-        <move name="Bone Slash" level="55" interval="7" range="1" isTarget="0" f="75" t="ground" />
-        <move name="Mud Shot" level="55" interval="7" range="3" isTarget="1" f="40" t="ground" />
-        <move name="Earthshock" level="59" interval="9" range="1" isTarget="0" f="75" t="ground" />
-        <move name="Shockwave" level="59" interval="10" range="1" isTarget="0" f="90" t="ground" />
-        <move name="Rage" level="65" interval="10" range="1" isTarget="0" f="0" t="normal" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Headbutt" interval="2711" chance="30" range="1" />

@@ -1,7 +1,5 @@
 <monster name="Shiny Aggron" nameDescription="a Shiny Aggron" race="steel" race2="rock" experience="248.8" speed="210">
-  <level min="1" max="150" />
     <health now="170" max="170" />
-    <status attack="210" defense="340" spAtk="110" spDef="145" />
     <look type="1851" corpse="2806" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />

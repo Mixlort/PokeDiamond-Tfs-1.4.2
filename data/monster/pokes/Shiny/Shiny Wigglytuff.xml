@@ -1,7 +1,5 @@
 <monster name="Shiny Wigglytuff" nameDescription="a shiny wigglytuff" race="normal" race2="no race" experience="109" speed="165">
-    <level min="0" max="0" />
     <health now="50" max="50" />
-    <status attack="70" defense="45" spAtk="85" spDef="50" />
     <look type="2028" corpse="12871" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Doubleslap" interval="2617" chance="30" range="1" />

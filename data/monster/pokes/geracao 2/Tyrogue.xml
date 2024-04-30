@@ -1,7 +1,5 @@
 <monster name="Tyrogue" nameDescription="a tyrogue" race="fighting" race2="no race" experience="91" speed="120">
-  <level min="30" max="30" />
     <health now="35" max="35" />
-    <status attack="35" defense="35" spAtk="35" spDef="35" />
     <look type="735" corpse="4455" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 		<attack name="melee" interval="2000" chance="100" range="1" min="-38" max="-59" />
 		<attack name="Triple Punch" interval="2852" chance="29" range="1" />

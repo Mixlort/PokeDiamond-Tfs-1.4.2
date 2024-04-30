@@ -1,7 +1,5 @@
 <monster name="Shiny Metang" nameDescription="a Shiny Metang" race="steel" race2="psychic" experience="400" speed="340">
-  <level min="1" max="150" />
     <health now="110" max="110" />
-    <status attack="120" defense="190" spAtk="90" spDef="125" />
     <look type="1862" corpse="2831" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 	  <attack name="melee" interval="2000" chance="100" range="1" min="-162" max="-221" />
         <attack name="Iron Tail" interval="5625" chance="18" range="3" />

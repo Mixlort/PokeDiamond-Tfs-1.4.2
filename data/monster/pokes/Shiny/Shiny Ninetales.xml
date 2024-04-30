@@ -1,7 +1,5 @@
 <monster name="Shiny Ninetales" nameDescription="a shiny ninetales" race="fire" race2="no race" experience="178" speed="220">
-    <level min="0" max="0" />
     <health now="73" max="73" />
-    <status attack="76" defense="75" spAtk="81" spDef="100" />
     <look type="1488" corpse="12597" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Quick Attack" interval="2570" chance="31" range="2" />

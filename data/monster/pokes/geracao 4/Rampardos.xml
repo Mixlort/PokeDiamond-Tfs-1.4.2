@@ -1,7 +1,5 @@
 <monster name="Rampardos" nameDescription="a Rampardos" race="rock" race2="no race" experience="204" speed="178">
-  <level min="0" max="0" />
     <health now="97" max="97" />
-    <status attack="165" defense="60" spAtk="65" spDef="50" />
     <look type="1502" corpse="175" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 		<attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Sand Attack" interval="2852" chance="29" range="4" />

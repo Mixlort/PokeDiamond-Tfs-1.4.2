@@ -1,7 +1,5 @@
 <monster name="Scizor" nameDescription="a scizor" race="bug" race2="steel" experience="200" speed="210">
-    <level min="100" max="100" />
     <health now="70" max="70" />
-    <status attack="130" defense="100" spAtk="55" spDef="80" />
     <look type="912" corpse="4431" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Quick Attack" interval="2570" chance="31" range="2" />

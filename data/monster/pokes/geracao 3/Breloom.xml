@@ -1,7 +1,5 @@
 <monster name="Breloom" nameDescription="a Breloom" race="grass" race2="fighting" experience="146" speed="190">
-    <level min="55" max="58" />
     <health now="60" max="60" />
-    <status attack="130" defense="80" spAtk="60" spDef="80" />
     <look type="1656" corpse="12706" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
  <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Absorb" interval="2711" chance="30" range="1" />

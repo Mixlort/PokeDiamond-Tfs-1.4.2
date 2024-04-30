@@ -1,7 +1,5 @@
 <monster name="Mega Charizard" nameDescription="a Mega charizard" race="fire" race2="flying" experience="209" speed="220">
-    <level min="800" max="90" />
     <health now="45" max="45" />
-    <status attack="70" defense="68" spAtk="80" spDef="65" />
     <look type="1888" corpse="" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,19 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Dragon Claw" level="85" interval="15" range="1" isTarget="1" f="60" t="dragon" />
-        <move name="Ember" level="85" interval="10" range="10" isTarget="1" f="42" t="fire" />
-        <move name="Flamethrower" level="87" interval="6" range="1" isTarget="0" f="80" t="fire" />
-        <move name="Fireball" level="80" interval="6" range="4" isTarget="1" f="75" t="fire" />
-        <move name="Fire Fang" level="85" interval="6" range="1" isTarget="1" f="65" t="fire" />
-        <move name="Raging Blast" level="90" interval="6" range="1" isTarget="0" f="100" t="fire" />
-        <move name="Fire Blast" level="85" interval="8" range="1" isTarget="0" f="115" t="fire" />
-        <move name="Wing Attack" level="92" interval="6" range="1" isTarget="0" f="75" t="flying" />
-        <move name="Magma Storm" level="95" interval="8" range="1" isTarget="0" f="95" t="fire" />
-        <move name="Scary Face" level="90" interval="12" range="1" isTarget="0" f="0" t="ghost" />
-        <move name="Rage" level="95" interval="6" range="1" isTarget="0" f="0" t="dragon" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Dragon Claw" interval="2570" chance="31" range="1" />

@@ -1,7 +1,5 @@
 <monster name="Vespiquen" nameDescription="an Vespiquen" race="bug" race2="flying" experience="147" speed="160">
-  <level min="0" max="0" />
     <health now="70" max="70" />
-    <status attack="80" defense="102" spAtk="80" spDef="102" />
     <look type="1528" corpse="193" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 		<attack name="melee" interval="2000" chance="100" range="1" min="-58" max="-84" />
         <attack name="Headbutt" interval="3040" chance="28" range="1" />

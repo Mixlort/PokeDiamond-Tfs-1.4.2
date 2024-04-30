@@ -1,7 +1,5 @@
 <monster name="Slugma" nameDescription="a slugma" race="fire" race2="no race" experience="38" speed="95">
-    <level min="15" max="15" />
     <health now="40" max="40" />
-    <status attack="40" defense="40" spAtk="70" spDef="75" />
     <look type="934" corpse="04436" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Rock Throw" interval="2570" chance="31" range="3" />

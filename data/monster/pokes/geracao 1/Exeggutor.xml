@@ -1,7 +1,5 @@
 <monster name="Exeggutor" nameDescription="a exeggutor" race="grass" race2="psychic" experience="212" speed="175">
-    <level min="80" max="80" />
     <health now="95" max="95" />
-    <status attack="95" defense="85" spAtk="125" spDef="65" />
     <look type="397" corpse="11874" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -22,17 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Psychic" level="80" interval="10" range="1" isTarget="0" f="80" t="psychic" />
-        <move name="Razor Leaf" level="50" interval="10" range="4" isTarget="1" f="33" t="grass" />
-        <move name="Leech Seed" level="80" interval="15" range="3" isTarget="1" f="1" t="grass" />
-        <move name="Confusion" level="55" interval="10" range="1" isTarget="0" f="50" t="psychic" />    
-        <move name="Psybeam" level="55" interval="8" range="1" isTarget="0" f="75" t="psychic" />
-        <move name="Solar Beam" level="65" interval="8" range="1" isTarget="0" f="135" t="grass" />
-        <move name="Stun Spore" level="65" interval="10" range="1" isTarget="0" f="0" t="grass" />
-        <move name="Poison Powder" level="55" interval="10" range="1" isTarget="0" f="0" t="poison" />
-        <move name="Leaf Storm" level="55" interval="10" range="1" isTarget="0" f="100" t="grass" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Hypnosis" interval="5202" chance="19" range="3" />

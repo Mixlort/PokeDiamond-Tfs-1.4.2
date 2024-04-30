@@ -1,7 +1,5 @@
 <monster name="Mega Gengar" nameDescription="a Mega gengar" race="ghost" race2="poison" experience="190" speed="230">
-    <level min="800" max="80" />
     <health now="60" max="60" />
-    <status attack="65" defense="75" spAtk="130" spDef="75" />
     <look type="1886" corpse="" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,18 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Lick" level="8" interval="6" range="1" isTarget="1" f="0" t="normal" />
-        <move name="Shadow Ball" level="12" interval="15" range="4" isTarget="1" f="60" t="ghost" />
-        <move name="Shadow Punch" level="14" interval="6" range="1" isTarget="1" f="75" t="ghost" />
-        <move name="Night Shade" level="16" interval="6" range="1" isTarget="0" f="80" t="ghost" />
-        <move name="Shadow Storm" level="21" interval="12" range="1" isTarget="0" f="95" t="ghost" />
-        <move name="Invisible" level="25" interval="15" range="1" isTarget="0" f="0" t="ghost" />
-        <move name="Nightmare" level="28" interval="8" range="3" isTarget="1" f="80" t="ghost" />
-        <move name="Hypnosis" level="52" interval="12" range="3" isTarget="1" f="0" t="psychic" />
-        <move name="Fear" level="53" interval="6" range="1" isTarget="0" f="0" t="ghost" />
-        <move name="Dark Eye" level="63" interval="6" range="1" isTarget="0" f="0" t="ghost" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Lick" interval="2570" chance="31" range="1" />

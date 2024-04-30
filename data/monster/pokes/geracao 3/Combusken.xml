@@ -1,7 +1,5 @@
 <monster name="Combusken" nameDescription="a combusken" race="fire" race2="fighting" experience="142" speed="175">
-    <level min="40" max="50" />
     <health now="60" max="60" />
-    <status attack="85" defense="60" spAtk="85" spDef="60" />
     <look type="1836" corpse="12758" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Scratch" interval="2570" chance="31" range="1" />

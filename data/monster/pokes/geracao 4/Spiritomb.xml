@@ -1,7 +1,5 @@
 <monster name="Spiritomb" nameDescription="a Spiritomb" race="ghost" race2="poison" experience="190" speed="230">
-    <level min="0" max="0" />
     <health now="145" max="145" />
-    <status attack="145" defense="145" spAtk="145" spDef="145" />
     <look type="1596" corpse="13383" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="physical" interval="2000" chance="100" range="3" min="-50" max="-100">
             <attribute key="shootEffect" value="eartharrow" />

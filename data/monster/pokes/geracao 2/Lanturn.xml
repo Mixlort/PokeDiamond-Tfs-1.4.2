@@ -1,7 +1,5 @@
 <monster name="Lanturn" nameDescription="a lanturn" race="water" race2="electric" experience="156" speed="145">
-    <level min="50" max="50" />
     <health now="125" max="125" />
-    <status attack="58" defense="58" spAtk="76" spDef="76" />
     <look type="690" corpse="3560" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Thunder Shock" interval="2570" chance="31" range="3" />

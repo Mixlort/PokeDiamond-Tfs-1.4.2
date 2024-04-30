@@ -1,7 +1,5 @@
 <monster name="Lumineon" nameDescription="an Lumineon" race="water" race2="no race" experience="66" speed="211">
-    <level min="0" max="0" />
     <health now="69" max="69" />
-    <status attack="69" defense="76" spAtk="69" spDef="76" />
     <look type="1542" corpse="255" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Headbutt" interval="2476" chance="31" range="1" />

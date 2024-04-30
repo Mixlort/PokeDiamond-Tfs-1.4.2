@@ -1,7 +1,5 @@
 <monster name="Shiny Swellow" nameDescription="an Shiny Swellow" race="normal" race2="flying" experience="162" speed="245">
-  <level min="38" max="45" />
     <health now="100" max="100" />
-    <status attack="85" defense="60" spAtk="75" spDef="60" />
     <look type="2186" corpse="12723" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Fury Attack" interval="2946" chance="28" range="1" />

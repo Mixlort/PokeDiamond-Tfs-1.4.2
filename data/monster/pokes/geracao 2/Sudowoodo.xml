@@ -1,7 +1,5 @@
 <monster name="Sudowoodo" nameDescription="a sudowoodo" race="rock" race2="no race" experience="135" speed="110">
-    <level min="80" max="80" />
     <health now="70" max="70" />
-    <status attack="100" defense="115" spAtk="30" spDef="65" />
     <look type="902" corpse="4444" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
  <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Rock Slide" interval="2758" chance="30" range="3" />

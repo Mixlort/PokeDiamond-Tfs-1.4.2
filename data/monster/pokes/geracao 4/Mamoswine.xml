@@ -1,7 +1,5 @@
 <monster name="Mamoswine" nameDescription="a Mamoswine" race="ice" race2="ground" experience="176" speed="200">
-  <level min="0" max="0" />
     <health now="110" max="110" />
-    <status attack="130" defense="80" spAtk="70" spDef="120" />
     <look type="1600" corpse="139" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 		<attack name="melee" interval="2000" chance="100" range="1" min="-22" max="-38" />
 		<attack name="Mud Bomb" interval="2852" chance="29" range="3" />

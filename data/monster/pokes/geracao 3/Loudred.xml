@@ -1,7 +1,5 @@
 <monster name="Loudred" nameDescription="an Loudred" race="normal" race2="no race" experience="189" speed="168">
-  <level min="50" max="55" />
     <health now="84" max="84" />
-    <status attack="71" defense="43" spAtk="71" spDef="43" />
     <look type="1678" corpse="12733" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 	  <attack name="melee" interval="2000" chance="100" range="1" min="-177" max="-219" />
         <attack name="Doubleslap" interval="2852" chance="29" range="1" />

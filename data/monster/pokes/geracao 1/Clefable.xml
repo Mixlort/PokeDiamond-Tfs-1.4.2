@@ -1,7 +1,5 @@
 <monster name="Clefable" nameDescription="a clefable" race="normal" race2="no race" experience="129" speed="180">
-    <level min="65" max="65" />
     <health now="60" max="60" />
-    <status attack="70" defense="73" spAtk="95" spDef="90" />
     <look type="419" corpse="11854" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,17 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Doubleslap" level="1" interval="7" range="1" isTarget="1" f="60" t="normal" />
-        <move name="Vitality Impulse" level="1" interval="20" range="3" isTarget="0" f="0" t="normal" />
-        <move name="Dazzling Gleam" level="1" interval="7" range="1" isTarget="0" f="80" t="fairy" />
-        <move name="Multislap" level="45" interval="8" range="1" isTarget="0" f="76" t="normal" />
-        <move name="Great Love" level="52" interval="13" range="4" isTarget="0" f="65" t="normal" />
-        <move name="Moonblast" level="45" interval="10" range="5" isTarget="1" f="50" t="fairy" />
-        <move name="Healarea" level="1" interval="10" range="1" isTarget="0" f="0" t="normal" />
-        <move name="Focus" level="52" interval="10" range="1" isTarget="0" f="0" t="normal" />
-        <move name="Psy Pulse" level="45" interval="10" range="1" isTarget="1" f="73" t="normal" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Doubleslap" interval="2617" chance="30" range="1" />

@@ -1,7 +1,5 @@
 <monster name="Donphan" nameDescription="a donphan" race="ground" race2="no race" experience="189" speed="112">
-    <level min="80" max="80" />
     <health now="90" max="90" />
-    <status attack="120" defense="120" spAtk="60" spDef="60" />
     <look type="1458" corpse="3283" />
 	<targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Sand Attack" interval="2664" chance="30" range="4" />

@@ -1,7 +1,5 @@
 <monster name="Shiny Farfetch'd" nameDescription="a Shiny farfetch'd" race="normal" race2="flying" experience="94" speed="180">
-  <level min="0" max="0" />
     <health now="52" max="52" />
-    <status attack="65" defense="55" spAtk="58" spDef="62" />
     <look type="1277" corpse="12502" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -23,9 +21,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />

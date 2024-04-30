@@ -1,7 +1,5 @@
 <monster name="Furious Charizard" nameDescription="a charizard" race="fire" race2="dark" experience="900" speed="170">
-    <level min="0" max="0" />
     <health now="700" max="700" />
-    <status attack="260" defense="600" spAtk="308" spDef="600" />
     <look type="1073" corpse="11851" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Dragon Claw" interval="2570" chance="31" range="1" />

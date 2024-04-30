@@ -1,7 +1,5 @@
 <monster name="Slowking" nameDescription="a slowking" race="water" speed="125" experience="164" race2="psychic">
-    <level min="100" max="100" />
     <health now="95" max="95" />
-    <status attack="75" defense="80" spAtk="100" spDef="110" />
     <look type="916" corpse="4435" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Headbutt" interval="2711" chance="30" range="1" />

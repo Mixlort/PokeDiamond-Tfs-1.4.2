@@ -1,7 +1,5 @@
 <monster name="Corsola" nameDescription="a corsola" race="water" race2="rock" experience="113" speed="95">
-  <level min="50" max="50" />
     <health now="55" max="55" />
-    <status attack="55" defense="85" spAtk="65" spDef="60" />
     <look type="926" corpse="3278" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 		<attack name="melee" interval="2000" chance="100" range="1" min="-52" max="-88" />
 		<attack name="Headbutt" interval="2852" chance="29" range="1" />

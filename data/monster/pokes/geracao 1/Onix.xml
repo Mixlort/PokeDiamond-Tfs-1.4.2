@@ -1,7 +1,5 @@
 <monster name="Onix" nameDescription="a onix" race="rock" race2="ground" experience="108" speed="190">
-    <level min="50" max="50" />
     <health now="35" max="35" />
-    <status attack="45" defense="160" spAtk="30" spDef="45" />
     <look type="599" corpse="11934" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,16 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Sand Attack" level="40" interval="9" range="1" isTarget="0" f="0" t="ground" />
-        <move name="Iron Tail" level="40" interval="7" range="1" isTarget="1" f="70" t="steel" />  
-        <move name="Rock Throw" level="40" interval="8" range="3" isTarget="1" f="55" t="rock" />
-        <move name="Rock Tomb" level="50" interval="7" range="4" isTarget="1" f="85" t="rock" />  
-        <move name="Earthshock" level="50" interval="8" range="1" isTarget="0" f="75" t="ground" />
-        <move name="Rock Slide" level="58" interval="10" range="4" isTarget="1" f="35" t="rock" />
-        <move name="Earthquake" level="58" interval="15" range="1" isTarget="0" f="2" t="ground" />
-        <move name="Harden" level="50" interval="10" range="1" isTarget="0" f="0" t="normal" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Sand Attack" interval="2852" chance="29" range="4" />

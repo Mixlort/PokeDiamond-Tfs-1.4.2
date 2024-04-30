@@ -1,7 +1,5 @@
 <monster name="Hitmontop" nameDescription="a hitmontop" race="fighting" race2="no race" experience="138" speed="135">
-    <level min="60" max="60" />
     <health now="50" max="50" />
-    <status attack="95" defense="95" spAtk="35" spDef="110" />
     <look type="952" corpse="3296" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Triple Kick" interval="2440" chance="28" range="1" />

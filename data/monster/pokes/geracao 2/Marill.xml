@@ -1,7 +1,5 @@
 <monster name="Marill" nameDescription="a marill" race="water" race2="no race" experience="58" speed="101">
-    <level min="20" max="20" />
     <health now="70" max="70" />
-    <status attack="20" defense="50" spAtk="20" spDef="50" />
     <look type="893" corpse="3575" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
    <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Bubbles" interval="2570" chance="31" range="3" />

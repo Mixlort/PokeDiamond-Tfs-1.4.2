@@ -1,7 +1,5 @@
 <monster name="Azumarill" nameDescription="an azumarill" race="water" race2="no race" experience="153" speed="120">
-  <level min="65" max="65" />
     <health now="100" max="100" />
-    <status attack="50" defense="80" spAtk="60" spDef="80" />
     <look type="894" corpse="3270" />
  <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Bubbles" interval="2570" chance="31" range="3" />

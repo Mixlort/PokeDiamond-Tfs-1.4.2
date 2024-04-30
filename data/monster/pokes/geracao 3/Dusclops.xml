@@ -1,7 +1,5 @@
 <monster name="Dusclops" nameDescription="a Dusclops" race="ghost" race2="no race" experience="138.6" speed="145">
-  <level min="42" max="40" />
     <health now="40" max="40" />
-    <status attack="70" defense="130" spAtk="60" spDef="130" />
     <look type="1632" corpse="618" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="physical" interval="2000" chance="100" range="3" min="-50" max="-100">

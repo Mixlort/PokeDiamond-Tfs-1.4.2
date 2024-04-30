@@ -1,7 +1,5 @@
 <monster name="Heracross" nameDescription="a heracross" race="bug" race2="fighting" experience="200" speed="135">
-  <level min="80" max="80" />
     <health now="80" max="80" />
-    <status attack="125" defense="75" spAtk="40" spDef="95" />
     <look type="915" corpse="3295" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 		<attack name="melee" interval="2000" chance="100" range="1" min="-92" max="-136" />
 		<attack name="Triple Punch" interval="3040" chance="28" range="1" />

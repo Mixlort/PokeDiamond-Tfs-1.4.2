@@ -1,7 +1,5 @@
 <monster name="Graveler" nameDescription="a graveler" race="rock" race2="ground" experience="134" speed="155">
-    <level min="40" max="40" />
     <health now="55" max="55" />
-    <status attack="95" defense="115" spAtk="45" spDef="45" />
     <look type="598" corpse="12140" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,15 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Rock Throw" level="40" interval="8" range="4" isTarget="1" f="55" t="rock" />
-        <move name="Sand Attack" level="1" interval="8" range="1" isTarget="0" f="0" t="ground" />
-        <move name="Rock Tomb" level="16" interval="9" range="4" isTarget="1" f="85" t="rock" />  
-        <move name="Earthshock" level="40" interval="8" range="1" isTarget="0" f="75" t="ground" />
-        <move name="Rock Slide" level="50" interval="10" range="3" isTarget="1" f="35" t="rock" />
-        <move name="Harden" level="45" interval="10" range="1" isTarget="0" f="0" t="normal" />
-        <move name="Selfdestruct" level="42" interval="3" range="1" isTarget="0" f="0" t="normal" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Rock Throw" interval="2664" chance="30" range="4" />

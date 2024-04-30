@@ -1,7 +1,5 @@
 <monster name="Ho-oh" nameDescription="a ho-oh" race="fire" race2="flying" experience="220" speed="170">
-    <level min="150" max="300" />
-    <health now="10000" max="10000" />
-    <status attack="630" defense="1010" spAtk="410" spDef="854" />
+    <health now="100" max="100" />
     <look type="955" corpse="3297" />
     <targetchange interval="10000" chance="0" />
   <flags>
@@ -21,10 +19,8 @@
     <script>
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
+	    <event name="oh-oh" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 	<attack name="melee" interval="2000" chance="100" range="1" min="-236" max="-279">
    	</attack>
@@ -38,7 +34,4 @@
   </voices>
     <loot>
       </loot>
-    <script>
-	<event name="oh-oh" />
-     </script>
 </monster>

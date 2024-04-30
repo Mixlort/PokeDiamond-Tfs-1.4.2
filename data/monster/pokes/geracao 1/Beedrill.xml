@@ -1,7 +1,5 @@
 <monster name="Beedrill" nameDescription="a beedrill" race="bug" race2="poison" experience="159" speed="195">
-    <level min="30" max="30" />
     <health now="65" max="65" />
-    <status attack="90" defense="40" spAtk="45" spDef="80" />
     <look type="396" corpse="11844" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,14 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="String Shot" level="25" interval="9" range="3" isTarget="1" f="0" t="bug" />
-        <move name="String Shot" level="1" interval="9" range="3" isTarget="1" f="0" t="bug" />
-        <move name="Pin Missile" level="1" interval="6" range="1" isTarget="0" f="80" t="bug" />
-        <move name="Pin Missile" level="30" interval="10" range="1" isTarget="0" f="80" t="bug" />
-        <move name="Rage" level="25" interval="7" range="1" isTarget="0" f="0" t="normal" />
-        <move name="Strafe" level="33" interval="10" range="1" isTarget="0" f="0" t="normal" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="String Shot" interval="2664" chance="30" range="3" />

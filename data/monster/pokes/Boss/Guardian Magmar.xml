@@ -1,7 +1,5 @@
 <monster name="Guardian Magmar" nameDescription="a Guardian magmar" race="fire" race2="no race" experience="500" speed="212">
-    <level min="0" max="0" />
     <health now="3000" max="3000" />
-    <status attack="150" defense="150" spAtk="350" spDef="150" />
     <look type="427" corpse="11912" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Scratch" interval="2852" chance="29" range="1" />

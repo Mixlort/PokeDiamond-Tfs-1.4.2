@@ -1,7 +1,5 @@
 <monster name="Primeape" nameDescription="a primeape" race="fighting" race2="no race" experience="149" speed="215">
-    <level min="50" max="50" />
     <health now="65" max="65" />
-    <status attack="105" defense="60" spAtk="60" spDef="50" />
     <look type="454" corpse="11948" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,16 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Scratch" level="50" interval="7" range="1" isTarget="1" f="40" t="normal" />
-        <move name="Triple Kick" level="50" interval="6" range="1" isTarget="1" f="60" t="fighting" />   
-        <move name="Karate Chop" level="50" interval="8" range="1" isTarget="1" f="50" t="fighting" />
-        <move name="Cross Chop" level="54" interval="10" range="1" isTarget="0" f="80" t="fighting" />
-        <move name="Mega Punch" level="56" interval="7" range="1" isTarget="1" f="85" t="fighting" />
-        <move name="Mega Kick" level="54" interval="8" range="1" isTarget="1" f="85" t="fighting" />
-        <move name="Destroyer Hand" level="65" interval="10" range="1" isTarget="0" f="90" t="fighting" />
-        <move name="Fear" level="60" interval="9" range="1" isTarget="0" f="0" t="ghost" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Scratch" interval="2664" chance="30" range="1" />

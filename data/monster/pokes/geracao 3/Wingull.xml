@@ -1,7 +1,5 @@
 <monster name="Wingull" nameDescription="a Wingull" race="water" race2="flying" experience="66" speed="205">
-    <level min="18" max="27" />
     <health now="40" max="40" />
-    <status attack="30" defense="30" spAtk="55" spDef="30" />
     <look type="1584" corpse="12730" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
  <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Headbutt" interval="2617" chance="30" range="1" />

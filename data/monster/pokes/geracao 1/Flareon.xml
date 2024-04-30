@@ -1,7 +1,5 @@
 <monster name="Flareon" nameDescription="a flareon" race="fire" race2="no race" experience="198" speed="185">
-    <level min="55" max="55" />
     <health now="65" max="65" />
-    <status attack="130" defense="60" spAtk="95" spDef="110" />
     <look type="365" corpse="11877" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,16 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Quick Attack" level="55" interval="7" range="2" isTarget="1" f="40" t="normal" />
-        <move name="Bite" level="55" interval="9" range="1" isTarget="1" f="50" t="dark" />
-        <move name="Flamethrower" level="55" interval="10" range="1" isTarget="0" f="70" t="fire" />
-        <move name="Fireball" level="55" interval="8" range="4" isTarget="1" f="65" t="fire" />
-        <move name="Fire Fang" level="55" interval="7" range="1" isTarget="1" f="65" t="fire" />
-        <move name="Raging Blast" level="55" interval="10" range="1" isTarget="0" f="80" t="fire" />
-        <move name="Magma Storm" level="55" interval="14" range="1" isTarget="0" f="95" t="fire" />
-        <move name="Fire Blast" level="65" interval="13" range="1" isTarget="0" f="95" t="fire" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Quick Attack" interval="2617" chance="30" range="2" />

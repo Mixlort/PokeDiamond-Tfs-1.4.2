@@ -1,7 +1,5 @@
 <monster name="Elder Charizard" nameDescription="a Elder Charizard" race="fire" race2="flying" experience="229.9" speed="133">
-  <level min="0" max="0" />
     <health now="135" max="135" />
-    <status attack="134" defense="120" spAtk="199" spDef="140" />
     <look type="645" corpse="12425" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />

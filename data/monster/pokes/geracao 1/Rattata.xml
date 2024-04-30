@@ -1,7 +1,5 @@
 <monster name="Rattata" nameDescription="a rattata" race="normal" race2="no race" experience="10" speed="192">
-    <level min="5" max="5" />
     <health now="30" max="30" />
-    <status attack="56" defense="35" spAtk="25" spDef="35" />
     <look type="387" corpse="11953" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,12 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Quick Attack" level="1" interval="7" range="2" isTarget="1" f="40" t="normal" />
-        <move name="Scratch" level="1" interval="7" range="10" isTarget="1" f="40" t="normal" />
-        <move name="Bite" level="7" interval="7" range="10" isTarget="1" f="50" t="dark" />
-        <move name="Super Fang" level="12" interval="7" range="1" isTarget="1" f="65" t="normal" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
 

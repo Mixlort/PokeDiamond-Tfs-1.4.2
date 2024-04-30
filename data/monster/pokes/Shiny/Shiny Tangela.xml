@@ -1,7 +1,5 @@
 <monster name="Shiny Tangela" nameDescription="a Shiny tangela" race="grass" race2="no race" experience="166" speed="180">
-  <level min="0" max="0" />
     <health now="65" max="65" />
-    <status attack="55" defense="115" spAtk="100" spDef="40" />
     <look type="1308" corpse="12534" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -23,9 +21,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />

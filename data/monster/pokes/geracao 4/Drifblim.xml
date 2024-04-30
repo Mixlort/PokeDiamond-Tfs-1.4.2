@@ -1,7 +1,5 @@
 <monster name="Drifblim" nameDescription="a Drifblim" race="ghost" race2="flying" experience="107" speed="200">
-  <level min="0" max="0" />
     <health now="150" max="150" />
-    <status attack="80" defense="44" spAtk="90" spDef="54" />
     <look type="1537" corpse="171" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 		<attack name="melee" interval="2000" chance="100" range="1" min="-51" max="-70" />
         <attack name="Quick Attack" interval="2570" chance="31" range="1" />

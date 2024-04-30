@@ -1,7 +1,5 @@
 <monster name="Hoppip" nameDescription="a hoppip" race="grass" race2="flying" experience="74" speed="112">
-  <level min="5" max="5" />
     <health now="35" max="35" />
-    <status attack="35" defense="40" spAtk="35" spDef="55" />
     <look type="898" corpse="3554" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 	    <attack name="melee" interval="2000" chance="100" range="1" min="-15" max="-30" />
         <attack name="Absorb" interval="2570" chance="31" range="1" />

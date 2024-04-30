@@ -1,7 +1,5 @@
 <monster name="Toxicroak" nameDescription="a Toxicroak" race="poison" race2="fighting" experience="126" speed="205">
-    <level min="0" max="0" />
     <health now="83" max="83" />
-    <status attack="106" defense="65" spAtk="86" spDef="65" />
     <look type="1534" corpse="249" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Absorb" interval="2570" chance="31" range="1" />

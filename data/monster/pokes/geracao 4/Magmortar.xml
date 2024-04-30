@@ -1,7 +1,5 @@
 <monster name="Magmortar" nameDescription="a magmortar" race="fire" race2="no race" experience="158" speed="103">
-    <level min="0" max="0" />
     <health now="75" max="75" />
-    <status attack="95" defense="67" spAtk="125" spDef="120" />
     <look type="1602" corpse="102" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Scratch" interval="2852" chance="29" range="1" />

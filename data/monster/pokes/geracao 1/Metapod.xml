@@ -1,7 +1,5 @@
 <monster name="Metapod" nameDescription="a metapod" race="bug" race2="no race" experience="72" speed="150">
-    <level min="15" max="15" />
     <health now="50" max="50" />
-    <status attack="20" defense="55" spAtk="25" spDef="25" />
     <look type="382" corpse="11918" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -22,12 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="String Shot" level="15" interval="4" range="3" isTarget="1" f="0" t="bug" />
-        <move name="Headbutt" level="1" interval="5" range="1" isTarget="1" f="70" t="normal" />
-        <move name="Harden" level="1" interval="6" range="1" isTarget="0" f="0" t="normal" />
-        <move name="Bug Bite" level="15" interval="6" range="1" isTarget="1" f="45" t="bug" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="String Shot" interval="2617" chance="30" range="3" />

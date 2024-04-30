@@ -1,7 +1,5 @@
 <monster name="Phione" nameDescription="a Phione" race="undead" race2="no race" experience="25000" speed="260">
   <health now="40000000" max="40000000" />
-      <level min="0" max="0" />
-    <status attack="0" defense="0" spAtk="0" spDef="0" />
     <look type="1679" corpse="2020" />
 
   	<targetchange interval="1000" chance="1000" />
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
     <attack name="headbutt" interval="1000" chance="50" min="-4000" max="-80000">
     </attack>

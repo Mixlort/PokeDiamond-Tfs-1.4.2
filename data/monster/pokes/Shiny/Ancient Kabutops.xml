@@ -1,7 +1,5 @@
 <monster name="Ancient Kabutops" nameDescription="a Ancient kabutops" race="rock" race2="water" experience="199" speed="200">
-    <level min="0" max="0" />
     <health now="60" max="60" />
-    <status attack="115" defense="105" spAtk="65" spDef="75" />
     <look type="1881" corpse="4301" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Bubbles" interval="2805" chance="29" range="3" />

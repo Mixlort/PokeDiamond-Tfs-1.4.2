@@ -1,7 +1,5 @@
 <monster name="Furret" nameDescription="a furret" race="normal" race2="no race" experience="116" speed="156">
-    <level min="35" max="35" />
     <health now="85" max="85" />
-    <status attack="76" defense="64" spAtk="45" spDef="55" />
     <look type="953" corpse="3291" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Quick Attack" interval="2476" chance="31" range="2" />

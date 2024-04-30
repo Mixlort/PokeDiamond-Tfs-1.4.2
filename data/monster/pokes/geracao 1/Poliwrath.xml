@@ -1,7 +1,5 @@
 <monster name="Poliwrath" nameDescription="a poliwrath" race="water" race2="fighting" experience="185" speed="190">
-    <level min="65" max="65" />
     <health now="90" max="90" />
-    <status attack="95" defense="95" spAtk="70" spDef="90" />
     <look type="455" corpse="11945" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,17 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Mud Shot" level="65" interval="8" range="3" isTarget="1" f="40" t="ground" />
-        <move name="Waterball" level="20" interval="8" range="4" isTarget="1" f="65" t="water" />
-        <move name="Bubbles" level="22" interval="8" range="4" isTarget="1" f="40" t="water" />
-        <move name="Water Gun" level="65" interval="8" range="1" isTarget="0" f="55" t="water" />
-        <move name="Dizzy Punch" level="69" interval="8" range="1" isTarget="1" f="75" t="fighting" />
-        <move name="Mega Punch" level="65" interval="8" range="1" isTarget="1" f="85" t="fighting" />
-        <move name="Ice Punch" level="65" interval="10" range="1" isTarget="1" f="75" t="ice" />
-        <move name="Ice Beam" level="73" interval="11" range="1" isTarget="0" f="95" t="ice" />
-        <move name="Hypnosis" level="65" interval="10" range="3" isTarget="1" f="0" t="psychic" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Doubleslap" interval="2476" chance="31" range="1" />

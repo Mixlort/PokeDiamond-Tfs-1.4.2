@@ -1,7 +1,5 @@
 <monster name="Chikorita" nameDescription="a chikorita" race="grass" race2="no race" experience="64" speed="106">
-  <level min="5" max="20" />
     <health now="45" max="45" />
-    <status attack="49" defense="65" spAtk="49" spDef="65" />
     <look type="670" corpse="3275" />
   <targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Quick Attack" interval="2476" chance="31" range="2" />

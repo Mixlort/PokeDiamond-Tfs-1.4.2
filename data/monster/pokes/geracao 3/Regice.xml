@@ -1,7 +1,5 @@
 <monster name="Regice" nameDescription="a Regice" race="ice" race2="no race" experience="2" speed="170">
-  <level min="50" max="50" />
     <health now="10000" max="10000" />
-    <status attack="505" defense="1000" spAtk="450" spDef="800" />
     <look type="1696" corpse="9960" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 	<attack name="melee" interval="2000" chance="100" range="1" min="-51" max="-83" />
       <attack name="Doubleslap" interval="2852" chance="29" range="1" />

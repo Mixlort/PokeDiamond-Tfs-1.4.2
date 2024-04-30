@@ -1,7 +1,5 @@
 <monster name="Gothitelle" nameDescription="a Gothitelle" race="ghost" race2="poison" experience="209" speed="133">
-  <level min="0" max="0" />
     <health now="70" max="70" />
-    <status attack="55" defense="95" spAtk="95" spDef="95" />
     <look type="1915" corpse="12513" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />

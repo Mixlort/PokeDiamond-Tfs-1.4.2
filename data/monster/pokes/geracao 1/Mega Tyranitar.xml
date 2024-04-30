@@ -1,7 +1,5 @@
 <monster name="Mega Tyranitar" nameDescription="a Mega tyranitar" race="rock" race2="dark" experience="218" speed="135">
-    <level min="120" max="200" />
     <health now="190" max="190" />
-    <status attack="150" defense="200" spAtk="155" spDef="200" />
     <look type="1892" corpse="4454" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,18 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Bite" level="100" interval="10" range="1" isTarget="1" f="50" t="dark" />
-        <move name="Shadowave" level="102" interval="6" range="1" isTarget="0" f="65" t="dark" />
-        <move name="Crunch" level="104" interval="15" range="1" isTarget="0" f="65" t="dark" />             --opicional
-        <move name="Dark Pulse" level="100" interval="6" range="4" isTarget="1" f="35" t="dark" />
-        <move name="Rock Slide" level="100" interval="6" range="3" isTarget="1" f="35" t="rock" />   
-        <move name="Stone Edge" level="100" interval="15" range="3" isTarget="1" f="35" t="rock" />
-        <move name="Earthquake" level="100" interval="12" range="1" isTarget="0" f="2" t="ground" />    
-        <move name="Hyper Beam" level="106" interval="12" range="1" isTarget="0" f="100" t="normal" />
-        <move name="Rock Throw" level="108" interval="15" range="4" isTarget="1" f="55" t="rock" />  --NAO fazer sandstorm
-        <move name="Scary Face" level="100" interval="8" range="1" isTarget="0" f="0" t="ghost" />      
-    </moves>
  <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-26" max="-49" />
 		<attack name="Rock Throw" interval="2476" chance="31" range="3" />

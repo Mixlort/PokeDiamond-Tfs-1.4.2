@@ -1,7 +1,5 @@
 <monster name="Aipom" nameDescription="an aipom" race="normal" race2="no race" experience="94" speed="140">
-  <level min="40" max="40" />
     <health now="55" max="55" />
-    <status attack="70" defense="55" spAtk="40" spDef="55" />
     <look type="890" corpse="3267" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Quick Attack" interval="2711" chance="30" range="1" />

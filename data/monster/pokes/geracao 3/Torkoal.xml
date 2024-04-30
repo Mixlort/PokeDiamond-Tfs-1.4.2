@@ -1,7 +1,5 @@
 <monster name="Torkoal" nameDescription="a Torkoal" race="fire" race2="no race" experience="211.2" speed="140">
-  <level min="55" max="62" />
     <health now="70" max="70" />
-    <status attack="85" defense="140" spAtk="85" spDef="140" />
     <look type="1754" corpse="12724" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100">  </attack>

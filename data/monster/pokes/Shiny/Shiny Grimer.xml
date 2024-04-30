@@ -1,7 +1,5 @@
 <monster name="Shiny Grimer" nameDescription="a Shiny grimer" race="poison" race2="no race" experience="90" speed="145">
-  <level min="0" max="0" />
     <health now="80" max="80" />
-    <status attack="80" defense="50" spAtk="40" spDef="50" />
     <look type="1282" corpse="12507" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />

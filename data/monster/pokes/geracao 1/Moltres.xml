@@ -1,7 +1,5 @@
 <monster name="Moltres" nameDescription="a moltres" race="fire" race2="flying" experience="217" speed="2100">
-    <level min="150" max="150" />
     <health now="10006" max="10006" />
-    <status attack="500" defense="1003" spAtk="405" spDef="800" />
     <look type="616" corpse="11921" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
     </attacks>

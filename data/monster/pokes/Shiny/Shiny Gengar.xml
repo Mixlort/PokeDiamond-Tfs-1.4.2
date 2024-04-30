@@ -1,7 +1,5 @@
 <monster name="Shiny Gengar" nameDescription="a Shiny gengar" race="ghost" race2="poison" experience="190" speed="230">
-  <level min="0" max="0" />
     <health now="60" max="60" />
-    <status attack="65" defense="60" spAtk="130" spDef="75" />
     <look type="1288" corpse="12513" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />

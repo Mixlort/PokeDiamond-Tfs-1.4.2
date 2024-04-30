@@ -1,7 +1,5 @@
 <monster name="Unown" nameDescription="an unown" race="psychic" race2="no race" experience="61" speed="110">
-  <level min="100" max="100" />
     <health now="48" max="48" />
-    <status attack="72" defense="48" spAtk="72" spDef="48" />
     <look type="2201" corpse="4568" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 	  <attack name="melee" interval="2000" chance="100" range="1" min="-25" max="-40" />
   </attacks>

@@ -1,7 +1,5 @@
 <monster name="Hitmonlee" nameDescription="a hitmonlee" race="fighting" race2="no race" experience="139" speed="207">
-    <level min="60" max="60" />
     <health now="50" max="50" />
-    <status attack="120" defense="53" spAtk="35" spDef="110" />
     <look type="371" corpse="11891" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,12 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Triple Kick Lee" level="1" interval="12" range="1" isTarget="1" f="70" t="fighting" />
-        <move name="Mega Kick" level="1" interval="16" range="1" isTarget="1" f="85" t="fighting" />
-        <move name="Multi-Kick" level="1" interval="6" range="1" isTarget="0" f="75" t="fighting" />
-        <move name="Furious Legs" level="1" interval="24" range="1" isTarget="0" f="0" t="fighting" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Mega Kick" interval="2928" chance="27" range="1" />

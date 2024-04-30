@@ -1,7 +1,5 @@
 <monster name="Lapras" nameDescription="a lapras" race="water" race2="ice" experience="219" speed="180">
-    <level min="80" max="85" />
     <health now="130" max="130" />
-    <status attack="130" defense="85" spAtk="80" spDef="48" />
     <look type="544" corpse="11906" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -22,18 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Horn Attack" level="80" interval="7" range="2" isTarget="1" f="60" t="normal" />
-        <move name="Ice Beam" level="80" interval="8" range="1" isTarget="0" f="95" t="ice" />
-        <move name="Ice Shards" level="80" interval="10" range="4" isTarget="1" f="45" t="ice" />
-        <move name="Water Gun" level="80" interval="7" range="1" isTarget="0" f="55" t="water" />
-        <move name="Waterball" level="80" interval="7" range="4" isTarget="1" f="60" t="water" />
-        <move name="Aurora Beam" level="80" interval="10" range="1" isTarget="0" f="80" t="ice" />
-        <move name="Blizzard" level="80" interval="13" range="1" isTarget="0" f="100" t="ice" />
-        <move name="Hydropump" level="90" interval="10" range="1" isTarget="0" f="120" t="water" />
-        <move name="Ice Falling" level="90" interval="7" range="1" isTarget="0" f="140" t="ice" />
-        <move name="Sing" level="90" interval="10" range="1" isTarget="0" f="0" t="normal" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Horn Attack" interval="2805" chance="29" range="1" />

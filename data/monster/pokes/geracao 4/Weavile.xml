@@ -1,7 +1,5 @@
 <monster name="Weavile" nameDescription="a Weavile" race="dark" race2="ice" experience="176" speed="245">
-  <level min="0" max="0" />
     <health now="70" max="70" />
-    <status attack="120" defense="65" spAtk="45" spDef="65" />
     <look type="1622" corpse="263" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 		<attack name="melee" interval="2000" chance="100" range="1" min="-77" max="-99" />
         <attack name="Quick Attack" interval="2711" chance="30" range="1" />

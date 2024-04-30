@@ -1,7 +1,5 @@
 <monster name="Houndour" nameDescription="a houndour" race="dark" race2="fire" experience="114" speed="128">
-  <level min="20" max="20" />
     <health now="45" max="45" />
-    <status attack="60" defense="30" spAtk="80" spDef="70" />
     <look type="932" corpse="3556" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 		<attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Quick Attack" interval="2523" chance="31" range="2" />

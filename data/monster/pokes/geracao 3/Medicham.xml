@@ -1,7 +1,5 @@
 <monster name="Medicham" nameDescription="a Medicham" race="fighting" race2="psychic" experience="159.5" speed="1000">
-  <level min="50" max="50" />
     <health now="60" max="60" />
-    <status attack="60" defense="75" spAtk="60" spDef="75" />
     <look type="1682" corpse="12689" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />

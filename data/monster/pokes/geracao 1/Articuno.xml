@@ -1,7 +1,5 @@
 <monster name="Articuno" nameDescription="a articuno" race="ice" race2="flying" experience="215" speed="3005">
-    <level min="150" max="250" />
     <health now="10004" max="10004" />
-    <status attack="500" defense="1005" spAtk="405" spDef="805" />
     <look type="634" corpse="11843" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,20 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Quick Attack" level="1" interval="10" range="2" isTarget="1" f="40" t="normal" />
-        <move name="Peck" level="90" interval="10" range="1" isTarget="1" f="40" t="flying" />
-        <move name="Pluck" level="90" interval="15" range="1" isTarget="1" f="60" t="flying" />
-        <move name="Wing Attack" level="90" interval="6" range="1" isTarget="0" f="75" t="flying" />
-        <move name="Air Slash" level="90" interval="12" range="1" isTarget="0" f="55" t="flying" />
-        <move name="Air Cutter" level="90" interval="7" range="1" isTarget="0" f="70" t="flying" />
-        <move name="Icy Wind" level="90" interval="6" range="1" isTarget="0" f="45" t="ice" />
-        <move name="Aurora Beam" level="90" interval="6" range="1" isTarget="0" f="70" t="ice" />
-        <move name="Ice Beam" level="90" interval="9" range="1" isTarget="0" f="95" t="ice" />
-        <!-- <move name="Powder Snow" level="90" interval="6" range="1" isTarget="0" f="95" t="ice" /> -->
-        <move name="Twister" level="90" interval="7" range="1" isTarget="0" f="80" t="dragon" />
-        <move name="Blizzard" level="90" interval="8" range="1" isTarget="0" f="100" t="ice" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Quick Attack" interval="2899" chance="29" range="1" />

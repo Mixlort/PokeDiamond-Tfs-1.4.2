@@ -1,7 +1,5 @@
 <monster name="Gallade" nameDescription="a Gallade" race="psychic" race2="fighting" experience="204.6" speed="200">
-  <level min="90" max="130" />
     <health now="68" max="68" />
-    <status attack="125" defense="65" spAtk="65" spDef="115" />
     <look type="1667" corpse="12698" />
   <targetchange interval="0" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="physical" interval="2000" chance="100" range="6" min="-50" max="-100">

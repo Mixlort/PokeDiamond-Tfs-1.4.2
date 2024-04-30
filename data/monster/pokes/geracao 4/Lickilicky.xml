@@ -1,7 +1,5 @@
 <monster name="Lickilicky" nameDescription="a Lickilicky" race="normal" race2="no race" experience="176" speed="170">
-    <level min="0" max="0" />
     <health now="110" max="110" />
-    <status attack="85" defense="95" spAtk="80" spDef="95" />
     <look type="1601" corpse="267" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Lick" interval="2758" chance="30" range="1" />

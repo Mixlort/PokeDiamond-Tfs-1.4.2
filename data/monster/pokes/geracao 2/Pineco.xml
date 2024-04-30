@@ -1,7 +1,5 @@
 <monster name="Pineco" nameDescription="a pineco" race="bug" race2="no race" experience="60" speed="95">
-  <level min="15" max="15" />
     <health now="50" max="50" />
-    <status attack="65" defense="90" spAtk="35" spDef="35" />
     <look type="909" corpse="3586" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 		<attack name="melee" interval="2000" chance="100" range="1" min="-22" max="-41" />
 		<attack name="Headbutt" interval="2852" chance="29" range="1" />

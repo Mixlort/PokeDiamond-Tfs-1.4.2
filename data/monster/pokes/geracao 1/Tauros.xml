@@ -1,7 +1,5 @@
 <monster name="Tauros" nameDescription="a tauros" race="normal" race2="no race" experience="211" speed="230">
-    <level min="45" max="45" />
     <health now="75" max="75" />
-    <status attack="100" defense="95" spAtk="40" spDef="70" />
     <look type="444" corpse="11971" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -22,15 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Headbutt" level="45" interval="7" range="1" isTarget="1" f="50" t="normal" />
-        <move name="Quick Attack" level="45" interval="6" range="1" isTarget="1" f="40" t="normal" />
-        <move name="Horn Attack" level="45" interval="11" range="2" isTarget="1" f="60" t="normal" />
-        <move name="Hyper Beam" level="50" interval="8" range="1" isTarget="0" f="100" t="normal" />
-        <move name="Stomp" level="51" interval="10" range="1" isTarget="0" f="90" t="normal" />
-        <move name="Rage" level="45" interval="10" range="1" isTarget="0" f="0" t="normal" />
-        <move name="Fear" level="45" interval="10" range="1" isTarget="0" f="0" t="ghost" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Headbutt" interval="2758" chance="30" range="1" />

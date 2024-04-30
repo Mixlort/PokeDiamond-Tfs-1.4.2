@@ -1,7 +1,5 @@
 <monster name="Relicanth" nameDescription="a Relicanth" race="water" race2="rock" experience="218.9" speed="175">
-  <level min="70" max="78" />
     <health now="100" max="100" />
-    <status attack="90" defense="130" spAtk="45" spDef="60" />
     <look type="1693" corpse="12699" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Bubbles" interval="2805" chance="29" range="3" />

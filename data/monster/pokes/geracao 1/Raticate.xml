@@ -1,7 +1,5 @@
 <monster name="Raticate" nameDescription="a raticate" race="normal" race2="no race" experience="116" speed="97">
-    <level min="25" max="30" />
     <health now="55" max="55" />
-    <status attack="81" defense="60" spAtk="50" spDef="70" />
     <look type="420" corpse="11952" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,12 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Quick Attack" level="25" interval="7" range="2" isTarget="1" f="40" t="normal" />
-        <move name="Scratch" level="1" interval="7" range="15" isTarget="1" f="40" t="normal" />
-        <move name="Bite" level="1" interval="6" range="15" isTarget="1" f="50" t="dark" />
-        <move name="Super Fang" level="25" interval="7" range="1" isTarget="1" f="65" t="normal" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Quick Attack" interval="2476" chance="31" range="2" />

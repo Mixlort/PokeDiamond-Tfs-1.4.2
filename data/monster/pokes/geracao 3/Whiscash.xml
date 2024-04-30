@@ -1,7 +1,5 @@
 <monster name="Whiscash" nameDescription="a Whiscash" race="water" race2="ground" experience="137" speed="180">
-  <level min="55" max="68" />
     <health now="110" max="110" />
-    <status attack="78" defense="73" spAtk="76" spDef="80" />
     <look type="1645" corpse="605" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 	  <attack name="melee" interval="2000" chance="100" range="1" min="-98" max="-144" />
         <attack name="Doubleslap" interval="2852" chance="29" range="1" />

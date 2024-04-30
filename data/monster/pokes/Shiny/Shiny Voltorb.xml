@@ -1,7 +1,5 @@
 <monster name="Shiny Voltorb" nameDescription="a Shiny voltorb" race="electric" race2="no race" experience="103" speed="220">
-  <level min="0" max="0" />
     <health now="40" max="40" />
-    <status attack="30" defense="50" spAtk="55" spDef="55" />
     <look type="1294" corpse="12519" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />

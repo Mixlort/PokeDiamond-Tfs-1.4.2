@@ -1,7 +1,5 @@
 <monster name="Shiny Golem" nameDescription="a Shiny golem" race="rock" race2="ground" experience="177" speed="165">
-  <level min="0" max="0" />
     <health now="80" max="80" />
-    <status attack="120" defense="130" spAtk="55" spDef="65" />
     <look type="1270" corpse="0" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />

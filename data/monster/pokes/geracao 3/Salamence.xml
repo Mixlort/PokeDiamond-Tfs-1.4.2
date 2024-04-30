@@ -1,7 +1,5 @@
 <monster name="Salamence" nameDescription="a Salamence" race="dragon" race2="flying" experience="239.8" speed="220">
-  <level min="85" max="100" />
     <health now="95" max="95" />
-    <status attack="135" defense="80" spAtk="110" spDef="80" />
     <look type="1642" corpse="603" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />

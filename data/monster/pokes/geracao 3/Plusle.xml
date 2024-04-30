@@ -1,7 +1,5 @@
 <monster name="Plusle" nameDescription="a plusle" race="electric" race2="no race" experience="42" speed="115">
-    <level min="15" max="24" />
     <health now="60" max="60" />
-    <status attack="50" defense="40" spAtk="85" spDef="40" />
     <look type="1807" corpse="12746" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -23,9 +21,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
  <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Quick Attack" interval="2570" chance="31" range="2" />

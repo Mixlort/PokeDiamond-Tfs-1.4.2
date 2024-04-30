@@ -1,7 +1,5 @@
 <monster name="Lombre" nameDescription="a Lombre" race="water" race2="grass" experience="141" speed="170">
-  <level min="45" max="50" />
     <health now="60" max="60" />
-    <status attack="50" defense="50" spAtk="60" spDef="50" />
     <look type="1798" corpse="12682" />
  <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Razor Leaf" interval="2758" chance="30" range="4" />

@@ -1,7 +1,5 @@
 <monster name="Mightyena" nameDescription="an Mightyena" race="dark" race2="no race" experience="197" speed="190">
-  <level min="60" max="60" />
     <health now="70" max="70" />
-    <status attack="90" defense="70" spAtk="60" spDef="70" />
     <look type="1687" corpse="12694" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 	  <attack name="melee" interval="2000" chance="100" range="1" min="-78" max="-124" />
         <attack name="Quick Attack" interval="2852" chance="29" range="1" />

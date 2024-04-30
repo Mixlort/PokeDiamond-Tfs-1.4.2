@@ -1,7 +1,5 @@
 <monster name="Murkrow" nameDescription="a murkrow" race="dark" race2="flying" experience="107" speed="145">
-  <level min="55" max="55" />
     <health now="60" max="60" />
-    <status attack="85" defense="42" spAtk="85" spDef="42" />
     <look type="905" corpse="3579" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 		<attack name="melee" interval="2000" chance="100" range="1" min="-51" max="-70" />
         <attack name="Quick Attack" interval="2570" chance="31" range="1" />

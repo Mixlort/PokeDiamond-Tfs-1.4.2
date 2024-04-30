@@ -1,7 +1,5 @@
 <monster name="Lairon" nameDescription="a Lairon" race="steel" race2="rock" experience="118.8" speed="160">
-  <level min="50" max="60" />
     <health now="60" max="60" />
-    <status attack="90" defense="140" spAtk="50" spDef="60" />
     <look type="1790" corpse="595" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100">  </attack>

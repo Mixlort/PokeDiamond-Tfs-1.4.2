@@ -1,7 +1,5 @@
 <monster name="Chimchar" nameDescription="a Chimchar" race="fire" race2="no race" experience="65" speed="181">
-    <level min="0" max="0" />
     <health now="44" max="44" />
-    <status attack="58" defense="44" spAtk="58" spDef="44" />
     <look type="1525" corpse="115" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Scratch" interval="2570" chance="31" range="1" />

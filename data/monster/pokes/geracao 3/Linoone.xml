@@ -1,7 +1,5 @@
 <monster name="Linoone" nameDescription="a Linoone" race="normal" race2="no race" experience="116" speed="220">
-    <level min="40" max="50" />
     <health now="78" max="78" />
-    <status attack="70" defense="61" spAtk="50" spDef="61" />
     <look type="1650" corpse="12739" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Quick Attack" interval="2476" chance="31" range="2" />

@@ -1,7 +1,5 @@
 <monster name="Garchomp" nameDescription="a Garchomp" race="dragon" race2="ground" experience="218" speed="222">
-    <level min="0" max="0" />
     <health now="108" max="108" />
-    <status attack="130" defense="95" spAtk="80" spDef="60" />
     <look type="1547" corpse="131" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Aqua Tail" interval="2805" chance="29" range="1" />

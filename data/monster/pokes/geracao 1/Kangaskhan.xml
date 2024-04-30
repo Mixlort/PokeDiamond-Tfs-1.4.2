@@ -1,7 +1,5 @@
 <monster name="Kangaskhan" nameDescription="a kangaskhan" race="normal" race2="no race" experience="175" speed="210">
-    <level min="80" max="80" />
     <health now="105" max="105" />
-    <status attack="95" defense="80" spAtk="40" spDef="80" />
     <look type="549" corpse="11902" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,16 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Bite" level="80" interval="7" range="1" isTarget="1" f="40" t="dark" />
-        <move name="Dizzy Punch" level="80" interval="10" range="1" isTarget="1" f="75" t="normal" />
-        <move name="Headbutt" level="80" interval="7" range="1" isTarget="1" f="50" t="normal" />
-        <move name="Mega Punch" level="80" interval="11" range="1" isTarget="1" f="85" t="fighting" />
-        <move name="Shockwave" level="80" interval="7" range="1" isTarget="0" f="90" t="ground" />
-        <move name="Earthshock" level="86" interval="10" range="1" isTarget="0" f="75" t="ground" />
-        <move name="Epicenter" level="86" interval="10" range="1" isTarget="0" f="20" t="ground" />
-        <move name="Rage" level="80" interval="10" range="1" isTarget="0" f="0" t="normal" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Mega Punch" interval="2852" chance="29" range="1" />

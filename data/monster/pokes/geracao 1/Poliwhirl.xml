@@ -1,7 +1,5 @@
 <monster name="Poliwhirl" nameDescription="a poliwhirl" race="water" race2="no race" experience="131" speed="210">
-    <level min="25" max="25" />
     <health now="65" max="65" />
-    <status attack="65" defense="65" spAtk="50" spDef="50" />
     <look type="563" corpse="11944" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,14 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Mud Shot" level="25" interval="7" range="3" isTarget="1" f="40" t="ground" />
-        <move name="Bubbles" level="20" interval="6" range="4" isTarget="1" f="40" t="water" />
-        <move name="Mud Shot" level="22" interval="8" range="3" isTarget="1" f="40" t="ground" />
-        <move name="Water Gun" level="25" interval="7" range="1" isTarget="0" f="55" t="water" />
-        <move name="Mega Punch" level="30" interval="7" range="1" isTarget="1" f="85" t="fighting" />
-        <move name="Hypnosis" level="32" interval="5" range="3" isTarget="1" f="0" t="psychic" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Doubleslap" interval="2476" chance="31" range="1" />

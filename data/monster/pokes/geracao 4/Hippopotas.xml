@@ -1,7 +1,5 @@
 <monster name="Hippopotas" nameDescription="a Hippopotas" race="ground" race2="no race" experience="153" speed="152">
-    <level min="0" max="0" />
     <health now="68" max="68" />
-    <status attack="72" defense="78" spAtk="38" spDef="42" />
     <look type="1613" corpse="239" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Sand Attack" interval="2711" chance="30" range="6" />

@@ -1,7 +1,5 @@
 <monster name="Slowbro" nameDescription="a slowbro" race="water" race2="psychic" experience="164" speed="150">
-    <level min="45" max="45" />
     <health now="95" max="95" />
-    <status attack="75" defense="110" spAtk="100" spDef="80" />
     <look type="392" corpse="11963" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -22,16 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Aqua Tail" level="20" interval="8" range="1" isTarget="1" f="50" t="water" />
-        <move name="Headbutt" level="20" interval="7" range="1" isTarget="1" f="50" t="normal" />
-        <move name="Iron Tail" level="20" interval="7" range="1" isTarget="1" f="50" t="steel" />
-        <move name="Waterball" level="45" interval="7" range="4" isTarget="1" f="65" t="water" />
-        <move name="Water Gun" level="45" interval="7" range="1" isTarget="0" f="55" t="water" />
-        <move name="Confusion" level="45" interval="10" range="1" isTarget="0" f="50" t="psychic" />
-        <!-- <move name="Psy Wave" level="45" interval="10" range="1" isTarget="0" f="75" t="psychic" /> -->
-        <move name="Psychic" level="55" interval="10" range="1" isTarget="0" f="90" t="psychic" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Headbutt" interval="2711" chance="30" range="1" />

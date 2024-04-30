@@ -1,7 +1,5 @@
 <monster name="Surskit" nameDescription="a Surskit" race="bug" race2="water" experience="82.5" speed="185">
-  <level min="14" max="22" />
     <health now="40" max="40" />
-    <status attack="30" defense="32" spAtk="50" spDef="32" />
     <look type="1714" corpse="12720" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100">  </attack>

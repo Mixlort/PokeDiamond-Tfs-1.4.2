@@ -1,7 +1,5 @@
 <monster name="Torterra" nameDescription="a Torterra" race="grass" race2="ground" experience="208" speed="176">
-    <level min="0" max="0" />
     <health now="95" max="95" />
-    <status attack="109" defense="105" spAtk="75" spDef="85" />
     <look type="1607" corpse="113" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Body Slam" interval="2852" chance="29" range="1" />

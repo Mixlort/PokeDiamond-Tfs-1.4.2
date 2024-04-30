@@ -1,7 +1,5 @@
 <monster name="Whismur" nameDescription="a Whismur" race="normal" race2="no race" experience="124" speed="148">
-    <level min="25" max="32" />
     <health now="64" max="64" />
-    <status attack="51" defense="23" spAtk="51" spDef="23" />
     <look type="1646" corpse="12732" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Doubleslap" interval="2570" chance="31" range="1" />

@@ -1,7 +1,5 @@
 <monster name="Suicune" nameDescription="a suicune" race="water" race2="no race" experience="218" speed="180">
-  <level min="150" max="350" />
     <health now="10000" max="10000" />
-    <status attack="503" defense="1015" spAtk="490" spDef="800" />
     <look type="958" corpse="4445" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 	<attack name="melee" interval="2000" chance="100" range="1" min="-206" max="-249">
    	</attack>

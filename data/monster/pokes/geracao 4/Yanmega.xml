@@ -1,7 +1,5 @@
 <monster name="Yanmega" nameDescription="an Yanmega" race="bug" race2="flying" experience="176" speed="215">
-  <level min="0" max="0" />
     <health now="86" max="86" />
-    <status attack="76" defense="86" spAtk="116" spDef="86" />
     <look type="1586" corpse="271" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 		<attack name="melee" interval="2000" chance="100" range="1" min="-58" max="-84" />
         <attack name="Headbutt" interval="3040" chance="28" range="1" />

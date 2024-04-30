@@ -1,7 +1,5 @@
 <monster name="Oddish" nameDescription="a oddish" race="grass" race2="poison" experience="78" speed="150">
-    <level min="5" max="5" />
     <health now="45" max="45" />
-    <status attack="50" defense="55" spAtk="75" spDef="65" />
     <look type="407" corpse="11931" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -22,14 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Absorb" level="1" interval="10" range="1" isTarget="1" f="40" t="grass" />
-        <move name="Acid" level="7" interval="6" range="4" isTarget="1" f="45" t="poison" />
-        <move name="Leech Seed" level="11" interval="15" range="3" isTarget="1" f="1" t="grass" />
-        <move name="Sleep Powder" level="12" interval="10" range="1" isTarget="0" f="0" t="grass" />
-        <move name="Stun Spore" level="10" interval="7" range="1" isTarget="0" f="0" t="grass" />
-        <move name="Poison Powder" level="5" interval="9" range="1" isTarget="0" f="0" t="poison" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Absorb" interval="2711" chance="30" range="1" />

@@ -1,7 +1,5 @@
 <monster name="Shiny Dragonite" nameDescription="a Shiny dragonite" race="dragon" race2="flying" experience="218" speed="200">
-  <level min="0" max="0" />
     <health now="91" max="91" />
-    <status attack="134" defense="95" spAtk="100" spDef="100" />
     <look type="1343" corpse="12569" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />

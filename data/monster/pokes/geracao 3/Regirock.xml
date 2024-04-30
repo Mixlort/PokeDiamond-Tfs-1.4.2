@@ -1,7 +1,5 @@
 <monster name="Regirock" nameDescription="a Regirock" race="rock" race2="no race" experience="2" speed="170">
-    <level min="50" max="50" />
     <health now="10000" max="10000" />
-    <status attack="500" defense="1000" spAtk="450" spDef="800" />
     <look type="1697" corpse="9813" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -23,9 +21,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
  <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Rock Throw" interval="2664" chance="30" range="4" />

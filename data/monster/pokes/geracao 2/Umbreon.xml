@@ -1,7 +1,5 @@
 <monster name="Umbreon" nameDescription="an umbreon" race="dark" race2="no race" experience="197" speed="145">
-  <level min="55" max="55" />
     <health now="95" max="95" />
-    <status attack="65" defense="110" spAtk="60" spDef="130" />
     <look type="920" corpse="4567" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 	  <attack name="melee" interval="2000" chance="100" range="1" min="-78" max="-124" />
         <attack name="Quick Attack" interval="2852" chance="29" range="1" />

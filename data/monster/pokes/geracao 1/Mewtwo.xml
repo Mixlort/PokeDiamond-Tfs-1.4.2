@@ -1,7 +1,5 @@
 <monster name="Mewtwo" nameDescription="a mewtwo" race="psychic" race2="no race" experience="220" speed="2500">
-    <level min="150" max="150" />
     <health now="10006" max="10006" />
-    <status attack="500" defense="2001" spAtk="404" spDef="800" />
     <look type="385" corpse="11920" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,19 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Psybeam" level="10" interval="15" range="1" isTarget="0" f="75" t="psychic" />
-        <move name="Psywave" level="10" interval="6" range="1" isTarget="0" f="75" t="psychic" />
-        <move name="Psy Pulse" level="12" interval="15" range="5" isTarget="1" f="35" t="psychic" />
-        <move name="Confusion" level="20" interval="6" range="1" isTarget="0" f="50" t="psychic" />
-        <move name="Psychic" level="28" interval="6" range="1" isTarget="0" f="80" t="psychic" />
-        <move name="Psyusion" level="27" interval="8" range="1" isTarget="0" f="80" t="psychic" />
-        <move name="Calm Mind" level="32" interval="12" range="1" isTarget="0" f="0" t="psychic" />
-        <move name="Hypnosis" level="55" interval="12" range="4" isTarget="1" f="0" t="psychic" />
-        <move name="Reflect" level="56" interval="8" range="1" isTarget="0" f="0" t="psychic" />
-        <move name="Restore" level="60" interval="180" range="1" isTarget="0" f="0" t="normal" />
-        <move name="Divine Punishment" level="100" interval="10" range="1" isTarget="0" f="60" t="psychic" />
-    </moves>
     <attacks>
 		<attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Confusion" interval="2617" chance="30" range="6" />

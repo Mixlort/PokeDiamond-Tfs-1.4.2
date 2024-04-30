@@ -1,7 +1,5 @@
 <monster name="Tyranitar" nameDescription="a tyranitar" race="rock" race2="dark" experience="218" speed="135">
-    <level min="100" max="100" />
     <health now="100" max="100" />
-    <status attack="134" defense="110" spAtk="95" spDef="100" />
     <look type="954" corpse="4454" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
  <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-26" max="-49" />
 		<attack name="Rock Throw" interval="2476" chance="31" range="3" />

@@ -1,7 +1,5 @@
 <monster name="Butterfree" nameDescription="a butterfree" race="bug" race2="flying" experience="160" speed="190">
-    <level min="30" max="35" />
     <health now="60" max="60" />
-    <status attack="45" defense="50" spAtk="90" spDef="80" />
     <look type="391" corpse="11848" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -22,17 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="String Shot" level="30" interval="4" range="3" isTarget="1" f="0" t="bug" />
-        <move name="Super Sonic" level="1" interval="16" range="3" isTarget="1" f="0" t="normal" />
-        <move name="Headbutt" level="1" interval="6" range="1" isTarget="1" f="70" t="normal" />
-        <move name="Whirlwind" level="32" interval="10" range="1" isTarget="0" f="80" t="flying" />
-        <move name="Psybeam" level="36" interval="10" range="1" isTarget="0" f="75" t="psychic" />
-        <move name="Confusion" level="34" interval="10" range="1" isTarget="0" f="50" t="psychic" />
-        <move name="Sleep Powder" level="20" interval="10" range="1" isTarget="0" f="0" t="grass" />
-        <move name="Stun Spore" level="30" interval="10" range="1" isTarget="0" f="0" t="grass" />
-        <move name="Poison Powder" level="30" interval="11" range="1" isTarget="0" f="0" t="poison" />
-    </moves>
     <attacks>
         <attack name="physical" interval="2000" chance="100" range="5" min="-50" max="-100">
             <attribute key="shootEffect" value="eartharrow" />

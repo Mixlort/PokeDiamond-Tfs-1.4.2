@@ -1,7 +1,5 @@
 <monster name="Dragonair" nameDescription="a dragonair" race="dragon" race2="no race" experience="144" speed="190">
-    <level min="60" max="60" />
     <health now="61" max="61" />
-    <status attack="84" defense="65" spAtk="70" spDef="70" />
     <look type="412" corpse="11864" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <move name="Headbutt" level="50" interval="15" range="1" isTarget="1" f="50" t="normal" />
         <move name="Aqua Tail" level="10" interval="15" range="1" isTarget="1" f="60" t="water" />

@@ -1,7 +1,5 @@
 <monster name="Kabuto" nameDescription="a kabuto" race="rock" race2="water" experience="99" speed="175">
-    <level min="20" max="20" />
     <health now="30" max="30" />
-    <status attack="80" defense="90" spAtk="55" spDef="45" />
     <look type="449" corpse="11898" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,14 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Scratch" level="20" interval="7" range="1" isTarget="1" f="40" t="normal" />
-        <move name="Bubbles" level="20" interval="8" range="4" isTarget="1" f="40" t="water" />
-        <move name="Slash" level="20" interval="7" range="1" isTarget="1" f="60" t="normal" />
-        <move name="Mud Shot" level="25" interval="7" range="3" isTarget="2" f="40" t="ground" />
-        <move name="Harden" level="30" interval="7" range="1" isTarget="0" f="0" t="normal" />
-        <move name="Ancient Power" level="35" interval="13" range="1" isTarget="0" f="100" t="rock" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Bubbles" interval="2805" chance="29" range="3" />

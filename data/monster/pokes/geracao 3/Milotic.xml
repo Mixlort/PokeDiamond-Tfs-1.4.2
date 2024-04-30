@@ -1,7 +1,5 @@
 <monster name="Milotic" nameDescription="a milotic" race="water" race2="no race" experience="235.4" speed="201">
-  <level min="75" max="80" />
     <health now="95" max="95" />
-    <status attack="60" defense="79" spAtk="100" spDef="125" />
     <look type="1794" corpse="4283" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Headbutt" interval="2617" chance="30" range="1" />

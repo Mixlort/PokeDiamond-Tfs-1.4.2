@@ -1,7 +1,5 @@
 <monster name="Doduo" nameDescription="a doduo" race="normal" race2="flying" experience="96" speed="195">
-    <level min="15" max="15" />
     <health now="35" max="35" />
-    <status attack="85" defense="45" spAtk="35" spDef="35" />
     <look type="377" corpse="11863" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -22,13 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Sand Attack" level="15" interval="8" range="1" isTarget="0" f="0" t="ground" />
-        <move name="Pluck" level="1" interval="6" range="1" isTarget="1" f="60" t="flying" />
-        <move name="Fury Attack" level="13" interval="8" range="1" isTarget="1" f="25" t="normal" />  
-        <move name="Rage" level="20" interval="8" range="1" isTarget="0" f="0" t="normal" />
-        <move name="Drill Peck" level="20" interval="7" range="1" isTarget="1" f="35" t="flying" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Sand Attack" interval="2570" chance="31" range="4" />

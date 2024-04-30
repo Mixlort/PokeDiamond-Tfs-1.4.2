@@ -1,7 +1,5 @@
 <monster name="Anorith" nameDescription="a Anorith" race="rock" race2="bug" experience="80" speed="105">
-  <level min="20" max="50" />
     <health now="45" max="45" />
-    <status attack="95" defense="50" spAtk="40" spDef="50" />
     <look type="1628" corpse="592" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 	  <attack name="melee" interval="2000" chance="100" range="1" min="-22" max="-36" />
         <attack name="Scratch" interval="2852" chance="29" range="1" />

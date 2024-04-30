@@ -1,7 +1,5 @@
 <monster name="Chandelure" nameDescription="a Chandelure" race="ghost" race2="poison" experience="190" speed="230">
-  <level min="0" max="0" />
     <health now="130" max="130" />
-    <status attack="145" defense="90" spAtk="145" spDef="100" />
     <look type="2145" corpse="13379" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />

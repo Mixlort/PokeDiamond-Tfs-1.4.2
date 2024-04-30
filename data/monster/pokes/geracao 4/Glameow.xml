@@ -1,7 +1,5 @@
 <monster name="Glameow" nameDescription="a Glameow" race="normal" race2="no race" experience="189" speed="205">
-    <level min="0" max="0" />
     <health now="49" max="49" />
-    <status attack="55" defense="42" spAtk="42" spDef="105" />
     <look type="1548" corpse="220" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Quick Attack" interval="2476" chance="31" range="2" />

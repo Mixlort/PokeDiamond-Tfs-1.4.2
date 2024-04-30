@@ -1,7 +1,5 @@
 <monster name="Mankey" nameDescription="a mankey" race="fighting" race2="no race" experience="74" speed="190">
-    <level min="10" max="10" />
     <health now="40" max="40" />
-    <status attack="80" defense="35" spAtk="35" spDef="70" />
     <look type="457" corpse="11915" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,13 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Scratch" level="15" interval="7" range="1" isTarget="1" f="40" t="normal" />
-        <move name="Triple Kick" level="15" interval="5" range="1" isTarget="1" f="60" t="fighting" />
-        <move name="Karate Chop" level="15" interval="8" range="1" isTarget="1" f="50" t="fighting" />
-        <move name="Cross Chop" level="20" interval="10" range="1" isTarget="0" f="80" t="fighting" />
-        <move name="Rage" level="22" interval="10" range="1" isTarget="0" f="0" t="normal" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Scratch" interval="2664" chance="30" range="1" />

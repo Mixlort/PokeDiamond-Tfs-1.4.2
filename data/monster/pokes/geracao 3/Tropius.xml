@@ -1,7 +1,5 @@
 <monster name="Tropius" nameDescription="a tropius" race="grass" race2="flying" experience="200" speed="190">
-  <level min="90" max="110" />
     <health now="99" max="99" />
-    <status attack="68" defense="83" spAtk="72" spDef="87" />
     <look type="1651" corpse="589" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -23,9 +21,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 	  <attack name="melee" interval="2000" chance="100" range="1" min="-35" max="-60" />  
         <attack name="Quick Attack" interval="2852" chance="29" range="1" />

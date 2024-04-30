@@ -1,7 +1,5 @@
 <monster name="Phanpy" nameDescription="a phanpy" race="ground" race2="no race" experience="124" speed="101">
-    <level min="20" max="20" />
     <health now="90" max="90" />
-    <status attack="60" defense="60" spAtk="40" spDef="40" />
     <look type="1004" corpse="3583" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Sand Attack" interval="2664" chance="30" range="4" />

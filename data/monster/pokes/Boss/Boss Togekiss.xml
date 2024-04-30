@@ -1,7 +1,5 @@
 <monster name="Boss Togekiss" nameDescription="a Boss Tigekiss" race="grass" race2="no race" experience="500" speed="212">
-  <level min="0" max="0" />
-    <health now="700" max="700" />
-    <status attack="" defense="30" spAtk="35" spDef="30" />
+  <health now="700" max="700" />
     <look type="2133" corpse="12566" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -23,9 +21,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 	  <attack name="melee" interval="2000" chance="100" range="1" min="-35" max="-60" />  
         <attack name="Quick Attack" interval="2852" chance="29" range="1" />

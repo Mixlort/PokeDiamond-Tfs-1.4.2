@@ -1,7 +1,5 @@
 <monster name="Ledian" nameDescription="a ledian" race="bug" race2="flying" experience="134" speed="150">
-    <level min="35" max="35" />
     <health now="55" max="55" />
-    <status attack="35" defense="50" spAtk="55" spDef="110" />
     <look type="685" corpse="3562" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
  <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Headbutt" interval="2476" chance="31" range="1" />

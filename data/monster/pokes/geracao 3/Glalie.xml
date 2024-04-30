@@ -1,7 +1,5 @@
 <monster name="Glalie" nameDescription="a glalie" race="ice" race2="no race" experience="160" speed="200">
-  <level min="55" max="50" />
     <health now="80" max="80" />
-    <status attack="80" defense="80" spAtk="80" spDef="80" />
     <look type="1758" corpse="12749" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 	  <attack name="melee" interval="2000" chance="100" range="1" min="-152" max="-188" />
         <attack name="Mud Bomb" interval="2852" chance="29" range="1" />

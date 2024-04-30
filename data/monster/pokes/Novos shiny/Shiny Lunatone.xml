@@ -1,7 +1,5 @@
 <monster name="Shiny Lunatone" nameDescription="a Shiny lunatone" race="rock" race2="psychic" experience="177" speed="190">
-  <level min="0" max="0" />
     <health now="90" max="90" />
-    <status attack="55" defense="65" spAtk="95" spDef="65" />
     <look type="1424" corpse="12751" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -23,9 +21,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-62" max="-91" />
         <attack name="Headbutt" interval="2711" chance="30" range="3" />

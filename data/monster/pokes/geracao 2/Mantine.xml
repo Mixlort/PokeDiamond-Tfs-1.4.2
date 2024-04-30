@@ -1,7 +1,5 @@
 <monster name="Mantine" nameDescription="a mantine" race="water" race2="flying" experience="168" speed="130">
-    <level min="80" max="80" />
     <health now="65" max="65" />
-    <status attack="40" defense="70" spAtk="80" spDef="45" />
     <look type="930" corpse="3567" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Headbutt" interval="2805" chance="29" range="1" />

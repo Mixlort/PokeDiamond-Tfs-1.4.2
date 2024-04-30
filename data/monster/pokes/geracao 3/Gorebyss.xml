@@ -1,7 +1,5 @@
 <monster name="Gorebyss" nameDescription="a Gorebyss" race="water" race2="flying" experience="168" speed="172">
-    <level min="50" max="68" />
     <health now="55" max="55" />
-    <status attack="84" defense="105" spAtk="1140" spDef="75" />
     <look type="1670" corpse="614" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Bite" interval="2805" chance="29" range="1" />

@@ -1,7 +1,5 @@
 <monster name="Gliscor" nameDescription="a Gliscor" race="ground" race2="flying" experience="176" speed="215">
-  <level min="0" max="0" />
     <health now="75" max="75" />
-    <status attack="95" defense="125" spAtk="45" spDef="125" />
     <look type="1550" corpse="265" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 		<attack name="melee" interval="2000" chance="100" range="1" min="-62" max="-91" />
 		<attack name="Quick Attack" interval="3040" chance="28" range="1" />

@@ -1,7 +1,5 @@
 <monster name="Supremo Gengar" nameDescription="a Supremo Gengar" race="ghost" race2="poison" experience="209" speed="133">
-  <level min="0" max="0" />
     <health now="400" max="400" />
-    <status attack="120" defense="105" spAtk="210" spDef="200" />
     <look type="1882" corpse="4300" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />

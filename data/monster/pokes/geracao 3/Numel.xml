@@ -1,7 +1,5 @@
 <monster name="Numel" nameDescription="a Numel" race="fire" race2="ground" experience="71.5" speed="155">
-  <level min="25" max="22" />
     <health now="60" max="60" />
-    <status attack="60" defense="40" spAtk="65" spDef="40" />
     <look type="1685" corpse="12771" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100">  </attack>

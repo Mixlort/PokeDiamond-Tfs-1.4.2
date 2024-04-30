@@ -1,7 +1,5 @@
 <monster name="Lileep" nameDescription="a Lileep" race="rock" race2="grass" experience="64" speed="143">
-  <level min="20" max="20" />
     <health now="66" max="66" />
-    <status attack="41" defense="77" spAtk="61" spDef="87" />
     <look type="1799" corpse="625" />
   <targetchange interval="10000" chance="0" />
   <flags>
@@ -23,9 +21,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Quick Attack" interval="2476" chance="31" range="2" />

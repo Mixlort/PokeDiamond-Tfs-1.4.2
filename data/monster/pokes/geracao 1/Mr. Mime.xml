@@ -1,7 +1,5 @@
 <monster name="Mr. Mime" nameDescription="a mr. mime" race="psychic" race2="no race" experience="136" speed="210">
-    <level min="45" max="45" />
     <health now="40" max="40" />
-    <status attack="45" defense="65" spAtk="100" spDef="120" />
     <look type="597" corpse="11922" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -22,15 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Dazzling Gleam" level="1" interval="9" range="1" isTarget="0" f="80" t="normal" />
-        <move name="Psychic" level="1" interval="8" range="1" isTarget="0" f="90" t="psychic" />
-        <move name="Psy Pulse" level="1" interval="9" range="4" isTarget="1" f="33" t="psychic" />
-        <move name="Psylusion" level="60" interval="10" range="1" isTarget="0" f="70" t="psychic" />
-        <move name="Reflect" level="60" interval="7" range="1" isTarget="0" f="0" t="psychic" />
-        <move name="Psybeam" level="42" interval="10" range="1" isTarget="0" f="75" t="psychic" />
-        <!-- <move name="Psy Wave" level="70" interval="10" range="1" isTarget="0" f="75" t="psychic" /> -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Doubleslap" interval="2570" chance="31" range="1" />

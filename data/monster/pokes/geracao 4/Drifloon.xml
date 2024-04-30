@@ -1,7 +1,5 @@
 <monster name="Drifloon" nameDescription="a Drifloon" race="ghost" race2="flying" experience="126" speed="190">
-  <level min="0" max="0" />
     <health now="90" max="90" />
-    <status attack="50" defense="34" spAtk="60" spDef="44" />
     <look type="1536" corpse="169" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 		<attack name="melee" interval="2000" chance="100" range="1" min="-51" max="-70" />
         <attack name="Quick Attack" interval="2570" chance="31" range="1" />

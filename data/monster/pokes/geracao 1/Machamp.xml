@@ -1,7 +1,5 @@
 <monster name="Machamp" nameDescription="a machamp" race="fighting" race2="no race" experience="193" speed="175">
-    <level min="70" max="70" />
     <health now="90" max="90" />
-    <status attack="130" defense="80" spAtk="65" spDef="85" />
     <look type="472" corpse="11908" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,17 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Doubleslap" level="65" interval="7" range="1" isTarget="1" f="25" t="normal" />
-        <move name="Mega Punch" level="65" interval="7" range="1" isTarget="1" f="85" t="fighting" />
-        <move name="Mega Kick" level="65" interval="10" range="1" isTarget="1" f="85" t="fighting" />
-        <move name="Karate Chop" level="70" interval="8" range="1" isTarget="1" f="50" t="fighting" />
-        <move name="Ground Chop" level="70" interval="8" range="1" isTarget="0" f="100" t="fighting" />
-        <move name="Fist Machine" level="70" interval="9" range="1" isTarget="0" f="105" t="fighting" />
-        <move name="Destroyer Hand" level="70" interval="10" range="1" isTarget="0" f="90" t="fighting" />
-        <move name="Strafe" level="70" interval="10" range="1" isTarget="0" f="0" t="normal" />
-        <move name="Punch Flames" level="60" interval="10" range="1" isTarget="0" f="105" t="fighting" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Triple Punch" interval="2758" chance="30" range="1" />

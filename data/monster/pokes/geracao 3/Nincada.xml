@@ -1,7 +1,5 @@
 <monster name="Nincada" nameDescription="a Nincada" race="bug" race2="ground" experience="79.2" speed="160">
-  <level min="10" max="20" />
     <health now="31" max="31" />
-    <status attack="45" defense="90" spAtk="30" spDef="90" />
     <look type="1804" corpse="12690" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -23,9 +21,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100">  </attack>

@@ -1,7 +1,5 @@
 <monster name="Metagross" nameDescription="a metagross" race="steel" race2="psychic" experience="200" speed="190">
-  <level min="80" max="128" />
     <health now="98" max="98" />
-    <status attack="135" defense="130" spAtk="95" spDef="90" />
     <look type="1683" corpse="12769" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 	  <attack name="melee" interval="2000" chance="100" range="1" min="-162" max="-221" />
         <attack name="Iron Tail" interval="5625" chance="18" range="3" />

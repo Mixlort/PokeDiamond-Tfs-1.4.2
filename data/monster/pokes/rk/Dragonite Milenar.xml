@@ -1,7 +1,5 @@
 <monster name="Dragonite Milenar" nameDescription="a Dragonite Milenar" race="dragon" race2="flying" experience="218" speed="200">
-    <level min="0" max="0" />
     <health now="160" max="160" />
-    <status attack="240" defense="180" spAtk="200" spDef="120" />
     <look type="1343" corpse="11865" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="Meteor Smash" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Dragon Dance" interval="2805" chance="29" range="1" />

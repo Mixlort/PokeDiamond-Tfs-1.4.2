@@ -1,7 +1,5 @@
 <monster name="Supremo Porygon" nameDescription="a Supremo porygon" race="normal" race2="no race" experience="130" speed="160">
-    <level min="0" max="0" />
     <health now="65" max="65" />
-    <status attack="60" defense="75" spAtk="85" spDef="75" />
     <look type="1883" corpse="4302" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="physical" interval="2000" chance="100" range="5" min="-50" max="-100">
             <attribute key="shootEffect" value="eartharrow" />

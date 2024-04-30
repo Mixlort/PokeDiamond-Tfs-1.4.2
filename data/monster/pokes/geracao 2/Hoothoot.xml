@@ -1,7 +1,5 @@
 <monster name="Hoothoot" nameDescription="a hoothoot" race="normal" race2="flying" experience="58" speed="112">
-    <level min="20" max="20" />
     <health now="60" max="60" />
-    <status attack="30" defense="30" spAtk="36" spDef="56" />
     <look type="682" corpse="3553" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Quick Attack" interval="2570" chance="31" range="1" />

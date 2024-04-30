@@ -1,7 +1,5 @@
 <monster name="Mudkip" nameDescription="a mudkip" race="water" race2="no race" experience="66" speed="160">
-    <level min="5" max="46" />
     <health now="40" max="40" />
-    <status attack="25" defense="15" spAtk="25" spDef="15" />
     <look type="1769" corpse="12768" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -23,9 +21,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
  <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Headbutt" interval="2617" chance="30" range="1" />

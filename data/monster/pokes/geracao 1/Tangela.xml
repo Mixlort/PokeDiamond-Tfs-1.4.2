@@ -1,7 +1,5 @@
 <monster name="Tangela" nameDescription="a tangela" race="grass" race2="no race" experience="166" speed="180">
-    <level min="50" max="55" />
     <health now="65" max="65" />
-    <status attack="55" defense="115" spAtk="100" spDef="40" />
     <look type="369" corpse="11970" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -22,15 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Absorb" level="50" interval="7" range="1" isTarget="1" f="40" t="grass" />
-        <move name="Leech Seed" level="50" interval="15" range="3" isTarget="1" f="1" t="grass" />
-        <move name="Vine Whip" level="50" interval="8" range="1" isTarget="0" f="65" t="grass" />
-        <move name="Super Vines" level="58" interval="11" range="1" isTarget="0" f="95" t="grass" />
-        <move name="Poison Powder" level="50" interval="10" range="1" isTarget="0" f="0" t="normal" />
-        <move name="Sleep Powder" level="55" interval="10" range="1" isTarget="0" f="0" t="normal" />
-        <move name="Stun Spore" level="55" interval="10" range="1" isTarget="0" f="0" t="normal" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Absorb" interval="2711" chance="30" range="1" />

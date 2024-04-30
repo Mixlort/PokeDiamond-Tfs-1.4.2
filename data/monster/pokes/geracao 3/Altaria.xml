@@ -1,7 +1,5 @@
 <monster name="Altaria" nameDescription="a altaria" race="dragon" race2="flying" experience="124.3" speed="200">
-  <level min="70" max="75" />
     <health now="75" max="75" />
-    <status attack="70" defense="90" spAtk="70" spDef="105" />
     <look type="1652" corpse="12766" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -23,9 +21,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />

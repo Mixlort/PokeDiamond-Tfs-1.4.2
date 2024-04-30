@@ -1,7 +1,5 @@
 <monster name="Shaymin" nameDescription="a Shaymin" race="fire" race2="no race" experience="217" speed="180">
-    <level min="0" max="0" />
     <health now="80" max="80" />
-    <status attack="100" defense="100" spAtk="100" spDef="90" />
     <look type="2140" corpse="13383" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
  <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Headbutt" interval="2476" chance="31" range="1" />

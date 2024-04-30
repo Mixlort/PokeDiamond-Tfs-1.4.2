@@ -1,7 +1,5 @@
 <monster name="Vulpix" nameDescription="a vulpix" race="fire" race2="no race" experience="63" speed="185">
-    <level min="15" max="15" />
     <health now="38" max="38" />
-    <status attack="41" defense="40" spAtk="50" spDef="65" />
     <look type="413" corpse="11981" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,12 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Quick Attack" level="15" interval="7" range="2" isTarget="1" f="40" t="normal" />
-        <move name="Iron Tail" level="15" interval="6" range="1" isTarget="1" f="70" t="steel" />
-        <move name="Ember" level="15" interval="7" range="4" isTarget="1" f="42" t="fire" />
-        <move name="Flamethrower" level="22" interval="7" range="1" isTarget="0" f="80" t="fire" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Quick Attack" interval="2570" chance="31" range="2" />

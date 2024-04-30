@@ -1,7 +1,5 @@
 <monster name="Shiny Lairon" nameDescription="a Shiny Lairon" race="steel" race2="rock" experience="320" speed="210">
-  <level min="1" max="150" />
     <health now="110" max="110" />
-    <status attack="145" defense="260" spAtk="90" spDef="120" />
     <look type="1857" corpse="2824" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100">  </attack>

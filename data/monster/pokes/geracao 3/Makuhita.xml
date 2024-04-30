@@ -1,7 +1,5 @@
 <monster name="Makuhita" nameDescription="a Makuhita" race="fighting" race2="no race" experience="91" speed="145">
-  <level min="15" max="20" />
     <health now="72" max="72" />
-    <status attack="60" defense="30" spAtk="20" spDef="30" />
     <look type="1803" corpse="12685" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100">  </attack>

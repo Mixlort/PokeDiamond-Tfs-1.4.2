@@ -1,7 +1,5 @@
 <monster name="Ivysaur" nameDescription="a ivysaur" race="grass" race2="poison" experience="141" speed="120">
-    <level min="40" max="45" />
     <health now="60" max="60" />
-    <status attack="62" defense="63" spAtk="80" spDef="80" />
     <look type="375" corpse="11894" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,17 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Quick Attack" level="40" interval="6" range="2" isTarget="1" f="40" t="normal" />
-        <move name="Razor Leaf" level="40" interval="12" range="4" isTarget="1" f="33" t="grass" />
-        <move name="Vine Whip" level="40" interval="8" range="1" isTarget="0" f="65" t="grass" />
-        <move name="Headbutt" level="40" interval="8" range="1" isTarget="1" f="70" t="normal" />
-        <move name="Leech Seed" level="40" interval="10" range="3" isTarget="1" f="1" t="grass" />
-        <move name="Bullet Seed" level="40" interval="14" range="1" isTarget="0" f="95" t="grass" />
-        <move name="Solar Beam" level="40" interval="10" range="1" isTarget="0" f="135" t="grass" />
-        <move name="Sleep Powder" level="44" interval="10" range="1" isTarget="0" f="0" t="grass" />
-        <move name="Stun Spore" level="40" interval="10" range="1" isTarget="0" f="0" t="grass" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Quick Attack" interval="2476" chance="31" range="2" />

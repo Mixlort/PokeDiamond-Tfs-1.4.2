@@ -1,7 +1,5 @@
 <monster name="Igglybuff" nameDescription="an igglybuff" race="normal" race2="no race" experience="39" speed="95">
-    <level min="20" max="20" />
     <health now="90" max="90" />
-    <status attack="30" defense="15" spAtk="40" spDef="20" />
     <look type="884" corpse="3557" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
  <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Doubleslap" interval="2570" chance="31" range="1" />

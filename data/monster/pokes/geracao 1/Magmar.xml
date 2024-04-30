@@ -1,7 +1,5 @@
 <monster name="Magmar" nameDescription="a magmar" race="fire" race2="no race" experience="167" speed="213">
-    <level min="80" max="90" />
     <health now="65" max="65" />
-    <status attack="95" defense="57" spAtk="100" spDef="85" />
     <look type="427" corpse="11912" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,16 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Scratch" level="80" interval="7" range="1" isTarget="1" f="40" t="normal" />
-        <move name="Fire Punch" level="80" interval="6" range="1" isTarget="1" f="75" t="fire" />
-        <move name="Ember" level="80" interval="13" range="4" isTarget="1" f="40" t="fire" />
-        <move name="Flamethrower" level="80" interval="8" range="1" isTarget="0" f="80" t="fire" />
-        <move name="Fireball" level="80" interval="11" range="4" isTarget="1" f="65" t="fire" />
-        <move name="Fire Blast" level="80" interval="10" range="1" isTarget="0" f="120" t="fire" />
-        <move name="Magma Storm" level="80" interval="13" range="1" isTarget="0" f="95" t="fire" />
-        <move name="Meteor Fire" level="80" interval="13" range="1" isTarget="0" f="95" t="fire" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Scratch" interval="2852" chance="29" range="1" />

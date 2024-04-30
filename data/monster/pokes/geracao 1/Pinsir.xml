@@ -1,7 +1,5 @@
 <monster name="Pinsir" nameDescription="a pinsir" race="bug" race2="no race" experience="200" speed="205">
-    <level min="45" max="45" />
     <health now="65" max="65" />
-    <status attack="125" defense="100" spAtk="55" spDef="70" />
     <look type="404" corpse="11942" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,16 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Scratch" level="45" interval="7" range="1" isTarget="1" f="40" t="normal" />
-        <move name="Bug Bite" level="45" interval="7" range="1" isTarget="1" f="50" t="bug" />
-        <move name="Slash" level="45" interval="13" range="1" isTarget="1" f="60" t="normal" />
-        <move name="X-Scissor" level="50" interval="10" range="1" isTarget="0" f="65" t="bug" />
-        <move name="Fury Cutter" level="53" interval="11" range="1" isTarget="0" f="65" t="bug" />
-        <move name="Guillotine" level="50" interval="10" range="1" isTarget="0" f="70" t="normal" /> 
-        <move name="Harden" level="50" interval="10" range="1" isTarget="0" f="0" t="normal" />
-        <move name="Rage" level="60" interval="10" range="1" isTarget="0" f="0" t="normal" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Scratch" interval="2805" chance="29" range="1" />

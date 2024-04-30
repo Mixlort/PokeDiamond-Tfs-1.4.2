@@ -1,7 +1,5 @@
 <monster name="Grimer" nameDescription="a grimer" race="poison" race2="no race" experience="90" speed="145">
-    <level min="15" max="15" />
     <health now="80" max="80" />
-    <status attack="80" defense="50" spAtk="40" spDef="50" />
     <look type="565" corpse="11886" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,14 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Mud Shot" level="15" interval="8" range="3" isTarget="1" f="40" t="ground" />
-        <move name="Acid" level="6" interval="10" range="4" isTarget="1" f="45" t="poison" />
-        <move name="Sludge" level="14" interval="10" range="3" isTarget="1" f="65" t="poison" />
-        <move name="Mud Bomb" level="17" interval="7" range="3" isTarget="1" f="60" t="ground" />
-        <move name="Poison Bomb" level="22" interval="7" range="3" isTarget="1" f="70" t="poison" />
-        <move name="Harden" level="22" interval="10" range="1" isTarget="0" f="0" t="normal" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Mud Shot" interval="2664" chance="30" range="3" />

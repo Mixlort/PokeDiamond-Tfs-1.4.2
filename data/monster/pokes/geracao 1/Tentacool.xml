@@ -1,7 +1,5 @@
 <monster name="Tentacool" nameDescription="a tentacool" race="water" race2="poison" experience="105" speed="190">
-    <level min="15" max="15" />
     <health now="40" max="40" />
-    <status attack="40" defense="35" spAtk="50" spDef="100" />
     <look type="447" corpse="11972" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,14 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Acid" level="1" interval="8" range="4" isTarget="1" f="45" t="poison" />
-        <move name="Bubbles" level="1" interval="5" range="4" isTarget="1" f="40" t="water" />
-        <move name="Poison Sting" level="1" interval="8" range="2" isTarget="1" f="40" t="poison" />
-        <move name="Psy Pulse" level="17" interval="7" range="4" isTarget="1" f="35" t="psychic" />
-        <move name="Mud Shot" level="19" interval="8" range="3" isTarget="1" f="40" t="ground" />
-        <move name="Super Sonic" level="21" interval="8" range="3" isTarget="1" f="0" t="normal" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Acid" interval="2664" chance="30" range="4" />

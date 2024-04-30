@@ -1,7 +1,5 @@
 <monster name="Gulpin" nameDescription="a Gulpin" race="poison" race2="no race" experience="99" speed="160">
-  <level min="25" max="25" />
     <health now="70" max="70" />
-    <status attack="43" defense="53" spAtk="43" spDef="53" />
     <look type="1637" corpse="622" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100">  </attack>

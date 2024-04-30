@@ -1,7 +1,5 @@
 <monster name="Meowth" nameDescription="a meowth" race="normal" race2="no race" experience="69" speed="210">
-    <level min="15" max="15" />
     <health now="40" max="40" />
-    <status attack="45" defense="35" spAtk="40" spDef="65" />
     <look type="456" corpse="11917" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,12 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Slash" level="15" interval="7" range="1" isTarget="1" f="60" t="normal" />
-        <move name="Scratch" level="15" interval="5" range="1" isTarget="1" f="40" t="normal" />
-        <move name="Bite" level="15" interval="8" range="1" isTarget="1" f="50" t="dark" />
-        <move name="Pay Day" level="20" interval="9" range="4" isTarget="1" f="50" t="normal" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Slash" interval="2711" chance="30" range="1" />

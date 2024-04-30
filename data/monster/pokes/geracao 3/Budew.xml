@@ -1,7 +1,5 @@
 <monster name="Budew" nameDescription="a Budew" race="grass" race2="poison" experience="85.8" speed="175">
-  <level min="10" max="15" />
     <health now="40" max="40" />
-    <status attack="30" defense="35" spAtk="50" spDef="35" />
     <look type="1772" corpse="606" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -23,9 +21,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
   <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />

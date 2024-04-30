@@ -1,7 +1,5 @@
 <monster name="Crobat" nameDescription="a crobat" race="poison" race2="flying" experience="204" speed="170">
-  <level min="80" max="80" />
     <health now="85" max="85" />
-    <status attack="90" defense="80" spAtk="70" spDef="80" />
     <look type="1454" corpse="3279" />
     <flags>
         <flag summonable="1" />
@@ -20,9 +18,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Bite" interval="2664" chance="30" range="1" />

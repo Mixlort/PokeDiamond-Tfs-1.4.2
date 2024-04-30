@@ -1,7 +1,5 @@
 <monster name="Gabite" nameDescription="a Gabite" race="dragon" race2="ground" experience="144" speed="202">
-    <level min="0" max="0" />
     <health now="68" max="68" />
-    <status attack="90" defense="65" spAtk="50" spDef="40" />
     <look type="1546" corpse="129" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Aqua Tail" interval="2805" chance="29" range="1" />

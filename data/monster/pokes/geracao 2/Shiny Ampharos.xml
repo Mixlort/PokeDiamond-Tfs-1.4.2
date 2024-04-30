@@ -1,7 +1,5 @@
 <monster name="Shiny Ampharos" nameDescription="an Shiny Ampharos" race="electric" race2="no race" experience="194" speed="130">
-  <level min="85" max="85" />
     <health now="90" max="90" />
-    <status attack="75" defense="85" spAtk="115" spDef="90" />
     <look type="2189" corpse="3268" />
 	 <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Quick Attack" interval="2570" chance="31" range="2" />

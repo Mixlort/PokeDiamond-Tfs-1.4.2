@@ -1,7 +1,5 @@
 <monster name="Grumpig" nameDescription="a Grumpig" race="psychic" race2="no race" experience="181.5" speed="200">
-  <level min="50" max="52" />
     <health now="80" max="80" />
-    <status attack="45" defense="65" spAtk="90" spDef="65" />
     <look type="1711" corpse="12719" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100">  </attack>

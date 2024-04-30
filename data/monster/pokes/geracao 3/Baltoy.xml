@@ -1,7 +1,5 @@
 <monster name="Baltoy" nameDescription="a baltoy" race="ground" race2="psychic" experience="180" speed="175">
-  <level min="15" max="15" />
     <health now="40" max="40" />
-    <status attack="40" defense="55" spAtk="40" spDef="80" />
     <look type="1653" corpse="12767" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Confusion" interval="2758" chance="30" range="6" />

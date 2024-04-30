@@ -1,7 +1,5 @@
 <monster name="Shiny Zubat" nameDescription="a Shiny zubat" race="poison" race2="flying" experience="54" speed="175">
-  <level min="0" max="0" />
     <health now="40" max="40" />
-    <status attack="45" defense="35" spAtk="30" spDef="40" />
     <look type="1235" corpse="12460" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />

@@ -1,7 +1,5 @@
 <monster name="Exploud" nameDescription="an Exploud" race="normal" race2="no race" experience="0" speed="205">
   <health now="400" max="400" />
-      <level min="0" max="0" />
-    <status attack="0" defense="0" spAtk="0" spDef="0" />
     <look type="1665" corpse="12734" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 	  <attack name="melee" interval="2000" chance="100" range="1" min="-177" max="-219" />
         <attack name="Doubleslap" interval="2852" chance="29" range="1" />

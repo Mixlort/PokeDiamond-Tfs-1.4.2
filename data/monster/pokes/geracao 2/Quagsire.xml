@@ -1,7 +1,5 @@
 <monster name="Quagsire" nameDescription="a quagsire" race="water" race2="ground" experience="137" speed="105">
-  <level min="65" max="65" />
     <health now="95" max="95" />
-    <status attack="85" defense="85" spAtk="65" spDef="65" />
     <look type="923" corpse="4425" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 		<attack name="melee" interval="2000" chance="100" range="1" min="-28" max="-44" />
         <attack name="Mud Shot" interval="2570" chance="31" range="3" />

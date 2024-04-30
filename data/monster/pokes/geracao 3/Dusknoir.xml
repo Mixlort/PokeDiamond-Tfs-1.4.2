@@ -1,7 +1,5 @@
 <monster name="Dusknoir" nameDescription="a Dusknoir" race="ghost" race2="no race" experience="209" speed="165">
-  <level min="73" max="80" />
     <health now="45" max="45" />
-    <status attack="100" defense="135" spAtk="65" spDef="135" />
     <look type="1633" corpse="619" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100">  </attack>

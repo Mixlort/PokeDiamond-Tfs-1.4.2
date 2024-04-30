@@ -1,7 +1,5 @@
 <monster name="Carvanha" nameDescription="a carvanha" race="water" race2="dark" experience="58" speed="185">
-    <level min="24" max="35" />
     <health now="45" max="45" />
-    <status attack="90" defense="20" spAtk="65" spDef="40" />
     <look type="498" corpse="12752" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
    <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Bubbles" interval="2570" chance="31" range="3" />

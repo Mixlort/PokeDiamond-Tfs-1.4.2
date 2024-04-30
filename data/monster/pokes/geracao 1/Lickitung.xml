@@ -1,7 +1,5 @@
 <monster name="Lickitung" nameDescription="a lickitung" race="normal" race2="no race" experience="127" speed="150">
-    <level min="55" max="55" />
     <health now="90" max="90" />
-    <status attack="55" defense="75" spAtk="60" spDef="75" />
     <look type="362" corpse="11907" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -22,16 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Lick" level="55" interval="7" range="1" isTarget="1" f="0" t="normal" />
-        <move name="Scratch" level="55" interval="7" range="1" isTarget="1" f="40" t="normal" />
-        <move name="Doubleslap" level="55" interval="6" range="1" isTarget="1" f="25" t="normal" />
-        <move name="Mega Punch" level="55" interval="10" range="1" isTarget="1" f="85" t="fighting" />
-        <move name="Iron Tail" level="55" interval="8" range="1" isTarget="1" f="70" t="steel" />
-        <move name="Squisky Licking" level="60" interval="9" range="1" isTarget="0" f="80" t="normal" />
-        <move name="Super Sonic" level="60" interval="10" range="3" isTarget="1" f="0" t="normal" />
-        <move name="Strafe" level="55" interval="10" range="1" isTarget="0" f="0" t="normal" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Lick" interval="2758" chance="30" range="1" />

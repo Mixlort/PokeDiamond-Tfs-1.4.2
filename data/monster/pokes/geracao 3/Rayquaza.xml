@@ -1,7 +1,5 @@
 <monster name="Rayquaza" nameDescription="a Rayquaza" race="dragon" race2="flying" experience="64" speed="170" manacost="590">
-  <level min="100" max="150" />
     <health now="10000" max="10000" />
-    <status attack="500" defense="1000" spAtk="450" spDef="800" />
     <look type="1695" corpse="9812" />
   <targetchange interval="1000" chance="0" />
   <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Aqua Tail" interval="2805" chance="29" range="1" />

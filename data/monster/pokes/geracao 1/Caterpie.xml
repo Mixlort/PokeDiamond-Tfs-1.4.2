@@ -1,7 +1,5 @@
 <monster name="Caterpie" nameDescription="a caterpie" race="bug" race2="no race" experience="53" speed="165">
-    <level min="5" max="5" />
     <health now="45" max="45" />
-    <status attack="30" defense="35" spAtk="20" spDef="20" />
     <look type="383" corpse="11849" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -22,11 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Headbutt" level="1" interval="5" range="1" isTarget="1" f="70" t="normal" />
-        <move name="String Shot" level="1" interval="2" range="3" isTarget="1" f="0" t="bug" />
-        <move name="Bug Bite" level="1" interval="6" range="1" isTarget="1" f="45" t="bug" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Headbutt" interval="2617" chance="30" range="1" />

@@ -1,7 +1,5 @@
 <monster name="Sceptile" nameDescription="a sceptile" race="grass" race2="no race" experience="208" speed="240">
-    <level min="85" max="90" />
     <health now="70" max="70" />
-    <status attack="85" defense="65" spAtk="105" spDef="85" />
     <look type="1702" corpse="588" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Body Slam" interval="2852" chance="29" range="1" />

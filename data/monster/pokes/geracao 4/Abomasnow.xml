@@ -1,7 +1,5 @@
 <monster name="Abomasnow" nameDescription="a Abomasnow" race="grass" race2="ice" experience="176" speed="180">
-  <level min="0" max="0" />
     <health now="90" max="90" />
-    <status attack="92" defense="75" spAtk="92" spDef="75" />
     <look type="1583" corpse="261" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 		<attack name="melee" interval="2000" chance="100" range="1" min="-22" max="-38" />
 		<attack name="Mud Bomb" interval="2852" chance="29" range="3" />

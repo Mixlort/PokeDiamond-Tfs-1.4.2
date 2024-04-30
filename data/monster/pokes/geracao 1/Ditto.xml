@@ -1,7 +1,5 @@
 <monster name="Ditto" nameDescription="a ditto" race="normal" race2="no race" experience="61" speed="158">
-  <level min="40" max="40" />
-    <health now="48" max="48" />
-    <status attack="48" defense="48" spAtk="48" spDef="65" />
+  <health now="48" max="48" />
     <look type="379" corpse="11861" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -23,9 +21,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100">  </attack>

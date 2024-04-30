@@ -1,7 +1,5 @@
 <monster name="Geodude" nameDescription="a geodude" race="rock" race2="ground" experience="73" speed="140">
-    <level min="15" max="15" />
     <health now="40" max="40" />
-    <status attack="80" defense="100" spAtk="30" spDef="30" />
     <look type="547" corpse="11880" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,13 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Rock Throw" level="15" interval="7" range="4" isTarget="1" f="55" t="rock" />
-        <move name="Sand Attack" level="1" interval="7" range="1" isTarget="0" f="0" t="ground" />
-        <move name="Rock Tomb" level="16" interval="9" range="4" isTarget="1" f="85" t="rock" />  
-        <move name="Earthshock" level="25" interval="7" range="1" isTarget="0" f="75" t="ground" />
-        <move name="Harden" level="20" interval="8" range="1" isTarget="0" f="0" t="normal" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Rock Throw" interval="2664" chance="30" range="4" />

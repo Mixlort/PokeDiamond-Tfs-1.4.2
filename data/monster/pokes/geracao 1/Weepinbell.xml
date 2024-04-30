@@ -1,7 +1,5 @@
 <monster name="Weepinbell" nameDescription="a weepinbell" race="grass" race2="poison" experience="151" speed="175">
-    <level min="25" max="25" />
     <health now="65" max="65" />
-    <status attack="90" defense="50" spAtk="85" spDef="45" />
     <look type="388" corpse="11984" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -22,14 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Razor Leaf" level="25" interval="7" range="4" isTarget="1" f="33" t="grass" />
-        <move name="Vine Whip" level="20" interval="8" range="1" isTarget="0" f="65" t="grass" />
-        <move name="Acid" level="10" interval="8" range="4" isTarget="1" f="45" t="poison" />
-        <move name="Poison Bomb" level="27" interval="8" range="3" isTarget="1" f="70" t="poison" />
-        <move name="Slash" level="25" interval="7" range="1" isTarget="1" f="60" t="normal" />
-        <move name="Stun Spore" level="30" interval="10" range="1" isTarget="0" f="0" t="grass" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Razor Leaf" interval="2664" chance="30" range="4" />

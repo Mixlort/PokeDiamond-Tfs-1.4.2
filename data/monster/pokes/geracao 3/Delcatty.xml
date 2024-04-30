@@ -1,7 +1,5 @@
 <monster name="Delcatty" nameDescription="a Delcatty" race="normal" race2="no race" experience="162.8" speed="190">
-  <level min="45" max="52" />
     <health now="70" max="70" />
-    <status attack="65" defense="65" spAtk="55" spDef="60" />
     <look type="1664" corpse="12710" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Doubleslap" interval="2617" chance="30" range="1" />

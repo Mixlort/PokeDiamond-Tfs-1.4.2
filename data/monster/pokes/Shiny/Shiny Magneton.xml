@@ -1,7 +1,5 @@
 <monster name="Shiny Magneton" nameDescription="a shiny magneton" race="electric" race2="steel" experience="161" speed="190">
-    <level min="0" max="0" />
     <health now="50" max="50" />
-    <status attack="60" defense="95" spAtk="120" spDef="70" />
     <look type="1494" corpse="12599" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="physical" interval="2000" chance="100" range="5" min="-50" max="-100">
             <attribute key="shootEffect" value="eartharrow" />

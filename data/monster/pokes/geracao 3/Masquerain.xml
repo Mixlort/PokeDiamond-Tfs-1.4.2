@@ -1,7 +1,5 @@
 <monster name="Masquerain" nameDescription="a Masquerain" race="bug" race2="flying" experience="151.8" speed="180">
-  <level min="40" max="42" />
     <health now="70" max="70" />
-    <status attack="60" defense="62" spAtk="100" spDef="62" />
     <look type="1715" corpse="12721" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100">  </attack>

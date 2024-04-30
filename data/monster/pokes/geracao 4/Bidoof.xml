@@ -1,7 +1,5 @@
 <monster name="Bidoof" nameDescription="a Bidoof" race="normal" race2="no race" experience="57" speed="151">
-    <level min="0" max="0" />
     <health now="59" max="59" />
-    <status attack="45" defense="40" spAtk="35" spDef="40" />
     <look type="1504" corpse="151" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Quick Attack" interval="2476" chance="31" range="2" />

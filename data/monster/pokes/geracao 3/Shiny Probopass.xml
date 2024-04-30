@@ -1,7 +1,5 @@
 <monster name="Shiny Probopass" nameDescription="a Shiny probopass" race="rock" race2="steel" experience="500" speed="212">
-    <level min="1" max="150" />
     <health now="170" max="170" />
-    <status attack="140" defense="290" spAtk="200" spDef="300" />
     <look type="2103" corpse="13231" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -23,9 +21,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
  <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Rock Throw" interval="2664" chance="30" range="4" />

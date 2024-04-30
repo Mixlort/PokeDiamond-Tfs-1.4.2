@@ -1,7 +1,5 @@
 <monster name="Haunter" nameDescription="a haunter" race="ghost" race2="poison" experience="126" speed="215">
-    <level min="45" max="45" />
     <health now="45" max="45" />
-    <status attack="50" defense="45" spAtk="115" spDef="55" />
     <look type="416" corpse="11889" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,17 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Lick" level="47" interval="6" range="1" isTarget="1" f="0" t="normal" />
-        <move name="Shadow Ball" level="47" interval="7" range="4" isTarget="1" f="60" t="ghost" />
-        <move name="Night Shade" level="47" interval="10" range="1" isTarget="0" f="80" t="ghost" />
-        <move name="Shadow Storm" level="60" interval="14" range="1" isTarget="0" f="95" t="ghost" />
-        <move name="Hypnosis" level="86" interval="11" range="3" isTarget="1" f="0" t="psychic" />
-        <move name="Dream Eater" level="50" interval="10" range="3" isTarget="1" f="80" t="ghost" />
-        <!-- <move name="Shadow Sneak" level="80" interval="8" range="3" isTarget="1" f="40" t="ghost" /> -->
-        <move name="Fear" level="45" interval="10" range="1" isTarget="0" f="0" t="ghost" />
-        <move name="Hypnosis" level="45" interval="11" range="3" isTarget="1" f="0" t="psychic" />
-    </moves>
     <attacks>
         <attack name="physical" interval="2000" chance="100" range="3" min="-50" max="-100">
             <attribute key="shootEffect" value="eartharrow" />

@@ -1,7 +1,5 @@
 <monster name="Shiny Alakazam" nameDescription="a Shiny alakazam" race="psychic" race2="no race" experience="186" speed="240">
-  <level min="0" max="0" />
     <health now="55" max="55" />
-    <status attack="50" defense="45" spAtk="135" spDef="95" />
     <look type="1259" corpse="12484" />
   <targetchange interval="0" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="physical" interval="2000" chance="100" range="5" min="-50" max="-100">

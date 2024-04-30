@@ -1,7 +1,5 @@
 <monster name="Mega Lucario" nameDescription="a Mega Lucario" race="fighting" race2="steel" experience="200" speed="210">
-    <level min="0" max="0" />
     <health now="7" max="7" />
-    <status attack="11" defense="7" spAtk="115" spDef="210" />
     <look type="1887" corpse="" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Triple Kick" interval="2440" chance="28" range="1" />

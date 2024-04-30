@@ -1,7 +1,5 @@
 <monster name="Sharpedo" nameDescription="a sharpedo" race="water" race2="flying" experience="214" speed="201">
-    <level min="85" max="100" />
     <health now="70" max="70" />
-    <status attack="120" defense="40" spAtk="95" spDef="95" />
     <look type="1705" corpse="12745" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
  <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Skull Bash" interval="2617" chance="30" range="1" />

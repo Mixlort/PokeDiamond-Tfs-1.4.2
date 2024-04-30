@@ -1,7 +1,5 @@
 <monster name="Bagon" nameDescription="a Bagon" race="dragon" race2="no race" experience="158.4" speed="170">
-  <level min="35" max="40" />
     <health now="45" max="45" />
-    <status attack="75" defense="60" spAtk="40" spDef="30" />
     <look type="1643" corpse="597" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />

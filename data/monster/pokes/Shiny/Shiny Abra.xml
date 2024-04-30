@@ -1,7 +1,5 @@
 <monster name="Shiny Abra" nameDescription="a abra" race="psychic" race2="ghost" experience="75" speed="210">
-  <level min="0" max="0" />
     <health now="25" max="25" />
-    <status attack="20" defense="15" spAtk="105" spDef="55" />
     <look type="1257" corpse="12482" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="physical" interval="2000" chance="100" range="5" min="-50" max="-100">

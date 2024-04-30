@@ -1,7 +1,5 @@
 <monster name="Kricketune" nameDescription="a Kricketune" race="bug" race2="no race" experience="118" speed="185">
-  <level min="0" max="0" />
     <health now="77" max="77" />
-    <status attack="85" defense="51" spAtk="55" spDef="51" />
     <look type="1609" corpse="157" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 	  <attack name="melee" interval="2000" chance="100" range="1" min="-82" max="-101" />
         <attack name="Headbutt" interval="2852" chance="29" range="1" />

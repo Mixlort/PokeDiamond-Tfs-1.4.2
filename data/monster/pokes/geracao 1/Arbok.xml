@@ -1,7 +1,5 @@
 <monster name="Arbok" nameDescription="a arbok" race="poison" race2="no race" experience="117" speed="80">
-    <level min="35" max="40" />
     <health now="6" max="6" />
-    <status attack="60" defense="69" spAtk="75" spDef="79" />
     <look type="390" corpse="11841" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,16 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Bite" level="30" interval="6" range="1" isTarget="1" f="50" t="dark" />
-        <move name="Poison Fang" level="30" interval="8" range="1" isTarget="1" f="65" t="poison" />
-        <move name="Poison Sting" level="30" interval="8" range="2" isTarget="1" f="40" t="poison" />
-        <move name="Pin Missile" level="38" interval="8" range="1" isTarget="0" f="80" t="bug" />
-        <move name="Acid" level="3" interval="7" range="4" isTarget="1" f="45" t="poison" />
-        <move name="Iron Tail" level="40" interval="7" range="1" isTarget="1" f="70" t="steel" />
-        <move name="Fear" level="30" interval="10" range="1" isTarget="0" f="0" t="ghost" />
-        <move name="Rage" level="40" interval="11" range="1" isTarget="0" f="0" t="normal" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Bite" interval="2711" chance="30" range="1" />

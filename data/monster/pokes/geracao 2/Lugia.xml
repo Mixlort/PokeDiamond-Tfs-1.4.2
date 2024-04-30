@@ -1,7 +1,5 @@
 <monster name="Lugia" nameDescription="a lugia" race="psychic" race2="flying" experience="220" speed="170">
-  <level min="150" max="300" />
     <health now="10000" max="10000" />
-    <status attack="604" defense="1010" spAtk="400" spDef="854" />
     <look type="959" corpse="3564" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 	<attack name="melee" interval="2000" chance="100" range="1" min="-236" max="-279">
    	</attack>

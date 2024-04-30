@@ -1,7 +1,5 @@
 <monster name="Shedinja" nameDescription="a Shedinja" race="bug" race2="ghost" experience="134" speed="160">
-    <level min="45" max="55" />
     <health now="1" max="1" />
-    <status attack="90" defense="45" spAtk="30" spDef="45" />
     <look type="1805" corpse="12692" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
  <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Quick Attack" interval="2476" chance="31" range="2" />

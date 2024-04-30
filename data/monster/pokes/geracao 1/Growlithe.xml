@@ -1,7 +1,5 @@
 <monster name="Growlithe" nameDescription="a growlithe" race="fire" race2="no race" experience="91" speed="180">
-    <level min="25" max="25" />
     <health now="55" max="55" />
-    <status attack="70" defense="45" spAtk="70" spDef="50" />
     <look type="460" corpse="11887" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,14 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Bite" level="25" interval="7" range="1" isTarget="1" f="50" t="dark" />
-        <move name="Roar" level="25" interval="7" range="1" isTarget="0" f="0" t="normal" />
-        <move name="Quick Attack" level="25" interval="7" range="2" isTarget="1" f="40" t="normal" />
-        <move name="Ember" level="25" interval="8" range="4" isTarget="1" f="42" t="fire" />
-        <move name="Flamethrower" level="25" interval="7" range="1" isTarget="0" f="80" t="fire" />
-        <move name="Fireball" level="27" interval="9" range="4" isTarget="1" f="75" t="fire" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Quick Attack" interval="2523" chance="31" range="2" />

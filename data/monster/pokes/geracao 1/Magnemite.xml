@@ -1,7 +1,5 @@
 <monster name="Magnemite" nameDescription="a magnemite" race="electric" race2="steel" experience="89" speed="165">
-    <level min="15" max="15" />
     <health now="50" max="50" />
-    <status attack="35" defense="70" spAtk="95" spDef="55" />
     <look type="568" corpse="11913" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,13 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Super Sonic" level="15" interval="9" range="3" isTarget="1" f="0" t="normal" />
-        <move name="Thunder Shock" level="1" interval="7" range="4" isTarget="1" f="55" t="electric" />
-        <move name="Thunder Wave" level="1" interval="8" range="1" isTarget="0" f="70" t="electric" />
-        <move name="Thunder Bolt" level="18" interval="7" range="4" isTarget="1" f="33" t="electric" />
-        <move name="Sonicboom" level="20" interval="8" range="3" isTarget="1" f="55" t="normal" />
-    </moves>
     <attacks>
         <attack name="physical" interval="2000" chance="100" range="4" min="-50" max="-100">
             <attribute key="shootEffect" value="eartharrow" />

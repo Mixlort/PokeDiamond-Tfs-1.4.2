@@ -1,7 +1,5 @@
 <monster name="Shuckle" nameDescription="a shuckle" race="bug" race2="rock" experience="80" speed="95">
-  <level min="30" max="30" />
     <health now="20" max="20" />
-    <status attack="10" defense="230" spAtk="10" spDef="230" />
     <look type="949" corpse="4430" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 	  <attack name="melee" interval="2000" chance="100" range="1" min="-22" max="-36" />
         <attack name="Scratch" interval="2852" chance="29" range="1" />

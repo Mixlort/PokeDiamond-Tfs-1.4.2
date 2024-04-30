@@ -1,7 +1,5 @@
 <monster name="Snorunt" nameDescription="a Snorunt" race="ice" race2="no race" experience="78" speed="170">
-  <level min="25" max="25" />
     <health now="50" max="50" />
-    <status attack="50" defense="50" spAtk="50" spDef="50" />
     <look type="1759" corpse="12750" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -23,9 +21,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 	  <attack name="melee" interval="2000" chance="100" range="1" min="-22" max="-38" />
    	  <attack name="Mud Bomb" interval="2852" chance="29" range="1" />

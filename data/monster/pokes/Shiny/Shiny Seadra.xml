@@ -1,7 +1,5 @@
 <monster name="Shiny Seadra" nameDescription="a Shiny seadra" race="water" race2="no race" experience="155" speed="205">
-  <level min="0" max="0" />
     <health now="55" max="55" />
-    <status attack="65" defense="95" spAtk="95" spDef="45" />
     <look type="1311" corpse="12537" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />

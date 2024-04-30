@@ -1,7 +1,5 @@
 <monster name="Absol" nameDescription="an absol" race="dark" race2="no race" experience="124.3" speed="500">
-  <level min="70" max="75" />
     <health now="65" max="65" />
-    <status attack="130" defense="60" spAtk="75" spDef="60" />
     <look type="1626" corpse="12765" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 	  <attack name="melee" interval="2000" chance="100" range="1" min="-78" max="-124" />
         <attack name="Quick Attack" interval="2852" chance="29" range="1" />

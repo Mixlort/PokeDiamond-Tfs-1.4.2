@@ -1,7 +1,5 @@
 <monster name="Spoink" nameDescription="a Spoink" race="psychic" race2="no race" experience="112.2" speed="180">
-  <level min="20" max="28" />
     <health now="60" max="60" />
-    <status attack="25" defense="35" spAtk="70" spDef="35" />
     <look type="1710" corpse="12718" />
   <targetchange interval="10000" chance="0" />
 <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
 
 <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100">  </attack>

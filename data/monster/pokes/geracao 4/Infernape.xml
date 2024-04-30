@@ -1,7 +1,5 @@
 <monster name="Infernape" nameDescription="a Infernape" race="fire" race2="fighting" experience="209" speed="228">
-    <level min="0" max="0" />
     <health now="76" max="76" />
-    <status attack="104" defense="71" spAtk="104" spDef="71" />
     <look type="1527" corpse="119" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Dragon Claw" interval="2570" chance="31" range="1" />

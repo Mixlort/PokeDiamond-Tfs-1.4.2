@@ -1,7 +1,5 @@
 <monster name="Hypno" nameDescription="a hypno" race="psychic" race2="no race" experience="165" speed="197">
-    <level min="55" max="55" />
     <health now="85" max="85" />
-    <status attack="73" defense="70" spAtk="73" spDef="115" />
     <look type="470" corpse="11893" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,16 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <move name="Headbutt" level="20" interval="7" range="1" isTarget="1" f="50" t="normal" />
-        <move name="Psybeam" level="50" interval="14" range="1" isTarget="0" f="75" t="psychic" />
-        <!-- <move name="Psy Wave" level="20" interval="10" range="1" isTarget="0" f="75" t="psychic" /> -->
-        <move name="Confusion" level="55" interval="10" range="1" isTarget="0" f="50" t="psychic" />
-        <move name="Psychic" level="58" interval="9" range="1" isTarget="0" f="80" t="psychic" />
-        <move name="Dream Eater" level="55" interval="10" range="3" isTarget="1" f="80" t="ghost" />
-        <move name="Hypnosis" level="55" interval="5" range="3" isTarget="1" f="0" t="psychic" />
-        <move name="Focus" level="70" interval="10" range="1" isTarget="0" f="0" t="normal" />
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Psybeam" interval="2570" chance="31" range="1" />

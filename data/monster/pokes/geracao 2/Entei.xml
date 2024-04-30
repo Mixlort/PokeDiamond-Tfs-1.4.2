@@ -1,7 +1,5 @@
 <monster name="Entei" nameDescription="an entei" race="fire" race2="no race" experience="217" speed="180">
-  <level min="150" max="300" />
     <health now="10000" max="10000" />
-    <status attack="502" defense="1005" spAtk="406" spDef="800" />
     <look type="956" corpse="3286" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 	<attack name="melee" interval="2000" chance="100" range="1" min="-246" max="-269">
    	</attack>

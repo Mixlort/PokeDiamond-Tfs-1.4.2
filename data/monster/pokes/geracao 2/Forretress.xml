@@ -1,7 +1,5 @@
 <monster name="Forretress" nameDescription="a forretress" race="bug" race2="steel" experience="118" speed="110">
-  <level min="65" max="65" />
     <health now="75" max="75" />
-    <status attack="90" defense="140" spAtk="60" spDef="60" />
     <look type="910" corpse="3290" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 	  <attack name="melee" interval="2000" chance="100" range="1" min="-82" max="-101" />
         <attack name="Headbutt" interval="2852" chance="29" range="1" />

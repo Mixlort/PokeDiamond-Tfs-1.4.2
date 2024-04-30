@@ -1,7 +1,5 @@
 <monster name="Shiny Rhydon" nameDescription="a shiny rhydon" race="ground" race2="rock" experience="204" speed="160">
-    <level min="0" max="0" />
     <health now="105" max="105" />
-    <status attack="130" defense="120" spAtk="45" spDef="45" />
     <look type="1499" corpse="12596" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
 		<attack name="Iron Tail" interval="2758" chance="30" range="1" />

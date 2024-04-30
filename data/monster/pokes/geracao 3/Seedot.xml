@@ -1,7 +1,5 @@
 <monster name="Seedot" nameDescription="a Seedot" race="grass" race2="no race" experience="64" speed="150">
-  <level min="18" max="18" />
     <health now="40" max="40" />
-    <status attack="40" defense="50" spAtk="30" spDef="30" />
     <look type="1761" corpse="12701" />
   <targetchange interval="10000" chance="0" />
   <flags>
@@ -23,9 +21,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Quick Attack" interval="2476" chance="31" range="2" />

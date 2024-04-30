@@ -1,7 +1,5 @@
 <monster name="Uxie" nameDescription="a uxie" race="flying" race2="dragon" experience="64" speed="205">
-  <level min="0" max="0" />
     <health now="22" max="22" />
-    <status attack="22" defense="22" spAtk="22" spDef="200" />
     <look type="1885" corpse="4285" />
 
   	<targetchange interval="1000" chance="1000" />
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
     <attack name="headbutt" interval="1000" chance="50" min="-4000" max="-80000">
 	<attack name="Bubbles" interval="2758" chance="30" range="1" />

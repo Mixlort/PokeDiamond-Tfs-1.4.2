@@ -1,7 +1,5 @@
 <monster name="Shiny Steelix" nameDescription="a Shiny steelix" race="steel" race2="ground" experience="196" speed="250">
-  <level min="1" max="150" />
     <health now="190" max="190" />
-    <status attack="210" defense="400" spAtk="120" spDef="120" />
     <look type="2052" corpse="12946" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 		<attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Sand Attack" interval="2852" chance="29" range="4" />

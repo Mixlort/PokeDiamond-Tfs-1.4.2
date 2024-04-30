@@ -1,7 +1,5 @@
 <monster name="Sableye" nameDescription="a Sableye" race="dark" race2="ghost" experience="147" speed="170">
-    <level min="47" max="50" />
     <health now="50" max="50" />
-    <status attack="75" defense="75" spAtk="65" spDef="65" />
     <look type="1672" corpse="12700" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Lick" interval="2570" chance="31" range="1" />

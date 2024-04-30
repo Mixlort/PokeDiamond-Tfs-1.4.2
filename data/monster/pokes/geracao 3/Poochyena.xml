@@ -1,7 +1,5 @@
 <monster name="Poochyena" nameDescription="an Poochyena" race="dark" race2="no race" experience="197" speed="155">
-  <level min="25" max="25" />
     <health now="35" max="35" />
-    <status attack="55" defense="35" spAtk="30" spDef="35" />
     <look type="1691" corpse="12693" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 	  <attack name="melee" interval="2000" chance="100" range="1" min="-78" max="-124" />
         <attack name="Quick Attack" interval="2852" chance="29" range="1" />

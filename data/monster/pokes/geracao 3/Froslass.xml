@@ -1,7 +1,5 @@
 <monster name="Froslass" nameDescription="a froslass" race="ice" race2="ghost" experience="170" speed="230">
-  <level min="60" max="65" />
     <health now="70" max="70" />
-    <status attack="80" defense="70" spAtk="80" spDef="70" />
     <look type="1760" corpse="12748" />
 	<targetchange interval="10000" chance="0" />
   <flags>
@@ -22,9 +20,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
   <attacks>
 	  <attack name="melee" interval="2000" chance="100" range="1" min="-152" max="-188" />
         <attack name="Mud Bomb" interval="2852" chance="29" range="1" />

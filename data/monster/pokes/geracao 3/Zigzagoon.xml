@@ -1,7 +1,5 @@
 <monster name="Zigzagoon" nameDescription="a Zigzagoon" race="normal" race2="no race" experience="57" speed="180">
-    <level min="60" max="90" />
     <health now="38" max="38" />
-    <status attack="30" defense="41" spAtk="30" spDef="41" />
     <look type="1649" corpse="12740" />
     <targetchange interval="10000" chance="0" />
     <flags>
@@ -21,9 +19,6 @@
         <event name="MonsterHealthChange" />
         <event name="CorpseLoot" />
     </script>
-    <moves>
-        <!-- moves -->
-    </moves>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Quick Attack" interval="2476" chance="31" range="2" />
