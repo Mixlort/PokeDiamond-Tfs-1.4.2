@@ -11,7 +11,69 @@
     <movevent event="Equip" itemid="39851" slot="ammo" script="mixlort/bikeWater.lua" />
     <movevent event="DeEquip" itemid="39851" slot="ammo" script="mixlort/bikeWater.lua" />  
     <movevent event="Equip" itemid="27634" slot="ammo" script="mixlort/bikeInicial.lua" />
-    <movevent event="DeEquip" itemid="27634" slot="ammo" script="mixlort/bikeInicial.lua" />
+    <movevent event="DeEquip" itemid="27634" slot="ammo" script="mixlort/bikeInicial.lua" />    
+    <!-- gold -->
+	<!-- <movevent event="StepIn" itemid="4820-4825;11756" script="gold/surf.lua"/> -->
+	<!-- <movevent event="StepOut" itemid="4820-4825;11756" script="gold/surf.lua"/> -->
+	<movevent event="StepIn" actionid="33691;33692;33693;33694;33695;33696;33697;33698;33699;33700;33701;33702;33703;33704;33705;33706;33707;33708;33709;33710;33711;33712;33713;33714;33715;33716;33717;33718;33719;33720" script="gold/PVP/Trade_Go.lua"/>
+	<movevent event="StepIn" actionid="33800;33801;33802;33803;33804;33805;33806;33807;33808" script="gold/PVP/Trade_Back.lua"/>
+	<movevent event="StepIn" actionid="33799" script="gold/PVP/Trade_Back.lua"/>
+	<movevent event="StepIn" actionid="22415" script="gold/halloween.lua"/>
+	<movevent event="StepIn" actionid="25695;25696;25697;25698" script="gold/PVP/PVP_tile.lua"/>
+	<movevent event="StepIn" actionid="24158" script="gold/PVP/PVP_tile.lua"/>
+	<movevent event="StepIn" actionid="44444" script="gold/piso natal.lua"/>
+	<movevent event="StepIn" actionid="44445" script="gold/Fossil.lua"/>
+	<movevent event="StepIn" actionid="7019" script="gold/inicial/charmander.lua"/>
+	<movevent event="StepIn" actionid="7020" script="gold/inicial/squirtle.lua"/>
+	<movevent event="StepIn" actionid="7021" script="gold/inicial/bulbasaur.lua"/>
+	<movevent event="StepIn" actionid="7022" script="gold/inicial/torchic.lua"/>
+	<movevent event="StepIn" actionid="7023" script="gold/inicial/treecko.lua"/>
+	<movevent event="StepIn" actionid="7024" script="gold/inicial/cyndaquil.lua"/>
+	<movevent event="StepIn" actionid="7025" script="gold/inicial/totodile.lua"/>
+	<movevent event="StepIn" actionid="7026" script="gold/inicial/chikorita.lua"/>
+	<movevent event="StepIn" actionid="7027" script="gold/inicial/mudkip.lua"/>
+	<movevent event="StepIn" actionid="7028" script="gold/inicial/piso.lua"/>
+	<movevent event="StepIn" actionid="7006" script="gold/citys/saffron.lua"/>
+	<movevent event="StepIn" actionid="7007" script="gold/citys/cerulean.lua"/>
+	<movevent event="StepIn" actionid="7008" script="gold/citys/lavender.lua"/>
+	<movevent event="StepIn" actionid="7009" script="gold/citys/fuchsia.lua"/>
+	<movevent event="StepIn" actionid="7010" script="gold/citys/celadon.lua"/>
+	<movevent event="StepIn" actionid="7011" script="gold/citys/pewter.lua"/>
+	<movevent event="StepIn" actionid="7012" script="gold/citys/viridian.lua"/>
+	<movevent event="StepIn" actionid="7013" script="gold/citys/vermilion.lua"/>
+	<movevent event="StepIn" actionid="7014" script="gold/citys/cinnabar.lua"/>
+	<movevent event="StepIn" actionid="7015" script="gold/citys/pallet.lua"/>
+	<movevent event="StepIn" actionid="7016" script="gold/citys/orre.lua"/>
+	<movevent event="StepIn" actionid="7017" script="gold/citys/larosse.lua"/>
+	<movevent event="StepIn" actionid="7018" script="gold/citys/canavale.lua"/>
+	<movevent event="StepIn" actionid="7029" script="gold/citys/goldenrod.lua"/>
+	<movevent event="StepIn" actionid="7030" script="gold/citys/azalea.lua"/>
+	<movevent event="StepIn" actionid="7031" script="gold/citys/ecruteak.lua"/>
+	<movevent event="StepIn" actionid="7032" script="gold/citys/olivine.lua"/>
+	<movevent event="StepIn" actionid="7033" script="gold/citys/violet.lua"/>
+	<movevent event="StepIn" actionid="7034" script="gold/citys/cherrygrove.lua"/>
+	<movevent event="StepIn" actionid="7035" script="gold/citys/newbark.lua"/>
+	<movevent event="StepIn" actionid="7036" script="gold/citys/mahogany.lua"/>
+	<movevent event="StepIn" actionid="7037" script="gold/citys/blackcity.lua"/>
+	<movevent event="StepIn" actionid="7038" script="gold/citys/singer.lua"/>
+	<movevent event="StepIn" actionid="7039" script="gold/citys/city nova.lua"/>
+	<movevent event="StepIn" actionid="7040" script="gold/citys/Number.lua"/>
+	<movevent event="StepIn" actionid="4741" script="gold/steel.lua"/>
+	<movevent event="StepIn" actionid="4742" script="gold/ice.lua"/>
+	<movevent event="StepIn" actionid="4743" script="gold/rock.lua"/>
+	<movevent event="StepIn" actionid="4744" script="gold/tyro.lua"/>
+ 	<movevent event="StepIn" actionid="9015" script="gold/roupa.lua"/>
+	<movevent event="StepIn" actionid="17500" script="gold/custom/train_viridian.lua"/>
+	<movevent event="StepIn" actionid="17501" script="gold/custom/train_viridian.lua"/>
+	<movevent event="StepIn" actionid="17503" script="gold/custom/train_celadon.lua"/>
+	<movevent event="StepIn" actionid="17502" script="gold/custom/train_celadon.lua"/>
+	<movevent event="StepIn" actionid="17505" script="gold/custom/boat_vermilion.lua"/>
+	<movevent event="StepIn" actionid="17504" script="gold/custom/boat_vermilion.lua"/>
+	<movevent event="StepIn" actionid="17506" script="gold/custom/boat_cinnabar.lua"/>
+	<movevent event="StepIn" actionid="17507" script="gold/custom/boat_cinnabar.lua"/>
+    <movevent event="StepIn" actionid="17508" script="gold/custom/boat_cinnabar.lua"/>
+    <movevent event="StepIn" actionid="1922" script="gold/viptile.lua"/>
+    <movevent event="StepIn" actionid="1923" script="gold/stafftile.lua"/>
 
 	<!-- Decaying tiles -->
 	<movevent event="StepIn" itemid="293" script="decay.lua" />

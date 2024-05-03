@@ -15,10 +15,6 @@
         <flag runonhealth="0" />
         <flag canteleport="17" />
     </flags>
-    <script>
-        <event name="MonsterHealthChange" />
-        <event name="CorpseLoot" />
-    </script>
     <attacks>
 		<attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Confusion" interval="2617" chance="30" range="6" />
@@ -41,6 +37,8 @@
         <item id="11452" chance="200" />
     </loot>
     <script>
-	<event name="mewtwo" />
+        <event name="MonsterHealthChange" />
+        <event name="CorpseLoot" />
+	    <event name="mewtwo" />
     </script>
 </monster>

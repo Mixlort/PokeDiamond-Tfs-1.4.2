@@ -388,6 +388,7 @@ end
 
 function doAreaCombatHealth(cid, element, pos, area, min, max, eff)
 	if cid and isNumber(cid) then cid = Creature(cid) end
+    if eff == 255 then eff = 0 end
     if eff and eff > 0 then eff = eff + 1 end
     return doAreaCombat(cid, element, pos, area, min, max, eff)
 end

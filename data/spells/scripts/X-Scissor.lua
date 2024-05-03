@@ -32,6 +32,7 @@ function onCastSpell(cid, var)
     ----Novo padrão by Mixlort---------------------------------------------------------------------
 
 	local a = getThingPosWithDebug(cid)
+    local mydir = getCreatureLookDir(cid)
 	 
 	local X = {
 		{{x = a.x+1, y = a.y, z = a.z}, 16}, --norte

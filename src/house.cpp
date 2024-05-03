@@ -513,7 +513,8 @@ Attr_ReadValue Door::readAttr(AttrTypes_t attr, PropStream& propStream)
 			return ATTR_READ_ERROR;
 		}
 
-		setDoorId(doorId);
+		// setDoorId(doorId); mixlort arrumar no futuro
+		setDoorId(0);
 		return ATTR_READ_CONTINUE;
 	}
 	return Item::readAttr(attr, propStream);

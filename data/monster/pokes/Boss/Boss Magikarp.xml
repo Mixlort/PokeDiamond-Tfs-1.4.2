@@ -15,10 +15,6 @@
         <flag runonhealth="0" />
         <flag canteleport="25" />
     </flags>
-    <script>
-        <event name="MonsterHealthChange" />
-        <event name="CorpseLoot" />
-    </script>
     <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Splash" interval="2429" chance="32" range="6" />
@@ -31,6 +27,8 @@
     <loot>
     </loot>
     <script>
+        <event name="MonsterHealthChange" />
+        <event name="CorpseLoot" />
 		<event name="Magikarp" />
     </script>
 </monster>

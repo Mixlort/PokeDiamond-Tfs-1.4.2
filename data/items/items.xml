@@ -1,4 +1,4 @@
-ï»¿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <items>
 	<item id="100" name="void" />
 	<item id="101" name="earth" />
@@ -470,6 +470,7 @@
 	<item id="1387" article="a" name="magic forcefield">
 		<attribute key="description" value="You can see the other side through it." />
 		<attribute key="type" value="teleport" />
+		<attribute key="effect" value="teleport" />
 	</item>
 	<item id="1388" article="a" name="ramp">
 		<attribute key="floorchange" value="east" />
@@ -2963,15 +2964,15 @@
 	</item>
 	<item id="12785" article="a" name="moon ball">
 		
-		<attribute key="description" value="Ainda NÃ£o Funciona. Em Breve SerÃ¡ Arrumada." />
+		<attribute key="description" value="Ainda Não Funciona. Em Breve Será Arrumada." />
 	</item>
 	<item id="12791" article="a" name="silver ball">
 		
-		<attribute key="description" value="Ainda NÃ£o Funciona. Em Breve SerÃ¡ Arrumada." />
+		<attribute key="description" value="Ainda Não Funciona. Em Breve Será Arrumada." />
 	</item>
 	<item id="12792" article="a" name="moon ball">
 		
-		<attribute key="description" value="Ainda NÃ£o Funciona. Em Breve SerÃ¡ Arrumada." />
+		<attribute key="description" value="Ainda Não Funciona. Em Breve Será Arrumada." />
 	</item>
 	<item id="2395" article="a" name="portrait">
 		
@@ -16041,7 +16042,7 @@
 		<attribute key="description" value="This one would be quite healthy if it wasn't for all the melted cheese on top." />
 		
 	</item>
-	<item id="9998" article="a" name="filled jalapeÃ±o peppers">
+	<item id="9998" article="a" name="filled jalapeño peppers">
 		<attribute key="description" value="The creamy cheese makes a great combination with spicy peppers." />
 		
 	</item>
@@ -16963,7 +16964,7 @@
 	</item>
 
 	<item id="12418" article="a" name="Soothe Bell">
-	<attribute key="description" value="Stone para evoluÃ§Ã£o" />
+	<attribute key="description" value="Stone para evolução" />
 	</item>
 	
 	

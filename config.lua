@@ -47,7 +47,7 @@ deathLosePercent = -1
 -- use any other value to disable the rent system
 housePriceEachSQM = 1000
 houseRentPeriod = "never"
-houseOwnedByAccount = false
+houseOwnedByAccount = true
 houseDoorShowPrice = true
 onlyInvitedCanMoveHouseItems = true
 
@@ -62,7 +62,7 @@ timeBetweenExActions = 250 -- 1000
 
 -- Map
 -- NOTE: set mapName WITHOUT .otbm at the end
-mapName = "pokeruby"
+mapName = "pokediamond"
 mapAuthor = "Komic"
 
 -- Market

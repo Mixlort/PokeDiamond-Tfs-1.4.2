@@ -17,10 +17,6 @@
     <flag runonhealth="0" />
    <flag canteleport="15" />
 </flags>
-    <script>
-        <event name="MonsterHealthChange" />
-        <event name="CorpseLoot" />
-    </script>
   <attacks>
 	  <attack name="melee" interval="2000" chance="100" range="1" min="-35" max="-60" />  
         <attack name="Quick Attack" interval="2852" chance="29" range="1" />
@@ -42,6 +38,8 @@
   <loot>
   </loot>
 <script>
-<event name="Tropius" />
+        <event name="MonsterHealthChange" />
+        <event name="CorpseLoot" />
+        <event name="Tropius" />
 </script>
 </monster>

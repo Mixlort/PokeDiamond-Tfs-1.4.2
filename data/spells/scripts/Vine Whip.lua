@@ -33,7 +33,8 @@ function onCastSpell(cid, var)
 
 	local area = getThingPosWithDebug(cid)
 	local dano = {}
-	local effect = 255
+	local effect = 0
+    local mydir = getCreatureLookDir(cid)
 
 	if mydir == 0 then
 		area.x = area.x + 1
