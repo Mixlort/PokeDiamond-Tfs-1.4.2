@@ -1,4 +1,4 @@
-<monster name="Eevee" nameDescription="a eevee" race="normal" race2="no race" experience="92" speed="175">
+<monster name="Eevee" nameDescription="a eevee" race="normal" race2="no race" experience="1240" speed="175">
   <health now="55" max="55" />
     <look type="453" corpse="11869" />
 	<targetchange interval="10000" chance="0" />

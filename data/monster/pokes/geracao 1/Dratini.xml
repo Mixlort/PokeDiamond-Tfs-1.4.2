@@ -1,4 +1,4 @@
-<monster name="Dratini" nameDescription="a dratini" race="dragon" race2="no race" experience="67" speed="170">
+<monster name="Dratini" nameDescription="a dratini" race="dragon" race2="no race" experience="1700" speed="170">
     <health now="41" max="41" />
     <look type="409" corpse="11866" />
     <targetchange interval="10000" chance="0" />

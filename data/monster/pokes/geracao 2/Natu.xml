@@ -1,4 +1,4 @@
-<monster name="Natu" nameDescription="a natu" race="psychic" race2="flying" experience="73" speed="134">
+<monster name="Natu" nameDescription="a natu" race="psychic" race2="flying" experience="0" speed="134">
     <health now="40" max="40" />
     <look type="888" corpse="3580" />
 	<targetchange interval="10000" chance="0" />

@@ -1,4 +1,4 @@
-<monster name="Pineco" nameDescription="a pineco" race="bug" race2="no race" experience="60" speed="95">
+<monster name="Pineco" nameDescription="a pineco" race="bug" race2="no race" experience="0" speed="95">
     <health now="50" max="50" />
     <look type="909" corpse="3586" />
 	<targetchange interval="10000" chance="0" />

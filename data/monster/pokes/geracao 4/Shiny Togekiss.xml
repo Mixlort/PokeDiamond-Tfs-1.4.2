@@ -1,4 +1,4 @@
-<monster name="Shiny Togekiss" nameDescription="a Shiny Togekiss" race="normal" race2="flying" experience="220" speed="240">
+<monster name="Shiny Togekiss" nameDescription="a Shiny Togekiss" race="normal" race2="flying" experience="356" speed="240">
     <health now="190" max="190" />
     <look type="2053" corpse="12948" />
 	<targetchange interval="10000" chance="0" />

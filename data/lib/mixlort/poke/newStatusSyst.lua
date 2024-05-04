@@ -928,7 +928,7 @@ conds = {
     if isSleeping(cid) and getPlayerStorageValue(cid, 3644587) >= 1 then return true end
     if isWithFear(cid) and getPlayerStorageValue(cid, 3644587) >= 1 then return true end
        if target ~= 0 and isCreature(target) and not area then
-          delay = getDistanceBetween(getThingPosWithDebug(cid), getThingPosWithDebug(target)) * const_distance_delay
+          delay = getDistanceBetween(getThingPosWithDebug(cid:getId()), getThingPosWithDebug(target:getId())) * const_distance_delay
           addEvent(doDanoWithProtect, delay, cid:getId(), element, getThingPosWithDebug(target:getId()), 0, min, max, eff)
           return true
        end
@@ -1104,6 +1104,6 @@ conds = {
     if isNumber(target) then target = Creature(target) end
     if isSleeping(cid) and getPlayerStorageValue(cid, 3644587) >= 1 then return true end
     if isWithFear(cid) and getPlayerStorageValue(cid, 3644587) >= 1 then return true end
-       local delay = getDistanceBetween(getThingPosWithDebug(cid), getThingPosWithDebug(target)) * const_distance_delay
+       local delay = getDistanceBetween(getThingPosWithDebug(cid:getId()), getThingPosWithDebug(target:getId())) * const_distance_delay
        addEvent(doDanoInTarget, delay, cid:getId(), target:getId(), combat, min, max, eff)
     end 

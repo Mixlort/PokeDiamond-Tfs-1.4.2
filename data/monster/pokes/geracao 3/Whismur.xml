@@ -1,4 +1,4 @@
-<monster name="Whismur" nameDescription="a Whismur" race="normal" race2="no race" experience="124" speed="148">
+<monster name="Whismur" nameDescription="a Whismur" race="normal" race2="no race" experience="116" speed="148">
     <health now="64" max="64" />
     <look type="1646" corpse="12732" />
     <targetchange interval="10000" chance="0" />

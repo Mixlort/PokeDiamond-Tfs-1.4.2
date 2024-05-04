@@ -1,4 +1,4 @@
-<monster name="Baltoy" nameDescription="a baltoy" race="ground" race2="psychic" experience="180" speed="175">
+<monster name="Baltoy" nameDescription="a baltoy" race="ground" race2="psychic" experience="910" speed="175">
     <health now="40" max="40" />
     <look type="1653" corpse="12767" />
 	<targetchange interval="10000" chance="0" />

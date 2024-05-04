@@ -1,4 +1,4 @@
-<monster name="Zigzagoon" nameDescription="a Zigzagoon" race="normal" race2="no race" experience="57" speed="180">
+<monster name="Zigzagoon" nameDescription="a Zigzagoon" race="normal" race2="no race" experience="76" speed="180">
     <health now="38" max="38" />
     <look type="1649" corpse="12740" />
     <targetchange interval="10000" chance="0" />

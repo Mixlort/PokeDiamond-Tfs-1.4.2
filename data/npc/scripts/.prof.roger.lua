@@ -61,7 +61,7 @@ elseif (msgcontains(string.lower(msg), 'yes') or msgcontains(string.lower(msg), 
     elseif getPlayerStorageValue(cid, 345965) == 1 then
        if getPlayerItemCount(cid, rock) >= 100 and getPlayerItemCount(cid, old) >= 1 then   --ta pedindo 100Rocks e 1 Old amber...
           selfSay("Wow then you got the items! Let me see if I could relive that pokemon!", cid)
-          addEvent(givePokemon, 2000, cid)
+          addEvent(givePokemon, 2000, cid:getId())
           talkState[talkUser] = 0
           return true
        else

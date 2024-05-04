@@ -1,4 +1,4 @@
-<monster name="Ledyba" nameDescription="a ledyba" race="bug" race2="flying" experience="54" speed="117">
+<monster name="Ledyba" nameDescription="a ledyba" race="bug" race2="flying" experience="76" speed="117">
     <health now="40" max="40" />
     <look type="684" corpse="3563" />
 	<targetchange interval="10000" chance="0" />

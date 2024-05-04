@@ -1,4 +1,4 @@
-<monster name="Vigoroth" nameDescription="a Vigoroth" race="normal" race2="no race" experience="124" speed="210">
+<monster name="Vigoroth" nameDescription="a Vigoroth" race="normal" race2="no race" experience="116" speed="210">
     <health now="80" max="80" />
     <look type="1721" corpse="12712" />
     <targetchange interval="10000" chance="0" />

@@ -114,7 +114,7 @@ elseif item.itemid == pokeballs[btype].on then
 		if left and left > 0 then
 			setPlayerStorageValue(pk, 1010, name)
 			doSetCreatureOutfit(pk, {lookType = getItemAttribute(item.uid, "transOutfit")}, -1)
-			addEvent(deTransform, left * 1000, pk, getItemAttribute(item.uid, "transTurn"))
+			addEvent(deTransform, left * 1000, pk:getId(), getItemAttribute(item.uid, "transTurn"))
 			doItemSetAttribute(item.uid, "transBegin", os.clock())
 		else
 			setPlayerStorageValue(pk, 1010, getCreatureName(pk) == "Ditto" and "Ditto" or "Shiny Ditto")     --edited

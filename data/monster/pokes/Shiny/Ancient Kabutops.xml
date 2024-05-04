@@ -1,4 +1,4 @@
-<monster name="Ancient Kabutops" nameDescription="a Ancient kabutops" race="rock" race2="water" experience="199" speed="200">
+<monster name="Ancient Kabutops" nameDescription="a Ancient kabutops" race="rock" race2="water" experience="844" speed="200">
     <health now="60" max="60" />
     <look type="1881" corpse="4301" />
     <targetchange interval="10000" chance="0" />

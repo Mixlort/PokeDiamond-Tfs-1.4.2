@@ -1,4 +1,4 @@
-<monster name="Kadabra" nameDescription="a kadabra" race="psychic" race2="no race" experience="145" speed="225">
+<monster name="Kadabra" nameDescription="a kadabra" race="psychic" race2="no race" experience="2400" speed="225">
     <health now="40" max="40" />
     <look type="570" corpse="11900" />
     <targetchange interval="10000" chance="0" />

@@ -1,4 +1,4 @@
-<monster name="Shiny Lairon" nameDescription="a Shiny Lairon" race="steel" race2="rock" experience="320" speed="210">
+<monster name="Shiny Lairon" nameDescription="a Shiny Lairon" race="steel" race2="rock" experience="5000" speed="210">
     <health now="110" max="110" />
     <look type="1857" corpse="2824" />
   <targetchange interval="10000" chance="0" />

@@ -1,4 +1,4 @@
-<monster name="Shiny Rhydon" nameDescription="a shiny rhydon" race="ground" race2="rock" experience="204" speed="160">
+<monster name="Shiny Rhydon" nameDescription="a shiny rhydon" race="ground" race2="rock" experience="712" speed="160">
     <health now="105" max="105" />
     <look type="1499" corpse="12596" />
     <targetchange interval="10000" chance="0" />

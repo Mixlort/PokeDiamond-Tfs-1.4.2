@@ -1,4 +1,4 @@
-<monster name="Dialga" nameDescription="a Dialga" race="dragon" race2="flying" experience="300" speed="220">
+<monster name="Dialga" nameDescription="a Dialga" race="dragon" race2="flying" experience="1536" speed="220">
     <health now="100" max="100" />
     <look type="1884" corpse="4303" />
   <targetchange interval="10000" chance="0" />

@@ -314,10 +314,24 @@
 	<instant name="Univers loon" words="spell317" lvl="100" mana="0" needlearn="0" script="Univers loon.lua"></instant>
 	<instant name="Meteor Fire" words="spell318" lvl="100" mana="0" needlearn="0" script="Meteor Fire.lua"></instant>
 
-	<instant name="Punch Flames" words="spell319" lvl="100" mana="0" needlearn="0" script="Punch Flames.lua"></instant>
-	<instant name="Sweet Kiss" words="spell320" lvl="100" mana="0" needlearn="0" script="Sweet Kiss.lua"></instant>
-	<instant name="Wish" words="spell321" lvl="100" mana="0" needlearn="0" script="Wish.lua"></instant>
-	<instant name="Vitality Impulse" words="spell322" lvl="100" mana="0" needlearn="0" script="Vitality Impulse.lua"></instant>
-	<instant name="Ice Falling" words="spell323" lvl="100" mana="0" needlearn="0" script="Ice Falling.lua"></instant>
+	<instant name="Punch Flames" words="spell319" params="1" cooldown="1000" mana="0" needlearn="0" script="Punch Flames.lua"></instant>
+	<instant name="Sweet Kiss" words="spell320" params="1" cooldown="1000" mana="0" needlearn="0" script="Sweet Kiss.lua"></instant>
+	<instant name="Wish" words="spell321" params="1" cooldown="1000" mana="0" needlearn="0" script="Wish.lua"></instant>
+	<instant name="Vitality Impulse" words="spell322" params="1" cooldown="1000" mana="0" needlearn="0" script="Vitality Impulse.lua"></instant>
+	<instant name="Ice Falling" words="spell323" params="1" cooldown="1000" mana="0" needlearn="0" script="Ice Falling.lua"></instant>
+	
+    <!-- passivas -->
+    <instant name="Counter Helix" words="spell324" params="1" cooldown="1000" mana="0" needlearn="0" script="Counter Helix.lua"></instant>
+	<instant name="Lava-Electricity" words="spell325" params="1" cooldown="1000" mana="0" needlearn="0" script="Lava-Electricity.lua"></instant>
+	<instant name="Stunning Confusion" words="spell326" params="1" cooldown="1000" mana="0" needlearn="0" script="Stunning Confusion.lua"></instant>
+	<instant name="Groundshock" words="spell327" params="1" cooldown="1000" mana="0" needlearn="0" script="Groundshock.lua"></instant>
+	<instant name="Electric Charge" words="spell328" params="1" cooldown="1000" mana="0" needlearn="0" script="Electric Charge.lua"></instant>
+	<instant name="Melody" words="spell329" params="1" cooldown="1000" mana="0" needlearn="0" script="Melody.lua"></instant>
+	<instant name="Dragon Fury" words="spell330" params="1" cooldown="1000" mana="0" needlearn="0" script="Dragon Fury.lua"></instant>
+	<instant name="Mega Drain" words="spell331" params="1" cooldown="1000" mana="0" needlearn="0" script="Mega Drain.lua"></instant>
+	<instant name="Spores Reaction" words="spell332" params="1" cooldown="1000" mana="0" needlearn="0" script="Spores Reaction.lua"></instant>
+	<instant name="Amnesia" words="spell333" params="1" cooldown="1000" mana="0" needlearn="0" script="Amnesia.lua"></instant>
+	<instant name="Zen Mind" words="spell334" params="1" cooldown="1000" mana="0" needlearn="0" script="Zen Mind.lua"></instant>
+	<instant name="Mirror Coat" words="spell335" params="1" cooldown="1000" mana="0" needlearn="0" script="Mirror Coat.lua"></instant>
 	
 </spells>

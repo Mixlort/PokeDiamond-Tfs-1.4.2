@@ -1,4 +1,4 @@
-<monster name="Abomasnow" nameDescription="a Abomasnow" race="grass" race2="ice" experience="176" speed="180">
+<monster name="Abomasnow" nameDescription="a Abomasnow" race="grass" race2="ice" experience="0" speed="180">
     <health now="90" max="90" />
     <look type="1583" corpse="261" />
 	<targetchange interval="10000" chance="0" />

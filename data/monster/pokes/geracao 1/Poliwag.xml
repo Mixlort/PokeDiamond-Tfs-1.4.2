@@ -1,4 +1,4 @@
-<monster name="Poliwag" nameDescription="a poliwag" race="water" race2="no race" experience="77" speed="210">
+<monster name="Poliwag" nameDescription="a poliwag" race="water" race2="no race" experience="100" speed="210">
     <health now="40" max="40" />
     <look type="462" corpse="11943" />
     <targetchange interval="10000" chance="0" />

@@ -1,4 +1,4 @@
-<monster name="Shiny Tangela" nameDescription="a Shiny tangela" race="grass" race2="no race" experience="166" speed="180">
+<monster name="Shiny Tangela" nameDescription="a Shiny tangela" race="grass" race2="no race" experience="436" speed="180">
     <health now="65" max="65" />
     <look type="1308" corpse="12534" />
   <targetchange interval="10000" chance="0" />

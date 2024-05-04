@@ -1,4 +1,4 @@
-<monster name="Furious Charizard" nameDescription="a charizard" race="fire" race2="dark" experience="900" speed="170">
+<monster name="Furious Charizard" nameDescription="a charizard" race="fire" race2="dark" experience="904" speed="170">
     <health now="700" max="700" />
     <look type="1073" corpse="11851" />
     <targetchange interval="10000" chance="0" />

@@ -1,4 +1,4 @@
-<monster name="Abra" nameDescription="a Abra" race="psychic" race2="no race" experience="75" speed="210">
+<monster name="Abra" nameDescription="a Abra" race="psychic" race2="no race" experience="1200" speed="210">
     <health now="25" max="25" />
     <look type="613" corpse="11838" />
     <targetchange interval="0" chance="0" />

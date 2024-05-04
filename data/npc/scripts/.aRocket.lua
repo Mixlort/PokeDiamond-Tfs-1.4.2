@@ -30,7 +30,7 @@ local function doSummonGymPokemon(npc)
 	setPlayerStorageValue(summon, 10001, gobackmsgs[math.random(#gobackmsgs)].back:gsub("doka", it.nick ~= "" and it.nick or it.name))
 	setPlayerStorageValue(summon, 1007, it.nick ~= "" and it.nick or it.name)
 	doSetMonsterGym(summon, target)
-	addEvent(adjustWildPoke, 15, summon, it.optionalLevel)
+	addEvent(adjustWildPoke, 15, summon:getId(), it.optionalLevel)
 	if it.nick ~= "" then doCreatureSetNick(summon, it.nick) end
 	local name = it.nick ~= "" and it.nick or getCreatureName(this).."s "..it.name    --alterado v1.3
 	doCreatureSay(this, gobackmsgs[math.random(#gobackmsgs)].go:gsub("doka", getPlayerStorageValue(summon, 1007)), 1)
@@ -44,12 +44,12 @@ selfFollow(0)
 fighting = false
 challenger = 0
 challenger_turn = 0
-if #getCreatureSummons(getNpcCid()) >= 1 then
-   setPlayerStorageValue(getCreatureSummons(getNpcCid())[1], 1006, 0)
-   doCreatureAddHealth(getCreatureSummons(getNpcCid())[1], -getCreatureMaxHealth(getCreatureSummons(getNpcCid())[1]))
+if #getCreatureSummons(getNpcCid():getId()) >= 1 then
+   setPlayerStorageValue(getCreatureSummons(getNpcCid():getId())[1], 1006, 0)
+   doCreatureAddHealth(getCreatureSummons(getNpcCid():getId())[1], -getCreatureMaxHealth(getCreatureSummons(getNpcCid():getId())[1]))
 end
-doChangeSpeed(getNpcCid(), -getCreatureSpeed(getNpcCid()))
-doTeleportThing(getNpcCid(), origPos)
+doChangeSpeed(getNpcCid():getId(), -getCreatureSpeed(getNpcCid():getId()))
+doTeleportThing(getNpcCid():getId(), origPos)
 end
 --/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--
 local function updateTarget()
@@ -81,25 +81,25 @@ function onCreatureMove(creature, oldPos, newPos)
 end
 --/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--
 function onThink()
-if not isCreature(getNpcCid()) then return false end  --alterado v1.6
+if not isCreature(getNpcCid():getId()) then return false end  --alterado v1.6
 if origPos == 0 then
    origPos = getNpcPos()
 end
-if getPlayerStorageValue(getNpcCid(), 665451) <= 0 then
-   setPlayerStorageValue(getNpcCid(), 665451, math.random(1, 5))
-   randOutfit(getNpcCid())
+if getPlayerStorageValue(getNpcCid():getId(), 665451) <= 0 then
+   setPlayerStorageValue(getNpcCid():getId(), 665451, math.random(1, 5))
+   randOutfit(getNpcCid():getId())
 end
 updateTarget()
 ------------------------------------------------------
-if getDistanceBetween(getNpcPos(), origPos) >= max_distance or (isCreature(target) and getTileInfo(getThingPos(target)).protection) or getTileInfo(getThingPos(getNpcCid())).protection then  
+if getDistanceBetween(getNpcPos(), origPos) >= max_distance or (isCreature(target) and getTileInfo(getThingPos(target)).protection) or getTileInfo(getThingPos(getNpcCid():getId())).protection then  
 goToOrigPos()                                                                                                                          --alterado v1.9
 end
 ------------------------------------------------------
 if(target == 0) then
-if getPlayerStorageValue(getNpcCid(), 154788) <= 0 then
-   setPlayerStorageValue(getNpcCid(), 154788, 1)
-   doChangeSpeed(getNpcCid(), -getCreatureSpeed(getNpcCid()))
-   addEvent(randWalk, 2000, getNpcCid(), 1000, getPlayerStorageValue(getNpcCid(), 154788), target)
+if getPlayerStorageValue(getNpcCid():getId(), 154788) <= 0 then
+   setPlayerStorageValue(getNpcCid():getId(), 154788, 1)
+   doChangeSpeed(getNpcCid():getId(), -getCreatureSpeed(getNpcCid():getId()))
+   addEvent(randWalk, 2000, getNpcCid():getId(), 1000, getPlayerStorageValue(getNpcCid():getId(), 154788), target:getId())
 end
 return true
 end 
@@ -120,9 +120,9 @@ return true
 end
 ------------------------------------------------------
 if getDistanceBetween(playerPos, myPos) >= 5 then
-if getPlayerStorageValue(getNpcCid(), 154788) >= 1 then
-   setPlayerStorageValue(getNpcCid(), 154788, -1)
-   doRegainSpeed(getNpcCid()) 
+if getPlayerStorageValue(getNpcCid():getId(), 154788) >= 1 then
+   setPlayerStorageValue(getNpcCid():getId(), 154788, -1)
+   doRegainSpeed(getNpcCid():getId()) 
    if isCreature(target) then
       selfFollow(target)
    end
@@ -130,16 +130,16 @@ end
 end
 ------------------------------------------------------
 if getDistanceBetween(playerPos, myPos) <= 3 then
-if getPlayerStorageValue(getNpcCid(), 154788) <= 0 then
-   setPlayerStorageValue(getNpcCid(), 154788, 1)
-   doChangeSpeed(getNpcCid(), -getCreatureSpeed(getNpcCid()))
-   addEvent(randWalk, 2000, getNpcCid(), 1000, getPlayerStorageValue(getNpcCid(), 154788), target)
+if getPlayerStorageValue(getNpcCid():getId(), 154788) <= 0 then
+   setPlayerStorageValue(getNpcCid():getId(), 154788, 1)
+   doChangeSpeed(getNpcCid():getId(), -getCreatureSpeed(getNpcCid():getId()))
+   addEvent(randWalk, 2000, getNpcCid():getId(), 1000, getPlayerStorageValue(getNpcCid():getId(), 154788), target:getId())
 end
 end
 ------------------------------------------------------
 if getDistanceBetween(playerPos, myPos) <= 5 then
    challenger = target
-   addEvent(doSummonGymPokemon, 850, getNpcCid())
+   addEvent(doSummonGymPokemon, 850, getNpcCid():getId())
 
 local change = false
 
@@ -151,7 +151,7 @@ end
 
 if fighting then
 
-   if not isCreature(getCreatureTarget(getNpcCid())) then
+   if not isCreature(getCreatureTarget(getNpcCid():getId())) then
       if #getCreatureSummons(challenger) >= 1 then
          selfAttackCreature(getCreatureSummons(challenger)[1])
 		 change = true
@@ -163,11 +163,11 @@ if fighting then
       end
    end
 		
-   if #getCreatureSummons(getNpcCid()) == 0 and isCreature(target) then
-      if battle_turn > #wildRocket[getPlayerStorageValue(getNpcCid(), 665451)] then      
+   if #getCreatureSummons(getNpcCid():getId()) == 0 and isCreature(target) then
+      if battle_turn > #wildRocket[getPlayerStorageValue(getNpcCid():getId(), 665451)] then      
          addEvent(doCreateNpc, 300000, ".aRocket", myPos)  --alterado v1.5
-         local outfit = getCreatureOutfit(getNpcCid())
-         doRemoveCreature(getNpcCid())
+         local outfit = getCreatureOutfit(getNpcCid():getId())
+         doRemoveCreature(getNpcCid():getId())
          ----------------------------------------
          if outfit.lookType == 605 then      --verifica se o npc eh female.. ;p
              monster = doCreateMonster("aRocketFemale", myPos)
@@ -176,9 +176,9 @@ if fighting then
          end
          ----------------------------------------
          doCloneOut(monster, outfit)
-         addEvent(beDrunk, 100, monster)
+         addEvent(beDrunk, 100, monster:getId())
       end
-	     addEvent(doSummonGymPokemon, 1000, getNpcCid())
+	     addEvent(doSummonGymPokemon, 1000, getNpcCid():getId())
    end
 
    if #getCreatureSummons(challenger) <= 0 then

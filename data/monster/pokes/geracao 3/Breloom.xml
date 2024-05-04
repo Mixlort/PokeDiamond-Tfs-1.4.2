@@ -1,4 +1,4 @@
-<monster name="Breloom" nameDescription="a Breloom" race="grass" race2="fighting" experience="146" speed="190">
+<monster name="Breloom" nameDescription="a Breloom" race="grass" race2="fighting" experience="436" speed="190">
     <health now="60" max="60" />
     <look type="1656" corpse="12706" />
 	<targetchange interval="10000" chance="0" />

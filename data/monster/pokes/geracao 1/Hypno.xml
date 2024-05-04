@@ -1,4 +1,4 @@
-<monster name="Hypno" nameDescription="a hypno" race="psychic" race2="no race" experience="165" speed="197">
+<monster name="Hypno" nameDescription="a hypno" race="psychic" race2="no race" experience="3451" speed="197">
     <health now="85" max="85" />
     <look type="470" corpse="11893" />
     <targetchange interval="10000" chance="0" />

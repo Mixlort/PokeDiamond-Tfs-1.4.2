@@ -1,4 +1,4 @@
-<monster name="Wingull" nameDescription="a Wingull" race="water" race2="flying" experience="66" speed="205">
+<monster name="Wingull" nameDescription="a Wingull" race="water" race2="flying" experience="252" speed="205">
     <health now="40" max="40" />
     <look type="1584" corpse="12730" />
 	<targetchange interval="10000" chance="0" />

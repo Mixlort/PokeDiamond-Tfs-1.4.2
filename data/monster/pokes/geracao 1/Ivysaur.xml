@@ -1,4 +1,4 @@
-<monster name="Ivysaur" nameDescription="a ivysaur" race="grass" race2="poison" experience="141" speed="120">
+<monster name="Ivysaur" nameDescription="a ivysaur" race="grass" race2="poison" experience="700" speed="120">
     <health now="60" max="60" />
     <look type="375" corpse="11894" />
     <targetchange interval="10000" chance="0" />

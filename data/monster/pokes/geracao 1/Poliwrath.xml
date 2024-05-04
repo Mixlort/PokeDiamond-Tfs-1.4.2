@@ -1,4 +1,4 @@
-<monster name="Poliwrath" nameDescription="a poliwrath" race="water" race2="fighting" experience="185" speed="190">
+<monster name="Poliwrath" nameDescription="a poliwrath" race="water" race2="fighting" experience="5410" speed="190">
     <health now="90" max="90" />
     <look type="455" corpse="11945" />
     <targetchange interval="10000" chance="0" />

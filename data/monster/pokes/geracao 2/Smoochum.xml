@@ -1,4 +1,4 @@
-<monster name="Smoochum" nameDescription="a smoochum" race="ice" race2="psychic" experience="87" speed="128">
+<monster name="Smoochum" nameDescription="a smoochum" race="ice" race2="psychic" experience="0" speed="128">
     <health now="45" max="45" />
     <look type="940" corpse="4438" />
 	<targetchange interval="10000" chance="0" />

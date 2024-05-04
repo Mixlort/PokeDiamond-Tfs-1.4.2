@@ -1,4 +1,4 @@
-<monster name="Electrode" nameDescription="a electrode" race="electric" race2="no race" experience="150" speed="260">
+<monster name="Electrode" nameDescription="a electrode" race="electric" race2="no race" experience="3410" speed="260">
     <health now="60" max="60" />
     <look type="476" corpse="11872" />
     <targetchange interval="10000" chance="0" />

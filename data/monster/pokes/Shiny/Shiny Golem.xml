@@ -1,4 +1,4 @@
-<monster name="Shiny Golem" nameDescription="a Shiny golem" race="rock" race2="ground" experience="177" speed="165">
+<monster name="Shiny Golem" nameDescription="a Shiny golem" race="rock" race2="ground" experience="908" speed="165">
     <health now="80" max="80" />
     <look type="1270" corpse="0" />
   <targetchange interval="10000" chance="0" />

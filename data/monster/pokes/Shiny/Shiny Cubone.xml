@@ -1,4 +1,4 @@
-<monster name="Shiny Cubone" nameDescription="a Shiny cubone" race="ground" race2="no race" experience="87" speed="155">
+<monster name="Shiny Cubone" nameDescription="a Shiny cubone" race="ground" race2="no race" experience="168" speed="155">
     <health now="50" max="50" />
     <look type="1298" corpse="12524" />
   <targetchange interval="10000" chance="0" />

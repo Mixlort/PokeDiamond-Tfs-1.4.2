@@ -1,4 +1,4 @@
-<monster name="Kingler" nameDescription="a kingler" race="water" race2="no race" experience="206" speed="195">
+<monster name="Kingler" nameDescription="a kingler" race="water" race2="no race" experience="1410" speed="195">
     <health now="55" max="55" />
     <look type="596" corpse="11903" />
     <targetchange interval="10000" chance="0" />

@@ -1,4 +1,4 @@
-<monster name="Shiny Lapras" nameDescription="a Shiny lapras" race="water" race2="ice" experience="500" speed="200">
+<monster name="Shiny Lapras" nameDescription="a Shiny lapras" race="water" race2="ice" experience="12400" speed="200">
     <health now="250" max="250" />
     <look type="2059" corpse="13082" />
     <targetchange interval="10000" chance="0" />

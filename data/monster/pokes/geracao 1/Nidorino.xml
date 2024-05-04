@@ -1,4 +1,4 @@
-<monster name="Nidorino" nameDescription="a nidorino" race="poison" race2="no race" experience="118" speed="185">
+<monster name="Nidorino" nameDescription="a nidorino" race="poison" race2="no race" experience="1200" speed="185">
     <health now="61" max="61" />
     <look type="429" corpse="11929" />
     <targetchange interval="10000" chance="0" />

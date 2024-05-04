@@ -1,4 +1,4 @@
-<monster name="Kricketune" nameDescription="a Kricketune" race="bug" race2="no race" experience="118" speed="185">
+<monster name="Kricketune" nameDescription="a Kricketune" race="bug" race2="no race" experience="0" speed="185">
     <health now="77" max="77" />
     <look type="1609" corpse="157" />
 	<targetchange interval="10000" chance="0" />

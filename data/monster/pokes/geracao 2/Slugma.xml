@@ -1,4 +1,4 @@
-<monster name="Slugma" nameDescription="a slugma" race="fire" race2="no race" experience="38" speed="95">
+<monster name="Slugma" nameDescription="a slugma" race="fire" race2="no race" experience="148" speed="95">
     <health now="40" max="40" />
     <look type="934" corpse="04436" />
 	<targetchange interval="10000" chance="0" />

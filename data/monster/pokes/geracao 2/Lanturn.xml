@@ -1,4 +1,4 @@
-<monster name="Lanturn" nameDescription="a lanturn" race="water" race2="electric" experience="156" speed="145">
+<monster name="Lanturn" nameDescription="a lanturn" race="water" race2="electric" experience="276" speed="145">
     <health now="125" max="125" />
     <look type="690" corpse="3560" />
 	<targetchange interval="10000" chance="0" />

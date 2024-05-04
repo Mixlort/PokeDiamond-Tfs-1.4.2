@@ -1,4 +1,4 @@
-<monster name="Shiny Honchkrow" nameDescription="a Shiny Honchkrow" race="dark" race2="flying" experience="107" speed="191">
+<monster name="Shiny Honchkrow" nameDescription="a Shiny Honchkrow" race="dark" race2="flying" experience="0" speed="191">
     <health now="100" max="100" />
     <look type="2166" corpse="206" />
 	<targetchange interval="10000" chance="0" />

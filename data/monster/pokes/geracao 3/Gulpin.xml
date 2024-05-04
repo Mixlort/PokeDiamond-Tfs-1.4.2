@@ -1,4 +1,4 @@
-<monster name="Gulpin" nameDescription="a Gulpin" race="poison" race2="no race" experience="99" speed="160">
+<monster name="Gulpin" nameDescription="a Gulpin" race="poison" race2="no race" experience="168" speed="160">
     <health now="70" max="70" />
     <look type="1637" corpse="622" />
   <targetchange interval="10000" chance="0" />

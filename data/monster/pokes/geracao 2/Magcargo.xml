@@ -1,4 +1,4 @@
-<monster name="Magcargo" nameDescription="a magcargo" race="fire" race2="rock" experience="154" speed="110">
+<monster name="Magcargo" nameDescription="a magcargo" race="fire" race2="rock" experience="696" speed="110">
     <health now="50" max="50" />
     <look type="935" corpse="3566" />
 	<targetchange interval="10000" chance="0" />

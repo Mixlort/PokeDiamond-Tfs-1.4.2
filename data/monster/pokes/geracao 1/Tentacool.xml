@@ -1,4 +1,4 @@
-<monster name="Tentacool" nameDescription="a tentacool" race="water" race2="poison" experience="105" speed="190">
+<monster name="Tentacool" nameDescription="a tentacool" race="water" race2="poison" experience="100" speed="190">
     <health now="40" max="40" />
     <look type="447" corpse="11972" />
     <targetchange interval="10000" chance="0" />

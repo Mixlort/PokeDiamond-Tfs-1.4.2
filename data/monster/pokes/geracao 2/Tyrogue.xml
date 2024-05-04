@@ -1,4 +1,4 @@
-<monster name="Tyrogue" nameDescription="a tyrogue" race="fighting" race2="no race" experience="91" speed="120">
+<monster name="Tyrogue" nameDescription="a tyrogue" race="fighting" race2="no race" experience="0" speed="120">
     <health now="35" max="35" />
     <look type="735" corpse="4455" />
 	<targetchange interval="10000" chance="0" />

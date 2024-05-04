@@ -1,4 +1,4 @@
-<monster name="Dusknoir" nameDescription="a Dusknoir" race="ghost" race2="no race" experience="209" speed="165">
+<monster name="Dusknoir" nameDescription="a Dusknoir" race="ghost" race2="no race" experience="976" speed="165">
     <health now="45" max="45" />
     <look type="1633" corpse="619" />
   <targetchange interval="10000" chance="0" />

@@ -1,4 +1,4 @@
-<monster name="Croconaw" nameDescription="a croconaw" race="water" race2="no race" experience="141" speed="121">
+<monster name="Croconaw" nameDescription="a croconaw" race="water" race2="no race" experience="620" speed="121">
     <health now="65" max="65" />
     <look type="680" corpse="3280" />
 	<targetchange interval="10000" chance="0" />

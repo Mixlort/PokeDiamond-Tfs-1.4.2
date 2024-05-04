@@ -1,4 +1,4 @@
-<monster name="Raichu" nameDescription="a raichu" race="electric" race2="no race" experience="112" speed="220">
+<monster name="Raichu" nameDescription="a raichu" race="electric" race2="no race" experience="1240" speed="220">
     <health now="60" max="60" />
     <look type="401" corpse="11950" />
     <targetchange interval="10000" chance="0" />

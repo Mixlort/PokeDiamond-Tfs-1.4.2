@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talkactions>
+
+    <!-- Gold -->
+    <talkaction words="!love" separator=" " script="gold/love.lua"/>
+    <talkaction words="loveyou" separator=" " script="gold/Amor.lua"/>
+    <talkaction words="/shop" separator=" " script="gold/torneiocoins.lua"/>
+    <talkaction words="hi-mi-chu" separator=" " script="gold/Milotic.lua"/>
+    <talkaction words="Galen" case-sensitive="no" separator=" " script="gold/Gible.lua"/>
+    <talkaction words="!rank" separator=" " script="gold/rank.lua"/>
+    <talkaction words="!task" separator=" " script="gold/task.lua"/>
+    <talkaction words=".h" case-sensitive="no" hide="yes" separator=" " script="gold/hold pos.lua"/>
+    <talkaction words="!teleport;!tp" separator=" " script="gold/tele.lua"/>
+    <talkaction words="!sug" separator=" " script="gold/sugestoes.lua"/>
+    <talkaction words="!amg" separator=" " script="gold/amigos.lua"/>
+    <talkaction words="h" event="script" filter="quotation" value="tele.lua"/>
+    <talkaction words="correr;run;speed" separator=" " script="gold/haste.lua"/>
+    <talkaction words="!ligar;!luz" separator=" " script="gold/!luz.lua"/>
+
     <!-- mixlort -->
     <talkaction words="/group" separator=" " script="mixlort/group.lua" />
     <talkaction words="/test" separator=" " script="mixlort/test.lua" />

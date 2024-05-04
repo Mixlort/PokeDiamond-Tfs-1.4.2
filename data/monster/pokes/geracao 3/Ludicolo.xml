@@ -1,4 +1,4 @@
-<monster name="Ludicolo" nameDescription="a Ludicolo" race="water" race2="grass" experience="208" speed="190">
+<monster name="Ludicolo" nameDescription="a Ludicolo" race="water" race2="grass" experience="1504" speed="190">
     <health now="80" max="80" />
     <look type="1752" corpse="12683" />
     <targetchange interval="10000" chance="0" />

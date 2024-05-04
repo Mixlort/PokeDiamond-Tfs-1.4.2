@@ -1,4 +1,4 @@
-<monster name="Cleffa" nameDescription="a cleffa" race="normal" race2="no race" experience="37" speed="95">
+<monster name="Cleffa" nameDescription="a cleffa" race="normal" race2="no race" experience="80" speed="95">
     <health now="5.5" max="5.5" />
     <look type="885" corpse="3277" />
 	<targetchange interval="10000" chance="0" />

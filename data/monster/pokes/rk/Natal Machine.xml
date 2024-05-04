@@ -1,4 +1,4 @@
-<monster name="Natal Machine" nameDescription="a Natal Machine" race="psychic" race2="no race" experience="700" speed="340">
+<monster name="Natal Machine" nameDescription="a Natal Machine" race="psychic" race2="no race" experience="5076" speed="340">
     <health now="3000" max="3000" />
     <look type="2134s" corpse="13383" />
     <targetchange interval="10000" chance="0" />

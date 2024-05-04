@@ -1,4 +1,4 @@
-<monster name="Regirock" nameDescription="a Regirock" race="rock" race2="no race" experience="2" speed="170">
+<monster name="Regirock" nameDescription="a Regirock" race="rock" race2="no race" experience="50000" speed="170">
     <health now="10000" max="10000" />
     <look type="1697" corpse="9813" />
 	<targetchange interval="10000" chance="0" />

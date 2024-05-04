@@ -1,4 +1,4 @@
-<monster name="Shiny Magikarp" nameDescription="a Shiny magikarp" race="water" race2="no race" experience="20" speed="190">
+<monster name="Shiny Magikarp" nameDescription="a Shiny magikarp" race="water" race2="no race" experience="44" speed="190">
     <health now="20" max="20" />
     <look type="1323" corpse="12549" />
   <targetchange interval="10000" chance="0" />

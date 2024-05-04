@@ -1,4 +1,4 @@
-<monster name="Shiny Swellow" nameDescription="an Shiny Swellow" race="normal" race2="flying" experience="162" speed="245">
+<monster name="Shiny Swellow" nameDescription="an Shiny Swellow" race="normal" race2="flying" experience="356" speed="245">
     <health now="100" max="100" />
     <look type="2186" corpse="12723" />
 	<targetchange interval="10000" chance="0" />

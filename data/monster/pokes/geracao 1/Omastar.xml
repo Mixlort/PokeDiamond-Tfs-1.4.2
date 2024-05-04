@@ -1,4 +1,4 @@
-<monster name="Omastar" nameDescription="a omastar" race="rock" race2="water" experience="199" speed="175">
+<monster name="Omastar" nameDescription="a omastar" race="rock" race2="water" experience="3451" speed="175">
     <health now="70" max="70" />
     <look type="543" corpse="11933" />
     <targetchange interval="10000" chance="0" />

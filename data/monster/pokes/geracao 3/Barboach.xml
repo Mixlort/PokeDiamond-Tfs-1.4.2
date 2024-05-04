@@ -1,4 +1,4 @@
-<monster name="Barboach" nameDescription="a Barboach" race="water" race2="ground" experience="52" speed="180">
+<monster name="Barboach" nameDescription="a Barboach" race="water" race2="ground" experience="0" speed="180">
     <health now="50" max="50" />
     <look type="1837" corpse="604" />
 	<targetchange interval="10000" chance="0" />

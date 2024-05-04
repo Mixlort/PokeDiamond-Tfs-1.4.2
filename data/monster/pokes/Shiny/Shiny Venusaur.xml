@@ -1,4 +1,4 @@
-<monster name="Shiny Venusaur" nameDescription="a Shiny venusaur" race="grass" race2="poison" experience="208" speed="160">
+<monster name="Shiny Venusaur" nameDescription="a Shiny venusaur" race="grass" race2="poison" experience="1504" speed="160">
     <health now="80" max="80" />
     <look type="1197" corpse="12422" />
   <targetchange interval="10000" chance="0" />

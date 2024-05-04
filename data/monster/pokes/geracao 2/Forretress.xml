@@ -1,4 +1,4 @@
-<monster name="Forretress" nameDescription="a forretress" race="bug" race2="steel" experience="118" speed="110">
+<monster name="Forretress" nameDescription="a forretress" race="bug" race2="steel" experience="0" speed="110">
     <health now="75" max="75" />
     <look type="910" corpse="3290" />
 	<targetchange interval="10000" chance="0" />

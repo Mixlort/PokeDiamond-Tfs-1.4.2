@@ -1,4 +1,4 @@
-<monster name="Onix" nameDescription="a onix" race="rock" race2="ground" experience="108" speed="190">
+<monster name="Onix" nameDescription="a onix" race="rock" race2="ground" experience="9451" speed="190">
     <health now="35" max="35" />
     <look type="599" corpse="11934" />
     <targetchange interval="10000" chance="0" />

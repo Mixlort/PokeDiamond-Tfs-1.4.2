@@ -1,4 +1,4 @@
-<monster name="Charmander" nameDescription="a charmander" race="fire" race2="no race" experience="65" speed="185">
+<monster name="Charmander" nameDescription="a charmander" race="fire" race2="no race" experience="1210" speed="185">
     <health now="39" max="39" />
     <look type="380" corpse="11852" />
     <targetchange interval="10000" chance="0" />

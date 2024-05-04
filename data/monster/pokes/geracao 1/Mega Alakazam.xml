@@ -1,4 +1,4 @@
-<monster name="Mega Alakazam" nameDescription="a Mega alakazam" race="psychic" race2="no race" experience="186" speed="240">
+<monster name="Mega Alakazam" nameDescription="a Mega alakazam" race="psychic" race2="no race" experience="876" speed="240">
     <health now="70" max="70" />
     <look type="1893" corpse="" />
     <targetchange interval="0" chance="0" />

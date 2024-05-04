@@ -1,4 +1,4 @@
-<monster name="Nidoran Female" nameDescription="a nidoran female" race="poison" race2="no race" experience="59" speed="101">
+<monster name="Nidoran Female" nameDescription="a nidoran female" race="poison" race2="no race" experience="700" speed="101">
     <health now="55" max="55" />
     <look type="421" corpse="11926" />
     <targetchange interval="10000" chance="0" />

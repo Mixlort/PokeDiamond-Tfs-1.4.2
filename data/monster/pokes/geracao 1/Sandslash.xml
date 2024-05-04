@@ -1,4 +1,4 @@
-<monster name="Sandslash" nameDescription="a sandslash" race="ground" race2="no race" experience="113" speed="65">
+<monster name="Sandslash" nameDescription="a sandslash" race="ground" race2="no race" experience="1400" speed="65">
     <health now="75" max="75" />
     <look type="466" corpse="11957" />
     <targetchange interval="10000" chance="0" />

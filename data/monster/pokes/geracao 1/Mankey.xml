@@ -1,4 +1,4 @@
-<monster name="Mankey" nameDescription="a mankey" race="fighting" race2="no race" experience="74" speed="190">
+<monster name="Mankey" nameDescription="a mankey" race="fighting" race2="no race" experience="700" speed="190">
     <health now="40" max="40" />
     <look type="457" corpse="11915" />
     <targetchange interval="10000" chance="0" />

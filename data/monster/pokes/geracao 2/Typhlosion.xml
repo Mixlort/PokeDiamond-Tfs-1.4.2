@@ -1,4 +1,4 @@
-<monster name="Typhlosion" nameDescription="a typhlosion" race="fire" race2="no race" experience="209" speed="167">
+<monster name="Typhlosion" nameDescription="a typhlosion" race="fire" race2="no race" experience="1604" speed="167">
     <health now="78" max="78" />
     <look type="675" corpse="4453" />
 	<targetchange interval="10000" chance="0" />

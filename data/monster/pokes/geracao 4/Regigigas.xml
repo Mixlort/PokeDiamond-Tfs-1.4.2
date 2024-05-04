@@ -1,4 +1,4 @@
-<monster name="Regigigas" nameDescription="an regigigas" race="normal" race2="grass" experience="250" speed="170">
+<monster name="Regigigas" nameDescription="an regigigas" race="normal" race2="grass" experience="0" speed="170">
     <health now="11000" max="11000" />
     <look type="1898" corpse="4292" />
 	<targetchange interval="10000" chance="0" />

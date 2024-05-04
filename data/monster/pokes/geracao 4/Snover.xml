@@ -1,4 +1,4 @@
-<monster name="Snover" nameDescription="a Snover" race="grass" race2="ice" experience="176" speed="160">
+<monster name="Snover" nameDescription="a Snover" race="grass" race2="ice" experience="0" speed="160">
     <health now="60" max="60" />
     <look type="1595" corpse="259" />
 	<targetchange interval="10000" chance="0" />

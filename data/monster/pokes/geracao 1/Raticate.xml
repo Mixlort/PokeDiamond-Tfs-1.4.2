@@ -1,4 +1,4 @@
-<monster name="Raticate" nameDescription="a raticate" race="normal" race2="no race" experience="116" speed="97">
+<monster name="Raticate" nameDescription="a raticate" race="normal" race2="no race" experience="400" speed="97">
     <health now="55" max="55" />
     <look type="420" corpse="11952" />
     <targetchange interval="10000" chance="0" />

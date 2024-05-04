@@ -1,4 +1,4 @@
-<monster name="Cloyster" nameDescription="a cloyster" race="water" race2="ice" experience="203" speed="190">
+<monster name="Cloyster" nameDescription="a cloyster" race="water" race2="ice" experience="3145" speed="190">
     <health now="50" max="50" />
     <look type="423" corpse="11856" />
     <targetchange interval="10000" chance="0" />

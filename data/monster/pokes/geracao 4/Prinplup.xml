@@ -1,4 +1,4 @@
-<monster name="Prinplup" nameDescription="a Prinplup" race="water" race2="no race" experience="143" speed="170">
+<monster name="Prinplup" nameDescription="a Prinplup" race="water" race2="no race" experience="620" speed="170">
     <health now="64" max="64" />
     <look type="1560" corpse="123" />
     <targetchange interval="10000" chance="0" />

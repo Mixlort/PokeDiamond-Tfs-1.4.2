@@ -1,4 +1,4 @@
-<monster name="Seadra" nameDescription="a seadra" race="water" race2="no race" experience="155" speed="205">
+<monster name="Seadra" nameDescription="a seadra" race="water" race2="no race" experience="700" speed="205">
     <health now="55" max="55" />
     <look type="627" corpse="11959" />
     <targetchange interval="10000" chance="0" />

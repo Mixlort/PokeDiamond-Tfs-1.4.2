@@ -1,4 +1,4 @@
-<monster name="Ponyta" nameDescription="a ponyta" race="fire" race2="no race" experience="152" speed="210">
+<monster name="Ponyta" nameDescription="a ponyta" race="fire" race2="no race" experience="400" speed="210">
     <health now="50" max="50" />
     <look type="367" corpse="11946" />
     <targetchange interval="10000" chance="0" />

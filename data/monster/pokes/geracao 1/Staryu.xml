@@ -1,4 +1,4 @@
-<monster name="Staryu" nameDescription="a staryu" race="water" race2="no race" experience="106" speed="205">
+<monster name="Staryu" nameDescription="a staryu" race="water" race2="no race" experience="670" speed="205">
     <health now="30" max="30" />
     <look type="393" corpse="11969" />
     <targetchange interval="10000" chance="0" />

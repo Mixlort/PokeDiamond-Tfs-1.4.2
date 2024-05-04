@@ -1,4 +1,4 @@
-<monster name="Whiscash" nameDescription="a Whiscash" race="water" race2="ground" experience="137" speed="180">
+<monster name="Whiscash" nameDescription="a Whiscash" race="water" race2="ground" experience="0" speed="180">
     <health now="110" max="110" />
     <look type="1645" corpse="605" />
 	<targetchange interval="10000" chance="0" />

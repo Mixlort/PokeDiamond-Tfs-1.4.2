@@ -1,4 +1,4 @@
-<monster name="Pupitar" nameDescription="a pupitar" race="rock" race2="ground" experience="144" speed="120">
+<monster name="Pupitar" nameDescription="a pupitar" race="rock" race2="ground" experience="404" speed="120">
     <health now="70" max="70" />
     <look type="939" corpse="4424" />
 	<targetchange interval="10000" chance="0" />

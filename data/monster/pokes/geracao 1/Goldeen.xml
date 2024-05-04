@@ -1,4 +1,4 @@
-<monster name="Goldeen" nameDescription="a goldeen" race="water" race2="no race" experience="111" speed="183">
+<monster name="Goldeen" nameDescription="a goldeen" race="water" race2="no race" experience="400" speed="183">
     <health now="45" max="45" />
     <look type="625" corpse="11883" />
     <targetchange interval="10000" chance="0" />

@@ -1,4 +1,4 @@
-<monster name="Shiny Abra" nameDescription="a abra" race="psychic" race2="ghost" experience="75" speed="210">
+<monster name="Shiny Abra" nameDescription="a abra" race="psychic" race2="ghost" experience="204" speed="210">
     <health now="25" max="25" />
     <look type="1257" corpse="12482" />
   <targetchange interval="10000" chance="0" />

@@ -1,4 +1,4 @@
-<monster name="Stunky" nameDescription="a Stunky" race="poison" race2="dark" experience="114" speed="194">
+<monster name="Stunky" nameDescription="a Stunky" race="poison" race2="dark" experience="168" speed="194">
     <health now="63" max="63" />
     <look type="1591" corpse="224" />
     <targetchange interval="10000" chance="0" />

@@ -1,4 +1,4 @@
-<monster name="Mightyena" nameDescription="an Mightyena" race="dark" race2="no race" experience="197" speed="190">
+<monster name="Mightyena" nameDescription="an Mightyena" race="dark" race2="no race" experience="0" speed="190">
     <health now="70" max="70" />
     <look type="1687" corpse="12694" />
 	<targetchange interval="10000" chance="0" />

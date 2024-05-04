@@ -1,4 +1,4 @@
-<monster name="Turtwig" nameDescription="a Turtwig" race="grass" race2="no race" experience="64" speed="151">
+<monster name="Turtwig" nameDescription="a Turtwig" race="grass" race2="no race" experience="216" speed="151">
     <health now="55" max="55" />
     <look type="1576" corpse="107" />
     <targetchange interval="10000" chance="0" />

@@ -1,4 +1,4 @@
-<monster name="Magmortar" nameDescription="a magmortar" race="fire" race2="no race" experience="158" speed="103">
+<monster name="Magmortar" nameDescription="a magmortar" race="fire" race2="no race" experience="1072" speed="103">
     <health now="75" max="75" />
     <look type="1602" corpse="102" />
     <targetchange interval="10000" chance="0" />

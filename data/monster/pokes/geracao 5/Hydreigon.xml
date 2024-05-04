@@ -1,4 +1,4 @@
-<monster name="Hydreigon" nameDescription="a Hydreigon" race="ghost" race2="poison" experience="209" speed="133">
+<monster name="Hydreigon" nameDescription="a Hydreigon" race="ghost" race2="poison" experience="976" speed="133">
     <health now="92" max="92" />
     <look type="1917" corpse="12513" />
   <targetchange interval="10000" chance="0" />

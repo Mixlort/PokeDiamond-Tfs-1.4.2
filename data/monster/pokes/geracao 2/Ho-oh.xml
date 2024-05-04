@@ -1,4 +1,4 @@
-<monster name="Ho-oh" nameDescription="a ho-oh" race="fire" race2="flying" experience="220" speed="170">
+<monster name="Ho-oh" nameDescription="a ho-oh" race="fire" race2="flying" experience="820" speed="170">
     <health now="100" max="100" />
     <look type="955" corpse="3297" />
     <targetchange interval="10000" chance="0" />

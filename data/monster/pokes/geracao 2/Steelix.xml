@@ -1,4 +1,4 @@
-<monster name="Steelix" nameDescription="a steelix" race="steel" race2="ground" experience="196" speed="130">
+<monster name="Steelix" nameDescription="a steelix" race="steel" race2="ground" experience="0" speed="130">
     <health now="75" max="75" />
     <look type="911" corpse="4443" />
 	<targetchange interval="10000" chance="0" />

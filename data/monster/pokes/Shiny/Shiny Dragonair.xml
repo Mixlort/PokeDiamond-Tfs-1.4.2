@@ -1,4 +1,4 @@
-<monster name="Shiny Dragonair" nameDescription="a Shiny dragonair" race="dragon" race2="no race" experience="144" speed="190">
+<monster name="Shiny Dragonair" nameDescription="a Shiny dragonair" race="dragon" race2="no race" experience="672" speed="190">
     <health now="61" max="61" />
     <look type="1342" corpse="12568" />
   <targetchange interval="10000" chance="0" />

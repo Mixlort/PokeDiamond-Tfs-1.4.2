@@ -1,4 +1,4 @@
-<monster name="Totodile" nameDescription="a totodile" race="water" race2="no race" experience="66" speed="104">
+<monster name="Totodile" nameDescription="a totodile" race="water" race2="no race" experience="252" speed="104">
     <health now="50" max="50" />
     <look type="679" corpse="4452" />
 	<targetchange interval="10000" chance="0" />

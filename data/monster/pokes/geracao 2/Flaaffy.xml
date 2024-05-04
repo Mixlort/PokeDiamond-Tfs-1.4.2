@@ -1,4 +1,4 @@
-<monster name="Flaaffy" nameDescription="a flaaffy" race="electric" race2="no race" experience="117" speed="110">
+<monster name="Flaaffy" nameDescription="a flaaffy" race="electric" race2="no race" experience="276" speed="110">
     <health now="70" max="70" />
     <look type="892" corpse="3289" />
 	<targetchange interval="10000" chance="0" />

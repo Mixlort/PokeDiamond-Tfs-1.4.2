@@ -1,4 +1,4 @@
-<monster name="Bayleef" nameDescription="a bayleef" race="grass" race2="no race" experience="141" speed="123">
+<monster name="Bayleef" nameDescription="a bayleef" race="grass" race2="no race" experience="608" speed="123">
     <health now="60" max="60" />
     <look type="671" corpse="3271" />
  <targetchange interval="10000" chance="0" />

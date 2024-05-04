@@ -1,4 +1,4 @@
-<monster name="Clefable" nameDescription="a clefable" race="normal" race2="no race" experience="129" speed="180">
+<monster name="Clefable" nameDescription="a clefable" race="normal" race2="no race" experience="6470" speed="180">
     <health now="60" max="60" />
     <look type="419" corpse="11854" />
     <targetchange interval="10000" chance="0" />

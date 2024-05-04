@@ -1,4 +1,4 @@
-<monster name="Mega Tyranitar" nameDescription="a Mega tyranitar" race="rock" race2="dark" experience="218" speed="135">
+<monster name="Mega Tyranitar" nameDescription="a Mega tyranitar" race="rock" race2="dark" experience="908" speed="135">
     <health now="190" max="190" />
     <look type="1892" corpse="4454" />
 	<targetchange interval="10000" chance="0" />

@@ -1,4 +1,4 @@
-<monster name="Koffing" nameDescription="a koffing" race="poison" race2="no race" experience="114" speed="155">
+<monster name="Koffing" nameDescription="a koffing" race="poison" race2="no race" experience="1980" speed="155">
     <health now="40" max="40" />
     <look type="579" corpse="11904" />
     <targetchange interval="10000" chance="0" />

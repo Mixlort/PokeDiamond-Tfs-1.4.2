@@ -1,4 +1,4 @@
-<monster name="Murkrow" nameDescription="a murkrow" race="dark" race2="flying" experience="107" speed="145">
+<monster name="Murkrow" nameDescription="a murkrow" race="dark" race2="flying" experience="0" speed="145">
     <health now="60" max="60" />
     <look type="905" corpse="3579" />
 	<targetchange interval="10000" chance="0" />

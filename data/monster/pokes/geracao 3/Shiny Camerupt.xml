@@ -1,4 +1,4 @@
-<monster name="Shiny Camerupt" nameDescription="a Shiny camerupt" race="fire" race2="ground" experience="154" speed="160">
+<monster name="Shiny Camerupt" nameDescription="a Shiny camerupt" race="fire" race2="ground" experience="696" speed="160">
     <health now="120" max="120" />
     <look type="33" corpse="12754" />
 	<targetchange interval="10000" chance="0" />

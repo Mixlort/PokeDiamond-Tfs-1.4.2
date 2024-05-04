@@ -1,4 +1,4 @@
-<monster name="Exeggutor" nameDescription="a exeggutor" race="grass" race2="psychic" experience="212" speed="175">
+<monster name="Exeggutor" nameDescription="a exeggutor" race="grass" race2="psychic" experience="8701" speed="175">
     <health now="95" max="95" />
     <look type="397" corpse="11874" />
     <targetchange interval="10000" chance="0" />

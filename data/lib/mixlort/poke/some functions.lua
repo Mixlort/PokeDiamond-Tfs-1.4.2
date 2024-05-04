@@ -248,9 +248,9 @@ function doRegainSpeed(cid) --mixlort remover
     if isMonster(cid) then
         speed = getStatus(cid).speed
 	elseif isPlayer(cid) and getPlayerStorageValue(cid, 5700) > 0 then
-	    speed = speed + (2 * ((getPlayerLevel(cid)/100) - 1)) + getPlayerStorageValue(cid, 5700)
+	    speed = speed + (2 * ((getPlayerLevel(cid)) - 1)) + getPlayerStorageValue(cid, 5700)
 	elseif isPlayer(cid) then
-	    speed = speed + (2 * ((getPlayerLevel(cid)/100) - 1))
+	    speed = speed + (2 * ((getPlayerLevel(cid)) - 1))
     end
    
     doChangeSpeed(cid, -getCreatureSpeed(cid))

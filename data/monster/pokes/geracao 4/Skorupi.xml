@@ -1,4 +1,4 @@
-<monster name="Skorupi" nameDescription="an Skorupi" race="poison" race2="bug" experience="134" speed="185">
+<monster name="Skorupi" nameDescription="an Skorupi" race="poison" race2="bug" experience="484" speed="185">
     <health now="40" max="40" />
     <look type="1578" corpse="243" />
 	<targetchange interval="10000" chance="0" />

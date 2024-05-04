@@ -23,7 +23,7 @@ local posis = {
 }
 
 for npcPos, pos in pairs(posis) do
-    if isPosEqualPos(getThingPos(getNpcCid()), npcPos) then 
+    if isPosEqualPos(getThingPos(getNpcCid():getId()), npcPos) then 
        posInicial = pos.posIni   
        posFinal = pos.posFinal
        break

@@ -1,4 +1,4 @@
-<monster name="Gothorita" nameDescription="a Gothorita" race="ghost" race2="poison" experience="190" speed="230">
+<monster name="Gothorita" nameDescription="a Gothorita" race="ghost" race2="poison" experience="976" speed="230">
     <health now="60" max="60" />
     <look type="1916" corpse="11879" />
     <targetchange interval="10000" chance="0" />

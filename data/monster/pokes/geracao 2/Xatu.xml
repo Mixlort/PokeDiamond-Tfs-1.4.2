@@ -1,4 +1,4 @@
-<monster name="Xatu" nameDescription="a xatu" race="psychic" race2="flying" experience="171" speed="161">
+<monster name="Xatu" nameDescription="a xatu" race="psychic" race2="flying" experience="0" speed="161">
     <health now="65" max="65" />
     <look type="889" corpse="4758" />
 	<targetchange interval="10000" chance="0" />

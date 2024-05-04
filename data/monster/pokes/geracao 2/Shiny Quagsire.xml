@@ -1,4 +1,4 @@
-<monster name="Shiny Quagsire" nameDescription="a quagsire" race="water" race2="ground" experience="137" speed="105">
+<monster name="Shiny Quagsire" nameDescription="a quagsire" race="water" race2="ground" experience="0" speed="105">
     <health now="140" max="140" />
     <look type="29" corpse="4425" />
 	<targetchange interval="10000" chance="0" />

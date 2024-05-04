@@ -1,4 +1,4 @@
-<monster name="Shiny Espeon" nameDescription="an shiny espeon" race="psychic" race2="no race" experience="197" speed="155">
+<monster name="Shiny Espeon" nameDescription="an shiny espeon" race="psychic" race2="no race" experience="580" speed="155">
     <health now="65" max="65" />
     <look type="1489" corpse="12600" />
 	 <targetchange interval="10000" chance="0" />

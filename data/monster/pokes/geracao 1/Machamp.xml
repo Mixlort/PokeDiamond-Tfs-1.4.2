@@ -1,4 +1,4 @@
-<monster name="Machamp" nameDescription="a machamp" race="fighting" race2="no race" experience="193" speed="175">
+<monster name="Machamp" nameDescription="a machamp" race="fighting" race2="no race" experience="9870" speed="175">
     <health now="90" max="90" />
     <look type="472" corpse="11908" />
     <targetchange interval="10000" chance="0" />

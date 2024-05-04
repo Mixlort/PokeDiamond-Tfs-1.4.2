@@ -1,4 +1,4 @@
-<monster name="Shaymin" nameDescription="a Shaymin" race="fire" race2="no race" experience="217" speed="180">
+<monster name="Shaymin" nameDescription="a Shaymin" race="fire" race2="no race" experience="33000" speed="180">
     <health now="80" max="80" />
     <look type="2140" corpse="13383" />
 	<targetchange interval="10000" chance="0" />

@@ -1,4 +1,4 @@
-<monster name="Weepinbell" nameDescription="a weepinbell" race="grass" race2="poison" experience="151" speed="175">
+<monster name="Weepinbell" nameDescription="a weepinbell" race="grass" race2="poison" experience="300" speed="175">
     <health now="65" max="65" />
     <look type="388" corpse="11984" />
     <targetchange interval="10000" chance="0" />

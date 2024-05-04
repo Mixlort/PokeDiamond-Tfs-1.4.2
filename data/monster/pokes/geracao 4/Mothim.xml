@@ -1,4 +1,4 @@
-<monster name="Mothim" nameDescription="a Mothim" race="bug" race2="flying" experience="147" speed="186">
+<monster name="Mothim" nameDescription="a Mothim" race="bug" race2="flying" experience="0" speed="186">
     <health now="70" max="70" />
     <look type="1520" corpse="189" />
 	<targetchange interval="10000" chance="0" />

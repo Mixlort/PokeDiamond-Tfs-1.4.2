@@ -1,4 +1,4 @@
-<monster name="Bellossom" nameDescription="a bellossom" race="grass" race2="no race" experience="184" speed="112">
+<monster name="Bellossom" nameDescription="a bellossom" race="grass" race2="no race" experience="652" speed="112">
     <health now="75" max="75" />
     <look type="897" corpse="3272" />
 	 <targetchange interval="10000" chance="0" />

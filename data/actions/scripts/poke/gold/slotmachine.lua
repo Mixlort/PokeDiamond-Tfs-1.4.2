@@ -114,21 +114,21 @@ addEvent(doPullBack, 500, topos)
         if first == 0 then
         firstplay = math.random(1, 9)
         doSendAnimatedText(pos, firstplay, 66)
-        addEvent(doPlay, 900, cid, pos, firstplay, second, third)
+        addEvent(doPlay, 900, cid:getId(), pos, firstplay, second, third)
         return true
         end
 
         if second == 0 then
         secondplay = math.random(1, 9)
         doSendAnimatedText(pos, secondplay, 66)
-        addEvent(doPlay, 900, cid, pos, first, secondplay, third)
+        addEvent(doPlay, 900, cid:getId(), pos, first, secondplay, third)
         return true
         end
 
         if third == 0 then
         thirdplay = math.random(1, 9)
         doSendAnimatedText(pos, thirdplay, 66)
-        addEvent(doPlay, 900, cid, pos, first, second, thirdplay)
+        addEvent(doPlay, 900, cid:getId(), pos, first, second, thirdplay)
         return true
         end
 
@@ -137,17 +137,17 @@ addEvent(doPullBack, 500, topos)
         doSendAnimatedText(pos, "JACKPOT!", 180)
         sendJackpotEffect(getThingPos(cid))
         addEvent(doSendAnimatedText, 600, pos, "JACKPOT!", 66)
-        addEvent(sendJackpotEffect, 600, getThingPos(cid))
+        addEvent(sendJackpotEffect, 600, getThingPos(cid:getId()))
         addEvent(doSendAnimatedText, 1400, pos, "JACKPOT!", 180)
-        addEvent(sendJackpotEffect, 1400, getThingPos(cid))
+        addEvent(sendJackpotEffect, 1400, getThingPos(cid:getId()))
         addEvent(doSendAnimatedText, 2200, pos, "JACKPOT!", 66)
-        addEvent(sendJackpotEffect, 2200, getThingPos(cid))
+        addEvent(sendJackpotEffect, 2200, getThingPos(cid:getId()))
         local ppos = getThingPos(cid)
         local win = (mymoney - cost) + 1000
         addEvent(doSendAnimatedText, 2500, ppos, "+1000", 35)
-        addEvent(setPlayerStorageValue, 2500, cid, coins, win)
-        addEvent(doPlayerSendTextMessage, 2500, cid, MESSAGE_STATUS_CONSOLE_BLUE, "You won 1000 cassino coins, now you have "..win.." coins left.")
-        addEvent(doPlayerSetNoMove, 2500, cid, false)
+        addEvent(setPlayerStorageValue, 2500, cid:getId(), coins, win)
+        addEvent(doPlayerSendTextMessage, 2500, cid:getId(), MESSAGE_STATUS_CONSOLE_BLUE, "You won 1000 cassino coins, now you have "..win.." coins left.")
+        addEvent(doPlayerSetNoMove, 2500, cid:getId(), false)
 
 	
 	elseif checkPrize({first, second, third}) == 0 then
@@ -162,9 +162,9 @@ addEvent(doPullBack, 500, topos)
 	local prize = checkPrize({first, second, third})
         local win = (mymoney - cost) + prize
         addEvent(doSendAnimatedText, 500, ppos, "+"..prize.."", 35)
-        addEvent(setPlayerStorageValue, 500, cid, coins, win)
-        addEvent(doPlayerSendTextMessage, 500, cid, MESSAGE_STATUS_CONSOLE_BLUE, "You won "..prize.." cassino coins, now you have "..win.." coins left.")
-        addEvent(doPlayerSetNoMove, 500, cid, false)
+        addEvent(setPlayerStorageValue, 500, cid:getId(), coins, win)
+        addEvent(doPlayerSendTextMessage, 500, cid:getId(), MESSAGE_STATUS_CONSOLE_BLUE, "You won "..prize.." cassino coins, now you have "..win.." coins left.")
+        addEvent(doPlayerSetNoMove, 500, cid:getId(), false)
 
 	elseif checkPrize({first, second, third}) <= 65 then
 
@@ -173,9 +173,9 @@ addEvent(doPullBack, 500, topos)
 	local prize = checkPrize({first, second, third})
         local win = (mymoney - cost) + prize
         addEvent(doSendAnimatedText, 500, ppos, "+"..prize.."", 35)
-        addEvent(setPlayerStorageValue, 500, cid, coins, win)
-        addEvent(doPlayerSendTextMessage, 500, cid, MESSAGE_STATUS_CONSOLE_BLUE, "You won "..prize.." cassino coins, now you have "..win.." coins left.")
-        addEvent(doPlayerSetNoMove, 500, cid, false)
+        addEvent(setPlayerStorageValue, 500, cid:getId(), coins, win)
+        addEvent(doPlayerSendTextMessage, 500, cid:getId(), MESSAGE_STATUS_CONSOLE_BLUE, "You won "..prize.." cassino coins, now you have "..win.." coins left.")
+        addEvent(doPlayerSetNoMove, 500, cid:getId(), false)
 
 	else
 
@@ -184,14 +184,14 @@ addEvent(doPullBack, 500, topos)
 	local prize = checkPrize({first, second, third})
         local win = (mymoney - cost) + prize
         addEvent(doSendAnimatedText, 500, ppos, "+"..prize.."", 35)
-        addEvent(setPlayerStorageValue, 500, cid, coins, win)
-        addEvent(doPlayerSendTextMessage, 500, cid, MESSAGE_STATUS_CONSOLE_BLUE, "You won "..prize.." cassino coins, now you have "..win.." coins left.")
-        addEvent(doPlayerSetNoMove, 500, cid, false)
+        addEvent(setPlayerStorageValue, 500, cid:getId(), coins, win)
+        addEvent(doPlayerSendTextMessage, 500, cid:getId(), MESSAGE_STATUS_CONSOLE_BLUE, "You won "..prize.." cassino coins, now you have "..win.." coins left.")
+        addEvent(doPlayerSetNoMove, 500, cid:getId(), false)
 	end
 	return true
 	end
 
 doAddCondition(cid, playing)
-addEvent(doPlay, 850, cid, topos, 0, 0, 0)
+addEvent(doPlay, 850, cid:getId(), topos, 0, 0, 0)
 return true
 end

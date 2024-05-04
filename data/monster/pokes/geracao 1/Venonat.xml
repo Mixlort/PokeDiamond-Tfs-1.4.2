@@ -1,4 +1,4 @@
-<monster name="Venonat" nameDescription="a venonat" race="bug" race2="poison" experience="75" speed="165">
+<monster name="Venonat" nameDescription="a venonat" race="bug" race2="poison" experience="400" speed="165">
     <health now="60" max="60" />
     <look type="403" corpse="11976" />
     <targetchange interval="10000" chance="0" />

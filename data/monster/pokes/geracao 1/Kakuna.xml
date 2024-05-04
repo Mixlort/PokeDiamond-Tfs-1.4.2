@@ -1,4 +1,4 @@
-<monster name="Kakuna" nameDescription="a kakuna" race="bug" race2="poison" experience="120" speed="155">
+<monster name="Kakuna" nameDescription="a kakuna" race="bug" race2="poison" experience="1000" speed="155">
     <health now="45" max="45" />
     <look type="411" corpse="11901" />
     <targetchange interval="10000" chance="0" />

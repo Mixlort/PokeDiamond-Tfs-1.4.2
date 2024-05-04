@@ -1,4 +1,4 @@
-<monster name="Shiny Mr. Mime" nameDescription="a shiny mr. mime" race="psychic" race2="no race" experience="136" speed="210">
+<monster name="Shiny Mr. Mime" nameDescription="a shiny mr. mime" race="psychic" race2="no race" experience="688" speed="210">
     <health now="40" max="40" />
     <look type="1484" corpse="12595" />
     <targetchange interval="10000" chance="0" />

@@ -1,4 +1,4 @@
-<monster name="Shiny Arcanine" nameDescription="a Shiny arcanine" race="fire" race2="no race" experience="213" speed="215">
+<monster name="Shiny Arcanine" nameDescription="a Shiny arcanine" race="fire" race2="no race" experience="752" speed="215">
     <health now="90" max="90" />
     <look type="1253" corpse="12478" />
   <targetchange interval="10000" chance="0" />

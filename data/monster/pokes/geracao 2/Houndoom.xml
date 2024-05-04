@@ -1,4 +1,4 @@
-<monster name="Houndoom" nameDescription="a houndoom" race="dark" race2="fire" experience="204" speed="161">
+<monster name="Houndoom" nameDescription="a houndoom" race="dark" race2="fire" experience="0" speed="161">
     <health now="75" max="75" />
     <look type="933" corpse="3555" />
 	<targetchange interval="10000" chance="0" />

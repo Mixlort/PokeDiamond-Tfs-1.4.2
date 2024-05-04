@@ -1,4 +1,4 @@
-<monster name="Wormadam Ground" nameDescription="a Wormadam Ground" race="bug" race2="ground" experience="72" speed="156">
+<monster name="Wormadam Ground" nameDescription="a Wormadam Ground" race="bug" race2="ground" experience="276" speed="156">
     <health now="60" max="60" />
     <look type="1518" corpse="185" />
     <targetchange interval="10000" chance="0" />

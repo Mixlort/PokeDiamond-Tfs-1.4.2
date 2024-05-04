@@ -1,4 +1,4 @@
-<monster name="Togepi" nameDescription="a Togepi" race="normal" race2="no race" experience="74" speed="80">
+<monster name="Togepi" nameDescription="a Togepi" race="normal" race2="no race" experience="124" speed="80">
     <health now="35" max="35" />
     <look type="886" corpse="4450" />
     <targetchange interval="10000" chance="0" />

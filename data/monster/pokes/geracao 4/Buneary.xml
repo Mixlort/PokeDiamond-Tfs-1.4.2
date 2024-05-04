@@ -1,4 +1,4 @@
-<monster name="Buneary" nameDescription="a Buneary" race="normal" race2="no race" experience="189" speed="205">
+<monster name="Buneary" nameDescription="a Buneary" race="normal" race2="no race" experience="76" speed="205">
     <health now="55" max="55" />
     <look type="1512" corpse="4307" />
     <targetchange interval="10000" chance="0" />

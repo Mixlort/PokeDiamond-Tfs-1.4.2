@@ -623,56 +623,56 @@ function onHealthChange(cid, attacker, value, combat)
             end
         end
     end
-    -- ----------------------------------------PASSIVAS-------------------------------------  
-    -- -------------------------------------------Counter Helix------------------------------------
-    -- if passivesChances["Helix"][getCreatureName(cid)] and math.random(1, 100) <= passivesChances["Helix"][getCreatureName(cid)] then
-    --    docastspell(cid, "Counter Helix")
-    -- end
-    -- -------------------------------------------Lava Counter/Electricity----------------------------
-    -- if passivesChances["Fire_Thunder"][getCreatureName(cid)] and math.random(1, 100) <= passivesChances["Fire_Thunder"][getCreatureName(cid)] then
-    --    docastspell(cid, "Lava-Electricity")
-    -- end
-    -- ---------------------------------------Stunning Confusion-----------------------------------------
-    -- if passivesChances["Stunning"][getCreatureName(cid)] and math.random(1, 100) <= passivesChances["Stunning"][getCreatureName(cid)] then  
-    --    docastspell(cid, "Stunning Confusion")
-    -- end
-    -- -----------------------------------------Groundshock-----------------------------------
-    -- if passivesChances["Groundshock"][getCreatureName(cid)] and math.random(1, 100) <= passivesChances["Groundshock"][getCreatureName(cid)] then
-    --    docastspell(cid, "Groundshock")
-    -- end
-    -- --------------------------------------Electric Charge---------------------------------------------
-    -- if passivesChances["Electric Charge"][getCreatureName(cid)] and math.random(1, 100) <= passivesChances["Electric Charge"][getCreatureName(cid)] then
-    --    docastspell(cid, "Electric Charge", 0, 0)
-    -- end
-    -- -------------------------------------Melody------------------------------------
-    -- if passivesChances["Melody"][getCreatureName(cid)] and math.random(1, 100) <= passivesChances["Melody"][getCreatureName(cid)] then 
-    --    docastspell(cid, "Melody")
-    -- end
-    -- ------------------------------------- Dragon Fury / Fury ---------------------------------------
-    -- if passivesChances["Dragon Fury"][getCreatureName(cid)] and math.random(1, 100) <= passivesChances["Dragon Fury"][getCreatureName(cid)] then
-    --    docastspell(cid, "Dragon Fury", 0, 0)
-    -- end
-    -- ------------------------------------- Mega Drain ---------------------------------------
-    -- if passivesChances["Mega Drain"][getCreatureName(cid)] and math.random(1, 100) <= passivesChances["Mega Drain"][getCreatureName(cid)] then
-    --    docastspell(cid, "Mega Drain")
-    -- end
-    -- ------------------------------------- Spores Reaction ---------------------------------------
-    -- if passivesChances["Spores Reaction"][getCreatureName(cid)] and math.random(1, 100) <= passivesChances["Spores Reaction"][getCreatureName(cid)] then
-    --    docastspell(cid, "Spores Reaction")
-    -- end
-    -- ------------------------------------ Amnesia ----------------------------------------   
-    -- if passivesChances["Amnesia"][getCreatureName(cid)] and math.random(1, 100) <= passivesChances["Amnesia"][getCreatureName(cid)] then 
-    --    docastspell(cid, "Amnesia", 0, 0)
-    -- end
-    -- ----------------------------------- Zen Mind -----------------------------------------
-    -- if passivesChances["Zen Mind"][getCreatureName(cid)] and isWithCondition(cid) and math.random(1, 100) <= passivesChances["Zen Mind"][getCreatureName(cid)] then
-    --    docastspell(cid, "Zen Mind", 0, 0)
-    -- end
-    -- ---------------------------------- Mirror Coat ---------------------------------------
-    -- if passivesChances["Mirror Coat"][getCreatureName(cid)] and math.random(1, 100) <= passivesChances["Mirror Coat"][getCreatureName(cid)] then   
-    --    docastspell(cid, "Mirror Coat", 0, 0)
-    -- end
-    -- --------------------------------- Illusion -----------------------------------------
+    ----------------------------------------PASSIVAS-------------------------------------  
+    -------------------------------------------Counter Helix------------------------------------
+    if passivesChances["Helix"][getCreatureName(cid)] and math.random(1, 100) <= passivesChances["Helix"][getCreatureName(cid)] then
+       docastspell(cid, "Counter Helix")
+    end
+    -------------------------------------------Lava Counter/Electricity----------------------------
+    if passivesChances["Fire_Thunder"][getCreatureName(cid)] and math.random(1, 100) <= passivesChances["Fire_Thunder"][getCreatureName(cid)] then
+       docastspell(cid, "Lava-Electricity")
+    end
+    ---------------------------------------Stunning Confusion-----------------------------------------
+    if passivesChances["Stunning"][getCreatureName(cid)] and math.random(1, 100) <= passivesChances["Stunning"][getCreatureName(cid)] then  
+       docastspell(cid, "Stunning Confusion")
+    end
+    -----------------------------------------Groundshock-----------------------------------
+    if passivesChances["Groundshock"][getCreatureName(cid)] and math.random(1, 100) <= passivesChances["Groundshock"][getCreatureName(cid)] then
+       docastspell(cid, "Groundshock")
+    end
+    --------------------------------------Electric Charge---------------------------------------------
+    if passivesChances["Electric Charge"][getCreatureName(cid)] and math.random(1, 100) <= passivesChances["Electric Charge"][getCreatureName(cid)] then
+       docastspell(cid, "Electric Charge", 0, 0)
+    end
+    -------------------------------------Melody------------------------------------
+    if passivesChances["Melody"][getCreatureName(cid)] and math.random(1, 100) <= passivesChances["Melody"][getCreatureName(cid)] then 
+       docastspell(cid, "Melody")
+    end
+    ------------------------------------- Dragon Fury / Fury ---------------------------------------
+    if passivesChances["Dragon Fury"][getCreatureName(cid)] and math.random(1, 100) <= passivesChances["Dragon Fury"][getCreatureName(cid)] then
+       docastspell(cid, "Dragon Fury", 0, 0)
+    end
+    ------------------------------------- Mega Drain ---------------------------------------
+    if passivesChances["Mega Drain"][getCreatureName(cid)] and math.random(1, 100) <= passivesChances["Mega Drain"][getCreatureName(cid)] then
+       docastspell(cid, "Mega Drain")
+    end
+    ------------------------------------- Spores Reaction ---------------------------------------
+    if passivesChances["Spores Reaction"][getCreatureName(cid)] and math.random(1, 100) <= passivesChances["Spores Reaction"][getCreatureName(cid)] then
+       docastspell(cid, "Spores Reaction")
+    end
+    ------------------------------------ Amnesia ----------------------------------------   
+    if passivesChances["Amnesia"][getCreatureName(cid)] and math.random(1, 100) <= passivesChances["Amnesia"][getCreatureName(cid)] then 
+       docastspell(cid, "Amnesia", 0, 0)
+    end
+    ----------------------------------- Zen Mind -----------------------------------------
+    if passivesChances["Zen Mind"][getCreatureName(cid)] and isWithCondition(cid) and math.random(1, 100) <= passivesChances["Zen Mind"][getCreatureName(cid)] then
+       docastspell(cid, "Zen Mind", 0, 0)
+    end
+    ---------------------------------- Mirror Coat ---------------------------------------
+    if passivesChances["Mirror Coat"][getCreatureName(cid)] and math.random(1, 100) <= passivesChances["Mirror Coat"][getCreatureName(cid)] then   
+       docastspell(cid, "Mirror Coat", 0, 0)
+    end
+    --------------------------------- Illusion -----------------------------------------
 
     return false
 end

@@ -1,4 +1,4 @@
-<monster name="Crobat" nameDescription="a crobat" race="poison" race2="flying" experience="204" speed="170">
+<monster name="Crobat" nameDescription="a crobat" race="poison" race2="flying" experience="484" speed="170">
     <health now="85" max="85" />
     <look type="1454" corpse="3279" />
     <flags>

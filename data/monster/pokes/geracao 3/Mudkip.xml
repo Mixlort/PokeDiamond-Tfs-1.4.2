@@ -1,4 +1,4 @@
-<monster name="Mudkip" nameDescription="a mudkip" race="water" race2="no race" experience="66" speed="160">
+<monster name="Mudkip" nameDescription="a mudkip" race="water" race2="no race" experience="252" speed="160">
     <health now="40" max="40" />
     <look type="1769" corpse="12768" />
 	<targetchange interval="10000" chance="0" />

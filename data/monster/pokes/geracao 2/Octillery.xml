@@ -1,4 +1,4 @@
-<monster name="Octillery" nameDescription="an octillery" race="water" race2="no race" experience="164" speed="115">
+<monster name="Octillery" nameDescription="an octillery" race="water" race2="no race" experience="276" speed="115">
     <health now="75" max="75" />
     <look type="931" corpse="3582" />
 	<targetchange interval="10000" chance="0" />

@@ -1,4 +1,4 @@
-<monster name="Mega Lucario" nameDescription="a Mega Lucario" race="fighting" race2="steel" experience="200" speed="210">
+<monster name="Mega Lucario" nameDescription="a Mega Lucario" race="fighting" race2="steel" experience="824" speed="210">
     <health now="7" max="7" />
     <look type="1887" corpse="" />
     <targetchange interval="10000" chance="0" />

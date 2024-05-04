@@ -1,4 +1,4 @@
-<monster name="Swinub" nameDescription="a swinub" race="ice" race2="ground" experience="78" speed="112">
+<monster name="Swinub" nameDescription="a swinub" race="ice" race2="ground" experience="0" speed="112">
     <health now="50" max="50" />
     <look type="927" corpse="4448" />
 	<targetchange interval="10000" chance="0" />

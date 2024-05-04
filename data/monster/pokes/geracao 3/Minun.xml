@@ -1,4 +1,4 @@
-<monster name="Minun" nameDescription="a minun" race="electric" race2="no race" experience="42" speed="115">
+<monster name="Minun" nameDescription="a minun" race="electric" race2="no race" experience="76" speed="115">
     <health now="60" max="60" />
     <look type="1690" corpse="12742" />
 	<targetchange interval="10000" chance="0" />

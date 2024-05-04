@@ -15,7 +15,7 @@ local function creatureGreetCallback(cid, message)
     local player = Player(cid)
     local pName = Player(cid):getName()
     for mon, l in ipairs(task_monsters) do
-        if getCreatureName(getNpcCid()) == l.nameNpc then
+        if getCreatureName(getNpcCid():getId()) == l.nameNpc then
             dialog = "Olá ".. pName ..". "..l.talk
             buttons = {
                 {type = "Button", text = "Claro! Estou disposto a ajudar."},
@@ -36,7 +36,7 @@ function creatureSayCallback(cid, type, msg)
     local player = Player(cid)
     if msg == 'Claro! Estou disposto a ajudar.' then
     	for mon, l in ipairs(task_monsters) do
-    		if getCreatureName(getNpcCid()) == l.nameNpc then
+    		if getCreatureName(getNpcCid():getId()) == l.nameNpc then
                 dialog = "Excelente! preciso que você derrote "..getMonstersFromTableName(l.mons_list)..", você aceita essa missão?"
                 buttons = {
                     {type = "Button", text = "Aceito! Vou começar a caçada agora mesmo."},
@@ -53,7 +53,7 @@ function creatureSayCallback(cid, type, msg)
     					player:setStorageValue(task_points, 0)
     				end
 
-    				if getCreatureName(getNpcCid()) == l.nameNpc then
+    				if getCreatureName(getNpcCid():getId()) == l.nameNpc then
     					if player:getStorageValue(task_points) >= l.taskPointsNumber then
                             dialog = "Desculpe, mas você já fez essa tarefa."
                             doSendCallForNpc(npc, player, "conversation", "#0094eb", nil, dialog, nil)
@@ -95,7 +95,7 @@ function creatureSayCallback(cid, type, msg)
         end
     elseif msg == 'Receber recompensa' then
     	local ret_t = getTaskInfos(player)
-    		if ret_t and getCreatureName(getNpcCid()) == ret_t.nameNpc then
+    		if ret_t and getCreatureName(getNpcCid():getId()) == ret_t.nameNpc then
     			if getMonstersFromTable(player, 3, ret_t.mons_list) then
     				local pt1 = ret_t.pointsTask[1]
     				local pt2 = ret_t.pointsTask[2]

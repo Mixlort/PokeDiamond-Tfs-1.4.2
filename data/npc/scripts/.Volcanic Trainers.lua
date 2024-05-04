@@ -174,9 +174,9 @@ local npc = clanNpcs[getNpcName()]
                talkState[talkUser] = 0 
                return true
             elseif getPlayerStorageValue(cid, 854789) == 5 then 
-               if isMyTaskComplete(cid, getNpcCid()) then
+               if isMyTaskComplete(cid, getNpcCid():getId()) then
                   selfSay("Very well, you have done my first task... Talk to me again when you want to continue!", cid) 
-                  local sto = getMyTaskSto(cid, getNpcCid())
+                  local sto = getMyTaskSto(cid, getNpcCid():getId())
                   setPlayerStorageValue(cid, sto, -1)
                   setPlayerStorageValue(cid, 854789, 6)
                   talkState[talkUser] = 0
@@ -209,7 +209,7 @@ local npc = clanNpcs[getNpcName()]
                talkState[talkUser] = 0 
                return true
             elseif getPlayerStorageValue(cid, 854789) == 7 then
-               if isMyTaskComplete(cid, getNpcCid()) then
+               if isMyTaskComplete(cid, getNpcCid():getId()) then
                   ---
                   local storages = {17000, 63215, 17001, 13008, 5700}     --alterado v1.8
                   for s = 1, #storages do
@@ -230,7 +230,7 @@ local npc = clanNpcs[getNpcName()]
                      selfSay("So you complete my last task! Congradulations! Now you move up of rank and become {"..lookClans[getPlayerClanNum(cid)][getPlayerClanRank(cid)].."}!", cid)
                      setPlayerStorageValue(cid, 854789, -1)
                      setPlayerStorageValue(cid, 854787, -1)
-                     local sto = getMyTaskSto(cid, getNpcCid())
+                     local sto = getMyTaskSto(cid, getNpcCid():getId())
                      setPlayerStorageValue(cid, sto, -1)
                      talkState[talkUser] = 0
                      return true

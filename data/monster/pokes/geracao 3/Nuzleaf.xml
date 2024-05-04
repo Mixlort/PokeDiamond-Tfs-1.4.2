@@ -1,4 +1,4 @@
-<monster name="Nuzleaf" nameDescription="a Nuzleaf" race="grass" race2="dark" experience="141" speed="180">
+<monster name="Nuzleaf" nameDescription="a Nuzleaf" race="grass" race2="dark" experience="608" speed="180">
     <health now="70" max="70" />
     <look type="1762" corpse="12702" />
  <targetchange interval="10000" chance="0" />

@@ -1,4 +1,4 @@
-<monster name="Porygon" nameDescription="a porygon" race="normal" race2="no race" experience="130" speed="160">
+<monster name="Porygon" nameDescription="a porygon" race="normal" race2="no race" experience="2412" speed="160">
     <health now="65" max="65" />
     <look type="448" corpse="11947" />
     <targetchange interval="10000" chance="0" />

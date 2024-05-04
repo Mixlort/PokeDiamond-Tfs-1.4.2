@@ -1,4 +1,4 @@
-<monster name="Shiny Electabuzz" nameDescription="a Shiny electabuzz" race="electric" race2="no race" experience="156" speed="225">
+<monster name="Shiny Electabuzz" nameDescription="a Shiny electabuzz" race="electric" race2="no race" experience="1084" speed="225">
     <health now="65" max="65" />
     <look type="1319" corpse="12545" />
   <targetchange interval="10000" chance="0" />

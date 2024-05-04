@@ -1,4 +1,4 @@
-<monster name="Tangrowth" nameDescription="a Tangrowth" race="grass" race2="no race" experience="176" speed="170">
+<monster name="Tangrowth" nameDescription="a Tangrowth" race="grass" race2="no race" experience="436" speed="170">
     <health now="100" max="100" />
     <look type="1587" corpse="269" />
     <targetchange interval="10000" chance="0" />

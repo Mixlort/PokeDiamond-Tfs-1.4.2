@@ -1,4 +1,4 @@
-<monster name="Shiny Scyther" nameDescription="a Shiny scyther" race="bug" race2="flying" experience="187" speed="225">
+<monster name="Shiny Scyther" nameDescription="a Shiny scyther" race="bug" race2="flying" experience="1044" speed="225">
     <health now="70" max="70" />
     <look type="1317" corpse="0" />
   <targetchange interval="10000" chance="0" />

@@ -1,4 +1,4 @@
-<monster name="Chimchar" nameDescription="a Chimchar" race="fire" race2="no race" experience="65" speed="181">
+<monster name="Chimchar" nameDescription="a Chimchar" race="fire" race2="no race" experience="248" speed="181">
     <health now="44" max="44" />
     <look type="1525" corpse="115" />
     <targetchange interval="10000" chance="0" />

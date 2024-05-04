@@ -1,4 +1,4 @@
-<monster name="Shiny Golbat" nameDescription="a Shiny golbat" race="poison" race2="flying" experience="171" speed="210">
+<monster name="Shiny Golbat" nameDescription="a Shiny golbat" race="poison" race2="flying" experience="284" speed="210">
     <health now="75" max="75" />
     <look type="1236" corpse="12461" />
   <targetchange interval="10000" chance="0" />

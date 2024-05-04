@@ -1,4 +1,4 @@
-<monster name="Shiny Spiritomb" nameDescription="a Shiny Spiritomb" race="ghost" race2="poison" experience="190" speed="230">
+<monster name="Shiny Spiritomb" nameDescription="a Shiny Spiritomb" race="ghost" race2="poison" experience="332" speed="230">
     <health now="145" max="145" />
     <look type="2179" corpse="13383" />
     <targetchange interval="10000" chance="0" />

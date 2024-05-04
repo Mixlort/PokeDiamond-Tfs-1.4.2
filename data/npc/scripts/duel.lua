@@ -54,7 +54,7 @@ local function doSummonGymPokemon(npc)
 	setPlayerStorageValue(summon, 1007, it.nick ~= "" and it.nick or it.name)
 	doSetMonsterGym(summon, focus)
 	local name = it.nick ~= "" and it.nick or getCreatureName(this).."s "..it.name
-	addEvent(adjustWildPoke, 15, summon, it.optionalLevel)
+	addEvent(adjustWildPoke, 15, summon:getId(), it.optionalLevel)
 	doCreatureSay(this, gobackmsgs[math.random(#gobackmsgs)].go:gsub("doka", getPlayerStorageValue(summon, 1007)), 1)
 	fighting = true
 	battle_turn = battle_turn + 1
@@ -130,7 +130,7 @@ function onCreatureSay(cid, type, msg)
 			selfSay("Ok, the first that defeats "..number_of_pokemons.." wins, let's start!")
 			challenger = focus
 			setPlayerStorageValue(cid, 990, 1)
-			addEvent(doSummonGymPokemon, 850, getThis())
+			addEvent(doSummonGymPokemon, 850, getThis():getId())
 			conv = 3
 			return true
 		end
@@ -162,7 +162,7 @@ local walkdelay = 0
 function onThink()
 
 	if not masterpos.x then
-		masterpos = getThingPos(getThis())
+		masterpos = getThingPos(getThis():getId())
 	end
 
 	if focus == 0 then
@@ -175,16 +175,16 @@ function onThink()
 		afk_time = 0
 		afk_warning = false
 
-		if #getCreatureSummons(getThis()) >= 1 then
-			setPlayerStorageValue(getCreatureSummons(getThis())[1], 1006, 0)
-			doCreatureAddHealth(getCreatureSummons(getThis())[1], -getCreatureMaxHealth(getCreatureSummons(getThis())[1]))
+		if #getCreatureSummons(getThis():getId()) >= 1 then
+			setPlayerStorageValue(getCreatureSummons(getThis():getId())[1], 1006, 0)
+			doCreatureAddHealth(getCreatureSummons(getThis():getId())[1], -getCreatureMaxHealth(getCreatureSummons(getThis():getId())[1]))
 		end
 
 		walkdelay = walkdelay - 0.5
 
 		if walkdelay <= 0 then
 			walkdelay = walk_delay
-			local pos = getThingPos(getThis())
+			local pos = getThingPos(getThis():getId())
 			local npos = {}
 			for a = 0, 3 do
 				if getDistanceBetween(getPosByDir(pos, a), masterpos) <= max_distance and canWalkOnPos(getPosByDir(pos, a), true, false, true, true, false) then
@@ -193,7 +193,7 @@ function onThink()
 			end
 
 			if npos and #npos > 0 then
-				doTeleportThing(getThis(), npos[math.random(#npos)])
+				doTeleportThing(getThis():getId(), npos[math.random(#npos)])
 			end
 		end
 
@@ -209,7 +209,7 @@ function onThink()
 
 		talk_start = os.clock()
 
-		if not isCreature(getCreatureTarget(getThis())) then
+		if not isCreature(getCreatureTarget(getThis():getId())) then
 			if #getCreatureSummons(challenger) >= 1 then
 			   if getCreatureOutfit(getCreatureSummons(challenger)[1]).lookType ~= 2 then --alterado v1.6
 				  selfAttackCreature(getCreatureSummons(challenger)[1])
@@ -238,14 +238,14 @@ function onThink()
 		end
 
 
-		if #getCreatureSummons(getThis()) == 0 then
+		if #getCreatureSummons(getThis():getId()) == 0 then
 			if battle_turn > number_of_pokemons then
-				addEvent(doWinDuel, 1000, focus, getThis())
+				addEvent(doWinDuel, 1000, focus:getId(), getThis():getId())
 				setPlayerStorageValue(focus, 990, -1)
 				focus = 0
 			return true
 			end
-			addEvent(doSummonGymPokemon, 1000, getThis())
+			addEvent(doSummonGymPokemon, 1000, getThis():getId())
 		end
 
 		if not hasPokemon(challenger) or challenger_turn > 6 or challenger_turn >= number_of_pokemons then
@@ -257,7 +257,7 @@ function onThink()
 
 	end
 
-		local npcpos = getThingPos(getThis())
+		local npcpos = getThingPos(getThis():getId())
 		local focpos = getThingPos(focus)
 
 		if npcpos.z ~= focpos.z then

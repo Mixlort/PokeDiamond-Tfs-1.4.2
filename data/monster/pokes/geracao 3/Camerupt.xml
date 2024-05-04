@@ -1,4 +1,4 @@
-<monster name="Camerupt" nameDescription="a camerupt" race="fire" race2="ground" experience="154" speed="160">
+<monster name="Camerupt" nameDescription="a camerupt" race="fire" race2="ground" experience="696" speed="160">
     <health now="70" max="70" />
     <look type="1658" corpse="12754" />
 	<targetchange interval="10000" chance="0" />

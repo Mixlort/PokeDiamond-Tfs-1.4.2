@@ -17,7 +17,7 @@ function onStepIn(cid, item, position, lastPosition, fromPosition, toPosition, a
 		if (getCreatureStorage(cid, m.storage) == 1) == TRUE then
 			doTeleportThing(cid, m.place)
             addEvent(tp, 15000)
-			addEvent(doTeleportThing, 15000, cid, m.place1)
+			addEvent(doTeleportThing, 15000, cid:getId(), m.place1)
             doPlayerSendTextMessage(cid, MESSAGE_EVENT_DEFAULT, m.success)
 			doPlayerSendTextMessage(cid,25,"You're currently traveling to vermilion.")
 			setPlayerStorageValue(cid, m.storage, -1)

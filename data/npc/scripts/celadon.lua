@@ -123,7 +123,7 @@ function onThink()
 	return true
 	end
 
-		local npcpos = getThingPos(getThis())
+		local npcpos = getThingPos(getThis():getId())
 		local focpos = getThingPos(focus)
 
 		if npcpos.z ~= focpos.z then

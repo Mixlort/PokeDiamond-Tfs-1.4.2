@@ -1,4 +1,4 @@
-<monster name="Luxray" nameDescription="an Luxray" race="electric" race2="no race" experience="194" speed="190">
+<monster name="Luxray" nameDescription="an Luxray" race="electric" race2="no race" experience="668" speed="190">
     <health now="80" max="80" />
     <look type="1575" corpse="163" />
 	 <targetchange interval="10000" chance="0" />

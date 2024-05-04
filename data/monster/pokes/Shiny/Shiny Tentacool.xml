@@ -1,4 +1,4 @@
-<monster name="Shiny Tentacool" nameDescription="a Shiny tentacool" race="water" race2="poison" experience="105" speed="190">
+<monster name="Shiny Tentacool" nameDescription="a Shiny tentacool" race="water" race2="poison" experience="204" speed="190">
     <health now="40" max="40" />
     <look type="1266" corpse="12491" />
   <targetchange interval="10000" chance="0" />

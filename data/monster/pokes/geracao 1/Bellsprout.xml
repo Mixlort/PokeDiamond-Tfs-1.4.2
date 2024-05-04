@@ -1,4 +1,4 @@
-<monster name="Bellsprout" nameDescription="a bellsprout" race="grass" race2="poison" experience="84" speed="160">
+<monster name="Bellsprout" nameDescription="a bellsprout" race="grass" race2="poison" experience="1210" speed="160">
     <health now="50" max="50" />
     <look type="601" corpse="11845" />
     <targetchange interval="10000" chance="0" />

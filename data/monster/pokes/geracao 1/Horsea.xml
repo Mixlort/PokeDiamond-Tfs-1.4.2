@@ -1,4 +1,4 @@
-<monster name="Horsea" nameDescription="a horsea" race="water" race2="no race" experience="83" speed="180">
+<monster name="Horsea" nameDescription="a horsea" race="water" race2="no race" experience="700" speed="180">
     <health now="30" max="30" />
     <look type="384" corpse="11892" />
     <targetchange interval="10000" chance="0" />

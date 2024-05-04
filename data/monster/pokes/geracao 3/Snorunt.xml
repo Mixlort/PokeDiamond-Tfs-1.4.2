@@ -1,4 +1,4 @@
-<monster name="Snorunt" nameDescription="a Snorunt" race="ice" race2="no race" experience="78" speed="170">
+<monster name="Snorunt" nameDescription="a Snorunt" race="ice" race2="no race" experience="0" speed="170">
     <health now="50" max="50" />
     <look type="1759" corpse="12750" />
 	<targetchange interval="10000" chance="0" />

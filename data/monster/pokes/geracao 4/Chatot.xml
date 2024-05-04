@@ -1,4 +1,4 @@
-<monster name="Chatot" nameDescription="a Chatot" race="normal" race2="flying" experience="126" speed="221">
+<monster name="Chatot" nameDescription="a Chatot" race="normal" race2="flying" experience="0" speed="221">
     <health now="76" max="76" />
     <look type="1611" corpse="237" />
 	<targetchange interval="10000" chance="0" />

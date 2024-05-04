@@ -1,4 +1,4 @@
-<monster name="Shiny Marowak" nameDescription="a Shiny marowak" race="ground" race2="no race" experience="124" speed="165">
+<monster name="Shiny Marowak" nameDescription="a Shiny marowak" race="ground" race2="no race" experience="372" speed="165">
     <health now="60" max="60" />
     <look type="1299" corpse="12525" />
   <targetchange interval="10000" chance="0" />

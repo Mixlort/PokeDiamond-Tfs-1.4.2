@@ -1,4 +1,4 @@
-<monster name="Squirtle" nameDescription="a squirtle" race="water" race2="no race" experience="66" speed="163">
+<monster name="Squirtle" nameDescription="a squirtle" race="water" race2="no race" experience="300" speed="163">
     <health now="44" max="44" />
     <look type="353" corpse="11967" />
     <targetchange interval="10000" chance="0" />

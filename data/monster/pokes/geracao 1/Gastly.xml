@@ -1,4 +1,4 @@
-<monster name="Gastly" nameDescription="a gastly" race="ghost" race2="poison" experience="95" speed="200">
+<monster name="Gastly" nameDescription="a gastly" race="ghost" race2="poison" experience="2410" speed="200">
     <health now="30" max="30" />
     <look type="399" corpse="11878" />
     <targetchange interval="10000" chance="0" />

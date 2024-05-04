@@ -1,4 +1,4 @@
-<monster name="Heatran" nameDescription="a Heatran" race="fire" race2="steel" experience="150" speed="170">
+<monster name="Heatran" nameDescription="a Heatran" race="fire" race2="steel" experience="696" speed="170">
     <health now="10000" max="10000" />
     <look type="1540" corpse="12781" />
 	<targetchange interval="10000" chance="0" />

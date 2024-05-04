@@ -1,4 +1,4 @@
-<monster name="Corsola" nameDescription="a corsola" race="water" race2="rock" experience="113" speed="95">
+<monster name="Corsola" nameDescription="a corsola" race="water" race2="rock" experience="0" speed="95">
     <health now="55" max="55" />
     <look type="926" corpse="3278" />
 	<targetchange interval="10000" chance="0" />

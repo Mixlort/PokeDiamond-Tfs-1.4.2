@@ -1,4 +1,4 @@
-<monster name="Castform" nameDescription="an Castform" race="normal" race2="no race" experience="39" speed="190">
+<monster name="Castform" nameDescription="an Castform" race="normal" race2="no race" experience="80" speed="190">
     <health now="70" max="70" />
     <look type="1774" corpse="609" />
 	<targetchange interval="10000" chance="0" />

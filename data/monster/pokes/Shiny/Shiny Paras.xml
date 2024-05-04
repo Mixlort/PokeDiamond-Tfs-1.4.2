@@ -1,4 +1,4 @@
-<monster name="Shiny Paras" nameDescription="a Shiny paras" race="bug" race2="grass" experience="70" speed="145">
+<monster name="Shiny Paras" nameDescription="a Shiny paras" race="bug" race2="grass" experience="68" speed="145">
     <health now="35" max="35" />
     <look type="1240" corpse="12465" />
   <targetchange interval="10000" chance="0" />

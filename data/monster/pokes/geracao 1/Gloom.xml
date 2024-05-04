@@ -1,4 +1,4 @@
-<monster name="Gloom" nameDescription="a gloom" race="grass" race2="poison" experience="132" speed="160">
+<monster name="Gloom" nameDescription="a gloom" race="grass" race2="poison" experience="900" speed="160">
     <health now="60" max="60" />
     <look type="425" corpse="11881" />
     <targetchange interval="10000" chance="0" />

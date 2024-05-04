@@ -1,4 +1,4 @@
-<monster name="Qwilfish" nameDescription="a qwilfish" race="water" race2="poison" experience="100" speed="135">
+<monster name="Qwilfish" nameDescription="a qwilfish" race="water" race2="poison" experience="204" speed="135">
     <health now="65" max="65" />
     <look type="1457" corpse="4427" />
 	<targetchange interval="10000" chance="0" />

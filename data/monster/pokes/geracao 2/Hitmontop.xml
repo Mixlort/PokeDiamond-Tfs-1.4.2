@@ -1,4 +1,4 @@
-<monster name="Hitmontop" nameDescription="a hitmontop" race="fighting" race2="no race" experience="138" speed="135">
+<monster name="Hitmontop" nameDescription="a hitmontop" race="fighting" race2="no race" experience="824" speed="135">
     <health now="50" max="50" />
     <look type="952" corpse="3296" />
     <targetchange interval="10000" chance="0" />

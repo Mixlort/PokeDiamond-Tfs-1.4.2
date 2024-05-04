@@ -1,4 +1,4 @@
-<monster name="Ditto" nameDescription="a ditto" race="normal" race2="no race" experience="61" speed="158">
+<monster name="Ditto" nameDescription="a ditto" race="normal" race2="no race" experience="400" speed="158">
   <health now="48" max="48" />
     <look type="379" corpse="11861" />
   <targetchange interval="10000" chance="0" />

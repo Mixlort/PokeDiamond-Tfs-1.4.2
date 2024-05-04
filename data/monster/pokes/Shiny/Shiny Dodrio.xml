@@ -1,4 +1,4 @@
-<monster name="Shiny Dodrio" nameDescription="a shiny dodrio" race="normal" race2="flying" experience="158" speed="220">
+<monster name="Shiny Dodrio" nameDescription="a shiny dodrio" race="normal" race2="flying" experience="356" speed="220">
     <health now="60" max="60" />
     <look type="1495" corpse="12604" />
     <targetchange interval="10000" chance="0" />

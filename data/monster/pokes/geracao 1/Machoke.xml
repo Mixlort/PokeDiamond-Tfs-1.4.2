@@ -1,4 +1,4 @@
-<monster name="Machoke" nameDescription="a machoke" race="fighting" race2="no race" experience="146" speed="165">
+<monster name="Machoke" nameDescription="a machoke" race="fighting" race2="no race" experience="6740" speed="165">
     <health now="80" max="80" />
     <look type="464" corpse="11909" />
     <targetchange interval="10000" chance="0" />

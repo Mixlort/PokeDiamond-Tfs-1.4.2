@@ -1,4 +1,4 @@
-<monster name="Caterpie" nameDescription="a caterpie" race="bug" race2="no race" experience="53" speed="165">
+<monster name="Caterpie" nameDescription="a caterpie" race="bug" race2="no race" experience="400" speed="165">
     <health now="45" max="45" />
     <look type="383" corpse="11849" />
     <targetchange interval="10000" chance="0" />

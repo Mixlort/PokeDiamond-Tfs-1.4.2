@@ -1,4 +1,4 @@
-<monster name="Tropius" nameDescription="a tropius" race="grass" race2="flying" experience="200" speed="190">
+<monster name="Tropius" nameDescription="a tropius" race="grass" race2="flying" experience="0" speed="190">
     <health now="99" max="99" />
     <look type="1651" corpse="589" />
 	<targetchange interval="10000" chance="0" />

@@ -1,4 +1,4 @@
-<monster name="Shiny Snorlax" nameDescription="a Shiny snorlax" race="normal" race2="no race" experience="154" speed="150">
+<monster name="Shiny Snorlax" nameDescription="a Shiny snorlax" race="normal" race2="no race" experience="1212" speed="150">
     <health now="160" max="160" />
     <look type="2195" corpse="12563" />
   <targetchange interval="10000" chance="0" />

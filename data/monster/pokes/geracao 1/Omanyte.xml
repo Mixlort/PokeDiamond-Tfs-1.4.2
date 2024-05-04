@@ -1,4 +1,4 @@
-<monster name="Omanyte" nameDescription="a omanyte" race="rock" race2="water" experience="99" speed="155">
+<monster name="Omanyte" nameDescription="a omanyte" race="rock" race2="water" experience="451" speed="155">
     <health now="35" max="35" />
     <look type="443" corpse="11932" />
     <targetchange interval="10000" chance="0" />

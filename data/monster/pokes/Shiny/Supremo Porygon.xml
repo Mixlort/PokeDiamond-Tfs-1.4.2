@@ -1,4 +1,4 @@
-<monster name="Supremo Porygon" nameDescription="a Supremo porygon" race="normal" race2="no race" experience="130" speed="160">
+<monster name="Supremo Porygon" nameDescription="a Supremo porygon" race="normal" race2="no race" experience="512" speed="160">
     <health now="65" max="65" />
     <look type="1883" corpse="4302" />
     <targetchange interval="10000" chance="0" />

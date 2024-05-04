@@ -60,6 +60,8 @@ end                                                             --alterado v1.9 
 --------------------------------------------------------------------------------
 
 function doSendPokeBall(cid, catchinfo, showmsg, fullmsg, typeee) --Edited brokes count system
+    if not isOnline(cid) then return true end
+    if isNumber(cid) then cid = Creature(cid) end
 
 	local name = catchinfo.name
 	local pos = catchinfo.topos
@@ -103,7 +105,7 @@ function doSendPokeBall(cid, catchinfo, showmsg, fullmsg, typeee) --Edited broke
 
 		doRemoveItem(corpse, 1)
 		doSendMagicEffect(topos, catch)
-		addEvent(doCapturePokemon, 3000, cid, name, newid, status, typeee)  
+		addEvent(doCapturePokemon, 3000, cid:getId(), name, newid, status, typeee)  
 	return true
 	end
 
@@ -141,9 +143,9 @@ function doSendPokeBall(cid, catchinfo, showmsg, fullmsg, typeee) --Edited broke
 
 	if doCatch then
 		doSendMagicEffect(topos, catch)
-		addEvent(doCapturePokemon, 3000, cid, name, newid, status, typeee) 
+		addEvent(doCapturePokemon, 3000, cid:getId(), name, newid, status, typeee) 
 	else
-		addEvent(doNotCapturePokemon, 3000, cid, name, typeee) 
+		addEvent(doNotCapturePokemon, 3000, cid:getId(), name, typeee) 
 		doSendMagicEffect(topos, fail)
 	end
 end

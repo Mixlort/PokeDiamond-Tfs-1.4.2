@@ -97,7 +97,7 @@ addEvent(setPlayerStorageValue, 100, cid, 63215, 1)
 
 local item = getPlayerSlotItem(cid, 8)
 if getItemAttribute(item.uid, "boost") and getItemAttribute(item.uid, "boost") >= 50 and getPlayerStorageValue(cid, 42368) <= 0 then
-   addEvent(sendAuraEffect, 120, cid, auraSyst[getItemAttribute(item.uid, "aura")])    --alterado v1.8
+   addEvent(sendAuraEffect, 120, cid:getId(), auraSyst[getItemAttribute(item.uid, "aura")])    --alterado v1.8
 end
 
 if useOTClient then

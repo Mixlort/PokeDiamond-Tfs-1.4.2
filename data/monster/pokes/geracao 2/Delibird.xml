@@ -1,4 +1,4 @@
-<monster name="Delibird" nameDescription="a delibird" race="ice" race2="flying" experience="183" speed="130">
+<monster name="Delibird" nameDescription="a delibird" race="ice" race2="flying" experience="0" speed="130">
     <health now="45" max="45" />
     <look type="937" corpse="3282" />
 	<targetchange interval="10000" chance="0" />

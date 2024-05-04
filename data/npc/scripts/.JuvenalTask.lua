@@ -18,10 +18,10 @@ local task = {
 }
        
         if msgcontains(msg, 'task') or msgcontains(msg, 'Task') then
-           if isMyTaskComplete(cid, getNpcCid()) then
+           if isMyTaskComplete(cid, getNpcCid():getId()) then
               selfSay("Wow you have already complete my task! Ok then, take your reward!", cid)
               doPlayerAddItem(cid, 2152, 5)  --premio
-              local sto = getMyTaskSto(cid, getNpcCid())
+              local sto = getMyTaskSto(cid, getNpcCid():getId())
               setPlayerStorageValue(cid, sto, -1)
               talkState[talkUser] = 0
               return true
@@ -30,7 +30,7 @@ local task = {
               talkState[talkUser] = 2  
            end   
         elseif (msgcontains(msg, 'yes') or msgcontains(msg, 'Yes')) and talkState[talkUser] == 2 then
-           if getMyTaskSto(cid, getNpcCid()) ~= -1 then
+           if getMyTaskSto(cid, getNpcCid():getId()) ~= -1 then
               selfSay("You are already doing my task! go end it!", cid)
               talkState[talkUser] = 0
               return true

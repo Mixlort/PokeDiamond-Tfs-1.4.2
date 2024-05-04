@@ -1,4 +1,4 @@
-<monster name="Groudon" nameDescription="a Groudon" race="groud" race2="no race" experience="200" speed="170">
+<monster name="Groudon" nameDescription="a Groudon" race="groud" race2="no race" experience="130000" speed="170">
     <health now="10000" max="10000" />
     <look type="1636" corpse="8960" />
 	<targetchange interval="1000" chance="1000" />

@@ -25,20 +25,20 @@ local msg = msg:lower()
               selfSay("You already complete my quest!", cid)
               talkState[talkUser] = 0
               return true
-           elseif isMyTaskComplete(cid, getNpcCid()) then
+           elseif isMyTaskComplete(cid, getNpcCid():getId()) then
               selfSay("So did you complete my quest... Take this reward and good luck in your journey!", cid)
               
               doPlayerAddItem(cid, 12618, 2)  --premio  
               setPlayerStorageValue(cid, Agatha.stoIni, 100) 
               doPlayerAddExp(cid, 250000)
               
-              local sto = getMyTaskSto(cid, getNpcCid())
+              local sto = getMyTaskSto(cid, getNpcCid():getId())
               setPlayerStorageValue(cid, sto, -1)
               local SF = getPlayerStorageValue(cid, stoFinal)
               setPlayerStorageValue(cid, stoFinal, SF == -1 and getNpcName().."," or SF.. getNpcName()..",")
               talkState[talkUser] = 0
               return true
-           elseif getMyTaskSto(cid, getNpcCid()) ~= -1 then
+           elseif getMyTaskSto(cid, getNpcCid():getId()) ~= -1 then
               selfSay("You are already doing my task! Go end it!", cid)
               talkState[talkUser] = 0
               return true
@@ -51,7 +51,7 @@ local msg = msg:lower()
               talkState[talkUser] = 2  
            end   
         elseif msgcontains(msg, 'yes') and talkState[talkUser] == 2 then
-           if getMyTaskSto(cid, getNpcCid()) ~= -1 then
+           if getMyTaskSto(cid, getNpcCid():getId()) ~= -1 then
               selfSay("You are already doing my task! Go end it!", cid)
               talkState[talkUser] = 0
               return true

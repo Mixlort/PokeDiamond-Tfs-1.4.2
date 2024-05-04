@@ -1,4 +1,4 @@
-<monster name="Slowpoke" nameDescription="a slowpoke" race="water" race2="psychic" experience="99" speed="135">
+<monster name="Slowpoke" nameDescription="a slowpoke" race="water" race2="psychic" experience="800" speed="135">
     <health now="90" max="90" />
     <look type="426" corpse="11964" />
     <targetchange interval="10000" chance="0" />

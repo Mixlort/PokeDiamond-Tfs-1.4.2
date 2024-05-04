@@ -129,37 +129,26 @@ serverSaveShutdown = false
 -- maxlevel is OPTIONAL, but is considered infinite by default
 -- to disable stages, create a stage with minlevel 1 and no maxlevel
 experienceStages = {
-    -- { minlevel = 0, maxlevel = 20, multiplier = 220 },
-    -- { minlevel = 21, maxlevel = 25, multiplier = 200 },
-    -- { minlevel = 26, maxlevel = 30, multiplier = 180 },
-    -- { minlevel = 31, maxlevel = 35, multiplier = 160 },
-    -- { minlevel = 36, maxlevel = 40, multiplier = 140 },
-    -- { minlevel = 41, maxlevel = 45, multiplier = 120 },
-    -- { minlevel = 46, maxlevel = 50, multiplier = 100 },
-    -- { minlevel = 51, maxlevel = 55, multiplier = 90 },
-    -- { minlevel = 56, maxlevel = 60, multiplier = 80 },
-    -- { minlevel = 61, maxlevel = 75, multiplier = 70 },
-    -- { minlevel = 76, maxlevel = 90, multiplier = 60 },
-    -- { minlevel = 91, maxlevel = 105, multiplier = 50 },
-    -- { minlevel = 106, maxlevel = 120, multiplier = 40 },
-    -- { minlevel = 121, maxlevel = 135, multiplier = 30 },
-    -- { minlevel = 136, maxlevel = 150, multiplier = 20 },
-    -- { minlevel = 151, maxlevel = 165, multiplier = 10 },
-    -- { minlevel = 166, maxlevel = 180, multiplier = 9 },
-    -- { minlevel = 181, maxlevel = 195, multiplier = 8 },
-    -- { minlevel = 196, maxlevel = 210, multiplier = 6 },
-    -- { minlevel = 211, maxlevel = 225, multiplier = 5 },
-    -- { minlevel = 226, maxlevel = 240, multiplier = 4 },
-    -- { minlevel = 241, maxlevel = 255, multiplier = 3 },
-    -- { minlevel = 256, maxlevel = 270, multiplier = 2 },
-    { minlevel = 0, multiplier = 1 },
+    { minlevel = 1, maxlevel = 8, multiplier = 17 },
+    { minlevel = 9, maxlevel = 20, multiplier = 15 },
+    { minlevel = 21, maxlevel = 50, multiplier = 13 },
+    { minlevel = 51, maxlevel = 100, multiplier = 11 },
+    { minlevel = 101, maxlevel = 150, multiplier = 9 },
+    { minlevel = 151, maxlevel = 175, multiplier = 7 },
+    { minlevel = 176, maxlevel = 200, multiplier = 5 },
+    { minlevel = 201, maxlevel = 250, multiplier = 4.75 },
+    { minlevel = 251, maxlevel = 300, multiplier = 4 },
+    { minlevel = 301, maxlevel = 375, multiplier = 3.75 },
+    { minlevel = 376, maxlevel = 400, multiplier = 3 },
+    { minlevel = 401, multiplier = 2 },
+    -- { minlevel = 1, multiplier = 1 },
 }
 
 -- Rates
 -- NOTE: rateExp is not used if you have enabled stages above
-rateExp = 5
+rateExp = 1
 rateSkill = 1
-rateLoot = 3
+rateLoot = 5
 rateMagic = 1
 rateSpawn = 1
 

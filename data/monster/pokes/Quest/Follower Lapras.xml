@@ -1,4 +1,4 @@
-<monster name="Follower Lapras" nameDescription="a Lapras" race="water" race2="grass" experience="500" speed="201">
+<monster name="Follower Lapras" nameDescription="a Lapras" race="water" race2="grass" experience="1016" speed="201">
     <health now="905" max="905" />
     <look type="2059" corpse="" />
     <targetchange interval="10000" chance="0" />

@@ -1,4 +1,4 @@
-<monster name="Jolteon" nameDescription="a jolteon" race="electric" race2="no race" experience="197" speed="250">
+<monster name="Jolteon" nameDescription="a jolteon" race="electric" race2="no race" experience="1700" speed="250">
     <health now="65" max="65" />
     <look type="546" corpse="11896" />
     <targetchange interval="10000" chance="0" />

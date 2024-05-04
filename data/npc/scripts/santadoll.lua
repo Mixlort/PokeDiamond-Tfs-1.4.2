@@ -25,13 +25,13 @@ function creatureSayCallback(cid, type, msg)
                     if getPlayerItemCount(cid, items.item1[1]) >= counts.count1[1] then
                               doPlayerRemoveItem(cid, items.item1[1], counts.count1[1])
                               doPlayerAddItem(cid, items.item1[2], counts.count1[2])
-                             sendDialogNpc(cid, getNpcCid(),'Você comprou uma boost stone.', cid)
+                             sendDialogNpc(cid, getNpcCid():getId(),'Você comprou uma boost stone.', cid)
                     else
-                              sendDialogNpc(cid, getNpcCid(),'Você não tem ST suficiente.', cid)
+                              sendDialogNpc(cid, getNpcCid():getId(),'Você não tem ST suficiente.', cid)
                     end
 
           elseif msgcontains(msg, 'no') then
-                              sendDialogNpc(cid, getNpcCid(),'Ok, deixa para a próxima!', cid)
+                              sendDialogNpc(cid, getNpcCid():getId(),'Ok, deixa para a próxima!', cid)
 
           end
           return TRUE

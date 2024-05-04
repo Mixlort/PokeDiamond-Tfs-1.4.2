@@ -1,4 +1,4 @@
-<monster name="Hoppip" nameDescription="a hoppip" race="grass" race2="flying" experience="74" speed="112">
+<monster name="Hoppip" nameDescription="a hoppip" race="grass" race2="flying" experience="0" speed="112">
     <health now="35" max="35" />
     <look type="898" corpse="3554" />
 	<targetchange interval="10000" chance="0" />

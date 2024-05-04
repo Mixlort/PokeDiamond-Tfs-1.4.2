@@ -1,4 +1,4 @@
-<monster name="Sceptile" nameDescription="a sceptile" race="grass" race2="no race" experience="208" speed="240">
+<monster name="Sceptile" nameDescription="a sceptile" race="grass" race2="no race" experience="1504" speed="240">
     <health now="70" max="70" />
     <look type="1702" corpse="588" />
     <targetchange interval="10000" chance="0" />

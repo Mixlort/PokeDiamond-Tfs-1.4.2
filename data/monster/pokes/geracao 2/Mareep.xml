@@ -1,4 +1,4 @@
-<monster name="Mareep" nameDescription="a mareep" race="electric" race2="no race" experience="59" speed="95">
+<monster name="Mareep" nameDescription="a mareep" race="electric" race2="no race" experience="86" speed="95">
     <health now="55" max="55" />
     <look type="891" corpse="3568" />
 	<targetchange interval="10000" chance="0" />

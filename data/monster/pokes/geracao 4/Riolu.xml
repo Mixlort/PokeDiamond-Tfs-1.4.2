@@ -1,4 +1,4 @@
-<monster name="Riolu" nameDescription="a Riolu" race="fighting" race2="no race" experience="140" speed="180">
+<monster name="Riolu" nameDescription="a Riolu" race="fighting" race2="no race" experience="824" speed="180">
     <health now="40" max="40" />
     <look type="1565" corpse="141" />
     <targetchange interval="10000" chance="0" />

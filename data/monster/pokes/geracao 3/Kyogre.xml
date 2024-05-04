@@ -1,4 +1,4 @@
-<monster name="Kyogre" nameDescription="Kyogre" race="water" race2="no race" experience="200" speed="170">
+<monster name="Kyogre" nameDescription="Kyogre" race="water" race2="no race" experience="130000" speed="170">
     <health now="10000" max="10000" />
     <look type="1640" corpse="8961" />
   	<targetchange interval="1000" chance="1000" />

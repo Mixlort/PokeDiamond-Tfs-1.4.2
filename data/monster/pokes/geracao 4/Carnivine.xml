@@ -1,4 +1,4 @@
-<monster name="Carnivine" nameDescription="a Carnivine" race="grass" race2="no race" experience="78" speed="166">
+<monster name="Carnivine" nameDescription="a Carnivine" race="grass" race2="no race" experience="652" speed="166">
     <health now="74" max="74" />
     <look type="1521" corpse="251" />
 	 <targetchange interval="10000" chance="0" />

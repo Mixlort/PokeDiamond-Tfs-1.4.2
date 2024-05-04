@@ -1,4 +1,4 @@
-<monster name="Shiny Wobbuffet" nameDescription="a wobbuffet" race="psychic" race2="no race" experience="177" speed="130">
+<monster name="Shiny Wobbuffet" nameDescription="a wobbuffet" race="psychic" race2="no race" experience="0" speed="130">
     <health now="340" max="340" />
     <look type="27" corpse="4756" />
 	<targetchange interval="10000" chance="0" />

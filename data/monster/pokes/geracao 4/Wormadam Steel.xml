@@ -1,4 +1,4 @@
-<monster name="Wormadam Steel" nameDescription="a Wormadam Steel" race="bug" race2="steel" experience="72" speed="156">
+<monster name="Wormadam Steel" nameDescription="a Wormadam Steel" race="bug" race2="steel" experience="464" speed="156">
     <health now="60" max="60" />
     <look type="1519" corpse="187" />
     <targetchange interval="10000" chance="0" />

@@ -1,4 +1,4 @@
-<monster name="Vulpix" nameDescription="a vulpix" race="fire" race2="no race" experience="63" speed="185">
+<monster name="Vulpix" nameDescription="a vulpix" race="fire" race2="no race" experience="148" speed="185">
     <health now="38" max="38" />
     <look type="413" corpse="11981" />
     <targetchange interval="10000" chance="0" />

@@ -1,4 +1,4 @@
-<monster name="Shroomish" nameDescription="a Shroomish" race="grass" race2="no race" experience="52" speed="155">
+<monster name="Shroomish" nameDescription="a Shroomish" race="grass" race2="no race" experience="236" speed="155">
     <health now="60" max="60" />
     <look type="1669" corpse="12705" />
 	<targetchange interval="10000" chance="0" />

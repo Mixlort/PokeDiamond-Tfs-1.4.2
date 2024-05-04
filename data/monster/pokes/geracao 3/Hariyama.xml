@@ -1,4 +1,4 @@
-<monster name="Hariyama" nameDescription="a Hariyama" race="fighting" race2="no race" experience="138" speed="170">
+<monster name="Hariyama" nameDescription="a Hariyama" race="fighting" race2="no race" experience="824" speed="170">
     <health now="144" max="144" />
     <look type="1671" corpse="12686" />
     <targetchange interval="10000" chance="0" />

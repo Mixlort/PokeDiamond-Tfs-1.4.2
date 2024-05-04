@@ -1,4 +1,4 @@
-<monster name="Shinx" nameDescription="a Shinx" race="electric" race2="no race" experience="106" speed="165">
+<monster name="Shinx" nameDescription="a Shinx" race="electric" race2="no race" experience="86" speed="165">
     <health now="45" max="45" />
     <look type="1574" corpse="4308" />
 	<targetchange interval="10000" chance="0" />

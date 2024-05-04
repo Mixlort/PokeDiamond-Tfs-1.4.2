@@ -1,4 +1,4 @@
-<monster name="Celebi" nameDescription="a celebi" race="psychic" race2="grass" experience="64" speed="170">
+<monster name="Celebi" nameDescription="a celebi" race="psychic" race2="grass" experience="0" speed="170">
     <health now="900" max="900" />
     <look type="960" corpse="3274" />
 	<targetchange interval="10000" chance="0" />

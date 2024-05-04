@@ -1,4 +1,4 @@
-<monster name="Dugtrio" nameDescription="a dugtrio" race="ground" race2="no race" experience="153" speed="240">
+<monster name="Dugtrio" nameDescription="a dugtrio" race="ground" race2="no race" experience="3451" speed="240">
     <health now="35" max="35" />
     <look type="434" corpse="11868" />
     <targetchange interval="10000" chance="0" />

@@ -1,4 +1,4 @@
-<monster name="Sentret" nameDescription="a sentret" race="normal" race2="no race" experience="57" speed="105">
+<monster name="Sentret" nameDescription="a sentret" race="normal" race2="no race" experience="76" speed="105">
     <health now="35" max="35" />
     <look type="950" corpse="4432" />
     <targetchange interval="10000" chance="0" />

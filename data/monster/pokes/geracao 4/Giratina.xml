@@ -1,4 +1,4 @@
-<monster name="Giratina" nameDescription="an Giratina" race="flying" race2="dragon" experience="300" speed="205">
+<monster name="Giratina" nameDescription="an Giratina" race="flying" race2="dragon" experience="668" speed="205">
     <health now="150" max="150" />
     <look type="1899" corpse="4287" />
 	 <targetchange interval="10000" chance="0" />

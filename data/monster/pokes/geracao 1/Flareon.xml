@@ -1,4 +1,4 @@
-<monster name="Flareon" nameDescription="a flareon" race="fire" race2="no race" experience="198" speed="185">
+<monster name="Flareon" nameDescription="a flareon" race="fire" race2="no race" experience="2140" speed="185">
     <health now="65" max="65" />
     <look type="365" corpse="11877" />
     <targetchange interval="10000" chance="0" />

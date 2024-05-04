@@ -1,4 +1,4 @@
-<monster name="Shiny Ariados" nameDescription="an shiny ariados" race="bug" race2="poison" experience="134" speed="120">
+<monster name="Shiny Ariados" nameDescription="an shiny ariados" race="bug" race2="poison" experience="484" speed="120">
     <health now="70" max="70" />
     <look type="1493" corpse="12598" />
 	<targetchange interval="10000" chance="0" />

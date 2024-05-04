@@ -1,4 +1,4 @@
-<monster name="Shiny Metagross" nameDescription="a Shiny Metagross" race="steel" race2="psychic" experience="400" speed="250">
+<monster name="Shiny Metagross" nameDescription="a Shiny Metagross" race="steel" race2="psychic" experience="0" speed="250">
     <health now="180" max="180" />
     <look type="1860" corpse="2830" />
 	<targetchange interval="10000" chance="0" />

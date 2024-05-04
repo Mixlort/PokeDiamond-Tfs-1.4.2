@@ -1,4 +1,4 @@
-<monster name="Meganium" nameDescription="a meganium" race="grass" race2="no race" experience="208" speed="145">
+<monster name="Meganium" nameDescription="a meganium" race="grass" race2="no race" experience="1504" speed="145">
     <health now="80" max="80" />
     <look type="2200" corpse="3576" />
     <targetchange interval="10000" chance="0" />

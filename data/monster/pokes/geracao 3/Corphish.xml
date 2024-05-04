@@ -1,4 +1,4 @@
-<monster name="Corphish" nameDescription="a Corphish" race="water" race2="no race" experience="66" speed="155">
+<monster name="Corphish" nameDescription="a Corphish" race="water" race2="no race" experience="252" speed="155">
     <health now="43" max="43" />
     <look type="1782" corpse="615" />
 	<targetchange interval="10000" chance="0" />

@@ -1,4 +1,4 @@
-<monster name="Staravia" nameDescription="a Staravia" race="normal" race2="flying" experience="113" speed="200">
+<monster name="Staravia" nameDescription="a Staravia" race="normal" race2="flying" experience="196" speed="200">
     <health now="55" max="55" />
     <look type="1597" corpse="147" />
     <targetchange interval="10000" chance="0" />

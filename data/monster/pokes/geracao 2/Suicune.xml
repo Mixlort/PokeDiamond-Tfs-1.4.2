@@ -1,4 +1,4 @@
-<monster name="Suicune" nameDescription="a suicune" race="water" race2="no race" experience="218" speed="180">
+<monster name="Suicune" nameDescription="a suicune" race="water" race2="no race" experience="39000" speed="180">
     <health now="10000" max="10000" />
     <look type="958" corpse="4445" />
 	<targetchange interval="10000" chance="0" />

@@ -1,4 +1,4 @@
-<monster name="Butterfree" nameDescription="a butterfree" race="bug" race2="flying" experience="160" speed="190">
+<monster name="Butterfree" nameDescription="a butterfree" race="bug" race2="flying" experience="2410" speed="190">
     <health now="60" max="60" />
     <look type="391" corpse="11848" />
     <targetchange interval="10000" chance="0" />

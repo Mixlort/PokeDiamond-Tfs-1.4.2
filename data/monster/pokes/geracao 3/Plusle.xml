@@ -1,4 +1,4 @@
-<monster name="Plusle" nameDescription="a plusle" race="electric" race2="no race" experience="42" speed="115">
+<monster name="Plusle" nameDescription="a plusle" race="electric" race2="no race" experience="76" speed="115">
     <health now="60" max="60" />
     <look type="1807" corpse="12746" />
 	<targetchange interval="10000" chance="0" />

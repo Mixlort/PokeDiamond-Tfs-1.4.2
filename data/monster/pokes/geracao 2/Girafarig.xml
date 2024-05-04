@@ -1,4 +1,4 @@
-<monster name="Girafarig" nameDescription="a girafarig" race="normal" race2="psychic" experience="149" speed="150">
+<monster name="Girafarig" nameDescription="a girafarig" race="normal" race2="psychic" experience="0" speed="150">
     <health now="70" max="70" />
     <look type="904" corpse="3292" />
 	<targetchange interval="10000" chance="0" />

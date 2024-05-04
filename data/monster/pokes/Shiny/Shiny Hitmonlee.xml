@@ -1,4 +1,4 @@
-<monster name="Shiny Hitmonlee" nameDescription="a Shiny hitmonlee" race="fighting" race2="no race" experience="139" speed="207">
+<monster name="Shiny Hitmonlee" nameDescription="a Shiny hitmonlee" race="fighting" race2="no race" experience="824" speed="207">
     <health now="50" max="50" />
     <look type="877" corpse="0" />
   <targetchange interval="10000" chance="0" />

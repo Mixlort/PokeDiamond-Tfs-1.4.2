@@ -630,7 +630,7 @@ function onUse(cid, item, topos, item2, frompos)
 		doCreatureSetNoMove(cid, true)
 		doCreatureAddCondition(cid, boostcondition)
 
-		addEvent(doRestoreBoostMachine, 3000, cid, getThingPos(item.uid), getThingPos(ball_slot.uid), getThingPos(stone_slot.uid), msg, msg2)
+		addEvent(doRestoreBoostMachine, 3000, cid:getId(), getThingPos(item.uid), getThingPos(ball_slot.uid), getThingPos(stone_slot.uid), msg, msg2)
 
 	return true
 	end

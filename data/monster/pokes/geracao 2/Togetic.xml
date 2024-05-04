@@ -1,4 +1,4 @@
-<monster name="Togetic" nameDescription="a togetic" race="normal" race2="flying" experience="114" speed="115">
+<monster name="Togetic" nameDescription="a togetic" race="normal" race2="flying" experience="356" speed="115">
     <health now="55" max="55" />
     <look type="887" corpse="4451" />
 	<targetchange interval="10000" chance="0" />

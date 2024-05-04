@@ -1,4 +1,4 @@
-<monster name="Palkia" nameDescription="a Palkia" race="ice" race2="no race" experience="100" speed="175">
+<monster name="Palkia" nameDescription="a Palkia" race="ice" race2="no race" experience="4964" speed="175">
     <health now="10000" max="10000" />
     <look type="1880" corpse="6343" />
     <targetchange interval="10000" chance="0" />

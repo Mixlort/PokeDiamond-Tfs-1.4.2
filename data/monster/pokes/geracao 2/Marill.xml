@@ -1,4 +1,4 @@
-<monster name="Marill" nameDescription="a marill" race="water" race2="no race" experience="58" speed="101">
+<monster name="Marill" nameDescription="a marill" race="water" race2="no race" experience="84" speed="101">
     <health now="70" max="70" />
     <look type="893" corpse="3575" />
 	<targetchange interval="10000" chance="0" />

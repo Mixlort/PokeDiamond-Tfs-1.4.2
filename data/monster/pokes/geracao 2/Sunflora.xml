@@ -1,4 +1,4 @@
-<monster name="Sunflora" nameDescription="a sunflora" race="grass" race2="no race" experience="146" speed="100">
+<monster name="Sunflora" nameDescription="a sunflora" race="grass" race2="no race" experience="436" speed="100">
     <health now="75" max="75" />
     <look type="896" corpse="4446" />
 	<targetchange interval="10000" chance="0" />

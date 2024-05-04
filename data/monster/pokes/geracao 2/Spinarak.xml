@@ -1,4 +1,4 @@
-<monster name="Spinarak" nameDescription="a spinarak" race="bug" race2="poison" experience="54" speed="100">
+<monster name="Spinarak" nameDescription="a spinarak" race="bug" race2="poison" experience="232" speed="100">
     <health now="40" max="40" />
     <look type="686" corpse="4441" />
 	<targetchange interval="10000" chance="0" />

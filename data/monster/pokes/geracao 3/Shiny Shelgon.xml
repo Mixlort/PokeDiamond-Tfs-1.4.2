@@ -1,4 +1,4 @@
-<monster name="Shiny Shelgon" nameDescription="a Shiny Shelgon" race="dragon" race2="no race" experience="320" speed="210">
+<monster name="Shiny Shelgon" nameDescription="a Shiny Shelgon" race="dragon" race2="no race" experience="5600" speed="210">
     <health now="115" max="115" />
     <look type="1865" corpse="2832" />
   <targetchange interval="10000" chance="0" />

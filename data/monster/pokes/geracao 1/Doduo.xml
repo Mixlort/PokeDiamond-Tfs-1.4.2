@@ -1,4 +1,4 @@
-<monster name="Doduo" nameDescription="a doduo" race="normal" race2="flying" experience="96" speed="195">
+<monster name="Doduo" nameDescription="a doduo" race="normal" race2="flying" experience="2400" speed="195">
     <health now="35" max="35" />
     <look type="377" corpse="11863" />
     <targetchange interval="10000" chance="0" />

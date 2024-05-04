@@ -1,4 +1,4 @@
-<monster name="Skuntank" nameDescription="a Skuntank" race="poison" race2="dark" experience="114" speed="204">
+<monster name="Skuntank" nameDescription="a Skuntank" race="poison" race2="dark" experience="312" speed="204">
     <health now="103" max="103" />
     <look type="1588" corpse="226" />
     <targetchange interval="10000" chance="0" />

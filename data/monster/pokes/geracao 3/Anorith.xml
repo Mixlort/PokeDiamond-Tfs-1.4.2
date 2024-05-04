@@ -1,4 +1,4 @@
-<monster name="Anorith" nameDescription="a Anorith" race="rock" race2="bug" experience="80" speed="105">
+<monster name="Anorith" nameDescription="a Anorith" race="rock" race2="bug" experience="0" speed="105">
     <health now="45" max="45" />
     <look type="1628" corpse="592" />
 	<targetchange interval="10000" chance="0" />

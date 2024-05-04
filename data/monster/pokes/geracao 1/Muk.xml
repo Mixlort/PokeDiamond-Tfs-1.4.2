@@ -1,4 +1,4 @@
-<monster name="Muk" nameDescription="a muk" race="poison" race2="no race" experience="157" speed="170">
+<monster name="Muk" nameDescription="a muk" race="poison" race2="no race" experience="2451" speed="170">
     <health now="105" max="105" />
     <look type="398" corpse="11923" />
     <targetchange interval="10000" chance="0" />

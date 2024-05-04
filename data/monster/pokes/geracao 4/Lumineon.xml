@@ -1,4 +1,4 @@
-<monster name="Lumineon" nameDescription="an Lumineon" race="water" race2="no race" experience="66" speed="211">
+<monster name="Lumineon" nameDescription="an Lumineon" race="water" race2="no race" experience="276" speed="211">
     <health now="69" max="69" />
     <look type="1542" corpse="255" />
 	<targetchange interval="10000" chance="0" />

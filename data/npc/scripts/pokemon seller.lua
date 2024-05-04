@@ -94,7 +94,7 @@ function onCreatureSay(cid, type, msg)
 	end
 
 	if msgcontains(msg, 'no') and conv == 4 and focus == cid then
-		sendDialogNpc(cid, getNpcCid(),'Ok, see you around then!')
+		sendDialogNpc(cid, getNpcCid():getId(),'Ok, see you around then!')
 		focus = 0
 	return true
 	end
@@ -174,7 +174,7 @@ function onThink()
 	return true
 	end
 
-		local npcpos = getThingPos(getThis())
+		local npcpos = getThingPos(getThis():getId())
 		local focpos = getThingPos(focus)
 
 		if npcpos.z ~= focpos.z then

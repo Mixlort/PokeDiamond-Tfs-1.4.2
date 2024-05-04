@@ -1,4 +1,4 @@
-<monster name="Shiny Jynx" nameDescription="a Shiny jynx" race="ice" race2="psychic" experience="137" speed="215">
+<monster name="Shiny Jynx" nameDescription="a Shiny jynx" race="ice" race2="psychic" experience="972" speed="215">
     <health now="65" max="65" />
     <look type="1318" corpse="12544" />
   <targetchange interval="10000" chance="0" />

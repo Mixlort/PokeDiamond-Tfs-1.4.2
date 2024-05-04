@@ -1,4 +1,4 @@
-<monster name="Donphan" nameDescription="a donphan" race="ground" race2="no race" experience="189" speed="112">
+<monster name="Donphan" nameDescription="a donphan" race="ground" race2="no race" experience="756" speed="112">
     <health now="90" max="90" />
     <look type="1458" corpse="3283" />
 	<targetchange interval="10000" chance="0" />

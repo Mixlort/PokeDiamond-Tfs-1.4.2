@@ -1,4 +1,4 @@
-<monster name="Ancient Articuno" nameDescription="a Ancient articuno" race="ice" race2="flying" experience="215" speed="205">
+<monster name="Ancient Articuno" nameDescription="a Ancient articuno" race="ice" race2="flying" experience="21070" speed="205">
     <health now="1000" max="1000" />
     <look type="1896" corpse="11843" />
     <targetchange interval="10000" chance="0" />

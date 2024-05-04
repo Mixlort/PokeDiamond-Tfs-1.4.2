@@ -1,4 +1,4 @@
-<monster name="Larvitar" nameDescription="a larvitar" race="rock" race2="ground" experience="67" speed="110">
+<monster name="Larvitar" nameDescription="a larvitar" race="rock" race2="ground" experience="0" speed="110">
     <health now="50" max="50" />
     <look type="938" corpse="3561" />
 	<targetchange interval="10000" chance="0" />

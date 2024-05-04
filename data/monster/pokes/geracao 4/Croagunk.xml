@@ -1,4 +1,4 @@
-<monster name="Croagunk" nameDescription="a Croagunk" race="poison" race2="fighting" experience="126" speed="170">
+<monster name="Croagunk" nameDescription="a Croagunk" race="poison" race2="fighting" experience="276" speed="170">
     <health now="48" max="48" />
     <look type="1533" corpse="247" />
     <targetchange interval="10000" chance="0" />

@@ -1,4 +1,4 @@
-<monster name="Luvdisc" nameDescription="a luvdisc" race="water" race2="no race" experience="78" speed="217">
+<monster name="Luvdisc" nameDescription="a luvdisc" race="water" race2="no race" experience="84" speed="217">
     <health now="43" max="43" />
     <look type="1796" corpse="12684" />
 	<targetchange interval="10000" chance="0" />

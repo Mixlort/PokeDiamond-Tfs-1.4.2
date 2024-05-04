@@ -1,4 +1,4 @@
-<monster name="Sharpedo" nameDescription="a sharpedo" race="water" race2="flying" experience="214" speed="201">
+<monster name="Sharpedo" nameDescription="a sharpedo" race="water" race2="flying" experience="1584" speed="201">
     <health now="70" max="70" />
     <look type="1705" corpse="12745" />
 	<targetchange interval="10000" chance="0" />

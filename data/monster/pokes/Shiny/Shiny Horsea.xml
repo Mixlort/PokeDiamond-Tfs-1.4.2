@@ -1,4 +1,4 @@
-<monster name="Shiny Horsea" nameDescription="a Shiny horsea" race="water" race2="no race" experience="83" speed="180">
+<monster name="Shiny Horsea" nameDescription="a Shiny horsea" race="water" race2="no race" experience="164" speed="180">
     <health now="30" max="30" />
     <look type="1310" corpse="12536" />
   <targetchange interval="10000" chance="0" />

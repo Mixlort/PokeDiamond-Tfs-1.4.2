@@ -427,14 +427,14 @@ end
 
 function Player:onGainExperience(source, exp, rawExp)
     local bonusExp = 1 -- bonus de algum evento
-    local multiplierExp = 1 --(0.25) -- how many times more exp than players a monster will get
+    local multiplierExp = 1 -- 2 -- how many times more exp than players a monster will get
     if not source then return exp end
 
 	-- Apply experience stage multiplier
-    exp = getStatus(source).exp -- exp * Game.getExperienceStage(self:getLevel())
+    -- exp = getStatus(source).exp -- exp * Game.getExperienceStage(self:getLevel())
+    exp = exp * Game.getExperienceStage(self:getLevel())
     exp = exp * multiplierExp
     exp = exp * bonusExp
-    exp = exp * playerExperienceRate
 
 	-- Stamina modifier
 	if configManager.getBoolean(configKeys.STAMINA_SYSTEM) then
@@ -459,9 +459,9 @@ function Player:onGainExperience(source, exp, rawExp)
         exp = exp * 1.05
     end
 
-    if self:getStorageValue(45144) - os.time() > 1 then
-        exp = exp * (1+(self:getStorageValue(45145)/100))
-    end 
+    -- if self:getStorageValue(45144) - os.time() > 1 then
+    --     exp = exp * (1+(self:getStorageValue(45145)/100))
+    -- end 
 
 	return hasEventCallback(EVENT_CALLBACK_ONGAINEXPERIENCE) and EventCallback(EVENT_CALLBACK_ONGAINEXPERIENCE, self, source, exp, rawExp) or exp
 end

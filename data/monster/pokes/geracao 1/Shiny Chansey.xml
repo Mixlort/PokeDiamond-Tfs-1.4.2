@@ -1,4 +1,4 @@
-<monster name="Shiny Chansey" nameDescription="a Shiny chansey" race="normal" race2="no race" experience="500" speed="211">
+<monster name="Shiny Chansey" nameDescription="a Shiny chansey" race="normal" race2="no race" experience="9000" speed="211">
     <health now="120" max="120" />
     <look type="2057" corpse="13076" />
     <targetchange interval="10000" chance="0" />

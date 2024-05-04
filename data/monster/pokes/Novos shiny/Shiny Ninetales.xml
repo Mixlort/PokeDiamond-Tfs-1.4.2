@@ -1,4 +1,4 @@
-<monster name="Shiny Ninetales" nameDescription="a shiny ninetales" race="fire" race2="no race" experience="178" speed="220">
+<monster name="Shiny Ninetales" nameDescription="a shiny ninetales" race="fire" race2="no race" experience="696" speed="220">
     <health now="73" max="73" />
     <look type="1428" corpse="12597" />
     <targetchange interval="10000" chance="0" />

@@ -1,4 +1,4 @@
-<monster name="Halloween Gengar" nameDescription="a Halloween gengar" race="ghost" race2="poison" experience="209" speed="133">
+<monster name="Halloween Gengar" nameDescription="a Halloween gengar" race="ghost" race2="poison" experience="19521" speed="133">
     <health now="700" max="700" />
     <look type="2117" corpse="2096" />
   <targetchange interval="10000" chance="0" />

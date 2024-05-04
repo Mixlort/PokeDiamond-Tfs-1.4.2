@@ -1,4 +1,4 @@
-<monster name="Victreebel" nameDescription="a victreebel" race="grass" race2="poison" experience="191" speed="195">
+<monster name="Victreebel" nameDescription="a victreebel" race="grass" race2="poison" experience="3400" speed="195">
     <health now="80" max="80" />
     <look type="591" corpse="11978" />
     <targetchange interval="10000" chance="0" />

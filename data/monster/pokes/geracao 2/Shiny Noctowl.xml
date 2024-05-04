@@ -1,4 +1,4 @@
-<monster name="Shiny Noctowl" nameDescription="an noctowl" race="normal" race2="flying" experience="162" speed="200">
+<monster name="Shiny Noctowl" nameDescription="an noctowl" race="normal" race2="flying" experience="356" speed="200">
     <health now="180" max="180" />
     <look type="19" corpse="3581" />
 	<targetchange interval="10000" chance="0" />

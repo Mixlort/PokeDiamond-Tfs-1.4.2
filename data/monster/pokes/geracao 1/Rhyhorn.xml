@@ -1,4 +1,4 @@
-<monster name="Rhyhorn" nameDescription="a rhyhorn" race="ground" race2="rock" experience="135" speed="145">
+<monster name="Rhyhorn" nameDescription="a rhyhorn" race="ground" race2="rock" experience="2800" speed="145">
     <health now="80" max="80" />
     <look type="428" corpse="11955" />
     <targetchange interval="10000" chance="0" />

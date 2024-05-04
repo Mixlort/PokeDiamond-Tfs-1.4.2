@@ -1,4 +1,4 @@
-<monster name="Shiny Kingler" nameDescription="a Shiny kingler" race="water" race2="no race" experience="206" speed="195">
+<monster name="Shiny Kingler" nameDescription="a Shiny kingler" race="water" race2="no race" experience="292" speed="195">
     <health now="55" max="55" />
     <look type="1293" corpse="12518" />
   <targetchange interval="10000" chance="0" />

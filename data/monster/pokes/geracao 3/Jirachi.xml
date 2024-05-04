@@ -1,4 +1,4 @@
-<monster name="Jirachi" nameDescription="a Jirachi" race="steel" race2="Psychic" experience="100" speed="175">
+<monster name="Jirachi" nameDescription="a Jirachi" race="steel" race2="Psychic" experience="876" speed="175">
     <health now="10000" max="10000" />
     <look type="1879" corpse="9980" />
     <targetchange interval="0" chance="0" />

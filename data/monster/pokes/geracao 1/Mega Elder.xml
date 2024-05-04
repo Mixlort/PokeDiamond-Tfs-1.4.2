@@ -1,4 +1,4 @@
-<monster name="Mega Elder" nameDescription="a Mega Elder" race="fire" race2="flying" experience="209" speed="220">
+<monster name="Mega Elder" nameDescription="a Mega Elder" race="fire" race2="flying" experience="1604" speed="220">
   <health now="70" max="70" />
     <look type="1889" corpse="" />
   <targetchange interval="10000" chance="0" />

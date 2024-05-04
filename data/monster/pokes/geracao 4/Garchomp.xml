@@ -1,4 +1,4 @@
-<monster name="Garchomp" nameDescription="a Garchomp" race="dragon" race2="ground" experience="218" speed="222">
+<monster name="Garchomp" nameDescription="a Garchomp" race="dragon" race2="ground" experience="1536" speed="222">
     <health now="108" max="108" />
     <look type="1547" corpse="131" />
     <targetchange interval="10000" chance="0" />

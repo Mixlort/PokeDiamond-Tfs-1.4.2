@@ -1,4 +1,4 @@
-<monster name="Pidgeotto" nameDescription="a pidgeotto" race="normal" race2="flying" experience="113" speed="191">
+<monster name="Pidgeotto" nameDescription="a pidgeotto" race="normal" race2="flying" experience="2410" speed="191">
     <health now="63" max="63" />
     <look type="356" corpse="11939" />
     <targetchange interval="10000" chance="0" />

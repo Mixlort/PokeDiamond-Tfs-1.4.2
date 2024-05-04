@@ -1,4 +1,4 @@
-<monster name="Monferno" nameDescription="a Monferno" race="fire" race2="fighting" experience="142" speed="201">
+<monster name="Monferno" nameDescription="a Monferno" race="fire" race2="fighting" experience="628" speed="201">
     <health now="64" max="64" />
     <look type="1526" corpse="118" />
     <targetchange interval="10000" chance="0" />

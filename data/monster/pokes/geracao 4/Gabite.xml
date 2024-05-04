@@ -1,4 +1,4 @@
-<monster name="Gabite" nameDescription="a Gabite" race="dragon" race2="ground" experience="144" speed="202">
+<monster name="Gabite" nameDescription="a Gabite" race="dragon" race2="ground" experience="672" speed="202">
     <health now="68" max="68" />
     <look type="1546" corpse="129" />
     <targetchange interval="10000" chance="0" />

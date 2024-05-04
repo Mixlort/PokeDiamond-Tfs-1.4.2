@@ -1,4 +1,4 @@
-<monster name="Shiny Flygon" nameDescription="a Shiny Flygon" race="ground" race2="dragon" experience="500" speed="230">
+<monster name="Shiny Flygon" nameDescription="a Shiny Flygon" race="ground" race2="dragon" experience="1536" speed="230">
     <health now="170" max="170" />
     <look type="2051" corpse="12945" />
   <targetchange interval="10000" chance="0" />

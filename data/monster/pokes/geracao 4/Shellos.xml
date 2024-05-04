@@ -1,4 +1,4 @@
-<monster name="Shellos east" nameDescription="a Shellos east" race="water" race2="no race" experience="66" speed="154">
+<monster name="Shellos east" nameDescription="a Shellos east" race="water" race2="no race" experience="252" speed="154">
     <health now="76" max="76" />
     <look type="1570" corpse="208" />
     <targetchange interval="10000" chance="0" />

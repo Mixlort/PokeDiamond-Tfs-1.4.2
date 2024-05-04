@@ -1,4 +1,4 @@
-<monster name="Shiny Krabby" nameDescription="a Shiny krabby" race="water" race2="no race" experience="115" speed="170">
+<monster name="Shiny Krabby" nameDescription="a Shiny krabby" race="water" race2="no race" experience="84" speed="170">
     <health now="30" max="30" />
     <look type="1292" corpse="12517" />
   <targetchange interval="10000" chance="0" />

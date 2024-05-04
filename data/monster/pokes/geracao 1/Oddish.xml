@@ -1,4 +1,4 @@
-<monster name="Oddish" nameDescription="a oddish" race="grass" race2="poison" experience="78" speed="150">
+<monster name="Oddish" nameDescription="a oddish" race="grass" race2="poison" experience="200" speed="150">
     <health now="45" max="45" />
     <look type="407" corpse="11931" />
     <targetchange interval="10000" chance="0" />

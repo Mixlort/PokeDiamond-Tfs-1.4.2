@@ -1,4 +1,4 @@
-<monster name="Toxicroak" nameDescription="a Toxicroak" race="poison" race2="fighting" experience="126" speed="205">
+<monster name="Toxicroak" nameDescription="a Toxicroak" race="poison" race2="fighting" experience="484" speed="205">
     <health now="83" max="83" />
     <look type="1534" corpse="249" />
     <targetchange interval="10000" chance="0" />

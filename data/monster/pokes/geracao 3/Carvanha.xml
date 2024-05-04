@@ -1,4 +1,4 @@
-<monster name="Carvanha" nameDescription="a carvanha" race="water" race2="dark" experience="58" speed="185">
+<monster name="Carvanha" nameDescription="a carvanha" race="water" race2="dark" experience="84" speed="185">
     <health now="45" max="45" />
     <look type="498" corpse="12752" />
 	<targetchange interval="10000" chance="0" />

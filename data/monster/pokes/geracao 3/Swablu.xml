@@ -1,4 +1,4 @@
-<monster name="Swablu" nameDescription="a swablu" race="normal" race2="flying" experience="58" speed="170">
+<monster name="Swablu" nameDescription="a swablu" race="normal" race2="flying" experience="124" speed="170">
     <health now="45" max="45" />
     <look type="1716" corpse="12770" />
 	<targetchange interval="10000" chance="0" />

@@ -1,4 +1,4 @@
-<monster name="Mamoswine" nameDescription="a Mamoswine" race="ice" race2="ground" experience="176" speed="200">
+<monster name="Mamoswine" nameDescription="a Mamoswine" race="ice" race2="ground" experience="0" speed="200">
     <health now="110" max="110" />
     <look type="1600" corpse="139" />
 	<targetchange interval="10000" chance="0" />

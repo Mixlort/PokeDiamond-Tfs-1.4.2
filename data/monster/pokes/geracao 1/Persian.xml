@@ -1,4 +1,4 @@
-<monster name="Persian" nameDescription="a persian" race="normal" race2="no race" experience="148" speed="235">
+<monster name="Persian" nameDescription="a persian" race="normal" race2="no race" experience="700" speed="235">
     <health now="65" max="65" />
     <look type="354" corpse="11937" />
     <targetchange interval="10000" chance="0" />

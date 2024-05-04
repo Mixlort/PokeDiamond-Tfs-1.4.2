@@ -1,4 +1,4 @@
-<monster name="Rayquaza" nameDescription="a Rayquaza" race="dragon" race2="flying" experience="64" speed="170" manacost="590">
+<monster name="Rayquaza" nameDescription="a Rayquaza" race="dragon" race2="flying" experience="7991" speed="170" manacost="590">
     <health now="10000" max="10000" />
     <look type="1695" corpse="9812" />
   <targetchange interval="1000" chance="0" />

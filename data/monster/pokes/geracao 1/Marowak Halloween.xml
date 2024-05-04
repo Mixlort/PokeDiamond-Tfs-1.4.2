@@ -1,4 +1,4 @@
-<monster name="Marowak Halloween" nameDescription="a marowak Halloween" race="ground" race2="dark" experience="209" speed="170">
+<monster name="Marowak Halloween" nameDescription="a marowak Halloween" race="ground" race2="dark" experience="3740" speed="170">
     <health now="700" max="700" />
     <look type="2108" corpse="0" />
     <targetchange interval="10000" chance="0" />

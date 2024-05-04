@@ -1,4 +1,4 @@
-<monster name="Shiny Lileep" nameDescription="a Shiny Lileep" race="rock" race2="grass" experience="168" speed="286">
+<monster name="Shiny Lileep" nameDescription="a Shiny Lileep" race="rock" race2="grass" experience="2600" speed="286">
     <health now="110" max="110" />
     <look type="1859" corpse="2827" />
   <targetchange interval="10000" chance="0" />

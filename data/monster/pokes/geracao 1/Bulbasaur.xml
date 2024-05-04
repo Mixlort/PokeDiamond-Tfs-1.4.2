@@ -1,4 +1,4 @@
-<monster name="Bulbasaur" nameDescription="a bulbasaur" race="grass" race2="poison" experience="64" speed="90">
+<monster name="Bulbasaur" nameDescription="a bulbasaur" race="grass" race2="poison" experience="1210" speed="90">
     <health now="490" max="490" />
     <look type="376" corpse="11847" />
     <targetchange interval="10000" chance="0" />

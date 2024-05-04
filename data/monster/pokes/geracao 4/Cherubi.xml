@@ -1,4 +1,4 @@
-<monster name="Cherubi" nameDescription="a Cherubi" race="grass" race2="no race" experience="78" speed="155">
+<monster name="Cherubi" nameDescription="a Cherubi" race="grass" race2="no race" experience="0" speed="155">
     <health now="45" max="45" />
     <look type="1522" corpse="202" />
 	<targetchange interval="10000" chance="0" />

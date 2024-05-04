@@ -1,4 +1,4 @@
-<monster name="Combusken" nameDescription="a combusken" race="fire" race2="fighting" experience="142" speed="175">
+<monster name="Combusken" nameDescription="a combusken" race="fire" race2="fighting" experience="628" speed="175">
     <health now="60" max="60" />
     <look type="1836" corpse="12758" />
 	<targetchange interval="10000" chance="0" />

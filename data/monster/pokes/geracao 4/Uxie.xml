@@ -1,4 +1,4 @@
-<monster name="Uxie" nameDescription="a uxie" race="flying" race2="dragon" experience="64" speed="205">
+<monster name="Uxie" nameDescription="a uxie" race="flying" race2="dragon" experience="23000" speed="205">
     <health now="22" max="22" />
     <look type="1885" corpse="4285" />
 

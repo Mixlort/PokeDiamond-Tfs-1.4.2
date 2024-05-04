@@ -1,4 +1,4 @@
-<monster name="Venomoth" nameDescription="a venomoth" race="bug" race2="poison" experience="138" speed="210">
+<monster name="Venomoth" nameDescription="a venomoth" race="bug" race2="poison" experience="1200" speed="210">
     <health now="70" max="70" />
     <look type="400" corpse="11975" />
     <targetchange interval="10000" chance="0" />

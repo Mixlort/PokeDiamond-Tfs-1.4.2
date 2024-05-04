@@ -1,4 +1,4 @@
-<monster name="Shiny Bronzong" nameDescription="a Shiny Bronzong" race="psychic" race2="steel" experience="87" speed="153">
+<monster name="Shiny Bronzong" nameDescription="a Shiny Bronzong" race="psychic" race2="steel" experience="10000" speed="153">
     <health now="120" max="120" />
     <look type="40" corpse="230" />
 	<targetchange interval="10000" chance="0" />

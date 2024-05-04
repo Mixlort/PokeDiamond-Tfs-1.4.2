@@ -1,4 +1,4 @@
-<monster name="Ledian" nameDescription="a ledian" race="bug" race2="flying" experience="134" speed="150">
+<monster name="Ledian" nameDescription="a ledian" race="bug" race2="flying" experience="332" speed="150">
     <health now="55" max="55" />
     <look type="685" corpse="3562" />
 	<targetchange interval="10000" chance="0" />

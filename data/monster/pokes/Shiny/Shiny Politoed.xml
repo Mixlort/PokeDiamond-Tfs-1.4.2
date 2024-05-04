@@ -1,4 +1,4 @@
-<monster name="Shiny Politoed" nameDescription="a shiny politoed" race="water" race2="no race" experience="185" speed="134">
+<monster name="Shiny Politoed" nameDescription="a shiny politoed" race="water" race2="no race" experience="696" speed="134">
     <health now="90" max="90" />
     <look type="1491" corpse="12601" />
 	<targetchange interval="10000" chance="0" />

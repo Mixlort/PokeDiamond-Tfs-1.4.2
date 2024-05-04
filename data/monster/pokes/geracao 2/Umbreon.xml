@@ -1,4 +1,4 @@
-<monster name="Umbreon" nameDescription="an umbreon" race="dark" race2="no race" experience="197" speed="145">
+<monster name="Umbreon" nameDescription="an umbreon" race="dark" race2="no race" experience="0" speed="145">
     <health now="95" max="95" />
     <look type="920" corpse="4567" />
 	<targetchange interval="10000" chance="0" />

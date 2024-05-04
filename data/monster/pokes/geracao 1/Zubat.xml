@@ -1,4 +1,4 @@
-<monster name="Zubat" nameDescription="a zubat" race="poison" race2="flying" experience="54" speed="175">
+<monster name="Zubat" nameDescription="a zubat" race="poison" race2="flying" experience="100" speed="175">
     <health now="40" max="40" />
     <look type="395" corpse="11988" />
     <targetchange interval="10000" chance="0" />

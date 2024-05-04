@@ -1,4 +1,4 @@
-<monster name="Shiny Gengar" nameDescription="a Shiny gengar" race="ghost" race2="poison" experience="190" speed="230">
+<monster name="Shiny Gengar" nameDescription="a Shiny gengar" race="ghost" race2="poison" experience="9976" speed="230">
     <health now="60" max="60" />
     <look type="1288" corpse="12513" />
   <targetchange interval="10000" chance="0" />

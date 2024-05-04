@@ -1,4 +1,4 @@
-<monster name="Ambipom" nameDescription="an Ambipom" race="normal" race2="no race" experience="189" speed="235">
+<monster name="Ambipom" nameDescription="an Ambipom" race="normal" race2="no race" experience="316" speed="235">
     <health now="75" max="75" />
     <look type="1503" corpse="165" />
 	<targetchange interval="10000" chance="0" />

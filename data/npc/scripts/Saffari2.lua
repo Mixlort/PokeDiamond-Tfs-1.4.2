@@ -10,7 +10,7 @@ function onCreatureAppear(creature)
 end
 function onCreatureDisappear(cid, pos)
 if focus == cid then
-   sendDialogNpc(cid, getNpcCid(),'See ya.')
+   sendDialogNpc(cid, getNpcCid():getId(),'See ya.')
    focus = 0
    talk_start = 0
 end

@@ -1,4 +1,4 @@
-<monster name="Wailord" nameDescription="a wailord" race="water" race2="no race" experience="231" speed="180">
+<monster name="Wailord" nameDescription="a wailord" race="water" race2="no race" experience="1584" speed="180">
     <health now="170" max="170" />
     <look type="1847" corpse="587" />
   <targetchange interval="10000" chance="0" />

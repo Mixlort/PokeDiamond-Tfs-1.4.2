@@ -1,4 +1,4 @@
-<monster name="Misdreavus" nameDescription="a misdreavus" race="ghost" race2="no race" experience="147" speed="135">
+<monster name="Misdreavus" nameDescription="a misdreavus" race="ghost" race2="no race" experience="976" speed="135">
     <health now="60" max="60" />
     <look type="908" corpse="0" />
 	<targetchange interval="10000" chance="0" />

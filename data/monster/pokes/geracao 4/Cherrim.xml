@@ -1,4 +1,4 @@
-<monster name="Cherrim" nameDescription="a Cherrim" race="grass" race2="no race" experience="78" speed="205">
+<monster name="Cherrim" nameDescription="a Cherrim" race="grass" race2="no race" experience="652" speed="205">
     <health now="70" max="70" />
     <look type="1523" corpse="204" />
 	 <targetchange interval="10000" chance="0" />

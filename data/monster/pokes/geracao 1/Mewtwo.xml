@@ -1,4 +1,4 @@
-<monster name="Mewtwo" nameDescription="a mewtwo" race="psychic" race2="no race" experience="220" speed="2500">
+<monster name="Mewtwo" nameDescription="a mewtwo" race="psychic" race2="no race" experience="24101" speed="2500">
     <health now="10006" max="10006" />
     <look type="385" corpse="11920" />
     <targetchange interval="10000" chance="0" />

@@ -1,4 +1,4 @@
-<monster name="Teddiursa" nameDescription="a teddiursa" race="normal" race2="no race" experience="124" speed="110">
+<monster name="Teddiursa" nameDescription="a teddiursa" race="normal" race2="no race" experience="116" speed="110">
     <health now="60" max="60" />
     <look type="913" corpse="4449" />
     <targetchange interval="10000" chance="0" />

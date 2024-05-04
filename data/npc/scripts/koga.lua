@@ -68,7 +68,7 @@ function onCreatureSay(cid, type, msg)
 
 	if isDuelMsg(msg) and conv == 1 and focus == cid then
 
-		--if getPlayerItemCount(cid, gymbadges[getCreatureName(getThis())]) >= 1 then
+		--if getPlayerItemCount(cid, gymbadges[getCreatureName(getThis():getId())]) >= 1 then
 		--	selfSay("You have already won my Soul Badge, maybe some other day we can fight.")
 		--	focus = 0
 		--return true
@@ -91,7 +91,7 @@ function onCreatureSay(cid, type, msg)
 		setPlayerStorageValue(cid, 990, 1)
 		selfSay("Yea, let's fight!")
 		talk_start = os.clock()
-		addEvent(doSummonGymPokemon, 850, getThis())
+		addEvent(doSummonGymPokemon, 850, getThis():getId())
 		conv = 3
 
 	return true
@@ -117,7 +117,7 @@ local afk_warning = false
 
 function onThink()
 
-	--doSendAnimatedText(getThingPos(getThis()), getCreatureName(getThis()), 215)
+	--doSendAnimatedText(getThingPos(getThis():getId()), getCreatureName(getThis():getId()), 215)
 
 	if focus == 0 then
 		selfTurn(2)
@@ -128,9 +128,9 @@ function onThink()
 		afk_time = 0
 		afk_warning = false
 
-		if #getCreatureSummons(getThis()) >= 1 then
-			setPlayerStorageValue(getCreatureSummons(getThis())[1], 1006, 0)
-			doCreatureAddHealth(getCreatureSummons(getThis())[1], -getCreatureMaxHealth(getCreatureSummons(getThis())[1]))
+		if #getCreatureSummons(getThis():getId()) >= 1 then
+			setPlayerStorageValue(getCreatureSummons(getThis():getId())[1], 1006, 0)
+			doCreatureAddHealth(getCreatureSummons(getThis():getId())[1], -getCreatureMaxHealth(getCreatureSummons(getThis():getId())[1]))
 		end
 
 	return true
@@ -145,7 +145,7 @@ function onThink()
 
 		talk_start = os.clock()
 
-		if not isCreature(getCreatureTarget(getThis())) then
+		if not isCreature(getCreatureTarget(getThis():getId())) then
 			if #getCreatureSummons(challenger) >= 1 then
 				if getCreatureOutfit(getCreatureSummons(challenger)[1]).lookType ~= 2 then --alterado v2.6
 				  selfAttackCreature(getCreatureSummons(challenger)[1])
@@ -170,14 +170,14 @@ function onThink()
 		end
 
 
-		if #getCreatureSummons(getThis()) == 0 then
+		if #getCreatureSummons(getThis():getId()) == 0 then
 			if battle_turn > #pokemons then
-				addEvent(doWinDuel, 1000, focus, getThis())
+				addEvent(doWinDuel, 1000, focus:getId(), getThis():getId())
 				setPlayerStorageValue(focus, 990, -1)
 				focus = 0
 			return true
 			end
-			addEvent(doSummonGymPokemon, 1000, getThis())
+			addEvent(doSummonGymPokemon, 1000, getThis():getId())
 		end
 
 		if not hasPokemon(challenger) or challenger_turn >= 7 or challenger_turn > #pokemons then
@@ -189,7 +189,7 @@ function onThink()
 
 	end
 
-		local npcpos = getThingPos(getThis())
+		local npcpos = getThingPos(getThis():getId())
 		local focpos = getThingPos(focus)
 
 		if npcpos.z ~= focpos.z then

@@ -1,4 +1,4 @@
-<monster name="Luxio" nameDescription="a Luxio" race="electric" race2="no race" experience="117" speed="180">
+<monster name="Luxio" nameDescription="a Luxio" race="electric" race2="no race" experience="276" speed="180">
     <health now="60" max="60" />
     <look type="1577" corpse="161" />
 	<targetchange interval="10000" chance="0" />

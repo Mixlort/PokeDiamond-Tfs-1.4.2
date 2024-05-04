@@ -1,4 +1,4 @@
-<monster name="Nidoking" nameDescription="a nidoking" race="poison" race2="ground" experience="195" speed="205">
+<monster name="Nidoking" nameDescription="a nidoking" race="poison" race2="ground" experience="3451" speed="205">
     <health now="81" max="81" />
     <look type="386" corpse="11924" />
     <targetchange interval="10000" chance="0" />

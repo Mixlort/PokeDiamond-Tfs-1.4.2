@@ -1,4 +1,4 @@
-<monster name="Charizard" nameDescription="a charizard" race="fire" race2="flying" experience="209" speed="220">
+<monster name="Charizard" nameDescription="a charizard" race="fire" race2="flying" experience="6410" speed="220">
     <health now="78" max="78" />
     <look type="418" corpse="11851" />
     <targetchange interval="10000" chance="0" />

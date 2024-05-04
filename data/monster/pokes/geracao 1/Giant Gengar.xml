@@ -1,4 +1,4 @@
-<monster name="Giant Gengar" nameDescription="a Giant gengar" race="ghost" race2="poison" experience="209" speed="133">
+<monster name="Giant Gengar" nameDescription="a Giant gengar" race="ghost" race2="poison" experience="14012" speed="133">
     <health now="800" max="800" />
     <look type="2109" corpse="11879" />
     <targetchange interval="10000" chance="0" />

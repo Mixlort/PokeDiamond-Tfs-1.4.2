@@ -1,4 +1,4 @@
-<monster name="Smeargle" nameDescription="a smeagle" race="normal" race2="no race" experience="106" speed="135">
+<monster name="Smeargle" nameDescription="a smeagle" race="normal" race2="no race" experience="476" speed="135">
     <health now="55" max="55" />
     <look type="942" corpse="4437" />
 	<targetchange interval="10000" chance="0" />

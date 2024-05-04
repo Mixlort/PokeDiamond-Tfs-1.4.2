@@ -1,4 +1,4 @@
-<monster name="Shiny Drifblim" nameDescription="a Shiny Drifblim" race="ghost" race2="flying" experience="107" speed="200">
+<monster name="Shiny Drifblim" nameDescription="a Shiny Drifblim" race="ghost" race2="flying" experience="500" speed="200">
     <health now="290" max="290" />
     <look type="37" corpse="171" />
 	<targetchange interval="10000" chance="0" />

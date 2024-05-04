@@ -1,4 +1,4 @@
-<monster name="Lugia" nameDescription="a lugia" race="psychic" race2="flying" experience="220" speed="170">
+<monster name="Lugia" nameDescription="a lugia" race="psychic" race2="flying" experience="35590" speed="170">
     <health now="10000" max="10000" />
     <look type="959" corpse="3564" />
 	<targetchange interval="10000" chance="0" />

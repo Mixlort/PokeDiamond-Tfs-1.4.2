@@ -1,4 +1,4 @@
-<monster name="Growlithe" nameDescription="a growlithe" race="fire" race2="no race" experience="91" speed="180">
+<monster name="Growlithe" nameDescription="a growlithe" race="fire" race2="no race" experience="700" speed="180">
     <health now="55" max="55" />
     <look type="460" corpse="11887" />
     <targetchange interval="10000" chance="0" />

@@ -1,4 +1,4 @@
-<monster name="Vespiquen" nameDescription="an Vespiquen" race="bug" race2="flying" experience="147" speed="160">
+<monster name="Vespiquen" nameDescription="an Vespiquen" race="bug" race2="flying" experience="0" speed="160">
     <health now="70" max="70" />
     <look type="1528" corpse="193" />
 	<targetchange interval="10000" chance="0" />

@@ -1,4 +1,4 @@
-<monster name="Mega Blaziken" nameDescription="a Mega blaziken" race="fire" race2="fighting" experience="209" speed="200">
+<monster name="Mega Blaziken" nameDescription="a Mega blaziken" race="fire" race2="fighting" experience="1604" speed="200">
     <health now="80" max="80" />
     <look type="1890" corpse="" />
 	<targetchange interval="10000" chance="0" />

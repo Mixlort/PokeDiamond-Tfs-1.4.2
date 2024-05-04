@@ -1,4 +1,4 @@
-<monster name="Bronzor" nameDescription="a Bronzor" race="steel" race2="psychic" experience="87" speed="143">
+<monster name="Bronzor" nameDescription="a Bronzor" race="steel" race2="psychic" experience="3300" speed="143">
     <health now="57" max="57" />
     <look type="1507" corpse="228" />
 	<targetchange interval="10000" chance="0" />

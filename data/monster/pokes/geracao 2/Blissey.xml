@@ -1,4 +1,4 @@
-<monster name="Blissey" nameDescription="a blissey" race="normal" race2="no race" experience="255" speed="117">
+<monster name="Blissey" nameDescription="a blissey" race="normal" race2="no race" experience="736" speed="117">
     <health now="120" max="120" />
     <look type="945" corpse="3273" />
 	 <targetchange interval="10000" chance="0" />

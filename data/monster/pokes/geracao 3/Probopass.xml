@@ -1,4 +1,4 @@
-<monster name="Probopass" nameDescription="a probopass" race="rock" race2="steel" experience="218" speed="160">
+<monster name="Probopass" nameDescription="a probopass" race="rock" race2="steel" experience="908" speed="160">
     <health now="75" max="75" />
     <look type="1694" corpse="12747" />
 	<targetchange interval="10000" chance="0" />

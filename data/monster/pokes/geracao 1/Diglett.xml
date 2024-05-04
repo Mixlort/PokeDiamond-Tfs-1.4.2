@@ -1,4 +1,4 @@
-<monster name="Diglett" nameDescription="a diglett" race="ground" race2="no race" experience="81" speed="215">
+<monster name="Diglett" nameDescription="a diglett" race="ground" race2="no race" experience="1240" speed="215">
     <health now="10" max="10" />
     <look type="433" corpse="11860" />
     <targetchange interval="10000" chance="0" />

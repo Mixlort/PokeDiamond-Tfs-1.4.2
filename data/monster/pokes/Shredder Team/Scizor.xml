@@ -1,4 +1,4 @@
-<monster name="Scizor" nameDescription="a scizor" race="bug" race2="steel" experience="200" speed="210">
+<monster name="Scizor" nameDescription="a scizor" race="bug" race2="steel" experience="1544" speed="210">
     <health now="70" max="70" />
     <look type="912" corpse="0" />
 	<targetchange interval="10000" chance="0" />

@@ -1,4 +1,4 @@
-<monster name="Pikachu Super" nameDescription="a pikachu Super" race="electric" race2="no race" experience="5" speed="210">
+<monster name="Pikachu Super" nameDescription="a pikachu Super" race="electric" race2="no race" experience="276" speed="210">
     <health now="55" max="55" />
     <look type="2150" corpse="11941" />
     <targetchange interval="10000" chance="0" />

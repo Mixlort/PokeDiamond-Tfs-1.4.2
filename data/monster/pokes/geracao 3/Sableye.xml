@@ -1,4 +1,4 @@
-<monster name="Sableye" nameDescription="a Sableye" race="dark" race2="ghost" experience="147" speed="170">
+<monster name="Sableye" nameDescription="a Sableye" race="dark" race2="ghost" experience="976" speed="170">
     <health now="50" max="50" />
     <look type="1672" corpse="12700" />
 	<targetchange interval="10000" chance="0" />

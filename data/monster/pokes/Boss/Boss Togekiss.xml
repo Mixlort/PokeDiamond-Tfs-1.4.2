@@ -1,4 +1,4 @@
-<monster name="Boss Togekiss" nameDescription="a Boss Tigekiss" race="grass" race2="no race" experience="500" speed="212">
+<monster name="Boss Togekiss" nameDescription="a Boss Tigekiss" race="grass" race2="no race" experience="4510" speed="212">
   <health now="700" max="700" />
     <look type="2133" corpse="12566" />
 	<targetchange interval="10000" chance="0" />

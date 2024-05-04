@@ -1,4 +1,4 @@
-<monster name="Kangaskhan" nameDescription="a kangaskhan" race="normal" race2="no race" experience="175" speed="210">
+<monster name="Kangaskhan" nameDescription="a kangaskhan" race="normal" race2="no race" experience="3451" speed="210">
     <health now="105" max="105" />
     <look type="549" corpse="11902" />
     <targetchange interval="10000" chance="0" />

@@ -1,4 +1,4 @@
-<monster name="Taillow" nameDescription="a Taillow" race="normal" race2="flying" experience="58" speed="205">
+<monster name="Taillow" nameDescription="a Taillow" race="normal" race2="flying" experience="124" speed="205">
     <health now="40" max="40" />
     <look type="1791" corpse="12722" />
 	<targetchange interval="10000" chance="0" />

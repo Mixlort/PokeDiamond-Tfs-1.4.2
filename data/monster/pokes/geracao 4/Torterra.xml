@@ -1,4 +1,4 @@
-<monster name="Torterra" nameDescription="a Torterra" race="grass" race2="ground" experience="208" speed="176">
+<monster name="Torterra" nameDescription="a Torterra" race="grass" race2="ground" experience="1504" speed="176">
     <health now="95" max="95" />
     <look type="1607" corpse="113" />
     <targetchange interval="10000" chance="0" />

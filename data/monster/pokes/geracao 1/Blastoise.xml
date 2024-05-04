@@ -1,4 +1,4 @@
-<monster name="Blastoise" nameDescription="a blastoise" race="water" race2="no race" experience="210" speed="198">
+<monster name="Blastoise" nameDescription="a blastoise" race="water" race2="no race" experience="4741" speed="198">
     <health now="79" max="79" />
     <look type="406" corpse="11846" />
     <targetchange interval="10000" chance="0" />

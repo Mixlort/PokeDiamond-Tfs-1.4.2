@@ -1,4 +1,4 @@
-<monster name="Shiny Grimer" nameDescription="a Shiny grimer" race="poison" race2="no race" experience="90" speed="145">
+<monster name="Shiny Grimer" nameDescription="a Shiny grimer" race="poison" race2="no race" experience="168" speed="145">
     <health now="80" max="80" />
     <look type="1282" corpse="12507" />
   <targetchange interval="10000" chance="0" />

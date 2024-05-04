@@ -1,4 +1,4 @@
-<monster name="Empoleon" nameDescription="a Empoleon" race="water" race2="steel" experience="210" speed="180">
+<monster name="Empoleon" nameDescription="a Empoleon" race="water" race2="steel" experience="1584" speed="180">
     <health now="84" max="84" />
     <look type="1563" corpse="125" />
     <targetchange interval="10000" chance="0" />

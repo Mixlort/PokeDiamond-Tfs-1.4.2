@@ -1,4 +1,4 @@
-<monster name="Tauros" nameDescription="a tauros" race="normal" race2="no race" experience="211" speed="230">
+<monster name="Tauros" nameDescription="a tauros" race="normal" race2="no race" experience="900" speed="230">
     <health now="75" max="75" />
     <look type="444" corpse="11971" />
     <targetchange interval="10000" chance="0" />

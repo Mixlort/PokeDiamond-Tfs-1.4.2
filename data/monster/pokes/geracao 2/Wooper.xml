@@ -1,4 +1,4 @@
-<monster name="Wooper" nameDescription="a wooper" race="water" race2="ground" experience="52" speed="95">
+<monster name="Wooper" nameDescription="a wooper" race="water" race2="ground" experience="0" speed="95">
     <health now="55" max="55" />
     <look type="922" corpse="4757" />
 	<targetchange interval="10000" chance="0" />

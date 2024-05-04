@@ -1,4 +1,4 @@
-<monster name="Starmie" nameDescription="a starmie" race="water" race2="psychic" experience="207" speed="235">
+<monster name="Starmie" nameDescription="a starmie" race="water" race2="psychic" experience="670" speed="235">
     <health now="60" max="60" />
     <look type="600" corpse="11968" />
     <targetchange interval="10000" chance="0" />

@@ -1,4 +1,4 @@
-<monster name="Pachirisu" nameDescription="a Pachirisu" race="electric" race2="no race" experience="150" speed="215">
+<monster name="Pachirisu" nameDescription="a Pachirisu" race="electric" race2="no race" experience="668" speed="215">
     <health now="60" max="60" />
     <look type="1556" corpse="196" />
     <targetchange interval="10000" chance="0" />

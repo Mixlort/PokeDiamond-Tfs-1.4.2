@@ -1,6 +1,7 @@
 function doHealOverTime(cid, div, turn, effect)                     --alterado v1.6 peguem o script todo!!
 if not isCreature(cid) then return true end
-
+if not isOnline(cid) then return true end
+if isNumber(cid) then cid = Creature(cid) end
 if turn <= 0 or (getCreatureHealth(cid) == getCreatureMaxHealth(cid)) or getPlayerStorageValue(cid, 173) <= 0 then 
    setPlayerStorageValue(cid, 173, -1)
    return true 
@@ -12,7 +13,7 @@ doCreatureAddHealth(cid, amount)
 if math.floor(turn/10) == turn/10 then
    doSendMagicEffect(getThingPos(cid), effect)
 end
-addEvent(doHealOverTime, 100, cid, div, turn - 1, effect)
+addEvent(doHealOverTime, 100, cid:getId(), div, turn - 1, effect)
 end
 
 local potions = {

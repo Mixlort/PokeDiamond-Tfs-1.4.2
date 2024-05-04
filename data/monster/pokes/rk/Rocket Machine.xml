@@ -1,4 +1,4 @@
-<monster name="Rocket Machine" nameDescription="a Rocket Machine" race="grass" race2="no race" experience="700" speed="212">
+<monster name="Rocket Machine" nameDescription="a Rocket Machine" race="grass" race2="no race" experience="35590" speed="212">
     <health now="7000" max="7000" />
     <look type="2102" corpse="13383" />
     <targetchange interval="10000" chance="0" />

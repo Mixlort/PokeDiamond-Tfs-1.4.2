@@ -1,4 +1,4 @@
-<monster name="Graveler" nameDescription="a graveler" race="rock" race2="ground" experience="134" speed="155">
+<monster name="Graveler" nameDescription="a graveler" race="rock" race2="ground" experience="1701" speed="155">
     <health now="55" max="55" />
     <look type="598" corpse="12140" />
     <targetchange interval="10000" chance="0" />

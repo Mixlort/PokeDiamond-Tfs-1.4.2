@@ -1,4 +1,4 @@
-<monster name="Shiny Muk" nameDescription="a Shiny muk" race="poison" race2="no race" experience="157" speed="170">
+<monster name="Shiny Muk" nameDescription="a Shiny muk" race="poison" race2="no race" experience="372" speed="170">
     <health now="105" max="105" />
     <look type="1283" corpse="12508" />
   <targetchange interval="10000" chance="0" />

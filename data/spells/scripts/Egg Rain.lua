@@ -47,7 +47,7 @@ function onCastSpell(cid, var)
 	for up = 1, 10 do
 	    addEvent(upEffect, up*75, cid:getId(), effD)
 	end
-	addEvent(doFall, 450, cid)
+	addEvent(doFall, 450, cid:getId())
 	addEvent(doDanoWithProtect, 1400, cid:getId(), NORMALDAMAGE, getThingPosWithDebug(cid:getId()), waterarea, -min, -max, 0)
 
 return true

@@ -1,4 +1,4 @@
-<monster name="Quilava" nameDescription="a quilava" race="fire" race2="no race" experience="142" speed="145">
+<monster name="Quilava" nameDescription="a quilava" race="fire" race2="no race" experience="628" speed="145">
     <health now="58" max="58" />
     <look type="674" corpse="4426" />
 	<targetchange interval="10000" chance="0" />

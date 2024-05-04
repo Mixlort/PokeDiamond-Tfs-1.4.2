@@ -1,4 +1,4 @@
-<monster name="Froslass" nameDescription="a froslass" race="ice" race2="ghost" experience="170" speed="230">
+<monster name="Froslass" nameDescription="a froslass" race="ice" race2="ghost" experience="0" speed="230">
     <health now="70" max="70" />
     <look type="1760" corpse="12748" />
 	<targetchange interval="10000" chance="0" />

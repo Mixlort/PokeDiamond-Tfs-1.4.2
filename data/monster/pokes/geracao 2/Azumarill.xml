@@ -1,4 +1,4 @@
-<monster name="Azumarill" nameDescription="an azumarill" race="water" race2="no race" experience="153" speed="120">
+<monster name="Azumarill" nameDescription="an azumarill" race="water" race2="no race" experience="292" speed="120">
     <health now="100" max="100" />
     <look type="894" corpse="3270" />
  <targetchange interval="10000" chance="0" />

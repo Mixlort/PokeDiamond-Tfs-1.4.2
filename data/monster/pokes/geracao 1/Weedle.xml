@@ -1,4 +1,4 @@
-<monster name="Weedle" nameDescription="a weedle" race="bug" race2="poison" experience="52" speed="170">
+<monster name="Weedle" nameDescription="a weedle" race="bug" race2="poison" experience="40" speed="170">
     <health now="40" max="40" />
     <look type="372" corpse="11983" />
     <targetchange interval="10000" chance="0" />

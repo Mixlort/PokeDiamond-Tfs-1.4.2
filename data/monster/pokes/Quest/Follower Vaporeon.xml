@@ -1,4 +1,4 @@
-<monster name="Follower Vaporeon" nameDescription="a Shiny vaporeon" race="water" race2="grass" experience="500" speed="201">
+<monster name="Follower Vaporeon" nameDescription="a Shiny vaporeon" race="water" race2="grass" experience="580" speed="201">
     <health now="905" max="905" />
     <look type="1328" corpse="0" />
   <targetchange interval="10000" chance="0" />

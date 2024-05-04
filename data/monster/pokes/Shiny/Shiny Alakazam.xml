@@ -1,4 +1,4 @@
-<monster name="Shiny Alakazam" nameDescription="a Shiny alakazam" race="psychic" race2="no race" experience="186" speed="240">
+<monster name="Shiny Alakazam" nameDescription="a Shiny alakazam" race="psychic" race2="no race" experience="876" speed="240">
     <health now="55" max="55" />
     <look type="1259" corpse="12484" />
   <targetchange interval="0" chance="0" />

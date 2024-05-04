@@ -1,4 +1,4 @@
-<monster name="Aerodactyl" nameDescription="a aerodactyl" race="rock" race2="flying" experience="202" speed="250">
+<monster name="Aerodactyl" nameDescription="a aerodactyl" race="rock" race2="flying" experience="3450" speed="250">
     <health now="80" max="80" />
     <look type="361" corpse="11839" />
     <targetchange interval="10000" chance="0" />

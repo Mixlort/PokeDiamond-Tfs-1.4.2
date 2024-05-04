@@ -1,4 +1,4 @@
-<monster name="Feraligatr" nameDescription="a feraligatr" race="water" race2="no race" experience="142" speed="143">
+<monster name="Feraligatr" nameDescription="a feraligatr" race="water" race2="no race" experience="1584" speed="143">
     <health now="85" max="85" />
     <look type="681" corpse="3288" />
 	<targetchange interval="10000" chance="0" />

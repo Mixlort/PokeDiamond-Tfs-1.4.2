@@ -1,4 +1,4 @@
-<monster name="Shiny Metang" nameDescription="a Shiny Metang" race="steel" race2="psychic" experience="400" speed="340">
+<monster name="Shiny Metang" nameDescription="a Shiny Metang" race="steel" race2="psychic" experience="4500" speed="340">
     <health now="110" max="110" />
     <look type="1862" corpse="2831" />
 	<targetchange interval="10000" chance="0" />

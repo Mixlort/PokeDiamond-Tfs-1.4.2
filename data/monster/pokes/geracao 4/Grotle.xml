@@ -1,4 +1,4 @@
-<monster name="Grotle" nameDescription="a Grotle" race="grass" race2="no race" experience="141" speed="156">
+<monster name="Grotle" nameDescription="a Grotle" race="grass" race2="no race" experience="608" speed="156">
     <health now="75" max="75" />
     <look type="1594" corpse="112" />
     <targetchange interval="10000" chance="0" />

@@ -1,4 +1,4 @@
-<monster name="Drowzee" nameDescription="a drowzee" race="psychic" race2="no race" experience="102" speed="162">
+<monster name="Drowzee" nameDescription="a drowzee" race="psychic" race2="no race" experience="1270" speed="162">
     <health now="60" max="60" />
     <look type="445" corpse="11867" />
     <targetchange interval="10000" chance="0" />

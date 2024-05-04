@@ -1,4 +1,4 @@
-<monster name="Dragonite Milenar" nameDescription="a Dragonite Milenar" race="dragon" race2="flying" experience="218" speed="200">
+<monster name="Dragonite Milenar" nameDescription="a Dragonite Milenar" race="dragon" race2="flying" experience="1536" speed="200">
     <health now="160" max="160" />
     <look type="1343" corpse="11865" />
     <targetchange interval="10000" chance="0" />

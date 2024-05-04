@@ -1,4 +1,4 @@
-<monster name="Gligar" nameDescription="a gligar" race="ground" race2="flying" experience="108" speed="135">
+<monster name="Gligar" nameDescription="a gligar" race="ground" race2="flying" experience="0" speed="135">
     <health now="65" max="65" />
     <look type="925" corpse="3293" />
 	<targetchange interval="10000" chance="0" />

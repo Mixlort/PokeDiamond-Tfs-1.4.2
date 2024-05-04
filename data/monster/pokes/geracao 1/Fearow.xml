@@ -1,4 +1,4 @@
-<monster name="Fearow" nameDescription="a fearow" race="normal" race2="flying" experience="112" speed="100">
+<monster name="Fearow" nameDescription="a fearow" race="normal" race2="flying" experience="1270" speed="100">
     <health now="65" max="65" />
     <look type="368" corpse="11876" />
     <targetchange interval="10000" chance="0" />

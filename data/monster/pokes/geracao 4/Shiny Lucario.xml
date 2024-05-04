@@ -1,4 +1,4 @@
-<monster name="Shiny Lucario" nameDescription="a Shiny Lucario" race="ground" race2="normal" experience="500" speed="211">
+<monster name="Shiny Lucario" nameDescription="a Shiny Lucario" race="ground" race2="normal" experience="824" speed="211">
     <health now="160" max="160" />
     <look type="2061" corpse="13083" />
     <targetchange interval="10000" chance="0" />

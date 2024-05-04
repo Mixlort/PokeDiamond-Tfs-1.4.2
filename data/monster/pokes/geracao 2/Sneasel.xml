@@ -1,4 +1,4 @@
-<monster name="Sneasel" nameDescription="a sneasel" race="dark" race2="ice" experience="132" speed="160">
+<monster name="Sneasel" nameDescription="a sneasel" race="dark" race2="ice" experience="0" speed="160">
     <health now="55" max="55" />
     <look type="917" corpse="4439" />
 	<targetchange interval="10000" chance="0" />

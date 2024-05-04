@@ -1,4 +1,4 @@
-<monster name="Swampert" nameDescription="a swampert" race="water" race2="ground" experience="142" speed="180">
+<monster name="Swampert" nameDescription="a swampert" race="water" race2="ground" experience="1584" speed="180">
     <health now="100" max="100" />
     <look type="1719" corpse="12757" />
 	<targetchange interval="10000" chance="0" />

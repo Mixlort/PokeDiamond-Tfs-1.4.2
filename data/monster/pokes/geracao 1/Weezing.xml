@@ -1,4 +1,4 @@
-<monster name="Weezing" nameDescription="a weezing" race="poison" race2="no race" experience="173" speed="180">
+<monster name="Weezing" nameDescription="a weezing" race="poison" race2="no race" experience="2700" speed="180">
     <health now="65" max="65" />
     <look type="582" corpse="11985" />
     <targetchange interval="10000" chance="0" />

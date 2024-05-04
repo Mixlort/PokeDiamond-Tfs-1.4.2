@@ -1,4 +1,4 @@
-<monster name="Skiploom" nameDescription="a skiploom" race="grass" race2="flying" experience="136" speed="135">
+<monster name="Skiploom" nameDescription="a skiploom" race="grass" race2="flying" experience="0" speed="135">
     <health now="55" max="55" />
     <look type="899" corpse="4434" />
 	<targetchange interval="10000" chance="0" />

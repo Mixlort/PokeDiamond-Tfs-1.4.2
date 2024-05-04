@@ -1,4 +1,4 @@
-<monster name="Lotad" nameDescription="a Lotad" race="water" race2="grass" experience="64" speed="150">
+<monster name="Lotad" nameDescription="a Lotad" race="water" race2="grass" experience="216" speed="150">
     <health now="40" max="40" />
     <look type="1797" corpse="12679" />
   <targetchange interval="10000" chance="0" />

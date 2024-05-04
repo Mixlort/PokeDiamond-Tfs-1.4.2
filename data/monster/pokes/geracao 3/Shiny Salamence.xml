@@ -1,4 +1,4 @@
-<monster name="Shiny Salamence" nameDescription="a Shiny Salamence" race="dragon" race2="flying" experience="280" speed="210">
+<monster name="Shiny Salamence" nameDescription="a Shiny Salamence" race="dragon" race2="flying" experience="20000" speed="210">
     <health now="175" max="175" />
     <look type="1864" corpse="12807" />
   <targetchange interval="10000" chance="0" />

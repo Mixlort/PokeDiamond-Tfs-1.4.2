@@ -1,4 +1,4 @@
-<monster name="Wigglytuff" nameDescription="a wigglytuff" race="normal" race2="no race" experience="109" speed="165">
+<monster name="Wigglytuff" nameDescription="a wigglytuff" race="normal" race2="no race" experience="600" speed="165">
     <health now="50" max="50" />
     <look type="415" corpse="11986" />
     <targetchange interval="10000" chance="0" />

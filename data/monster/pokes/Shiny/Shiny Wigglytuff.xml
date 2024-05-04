@@ -1,4 +1,4 @@
-<monster name="Shiny Wigglytuff" nameDescription="a shiny wigglytuff" race="normal" race2="no race" experience="109" speed="165">
+<monster name="Shiny Wigglytuff" nameDescription="a shiny wigglytuff" race="normal" race2="no race" experience="356" speed="165">
     <health now="50" max="50" />
     <look type="2028" corpse="12871" />
     <targetchange interval="10000" chance="0" />

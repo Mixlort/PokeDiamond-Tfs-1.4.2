@@ -1,4 +1,4 @@
-<monster name="Chikorita" nameDescription="a chikorita" race="grass" race2="no race" experience="64" speed="106">
+<monster name="Chikorita" nameDescription="a chikorita" race="grass" race2="no race" experience="216" speed="106">
     <health now="45" max="45" />
     <look type="670" corpse="3275" />
   <targetchange interval="10000" chance="0" />

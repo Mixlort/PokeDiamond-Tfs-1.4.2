@@ -1,4 +1,4 @@
-<monster name="Arbok" nameDescription="a arbok" race="poison" race2="no race" experience="117" speed="80">
+<monster name="Arbok" nameDescription="a arbok" race="poison" race2="no race" experience="1240" speed="80">
     <health now="6" max="6" />
     <look type="390" corpse="11841" />
     <targetchange interval="10000" chance="0" />

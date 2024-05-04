@@ -1,4 +1,4 @@
-<monster name="Beedrill" nameDescription="a beedrill" race="bug" race2="poison" experience="159" speed="195">
+<monster name="Beedrill" nameDescription="a beedrill" race="bug" race2="poison" experience="276" speed="195">
     <health now="65" max="65" />
     <look type="1209" corpse="12434" />
   <targetchange interval="10000" chance="0" />

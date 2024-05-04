@@ -1,4 +1,4 @@
-<monster name="Infernape" nameDescription="a Infernape" race="fire" race2="fighting" experience="209" speed="228">
+<monster name="Infernape" nameDescription="a Infernape" race="fire" race2="fighting" experience="1604" speed="228">
     <health now="76" max="76" />
     <look type="1527" corpse="119" />
     <targetchange interval="10000" chance="0" />

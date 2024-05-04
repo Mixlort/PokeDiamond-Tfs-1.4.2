@@ -1,4 +1,4 @@
-<monster name="Shiny Beldum" nameDescription="a Shiny Beldum" race="steel" race2="psychic" experience="200" speed="150">
+<monster name="Shiny Beldum" nameDescription="a Shiny Beldum" race="steel" race2="psychic" experience="0" speed="150">
     <health now="70" max="70" />
     <look type="1855" corpse="2813" />
 	<targetchange interval="10000" chance="0" />

@@ -1,4 +1,4 @@
-<monster name="Kecleon" nameDescription="a Kecleon" race="normal" race2="no race" experience="106" speed="160">
+<monster name="Kecleon" nameDescription="a Kecleon" race="normal" race2="no race" experience="476" speed="160">
     <health now="60" max="60" />
     <look type="1801" corpse="624" />
 	<targetchange interval="10000" chance="0" />

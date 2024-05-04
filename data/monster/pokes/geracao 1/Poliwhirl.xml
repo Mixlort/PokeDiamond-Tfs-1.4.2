@@ -1,4 +1,4 @@
-<monster name="Poliwhirl" nameDescription="a poliwhirl" race="water" race2="no race" experience="131" speed="210">
+<monster name="Poliwhirl" nameDescription="a poliwhirl" race="water" race2="no race" experience="400" speed="210">
     <health now="65" max="65" />
     <look type="563" corpse="11944" />
     <targetchange interval="10000" chance="0" />

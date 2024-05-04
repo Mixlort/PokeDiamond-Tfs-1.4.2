@@ -1,4 +1,4 @@
-<monster name="Cyndaquil" nameDescription="a cyndaquil" race="fire" race2="no race" experience="65" speed="128">
+<monster name="Cyndaquil" nameDescription="a cyndaquil" race="fire" race2="no race" experience="248" speed="128">
     <health now="39" max="39" />
     <look type="673" corpse="3281" />
 	<targetchange interval="10000" chance="0" />

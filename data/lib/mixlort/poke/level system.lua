@@ -18,9 +18,10 @@ function getStatusW(name)
 	status.spAtk = pokeSpAtk * level * 7
 	local pokeSpDef = pokes.specialdefense
 	status.spDef = pokeSpDef
-	local pokeExp = pokes.exp
-	status.exp = pokeExp * baseExpRate + pokeVit * pokemonExpPerLevelRate
-    status.exp = (status.exp * generalExpRate / 2) * 10
+	-- local pokeExp = pokes.exp
+	-- status.exp = pokeExp
+    -- status.exp = pokeExp * baseExpRate + pokeVit * pokemonExpPerLevelRate
+    -- status.exp = (status.exp * generalExpRate / 2) * 10
     return status
 end
 
@@ -37,7 +38,7 @@ function getStatusWild(poke)
     status.life = math.floor(getStatusW(name).life * bonusSpawnPos(poke).life) or 1
     status.spAtk = math.floor(getStatusW(name).spAtk * bonusSpawnPos(poke).spAtk) or 1
     status.spDef = math.floor(getStatusW(name).spDef * bonusSpawnPos(poke).spDef) or 1
-    status.exp = getStatusW(name).exp * bonusSpawnPos(poke).exp or 1
+    -- status.exp = getStatusW(name).exp * bonusSpawnPos(poke).exp or 1
     return status
 end
 
@@ -60,9 +61,9 @@ function getStatusS(name, boost, masterLevel)
 	status.spAtk = pokeSpAtk * (masterLevel + boost ) * 9
 	local pokeSpDef = pokes.specialdefense
 	status.spDef = pokeSpDef + (2 * boost)
-	local pokeExp = pokes.exp
-	status.exp = pokeExp * baseExpRate + pokeVit * pokemonExpPerLevelRate
-    status.exp = (status.exp * generalExpRate / 2) * 10
+	-- local pokeExp = pokes.exp
+	-- status.exp = pokeExp * baseExpRate + pokeVit * pokemonExpPerLevelRate
+    -- status.exp = (status.exp * generalExpRate / 2) * 10
     return status
 end
 
@@ -89,7 +90,7 @@ function getStatusSummon(poke)
     status.life = math.floor(getStatusS(name, boost, masterLevel).life) or 0
     status.spAtk = math.floor(getStatusS(name, boost, masterLevel).spAtk) or 0
     status.spDef = math.floor(getStatusS(name, boost, masterLevel).spDef) or 0
-    status.exp = getStatusS(name, boost, masterLevel).exp or 0
+    -- status.exp = getStatusS(name, boost, masterLevel).exp or 0
     return status
 end
 

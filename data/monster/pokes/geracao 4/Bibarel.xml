@@ -1,4 +1,4 @@
-<monster name="Bibarel" nameDescription="a Bibarel" race="normal" race2="water" experience="116" speed="191">
+<monster name="Bibarel" nameDescription="a Bibarel" race="normal" race2="water" experience="332" speed="191">
     <health now="79" max="79" />
     <look type="1505" corpse="153" />
 	<targetchange interval="10000" chance="0" />

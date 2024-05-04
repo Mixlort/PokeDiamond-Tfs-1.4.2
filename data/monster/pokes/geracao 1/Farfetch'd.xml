@@ -1,4 +1,4 @@
-<monster name="Farfetch'd" nameDescription="a farfetch'd" race="normal" race2="flying" experience="94" speed="180">
+<monster name="Farfetch'd" nameDescription="a farfetch'd" race="normal" race2="flying" experience="1240" speed="180">
     <health now="52" max="52" />
     <look type="408" corpse="11875" />
     <targetchange interval="10000" chance="0" />

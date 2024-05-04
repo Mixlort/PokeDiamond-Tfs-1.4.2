@@ -1,4 +1,4 @@
-<monster name="Bastiodon" nameDescription="a Bastiodon" race="rock" race2="steel" experience="59" speed="150">
+<monster name="Bastiodon" nameDescription="a Bastiodon" race="rock" race2="steel" experience="20000" speed="150">
     <health now="60" max="60" />
     <look type="1599" corpse="179" />
     <targetchange interval="10000" chance="0" />
