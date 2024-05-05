@@ -50,6 +50,8 @@ function onCastSpell(cid, var)
 
 	local function doRain(cid)
 		if isSummon(cid) then 
+            if not isOnline(cid) then return true end
+            if isNumber(cid) then cid = Creature(cid) end
 			if not getCreatureMaster(cid):getUsingBall() then return true end
 		   doCureBallStatus(getCreatureMaster(cid):getUsingBall().uid, "all")
 		end                                                      --cura status

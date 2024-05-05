@@ -1059,3 +1059,24 @@ function isWater(id)
 return tonumber(id) and id >= 4820 and id <= 4825 --alterado v1.9
 end
 
+function doRegainSpeedLevel(cid)
+
+local speed = 220
+local spood = getCreatureSpeed(cid)
+local level = getPlayerLevel(cid)
+
+if isPlayer(cid) then
+doChangeSpeed(cid, -spood)
+doChangeSpeed(cid, speed + (level * 3))
+setPlayerStorageValue(cid, 1242343, (speed + (level * 3)))
+end
+return true
+end
+
+function doSetPlayerSpeedLevel(cid)
+local speed = 220
+local spood = getCreatureSpeed(cid)
+local level = getPlayerLevel(cid)
+doChangeSpeed(cid, -spood)
+doChangeSpeed(cid, speed + (level * 3)) 
+end

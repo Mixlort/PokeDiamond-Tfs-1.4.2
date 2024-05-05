@@ -3155,6 +3155,8 @@ void ProtocolGame::AddCreature(NetworkMessage& msg, const Creature* creature, bo
     msg.add<uint32_t>(boost);
     msg.addString(b);
 
+    msg.addByte(0xFF); // test mixlort
+
 	msg.add<uint16_t>(creature->getStepSpeed() / 2);
 
 	msg.addByte(player->getSkullClient(creature));
@@ -3205,6 +3207,8 @@ void ProtocolGame::AddPlayerStats(NetworkMessage& msg)
 
 	msg.add<uint16_t>(player->getLevel());
 	msg.addByte(player->getLevelPercent());
+
+    msg.addByte(0xFF); // test mixlort
 
 	msg.add<uint16_t>(100); // base xp gain rate
 	msg.add<uint16_t>(0); // xp voucher

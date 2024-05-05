@@ -28,11 +28,11 @@
 	<action actionid="6659" script="poke/gold/Agatha/Agatha_Receita[2].lua"/> -->
 	<action itemid="12594" script="poke/gold/Squirtle Bottle.lua"/>
 	<action fromid="11790" toid="11803" script="poke/gold/other/doors.lua"/>
-	<action itemid="12774" script="poke/gold/bike.lua"/>
+	<!-- <action itemid="12774" script="poke/gold/bike.lua"/>
 	<action itemid="12937" script="poke/gold/bikeleaf.lua"/>
 	<action itemid="12935" script="poke/gold/bikethunder.lua"/>
 	<action itemid="12936" script="poke/gold/bikewater.lua"/>
-	<action itemid="12938" script="poke/gold/bikefire.lua"/>
+	<action itemid="12938" script="poke/gold/bikefire.lua"/> -->
 	<action itemid="12939" script="poke/gold/bikebox.lua"/>
 	<action itemid="4645;4646;4647;4644;4653;4648" script="poke/gold/surf.lua"/>
 	<action itemid="13088" script="poke/gold/sh stone.lua"/>

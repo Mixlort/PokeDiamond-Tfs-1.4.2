@@ -76,7 +76,7 @@ end
 
 	if (param == '') then
 		local str = ""
-		str = str .. "Cidades disponiveis (PokeGold) :\n\nHouse\n"
+		str = str .. "Cidades disponiveis :\n\nHouse\n"
 			for a = 1, #places do
 				str = str..""..places[a].name.."\n"
 			end
@@ -114,7 +114,7 @@ end
 
 doTeleportThing(cid, telepos, false)
 
-local pos2 = getClosestFreeTile(cid, getPosByDir(getThingPos(cid), SOUTH))
+local pos2 = getClosestFreeTile(cid, getPositionByDirection(getThingPos(cid), SOUTH))
 
 doTeleportThing(summon, pos2, false)
 

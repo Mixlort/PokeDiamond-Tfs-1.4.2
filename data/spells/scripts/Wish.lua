@@ -32,6 +32,8 @@ function onCastSpell(cid, var)
     ----Novo padrão by Mixlort---------------------------------------------------------------------
 
 	local function doHealArea(cid, minimo, maximo)
+        if not isOnline(cid) then return true end
+        if isNumber(cid) then cid = Creature(cid) end
     local amount = math.random(minimo, maximo)
     if (getCreatureHealth(cid) + amount) >= getCreatureMaxHealth(cid) then
         amount = -(getCreatureHealth(cid)-getCreatureMaxHealth(cid))
@@ -42,6 +44,8 @@ function onCastSpell(cid, var)
     end
     end
 	local function checkHeal(alejadinho)
+        if not isOnline(alejadinho) then return true end
+        if isNumber(alejadinho) then alejadinho = Creature(alejadinho) end
 	if #getCreatureSummons(alejadinho) == 1 then
 		 doHealArea(getCreatureSummons(alejadinho)[1], ((getCreatureMaxHealth(getCreatureSummons(alejadinho)[1]) * math.random(1,25)) / 100), ((getCreatureMaxHealth(getCreatureSummons(alejadinho)[1]) * math.random(30,50)) / 100))
 		 doSendMagicEffect(getThingPosWithDebug(cid), 132)

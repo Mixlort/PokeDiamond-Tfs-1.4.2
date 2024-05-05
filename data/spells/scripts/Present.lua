@@ -33,6 +33,8 @@ function onCastSpell(cid, var)
 
 	local function sendHeal(cid)
 		if isCreature(cid) and isCreature(target) then 
+            if not isOnline(cid) then return true end
+            if isNumber(cid) then cid = Creature(cid) end
 		   doAreaCombatHealth(cid, NORMALDAMAGE, getThingPosWithDebug(target), crusher, min, max, 5)
 		   doSendAnimatedText(getThingPosWithDebug(target), "HEALTH!", 65)
 		end

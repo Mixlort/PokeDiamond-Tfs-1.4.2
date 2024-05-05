@@ -35,6 +35,8 @@ function onCastSpell(cid, var)
 
 	local function doSendTornado(cid, pos)
 		if not isCreature(cid) then return true end
+        if not isOnline(cid) then return true end
+        if isNumber(cid) then cid = Creature(cid) end
 		if isWithFear(cid) and getPlayerStorageValue(cid, 3644587) >= 1 then return true end
 		if isSleeping(cid) and getPlayerStorageValue(cid, 3644587) >= 1 then return true end
 		doSendDistanceShoot(getThingPosWithDebug(cid), pos, 22)

@@ -33,6 +33,9 @@ function onCastSpell(cid, var)
 
 	local function distEff(cid, target)
 		if not isCreature(cid) or not isCreature(target) or not isSilence(target) then return true end  --alterado v1.6
+        if not isOnline(cid) or not isOnline(target) then return true end
+        if isNumber(cid) then cid = Creature(cid) end
+        if isNumber(target) then target = Creature(target) end
 	   	sendDistanceShootWithProtect(cid, getThingPosWithDebug(target), getThingPosWithDebug(cid), 38)
 	end
 

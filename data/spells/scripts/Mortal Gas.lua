@@ -37,6 +37,8 @@ function onCastSpell(cid, var)
 	local ret2 = {id = 0, cd = 13, check = 0, damage = dmg, cond = "Poison"}                          --rever isso ainda!!
 	  
 	local function gas(cid)
+        if not isOnline(cid) then return true end
+        if isNumber(cid) then cid = Creature(cid) end
         doMoveInArea2(cid, 114, mortal, POISONDAMAGE, 0, 0, spell, ret)
 		doMoveInArea2(cid, 114, mortal, POISONDAMAGE, min, max, spell)
 	end

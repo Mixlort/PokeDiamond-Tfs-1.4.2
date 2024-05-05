@@ -56,7 +56,7 @@ local function doFish(cid, pos, ppos, chance, interval, number)
       end
       if getPlayerStorageValue(cid, storage) ~= number then return false end
       
-      doSendMagicEffect(pos, CONST_ME_LOSEENERGY)
+      doSendMagicEffect(pos, 1)
 
       local peixe = 0
       local playerpos = getClosestFreeTile(cid, getThingPos(cid))
@@ -78,8 +78,10 @@ local function doFish(cid, pos, ppos, chance, interval, number)
 	     doPlayerAddSkillTry(cid, 6, bonus)
       end
 		 randomfish = fishes[math.random(#fishes)]
+         if not playerpos then return true end
+         if not randomfish then return true end
 	     peixe = doSummonCreature(randomfish, playerpos)
-		 doSendMagicEffect(pos, CONST_ME_WATERSPLASH)
+		 doSendMagicEffect(pos, 53)
 		 if not isCreature(peixe) then
 		    return true
 		 end

@@ -31,8 +31,8 @@
         </attack>
         <attack name="Fire Fang" interval="2852" chance="29" range="1">
         </attack>
-        <attack name="Slash" interval="2946" chance="28" range="1">
-        </attack>
+        <!-- <attack name="Slash" interval="2946" chance="28" range="1"> -->
+        <!-- </attack> -->
 </attacks>
 
 

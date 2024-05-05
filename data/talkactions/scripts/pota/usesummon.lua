@@ -1,6 +1,6 @@
 function onSay(player, words, param)
 	if player:isSummonBlocked() then return false end
-    if player:getStorageValue(storageGoback) > 0 then return false end
+    -- if player:getStorageValue(storageGoback) > 0 then return false end
 	local index = tonumber(param)
 	if not index then return false end
 	local pokeballs = player:getPokeballs()

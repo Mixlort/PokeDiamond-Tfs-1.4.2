@@ -42,6 +42,9 @@ function onCastSpell(cid, var)
     --alterado v1.7
 	local function doRockFall(cid, frompos, target)
 		if not isCreature(target) or not isCreature(cid) then return true end
+        if not isOnline(cid) or not isOnline(target) then return true end
+        if isNumber(cid) then cid = Creature(cid) end
+        if isNumber(target) then target = Creature(target) end
 		local pos = getThingPosWithDebug(target)
 		local ry = math.abs(frompos.y - pos.y)
 		doSendDistanceShoot(frompos, getThingPosWithDebug(target), effD)
@@ -50,6 +53,9 @@ function onCastSpell(cid, var)
 
 	local function doRockUp(cid, target)
 		if not isCreature(target) or not isCreature(cid) then return true end
+        if not isOnline(cid) or not isOnline(target) then return true end
+        if isNumber(cid) then cid = Creature(cid) end
+        if isNumber(target) then target = Creature(target) end
 		local pos = getThingPosWithDebug(target)
 		local mps = getThingPosWithDebug(cid)
 		local xrg = math.floor((pos.x - mps.x) / 2)

@@ -26,7 +26,7 @@
         <attack name="Ember" interval="2664" chance="30" range="4" />
         <attack name="Fireball" interval="3040" chance="28" range="4" />
         <attack name="Fire Fang" interval="2852" chance="29" range="1" />
-        <attack name="Slash" interval="2946" chance="28" range="1" />
+        <!-- <attack name="Slash" interval="2946" chance="28" range="1" /> -->
         <attack name="Flamethrower" interval="3510" chance="25" range="6" />
     </attacks>
     <defenses armor="0" defense="0" />

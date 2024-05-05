@@ -33,6 +33,9 @@ function onCastSpell(cid, var)
 
 	local function sendSwift(cid, target)
 		if not isCreature(cid) or not isCreature(target) then return true end
+        if not isOnline(cid) or not isOnline(target) then return true end
+        if isNumber(cid) then cid = Creature(cid) end
+        if isNumber(target) then target = Creature(target) end
 	   doSendDistanceShoot(getThingPosWithDebug(cid), getThingPosWithDebug(target), 32)
 	   doDanoInTargetWithDelay(cid, target, NORMALDAMAGE, min, max, 3)   --alterado v1.7
 	end

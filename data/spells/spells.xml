@@ -89,7 +89,7 @@
 	<instant name="Poison Bomb" words="spell086" params="1" cooldown="1000" mana="0" needlearn="0" script="Poison Bomb.lua"></instant>
 	<instant name="Poison Gas" words="spell087" params="1" cooldown="1000" mana="0" needlearn="0" script="Poison Gas.lua"></instant>
 	<instant name="Petal Dance" words="spell088" params="1" cooldown="1000" mana="0" needlearn="0" script="Petal Dance.lua"></instant>
-	<instant name="Slash" words="spell089" params="1" cooldown="1000" mana="0" needlearn="0" script="Slash.lua"></instant>
+	<!-- <instant name="Slash" words="spell089" params="1" cooldown="1000" mana="0" needlearn="0" script="Slash.lua"></instant> -->
 	<instant name="X-Scissor" words="spell090" params="1" cooldown="1000" mana="0" needlearn="0" script="X-Scissor.lua"></instant>
 	<instant name="Psychic" words="spell091" params="1" cooldown="1000" mana="0" needlearn="0" script="Psychic.lua"></instant>
 	<instant name="Pay Day" words="spell092" params="1" cooldown="1000" mana="0" needlearn="0" script="Pay Day.lua"></instant>
@@ -190,7 +190,7 @@
 	<instant name="Aromateraphy" words="spell196" params="1" cooldown="1000" mana="0" needlearn="0" script="Aromateraphy.lua"></instant>
 	<instant name="Assurance" words="spell197" params="1" cooldown="1000" mana="0" needlearn="0" script="Assurance.lua"></instant>
 	<instant name="Bug Fighter" words="spell198" params="1" cooldown="1000" mana="0" needlearn="0" script="Bug Fighter.lua"></instant>
-	<instant name="Camuflage" words="spell199" params="1" cooldown="1000" mana="0" needlearn="0" script="Camuflage.lua"></instant>
+	<!-- <instant name="Camuflage" words="spell199" params="1" cooldown="1000" mana="0" needlearn="0" script="Camuflage.lua"></instant> -->
 	<instant name="Charge" words="spell200" params="1" cooldown="1000" mana="0" needlearn="0" script="Charge.lua"></instant>
 	<instant name="Charm" words="spell201" params="1" cooldown="1000" mana="0" needlearn="0" script="Charm.lua"></instant>
 	<instant name="Confuse Ray" words="spell202" params="1" cooldown="1000" mana="0" needlearn="0" script="Confuse Ray.lua"></instant>
@@ -208,7 +208,7 @@
 	<instant name="Faint Attack" words="spell214" params="1" cooldown="1000" mana="0" needlearn="0" script="Faint Attack.lua"></instant>
 	<instant name="Feather Dance" words="spell215" params="1" cooldown="1000" mana="0" needlearn="0" script="Feather Dance.lua"></instant>
 	<instant name="Fighter Spirit" words="spell216" params="1" cooldown="1000" mana="0" needlearn="0" script="Fighter Spirit.lua"></instant>
-	<instant name="Future Sight" words="spell217" params="1" cooldown="1000" mana="0" needlearn="0" script="Future Sight.lua"></instant>
+	<!-- <instant name="Future Sight" words="spell217" params="1" cooldown="1000" mana="0" needlearn="0" script="Future Sight.lua"></instant> -->
 	<instant name="Giga Drain" words="spell218" params="1" cooldown="1000" mana="0" needlearn="0" script="Giga Drain.lua"></instant>
 	<instant name="Hurricane" words="spell219" params="1" cooldown="1000" mana="0" needlearn="0" script="Hurricane.lua"></instant>
 	<instant name="Ice Fang" words="spell220" params="1" cooldown="1000" mana="0" needlearn="0" script="Ice Fang.lua"></instant>
@@ -311,8 +311,8 @@
 	<instant name="Wind Rage" words="spell315" params="1" cooldown="1000" mana="0" needlearn="0" script="Wind Rage.lua"></instant>
 	
 	<instant name="Damange Stom" words="spell316" lvl="100" mana="0" needlearn="0" script="Damange Stom.lua"></instant>
-	<instant name="Univers loon" words="spell317" lvl="100" mana="0" needlearn="0" script="Univers loon.lua"></instant>
-	<instant name="Meteor Fire" words="spell318" lvl="100" mana="0" needlearn="0" script="Meteor Fire.lua"></instant>
+	<!-- <instant name="Univers loon" words="spell317" lvl="100" mana="0" needlearn="0" script="Univers loon.lua"></instant> -->
+	<!-- <instant name="Meteor Fire" words="spell318" lvl="100" mana="0" needlearn="0" script="Meteor Fire.lua"></instant> -->
 
 	<instant name="Punch Flames" words="spell319" params="1" cooldown="1000" mana="0" needlearn="0" script="Punch Flames.lua"></instant>
 	<instant name="Sweet Kiss" words="spell320" params="1" cooldown="1000" mana="0" needlearn="0" script="Sweet Kiss.lua"></instant>

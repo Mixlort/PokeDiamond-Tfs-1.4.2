@@ -33,11 +33,15 @@ function onCastSpell(cid, var)
 
 	local function sendStickEff(cid, dir)
     	if not isCreature(cid) then return true end
-       doAreaCombatHealth(cid, GROUNDDAMAGE, getPosByDir(getThingPosWithDebug(cid), dir), 0, -min, -max, 227)
+        if not isOnline(cid) then return true end
+        if isNumber(cid) then cid = Creature(cid) end
+       doAreaCombatHealth(cid, GROUNDDAMAGE, getPositionByDirection(getThingPosWithDebug(cid), dir), 0, -min, -max, 227)
 	end
 
 	local function doStick(cid)
 		if not isCreature(cid) then return true end
+        if not isOnline(cid) then return true end
+        if isNumber(cid) then cid = Creature(cid) end
 		local t = {
 	      [1] = SOUTHWEST,
 	      [2] = SOUTH,

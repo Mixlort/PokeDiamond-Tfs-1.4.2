@@ -393,3 +393,77 @@ function doMathDecimal(number, casas)
 return number
 end
 
+function doEvolvePokemon(cid, item2, theevo, stone1, stone2)
+
+	if not isCreature(cid) then return true end
+
+	if not pokes[theevo] or not pokes[theevo].offense then
+	doReturnPokemon(cid, item2.uid, getPlayerSlotItem(cid, 8), pokeballs[getPokeballType(getPlayerSlotItem(cid, 8).itemid)].effect, false, true)
+	return true
+	end
+
+	local owner = getCreatureMaster(item2.uid)
+	local pokeball = getPlayerSlotItem(cid, 8)
+	local description = "Contains a "..theevo.."."
+	local pct = getCreatureHealth(item2.uid) / getCreatureMaxHealth(item2.uid)
+
+		doItemSetAttribute(pokeball.uid, "pokeHealth", pct)
+
+		doItemSetAttribute(pokeball.uid, "pokeName", theevo)
+		-- doItemSetAttribute(pokeball.uid, "description", "Contains a "..theevo..".")
+
+		doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Congratulations! Your "..getPokeName(item2.uid).." evolved into a "..theevo.."!")		
+
+		doSendMagicEffect(getThingPos(item2.uid), 18)
+		-- doTransformItem(getPlayerSlotItem(cid, 7).uid, fotos[theevo])
+		doSendMagicEffect(getThingPos(cid), 173)
+
+		local oldpos = getThingPos(item2.uid)
+		local oldlod = getCreatureLookDir(item2.uid)
+
+        local ballKey = pokeball:getSpecialAttribute("ballKey") or "normal"
+        transformBallItem(pokeball.uid, STATUS_BALL_USE, ballKey) 
+        cid:setStorageValue(storageGoback, 1)
+
+		doRemoveCreature(item2.uid)
+        -- doRemoveSummon(cid, false, nil, false)
+        -- local pk = doReleaseSummon(cid, oldpos, false, false, false, true)
+		doSummonMonster(cid, theevo)
+
+		local pk = getCreatureSummons(cid)[1]
+        adjustStatus(pk, pokeball, true, true, true)
+        local statusSummon = getStatus(pk)
+        local maxHealth = statusSummon.life
+        local health = maxHealth
+        pokeball:setSpecialAttribute("pokeHealth", health)
+        pokeball:setSpecialAttribute("pokeMaxHealth", maxHealth)
+        if pk and isCreature(pk) and isOnline(pk) then
+            pk = Creature(pk)
+        end
+        pk:setMaxHealth(maxHealth)
+        pk:setHealth(health)
+        pk:changeSpeed( ( -pk:getSpeed() + statusSummon.speed ) )
+
+		doTeleportThing(pk, oldpos, false)
+		doCreatureSetLookDir(pk, oldlod)
+
+		sendFinishEvolutionEffect(pk, true)
+		addEvent(sendFinishEvolutionEffect, 550, pk:getId(), true)
+		addEvent(sendFinishEvolutionEffect, 1050, pk:getId())
+		
+		doPlayerRemoveItem(cid, stone1, 1)
+		doPlayerRemoveItem(cid, stone2, 1)
+
+		doAddPokemonInOwnList(cid, theevo)
+        local ball = getPlayerSlotItem(cid, 8)
+        if not ball then return true end
+        ball:setSpecialAttribute("isBeingUsed", 1)
+        cid:pokeBarUpdatePoke(ball)
+        -- cid:setStorageValue(storageEvolving, 0)
+
+		-- adjustStatus(pk, pokeball.uid, true, false)
+
+		if useKpdoDlls then
+			doUpdateMoves(cid)
+		end
+end

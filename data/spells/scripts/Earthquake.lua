@@ -35,6 +35,8 @@ function onCastSpell(cid, var)
 	 
 	local function doQuake(cid)
 		if not isCreature(cid) then return false end
+        if not isOnline(cid) then return true end
+        if isNumber(cid) then cid = Creature(cid) end
 	   	doMoveInArea2(cid, eff, ee, GROUNDDAMAGE, min, max, spell)
 	end
 

@@ -33,6 +33,8 @@ function onCastSpell(cid, var)
 
 	local function doHealAreatru(alejadao, minimo, maximo, dono)
 	if not isCreature(alejadao) then return true end
+    if not isOnline(alejadao) then return true end
+    if isNumber(alejadao) then alejadao = Creature(alejadao) end
 	if getPlayerStorageValue(getCreatureMaster(alejadao), 151141) > 0 then
 	local EventStart = addEvent(doHealAreatru, 5000, alejadao:getId(), math.random(100,200), math.random(400,1000))
 	setPlayerStorageValue(getCreatureMaster(alejadao), 151141, getPlayerStorageValue(getCreatureMaster(alejadao), 151141) - 1)
@@ -71,6 +73,8 @@ function onCastSpell(cid, var)
     end
 	end
 	local function checkHealtru(alejadinho)
+        if not isOnline(alejadinho) then return true end
+        if isNumber(alejadinho) then alejadinho = Creature(alejadinho) end
 	if #getCreatureSummons(alejadinho) == 1 then
 		 doSendMagicEffect(getThingPosWithDebug(cid), 14)
 		 setPlayerStorageValue(alejadinho, 151141, 25)

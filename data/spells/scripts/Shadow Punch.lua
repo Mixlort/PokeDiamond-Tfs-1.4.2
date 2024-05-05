@@ -36,6 +36,9 @@ function onCastSpell(cid, var)
 
 	local function doPunch(cid, target)
 		if not isCreature(cid) or not isCreature(target) then return true end
+        if not isOnline(cid) or not isOnline(target) then return true end
+        if isNumber(cid) then cid = Creature(cid) end
+        if isNumber(target) then target = Creature(target) end
 	       doAreaCombatHealth(cid, ghostDmg, getThingPosWithDebug(target), 0, -min, -max, 255)
 	       pos.x = pos.x + 1
 	       doSendMagicEffect(pos, 140)

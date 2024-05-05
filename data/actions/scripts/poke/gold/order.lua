@@ -1,5 +1,7 @@
 local function doExecuteAction(func, pokemon, pos, param, limit)
-	local pokemon = Creature(pokemon)
+	if not isOnline(pokemon) then return false end
+    local pokemon = Creature(pokemon)
+    if not pokemon then return false end
 	if pokemon:isCreature() then
 		if pokemon:moveTo(pos, 0, 1) then
 			if getDistanceBetween(pokemon:getPosition(), pos) == 1 then
@@ -41,6 +43,10 @@ end
 local function doMoveToPlayer(pokemon, pos, param, limit)
 	local pokemon = Creature(pokemon)
 	local player = Creature(param.player)
+    if player:getStorageValue(storageBike) == 1 then
+        player:sendCancelMessage("Você não pode usar habilidades com a bike no slot.")
+        return true
+    end
 	if pokemon:isCreature() and player:isCreature() then
 		if getDistanceBetween(player:getPosition(), pokemon:getPosition()) <= 1 then
             local ball = player:getUsingBall()

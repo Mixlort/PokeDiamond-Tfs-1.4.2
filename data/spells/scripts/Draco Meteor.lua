@@ -37,6 +37,8 @@ function onCastSpell(cid, var)
 
 	local function doFall(cid)
         if not isOnline(cid) then return true end
+        if not isOnline(cid) then return true end
+        if isNumber(cid) then cid = Creature(cid) end
         if isNumber(cid) then cid = Creature(cid) end   
 		for rocks = 5, 42 do
 		    addEvent(fall, rocks*35, cid:getId(), master:getId(), DRAGONDAMAGE, effD, eff)

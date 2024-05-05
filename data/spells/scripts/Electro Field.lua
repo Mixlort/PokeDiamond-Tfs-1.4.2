@@ -76,18 +76,24 @@ function onCastSpell(cid, var)
 
 	local function sendDist(cid, posi1, posi2, eff, delay)
 		if posi1 and posi2 and isCreature(cid) then
+            if not isOnline(cid) then return true end
+            if isNumber(cid) then cid = Creature(cid) end
 		   addEvent(sendDistanceShootWithProtect, delay, cid:getId(), posi1, posi2, eff)   --alterado v1.6
 		end
 	end
 	                                                               
 	local function sendDano(cid, pos, eff, delay, min, max)
 		if pos and isCreature(cid) then
+            if not isOnline(cid) then return true end
+            if isNumber(cid) then cid = Creature(cid) end
 		   addEvent(doDanoWithProtect, delay, cid:getId(), atk[spell][3], pos, 0, -min, -max, eff)  --alterado v1.6
 		end
 	end
 
 	local function doTornado(cid)
 		if isCreature(cid) then
+            if not isOnline(cid) then return true end
+            if isNumber(cid) then cid = Creature(cid) end
 			for j = 1, 4 do
 			   for i = 1, 6 do                                                  --41/207  -- 14/54
 			       	addEvent(sendDist, 350, cid:getId(), pos1[j][i], pos1[j][i+1], atk[spell][1], i*330)

@@ -35,6 +35,9 @@ function onCastSpell(cid, var)
 
 	local function throw(cid, target)
 		if not isCreature(cid) or not isCreature(target) then return false end
+        if not isOnline(cid) or not isOnline(target) then return true end
+        if isNumber(cid) then cid = Creature(cid) end
+        if isNumber(target) then target = Creature(target) end
 	    doSendDistanceShoot(getThingPosWithDebug(cid), getThingPosWithDebug(target), eff)
 		doDanoInTargetWithDelay(cid, target, GRASSDAMAGE, min, max, 245)  --alterado v1.7
 	end

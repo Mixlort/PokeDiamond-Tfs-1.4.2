@@ -168,14 +168,8 @@ function doCapturePokemon(cid, poke, ballid, status, typeee)
 		setPlayerStorageStringValue(cid, 54843, getPlayerStorageStringValue(cid, 54843) + 1)
 	end
 
+    doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Parabens, voce capturou um ("..poke..")!")
     addPokeToPlayer(cid, poke, 0, nil, ballid)
-
-    if (getPlayerFreeCap(cid) >= 6 and not isInArray({5, 6}, getPlayerGroupId(cid))) or not hasSpaceInContainer(getPlayerSlotItem(cid, 3).uid) then   
-		doPlayerSendTextMessage(cid, 27, "Parabens, voce capturou um ("..poke..")!")
-		doPlayerSendTextMessage(cid, 27, "Since you are already holding six pokemons, this pokeball has been sent to your depot.")     
-    else
-		doPlayerSendTextMessage(cid, 27, "Parabens, voce capturou um ("..poke..")!")
-    end
 
     local storage = newpokedex[poke].stoCatch   
     sendBrokesMsg(cid, storage, typeee)             

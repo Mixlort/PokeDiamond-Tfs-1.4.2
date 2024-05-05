@@ -3,11 +3,15 @@ if isSummon(cid) then return true end
 
 local function nois(cid, s)
 if not isCreature(cid) then return true end
+if not isOnline(cid) then return true end
+if isNumber(cid) then cid = Creature(cid) end
     doChangeSpeed(cid, s)
 end
 
 local function doTeam(cid, a, eff, posis, target)
 if isCreature(cid) then
+    if not isOnline(cid) then return true end
+    if isNumber(cid) then cid = Creature(cid) end
    doDisapear(cid)
    doChangeSpeed(cid, -a)
    addEvent(doSendMagicEffect, 300, posis, 211)

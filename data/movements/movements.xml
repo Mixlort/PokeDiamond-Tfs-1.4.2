@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <movements>
-    <movevent event="Equip" itemid="39855" slot="ammo" script="mixlort/bikeNormal.lua" />
-    <movevent event="DeEquip" itemid="39855" slot="ammo" script="mixlort/bikeNormal.lua" /> 
-    <movevent event="Equip" itemid="39853" slot="ammo" script="mixlort/bikeFire.lua" />
-    <movevent event="DeEquip" itemid="39853" slot="ammo" script="mixlort/bikeFire.lua" />   
-    <movevent event="Equip" itemid="39852" slot="ammo" script="mixlort/bikeLeaf.lua" />
-    <movevent event="DeEquip" itemid="39852" slot="ammo" script="mixlort/bikeLeaf.lua" />   
-    <movevent event="Equip" itemid="39856" slot="ammo" script="mixlort/bikeThunder.lua" />
-    <movevent event="DeEquip" itemid="39856" slot="ammo" script="mixlort/bikeThunder.lua" />    
-    <movevent event="Equip" itemid="39851" slot="ammo" script="mixlort/bikeWater.lua" />
-    <movevent event="DeEquip" itemid="39851" slot="ammo" script="mixlort/bikeWater.lua" />  
-    <movevent event="Equip" itemid="27634" slot="ammo" script="mixlort/bikeInicial.lua" />
-    <movevent event="DeEquip" itemid="27634" slot="ammo" script="mixlort/bikeInicial.lua" />    
+    <!-- <movevent event="Equip" itemid="12774" slot="feet" script="mixlort/bikeNormal.lua" />
+    <movevent event="DeEquip" itemid="12774" slot="feet" script="mixlort/bikeNormal.lua" /> 
+    <movevent event="Equip" itemid="12938" slot="feet" script="mixlort/bikeFire.lua" />
+    <movevent event="DeEquip" itemid="12938" slot="feet" script="mixlort/bikeFire.lua" />   
+    <movevent event="Equip" itemid="12937" slot="feet" script="mixlort/bikeLeaf.lua" />
+    <movevent event="DeEquip" itemid="12937" slot="feet" script="mixlort/bikeLeaf.lua" />   
+    <movevent event="Equip" itemid="12935" slot="feet" script="mixlort/bikeThunder.lua" />
+    <movevent event="DeEquip" itemid="12935" slot="feet" script="mixlort/bikeThunder.lua" />    
+    <movevent event="Equip" itemid="12936" slot="feet" script="mixlort/bikeWater.lua" />
+    <movevent event="DeEquip" itemid="12936" slot="feet" script="mixlort/bikeWater.lua" />   -->
+    <movevent event="Equip" itemid="12774;12938;12937;12935;12936" slot="feet" script="mixlort/bikes.lua" />
+    <movevent event="DeEquip" itemid="12774;12938;12937;12935;12936" slot="feet" script="mixlort/bikes.lua" /> 
+
+    
     <!-- gold -->
 	<!-- <movevent event="StepIn" itemid="4820-4825;11756" script="gold/surf.lua"/> -->
 	<!-- <movevent event="StepOut" itemid="4820-4825;11756" script="gold/surf.lua"/> -->

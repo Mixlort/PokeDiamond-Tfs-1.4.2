@@ -52,9 +52,11 @@ function onCastSpell(cid, var)
       
       local function sendFireEff(cid, dir, eff, damage)
             if not isCreature(cid) then return true end
-            doAreaCombatHealth(cid, damage, getPosByDir(getThingPos(cid), dir), 0, -min, -max, eff)
+            if not isOnline(cid) then return true end
+            if isNumber(cid) then cid = Creature(cid) end
+            doAreaCombatHealth(cid, damage, getPositionByDirection(getThingPos(cid), dir), 0, -min, -max, eff)
             
-            local pid = getThingFromPosWithProtect(getPosByDir(getThingPos(cid), dir))  --alterado v1.6
+            local pid = getThingFromPosWithProtect(getPositionByDirection(getThingPos(cid), dir))  --alterado v1.6
             
             if isCreature(pid) and not isNpc(pid) and tabela[2] == ELECTRICDAMAGE and canDoStun then
                local ret = {}
@@ -71,6 +73,8 @@ function onCastSpell(cid, var)
 
 	  local function doSpinFire(cid)
 	  if not isCreature(cid) then return true end
+      if not isOnline(cid) then return true end
+      if isNumber(cid) then cid = Creature(cid) end
 	  local t = {
 	      [1] = SOUTH,
 	      [2] = SOUTHEAST,

@@ -33,6 +33,8 @@ function onCastSpell(cid, var)
 
    local function RemoveTeam(cid)
    if isCreature(cid) then
+    if not isOnline(cid) then return true end
+    if isNumber(cid) then cid = Creature(cid) end
       local p = getThingPos(cid)
       doSendMagicEffect(p, 211)
       doRemoveCreature(cid)
@@ -41,6 +43,8 @@ function onCastSpell(cid, var)
    
    local function setGender(cid, gender)
          if not isCreature(cid) then return true end
+         if not isOnline(cid) then return true end
+         if isNumber(cid) then cid = Creature(cid) end
          doCreatureSetSkullType(cid, gender)
    end
          

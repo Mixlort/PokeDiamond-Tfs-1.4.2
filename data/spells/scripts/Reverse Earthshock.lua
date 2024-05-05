@@ -38,10 +38,14 @@ function onCastSpell(cid, var)
 	sendEffWithProtect(cid, p, 151)   --send eff
 
 	local function doDano(cid)
+        if not isOnline(cid) then return true end
+        if isNumber(cid) then cid = Creature(cid) end
 		local pos = getThingPosWithDebug(cid)
 
 	    local function doSendBubble(cid, pos)
 			if not isCreature(cid) then return true end
+            if not isOnline(cid) then return true end
+            if isNumber(cid) then cid = Creature(cid) end
 			doSendDistanceShoot(getThingPosWithDebug(cid), pos, 39)
 			doSendMagicEffect(pos, 239)
 		end

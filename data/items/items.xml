@@ -23135,23 +23135,23 @@
 	</item>
 	<item id="12774" article="your" name="Bike">
 		
-		<attribute key="slotType" value="ring" />
+		<attribute key="slotType" value="feet" />
 	</item>
 	<item id="12935" article="your" name="Bike Thunder">
 		
-		<attribute key="slotType" value="ring" />
+		<attribute key="slotType" value="feet" />
 	</item>
 	<item id="12937" article="your" name="Bike Leaf">
 		
-		<attribute key="slotType" value="ring" />
+		<attribute key="slotType" value="feet" />
 	</item>
 	<item id="12938" article="your" name="Bike Fire">
 		
-		<attribute key="slotType" value="ring" />
+		<attribute key="slotType" value="feet" />
 	</item>
 	<item id="12936" article="your" name="Bike Water">
 		
-		<attribute key="slotType" value="ring" />
+		<attribute key="slotType" value="feet" />
 	</item>
 	<item id="12939" article="your" name="Bike Box">
 		

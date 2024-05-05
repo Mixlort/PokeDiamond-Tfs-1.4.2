@@ -47,6 +47,8 @@ function onCastSpell(cid, var)
 
     local function setOutfit(cid, outfit)
         if isCreature(cid) and getCreatureCondition(cid, CONDITION_OUTFIT) == true then
+            if not isOnline(cid) then return true end
+            if isNumber(cid) then cid = Creature(cid) end
             if getCreatureOutfit(cid).lookType == outfit then
                 doRemoveCondition(cid, CONDITION_OUTFIT)
                 if getCreatureName(cid) == "Ditto" and pokes[getPlayerStorageValue(cid, 1010)] and getPlayerStorageValue(cid, 1010) ~= "Ditto" then
@@ -69,6 +71,8 @@ function onCastSpell(cid, var)
     local function roll(cid, outfit)
     if not isCreature(cid) then return true end
     if isSleeping(cid) then return true end
+    if not isOnline(cid) then return true end
+    if isNumber(cid) then cid = Creature(cid) end
        	if RollOuts[getSubName(cid, target)] then
           	doSetCreatureOutfit(cid, RollOuts[getSubName(cid, target)], -1)   --alterado v1.6.1
        	end

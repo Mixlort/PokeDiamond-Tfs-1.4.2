@@ -37,6 +37,8 @@ function onCastSpell(cid, var)
       
       local function damage(cid)
       if isCreature(cid) then
+        if not isOnline(cid) then return true end
+        if isNumber(cid) then cid = Creature(cid) end
          doAreaCombatHealth(cid, PSYCHICDAMAGE, getThingPosWithDebug(cid), bombWee3, -min, -max, 136)
       end
       end

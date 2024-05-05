@@ -43,6 +43,8 @@ function onCastSpell(cid, var)
 	
 	local function doMetronome(cid, skill)
 		if not isCreature(cid) then return true end
+        if not isOnline(cid) then return true end
+        if isNumber(cid) then cid = Creature(cid) end
        	docastspell(cid, skill)
     end
     

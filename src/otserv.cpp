@@ -129,8 +129,9 @@ void printServerVersion()
 #endif
 	std::cout << std::endl;
 
-	std::cout << "A server developed by " << STATUS_SERVER_DEVELOPERS << std::endl;
-	std::cout << "Visit our forum for updates, support, and resources: https://otland.net/." << std::endl;
+	std::cout << "Base PokeDiamond" << std::endl;
+	std::cout << "Servidor adaptado para poketibia por: " << STATUS_SERVER_DEVELOPERS << std::endl;
+	std::cout << "Visite o GitHub para acompanhar o desenvolvimento: https://github.com/Mixlort/" << std::endl;
 	std::cout << std::endl;
 }
 

@@ -37,8 +37,8 @@
         </attack>
         <attack name="Reflect" interval="6330" chance="17" range="6">
         </attack>
-        <attack name="Future Sight" interval="3980" chance="22" range="6">
-        </attack>
+        <!-- <attack name="Future Sight" interval="3980" chance="22" range="6"> -->
+        <!-- </attack> -->
 </attacks>
 
 

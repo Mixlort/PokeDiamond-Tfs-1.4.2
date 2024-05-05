@@ -54,14 +54,14 @@ if (not hitmonlees[nome] and isCreature(target)) or (isCreature(target) and math
       
       local function doChangeHitmon(cid)
       if not isCreature(cid) then return true end
+      if not isOnline(cid) then return true end
+      if isNumber(cid) then cid = Creature(cid) end
          setPlayerStorageValue(cid, 32623, 0)         --proteçao
          local monsterType = MonsterType(getCreatureName(cid))
-         if isSleeping(cid) and monsterType:getOutfit() ~= 0 and not isMega(cid) then
+         if isSleeping(cid) and monsterType:getOutfit() ~= 0 then
             doSetCreatureOutfit(cid, {lookType = 0, lookTypeEx = monsterType:getOutfit()}, -1)
          else
-            if not isMega(cid) then
             doRemoveCondition(cid, CONDITION_OUTFIT)
-            end
          end
       end            
        

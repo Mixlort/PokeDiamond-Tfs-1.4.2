@@ -427,7 +427,7 @@ end
 
 function Player:onGainExperience(source, exp, rawExp)
     local bonusExp = 1 -- bonus de algum evento
-    local multiplierExp = 1 -- 2 -- how many times more exp than players a monster will get
+    local multiplierExp = 2 -- 2 -- how many times more exp than players a monster will get
     if not source then return exp end
 
 	-- Apply experience stage multiplier

@@ -33,6 +33,8 @@ function onCastSpell(cid, var)
 
 	local function doPulse(cid, eff)
 	if not isCreature(cid) or not isCreature(target) then return true end
+    if not isOnline(cid) then return true end
+    if isNumber(cid) then cid = Creature(cid) end
 	   doSendDistanceShoot(getThingPosWithDebug(cid), getThingPosWithDebug(target), 9)
 	   doDanoInTargetWithDelay(cid, target, FLYINGDAMAGE, -min, -max, eff)   --alterado v1.7
 	end

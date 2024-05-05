@@ -43,6 +43,8 @@ function onCastSpell(cid, var)
 
 	local function sendAtk(cid)
 		if isCreature(cid) then 
+            if not isOnline(cid) then return true end
+            if isNumber(cid) then cid = Creature(cid) end
 			doRemoveCondition(cid, CONDITION_OUTFIT)
 			setPlayerStorageValue(cid, 9658783, -1)  
 			for i = 0, 4 do

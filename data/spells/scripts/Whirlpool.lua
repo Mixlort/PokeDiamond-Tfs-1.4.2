@@ -33,12 +33,16 @@ function onCastSpell(cid, var)
 
 	local function setSto(cid)
 		if isCreature(cid) then
+            if not isOnline(cid) then return true end
+            if isNumber(cid) then cid = Creature(cid) end
 		   setPlayerStorageValue(cid, 3644587, -1)
 		end
 	end
 
 	local function doDano(cid)
 		if isSleeping(cid) then return true end
+        if not isOnline(cid) then return true end
+        if isNumber(cid) then cid = Creature(cid) end
 	      doDanoWithProtect(cid, WATERDAMAGE, getThingPosWithDebug(cid), splash, min, max, 89)
 	end
 

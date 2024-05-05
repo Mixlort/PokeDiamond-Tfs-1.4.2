@@ -18,5 +18,8 @@ function onLogout(player)
         player:changeSpeed(-player:getStorageValue(storageBike))
         player:setStorageValue(storageBike, -1)
     end
+
+    player:setStorageValue(storages.logNow, 1)
+
 	return true
 end

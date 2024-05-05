@@ -37,6 +37,8 @@ function onCastSpell(cid, var)
 
 	local function doSendLeafStorm(cid, pos)              --alterado!!
 		if not isCreature(cid) then return true end
+        if not isOnline(cid) then return true end
+        if isNumber(cid) then cid = Creature(cid) end
 	    doSendDistanceShoot(getThingPosWithDebug(cid), pos, 8)
 	end
 

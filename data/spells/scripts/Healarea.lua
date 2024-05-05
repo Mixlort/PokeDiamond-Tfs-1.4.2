@@ -35,6 +35,8 @@ function onCastSpell(cid, var)
 	local max = (getCreatureMaxHealth(cid) * math.random(50,75)) / 100
     
     local function doHealArea(cid, minimo, maximo)
+        if not isOnline(cid) then return true end
+        if isNumber(cid) then cid = Creature(cid) end
 	    local amount = math.random(minimo, maximo)
 	    if (getCreatureHealth(cid) + amount) >= getCreatureMaxHealth(cid) then
 	        amount = -(getCreatureHealth(cid)-getCreatureMaxHealth(cid))

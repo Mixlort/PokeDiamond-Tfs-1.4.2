@@ -40,6 +40,8 @@ function onCastSpell(cid, var)
 
 	local function divineBack(cid)
 		if not isCreature(cid) then return true end
+        if not isOnline(cid) then return true end
+        if isNumber(cid) then cid = Creature(cid) end
 		local uid = checkAreaUid(getCreaturePosition(cid), check, 1, 1)
 		for _,pid in pairs(uid) do
 		    dirrr = getCreatureDirectionToTarget(pid, cid)
@@ -66,6 +68,8 @@ function onCastSpell(cid, var)
 
 	local function doDivine(cid, min, max, spell, rounds, area)
 		if not isCreature(cid) then return true end
+        if not isOnline(cid) then return true end
+        if isNumber(cid) then cid = Creature(cid) end
 		local ret = {}
 		ret.id = 0
 		ret.check = 0

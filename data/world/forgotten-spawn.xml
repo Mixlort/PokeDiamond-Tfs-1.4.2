@@ -1,9 +1,6 @@
 <?xml version="1.0"?>
 <spawns>
 	<spawn centerx="708" centery="1310" centerz="1" radius="1" />
-	<spawn centerx="692" centery="1311" centerz="1" radius="1">
-		<npc name="Blaine" x="-1" y="0" z="1" spawntime="10" />
-	</spawn>
 	<spawn centerx="1829" centery="1818" centerz="1" radius="30" />
 	<spawn centerx="1108" centery="803" centerz="2" radius="5">
 		<monster name="Electabuzz" x="-2" y="-2" z="2" spawntime="60" />
@@ -1309,9 +1306,6 @@
 	<spawn centerx="1230" centery="1022" centerz="5" radius="5">
 		<monster name="Machoke" x="-1" y="2" z="5" spawntime="60" />
 	</spawn>
-	<spawn centerx="1078" centery="1028" centerz="5" radius="5">
-		<npc name="Sabrina" x="0" y="-3" z="5" spawntime="60" />
-	</spawn>
 	<spawn centerx="1235" centery="1033" centerz="5" radius="5">
 		<monster name="Machoke" x="2" y="-4" z="5" spawntime="60" />
 		<monster name="Machop" x="1" y="0" z="5" spawntime="60" />
@@ -2519,9 +2513,6 @@
 	</spawn>
 	<spawn centerx="1139" centery="877" centerz="6" radius="7">
 		<monster name="Dugtrio" x="-2" y="1" z="6" spawntime="60" />
-	</spawn>
-	<spawn centerx="1078" centery="878" centerz="6" radius="3">
-		<npc name="Misty" x="-1" y="-1" z="6" spawntime="5" />
 	</spawn>
 	<spawn centerx="1044" centery="880" centerz="6" radius="1">
 		<npc name="Torneio" x="0" y="0" z="6" spawntime="61" />
@@ -5359,26 +5350,26 @@
 		<monster name="Drowzee" x="21" y="-15" z="7" spawntime="60" />
 		<monster name="Graveler" x="-1" y="-14" z="7" spawntime="60" />
 		<monster name="Kadabra" x="14" y="-14" z="7" spawntime="60" />
-		<npc name="Abra" x="15" y="-14" z="7" spawntime="60" />
+		<monster name="Abra" x="15" y="-14" z="7" spawntime="60" />
 		<monster name="Geodude" x="-11" y="-12" z="7" spawntime="60" />
 		<monster name="Graveler" x="-18" y="-11" z="7" spawntime="60" />
 		<monster name="Geodude" x="4" y="-11" z="7" spawntime="60" />
 		<monster name="Geodude" x="-22" y="-8" z="7" spawntime="60" />
 		<monster name="Rhyhorn" x="-22" y="-6" z="7" spawntime="60" />
 		<monster name="Drowzee" x="-3" y="-3" z="7" spawntime="60" />
-		<npc name="Abra" x="20" y="-2" z="7" spawntime="60" />
+		<monster name="Abra" x="20" y="-2" z="7" spawntime="60" />
 		<monster name="Drowzee" x="15" y="-1" z="7" spawntime="60" />
-		<npc name="Abra" x="-5" y="0" z="7" spawntime="60" />
+		<monster name="Abra" x="-5" y="0" z="7" spawntime="60" />
 		<monster name="Geodude" x="-19" y="2" z="7" spawntime="60" />
 		<monster name="Kadabra" x="-8" y="2" z="7" spawntime="60" />
-		<npc name="Abra" x="3" y="3" z="7" spawntime="60" />
+		<monster name="Abra" x="3" y="3" z="7" spawntime="60" />
 		<monster name="Graveler" x="-18" y="6" z="7" spawntime="60" />
 		<monster name="Drowzee" x="6" y="7" z="7" spawntime="60" />
-		<npc name="Abra" x="14" y="8" z="7" spawntime="60" />
+		<monster name="Abra" x="14" y="8" z="7" spawntime="60" />
 		<monster name="Graveler" x="-6" y="10" z="7" spawntime="60" />
 		<monster name="Drowzee" x="23" y="10" z="7" spawntime="60" />
 		<monster name="Geodude" x="-11" y="11" z="7" spawntime="60" />
-		<npc name="Abra" x="6" y="15" z="7" spawntime="60" />
+		<monster name="Abra" x="6" y="15" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="834" centery="825" centerz="7" radius="5" />
 	<spawn centerx="1043" centery="827" centerz="7" radius="2">
@@ -6662,28 +6653,28 @@
 	<spawn centerx="1650" centery="992" centerz="7" radius="3" />
 	<spawn centerx="2231" centery="992" centerz="7" radius="30">
 		<monster name="Alakazam" x="-25" y="-22" z="7" spawntime="60" />
-		<npc name="Abra" x="14" y="-19" z="7" spawntime="768" />
-		<npc name="Abra" x="4" y="-18" z="7" spawntime="60" />
-		<npc name="Abra" x="14" y="-18" z="7" spawntime="60" />
-		<npc name="Abra" x="-24" y="-15" z="7" spawntime="60" />
+		<monster name="Abra" x="14" y="-19" z="7" spawntime="768" />
+		<monster name="Abra" x="4" y="-18" z="7" spawntime="60" />
+		<monster name="Abra" x="14" y="-18" z="7" spawntime="60" />
+		<monster name="Abra" x="-24" y="-15" z="7" spawntime="60" />
 		<monster name="Drowzee" x="-2" y="-11" z="7" spawntime="60" />
 		<monster name="Drowzee" x="5" y="-7" z="7" spawntime="60" />
 		<monster name="Drowzee" x="12" y="-7" z="7" spawntime="60" />
-		<npc name="Abra" x="-12" y="-5" z="7" spawntime="60" />
+		<monster name="Abra" x="-12" y="-5" z="7" spawntime="60" />
 		<monster name="Drowzee" x="-6" y="-3" z="7" spawntime="60" />
-		<npc name="Abra" x="-15" y="0" z="7" spawntime="60" />
+		<monster name="Abra" x="-15" y="0" z="7" spawntime="60" />
 		<monster name="Drowzee" x="3" y="1" z="7" spawntime="60" />
 		<monster name="Drowzee" x="-2" y="7" z="7" spawntime="60" />
 		<monster name="Drowzee" x="6" y="8" z="7" spawntime="60" />
-		<npc name="Abra" x="0" y="16" z="7" spawntime="60" />
-		<npc name="Abra" x="20" y="19" z="7" spawntime="768" />
-		<npc name="Abra" x="22" y="20" z="7" spawntime="768" />
-		<npc name="Abra" x="23" y="20" z="7" spawntime="60" />
+		<monster name="Abra" x="0" y="16" z="7" spawntime="60" />
+		<monster name="Abra" x="20" y="19" z="7" spawntime="768" />
+		<monster name="Abra" x="22" y="20" z="7" spawntime="768" />
+		<monster name="Abra" x="23" y="20" z="7" spawntime="60" />
 		<monster name="Drowzee" x="19" y="21" z="7" spawntime="60" />
-		<npc name="Abra" x="-3" y="23" z="7" spawntime="60" />
-		<npc name="Abra" x="-30" y="24" z="7" spawntime="60" />
-		<npc name="Abra" x="-22" y="24" z="7" spawntime="60" />
-		<npc name="Abra" x="26" y="24" z="7" spawntime="60" />
+		<monster name="Abra" x="-3" y="23" z="7" spawntime="60" />
+		<monster name="Abra" x="-30" y="24" z="7" spawntime="60" />
+		<monster name="Abra" x="-22" y="24" z="7" spawntime="60" />
+		<monster name="Abra" x="26" y="24" z="7" spawntime="60" />
 		<monster name="Drowzee" x="-30" y="26" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="715" centery="993" centerz="7" radius="10">
@@ -6735,22 +6726,22 @@
 	<spawn centerx="908" centery="997" centerz="7" radius="5" />
 	<spawn centerx="1641" centery="998" centerz="7" radius="3" />
 	<spawn centerx="2190" centery="998" centerz="7" radius="30">
-		<npc name="Abra" x="9" y="-28" z="7" spawntime="60" />
-		<npc name="Abra" x="-1" y="-25" z="7" spawntime="60" />
-		<npc name="Abra" x="8" y="-25" z="7" spawntime="60" />
+		<monster name="Abra" x="9" y="-28" z="7" spawntime="60" />
+		<monster name="Abra" x="-1" y="-25" z="7" spawntime="60" />
+		<monster name="Abra" x="8" y="-25" z="7" spawntime="60" />
 		<monster name="Alakazam" x="3" y="-23" z="7" spawntime="60" />
 		<monster name="Alakazam" x="-3" y="-14" z="7" spawntime="60" />
-		<npc name="Abra" x="1" y="-14" z="7" spawntime="60" />
+		<monster name="Abra" x="1" y="-14" z="7" spawntime="60" />
 		<monster name="Alakazam" x="6" y="-14" z="7" spawntime="60" />
-		<npc name="Abra" x="-8" y="-13" z="7" spawntime="60" />
-		<npc name="Abra" x="9" y="-13" z="7" spawntime="60" />
-		<npc name="Abra" x="-17" y="13" z="7" spawntime="60" />
+		<monster name="Abra" x="-8" y="-13" z="7" spawntime="60" />
+		<monster name="Abra" x="9" y="-13" z="7" spawntime="60" />
+		<monster name="Abra" x="-17" y="13" z="7" spawntime="60" />
 		<monster name="Drowzee" x="-19" y="14" z="7" spawntime="60" />
-		<npc name="Abra" x="-27" y="19" z="7" spawntime="60" />
-		<npc name="Abra" x="2" y="19" z="7" spawntime="60" />
+		<monster name="Abra" x="-27" y="19" z="7" spawntime="60" />
+		<monster name="Abra" x="2" y="19" z="7" spawntime="60" />
 		<monster name="Drowzee" x="-25" y="25" z="7" spawntime="60" />
-		<npc name="Abra" x="-29" y="28" z="7" spawntime="60" />
-		<npc name="Abra" x="15" y="29" z="7" spawntime="60" />
+		<monster name="Abra" x="-29" y="28" z="7" spawntime="60" />
+		<monster name="Abra" x="15" y="29" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="1116" centery="1002" centerz="7" radius="5" />
 	<spawn centerx="1643" centery="1002" centerz="7" radius="30">
@@ -6833,9 +6824,9 @@
 		<npc name="Nurse" x="1" y="0" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="2243" centery="1009" centerz="7" radius="30">
-		<npc name="Abra" x="22" y="12" z="7" spawntime="60" />
-		<npc name="Abra" x="-7" y="24" z="7" spawntime="1024" />
-		<npc name="Abra" x="-7" y="25" z="7" spawntime="60" />
+		<monster name="Abra" x="22" y="12" z="7" spawntime="60" />
+		<monster name="Abra" x="-7" y="24" z="7" spawntime="1024" />
+		<monster name="Abra" x="-7" y="25" z="7" spawntime="60" />
 		<monster name="Drowzee" x="-8" y="27" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="704" centery="1010" centerz="7" radius="10">
@@ -7032,15 +7023,15 @@
 	<spawn centerx="1029" centery="1049" centerz="7" radius="5" />
 	<spawn centerx="677" centery="1050" centerz="7" radius="10" />
 	<spawn centerx="2163" centery="1050" centerz="7" radius="30">
-		<npc name="Abra" x="-16" y="-19" z="7" spawntime="60" />
-		<npc name="Abra" x="18" y="-17" z="7" spawntime="60" />
+		<monster name="Abra" x="-16" y="-19" z="7" spawntime="60" />
+		<monster name="Abra" x="18" y="-17" z="7" spawntime="60" />
 		<monster name="Drowzee" x="14" y="-14" z="7" spawntime="60" />
-		<npc name="Abra" x="-22" y="-13" z="7" spawntime="60" />
-		<npc name="Abra" x="9" y="-11" z="7" spawntime="60" />
-		<npc name="Abra" x="-8" y="-4" z="7" spawntime="60" />
-		<npc name="Abra" x="-15" y="5" z="7" spawntime="60" />
-		<npc name="Abra" x="-21" y="16" z="7" spawntime="60" />
-		<npc name="Abra" x="25" y="27" z="7" spawntime="60" />
+		<monster name="Abra" x="-22" y="-13" z="7" spawntime="60" />
+		<monster name="Abra" x="9" y="-11" z="7" spawntime="60" />
+		<monster name="Abra" x="-8" y="-4" z="7" spawntime="60" />
+		<monster name="Abra" x="-15" y="5" z="7" spawntime="60" />
+		<monster name="Abra" x="-21" y="16" z="7" spawntime="60" />
+		<monster name="Abra" x="25" y="27" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="786" centery="1052" centerz="7" radius="5" />
 	<spawn centerx="675" centery="1053" centerz="7" radius="10" />
@@ -7127,24 +7118,24 @@
 	</spawn>
 	<spawn centerx="1129" centery="1061" centerz="7" radius="10" />
 	<spawn centerx="2222" centery="1061" centerz="7" radius="30">
-		<npc name="Abra" x="-22" y="-24" z="7" spawntime="60" />
-		<npc name="Abra" x="-27" y="-16" z="7" spawntime="60" />
-		<npc name="Abra" x="-9" y="-16" z="7" spawntime="60" />
-		<npc name="Abra" x="11" y="-14" z="7" spawntime="1024" />
-		<npc name="Abra" x="-9" y="-13" z="7" spawntime="60" />
-		<npc name="Abra" x="11" y="-13" z="7" spawntime="60" />
-		<npc name="Abra" x="17" y="-9" z="7" spawntime="60" />
-		<npc name="Abra" x="-13" y="-8" z="7" spawntime="60" />
+		<monster name="Abra" x="-22" y="-24" z="7" spawntime="60" />
+		<monster name="Abra" x="-27" y="-16" z="7" spawntime="60" />
+		<monster name="Abra" x="-9" y="-16" z="7" spawntime="60" />
+		<monster name="Abra" x="11" y="-14" z="7" spawntime="1024" />
+		<monster name="Abra" x="-9" y="-13" z="7" spawntime="60" />
+		<monster name="Abra" x="11" y="-13" z="7" spawntime="60" />
+		<monster name="Abra" x="17" y="-9" z="7" spawntime="60" />
+		<monster name="Abra" x="-13" y="-8" z="7" spawntime="60" />
 		<monster name="Drowzee" x="7" y="-4" z="7" spawntime="60" />
-		<npc name="Abra" x="-18" y="-3" z="7" spawntime="60" />
+		<monster name="Abra" x="-18" y="-3" z="7" spawntime="60" />
 		<monster name="Drowzee" x="0" y="-3" z="7" spawntime="60" />
 		<monster name="Drowzee" x="-5" y="3" z="7" spawntime="60" />
 		<monster name="Drowzee" x="3" y="3" z="7" spawntime="60" />
 		<monster name="Drowzee" x="6" y="3" z="7" spawntime="60" />
-		<npc name="Abra" x="20" y="3" z="7" spawntime="60" />
+		<monster name="Abra" x="20" y="3" z="7" spawntime="60" />
 		<monster name="Hypno" x="-5" y="8" z="7" spawntime="60" />
 		<monster name="Hypno" x="-4" y="8" z="7" spawntime="60" />
-		<npc name="Abra" x="-12" y="9" z="7" spawntime="60" />
+		<monster name="Abra" x="-12" y="9" z="7" spawntime="60" />
 		<monster name="Drowzee" x="6" y="9" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="873" centery="1062" centerz="7" radius="3" />
@@ -8402,9 +8393,6 @@
 		<monster name="Croconaw" x="-1" y="0" z="7" spawntime="60" />
 		<monster name="Squirtle" x="2" y="3" z="7" spawntime="60" />
 	</spawn>
-	<spawn centerx="971" centery="1255" centerz="7" radius="1">
-		<npc name="Surge" x="0" y="-1" z="7" spawntime="10" />
-	</spawn>
 	<spawn centerx="1168" centery="1256" centerz="7" radius="9" />
 	<spawn centerx="1094" centery="1264" centerz="7" radius="30">
 		<monster name="Oddish" x="-29" y="-27" z="7" spawntime="60" />
@@ -8664,29 +8652,27 @@
 		<monster name="Kadabra" x="1" y="-18" z="7" spawntime="60" />
 		<monster name="Kadabra" x="15" y="-18" z="7" spawntime="60" />
 		<monster name="Kadabra" x="22" y="-18" z="7" spawntime="60" />
-		<npc name="Abra" x="-8" y="-15" z="7" spawntime="60" />
-		<npc name="Abra" x="-1" y="-15" z="7" spawntime="60" />
+		<monster name="Abra" x="-8" y="-15" z="7" spawntime="60" />
+		<monster name="Abra" x="-1" y="-15" z="7" spawntime="60" />
 		<monster name="Drowzee" x="15" y="-15" z="7" spawntime="60" />
-		<npc name="Abra" x="22" y="-15" z="7" spawntime="60" />
+		<monster name="Abra" x="22" y="-15" z="7" spawntime="60" />
 		<monster name="Kadabra" x="24" y="-13" z="7" spawntime="60" />
-		<npc name="Abra" x="-10" y="-9" z="7" spawntime="60" />
+		<monster name="Abra" x="-9" y="-9" z="7" spawntime="60" direction="2" />
 		<monster name="Drowzee" x="-12" y="-8" z="7" spawntime="60" />
-		<npc name="Abra" x="-5" y="-7" z="7" spawntime="60" />
 		<monster name="Drowzee" x="18" y="-7" z="7" spawntime="60" />
-		<npc name="Abra" x="15" y="-4" z="7" spawntime="60" />
 		<monster name="Drowzee" x="-9" y="-3" z="7" spawntime="60" />
 		<monster name="Kadabra" x="18" y="-3" z="7" spawntime="60" />
 		<monster name="Kadabra" x="26" y="-3" z="7" spawntime="60" />
-		<npc name="Abra" x="-4" y="-1" z="7" spawntime="60" />
+		<monster name="Abra" x="-4" y="-1" z="7" spawntime="60" />
 		<monster name="Drowzee" x="7" y="-1" z="7" spawntime="60" />
 		<monster name="Kadabra" x="8" y="3" z="7" spawntime="60" />
-		<npc name="Abra" x="23" y="4" z="7" spawntime="60" />
+		<monster name="Abra" x="23" y="4" z="7" spawntime="60" />
 		<monster name="Drowzee" x="26" y="4" z="7" spawntime="60" />
-		<npc name="Abra" x="18" y="6" z="7" spawntime="60" />
+		<monster name="Abra" x="18" y="6" z="7" spawntime="60" />
 		<monster name="Drowzee" x="-13" y="7" z="7" spawntime="60" />
-		<npc name="Abra" x="-9" y="7" z="7" spawntime="60" />
+		<monster name="Abra" x="-9" y="7" z="7" spawntime="60" />
 		<monster name="Kadabra" x="22" y="7" z="7" spawntime="60" />
-		<npc name="Abra" x="-4" y="9" z="7" spawntime="60" />
+		<monster name="Abra" x="-4" y="9" z="7" spawntime="60" />
 		<monster name="Drowzee" x="-11" y="10" z="7" spawntime="60" />
 		<monster name="Kadabra" x="-7" y="10" z="7" spawntime="60" />
 		<monster name="Kadabra" x="4" y="11" z="7" spawntime="60" />
@@ -9474,15 +9460,15 @@
 		<monster name="Oddish" x="-25" y="27" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="1717" centery="1489" centerz="7" radius="30">
-		<npc name="Abra" x="-2" y="-2" z="7" spawntime="25" />
+		<monster name="Abra" x="-2" y="-2" z="7" spawntime="25" />
 		<monster name="Kadabra" x="1" y="-2" z="7" spawntime="25" />
-		<npc name="Abra" x="4" y="-2" z="7" spawntime="25" />
+		<monster name="Abra" x="4" y="-2" z="7" spawntime="25" />
 		<monster name="Alakazam" x="-1" y="-1" z="7" spawntime="25" />
 		<monster name="Girafarig" x="-15" y="0" z="7" spawntime="60" />
 		<monster name="Alakazam" x="3" y="1" z="7" spawntime="25" />
-		<npc name="Abra" x="-2" y="2" z="7" spawntime="25" />
+		<monster name="Abra" x="-2" y="2" z="7" spawntime="25" />
 		<monster name="Kadabra" x="0" y="2" z="7" spawntime="25" />
-		<npc name="Abra" x="4" y="2" z="7" spawntime="25" />
+		<monster name="Abra" x="4" y="2" z="7" spawntime="25" />
 		<monster name="Girafarig" x="-21" y="19" z="7" spawntime="60" />
 		<monster name="Girafarig" x="-28" y="29" z="7" spawntime="60" />
 		<monster name="Girafarig" x="-3" y="30" z="7" spawntime="60" />
@@ -9828,9 +9814,6 @@
 		<monster name="Weepinbell" x="-25" y="29" z="7" spawntime="60" />
 		<monster name="Gloom" x="-20" y="30" z="7" spawntime="60" />
 		<monster name="Weepinbell" x="-14" y="30" z="7" spawntime="60" />
-	</spawn>
-	<spawn centerx="1180" centery="1524" centerz="7" radius="1">
-		<npc name="Koga" x="0" y="-1" z="7" spawntime="10" />
 	</spawn>
 	<spawn centerx="1885" centery="1528" centerz="7" radius="5">
 		<monster name="Shellder" x="-1" y="-2" z="7" spawntime="60" />
@@ -14580,7 +14563,7 @@
 		<monster name="Alakazam" x="4" y="-3" z="8" spawntime="10" />
 		<monster name="Alakazam" x="4" y="-1" z="8" spawntime="60" />
 		<monster name="Kadabra" x="4" y="0" z="8" spawntime="60" />
-		<npc name="Abra" x="4" y="2" z="8" spawntime="60" />
+		<monster name="Abra" x="4" y="2" z="8" spawntime="60" />
 		<monster name="Alakazam" x="4" y="3" z="8" spawntime="10" />
 		<monster name="Alakazam" x="4" y="5" z="8" spawntime="60" />
 		<monster name="Alakazam" x="-25" y="6" z="8" spawntime="10" />
@@ -14598,7 +14581,7 @@
 		<monster name="Alakazam" x="-22" y="8" z="8" spawntime="10" />
 		<monster name="Alakazam" x="4" y="8" z="8" spawntime="10" />
 		<monster name="Alakazam" x="4" y="10" z="8" spawntime="10" />
-		<npc name="Abra" x="-12" y="13" z="8" spawntime="60" />
+		<monster name="Abra" x="-12" y="13" z="8" spawntime="60" />
 		<monster name="Alakazam" x="-7" y="13" z="8" spawntime="60" />
 		<monster name="Alakazam" x="-1" y="13" z="8" spawntime="10" />
 		<monster name="Alakazam" x="12" y="13" z="8" spawntime="10" />
@@ -14606,10 +14589,10 @@
 		<monster name="Alakazam" x="-4" y="14" z="8" spawntime="10" />
 		<monster name="Kadabra" x="4" y="14" z="8" spawntime="60" />
 		<monster name="Alakazam" x="7" y="14" z="8" spawntime="60" />
-		<npc name="Abra" x="13" y="14" z="8" spawntime="60" />
+		<monster name="Abra" x="13" y="14" z="8" spawntime="60" />
 		<monster name="Kadabra" x="16" y="14" z="8" spawntime="60" />
 		<monster name="Alakazam" x="19" y="14" z="8" spawntime="60" />
-		<npc name="Abra" x="23" y="14" z="8" spawntime="60" />
+		<monster name="Abra" x="23" y="14" z="8" spawntime="60" />
 		<monster name="Alakazam" x="-19" y="16" z="8" spawntime="60" />
 		<monster name="Alakazam" x="23" y="16" z="8" spawntime="10" />
 		<monster name="Alakazam" x="-12" y="17" z="8" spawntime="60" />
@@ -14624,8 +14607,8 @@
 		<monster name="Alakazam" x="3" y="23" z="8" spawntime="60" />
 		<monster name="Alakazam" x="23" y="23" z="8" spawntime="10" />
 		<monster name="Kadabra" x="-21" y="24" z="8" spawntime="60" />
-		<npc name="Abra" x="4" y="26" z="8" spawntime="60" />
-		<npc name="Abra" x="23" y="26" z="8" spawntime="60" />
+		<monster name="Abra" x="4" y="26" z="8" spawntime="60" />
+		<monster name="Abra" x="23" y="26" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="1034" centery="1005" centerz="8" radius="10">
 		<monster name="Rattata" x="5" y="2" z="8" spawntime="60" />
@@ -14768,7 +14751,7 @@
 		<monster name="Alakazam" x="0" y="15" z="8" spawntime="10" />
 		<monster name="Alakazam" x="8" y="15" z="8" spawntime="10" />
 		<monster name="Alakazam" x="22" y="15" z="8" spawntime="10" />
-		<npc name="Abra" x="23" y="15" z="8" spawntime="60" />
+		<monster name="Abra" x="23" y="15" z="8" spawntime="60" />
 		<monster name="Alakazam" x="-7" y="16" z="8" spawntime="10" />
 		<monster name="Alakazam" x="0" y="16" z="8" spawntime="10" />
 		<monster name="Alakazam" x="8" y="16" z="8" spawntime="10" />
@@ -14900,15 +14883,15 @@
 		<monster name="Alakazam" x="5" y="-8" z="8" spawntime="60" />
 		<monster name="Alakazam" x="-21" y="-7" z="8" spawntime="10" />
 		<monster name="Alakazam" x="2" y="-7" z="8" spawntime="10" />
-		<npc name="Abra" x="1" y="-6" z="8" spawntime="60" />
-		<npc name="Abra" x="8" y="-6" z="8" spawntime="60" />
+		<monster name="Abra" x="1" y="-6" z="8" spawntime="60" />
+		<monster name="Abra" x="8" y="-6" z="8" spawntime="60" />
 		<monster name="Alakazam" x="-24" y="-5" z="8" spawntime="60" />
 		<monster name="Alakazam" x="-26" y="-4" z="8" spawntime="10" />
 		<monster name="Alakazam" x="11" y="-3" z="8" spawntime="10" />
 		<monster name="Alakazam" x="1" y="-2" z="8" spawntime="60" />
-		<npc name="Abra" x="-25" y="-1" z="8" spawntime="60" />
+		<monster name="Abra" x="-25" y="-1" z="8" spawntime="60" />
 		<monster name="Alakazam" x="11" y="0" z="8" spawntime="60" />
-		<npc name="Abra" x="10" y="2" z="8" spawntime="60" />
+		<monster name="Abra" x="10" y="2" z="8" spawntime="60" />
 		<monster name="Kadabra" x="-26" y="3" z="8" spawntime="60" />
 		<monster name="Alakazam" x="10" y="4" z="8" spawntime="10" />
 		<monster name="Alakazam" x="-26" y="5" z="8" spawntime="10" />
@@ -14919,13 +14902,13 @@
 		<monster name="Alakazam" x="-14" y="7" z="8" spawntime="60" />
 		<monster name="Alakazam" x="-8" y="7" z="8" spawntime="60" />
 		<monster name="Alakazam" x="-1" y="7" z="8" spawntime="10" />
-		<npc name="Abra" x="-22" y="8" z="8" spawntime="60" />
-		<npc name="Abra" x="-10" y="8" z="8" spawntime="60" />
+		<monster name="Abra" x="-22" y="8" z="8" spawntime="60" />
+		<monster name="Abra" x="-10" y="8" z="8" spawntime="60" />
 		<monster name="Alakazam" x="11" y="9" z="8" spawntime="60" />
 		<monster name="Alakazam" x="10" y="14" z="8" spawntime="10" />
-		<npc name="Abra" x="-22" y="17" z="8" spawntime="60" />
+		<monster name="Abra" x="-22" y="17" z="8" spawntime="60" />
 		<monster name="Alakazam" x="-17" y="17" z="8" spawntime="60" />
-		<npc name="Abra" x="1" y="17" z="8" spawntime="60" />
+		<monster name="Abra" x="1" y="17" z="8" spawntime="60" />
 		<monster name="Alakazam" x="6" y="17" z="8" spawntime="60" />
 		<monster name="Alakazam" x="-25" y="18" z="8" spawntime="10" />
 		<monster name="Alakazam" x="-2" y="18" z="8" spawntime="10" />
@@ -15031,11 +15014,11 @@
 		<monster name="Hypno" x="6" y="-20" z="8" spawntime="60" />
 		<monster name="Alakazam" x="6" y="-18" z="8" spawntime="10" />
 		<monster name="Alakazam" x="6" y="-15" z="8" spawntime="10" />
-		<npc name="Abra" x="6" y="-12" z="8" spawntime="10" />
-		<npc name="Abra" x="17" y="11" z="8" spawntime="60" />
+		<monster name="Abra" x="6" y="-12" z="8" spawntime="10" />
+		<monster name="Abra" x="17" y="11" z="8" spawntime="60" />
 		<monster name="Alakazam" x="17" y="14" z="8" spawntime="10" />
 		<monster name="Alakazam" x="17" y="18" z="8" spawntime="60" />
-		<npc name="Abra" x="17" y="22" z="8" spawntime="60" />
+		<monster name="Abra" x="17" y="22" z="8" spawntime="60" />
 		<monster name="Alakazam" x="24" y="23" z="8" spawntime="10" />
 	</spawn>
 	<spawn centerx="880" centery="1056" centerz="8" radius="20">
@@ -15175,7 +15158,7 @@
 	<spawn centerx="2160" centery="1080" centerz="8" radius="26">
 		<monster name="Alakazam" x="-14" y="-20" z="8" spawntime="60" />
 		<monster name="Kadabra" x="22" y="-20" z="8" spawntime="60" />
-		<npc name="Abra" x="-11" y="-19" z="8" spawntime="60" />
+		<monster name="Abra" x="-11" y="-19" z="8" spawntime="60" />
 		<monster name="Alakazam" x="-9" y="-19" z="8" spawntime="10" />
 		<monster name="Alakazam" x="13" y="-19" z="8" spawntime="10" />
 		<monster name="Hypno" x="17" y="-19" z="8" spawntime="60" />
@@ -15186,20 +15169,20 @@
 		<monster name="Hypno" x="24" y="-12" z="8" spawntime="60" />
 		<monster name="Alakazam" x="23" y="-10" z="8" spawntime="10" />
 		<monster name="Alakazam" x="-6" y="-9" z="8" spawntime="60" />
-		<npc name="Abra" x="-3" y="-9" z="8" spawntime="60" />
+		<monster name="Abra" x="-3" y="-9" z="8" spawntime="60" />
 		<monster name="Hypno" x="12" y="-9" z="8" spawntime="60" />
 		<monster name="Alakazam" x="-6" y="-8" z="8" spawntime="10" />
 		<monster name="Alakazam" x="-4" y="-8" z="8" spawntime="10" />
 		<monster name="Alakazam" x="10" y="-8" z="8" spawntime="10" />
 		<monster name="Alakazam" x="14" y="-8" z="8" spawntime="10" />
-		<npc name="Abra" x="24" y="-8" z="8" spawntime="60" />
+		<monster name="Abra" x="24" y="-8" z="8" spawntime="60" />
 		<monster name="Alakazam" x="-18" y="-7" z="8" spawntime="60" />
-		<npc name="Abra" x="-11" y="-7" z="8" spawntime="60" />
+		<monster name="Abra" x="-11" y="-7" z="8" spawntime="60" />
 		<monster name="Alakazam" x="25" y="-5" z="8" spawntime="10" />
 		<monster name="Alakazam" x="24" y="0" z="8" spawntime="10" />
 		<monster name="Hypno" x="26" y="0" z="8" spawntime="60" />
 		<monster name="Hypno" x="13" y="3" z="8" spawntime="60" />
-		<npc name="Abra" x="22" y="3" z="8" spawntime="60" />
+		<monster name="Abra" x="22" y="3" z="8" spawntime="60" />
 		<monster name="Alakazam" x="24" y="3" z="8" spawntime="10" />
 		<monster name="Alakazam" x="11" y="4" z="8" spawntime="10" />
 		<monster name="Alakazam" x="14" y="4" z="8" spawntime="10" />
@@ -16351,7 +16334,7 @@
 		<monster name="Hypno" x="28" y="17" z="8" spawntime="60" />
 		<monster name="Alakazam" x="-9" y="21" z="8" spawntime="60" />
 		<monster name="Alakazam" x="16" y="21" z="8" spawntime="60" />
-		<npc name="unown" x="17" y="21" z="8" spawntime="60" />
+		<monster name="Unown" x="17" y="21" z="8" spawntime="60" />
 		<monster name="Hypno" x="-22" y="22" z="8" spawntime="60" />
 		<monster name="Hypno" x="-21" y="22" z="8" spawntime="60" />
 		<monster name="Hypno" x="-12" y="22" z="8" spawntime="60" />
@@ -16364,7 +16347,7 @@
 		<monster name="Alakazam" x="-7" y="23" z="8" spawntime="60" />
 		<monster name="Hypno" x="19" y="23" z="8" spawntime="60" />
 		<monster name="Hypno" x="16" y="24" z="8" spawntime="60" />
-		<npc name="unown" x="20" y="24" z="8" spawntime="60" />
+		<monster name="Unown" x="20" y="24" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="950" centery="1455" centerz="8" radius="30" />
 	<spawn centerx="953" centery="1459" centerz="8" radius="5" />
@@ -19400,11 +19383,11 @@
 		<monster name="Vulpix" x="19" y="21" z="9" spawntime="60" />
 	</spawn>
 	<spawn centerx="1611" centery="1479" centerz="9" radius="5">
-		<npc name="unown" x="-5" y="-3" z="9" spawntime="60" />
-		<npc name="unown" x="0" y="-3" z="9" spawntime="60" />
+		<monster name="Unown" x="-5" y="-3" z="9" spawntime="60" />
+		<monster name="Unown" x="0" y="-3" z="9" spawntime="60" />
 		<monster name="Mewtwo" x="1" y="-1" z="9" spawntime="60" />
-		<npc name="unown" x="-3" y="1" z="9" spawntime="60" />
-		<npc name="unown" x="3" y="2" z="9" spawntime="60" />
+		<monster name="Unown" x="-3" y="1" z="9" spawntime="60" />
+		<monster name="Unown" x="3" y="2" z="9" spawntime="60" />
 	</spawn>
 	<spawn centerx="686" centery="1487" centerz="9" radius="30">
 		<monster name="Charmander" x="-15" y="-18" z="9" spawntime="60" />
@@ -20372,15 +20355,15 @@
 		<monster name="Shiftry" x="0" y="-1" z="10" spawntime="60" />
 	</spawn>
 	<spawn centerx="1258" centery="788" centerz="10" radius="9">
-		<npc name="Abra" x="3" y="-2" z="10" spawntime="60" />
+		<monster name="Abra" x="3" y="-2" z="10" spawntime="60" />
 		<monster name="Kadabra" x="7" y="-1" z="10" spawntime="60" />
 		<monster name="Kadabra" x="6" y="2" z="10" spawntime="60" />
 		<monster name="Kadabra" x="0" y="4" z="10" spawntime="60" />
-		<npc name="Abra" x="7" y="5" z="10" spawntime="60" />
+		<monster name="Abra" x="7" y="5" z="10" spawntime="60" />
 	</spawn>
 	<spawn centerx="1288" centery="788" centerz="10" radius="9">
 		<monster name="Kadabra" x="-4" y="1" z="10" spawntime="60" />
-		<npc name="Abra" x="8" y="2" z="10" spawntime="60" />
+		<monster name="Abra" x="8" y="2" z="10" spawntime="60" />
 		<monster name="Kadabra" x="9" y="3" z="10" spawntime="60" />
 		<monster name="Kadabra" x="-4" y="4" z="10" spawntime="60" />
 		<monster name="Kadabra" x="1" y="4" z="10" spawntime="60" />
@@ -20397,10 +20380,10 @@
 	<spawn centerx="1269" centery="789" centerz="10" radius="9">
 		<monster name="Kadabra" x="7" y="-4" z="10" spawntime="60" />
 		<monster name="Kadabra" x="1" y="-3" z="10" spawntime="60" />
-		<npc name="Abra" x="0" y="-2" z="10" spawntime="60" />
+		<monster name="Abra" x="0" y="-2" z="10" spawntime="60" />
 		<monster name="Kadabra" x="2" y="-2" z="10" spawntime="60" />
 		<monster name="Kadabra" x="3" y="-1" z="10" spawntime="60" />
-		<npc name="Abra" x="7" y="-1" z="10" spawntime="60" />
+		<monster name="Abra" x="7" y="-1" z="10" spawntime="60" />
 		<monster name="Kadabra" x="9" y="-1" z="10" spawntime="60" />
 		<monster name="Kadabra" x="0" y="4" z="10" spawntime="60" />
 		<monster name="Kadabra" x="6" y="4" z="10" spawntime="60" />
@@ -20411,12 +20394,12 @@
 		<monster name="Kadabra" x="0" y="-2" z="10" spawntime="60" />
 		<monster name="Kadabra" x="2" y="-2" z="10" spawntime="60" />
 		<monster name="Kadabra" x="-5" y="1" z="10" spawntime="60" />
-		<npc name="Abra" x="-3" y="1" z="10" spawntime="60" />
+		<monster name="Abra" x="-3" y="1" z="10" spawntime="60" />
 		<monster name="Kadabra" x="-7" y="2" z="10" spawntime="60" />
-		<npc name="Abra" x="-4" y="3" z="10" spawntime="60" />
+		<monster name="Abra" x="-4" y="3" z="10" spawntime="60" />
 		<monster name="Kadabra" x="-8" y="4" z="10" spawntime="60" />
 		<monster name="Kadabra" x="-3" y="4" z="10" spawntime="60" />
-		<npc name="Abra" x="-1" y="4" z="10" spawntime="60" />
+		<monster name="Abra" x="-1" y="4" z="10" spawntime="60" />
 		<monster name="Kadabra" x="0" y="4" z="10" spawntime="60" />
 	</spawn>
 	<spawn centerx="1077" centery="794" centerz="10" radius="30">
@@ -20951,25 +20934,25 @@
 		<monster name="Alakazam" x="-3" y="5" z="11" spawntime="60" />
 	</spawn>
 	<spawn centerx="1262" centery="788" centerz="11" radius="9">
-		<npc name="Abra" x="2" y="-3" z="11" spawntime="60" />
+		<monster name="Abra" x="2" y="-3" z="11" spawntime="60" />
 		<monster name="Alakazam" x="8" y="-3" z="11" spawntime="60" />
 		<monster name="Alakazam" x="-4" y="-2" z="11" spawntime="60" />
-		<npc name="Abra" x="-1" y="-2" z="11" spawntime="60" />
+		<monster name="Abra" x="-1" y="-2" z="11" spawntime="60" />
 		<monster name="Alakazam" x="0" y="-2" z="11" spawntime="60" />
 		<monster name="Alakazam" x="-5" y="2" z="11" spawntime="60" />
-		<npc name="Abra" x="1" y="3" z="11" spawntime="60" />
+		<monster name="Abra" x="1" y="3" z="11" spawntime="60" />
 		<monster name="Alakazam" x="2" y="4" z="11" spawntime="60" />
 		<monster name="Alakazam" x="-1" y="5" z="11" spawntime="60" />
 	</spawn>
 	<spawn centerx="1280" centery="788" centerz="11" radius="9">
-		<npc name="Abra" x="-7" y="-3" z="11" spawntime="60" />
+		<monster name="Abra" x="-7" y="-3" z="11" spawntime="60" />
 		<monster name="Alakazam" x="-4" y="-3" z="11" spawntime="60" />
 		<monster name="Alakazam" x="0" y="-2" z="11" spawntime="60" />
-		<npc name="Abra" x="-8" y="-1" z="11" spawntime="60" />
+		<monster name="Abra" x="-8" y="-1" z="11" spawntime="60" />
 		<monster name="Alakazam" x="5" y="2" z="11" spawntime="60" />
 		<monster name="Alakazam" x="-6" y="4" z="11" spawntime="60" />
 		<monster name="Alakazam" x="1" y="4" z="11" spawntime="60" />
-		<npc name="Abra" x="-4" y="5" z="11" spawntime="60" />
+		<monster name="Abra" x="-4" y="5" z="11" spawntime="60" />
 		<monster name="Alakazam" x="1" y="5" z="11" spawntime="60" />
 	</spawn>
 	<spawn centerx="1043" centery="795" centerz="11" radius="5">

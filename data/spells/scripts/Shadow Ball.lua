@@ -35,6 +35,9 @@ function onCastSpell(cid, var)
 
     local function doDamageWithDelay(cid, target)
 	    if not isCreature(cid) or not isCreature(target) then return true end
+        if not isOnline(cid) or not isOnline(target) then return true end
+        if isNumber(cid) then cid = Creature(cid) end
+        if isNumber(target) then target = Creature(target) end
 	    if isSleeping(cid) then return false end
 	    if getPlayerStorageValue(cid, conds["Fear"]) >= 1 then return true end
 	   	doAreaCombatHealth(cid, ghostDmg, getThingPosWithDebug(target), 0, -min, -max, 255)

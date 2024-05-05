@@ -39,6 +39,8 @@ function onCastSpell(cid, var)
 
 	local function doSendBubble(cid, pos)
 		if not isCreature(cid) then return true end
+        if not isOnline(cid) then return true end
+        if isNumber(cid) then cid = Creature(cid) end
 		doSendDistanceShoot(getThingPosWithDebug(cid), pos, 39)
 		doSendMagicEffect(pos, eff)
 	end

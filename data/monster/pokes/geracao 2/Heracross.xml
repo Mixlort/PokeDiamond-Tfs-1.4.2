@@ -23,7 +23,7 @@
   <attacks>
 		<attack name="melee" interval="2000" chance="100" range="1" min="-92" max="-136" />
 		<attack name="Triple Punch" interval="3040" chance="28" range="1" />
-		<attack name="Slash" interval="2946" chance="28" range="1" />
+		<!-- <attack name="Slash" interval="2946" chance="28" range="1" /> -->
 		<attack name="Bug Bite" interval="2645" chance="24" range="1" />
 		<attack name="Mega Punch" interval="2810" chance="25" range="1" />
 		<attack name="Karate Chop" interval="2945" chance="24" range="1" />

@@ -12,7 +12,7 @@ local str = {}
       table.insert(str, "1- [Boost Stone] -\nPreco: +[" .. shop["Boost Stone"].preco .." Torneio Coin's]+\n- Digite: /shop Boost Stone - para comprar!\n\n")   
       table.insert(str, "2- [Addon Box] -\nPreco: +[" .. shop["Addon Box"].preco .." Torneio Coin's]+\n- Digite: /shop Addon Box - para comprar!\n\n")   
       table.insert(str, "3- [1 Dia de VIP] -\nPreco: +[" .. shop["1 Dia De Vip"].preco .." Torneio Coin's]+\n- Digite: /shop 1 Dia de Vip - para comprar!\n\n")   
-doShowTextDialog(cid, 8762, "[+] -- PokeGold -- [+]\n\n --{ + Loja de Torneio + }--\n\n\n" .. table.concat(str) .. "\n\n\n\nwww.pokegold.com.br") 
+doShowTextDialog(cid, 8762, "[+] -- PokeDiamond -- [+]\n\n --{ + Loja de Torneio + }--\n\n\n" .. table.concat(str) .. "\n\n") 
 return true
 end
 

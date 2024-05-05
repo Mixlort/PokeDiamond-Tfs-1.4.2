@@ -33,6 +33,8 @@ function onCastSpell(cid, var)
 
 	local function sendBubbles(cid)
 		if not isCreature(cid) or not isCreature(target) then return true end
+        if not isOnline(cid) then return true end
+        if isNumber(cid) then cid = Creature(cid) end
 	   	doSendDistanceShoot(getThingPosWithDebug(cid), getThingPosWithDebug(target), 2)
 	   	doDanoInTargetWithDelay(cid, target, WATERDAMAGE, min, max, 25)  --alterado v1.7
 	end

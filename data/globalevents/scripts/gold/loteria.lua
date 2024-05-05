@@ -20,6 +20,8 @@ if not winner or not isPlayer(winner) then
 end
 local random_item = config.rewards_id[math.random(1, #config.rewards_id)]
 
+if not isOnline(winner) then return true end
+winner = Creature(winner)
 if(random_item == 2152) then
   doPlayerAddItem(winner, random_item, config.crystal_counts)
   doBroadcastMessage("[LOTTERY SYSTEM] Parabens: " .. getCreatureName(winner) .. ", Ganhou: " .. config.crystal_counts .. " " .. getItemNameById(random_item) .. "s! Congratulations! (Next Lottery in " .. config.lottery_hour .. ")")

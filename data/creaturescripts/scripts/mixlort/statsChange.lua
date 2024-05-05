@@ -339,13 +339,13 @@ function onHealthChange(cid, attacker, value, combat)
         doItemSetAttribute(corpse, "pName", getCreatureName(cid))          --alterado v1.7 coloca corpse quando o player morre!
         doItemSetAttribute(corpse, "attacker", getCreatureName(attacker))
         doItemSetAttribute(corpse, "article", getPlayerSex(cid) == 0 and "She" or "He")
-        if getPlayerStorageValue(cid, Agatha.stoIni) >= 1 and getPlayerStorageValue(cid, Agatha.stoIni) <= 10 then
-            setPlayerStorageValue(cid, Agatha.stoIni, -1)
-            setPlayerStorageValue(cid, Agatha.stoRec, -1)
-            setPlayerStorageValue(cid, Agatha.stoPer, -1)
-            setPlayerStorageValue(cid, Agatha.stoEni, -1)        --alterado v1.9  agatha quest
-            setPlayerStorageValue(cid, Agatha.stoRes, -1)
-        end
+        -- if getPlayerStorageValue(cid, Agatha.stoIni) >= 1 and getPlayerStorageValue(cid, Agatha.stoIni) <= 10 then
+        --     setPlayerStorageValue(cid, Agatha.stoIni, -1)
+        --     setPlayerStorageValue(cid, Agatha.stoRec, -1)
+        --     setPlayerStorageValue(cid, Agatha.stoPer, -1)
+        --     setPlayerStorageValue(cid, Agatha.stoEni, -1)        --alterado v1.9  agatha quest
+        --     setPlayerStorageValue(cid, Agatha.stoRes, -1)
+        -- end
         end
         doCreatureAddHealth(cid, -valor, 3, 180)
         if not isPlayer(cid) then

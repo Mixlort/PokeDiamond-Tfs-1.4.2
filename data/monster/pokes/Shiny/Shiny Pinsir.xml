@@ -24,7 +24,7 @@
 <attacks>
         <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100" />
         <attack name="Scratch" interval="2805" chance="29" range="1" />
-        <attack name="Slash" interval="2946" chance="28" range="1" />
+        <!-- <attack name="Slash" interval="2946" chance="28" range="1" /> -->
         <attack name="Bug Bite" interval="2805" chance="29" range="1" />
         <attack name="Guillotine" interval="3510" chance="25" range="1" />
         <attack name="Harden" interval="5625" chance="18" range="6" />

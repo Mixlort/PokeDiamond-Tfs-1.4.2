@@ -6,7 +6,7 @@ elseif getPlayerLevel(cid) < 100 then
    return true
 end 
 
-local dir = getPosByDir(fromPosition, getDirectionTo(getThingPos(cid), fromPosition))
+local dir = getPositionByDirection(fromPosition, getDirectionTo(getThingPos(cid), fromPosition))
 doTeleportThing(cid, dir, false)
 doTeleportThing(cid, dir, false)
 doSendMagicEffect(getThingPos(cid), 21)

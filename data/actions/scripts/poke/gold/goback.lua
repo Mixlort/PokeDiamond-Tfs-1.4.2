@@ -121,7 +121,7 @@ elseif item.itemid == pokeballs[btype].on then
 		end
 	end
 
-	if isGhostPokemon(pk) then doTeleportThing(pk, getPosByDir(getThingPos(cid), math.random(0, 7)), false) end
+	if isGhostPokemon(pk) then doTeleportThing(pk, getPositionByDirection(getThingPos(cid), math.random(0, 7)), false) end
 
 	doCreatureSetLookDir(pk, 2)
 	doCreatureSetNick(pk, nick)	

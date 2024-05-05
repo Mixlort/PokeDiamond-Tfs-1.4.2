@@ -1100,10 +1100,11 @@ conds = {
     function doDanoInTargetWithDelay(cid, target, combat, min, max, eff)     --alterado v2.7
     const_distance_delay = 56
     if not isCreature(cid) or not isCreature(target) then return true end
+    if not isOnline(cid) or not isOnline(target) then return true end
     if isNumber(cid) then cid = Creature(cid) end
     if isNumber(target) then target = Creature(target) end
     if isSleeping(cid) and getPlayerStorageValue(cid, 3644587) >= 1 then return true end
     if isWithFear(cid) and getPlayerStorageValue(cid, 3644587) >= 1 then return true end
-       local delay = getDistanceBetween(getThingPosWithDebug(cid:getId()), getThingPosWithDebug(target:getId())) * const_distance_delay
+       local delay = getDistanceBetween(getThingPosWithDebug(cid), getThingPosWithDebug(target)) * const_distance_delay
        addEvent(doDanoInTarget, delay, cid:getId(), target:getId(), combat, min, max, eff)
     end 

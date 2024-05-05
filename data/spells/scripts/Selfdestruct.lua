@@ -33,6 +33,8 @@ function onCastSpell(cid, var)
 
 	local function death(cid)
 		if isCreature(cid) then
+            if not isOnline(cid) then return true end
+            if isNumber(cid) then cid = Creature(cid) end
 		   if pokeHaveReflect(cid) then return true end    --alterado v1.6
 		   doCreatureAddHealth(cid, -getCreatureMaxHealth(cid))
 		end

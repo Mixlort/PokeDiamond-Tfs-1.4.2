@@ -33,11 +33,15 @@ function onCastSpell(cid, var)
 
     local function sendFireEff(cid, dir)
     	if not isCreature(cid) then return true end
-       	doDanoWithProtect(cid, BUGDAMAGE, getPosByDir(getThingPosWithDebug(cid), dir), 0, -min, -max, 105)
+        if not isOnline(cid) then return true end
+        if isNumber(cid) then cid = Creature(cid) end
+       	doDanoWithProtect(cid, BUGDAMAGE, getPositionByDirection(getThingPosWithDebug(cid), dir), 0, -min, -max, 105)
 	end
 
 	local function doWheel(cid)
 		if not isCreature(cid) then return true end
+        if not isOnline(cid) then return true end
+        if isNumber(cid) then cid = Creature(cid) end
 		local t = {
 	      [1] = SOUTH,
 	      [2] = SOUTHEAST,

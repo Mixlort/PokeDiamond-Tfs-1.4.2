@@ -1,7 +1,7 @@
 local delay = 0.1
-local bonusSpeed = 1.25
-local outfitMale = 1315
-local outfitFemale = 1316
+local bonusSpeed = 3
+local outfitMale = 21
+local outfitFemale = 22
 local condition = Condition(CONDITION_OUTFIT)
 condition:setTicks(-1)
 

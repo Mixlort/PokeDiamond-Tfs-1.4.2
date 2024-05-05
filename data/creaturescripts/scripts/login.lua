@@ -73,17 +73,10 @@ function onLogin(player)
     end
 
     -- Announces
-    player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Bem vindo ao Pokemon MS!")
+    player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Bem vindo ao Pokemon Diamond!")
 
-    if player:getStorageValue(45144) - os.time() > 1 then
-        doPlayerSendNotification(player, "Você ainda tem um Experience Booster ativo de "..player:getStorageValue(45145).."%. Ele irá acabar em "..convertTime(player:getStorageValue(45144) - os.time())..".", {itemId = 39875})
-        player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "Você ainda tem um Experience Booster ativo de "..player:getStorageValue(45145).."%. Ele irá acabar em "..convertTime(player:getStorageValue(45144) - os.time())..".")
-    end
-
-    if player:getStorageValue(4125) - os.time() > 0 then
-        doPlayerSendNotification(player, "[Shiny Charm]: "..convertTime(player:getStorageValue(4125) - os.time()).." restantes.", {itemId = 39872})
-        player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "[Shiny Charm]: "..convertTime(player:getStorageValue(4125) - os.time()).." restantes.")
-    end
+    player:setStorageValue(storages.logNow, 1)
+    addEvent(setPlayerStorageValue, 3000, player:getId(), storages.logNow, -1)
 
     if player:getHealth() == 40 then
         local healthNew = player:getMaxHealth() - 40

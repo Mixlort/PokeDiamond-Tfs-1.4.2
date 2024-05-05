@@ -43,9 +43,9 @@ function onCastSpell(cid, var)
       doRaiseStatus(cid, 1.5, 1.5, 0, 10)     --ver isso
    end
             
-   for t = 1, 7 do                  --alterado v1.5
-       addEvent(sendMoveEffect, t*1500, cid:getId(), 12)
-   end
+--    for t = 1, 7 do                  --alterado v1.5
+--        addEvent(sendMoveEffect, t*1500, cid:getId(), 12)
+--    end
    addEvent(setPlayerStorageValue, 10500, cid:getId(), 32623, 0) --alterado v1.8
    
 return true

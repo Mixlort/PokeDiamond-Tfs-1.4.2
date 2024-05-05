@@ -33,6 +33,9 @@ function onCastSpell(cid, var)
 
    	local function doToxic(cid, target)
    	if not isCreature(cid) or not isCreature(target) then return true end  --alterado v1.7
+       if not isOnline(cid) or not isOnline(target) then return true end
+       if isNumber(cid) then cid = Creature(cid) end
+       if isNumber(target) then target = Creature(target) end
       	doSendDistanceShoot(getThingPosWithDebug(cid), getThingPosWithDebug(target), 15)
       	doDanoInTargetWithDelay(cid, target, POISONDAMAGE, min, max, 114) --alterado v1.7
    	end

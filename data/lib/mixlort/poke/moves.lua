@@ -328,4 +328,30 @@ movesinfo = {
 
     --new
     ["Flame Burst"] = {f = 75, t = "fire"}, 
+
+    ---Passivas---
+    ["Electricity"] = {f = 0, t = "electric"},
+    ["Lava Counter"] = {f = 0, t = "fire"},
+    ["Counter Helix"] = {f = 0, t = "bug"},
+    ["Giroball"] = {f = 0, t = "steel"},
+    ["Counter Claw"] = {f = 0, t = "steel"},
+    ["Counter Spin"] = {f = 0, t = "fighting"},
+    ["Demon Kicker"] = {f = 0, t = "fighting"},
+    ["Demon Puncher"] = {f = 0, t = "fighting"},
+    ["Stunning Confusion"] = {f = 0, t = "psychic"},
+    ["Groundshock"] = {f = 0, t = "normal"},
+    ["Electric Charge"] = {f = 0, t = "electric"},
+    ["Melody"] = {f = 0, t = "normal"},
+    ["Dragon Fury"] = {f = 0, t = "dragon"},
+    ["Fury"] = {f = 0, t = "normal"},
+    ["Mega Drain"] = {f = 0, t = "grass"},
+    ["Spores Reaction"] = {f = 0, t = "grass"},
+    ["Amnesia"] = {f = 0, t = "psychic"},
+    ["Zen Mind"] = {f = 0, t = "psychic"}, 
+    ["Mirror Coat"] = {f = 0, t = "psychic"},
+    ["Lifesteal"] = {f = 0, t = "normal"},
+    ["Foresight"] = {f = 0, t = "fighting"},
+    ["Evasion"] = {f = 0, t = "normal"},
+    ["Levitate"] = {f = 0, t = "ghost"},
+    ["Lava-Electricity"] = {f = 0, t = "electric"},
 }

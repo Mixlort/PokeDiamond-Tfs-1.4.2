@@ -50,6 +50,8 @@ function onCastSpell(cid, var)
 
       local function damage(cid, min, max)
       if isCreature(cid) then
+        if not isOnline(cid) then return true end
+        if isNumber(cid) then cid = Creature(cid) end
          if isInArray({"Scyther", "Shiny Scyther", "Pineco"}, nome1) then   --alterado v1.6
             damage = BUGDAMAGE
          elseif isInArray({"Hitmontop", "Shiny Hitmontop"}, nome1) then               
@@ -68,6 +70,8 @@ function onCastSpell(cid, var)
       
       local function sendEff(cid)
       if isCreature(cid) then
+        if not isOnline(cid) then return true end
+        if isNumber(cid) then cid = Creature(cid) end
          doAreaCombatHealth(cid, null, getThingPos(cid), scythe1, 0, 0, outfitt.cima) --cima
          doAreaCombatHealth(cid, null, getThingPos(cid), scythe2, 0, 0, outfitt.baixo) --baixo
          doAreaCombatHealth(cid, null, getThingPos(cid), scythe3, 0, 0, outfitt.direita) --direita       --alterado v1.6
@@ -77,9 +81,12 @@ function onCastSpell(cid, var)
 
       local function doChangeO(cid)
 	  if not isCreature(cid) then return true end
-         setPlayerStorageValue(cid, 32623, 0)      
-         if isSleeping(cid) and getMonsterInfo(getCreatureName(cid)).lookCorpse ~= 0 then
-            doSetCreatureOutfit(cid, {lookType = 0, lookTypeEx = getMonsterInfo(getCreatureName(cid)).lookCorpse}, -1)
+      if not isOnline(cid) then return true end
+      if isNumber(cid) then cid = Creature(cid) end
+         setPlayerStorageValue(cid, 32623, 0)
+         local outfit = MonsterType(getCreatureName(cid)):getOutfit() 
+         if isSleeping(cid) and outfit ~= 0 then
+            doSetCreatureOutfit(cid, {lookType = 0, lookTypeEx = outfit}, -1)
          else
              doRemoveCondition(cid, CONDITION_OUTFIT)
          end
