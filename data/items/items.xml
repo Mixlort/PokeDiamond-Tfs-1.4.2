@@ -2471,12 +2471,10 @@
 	</item>
 	<item id="2273" article="an" name="ultimate healing rune">
 		<attribute key="runeSpellName" value="adura vita" />
-		
 		<attribute key="charges" value="1" />
 	</item>
 	<item id="2274" article="an" name="avalanche rune">
 		<attribute key="runeSpellName" value="adori mas frigo" />
-		
 		<attribute key="charges" value="4" />
 	</item>
 	<item fromid="2275" toid="2276" article="a" name="spell rune">

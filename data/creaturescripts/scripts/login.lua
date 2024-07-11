@@ -5,6 +5,9 @@ function onLogin(player)
         loginStr = loginStr .. " Por favor escolha sua outfit."
 		player:sendOutfitWindow()
         player:enableAutoLoot()
+
+        player:setMaxMana(6)
+        player:addMana(-player:getMana())
 	else
 		if loginStr ~= "" then
 			player:sendTextMessage(MESSAGE_STATUS_DEFAULT, loginStr)
